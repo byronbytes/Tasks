@@ -1,6 +1,6 @@
 # Note: This version of tasks is being rewritten in a newer .NET framework, things are experimental here, and will be forked to my personal profile (@byronbytes) when it's more stable.
 
-# 😎Tasks Recoded
+# 😎Tasks
 
 Tasks helps your computer run faster by allowing you to clean trash, remove bloatware as well as control startup programs and an advanced task manager, allowing you to check if any apps are maliciously eating your computer CPU and RAM without you knowing in the background.
 
