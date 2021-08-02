@@ -1,4 +1,4 @@
-# Note: This version of tasks is being rewritten in a newer .NET framework, things are experimental here, and will be pushed to personal profile when everything is stable.
+# Note: This version of tasks is being rewritten in a newer .NET framework, things are experimental here, and will be forked to my personal profile (@byronbytes) when it's more stable.
 
 # 😎Tasks Recoded
 
