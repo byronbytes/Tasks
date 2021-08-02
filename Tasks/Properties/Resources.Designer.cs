@@ -83,9 +83,39 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Downloads {
+            get {
+                object obj = ResourceManager.GetObject("Downloads", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_discord_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-discord-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Recycle {
+            get {
+                object obj = ResourceManager.GetObject("Recycle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Recycle_Bin {
+            get {
+                object obj = ResourceManager.GetObject("Recycle Bin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

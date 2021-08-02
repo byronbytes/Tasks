@@ -110,7 +110,7 @@ namespace Tasks
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(72, 0);
+            this.label2.Location = new System.Drawing.Point(79, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 30);
             this.label2.TabIndex = 1;
