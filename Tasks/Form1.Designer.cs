@@ -31,6 +31,7 @@ namespace Tasks
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,6 +60,7 @@ namespace Tasks
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
@@ -68,11 +70,23 @@ namespace Tasks
             this.panel1.Size = new System.Drawing.Size(145, 594);
             this.panel1.TabIndex = 0;
             // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.Image = global::Tasks.Properties.Resources.Settings;
+            this.button5.Location = new System.Drawing.Point(3, 462);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(148, 38);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Settings";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Tasks.Properties.Resources.Twitter;
-            this.pictureBox2.Location = new System.Drawing.Point(72, 513);
+            this.pictureBox2.Location = new System.Drawing.Point(103, 513);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -316,6 +330,7 @@ namespace Tasks
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button5;
     }
 }
 
