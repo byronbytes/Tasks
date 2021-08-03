@@ -49,6 +49,7 @@ namespace Tasks
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
+            this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
@@ -62,26 +63,32 @@ namespace Tasks
             // columnHeader1
             // 
             this.columnHeader1.Text = "Process Name";
+            this.columnHeader1.Width = 120;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "PID";
+            this.columnHeader2.Width = 90;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Status";
+            this.columnHeader3.Width = 115;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "User Running";
+            this.columnHeader4.Width = 120;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Memory";
+            this.columnHeader5.Width = 90;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Process Description";
+            this.columnHeader6.Width = 120;
             // 
             // frmTaskManager
             // 

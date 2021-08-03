@@ -132,13 +132,10 @@ namespace Tasks
                 }
                 catch
                 {
-                    var bitmap = new Bitmap(256, 256);
-                    using Graphics gdi = Graphics.FromImage(bitmap);
-                    gdi.DrawString("Cringe", Font.Name., 20);
-                    gdi.Save();
+   
                     //bitmap is now your placeholder icon
 
-                    MessageBox.Show("A");
+           
                 }
 
                 // Create a new Item to add into the list view that expects the row of information as first argument

@@ -27,5 +27,11 @@ namespace Tasks
             frmCleanup Cleanup = new frmCleanup(); // Initialize cleanup form.
             Cleanup.Show(); // Show Form
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmTaskManager TaskManager = new frmTaskManager(); // Initialize cleanup form.
+            TaskManager.Show(); // Show Form
+        }
     }
 }
