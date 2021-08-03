@@ -112,12 +112,10 @@ namespace Tasks
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox1.Location = new System.Drawing.Point(6, 144);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBox1.Size = new System.Drawing.Size(185, 24);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Clean Downloads Folder";
             this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox1.ThreeState = true;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -126,9 +124,9 @@ namespace Tasks
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 15);
+            this.label1.Size = new System.Drawing.Size(308, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Select which checkboxes you want to clean.";
+            this.label1.Text = "Select checkboxes that determine what you want to clean.";
             // 
             // CleanupLogsLBox
             // 
