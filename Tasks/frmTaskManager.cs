@@ -133,7 +133,7 @@ namespace Tasks
                 catch
                 {
    
-                    //bitmap is now your placeholder icon
+
 
            
                 }
@@ -158,7 +158,17 @@ namespace Tasks
         {
             renderProcessesOnListView();
         }
- 
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
