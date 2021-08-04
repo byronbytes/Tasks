@@ -30,22 +30,11 @@ namespace Tasks
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUtilityScripts));
-            this.button1 = new System.Windows.Forms.Button();
             this.groupCleanup = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupCleanup.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(475, 213);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupCleanup
             // 
@@ -57,7 +46,7 @@ namespace Tasks
             this.groupCleanup.Size = new System.Drawing.Size(314, 119);
             this.groupCleanup.TabIndex = 2;
             this.groupCleanup.TabStop = false;
-            this.groupCleanup.Text = "Cleanup";
+            this.groupCleanup.Text = "Take Ownership of Temp Files";
             // 
             // label3
             // 
@@ -67,11 +56,10 @@ namespace Tasks
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(6, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 51);
+            this.label3.Size = new System.Drawing.Size(247, 51);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Cleanup will clean all junk and garbage inside temp\r\n folders, recycle bin, downl" +
-    "oad and other locations. \r\nYou can select which to clean when accessing Cleanup." +
-    "";
+            this.label3.Text = "This will take ownership for these directories\r\nC:\\Windows\\Temp\r\nC:\\Windows\\Prefe" +
+    "tch";
             // 
             // button2
             // 
@@ -80,9 +68,9 @@ namespace Tasks
             this.button2.Image = global::Tasks.Properties.Resources.Cleanup;
             this.button2.Location = new System.Drawing.Point(9, 19);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 40);
+            this.button2.Size = new System.Drawing.Size(183, 40);
             this.button2.TabIndex = 0;
-            this.button2.Text = "TakeownTempFiles";
+            this.button2.Text = "TakeownTempFiles.bat";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -92,9 +80,8 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(699, 450);
+            this.ClientSize = new System.Drawing.Size(702, 585);
             this.Controls.Add(this.groupCleanup);
-            this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUtilityScripts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -106,8 +93,6 @@ namespace Tasks
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupCleanup;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
