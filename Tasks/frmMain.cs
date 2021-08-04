@@ -20,7 +20,7 @@ namespace Tasks
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+      // note for tomorrow, add a file system for tasks temp files and more, reg keys etc
         }
 
         private void button1_Click(object sender, EventArgs e)
