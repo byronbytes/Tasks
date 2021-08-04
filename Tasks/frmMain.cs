@@ -50,5 +50,11 @@ namespace Tasks
             frmUtilityScripts UtilityScripts = new frmUtilityScripts(); // Initialize cleanup form.
             UtilityScripts.Show(); // Show Form
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmSettings Settings = new frmSettings(); // Initialize cleanup form.
+            Settings.Show(); // Show Form
+        }
     }
 }

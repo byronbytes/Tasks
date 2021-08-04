@@ -6,4 +6,5 @@ pause 1
 takeown /F "C:\Windows\Temp" /A /R /D Y
 takeown /F "C:\Windows\Prefetch" /A /R /D Y
 
-echo The task finished successfully.
+echo The task finished successfully. Click anywhere to close.
+pause 1

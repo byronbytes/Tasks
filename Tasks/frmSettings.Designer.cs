@@ -29,10 +29,14 @@ namespace Tasks
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSettings));
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.taskDialog1 = new Ookii.Dialogs.WinForms.TaskDialog(this.components);
+            this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
+            this.taskDialogButton2 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +74,30 @@ namespace Tasks
             this.button2.TabIndex = 1;
             this.button2.Text = "Reset Settings to Default";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // taskDialog1
+            // 
+            this.taskDialog1.AllowDialogCancellation = true;
+            this.taskDialog1.Buttons.Add(this.taskDialogButton1);
+            this.taskDialog1.Buttons.Add(this.taskDialogButton2);
+            this.taskDialog1.Content = "This will clear all settings and this action is irreversible, so choose wisely.";
+            this.taskDialog1.CustomFooterIcon = ((System.Drawing.Icon)(resources.GetObject("taskDialog1.CustomFooterIcon")));
+            this.taskDialog1.CustomMainIcon = ((System.Drawing.Icon)(resources.GetObject("taskDialog1.CustomMainIcon")));
+            this.taskDialog1.ExpandedInformation = "Settings that will be affected: Themes, Languages, Preferences for Discord RP.";
+            this.taskDialog1.MainInstruction = "Are you sure you would like to reset all settings?";
+            this.taskDialog1.WindowIcon = ((System.Drawing.Icon)(resources.GetObject("taskDialog1.WindowIcon")));
+            this.taskDialog1.WindowTitle = "Tasks";
+            // 
+            // taskDialogButton1
+            // 
+            this.taskDialogButton1.ButtonType = Ookii.Dialogs.WinForms.ButtonType.Yes;
+            this.taskDialogButton1.Text = "Yes";
+            // 
+            // taskDialogButton2
+            // 
+            this.taskDialogButton2.ButtonType = Ookii.Dialogs.WinForms.ButtonType.No;
+            this.taskDialogButton2.Text = "No";
             // 
             // frmSettings
             // 
@@ -92,5 +120,8 @@ namespace Tasks
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
+        private Ookii.Dialogs.WinForms.TaskDialog taskDialog1;
+        private Ookii.Dialogs.WinForms.TaskDialogButton taskDialogButton1;
+        private Ookii.Dialogs.WinForms.TaskDialogButton taskDialogButton2;
     }
 }
