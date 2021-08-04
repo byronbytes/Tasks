@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -101,7 +102,10 @@ namespace Tasks
             Clipboard.SetText(string.Join("\n", CleanupLogsLBox.Items.Cast<string>()));
         }
 
-    
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/LiteTools/Tasks/wiki/Cleanup:-What-do-these-mean%3F");
+        }
     }
 }
     

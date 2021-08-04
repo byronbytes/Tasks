@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,16 @@ namespace Tasks
         {
             frmTaskManager TaskManager = new frmTaskManager(); // Initialize cleanup form.
             TaskManager.Show(); // Show Form
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://twitter.com/Lite_Tools");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.gg/nCBD9ZJjng");
         }
     }
 }

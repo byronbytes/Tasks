@@ -69,6 +69,7 @@ namespace Tasks
             this.button1.TabIndex = 5;
             this.button1.Text = "What do these mean?";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // checkBox4
             // 
@@ -105,7 +106,6 @@ namespace Tasks
             this.checkBox2.Text = "Clean Recycle Bin";
             this.checkBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox2.UseVisualStyleBackColor = true;
-
             // 
             // checkBox1
             // 
@@ -180,7 +180,7 @@ namespace Tasks
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCleanup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cleanup";
+            this.Text = "]";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
