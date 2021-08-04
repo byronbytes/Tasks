@@ -44,5 +44,11 @@ namespace Tasks
         {
             Process.Start("https://discord.gg/nCBD9ZJjng");
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmUtilityScripts UtilityScripts = new frmUtilityScripts(); // Initialize cleanup form.
+            UtilityScripts.Show(); // Show Form
+        }
     }
 }
