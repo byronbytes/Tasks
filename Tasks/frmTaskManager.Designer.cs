@@ -30,6 +30,8 @@ namespace Tasks
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Running Apps", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Background Apps", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaskManager));
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
@@ -54,11 +56,24 @@ namespace Tasks
             this.columnHeader5,
             this.columnHeader6});
             this.listView1.ForeColor = System.Drawing.Color.White;
+            listViewGroup1.Footer = "";
+            listViewGroup1.Header = "Running Apps";
+            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup1.Subtitle = "";
+            listViewGroup1.TaskLink = "";
+            listViewGroup2.Footer = "";
+            listViewGroup2.Header = "Background Apps";
+            listViewGroup2.Name = "listViewGroup2";
+            listViewGroup2.Subtitle = "";
+            listViewGroup2.TaskLink = "";
+            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1,
+            listViewGroup2});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.ShowItemToolTips = true;
-            this.listView1.Size = new System.Drawing.Size(827, 606);
+            this.listView1.Size = new System.Drawing.Size(827, 627);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -98,9 +113,9 @@ namespace Tasks
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Brown;
-            this.button1.Location = new System.Drawing.Point(687, 655);
+            this.button1.Location = new System.Drawing.Point(691, 661);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 41);
+            this.button1.Size = new System.Drawing.Size(148, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "End Process";
             this.button1.UseVisualStyleBackColor = true;
