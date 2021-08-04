@@ -105,6 +105,7 @@ namespace Tasks
             this.checkBox2.Text = "Clean Recycle Bin";
             this.checkBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox2.UseVisualStyleBackColor = true;
+
             // 
             // checkBox1
             // 

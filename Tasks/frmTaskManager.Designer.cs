@@ -29,6 +29,7 @@ namespace Tasks
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaskManager));
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
@@ -38,6 +39,7 @@ namespace Tasks
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // listView1
@@ -70,7 +72,7 @@ namespace Tasks
             // columnHeader2
             // 
             this.columnHeader2.Text = "PID";
-            this.columnHeader2.Width = 90;
+            this.columnHeader2.Width = 80;
             // 
             // columnHeader3
             // 
@@ -90,7 +92,7 @@ namespace Tasks
             // columnHeader6
             // 
             this.columnHeader6.Text = "Process Description";
-            this.columnHeader6.Width = 120;
+            this.columnHeader6.Width = 150;
             // 
             // button1
             // 
@@ -103,6 +105,12 @@ namespace Tasks
             this.button1.Text = "End Process";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 100000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmTaskManager
             // 
@@ -131,5 +139,6 @@ namespace Tasks
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

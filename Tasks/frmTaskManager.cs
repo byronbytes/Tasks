@@ -168,5 +168,10 @@ namespace Tasks
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            renderProcessesOnListView();
+        }
     }
 }

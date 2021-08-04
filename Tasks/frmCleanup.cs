@@ -65,13 +65,13 @@ namespace Tasks
                 return;
             }
 
-            if (checkBox1.Checked)
+            if (checkBox2.Checked)
             {
                 SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
                 CleanupLogsLBox.Items.Add("Recycle Bin Cleaned.");
             }
 
-            if (checkBox2.Checked)
+            if (checkBox1.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
@@ -100,6 +100,8 @@ namespace Tasks
             CleanupLogsLBox.Items.Add("Debug log copied to clipboard.");
             Clipboard.SetText(string.Join("\n", CleanupLogsLBox.Items.Cast<string>()));
         }
+
+    
     }
 }
     
