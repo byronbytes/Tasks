@@ -147,10 +147,11 @@ namespace Tasks
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(6, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(299, 34);
+            this.label3.Size = new System.Drawing.Size(306, 51);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Cleanup will clean your computer of junk  and temp\r\n folders. You may customize w" +
-    "hat folders get cleared.\r\n";
+            this.label3.Text = "Cleanup will clean all junk and garbage inside temp\r\n folders, recycle bin, downl" +
+    "oad and other locations. \r\nYou can select which to clean when accessing Cleanup." +
+    "";
             // 
             // button1
             // 
@@ -224,9 +225,10 @@ namespace Tasks
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(6, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(288, 34);
+            this.label5.Size = new System.Drawing.Size(306, 51);
             this.label5.TabIndex = 2;
-            this.label5.Text = "You can view, add, and remove programs that run \r\non start.";
+            this.label5.Text = "Manage the programs that start on boot by accessing \r\nStartup Programs. You will " +
+    "be able to see and modify\r\nall programs that run on startup.";
             // 
             // button3
             // 
@@ -262,10 +264,10 @@ namespace Tasks
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(6, 62);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(282, 51);
+            this.label6.Size = new System.Drawing.Size(303, 51);
             this.label6.TabIndex = 2;
-            this.label6.Text = "A more improved and efficient task manager. This\r\nwill include basic task manager" +
-    " features and \r\nmore.\r\n";
+            this.label6.Text = "An advanced Task Manager with detailed information\r\n while being more efficient. " +
+    "Also includes basic\r\n Task Manager features.";
             // 
             // button4
             // 
