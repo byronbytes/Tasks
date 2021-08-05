@@ -104,7 +104,7 @@ namespace Tasks
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/LiteTools/Tasks/wiki/Cleanup:-What-do-these-mean%3F");
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/wiki/Cleanup:-What-do-these-mean%3F", UseShellExecute = true });
         }
     }
 }

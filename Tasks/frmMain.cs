@@ -37,12 +37,13 @@ namespace Tasks
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Process.Start("https://twitter.com/Lite_Tools");
+            Process.Start(new ProcessStartInfo { FileName = "https://twitter.com/Lite_Tools", UseShellExecute = true });
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Process.Start("https://discord.gg/nCBD9ZJjng");
+            Process.Start(new ProcessStartInfo{FileName = "https://discord.gg/nCBD9ZJjng", UseShellExecute = true});
+
         }
 
         private void button6_Click(object sender, EventArgs e)
