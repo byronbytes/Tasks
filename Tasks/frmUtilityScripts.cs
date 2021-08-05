@@ -27,7 +27,7 @@ namespace Tasks
         {
             try
             {
-                Process.Start("TakeownTempFiles.bat");
+                Process.Start(new ProcessStartInfo { FileName = "~\\TakeownTempFiles.bat"});
 
             }
 
