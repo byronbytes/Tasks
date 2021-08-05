@@ -1,4 +1,4 @@
-#💼Tasks
+# 💼Tasks
 
 Tasks helps your computer run faster by allowing you to clean trash, remove bloatware as well as control startup programs and an advanced task manager, allowing you to check if any apps are maliciously eating your computer CPU and RAM without you knowing in the background.
 
