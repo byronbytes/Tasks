@@ -63,7 +63,7 @@ namespace Tasks
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -76,7 +76,9 @@ namespace Tasks
             // 
             // button5
             // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button5.Image = global::Tasks.Properties.Resources.Settings;
             this.button5.Location = new System.Drawing.Point(3, 462);
             this.button5.Name = "button5";
@@ -117,7 +119,7 @@ namespace Tasks
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(79, 0);
+            this.label2.Location = new System.Drawing.Point(78, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 30);
             this.label2.TabIndex = 1;
@@ -126,11 +128,11 @@ namespace Tasks
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 16.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Location = new System.Drawing.Point(18, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 31);
+            this.label1.Size = new System.Drawing.Size(69, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tasks";
             // 
@@ -333,7 +335,7 @@ namespace Tasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(781, 546);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -366,27 +368,27 @@ namespace Tasks
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupCleanup;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.GroupBox groupCleanup;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.GroupBox groupBox4;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Button button6;
     }
 }
 

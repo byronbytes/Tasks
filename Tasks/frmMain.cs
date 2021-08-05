@@ -22,7 +22,6 @@ namespace Tasks
         {
       // note for tomorrow, add a file system for tasks temp files and more, reg keys etc
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             frmCleanup Cleanup = new frmCleanup(); // Initialize cleanup form.
