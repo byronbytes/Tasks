@@ -1,8 +1,5 @@
-﻿
-namespace Tasks
-{
-    partial class frmMain
-    {
+namespace Tasks {
+    partial class frmMain {
         /// <summary>
         ///  Required designer variable.
         /// </summary>
@@ -12,12 +9,8 @@ namespace Tasks
         ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) { components.Dispose(); }
             base.Dispose(disposing);
         }
 
@@ -27,8 +20,7 @@ namespace Tasks
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -237,7 +229,7 @@ namespace Tasks
             this.label5.Size = new System.Drawing.Size(306, 51);
             this.label5.TabIndex = 2;
             this.label5.Text = "Manage the programs that start on boot by accessing \r\nStartup Programs. You will " +
-    "be able to see and modify\r\nall programs that run on startup.";
+                        "be able to see and modify\r\nall programs that run on startup.";
             // 
             // button3
             // 
@@ -276,7 +268,7 @@ namespace Tasks
             this.label6.Size = new System.Drawing.Size(303, 51);
             this.label6.TabIndex = 2;
             this.label6.Text = "An advanced Task Manager with detailed information\r\n while being more efficient. " +
-    "Also includes basic\r\n Task Manager features.";
+                        "Also includes basic\r\n Task Manager features.";
             // 
             // button4
             // 
@@ -314,8 +306,8 @@ namespace Tasks
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(278, 51);
             this.label7.TabIndex = 2;
-            this.label7.Text = "This will load scripts that will help your computer,\r\nthese include batch files t" +
-    "hat will take ownership\r\nof files that are unknown to beginners.";
+            this.label7.Text = "This will load scripts that will help your computer,\r\nthese include batch files " +
+                        "that will take ownership\r\nof files that are unknown to beginners.";
             // 
             // button6
             // 
