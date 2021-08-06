@@ -45,16 +45,16 @@ namespace Tasks
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            frmUtilityScripts UtilityScripts = new frmUtilityScripts(); // Initialize cleanup form.
-            UtilityScripts.Show(); // Show Form
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
             frmSettings Settings = new frmSettings(); // Initialize cleanup form.
             Settings.Show(); // Show Form
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/issues/new", UseShellExecute = true });
         }
     }
 }
