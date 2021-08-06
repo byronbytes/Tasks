@@ -1,8 +1,6 @@
 ﻿
-namespace Tasks
-{
-    partial class frmTaskManager
-    {
+namespace Tasks {
+    partial class frmTaskManager {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -12,12 +10,8 @@ namespace Tasks
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) { components.Dispose(); }
             base.Dispose(disposing);
         }
 
@@ -27,8 +21,7 @@ namespace Tasks
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Running Apps", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Background Apps", System.Windows.Forms.HorizontalAlignment.Left);
@@ -141,7 +134,6 @@ namespace Tasks
             this.Text = "Task Manager";
             this.Load += new System.EventHandler(this.frmTaskManager_Load);
             this.ResumeLayout(false);
-
         }
 
         #endregion
