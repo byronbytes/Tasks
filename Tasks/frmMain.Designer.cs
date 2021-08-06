@@ -48,9 +48,6 @@ namespace Tasks
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,7 +55,6 @@ namespace Tasks
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,9 +72,8 @@ namespace Tasks
             // 
             // button5
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button5.Image = global::Tasks.Properties.Resources.Settings;
             this.button5.Location = new System.Drawing.Point(3, 462);
             this.button5.Name = "button5";
@@ -138,6 +133,7 @@ namespace Tasks
             // 
             // groupCleanup
             // 
+            this.groupCleanup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.groupCleanup.Controls.Add(this.label3);
             this.groupCleanup.Controls.Add(this.button1);
             this.groupCleanup.ForeColor = System.Drawing.Color.White;
@@ -178,6 +174,7 @@ namespace Tasks
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -216,6 +213,7 @@ namespace Tasks
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
@@ -255,6 +253,7 @@ namespace Tasks
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
@@ -292,52 +291,12 @@ namespace Tasks
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.button6);
-            this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(459, 12);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(314, 119);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Utility Scripts";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semilight", 9.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(6, 62);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(278, 51);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "This will load scripts that will help your computer,\r\nthese include batch files t" +
-    "hat will take ownership\r\nof files that are unknown to beginners.";
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Image = global::Tasks.Properties.Resources.Utility_Scripts;
-            this.button6.Location = new System.Drawing.Point(9, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(148, 40);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Utility Scripts";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(781, 546);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -360,8 +319,6 @@ namespace Tasks
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -386,9 +343,6 @@ namespace Tasks
         public System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button button5;
-        public System.Windows.Forms.GroupBox groupBox4;
-        public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.Button button6;
     }
 }
 

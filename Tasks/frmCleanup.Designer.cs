@@ -40,14 +40,12 @@ namespace Tasks
             this.CleanupLogsLBox = new System.Windows.Forms.ListBox();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.groupBox1.Controls.Add(this.checkBox5);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.checkBox4);
             this.groupBox1.Controls.Add(this.checkBox3);
@@ -169,19 +167,6 @@ namespace Tasks
             this.btnCopyLogs.UseVisualStyleBackColor = true;
             this.btnCopyLogs.Click += new System.EventHandler(this.btnCopyLogs_Click);
             // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Enabled = false;
-            this.checkBox5.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox5.Location = new System.Drawing.Point(202, 54);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(185, 24);
-            this.checkBox5.TabIndex = 6;
-            this.checkBox5.Text = "Clean windows.old (WIP)";
-            this.checkBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -215,6 +200,5 @@ namespace Tasks
         private System.Windows.Forms.ListBox CleanupLogsLBox;
         private System.Windows.Forms.Button btnCleanup;
         private System.Windows.Forms.Button btnCopyLogs;
-        private System.Windows.Forms.CheckBox checkBox5;
     }
 }
