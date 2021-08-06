@@ -1,8 +1,5 @@
-﻿
-namespace Tasks
-{
-    partial class frmCleanup
-    {
+namespace Tasks {
+    partial class frmCleanup {
         /// <summary>
         /// Required designer variable.
         /// </summary>
