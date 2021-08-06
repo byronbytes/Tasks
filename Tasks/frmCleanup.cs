@@ -39,13 +39,13 @@ namespace Tasks
                 foreach (var file in directoryInfo.GetFiles())
                 {
                     file.Delete();
-                    CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
+                    CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
                 }
 
-                foreach (var directory in directoryInfo.GetDirectories())
+                foreach (var dir in directoryInfo.GetDirectories())
                 {
-                    directory.Delete(true);
-                    CleanupLogsLBox.Items.Add("Deleted " + directory.FullName);
+                    dir.Delete(true);
+                    CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
                 }
 
                 return true;
@@ -62,8 +62,14 @@ namespace Tasks
         {
             if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked)
             {
-                CleanupLogsLBox.Items.Add("Error: Did not select anything to clean.");
+                CleanupLogsLBox.Items.Add("Please select something to clean!");
                 return;
+            }
+            
+            if (checkBox1.Checked)
+            {
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
             }
 
             if (checkBox2.Checked)
@@ -72,19 +78,13 @@ namespace Tasks
                 CleanupLogsLBox.Items.Add("Recycle Bin Cleaned.");
             }
 
-            if (checkBox1.Checked)
-            {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
-            }
-
             if (checkBox3.Checked)
             {
-                var directory = new DirectoryInfo("C:\\Windows\\Temp");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Windows Temp Folder Cleaned.");
-
-                directory = new DirectoryInfo(Path.GetTempPath());
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("AppData Temp Folder Cleaned.");
+                var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
+                var usertemp = new DirectoryInfo(Path.GetTempPath());
+                
+                if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Cleaned.");
+                if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Cleaned.");
             }
 
             if (checkBox4.Checked)
