@@ -93,7 +93,7 @@ namespace Tasks
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
             }
 
-            if (CleanupLogsLBox.Items.Count > 1) btnCopyLogs.Enabled = true;
+            if (CleanupLogsLBox.Items.Count > 2) btnCopyLogs.Enabled = true;
         }
 
         private void btnCopyLogs_Click(object sender, EventArgs e)
@@ -105,6 +105,11 @@ namespace Tasks
         private void button1_Click(object sender, EventArgs e)
         {
             Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/wiki/Cleanup:-What-do-these-mean%3F", UseShellExecute = true });
+        }
+
+        private void frmCleanup_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
