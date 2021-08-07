@@ -76,7 +76,7 @@ namespace Tasks
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(562, 570);
+            this.groupBox1.Size = new System.Drawing.Size(562, 718);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configure Cleanup Options";
@@ -157,7 +157,7 @@ namespace Tasks
             // 
             this.btnCopyLogs.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCopyLogs.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnCopyLogs.Location = new System.Drawing.Point(234, 518);
+            this.btnCopyLogs.Location = new System.Drawing.Point(235, 667);
             this.btnCopyLogs.Name = "btnCopyLogs";
             this.btnCopyLogs.Size = new System.Drawing.Size(158, 45);
             this.btnCopyLogs.TabIndex = 3;
@@ -169,7 +169,7 @@ namespace Tasks
             // 
             this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCleanup.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnCleanup.Location = new System.Drawing.Point(398, 518);
+            this.btnCleanup.Location = new System.Drawing.Point(399, 667);
             this.btnCleanup.Name = "btnCleanup";
             this.btnCleanup.Size = new System.Drawing.Size(158, 45);
             this.btnCleanup.TabIndex = 2;
@@ -302,7 +302,7 @@ namespace Tasks
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCleanup";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cleanup";
             this.Load += new System.EventHandler(this.frmCleanup_Load);
             this.groupBox1.ResumeLayout(false);
