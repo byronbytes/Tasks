@@ -34,19 +34,28 @@ namespace Tasks
 
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
-            var success = true;
-            
-            foreach(var file in directoryInfo.GetFiles()) {
-                try { file.Delete(); }
-                catch(Exception ex) { CleanupLogsLBox.Items.Add("Exception Caught: " + ex.Message); success = false; }
+            try
+            {
+                foreach (var file in directoryInfo.GetFiles())
+                {
+                    file.Delete();
+                    CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
+                }
+
+                foreach (var dir in directoryInfo.GetDirectories())
+                {
+                    dir.Delete(true);
+                    CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
+                }
+
+                return true;
             }
-            
-            foreach(var dir in directoryInfo.GetDirectories()) {
-                try { dir.Delete(true); }
-                catch(Exception ex) { CleanupLogsLBox.Items.Add("Exception Caught: " + ex.Message); success = false; }
+            catch (Exception ex) when (ex is IOException || ex is DirectoryNotFoundException || ex is UnauthorizedAccessException || ex is SecurityException)
+            {
+                CleanupLogsLBox.Items.Add("Exception Error: " + ex.Message);
             }
-            
-            return success;
+
+            return false;
         }
 
         private void btnCleanup_Click(object sender, EventArgs e)
