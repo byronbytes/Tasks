@@ -32,6 +32,9 @@ namespace Tasks
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCleanup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
@@ -57,6 +60,9 @@ namespace Tasks
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.groupBox1.Controls.Add(this.checkBox10);
+            this.groupBox1.Controls.Add(this.checkBox9);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.checkBox8);
             this.groupBox1.Controls.Add(this.checkBox7);
@@ -80,6 +86,40 @@ namespace Tasks
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configure Cleanup Options";
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox10.Location = new System.Drawing.Point(6, 449);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(109, 24);
+            this.checkBox10.TabIndex = 16;
+            this.checkBox10.Text = "Crashdumps";
+            this.checkBox10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox9.Location = new System.Drawing.Point(6, 419);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(68, 24);
+            this.checkBox9.TabIndex = 15;
+            this.checkBox9.Text = "Cache";
+            this.checkBox9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(6, 381);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 25);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Discord";
             // 
             // label5
             // 
@@ -269,16 +309,17 @@ namespace Tasks
             // CleanupLogsLBox
             // 
             this.CleanupLogsLBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.CleanupLogsLBox.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CleanupLogsLBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CleanupLogsLBox.Font = new System.Drawing.Font("Segoe UI Semilight", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CleanupLogsLBox.ForeColor = System.Drawing.Color.White;
             this.CleanupLogsLBox.FormattingEnabled = true;
             this.CleanupLogsLBox.HorizontalScrollbar = true;
-            this.CleanupLogsLBox.ItemHeight = 17;
+            this.CleanupLogsLBox.ItemHeight = 19;
             this.CleanupLogsLBox.Items.AddRange(new object[] {
             "Cleanup Logs:"});
             this.CleanupLogsLBox.Location = new System.Drawing.Point(580, 12);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(488, 718);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(488, 703);
             this.CleanupLogsLBox.TabIndex = 1;
             // 
             // taskDialog1
@@ -333,5 +374,8 @@ namespace Tasks
         private System.Windows.Forms.Label label5;
         private Ookii.Dialogs.WinForms.TaskDialog taskDialog1;
         private Ookii.Dialogs.WinForms.TaskDialogButton taskDialogButton1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox10;
     }
 }
