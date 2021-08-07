@@ -1,9 +1,9 @@
-# 💼Tasks
+# 💼 Tasks
 
-Tasks helps your computer run faster by allowing you to clean trash, remove bloatware as well as control startup programs and an advanced task manager, allowing you to check if any apps are maliciously eating your computer CPU and RAM without you knowing in the background.
+Tasks helps your computer run faster by cleaning trash, removing bloatware as well as controlling startup programs and giving advanced task manager, while allowing you to check if any apps are maliciously eating your computer CPU and RAM without you knowing in the background.
 
 
-# ✅Features
+# ✅ Features
 
 - Cleanup Folders such as Prefetch, Downloads, Temp and empty your Recycle Bin easily.
 - Allow and disallow processes that run on start.
@@ -12,18 +12,18 @@ Tasks helps your computer run faster by allowing you to clean trash, remove bloa
 - Blacklist sites that are known to be malicious or point to malicious websites.
 - Discord Rich Presense integration included!
 
-# 🦺Prerequisites
+# 🦺 Prerequisites
 
 To be able to run Tasks, you will need the following:
 - [Microsoft .NET Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=3005) or higher.
 
 
-# 🎁Setup
+# 🎁 Setup
 
-Tasks is a portable program (for now). You can head to the Releases page, choose the latest version, download the zip file (**Note**: Not the Source Code zip file). Extract the zip file, and execute the *.exe* file in the extracted files. You can now experience the program!
+Tasks is a portable program (for now). You can head to the Releases page, choose the latest version, download the top zip file. Extract the zip file, and execute the *.exe* file in the extracted files. You can now experience the program!
 
 
-# 📐Branch Information
+# 📐 Branch Information
 
 The **master** branch holds the most stable updates for the project, and if you are not looking to the experimental side, or just want to simply use Tasks, then feel free to visit the **master** branch for source code.
 
@@ -33,7 +33,7 @@ The **testing** branch is meant for testing features on the project, and it is n
 
 You can support our project in many ways, these can come simple by leaving a star, forking, watching, and reporting bugs too. But we also setup a donation system so we can recieve money from your donations!
 
-# 📸Screenshots
+# 📸 Screenshots
 
 These screenshots were taken on Version 1.4.0, later versions may look different.
 
@@ -42,6 +42,6 @@ These screenshots were taken on Version 1.4.0, later versions may look different
 ![image](https://user-images.githubusercontent.com/53088136/127242208-e85fcc56-a456-4022-836e-69f028ef0343.png)
 
 
-# 📃Info
+# 📃 Info
 
-This program was created by LiteTools, a foundation that aims towards making simplistic tools for computers. The founder of LiteTools created the application originally on the personal profile, but later will be moving it to LiteTools.
+This program was created by LiteTools, a foundation that aims towards making simplistic tools for computers. The founder of LiteTools created the application originally on the personal profile, but later moved it to LiteTools Organization on GitHub.
