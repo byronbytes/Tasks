@@ -1,16 +1,17 @@
 # 💼Tasks
+![GitHub](https://img.shields.io/github/license/LiteTools/Tasks) ![GitHub issues](https://img.shields.io/github/issues-raw/LiteTools/Tasks) ![GitHub branch checks state](https://img.shields.io/github/checks-status/LiteTools/Tasks/master)
 
-Tasks helps your computer run faster by allowing you to clean trash, remove bloatware as well as control startup programs and an advanced task manager, allowing you to check if any apps are maliciously eating your computer CPU and RAM without you knowing in the background.
+Tasks is a simple program allowing you to clean your computer, remove bloatware as well as control startup programs, while giving you the new Advanced Task Manager that works better than Windows Task Manager, faster and lets you control apps that are maliciously eating your system resources.
 
 
 # ✅Features
 
-- Cleanup Folders such as Prefetch, Downloads, Temp and empty your Recycle Bin easily.
-- Allow and disallow processes that run on start.
-- An advanced task manager that gives you more information than the old Windows `taskmgr`. (Supports running tasks as admin)
+- Clean folders such as Prefetch, Downloads, Temp and empty your Recycle Bin easily.
+- Enable/Disable Programs that run on Startup.
+- An advanced task manager that gives you more information than the internal Windows Task Manager.
 - Remove bloatware from your computer on a click of a button.
-- Blacklist sites that are known to be malicious or point to malicious websites.
-- Discord Rich Presense integration included!
+- Blacklist sites that are known to be malicious / harmful.
+- Discord Rich Presence included!
 
 # 🦺Prerequisites
 
