@@ -82,7 +82,7 @@ namespace Tasks
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(562, 718);
+            this.groupBox1.Size = new System.Drawing.Size(562, 722);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configure Cleanup Options";
@@ -319,7 +319,7 @@ namespace Tasks
             "Cleanup Logs:"});
             this.CleanupLogsLBox.Location = new System.Drawing.Point(580, 12);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(488, 703);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(488, 722);
             this.CleanupLogsLBox.TabIndex = 1;
             // 
             // taskDialog1
