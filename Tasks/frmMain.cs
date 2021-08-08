@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,6 @@ namespace Tasks
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-      // note for tomorrow, add a file system for tasks temp files and more, reg keys etc
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,5 +56,7 @@ namespace Tasks
         {
             Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/issues/new", UseShellExecute = true });
         }
+
+      
     }
 }

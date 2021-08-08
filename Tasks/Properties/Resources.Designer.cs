@@ -73,6 +73,16 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chrome {
+            get {
+                object obj = ResourceManager.GetObject("Chrome", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cleanup {
             get {
                 object obj = ResourceManager.GetObject("Cleanup", resourceCulture);
@@ -136,6 +146,16 @@ namespace Tasks.Properties {
         internal static System.Drawing.Bitmap Startup_Program {
             get {
                 object obj = ResourceManager.GetObject("Startup Program", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Steam {
+            get {
+                object obj = ResourceManager.GetObject("Steam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
