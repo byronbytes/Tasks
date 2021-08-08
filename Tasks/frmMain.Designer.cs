@@ -298,7 +298,7 @@ namespace Tasks
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel1.Location = new System.Drawing.Point(665, 516);
+            this.linkLabel1.Location = new System.Drawing.Point(665, 513);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(104, 21);
             this.linkLabel1.TabIndex = 8;

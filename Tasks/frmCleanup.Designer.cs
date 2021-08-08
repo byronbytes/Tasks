@@ -32,6 +32,7 @@ namespace Tasks
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCleanup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,12 +55,19 @@ namespace Tasks
             this.CleanupLogsLBox = new System.Windows.Forms.ListBox();
             this.taskDialog1 = new Ookii.Dialogs.WinForms.TaskDialog(this.components);
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.checkBox10);
             this.groupBox1.Controls.Add(this.checkBox9);
             this.groupBox1.Controls.Add(this.label6);
@@ -86,6 +94,16 @@ namespace Tasks
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configure Cleanup Options";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tasks.Properties.Resources.windows_10;
+            this.pictureBox1.Location = new System.Drawing.Point(95, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // checkBox10
             // 
@@ -230,9 +248,11 @@ namespace Tasks
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(6, 40);
             this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(89, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Windows";
@@ -333,6 +353,27 @@ namespace Tasks
             // 
             this.taskDialogButton1.Text = "Ok";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(6, 487);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(553, 17);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "_________________________________________________________________________________" +
+    "____________________________";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Tasks.Properties.Resources.icons8_discord_48;
+            this.pictureBox2.Location = new System.Drawing.Point(83, 381);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -348,6 +389,8 @@ namespace Tasks
             this.Load += new System.EventHandler(this.frmCleanup_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,5 +420,8 @@ namespace Tasks
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label7;
     }
 }
