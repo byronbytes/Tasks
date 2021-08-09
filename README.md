@@ -22,7 +22,7 @@ The **master** branch holds the most stable updates for the project, and if you 
 The **testing** branch is meant for testing features on the project, and it is not as stable as master. New stuff get added to this branch, but they will not be quite stable and may either work as intended or not.
 
 # 💗 Support The Project
-You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, thanks to GitHub, so all your donations and sponsors go directly to us.
+You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us.
 
 # 📸Gallery
 These images were taken on Version 1.4.0, later versions may look different.
