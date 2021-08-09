@@ -1,5 +1,5 @@
 # 💼Tasks
-![GitHub](https://img.shields.io/github/license/LiteTools/Tasks) ![GitHub issues](https://img.shields.io/github/issues-raw/LiteTools/Tasks) ![Latest Stable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable) ![Latest Unstable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?include_prereleases&label=latest%20pre-release)
+![GitHub](https://img.shields.io/github/license/LiteTools/Tasks) ![GitHub issues](https://img.shields.io/github/issues-raw/LiteTools/Tasks) ![Latest Stable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable) ![Latest Beta Release](https://img.shields.io/github/v/release/LiteTools/Tasks?include_prereleases&label=latest%20pre-release)
 
 **Tasks** is a simple program allowing you to clean your computer, remove bloatware as well as control startup programs, while giving you the experience of the new Advanced Task Manager that works better than Windows Task Manager, faster and lets you control apps that are maliciously eating your system resources.
 
@@ -12,7 +12,7 @@
 - Blacklist sites that are known to be malicious / harmful.
 
 # 📩Installation
-1. Pick the stable release or the beta release (which is prone to bugs). ![Latest Stable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable) ![Latest Unstable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?include_prereleases&label=latest%20pre-release)
+1. Pick the stable release or the beta release (which is prone to bugs).
 2. Download the top-most *zip* file (not the source code).
 3. Extract the archive, and execute the *.exe* file. After that, **Tasks** will launch.
 
