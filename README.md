@@ -12,7 +12,7 @@
 - Blacklist sites that are known to be malicious / harmful.
 
 # 📩Installation
-1. Pick the stable release | ![Latest Stable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable) | or the beta release (which is prone to bugs) ![Latest Unstable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?include_prereleases&label=latest%20pre-release).
+1. Pick the stable release or the beta release (which is prone to bugs). ![Latest Stable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable) ![Latest Unstable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?include_prereleases&label=latest%20pre-release)
 2. Download the top-most *zip* file (not the source code).
 3. Extract the archive, and execute the *.exe* file. After that, **Tasks** will launch.
 
