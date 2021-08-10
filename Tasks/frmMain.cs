@@ -57,6 +57,11 @@ namespace Tasks
             Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/issues/new", UseShellExecute = true });
         }
 
-      
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmStartupPrograms Startups = new frmStartupPrograms();
+            Startups.Show();
+
+        }
     }
 }
