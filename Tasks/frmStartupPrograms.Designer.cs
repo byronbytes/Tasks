@@ -46,9 +46,9 @@ namespace Tasks
             this.ProcessStatus});
             this.StartupProcesses.ForeColor = System.Drawing.Color.White;
             this.StartupProcesses.HideSelection = false;
-            this.StartupProcesses.Location = new System.Drawing.Point(59, 12);
+            this.StartupProcesses.Location = new System.Drawing.Point(12, 12);
             this.StartupProcesses.Name = "StartupProcesses";
-            this.StartupProcesses.Size = new System.Drawing.Size(840, 510);
+            this.StartupProcesses.Size = new System.Drawing.Size(916, 531);
             this.StartupProcesses.TabIndex = 0;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
@@ -70,7 +70,9 @@ namespace Tasks
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(745, 540);
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(791, 549);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 37);
             this.button1.TabIndex = 1;
@@ -90,6 +92,7 @@ namespace Tasks
             this.Name = "frmStartupPrograms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Startup Programs";
+            this.Load += new System.EventHandler(this.frmStartupPrograms_Load);
             this.ResumeLayout(false);
 
         }

@@ -74,8 +74,9 @@ namespace Tasks
             // 
             // button5
             // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button5.Image = global::Tasks.Properties.Resources.Settings;
             this.button5.Location = new System.Drawing.Point(3, 462);
             this.button5.Name = "button5";

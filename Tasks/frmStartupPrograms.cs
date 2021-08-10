@@ -37,5 +37,10 @@ namespace Tasks
         {
             //todo later
         }
+
+        private void frmStartupPrograms_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
