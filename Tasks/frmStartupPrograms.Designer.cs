@@ -46,6 +46,7 @@ namespace Tasks
             this.ProcessPath,
             this.ProcessStatus});
             this.StartupProcesses.ForeColor = System.Drawing.Color.White;
+            this.StartupProcesses.FullRowSelect = true;
             this.StartupProcesses.HideSelection = false;
             this.StartupProcesses.Location = new System.Drawing.Point(12, 12);
             this.StartupProcesses.Name = "StartupProcesses";
@@ -53,6 +54,7 @@ namespace Tasks
             this.StartupProcesses.TabIndex = 0;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
+            this.StartupProcesses.SelectedIndexChanged += new System.EventHandler(this.StartupProcesses_SelectedIndexChanged);
             // 
             // ProcessName
             // 
