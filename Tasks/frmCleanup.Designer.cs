@@ -32,6 +32,7 @@ namespace Tasks
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCleanup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -68,7 +69,6 @@ namespace Tasks
             this.CleanupLogsLBox = new System.Windows.Forms.ListBox();
             this.taskDialog1 = new Ookii.Dialogs.WinForms.TaskDialog(this.components);
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -122,12 +122,25 @@ namespace Tasks
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configure Cleanup Options";
             // 
+            // checkBox16
+            // 
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox16.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox16.Location = new System.Drawing.Point(9, 816);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.Size = new System.Drawing.Size(122, 24);
+            this.checkBox16.TabIndex = 31;
+            this.checkBox16.Text = "Search History";
+            this.checkBox16.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox16.UseVisualStyleBackColor = true;
+            // 
             // checkBox15
             // 
             this.checkBox15.AutoSize = true;
             this.checkBox15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox15.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox15.Location = new System.Drawing.Point(9, 828);
+            this.checkBox15.Location = new System.Drawing.Point(9, 786);
             this.checkBox15.Name = "checkBox15";
             this.checkBox15.Size = new System.Drawing.Size(79, 24);
             this.checkBox15.TabIndex = 30;
@@ -140,18 +153,19 @@ namespace Tasks
             this.checkBox14.AutoSize = true;
             this.checkBox14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox14.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox14.Location = new System.Drawing.Point(9, 798);
+            this.checkBox14.Location = new System.Drawing.Point(9, 756);
             this.checkBox14.Name = "checkBox14";
             this.checkBox14.Size = new System.Drawing.Size(68, 24);
             this.checkBox14.TabIndex = 29;
             this.checkBox14.Text = "Cache";
             this.checkBox14.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(86, 752);
+            this.pictureBox5.Location = new System.Drawing.Point(86, 710);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 29);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,7 +176,7 @@ namespace Tasks
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(9, 752);
+            this.label10.Location = new System.Drawing.Point(9, 710);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 25);
             this.label10.TabIndex = 27;
@@ -172,7 +186,7 @@ namespace Tasks
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(3, 715);
+            this.label9.Location = new System.Drawing.Point(3, 678);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(553, 17);
             this.label9.TabIndex = 26;
@@ -538,19 +552,6 @@ namespace Tasks
             // taskDialogButton1
             // 
             this.taskDialogButton1.Text = "Ok";
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox16.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox16.Location = new System.Drawing.Point(9, 858);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(122, 24);
-            this.checkBox16.TabIndex = 31;
-            this.checkBox16.Text = "Search History";
-            this.checkBox16.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox16.UseVisualStyleBackColor = true;
             // 
             // frmCleanup
             // 

@@ -189,13 +189,11 @@ namespace Tasks
                             try
                             {
                                 File.Delete(file);
-                                CleanupLogsLBox.Items.Add("Firefox Cache File Cleared.");
+                                CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
                             }
                             catch
                             {
-
-                                CleanupLogsLBox.Items.Add("Error when trying to clear firefox cache file!");
-
+                                CleanupLogsLBox.Items.Add("Error when trying to clean firefox cache file!");
                             }
                             
                         }
@@ -203,16 +201,12 @@ namespace Tasks
                         {
                             try
                             {
-
                                 Directory.Delete(dir, true);
-                                CleanupLogsLBox.Items.Add("Firefox Cache Folder Cleared.");
-
+                                CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
                             }
                             catch
                             {
-
                                 CleanupLogsLBox.Items.Add("Error when trying to clear firefox cache folder!");
-
                             }
                             
                         }
@@ -245,10 +239,7 @@ namespace Tasks
 
                     }
                 }
-
-
             }
-
             if (checkBox16.Checked)
             {
 
@@ -259,7 +250,6 @@ namespace Tasks
                     {
                         try
                         {
-
                             var cookiefile = (direc + "\\places.sqlite");
                             File.Delete(cookiefile);
                             CleanupLogsLBox.Items.Add("Deleted Firefox History!");
@@ -267,9 +257,7 @@ namespace Tasks
                         }
                         catch
                         {
-
                             CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History!");
-
                         }
 
                     }
@@ -309,7 +297,10 @@ namespace Tasks
             taskDialog1.Show();
         }
 
+        private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
     
