@@ -56,6 +56,7 @@ namespace Tasks
             this.columnHeader5,
             this.columnHeader6});
             this.listView1.ForeColor = System.Drawing.Color.White;
+            this.listView1.FullRowSelect = true;
             listViewGroup1.Footer = "";
             listViewGroup1.Header = "Running Apps";
             listViewGroup1.Name = "listViewGroup1";

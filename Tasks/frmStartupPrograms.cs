@@ -13,6 +13,7 @@ using System.Management;
 
 namespace Tasks
 {
+
     public partial class frmStartupPrograms : Form
     {
         public frmStartupPrograms()
@@ -23,13 +24,15 @@ namespace Tasks
 
         private void RenderStartupsOnListWiew()
         {
-            ListViewItem path = new ListViewItem("ProcessPath");
             ManagementClass mangnmt = new ManagementClass("Win32_StartupCommand");
             ManagementObjectCollection mcol = mangnmt.GetInstances();
             foreach (ManagementObject strt in mcol)
             {
-                StartupProcesses.Items.Add(strt["Name"].ToString(), 0).SubItems.Add(strt["Location"].ToString());
+                ListViewItem oo = StartupProcesses.Items.Add(strt["Name"].ToString(), 0);  //Changed the way the items work so we can add more than one subitem.
+                oo.SubItems.Add(strt["Location"].ToString());
             }
+
+            
         }
 
 
@@ -42,5 +45,30 @@ namespace Tasks
         {
 
         }
+
+        private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+    public class StartUpProgram
+
+    {
+
+        public string Name { get; set; }
+
+
+        public string Path { get; set; }
+
+        //show name in checkboxitem
+
+        public override string ToString()
+
+        {
+
+            return Name;
+
+        }
+
     }
 }

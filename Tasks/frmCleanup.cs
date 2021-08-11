@@ -60,7 +60,12 @@ namespace Tasks
 
         private void btnCleanup_Click(object sender, EventArgs e)
         {
-            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked && !checkBox5.Checked && !checkBox6.Checked && !checkBox7.Checked && !checkBox8.Checked && !checkBox9.Checked && !checkBox10.Checked && !checkBox11.Checked && !checkBox12.Checked && !checkBox13.Checked)
+
+
+            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
+            var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked && !checkBox5.Checked && !checkBox6.Checked && !checkBox7.Checked && !checkBox8.Checked && !checkBox9.Checked && !checkBox10.Checked && !checkBox11.Checked && !checkBox12.Checked && !checkBox13.Checked && !checkBox14.Checked && !checkBox15.Checked && !checkBox16.Checked)
             {
                 CleanupLogsLBox.Items.Add("Please select something to clean!");
                 return;
@@ -167,6 +172,113 @@ namespace Tasks
                 if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Steam Code Cache Cleaned.");
                 if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Steam GPU Cache Cleaned.");
             }
+
+
+            //Firefox
+
+            if (checkBox14.Checked)
+            {
+                var cache = (localappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                foreach (string direc in Directory.EnumerateDirectories(cache))
+                {
+                    if (direc.Contains("release") == true)
+                    {
+                        var cachefile = (direc + "\\cache2");
+                        foreach (string file in Directory.EnumerateFiles(cachefile))
+                        {
+                            try
+                            {
+                                File.Delete(file);
+                                CleanupLogsLBox.Items.Add("Firefox Cache File Cleared.");
+                            }
+                            catch
+                            {
+
+                                CleanupLogsLBox.Items.Add("Error when trying to clear firefox cache file!");
+
+                            }
+                            
+                        }
+                        foreach (string dir in Directory.EnumerateDirectories(cachefile))
+                        {
+                            try
+                            {
+
+                                Directory.Delete(dir, true);
+                                CleanupLogsLBox.Items.Add("Firefox Cache Folder Cleared.");
+
+                            }
+                            catch
+                            {
+
+                                CleanupLogsLBox.Items.Add("Error when trying to clear firefox cache folder!");
+
+                            }
+                            
+                        }
+                    }
+                }
+
+            }
+
+            if (checkBox15.Checked)
+            {
+
+                var cookies = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                foreach (string direc in Directory.EnumerateDirectories(cookies))
+                {
+                    if (direc.Contains("release") == true)
+                    {
+                        try
+                        {
+                            var cookiefile = (direc + "\\cookies.sqlite");
+                            File.Delete(cookiefile);
+                            CleanupLogsLBox.Items.Add("Firefox cookies cleared!");
+
+                        }
+                        catch
+                        {
+
+                            CleanupLogsLBox.Items.Add("Error when trying to delete firefox cookies!");
+
+                        }
+
+                    }
+                }
+
+
+            }
+
+            if (checkBox16.Checked)
+            {
+
+                var cookies = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                foreach (string direc in Directory.EnumerateDirectories(cookies))
+                {
+                    if (direc.Contains("release") == true)
+                    {
+                        try
+                        {
+
+                            var cookiefile = (direc + "\\places.sqlite");
+                            File.Delete(cookiefile);
+                            CleanupLogsLBox.Items.Add("Deleted Firefox History!");
+
+                        }
+                        catch
+                        {
+
+                            CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History!");
+
+                        }
+
+                    }
+                }
+
+
+            }
+            //I will add more features for firefox later
+
 
             if (CleanupLogsLBox.Items.Count > 2) btnCopyLogs.Enabled = true;
         }
