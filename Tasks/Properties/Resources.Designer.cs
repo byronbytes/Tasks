@@ -93,6 +93,16 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CleanupWhite {
+            get {
+                object obj = ResourceManager.GetObject("CleanupWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Downloads {
             get {
                 object obj = ResourceManager.GetObject("Downloads", resourceCulture);
@@ -123,6 +133,16 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap InfoWhite {
+            get {
+                object obj = ResourceManager.GetObject("InfoWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Recycle {
             get {
                 object obj = ResourceManager.GetObject("Recycle", resourceCulture);
@@ -136,6 +156,16 @@ namespace Tasks.Properties {
         internal static System.Drawing.Bitmap Recycle_Bin {
             get {
                 object obj = ResourceManager.GetObject("Recycle Bin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RemoveBloat_White {
+            get {
+                object obj = ResourceManager.GetObject("RemoveBloat White", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +193,16 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap StartupProgramWhite {
+            get {
+                object obj = ResourceManager.GetObject("StartupProgramWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Steam {
             get {
                 object obj = ResourceManager.GetObject("Steam", resourceCulture);
@@ -176,6 +216,16 @@ namespace Tasks.Properties {
         internal static System.Drawing.Bitmap Task_Manager {
             get {
                 object obj = ResourceManager.GetObject("Task Manager", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TaskManagerWhite {
+            get {
+                object obj = ResourceManager.GetObject("TaskManagerWhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

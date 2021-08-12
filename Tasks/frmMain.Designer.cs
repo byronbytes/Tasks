@@ -49,6 +49,7 @@ namespace Tasks
             this.button4 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -151,9 +152,10 @@ namespace Tasks
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Tasks.Properties.Resources.Cleanup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Tasks.Properties.Resources.CleanupWhite;
             this.button1.Location = new System.Drawing.Point(9, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 40);
@@ -174,7 +176,7 @@ namespace Tasks
             this.groupBox1.Size = new System.Drawing.Size(314, 119);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "   ";
+            this.groupBox1.Text = "Remove Bloat";
             // 
             // label4
             // 
@@ -192,9 +194,10 @@ namespace Tasks
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Tasks.Properties.Resources.Bloatware;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Tasks.Properties.Resources.RemoveBloat_White;
             this.button2.Location = new System.Drawing.Point(9, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 40);
@@ -232,9 +235,10 @@ namespace Tasks
             // button3
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::Tasks.Properties.Resources.Startup_Program;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::Tasks.Properties.Resources.StartupProgramWhite;
             this.button3.Location = new System.Drawing.Point(9, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 40);
@@ -274,9 +278,10 @@ namespace Tasks
             // button4
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::Tasks.Properties.Resources.Task_Manager;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Tasks.Properties.Resources.TaskManagerWhite;
             this.button4.Location = new System.Drawing.Point(9, 19);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(148, 40);
@@ -315,12 +320,30 @@ namespace Tasks
             this.label7.TabIndex = 8;
             this.label7.Text = "DEVELOPMENT RELEASE";
             // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = global::Tasks.Properties.Resources.InfoWhite;
+            this.button5.Location = new System.Drawing.Point(632, 46);
+            this.button5.Name = "button5";
+            this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button5.Size = new System.Drawing.Size(137, 41);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Info";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(781, 567);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox3);
@@ -356,7 +379,6 @@ namespace Tasks
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.GroupBox groupCleanup;
-        public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.Label label4;
@@ -371,6 +393,8 @@ namespace Tasks
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button5;
     }
 }
 
