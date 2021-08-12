@@ -118,6 +118,7 @@ namespace Tasks
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -481,9 +482,9 @@ namespace Tasks
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(426, 11);
+            this.button1.Location = new System.Drawing.Point(398, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 30);
+            this.button1.Size = new System.Drawing.Size(158, 33);
             this.button1.TabIndex = 5;
             this.button1.Text = "What do these mean?";
             this.button1.UseVisualStyleBackColor = true;
@@ -544,10 +545,10 @@ namespace Tasks
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 15);
+            this.label1.Size = new System.Drawing.Size(327, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Select checkboxes that determine what you want to clean.";
             // 
