@@ -306,13 +306,14 @@ namespace Tasks
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label7.Location = new System.Drawing.Point(524, 9);
+            this.label7.Location = new System.Drawing.Point(500, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(245, 31);
+            this.label7.Size = new System.Drawing.Size(269, 31);
             this.label7.TabIndex = 8;
-            this.label7.Text = "DEVELOPMENT BUILD";
+            this.label7.Text = "DEVELOPMENT RELEASE";
             // 
             // frmMain
             // 
