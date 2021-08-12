@@ -49,8 +49,6 @@ namespace Tasks
             this.button4 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,7 +56,6 @@ namespace Tasks
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,7 +123,7 @@ namespace Tasks
             this.groupCleanup.Controls.Add(this.label3);
             this.groupCleanup.Controls.Add(this.button1);
             this.groupCleanup.ForeColor = System.Drawing.Color.White;
-            this.groupCleanup.Location = new System.Drawing.Point(140, 46);
+            this.groupCleanup.Location = new System.Drawing.Point(140, 12);
             this.groupCleanup.Name = "groupCleanup";
             this.groupCleanup.Size = new System.Drawing.Size(314, 119);
             this.groupCleanup.TabIndex = 1;
@@ -149,6 +146,7 @@ namespace Tasks
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::Tasks.Properties.Resources.Cleanup;
@@ -167,7 +165,7 @@ namespace Tasks
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(140, 171);
+            this.groupBox1.Location = new System.Drawing.Point(140, 137);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(314, 119);
             this.groupBox1.TabIndex = 3;
@@ -189,6 +187,7 @@ namespace Tasks
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = global::Tasks.Properties.Resources.Bloatware;
@@ -206,7 +205,7 @@ namespace Tasks
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(140, 296);
+            this.groupBox2.Location = new System.Drawing.Point(140, 262);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(314, 119);
             this.groupBox2.TabIndex = 4;
@@ -228,6 +227,7 @@ namespace Tasks
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Image = global::Tasks.Properties.Resources.Startup_Program;
@@ -247,7 +247,7 @@ namespace Tasks
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(140, 421);
+            this.groupBox3.Location = new System.Drawing.Point(140, 387);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(314, 119);
             this.groupBox3.TabIndex = 5;
@@ -269,6 +269,7 @@ namespace Tasks
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Image = global::Tasks.Properties.Resources.Task_Manager;
@@ -284,6 +285,7 @@ namespace Tasks
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
             this.linkLabel1.Location = new System.Drawing.Point(665, 537);
@@ -300,32 +302,11 @@ namespace Tasks
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label7.Location = new System.Drawing.Point(210, 5);
+            this.label7.Location = new System.Drawing.Point(524, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(245, 31);
             this.label7.TabIndex = 8;
             this.label7.Text = "DEVELOPMENT BUILD";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(134, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(655, 40);
-            this.panel2.TabIndex = 9;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(613, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(36, 28);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "X";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmMain
             // 
@@ -333,14 +314,13 @@ namespace Tasks
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(781, 567);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupCleanup);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -358,8 +338,6 @@ namespace Tasks
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,8 +364,6 @@ namespace Tasks
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button5;
     }
 }
 
