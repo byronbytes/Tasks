@@ -409,9 +409,9 @@ namespace Tasks
             // 
             this.btnCopyLogs.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCopyLogs.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnCopyLogs.Location = new System.Drawing.Point(229, 861);
+            this.btnCopyLogs.Location = new System.Drawing.Point(233, 861);
             this.btnCopyLogs.Name = "btnCopyLogs";
-            this.btnCopyLogs.Size = new System.Drawing.Size(158, 45);
+            this.btnCopyLogs.Size = new System.Drawing.Size(159, 45);
             this.btnCopyLogs.TabIndex = 3;
             this.btnCopyLogs.Text = "Copy Cleanup Logs";
             this.btnCopyLogs.UseVisualStyleBackColor = true;

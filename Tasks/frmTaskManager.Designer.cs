@@ -138,7 +138,7 @@ namespace Tasks
             this.Controls.Add(this.listView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTaskManager";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Task Manager";
             this.Load += new System.EventHandler(this.frmTaskManager_Load);
             this.ResumeLayout(false);
