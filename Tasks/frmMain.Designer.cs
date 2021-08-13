@@ -124,7 +124,7 @@ namespace Tasks
             // 
             // groupCleanup
             // 
-            this.groupCleanup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.groupCleanup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.groupCleanup.Controls.Add(this.label3);
             this.groupCleanup.Controls.Add(this.button1);
             this.groupCleanup.ForeColor = System.Drawing.Color.White;
@@ -145,9 +145,8 @@ namespace Tasks
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(306, 51);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Cleanup will clean all junk and garbage inside temp\r\n folders, recycle bin, downl" +
-    "oad and other locations. \r\nYou can select which to clean when accessing Cleanup." +
-    "";
+            this.label3.Text = "Cleanup will clean all junk and garbage inside temp\r\nfolders, recycle bin, downlo" +
+    "ad and other locations. \r\nYou can select which to clean when accessing Cleanup.";
             // 
             // button1
             // 
@@ -167,7 +166,7 @@ namespace Tasks
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -208,7 +207,7 @@ namespace Tasks
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
@@ -251,7 +250,7 @@ namespace Tasks
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
@@ -272,8 +271,8 @@ namespace Tasks
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(303, 51);
             this.label6.TabIndex = 2;
-            this.label6.Text = "An advanced Task Manager with detailed information\r\n while being more efficient. " +
-    "Also includes basic\r\n Task Manager features.";
+            this.label6.Text = "An advanced Task Manager with detailed information\r\nwhile being more efficient. A" +
+    "lso includes basic\r\nTask Manager features.";
             // 
             // button4
             // 

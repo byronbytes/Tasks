@@ -77,7 +77,7 @@ namespace Tasks
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(647, 580);
+            this.button1.Location = new System.Drawing.Point(648, 610);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 37);
             this.button1.TabIndex = 1;
@@ -89,7 +89,7 @@ namespace Tasks
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button2.Location = new System.Drawing.Point(790, 580);
+            this.button2.Location = new System.Drawing.Point(791, 610);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 37);
             this.button2.TabIndex = 2;
@@ -100,7 +100,7 @@ namespace Tasks
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(12, 580);
+            this.button3.Location = new System.Drawing.Point(12, 610);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(161, 37);
             this.button3.TabIndex = 3;

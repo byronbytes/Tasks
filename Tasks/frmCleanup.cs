@@ -425,6 +425,10 @@ namespace Tasks
 
         }
 
+        private void CleanupLogsLBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     
