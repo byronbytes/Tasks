@@ -274,7 +274,7 @@ namespace Tasks
                             {
                                 var cookiefile = (direc + "\\places.sqlite");
                                 File.Delete(cookiefile);
-                                CleanupLogsLBox.Items.Add("Deleted Firefox History!");
+                                CleanupLogsLBox.Items.Add("Cleaned Firefox History!");
 
                             }
                             catch (Exception exc)
@@ -424,6 +424,7 @@ namespace Tasks
         {
 
         }
+
     }
 }
     
