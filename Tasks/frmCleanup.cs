@@ -239,7 +239,7 @@ namespace Tasks
                             {
                                 var cookiefile = (direc + "\\cookies.sqlite");
                                 File.Delete(cookiefile);
-                                CleanupLogsLBox.Items.Add("Firefox Cookies cleaned.");
+                                CleanupLogsLBox.Items.Add("Firefox Cookies Cleaned.");
 
                             }
                             catch (Exception exc)
@@ -274,7 +274,7 @@ namespace Tasks
                             {
                                 var cookiefile = (direc + "\\places.sqlite");
                                 File.Delete(cookiefile);
-                                CleanupLogsLBox.Items.Add("Firefox History cleaned.");
+                                CleanupLogsLBox.Items.Add("Firefox History Cleaned.");
 
                             }
                             catch (Exception exc)
@@ -385,7 +385,7 @@ namespace Tasks
                 }
                 catch (Exception exc)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox Shader Cache! \n" + exc);
+                    CleanupLogsLBox.Items.Add("Error while trying to delete Firefox Shader Cache! \n" + exc);
                 }
             }
 
@@ -398,17 +398,17 @@ namespace Tasks
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/C ipconfig /flushdns";
+                    startInfo.Arguments = "/c ipconfig /flushdns";
                     startInfo.RedirectStandardError = true;
                     process.StartInfo = startInfo;
                     process.Start();
-                    CleanupLogsLBox.Items.Add("DNS cache successfully wiped!");
+                    CleanupLogsLBox.Items.Add("DNS Cache Cleared.");
                     MessageBox.Show(process.StandardError.ToString());
                 }
                 catch(Exception esc)
                 {
 
-                    CleanupLogsLBox.Items.Add("Error when trying to wipe dns cache! \n" + esc);
+                    CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache! \n" + esc);
 
                 }
             }
@@ -428,12 +428,12 @@ namespace Tasks
                     process.Start();
                     process.StandardInput.WriteLine("arp -d *");
                     process.StandardInput.WriteLine("exit");
-                    CleanupLogsLBox.Items.Add("ARP cache successfully wiped!");
+                    CleanupLogsLBox.Items.Add("ARP Cache Cleared.");
                 }
                 catch (Exception esc)
                 {
 
-                    CleanupLogsLBox.Items.Add("Error when trying to wipe ARP cache! \n" + esc);
+                    CleanupLogsLBox.Items.Add("Error when trying to clear ARP cache! \n" + esc);
                     MessageBox.Show(esc.ToString());
 
                 }
