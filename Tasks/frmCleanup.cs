@@ -403,7 +403,6 @@ namespace Tasks
                     process.StartInfo = startInfo;
                     process.Start();
                     CleanupLogsLBox.Items.Add("DNS Cache Cleared.");
-                    MessageBox.Show(process.StandardError.ToString());
                 }
                 catch(Exception esc)
                 {
@@ -433,7 +432,7 @@ namespace Tasks
                 catch (Exception esc)
                 {
 
-                    CleanupLogsLBox.Items.Add("Error when trying to clear ARP cache! \n" + esc);
+                    CleanupLogsLBox.Items.Add("Error while trying to clear ARP cache! \n" + esc);
                     MessageBox.Show(esc.ToString());
 
                 }

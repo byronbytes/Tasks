@@ -49,7 +49,6 @@ namespace Tasks
             this.button4 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -313,28 +312,11 @@ namespace Tasks
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label7.Location = new System.Drawing.Point(500, 12);
+            this.label7.Location = new System.Drawing.Point(595, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(269, 31);
+            this.label7.Size = new System.Drawing.Size(174, 31);
             this.label7.TabIndex = 8;
-            this.label7.Text = "DEVELOPMENT RELEASE";
-            // 
-            // button5
-            // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::Tasks.Properties.Resources.InfoWhite;
-            this.button5.Location = new System.Drawing.Point(665, 46);
-            this.button5.Name = "button5";
-            this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button5.Size = new System.Drawing.Size(104, 40);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Info";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.label7.Text = "DEVELOPMENT";
             // 
             // frmMain
             // 
@@ -342,7 +324,6 @@ namespace Tasks
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(781, 567);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox3);
@@ -393,7 +374,6 @@ namespace Tasks
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button button5;
     }
 }
 
