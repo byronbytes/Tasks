@@ -65,7 +65,7 @@ namespace Tasks
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
-            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked && !checkBox5.Checked && !checkBox6.Checked && !checkBox7.Checked && !checkBox8.Checked && !checkBox9.Checked && !checkBox10.Checked && !checkBox11.Checked && !checkBox12.Checked && !checkBox13.Checked && !checkBox14.Checked && !checkBox15.Checked && !checkBox16.Checked && !checkBox16.Checked && !checkBox17.Checked && !checkBox18.Checked)
+            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked && !checkBox5.Checked && !checkBox6.Checked && !checkBox7.Checked && !checkBox8.Checked && !checkBox9.Checked && !checkBox10.Checked && !checkBox11.Checked && !checkBox12.Checked && !checkBox13.Checked && !checkBox14.Checked && !checkBox15.Checked && !checkBox16.Checked && !checkBox16.Checked && !checkBox17.Checked && !checkBox18.Checked && !checkBox19.Checked && !checkBox20.Checked)
             {
                 CleanupLogsLBox.Items.Add("Please select something to clean!");
                 return;
@@ -386,6 +386,56 @@ namespace Tasks
                 catch (Exception exc)
                 {
                     CleanupLogsLBox.Items.Add("Error when trying to delete Firefox Shader Cache! \n" + exc);
+                }
+            }
+
+            //DNS & ARP
+            if (checkBox19.Checked)
+            {
+                try
+                {
+                    System.Diagnostics.Process process = new System.Diagnostics.Process();
+                    System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                    startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    startInfo.FileName = "cmd.exe";
+                    startInfo.Arguments = "/C ipconfig /flushdns";
+                    startInfo.RedirectStandardError = true;
+                    process.StartInfo = startInfo;
+                    process.Start();
+                    CleanupLogsLBox.Items.Add("DNS cache successfully wiped!");
+                    MessageBox.Show(process.StandardError.ToString());
+                }
+                catch(Exception esc)
+                {
+
+                    CleanupLogsLBox.Items.Add("Error when trying to wipe dns cache! \n" + esc);
+
+                }
+            }
+            if (checkBox20.Checked)
+            {
+                try
+                {
+                    System.Diagnostics.Process process = new System.Diagnostics.Process();
+                    System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                    startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    startInfo.FileName = "cmd.exe";
+                    startInfo.Verb = "runas";
+                    startInfo.UseShellExecute = false;
+                    startInfo.RedirectStandardInput = true;
+                    //startInfo.Arguments = @"/C arp -a -d";
+                    process.StartInfo = startInfo;
+                    process.Start();
+                    process.StandardInput.WriteLine("arp -d *");
+                    process.StandardInput.WriteLine("exit");
+                    CleanupLogsLBox.Items.Add("ARP cache successfully wiped!");
+                }
+                catch (Exception esc)
+                {
+
+                    CleanupLogsLBox.Items.Add("Error when trying to wipe ARP cache! \n" + esc);
+                    MessageBox.Show(esc.ToString());
+
                 }
             }
 

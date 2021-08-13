@@ -67,6 +67,8 @@ namespace Tasks
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox20 = new System.Windows.Forms.CheckBox();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -520,6 +522,8 @@ namespace Tasks
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage1.Controls.Add(this.checkBox20);
+            this.tabPage1.Controls.Add(this.checkBox19);
             this.tabPage1.Controls.Add(this.pictureBox6);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.checkBox3);
@@ -537,10 +541,36 @@ namespace Tasks
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
+            // checkBox20
+            // 
+            this.checkBox20.AutoSize = true;
+            this.checkBox20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox20.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox20.Location = new System.Drawing.Point(6, 207);
+            this.checkBox20.Name = "checkBox20";
+            this.checkBox20.Size = new System.Drawing.Size(289, 24);
+            this.checkBox20.TabIndex = 21;
+            this.checkBox20.Text = "Wipe ARP Cache (NOT FUNCTIONNING)";
+            this.checkBox20.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox20.UseVisualStyleBackColor = true;
+            // 
+            // checkBox19
+            // 
+            this.checkBox19.AutoSize = true;
+            this.checkBox19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox19.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox19.Location = new System.Drawing.Point(6, 177);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(139, 24);
+            this.checkBox19.TabIndex = 20;
+            this.checkBox19.Text = "Wipe DNS Cache";
+            this.checkBox19.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox19.UseVisualStyleBackColor = true;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Tasks.Properties.Resources.Explorer1;
-            this.pictureBox6.Location = new System.Drawing.Point(95, 223);
+            this.pictureBox6.Location = new System.Drawing.Point(95, 263);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(32, 29);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -552,7 +582,7 @@ namespace Tasks
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(6, 223);
+            this.label1.Location = new System.Drawing.Point(6, 267);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(81, 25);
@@ -687,5 +717,7 @@ namespace Tasks
         private System.Windows.Forms.Button btnCopyLogs;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox19;
+        private System.Windows.Forms.CheckBox checkBox20;
     }
 }
