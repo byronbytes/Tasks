@@ -65,7 +65,7 @@ namespace Tasks
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
-            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked && !checkBox5.Checked && !checkBox6.Checked && !checkBox7.Checked && !checkBox8.Checked && !checkBox9.Checked && !checkBox10.Checked && !checkBox11.Checked && !checkBox12.Checked && !checkBox13.Checked && !checkBox14.Checked && !checkBox15.Checked && !checkBox16.Checked)
+            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked && !checkBox5.Checked && !checkBox6.Checked && !checkBox7.Checked && !checkBox8.Checked && !checkBox9.Checked && !checkBox10.Checked && !checkBox11.Checked && !checkBox12.Checked && !checkBox13.Checked && !checkBox14.Checked && !checkBox15.Checked && !checkBox16.Checked && !checkBox16.Checked && !checkBox17.Checked && !checkBox18.Checked)
             {
                 CleanupLogsLBox.Items.Add("Please select something to clean!");
                 return;
@@ -178,98 +178,221 @@ namespace Tasks
 
             if (checkBox14.Checked)
             {
-                var cache = (localappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                foreach (string direc in Directory.EnumerateDirectories(cache))
+                try
                 {
-                    if (direc.Contains("release") == true)
+
+                    var cache = (localappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                    foreach (string direc in Directory.EnumerateDirectories(cache))
                     {
-                        var cachefile = (direc + "\\cache2");
-                        foreach (string file in Directory.EnumerateFiles(cachefile))
+                        if (direc.Contains("release") == true)
                         {
-                            try
+                            var cachefile = (direc + "\\cache2");
+                            foreach (string file in Directory.EnumerateFiles(cachefile))
                             {
-                                File.Delete(file);
-                                CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
+                                try
+                                {
+                                    File.Delete(file);
+                                    CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
+                                }
+                                catch (Exception exc)
+                                {
+                                    CleanupLogsLBox.Items.Add("Error when trying to clean firefox cache file! " + exc);
+                                }
+
                             }
-                            catch
+                            foreach (string dir in Directory.EnumerateDirectories(cachefile))
                             {
-                                CleanupLogsLBox.Items.Add("Error when trying to clean firefox cache file!");
+                                try
+                                {
+                                    Directory.Delete(dir, true);
+                                    CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
+                                }
+                                catch (Exception exc)
+                                {
+                                    CleanupLogsLBox.Items.Add("Error when trying to clear firefox cache folder! " + exc);
+                                }
+
                             }
-                            
-                        }
-                        foreach (string dir in Directory.EnumerateDirectories(cachefile))
-                        {
-                            try
-                            {
-                                Directory.Delete(dir, true);
-                                CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
-                            }
-                            catch
-                            {
-                                CleanupLogsLBox.Items.Add("Error when trying to clear firefox cache folder!");
-                            }
-                            
                         }
                     }
+
                 }
+                catch (Exception exc)
+                {
+                    CleanupLogsLBox.Items.Add("Error when trying to clear firefox cache! \n" + exc);
+                }
+
+
 
             }
 
             if (checkBox15.Checked)
             {
-
-                var cookies = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                foreach (string direc in Directory.EnumerateDirectories(cookies))
+                try
                 {
-                    if (direc.Contains("release") == true)
+                    var cookies = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                    foreach (string direc in Directory.EnumerateDirectories(cookies))
                     {
-                        try
+                        if (direc.Contains("release") == true)
                         {
-                            var cookiefile = (direc + "\\cookies.sqlite");
-                            File.Delete(cookiefile);
-                            CleanupLogsLBox.Items.Add("Firefox cookies cleared!");
+                            try
+                            {
+                                var cookiefile = (direc + "\\cookies.sqlite");
+                                File.Delete(cookiefile);
+                                CleanupLogsLBox.Items.Add("Firefox cookies cleared!");
+
+                            }
+                            catch (Exception exc)
+                            {
+
+                               //do nothing
+
+                            }
 
                         }
-                        catch
-                        {
-
-                            CleanupLogsLBox.Items.Add("Error when trying to delete firefox cookies!");
-
-                        }
-
                     }
+
                 }
+                catch (Exception exc)
+                {
+                    CleanupLogsLBox.Items.Add("Error when trying to delete firefox cookies! \n" + exc);
+                }
+
+
             }
             if (checkBox16.Checked)
             {
-
-                var cookies = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                foreach (string direc in Directory.EnumerateDirectories(cookies))
+                try
                 {
-                    if (direc.Contains("release") == true)
+
+                    var cookies = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                    foreach (string direc in Directory.EnumerateDirectories(cookies))
                     {
-                        try
+                        if (direc.Contains("release") == true)
                         {
-                            var cookiefile = (direc + "\\places.sqlite");
-                            File.Delete(cookiefile);
-                            CleanupLogsLBox.Items.Add("Deleted Firefox History!");
+                            try
+                            {
+                                var cookiefile = (direc + "\\places.sqlite");
+                                File.Delete(cookiefile);
+                                CleanupLogsLBox.Items.Add("Deleted Firefox History!");
+
+                            }
+                            catch (Exception exc)
+                            {
+
+                                //do nothing
+
+                            }
 
                         }
-                        catch
+                    }
+
+                }
+                catch (Exception exc)
+                {
+                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History! \n" + exc);
+                }
+
+
+
+
+            }
+            if (checkBox17.Checked)
+            {
+                try
+                {
+
+                    var profiles = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                    foreach (string direc in Directory.EnumerateDirectories(profiles))
+                    {
+                        if (direc.Contains("release") == true)
                         {
-                            CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History!");
+                            try
+                            {
+                                var extensionsfolder = (direc + "\\extensions\\");
+                                foreach (string file in Directory.EnumerateFiles(extensionsfolder))
+                                {
+                                    try
+                                    {
+                                        File.Delete(file);
+                                        CleanupLogsLBox.Items.Add("Firefox Extension File " + file + " Removed.");
+                                    }
+                                    catch (Exception exc)
+                                    {
+                                        //do nothing
+                                    }
+
+                                }
+
+                            }
+                            catch (Exception exc)
+                            {
+
+                                //do nothing
+
+                            }
+
                         }
 
                     }
+
+                }
+                catch (Exception exc)
+                {
+                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox Extensions! \n" + exc);
                 }
 
 
             }
-            //I will add more features for firefox later
+            if (checkBox18.Checked)
+            {
+                try
+                {
+
+                    var profile = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                    foreach (string direc in Directory.EnumerateDirectories(profile))
+                    {
+                        if (direc.Contains("release") == true)
+                        {
+                            try
+                            {
+                                var shadercache = (direc + "\\shader-cache");
+                                foreach (string file in Directory.EnumerateFiles(shadercache))
+                                {
+                                    try
+                                    {
+                                        File.Delete(file);
+                                        CleanupLogsLBox.Items.Add("Firefox Shader Cache File " + file + " Removed.");
+                                    }
+                                    catch (Exception exc)
+                                    {
+                                        //do nothing
+                                    }
+
+                                }
+
+                            }
+                            catch (Exception exc)
+                            {
+
+                                //do nothing
+
+                            }
+
+                        }
+                    }
+
+                }
+                catch (Exception exc)
+                {
+                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox Shader Cache! \n" + exc);
+                }
+            }
 
 
             if (CleanupLogsLBox.Items.Count > 2) btnCopyLogs.Enabled = true;
         }
+
 
         private void btnCopyLogs_Click(object sender, EventArgs e)
         {
