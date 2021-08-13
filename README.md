@@ -25,9 +25,8 @@ The **testing** branch is meant for testing features on the project, and it is n
 You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us.
 
 # 📸Gallery
-These images were taken on Version 1.4.0, later versions may look different.
+These images were taken on Version 2.0.0, designs may differ on newer versions.
 
-![image](https://user-images.githubusercontent.com/53088136/127242093-91a5da33-c7d9-4b92-9eca-e3d07a3614f0.png)
-![image](https://user-images.githubusercontent.com/53088136/127242110-6a258622-7a42-4d68-bbdd-32ef33243b1c.png)
-![image](https://user-images.githubusercontent.com/53088136/127242208-e85fcc56-a456-4022-836e-69f028ef0343.png)
+![image](https://user-images.githubusercontent.com/53088136/129365571-cb0541b6-f480-42d1-8cdc-6303980de983.png)
+![image](https://user-images.githubusercontent.com/53088136/129365600-4fb10c17-c929-4eb7-9646-d5e423b40c54.png)
 
