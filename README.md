@@ -1,5 +1,5 @@
 
-# ![Tasks 32x32](https://user-images.githubusercontent.com/53088136/129425889-bfe7cc4a-e376-4c31-8470-a068afeb5c0a.png)Tasks
+# ![Tasks 32x32](https://user-images.githubusercontent.com/53088136/129425889-bfe7cc4a-e376-4c31-8470-a068afeb5c0a.png) Tasks
 ![GitHub](https://img.shields.io/github/license/LiteTools/Tasks) ![GitHub issues](https://img.shields.io/github/issues-raw/LiteTools/Tasks) ![Latest Stable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable) ![Downloads](https://img.shields.io/github/downloads/LiteTools/Tasks/total)
 
 **Tasks** is a simple program allowing you to clean your computer, remove bloatware as well as control startup programs, while giving you the experience of the new Advanced Task Manager that works better than Windows Task Manager, faster and lets you control apps that are maliciously eating your system resources.
