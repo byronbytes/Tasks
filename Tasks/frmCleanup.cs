@@ -219,7 +219,7 @@ namespace Tasks
                 }
                 catch (Exception exc)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to clear firefox cache! \n" + exc);
+                    CleanupLogsLBox.Items.Add("Error when trying to clean firefox cache! \n" + exc);
                 }
 
 
@@ -239,7 +239,7 @@ namespace Tasks
                             {
                                 var cookiefile = (direc + "\\cookies.sqlite");
                                 File.Delete(cookiefile);
-                                CleanupLogsLBox.Items.Add("Firefox cookies cleared!");
+                                CleanupLogsLBox.Items.Add("Firefox Cookies cleaned.");
 
                             }
                             catch (Exception exc)
@@ -255,7 +255,7 @@ namespace Tasks
                 }
                 catch (Exception exc)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to delete firefox cookies! \n" + exc);
+                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox cookies! \n" + exc);
                 }
 
 
@@ -274,7 +274,7 @@ namespace Tasks
                             {
                                 var cookiefile = (direc + "\\places.sqlite");
                                 File.Delete(cookiefile);
-                                CleanupLogsLBox.Items.Add("Cleaned Firefox History!");
+                                CleanupLogsLBox.Items.Add("Firefox History cleaned.");
 
                             }
                             catch (Exception exc)
