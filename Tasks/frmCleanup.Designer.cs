@@ -447,7 +447,7 @@ namespace Tasks
             // 
             // btnCleanup
             // 
-            this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCleanup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCleanup.ForeColor = System.Drawing.Color.ForestGreen;
             this.btnCleanup.Location = new System.Drawing.Point(398, 864);
             this.btnCleanup.Name = "btnCleanup";
@@ -481,10 +481,12 @@ namespace Tasks
             // 
             // button1
             // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(398, 9);
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(398, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 33);
+            this.button1.Size = new System.Drawing.Size(158, 35);
             this.button1.TabIndex = 5;
             this.button1.Text = "What do these mean?";
             this.button1.UseVisualStyleBackColor = true;

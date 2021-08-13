@@ -327,10 +327,10 @@ namespace Tasks
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::Tasks.Properties.Resources.InfoWhite;
-            this.button5.Location = new System.Drawing.Point(632, 46);
+            this.button5.Location = new System.Drawing.Point(665, 46);
             this.button5.Name = "button5";
             this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button5.Size = new System.Drawing.Size(137, 41);
+            this.button5.Size = new System.Drawing.Size(104, 40);
             this.button5.TabIndex = 9;
             this.button5.Text = "Info";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
