@@ -33,7 +33,6 @@ namespace Tasks
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCleanup));
             this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
@@ -108,18 +107,6 @@ namespace Tasks
             this.checkBox17.Text = "Remove All Extensions";
             this.checkBox17.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox17.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(129, 346);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(134, 25);
-            this.label11.TabIndex = 32;
-            this.label11.Text = "Not Detected!";
-            this.label11.Visible = false;
             // 
             // checkBox16
             // 
@@ -295,7 +282,7 @@ namespace Tasks
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tasks.Properties.Resources.windows_10;
-            this.pictureBox1.Location = new System.Drawing.Point(95, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(101, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -427,7 +414,7 @@ namespace Tasks
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(0, 11);
+            this.label2.Location = new System.Drawing.Point(6, 15);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(89, 25);
@@ -554,7 +541,6 @@ namespace Tasks
             this.tabPage2.Controls.Add(this.checkBox17);
             this.tabPage2.Controls.Add(this.checkBox5);
             this.tabPage2.Controls.Add(this.checkBox6);
-            this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.checkBox7);
             this.tabPage2.Controls.Add(this.checkBox16);
             this.tabPage2.Controls.Add(this.checkBox8);
@@ -665,7 +651,6 @@ namespace Tasks
         private System.Windows.Forms.CheckBox checkBox15;
         private System.Windows.Forms.CheckBox checkBox14;
         private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox checkBox17;
         private System.Windows.Forms.CheckBox checkBox18;
         private System.Windows.Forms.TabControl tabControl1;
