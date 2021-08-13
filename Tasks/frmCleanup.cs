@@ -65,7 +65,7 @@ namespace Tasks
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
-            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked && !checkBox5.Checked && !checkBox6.Checked && !checkBox7.Checked && !checkBox8.Checked && !checkBox9.Checked && !checkBox10.Checked && !checkBox11.Checked && !checkBox12.Checked && !checkBox13.Checked && !checkBox14.Checked && !checkBox15.Checked && !checkBox16.Checked && !checkBox16.Checked && !checkBox17.Checked && !checkBox18.Checked && !checkBox19.Checked && !checkBox20.Checked)
+            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked && !checkBox5.Checked && !checkBox6.Checked && !checkBox7.Checked && !checkBox8.Checked && !checkBox9.Checked && !checkBox10.Checked && !checkBox11.Checked && !checkBox12.Checked && !checkBox13.Checked && !checkBox14.Checked && !checkBox15.Checked && !checkBox16.Checked && !checkBox16.Checked && !checkBox17.Checked && !checkBox18.Checked && !checkBox19.Checked && !checkBox20.Checked && !checkBox21.Checked)
             {
                 CleanupLogsLBox.Items.Add("Please select something to clean!");
                 return;
@@ -98,7 +98,7 @@ namespace Tasks
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
             }
 
-// Chrome
+            // Chrome
 
             if (checkBox5.Checked)
             {
@@ -112,7 +112,7 @@ namespace Tasks
 
             if (checkBox6.Checked)
             {
-           
+
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Session Cleaned.");
@@ -121,11 +121,11 @@ namespace Tasks
 
             if (checkBox7.Checked)
             {
-             
+
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
                 CleanupLogsLBox.Items.Add("Chrome Cookies Cleaned.");
-       }
+            }
 
 
             if (checkBox8.Checked)
@@ -196,7 +196,7 @@ namespace Tasks
                                 }
                                 catch (Exception exc)
                                 {
-                                    CleanupLogsLBox.Items.Add("Error when trying to clean firefox cache file! " + exc);
+                                    CleanupLogsLBox.Items.Add("Error while trying to clean firefox cache file! " + exc);
                                 }
 
                             }
@@ -245,7 +245,7 @@ namespace Tasks
                             catch (Exception exc)
                             {
 
-                               //do nothing
+                                //do nothing
 
                             }
 
@@ -404,7 +404,7 @@ namespace Tasks
                     process.Start();
                     CleanupLogsLBox.Items.Add("DNS Cache Cleared.");
                 }
-                catch(Exception esc)
+                catch (Exception esc)
                 {
 
                     CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache! \n" + esc);
@@ -438,7 +438,11 @@ namespace Tasks
                 }
             }
 
-
+            if (checkBox21.Checked)
+            {
+                CleanRecentFiles.CleanRecents.ClearAll();
+                CleanupLogsLBox.Items.Add("Recent Files Cleared.");
+            }
             if (CleanupLogsLBox.Items.Count > 2) btnCopyLogs.Enabled = true;
         }
 
