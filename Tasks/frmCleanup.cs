@@ -190,7 +190,7 @@ namespace Tasks
                                 }
                                 catch (Exception exc)
                                 {
-                                    CleanupLogsLBox.Items.Add("Error while trying to clean firefox cache file! " + exc);
+                                    CleanupLogsLBox.Items.Add("Exception Error: " + exc);
                                 }
 
                             }
@@ -203,7 +203,7 @@ namespace Tasks
                                 }
                                 catch (Exception exc)
                                 {
-                                    CleanupLogsLBox.Items.Add("Error when trying to clear firefox cache folder! " + exc);
+                                    CleanupLogsLBox.Items.Add("Exception Error:" + exc);
                                 }
 
                             }
@@ -416,7 +416,7 @@ namespace Tasks
                     startInfo.Verb = "runas";
                     startInfo.UseShellExecute = false;
                     startInfo.RedirectStandardInput = true;
-                    //startInfo.Arguments = @"/C arp -a -d";
+                    startInfo.Arguments = @"/C arp -a -d";
                     process.StartInfo = startInfo;
                     process.Start();
                     process.StandardInput.WriteLine("arp -d *");
@@ -473,6 +473,11 @@ namespace Tasks
         }
 
         private void CleanupLogsLBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
 
         }
