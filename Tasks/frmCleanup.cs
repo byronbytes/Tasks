@@ -291,16 +291,7 @@ namespace Tasks
 
 
             }
-            if (checkBox17.Checked)
-            {
 
-            }
-          
-
-                
-              
-
-         
             if (checkBox18.Checked)
             {
                 try
