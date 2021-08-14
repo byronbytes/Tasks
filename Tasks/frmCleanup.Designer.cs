@@ -77,6 +77,7 @@ namespace Tasks
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -84,7 +85,6 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -609,9 +609,9 @@ namespace Tasks
             this.checkBox20.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox20.Location = new System.Drawing.Point(7, 281);
             this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(234, 24);
+            this.checkBox20.Size = new System.Drawing.Size(139, 24);
             this.checkBox20.TabIndex = 21;
-            this.checkBox20.Text = "Clean ARP Cache (Doesn\'t work)";
+            this.checkBox20.Text = "Clean ARP Cache";
             this.checkBox20.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox20.UseVisualStyleBackColor = true;
             // 
@@ -702,11 +702,23 @@ namespace Tasks
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extentions";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label16.Location = new System.Drawing.Point(-4, 175);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(553, 17);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "_________________________________________________________________________________" +
+    "____________________________";
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(16, 207);
+            this.label15.Location = new System.Drawing.Point(6, 207);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(478, 17);
             this.label15.TabIndex = 40;
@@ -783,18 +795,6 @@ namespace Tasks
             this.btnCopyLogs.TabIndex = 37;
             this.btnCopyLogs.Text = "Copy Cleanup Logs";
             this.btnCopyLogs.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(-4, 175);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(553, 17);
-            this.label16.TabIndex = 41;
-            this.label16.Text = "_________________________________________________________________________________" +
-    "____________________________";
             // 
             // frmCleanup
             // 
