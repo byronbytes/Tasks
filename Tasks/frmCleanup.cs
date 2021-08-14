@@ -419,6 +419,9 @@ namespace Tasks
             if (comboBox1.SelectedItem == "Browser #1")
             {
                 listBox1.Items.Add("Extention #1");
+            }else
+            {
+                //wip
             }
         
         }
