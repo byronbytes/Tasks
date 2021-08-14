@@ -293,51 +293,14 @@ namespace Tasks
             }
             if (checkBox17.Checked)
             {
-                try
-                {
-
-                    var profiles = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                    foreach (string direc in Directory.EnumerateDirectories(profiles))
-                    {
-                        if (direc.Contains("release") == true)
-                        {
-                            try
-                            {
-                                var extensionsfolder = (direc + "\\extensions\\");
-                                foreach (string file in Directory.EnumerateFiles(extensionsfolder))
-                                {
-                                    try
-                                    {
-                                        File.Delete(file);
-                                        CleanupLogsLBox.Items.Add("Firefox Extension File " + file + " Removed.");
-                                    }
-                                    catch (Exception exc)
-                                    {
-                                        //do nothing
-                                    }
-
-                                }
-
-                            }
-                            catch (Exception exc)
-                            {
-
-                                //do nothing
-
-                            }
-
-                        }
-
-                    }
-
-                }
-                catch (Exception exc)
-                {
-                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox Extensions! \n" + exc);
-                }
-
 
             }
+          
+
+                
+              
+
+         
             if (checkBox18.Checked)
             {
                 try
@@ -457,30 +420,14 @@ namespace Tasks
 
         }
 
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
             taskDialog1.Show();
         }
 
-        private void checkBox14_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void CleanupLogsLBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox20_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
     

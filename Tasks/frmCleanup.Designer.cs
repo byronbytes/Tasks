@@ -32,7 +32,6 @@ namespace Tasks
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCleanup));
             this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
@@ -97,27 +96,13 @@ namespace Tasks
             this.checkBox18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox18.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox18.ForeColor = System.Drawing.Color.White;
-            this.checkBox18.Location = new System.Drawing.Point(14, 514);
+            this.checkBox18.Location = new System.Drawing.Point(14, 482);
             this.checkBox18.Name = "checkBox18";
             this.checkBox18.Size = new System.Drawing.Size(118, 24);
             this.checkBox18.TabIndex = 35;
             this.checkBox18.Text = "Shader Cache";
             this.checkBox18.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox17.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox17.ForeColor = System.Drawing.Color.White;
-            this.checkBox17.Location = new System.Drawing.Point(14, 484);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(174, 24);
-            this.checkBox17.TabIndex = 34;
-            this.checkBox17.Text = "Remove All Extensions";
-            this.checkBox17.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox17.UseVisualStyleBackColor = true;
             // 
             // checkBox16
             // 
@@ -160,7 +145,6 @@ namespace Tasks
             this.checkBox14.Text = "Cache";
             this.checkBox14.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox14.UseVisualStyleBackColor = true;
-            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
             // pictureBox5
             // 
@@ -407,7 +391,6 @@ namespace Tasks
             this.checkBox5.Text = "Cache";
             this.checkBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // label3
             // 
@@ -499,7 +482,6 @@ namespace Tasks
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
             this.CleanupLogsLBox.Size = new System.Drawing.Size(601, 836);
             this.CleanupLogsLBox.TabIndex = 1;
-            this.CleanupLogsLBox.SelectedIndexChanged += new System.EventHandler(this.CleanupLogsLBox_SelectedIndexChanged);
             // 
             // taskDialog1
             // 
@@ -623,7 +605,6 @@ namespace Tasks
             this.checkBox20.Text = "Clean ARP Cache (Doesn\'t work)";
             this.checkBox20.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox20.UseVisualStyleBackColor = true;
-            this.checkBox20.CheckedChanged += new System.EventHandler(this.checkBox20_CheckedChanged);
             // 
             // checkBox19
             // 
@@ -665,7 +646,6 @@ namespace Tasks
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.tabPage2.Controls.Add(this.checkBox18);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.checkBox17);
             this.tabPage2.Controls.Add(this.checkBox5);
             this.tabPage2.Controls.Add(this.checkBox6);
             this.tabPage2.Controls.Add(this.checkBox7);
@@ -781,7 +761,6 @@ namespace Tasks
         private System.Windows.Forms.CheckBox checkBox15;
         private System.Windows.Forms.CheckBox checkBox14;
         private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox17;
         private System.Windows.Forms.CheckBox checkBox18;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;

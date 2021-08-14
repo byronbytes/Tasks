@@ -1,0 +1,39 @@
+﻿  ## Will bring this back but as it's own seperate features for both browsers, also might add support for beta browser versions? In the late future though.
+
+
+                try
+                {
+
+                    var profiles = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                    foreach (string direc in Directory.EnumerateDirectories(profiles))
+                    {
+                        if (direc.Contains("release") == true)
+                        {
+                            try
+                            {
+                                var extensionsfolder = (direc + "\\extensions\\");
+                                foreach (string file in Directory.EnumerateFiles(extensionsfolder))
+                                {
+                                    try
+                                    {
+                                        File.Delete(file);
+                                        CleanupLogsLBox.Items.Add("Firefox Extension File " + file + " Removed.");
+                                    }
+                                    catch (Exception exc)
+                                    {
+                                        //do nothing
+                                    }
+
+                                }
+
+                            }
+                            catch (Exception exc)
+                            {
+
+                                //do nothing
+
+                            }
+
+                        }
+
+                    
