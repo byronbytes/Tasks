@@ -286,10 +286,6 @@ namespace Tasks
                 {
                     CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History! \n" + exc);
                 }
-
-
-
-
             }
 
             if (checkBox18.Checked)
@@ -418,7 +414,14 @@ namespace Tasks
             taskDialog1.Show();
         }
 
-
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem == "Browser #1")
+            {
+                listBox1.Items.Add("Extention #1");
+            }
+        
+        }
     }
 }
     

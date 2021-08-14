@@ -76,6 +76,12 @@ namespace Tasks
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -88,6 +94,7 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBox18
@@ -500,6 +507,7 @@ namespace Tasks
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(4, 2);
             this.tabControl1.Name = "tabControl1";
@@ -676,6 +684,84 @@ namespace Tasks
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.Controls.Add(this.listBox1);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.label13);
+            this.tabPage3.ForeColor = System.Drawing.Color.White;
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(501, 767);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Browser Extentions";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(6, 230);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(486, 19);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Select one of the supported browsers that we have detected on your system.";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Browser #1",
+            "Browser #2"});
+            this.comboBox1.Location = new System.Drawing.Point(16, 261);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(234, 28);
+            this.comboBox1.TabIndex = 39;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(16, 315);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(378, 282);
+            this.listBox1.TabIndex = 38;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(6, 61);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(459, 95);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Since there are other things that have a higher priority, we have decided\r\nto imp" +
+    "lement this in a future update, probably in the 3rd v2.0.0 release.\r\n\r\n\r\nThis be" +
+    "low is a CONCEPT. But stay tuned!";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(6, 12);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(462, 38);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "This will be a feature that sorts out all your extentions for your browser, \r\nand" +
+    " you can select which ones you want to remove.";
+            // 
             // btnCleanup
             // 
             this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -724,6 +810,8 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -776,5 +864,11 @@ namespace Tasks
         private System.Windows.Forms.CheckBox checkBox21;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }
