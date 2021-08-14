@@ -60,7 +60,7 @@ namespace Tasks
 
         private void btnCleanup_Click(object sender, EventArgs e)
         {
-
+            // Note to self, change the exception error message,
 
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
