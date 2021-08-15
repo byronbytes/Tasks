@@ -489,9 +489,9 @@ namespace Tasks
             this.CleanupLogsLBox.ItemHeight = 19;
             this.CleanupLogsLBox.Items.AddRange(new object[] {
             "Cleanup Logs:"});
-            this.CleanupLogsLBox.Location = new System.Drawing.Point(519, 21);
+            this.CleanupLogsLBox.Location = new System.Drawing.Point(537, 21);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(601, 836);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(583, 836);
             this.CleanupLogsLBox.TabIndex = 1;
             // 
             // taskDialog1
@@ -516,7 +516,7 @@ namespace Tasks
             this.tabControl1.Location = new System.Drawing.Point(4, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(509, 800);
+            this.tabControl1.Size = new System.Drawing.Size(527, 800);
             this.tabControl1.TabIndex = 36;
             // 
             // tabPage1
@@ -545,7 +545,7 @@ namespace Tasks
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(501, 767);
+            this.tabPage1.Size = new System.Drawing.Size(519, 767);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
@@ -728,7 +728,7 @@ namespace Tasks
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(501, 767);
+            this.tabPage2.Size = new System.Drawing.Size(519, 767);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
             // 
@@ -745,7 +745,7 @@ namespace Tasks
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(501, 767);
+            this.tabPage3.Size = new System.Drawing.Size(519, 767);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extentions";
             // 
