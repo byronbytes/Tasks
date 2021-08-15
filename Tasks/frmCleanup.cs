@@ -363,14 +363,11 @@ namespace Tasks
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Verb = "runas";
-                    startInfo.UseShellExecute = false;
-                    startInfo.RedirectStandardInput = true;
+                    startInfo.Verb = "runas"; //give cmd admin perms
+                    startInfo.UseShellExecute = true;
                     startInfo.Arguments = @"/C arp -a -d";
                     process.StartInfo = startInfo;
                     process.Start();
-                    process.StandardInput.WriteLine("arp -d *");
-                    process.StandardInput.WriteLine("exit");
                     CleanupLogsLBox.Items.Add("ARP Cache Cleared.");
                 }
                 catch (Exception esc)
@@ -382,10 +379,69 @@ namespace Tasks
                 }
             }
 
+            //DNS & ARP
+
+            //FILES
+
             if (checkBox21.Checked)
             {
                 CleanRecentFiles.CleanRecents.ClearAll();
                 CleanupLogsLBox.Items.Add("Recent Files Cleared.");
+            }
+
+            if (checkBox17.Checked)
+            {
+                try
+                {
+
+                    var imgs = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+
+                    foreach (string file in Directory.EnumerateFiles(imgs))
+                    {
+                        try
+                        {
+
+                            File.Delete(file);
+                            CleanupLogsLBox.Items.Add(file + " Deleted!");
+
+                        }
+                        catch(Exception esc)
+                        {
+
+                            CleanupLogsLBox.Items.Add("Failed to delete file" + file + " " + esc);
+
+                        }
+
+                    }
+                    foreach (string file in Directory.EnumerateDirectories(imgs))
+                    {
+                        try
+                        {
+
+                            System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(file);
+
+                            dir.Delete(true);
+                            CleanupLogsLBox.Items.Add(file + " Deleted!");
+
+                        }
+                        catch (Exception esc)
+                        {
+
+                            CleanupLogsLBox.Items.Add("Failed to delete directory" + file + " " + esc);
+
+                        }
+
+                    }
+                    CleanupLogsLBox.Items.Add("Cleared images folder successfully.");
+
+                }
+                catch(Exception esc)
+                {
+                    CleanupLogsLBox.Items.Add("Failed to clear images folder " + esc);
+                }
+
+
+
             }
             if (CleanupLogsLBox.Items.Count > 2) btnCopyLogs.Enabled = true;
         }
@@ -418,6 +474,48 @@ namespace Tasks
                 //wip
             }
         
+        }
+
+        private void button1_Click(object sender, EventArgs e) //DISPLAYDNS
+        {
+
+            try
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = "BatFiles/displaydns.bat";
+                process.Start();
+                //Directory.SetCurrentDirectory(@"/");
+                //Directory.SetCurrentDirectory(@"BatFiles");
+                //Process.Start("displaydns.bat");
+            }
+            catch (Exception esc)
+            {
+
+                MessageBox.Show(esc.ToString());
+
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e) //displayarp
+        {
+
+
+            try
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = "BatFiles/displayarp.bat";
+                process.Start();
+            }
+            catch (Exception esc)
+            {
+
+                MessageBox.Show(esc.ToString());
+
+            }
+
+
+
         }
     }
 }
