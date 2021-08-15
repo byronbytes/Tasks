@@ -396,12 +396,6 @@ namespace Tasks
             CleanupLogsLBox.Items.Add("Cleanup logs copied to clipboard.");
             Clipboard.SetText(string.Join("\n", CleanupLogsLBox.Items.Cast<string>()));
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/wiki/Cleanup:-What-do-these-mean%3F", UseShellExecute = true });
-        }
-
         private void frmCleanup_Load(object sender, EventArgs e)
         {
 

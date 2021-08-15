@@ -73,7 +73,6 @@ namespace Tasks
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.ShowItemToolTips = true;
             this.listView1.Size = new System.Drawing.Size(935, 627);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 0;
