@@ -34,4 +34,17 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BatFiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="BatFiles\displayarp.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="BatFiles\displaydns.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
