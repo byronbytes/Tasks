@@ -209,6 +209,47 @@ namespace Tasks
                             }
                         }
                     }
+                    try
+                    {
+
+                        var profile = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                        foreach (string direc in Directory.EnumerateDirectories(profile))
+                        {
+                            if (direc.Contains("release") == true)
+                            {
+                                try
+                                {
+                                    var shadercache = (direc + "\\shader-cache");
+                                    foreach (string file in Directory.EnumerateFiles(shadercache))
+                                    {
+                                        try
+                                        {
+                                            File.Delete(file);
+                                            CleanupLogsLBox.Items.Add("Firefox Shader Cache File " + file + " Removed.");
+                                        }
+                                        catch (Exception exc)
+                                        {
+                                            //do nothing
+                                        }
+
+                                    }
+
+                                }
+                                catch (Exception exc)
+                                {
+
+                                    //do nothing
+
+                                }
+
+                            }
+                        }
+
+                    }
+                    catch (Exception exc)
+                    {
+                        CleanupLogsLBox.Items.Add("Error while trying to delete Firefox Shader Cache! \n" + exc);
+                    }
 
                 }
                 catch (Exception exc)
@@ -285,51 +326,6 @@ namespace Tasks
                 catch (Exception exc)
                 {
                     CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History! \n" + exc);
-                }
-            }
-
-            if (checkBox18.Checked)
-            {
-                try
-                {
-
-                    var profile = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                    foreach (string direc in Directory.EnumerateDirectories(profile))
-                    {
-                        if (direc.Contains("release") == true)
-                        {
-                            try
-                            {
-                                var shadercache = (direc + "\\shader-cache");
-                                foreach (string file in Directory.EnumerateFiles(shadercache))
-                                {
-                                    try
-                                    {
-                                        File.Delete(file);
-                                        CleanupLogsLBox.Items.Add("Firefox Shader Cache File " + file + " Removed.");
-                                    }
-                                    catch (Exception exc)
-                                    {
-                                        //do nothing
-                                    }
-
-                                }
-
-                            }
-                            catch (Exception exc)
-                            {
-
-                                //do nothing
-
-                            }
-
-                        }
-                    }
-
-                }
-                catch (Exception exc)
-                {
-                    CleanupLogsLBox.Items.Add("Error while trying to delete Firefox Shader Cache! \n" + exc);
                 }
             }
 

@@ -31,7 +31,6 @@ namespace Tasks
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCleanup));
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
@@ -100,20 +99,6 @@ namespace Tasks
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox18.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox18.ForeColor = System.Drawing.Color.White;
-            this.checkBox18.Location = new System.Drawing.Point(193, 131);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(118, 24);
-            this.checkBox18.TabIndex = 35;
-            this.checkBox18.Text = "Shader Cache";
-            this.checkBox18.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox18.UseVisualStyleBackColor = true;
             // 
             // checkBox16
             // 
@@ -472,9 +457,9 @@ namespace Tasks
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox1.Location = new System.Drawing.Point(7, 472);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(182, 24);
+            this.checkBox1.Size = new System.Drawing.Size(185, 24);
             this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Clear Downloads Folder";
+            this.checkBox1.Text = "Clean Downloads Folder";
             this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -584,9 +569,9 @@ namespace Tasks
             this.checkBox17.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox17.Location = new System.Drawing.Point(7, 442);
             this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(158, 24);
+            this.checkBox17.Size = new System.Drawing.Size(161, 24);
             this.checkBox17.TabIndex = 27;
-            this.checkBox17.Text = "Clear Images Folder";
+            this.checkBox17.Text = "Clean Images Folder";
             this.checkBox17.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox17.UseVisualStyleBackColor = true;
             // 
@@ -700,7 +685,6 @@ namespace Tasks
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage2.Controls.Add(this.checkBox18);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.checkBox5);
             this.tabPage2.Controls.Add(this.checkBox6);
@@ -910,7 +894,6 @@ namespace Tasks
         private System.Windows.Forms.CheckBox checkBox15;
         private System.Windows.Forms.CheckBox checkBox14;
         private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox18;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
