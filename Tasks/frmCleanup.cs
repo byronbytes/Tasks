@@ -34,28 +34,29 @@ namespace Tasks
 
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
-            try
-            {
-                foreach (var file in directoryInfo.GetFiles())
+            var exceptionCaught = false;
+            
+            foreach (var file in directoryInfo.GetFiles()) {
                 {
                     file.Delete();
                     CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
+                } catch(Exception ex) {
+                    CleanupLogsLBox.Items.Add("Exception Caught: " + ex.Message);
+                    exceptionCaught = true;
                 }
-
-                foreach (var dir in directoryInfo.GetDirectories())
-                {
+            }
+                
+            foreach (var dir in directoryInfo.GetDirectories()) {
+                try {
                     dir.Delete(true);
                     CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
+                } catch(Exception ex) {
+                    CleanupLogsLBox.Items.Add("Exception Caught: " + ex.Message);
+                    exceptionCaught = true;
                 }
-
-                return true;
             }
-            catch (Exception ex) when (ex is IOException || ex is DirectoryNotFoundException || ex is UnauthorizedAccessException || ex is SecurityException)
-            {
-                CleanupLogsLBox.Items.Add("Exception Error: " + ex.Message);
-            }
-
-            return false;
+            
+            return exceptionCaught;
         }
 
         private void btnCleanup_Click(object sender, EventArgs e)
@@ -188,9 +189,9 @@ namespace Tasks
                                     File.Delete(file);
                                     CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
                                 }
-                                catch (Exception exc)
+                                catch (Exception ex)
                                 {
-                                    CleanupLogsLBox.Items.Add("Exception Error: " + exc);
+                                    CleanupLogsLBox.Items.Add("Exception Error: " + ex);
                                 }
 
                             }
@@ -201,9 +202,9 @@ namespace Tasks
                                     Directory.Delete(dir, true);
                                     CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
                                 }
-                                catch (Exception exc)
+                                catch (Exception ex)
                                 {
-                                    CleanupLogsLBox.Items.Add("Exception Error:" + exc);
+                                    CleanupLogsLBox.Items.Add("Exception Error:" + ex);
                                 }
 
                             }
@@ -227,7 +228,7 @@ namespace Tasks
                                             File.Delete(file);
                                             CleanupLogsLBox.Items.Add("Firefox Shader Cache File " + file + " Removed.");
                                         }
-                                        catch (Exception exc)
+                                        catch
                                         {
                                             //do nothing
                                         }
@@ -235,7 +236,7 @@ namespace Tasks
                                     }
 
                                 }
-                                catch (Exception exc)
+                                catch
                                 {
 
                                     //do nothing
@@ -246,15 +247,15 @@ namespace Tasks
                         }
 
                     }
-                    catch (Exception exc)
+                    catch (Exception ex)
                     {
-                        CleanupLogsLBox.Items.Add("Error while trying to delete Firefox Shader Cache! \n" + exc);
+                        CleanupLogsLBox.Items.Add("Error while trying to delete Firefox Shader Cache! \n" + ex);
                     }
 
                 }
-                catch (Exception exc)
+                catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to clean firefox cache! \n" + exc);
+                    CleanupLogsLBox.Items.Add("Error when trying to clean firefox cache! \n" + ex);
                 }
 
 
@@ -277,7 +278,7 @@ namespace Tasks
                                 CleanupLogsLBox.Items.Add("Firefox Cookies Cleaned.");
 
                             }
-                            catch (Exception exc)
+                            catch (Exception ex)
                             {
 
                                 //do nothing
@@ -288,9 +289,9 @@ namespace Tasks
                     }
 
                 }
-                catch (Exception exc)
+                catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox cookies! \n" + exc);
+                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox cookies! \n" + ex);
                 }
 
 
@@ -323,9 +324,9 @@ namespace Tasks
                     }
 
                 }
-                catch (Exception exc)
+                catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History! \n" + exc);
+                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History! \n" + ex);
                 }
             }
 
@@ -344,10 +345,10 @@ namespace Tasks
                     process.Start();
                     CleanupLogsLBox.Items.Add("DNS Cache Cleared.");
                 }
-                catch (Exception esc)
+                catch (Exception ex)
                 {
 
-                    CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache! \n" + esc);
+                    CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache! \n" + ex);
 
                 }
             }
@@ -366,10 +367,10 @@ namespace Tasks
                     process.Start();
                     CleanupLogsLBox.Items.Add("ARP Cache Cleared.");
                 }
-                catch (Exception esc)
+                catch (Exception ex)
                 {
 
-                    CleanupLogsLBox.Items.Add("Error while trying to clear ARP cache! \n" + esc);
+                    CleanupLogsLBox.Items.Add("Error while trying to clear ARP cache! \n" + ex);
                     MessageBox.Show(esc.ToString());
 
                 }
@@ -401,10 +402,10 @@ namespace Tasks
                             CleanupLogsLBox.Items.Add(file + " Deleted!");
 
                         }
-                        catch(Exception esc)
+                        catch(Exception ex)
                         {
 
-                            CleanupLogsLBox.Items.Add("Failed to delete file" + file + " " + esc);
+                            CleanupLogsLBox.Items.Add("Failed to delete file" + file + " " + ex);
 
                         }
 
@@ -420,10 +421,10 @@ namespace Tasks
                             CleanupLogsLBox.Items.Add(file + " Deleted!");
 
                         }
-                        catch (Exception esc)
+                        catch (Exception ex)
                         {
 
-                            CleanupLogsLBox.Items.Add("Failed to delete directory" + file + " " + esc);
+                            CleanupLogsLBox.Items.Add("Failed to delete directory" + file + " " + ex);
 
                         }
 
@@ -431,9 +432,9 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Cleared images folder successfully.");
 
                 }
-                catch(Exception esc)
+                catch(Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Failed to clear images folder " + esc);
+                    CleanupLogsLBox.Items.Add("Failed to clear images folder " + ex);
                 }
 
 
@@ -465,7 +466,7 @@ namespace Tasks
             if (comboBox1.SelectedItem == "Browser #1")
             {
                 listBox1.Items.Add("Extention #1");
-            }else
+            } else
             {
                 //wip
             }
@@ -503,10 +504,10 @@ namespace Tasks
                 process.StartInfo.FileName = "BatFiles/displayarp.bat";
                 process.Start();
             }
-            catch (Exception esc)
+            catch (Exception ex)
             {
 
-                MessageBox.Show(esc.ToString());
+                MessageBox.Show(ex.ToString());
 
             }
 
