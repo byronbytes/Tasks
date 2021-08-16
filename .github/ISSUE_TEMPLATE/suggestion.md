@@ -1,8 +1,8 @@
 ---
 name: Suggestion
 about: Give us some epic suggestions on how to improve Tasks!
-title: ''
-labels: ''
+title: 'Suggestion: '
+labels: 'suggestion'
 assignees: byronbytes
 
 ---
