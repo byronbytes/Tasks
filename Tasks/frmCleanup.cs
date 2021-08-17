@@ -41,13 +41,11 @@ namespace Tasks
                     file.Delete();
                     CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
                 }
-
                 foreach (var dir in directoryInfo.GetDirectories())
                 {
                     dir.Delete(true);
                     CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
                 }
-
                 return true;
             }
             catch (Exception ex) when (ex is IOException || ex is DirectoryNotFoundException || ex is UnauthorizedAccessException || ex is SecurityException)
