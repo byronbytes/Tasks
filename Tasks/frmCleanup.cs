@@ -454,6 +454,8 @@ namespace Tasks
             // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
             string chromeDir = "C:\\Program Files\\Google\\Chrome";
             string firefoxDir = "C:\\Program Files\\Mozilla Firefox";
+            string steamDir = "C:\\Program Files (x86)\\Steam";
+
             if (!Directory.Exists(chromeDir))
             {
                 checkBox5.Enabled = false;
@@ -461,6 +463,7 @@ namespace Tasks
                 checkBox8.Enabled = false;
                 checkBox13.Enabled = false;
                 checkBox6.Enabled = false;
+                lblChromeNotDetected.Visible = true;
             }
 
             if (!Directory.Exists(firefoxDir))
@@ -468,6 +471,14 @@ namespace Tasks
                 checkBox14.Enabled = false;
                 checkBox15.Enabled = false;
                 checkBox16.Enabled = false;
+                lblFirefoxNotDetected.Visible = true;
+            }
+
+            if (!Directory.Exists(steamDir))
+            {
+                checkBox11.Enabled = false;
+                checkBox12.Enabled = false;
+                lblSteamNotDetected.Visible = true;
             }
 
         }
