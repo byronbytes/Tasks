@@ -452,7 +452,7 @@ namespace Tasks
         {
 
             // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
-            string chromeDir = "C:\\Windows\\Program Files\\Google\\Chrome";
+            string chromeDir = "C:\\Program Files\\Google\\Chrome";
             string firefoxDir = "C:\\Program Files\\Mozilla Firefox";
             if (!Directory.Exists(chromeDir))
             {
