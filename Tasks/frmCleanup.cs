@@ -312,7 +312,7 @@ namespace Tasks
                                 CleanupLogsLBox.Items.Add("Firefox History Cleaned.");
 
                             }
-                            catch (Exception exc)
+                            catch (Exception ex)
                             {
 
                                 //do nothing
@@ -450,6 +450,25 @@ namespace Tasks
         }
         private void frmCleanup_Load(object sender, EventArgs e)
         {
+
+            // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
+            string chromeDir = "C:\\Windows\\Program Files\\Google\\Chrome";
+            string firefoxDir = "C:\\Program Files\\Mozilla Firefox";
+            if (!Directory.Exists(chromeDir))
+            {
+                checkBox5.Enabled = false;
+                checkBox7.Enabled = false;
+                checkBox8.Enabled = false;
+                checkBox13.Enabled = false;
+                checkBox6.Enabled = false;
+            }
+
+            if (!Directory.Exists(firefoxDir))
+            {
+                checkBox14.Enabled = false;
+                checkBox15.Enabled = false;
+                checkBox16.Enabled = false;
+            }
 
         }
 
