@@ -459,6 +459,11 @@ namespace Tasks
             string steamDir = "C:\\Program Files (x86)\\Steam";
             string discordDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord");
 
+            // The other discord builds are for changing which version you want to clean
+
+            string discordptbDir = "";
+            string discordcanaryDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discordcanary");
+
             if (!Directory.Exists(chromeDir))
             {
                 checkBox5.Enabled = false;
@@ -490,6 +495,14 @@ namespace Tasks
                 checkBox10.Enabled = false;
                 lblDiscordNotDetected.Visible = true;
             }
+
+            // Extention Finder
+            if (Directory.Exists(chromeDir))
+            {
+                lblChromeNotDetected.Visible = true;
+            }
+
+
         }
 
 

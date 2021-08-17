@@ -78,6 +78,8 @@ namespace Tasks
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.lblDiscordNotDetected = new System.Windows.Forms.Label();
             this.lblSteamNotDetected = new System.Windows.Forms.Label();
             this.lblChromeNotDetected = new System.Windows.Forms.Label();
             this.lblFirefoxNotDetected = new System.Windows.Forms.Label();
@@ -90,7 +92,6 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
-            this.lblDiscordNotDetected = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -256,7 +257,7 @@ namespace Tasks
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Tasks.Properties.Resources.icons8_discord_48;
-            this.pictureBox2.Location = new System.Drawing.Point(89, 235);
+            this.pictureBox2.Location = new System.Drawing.Point(89, 239);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -268,7 +269,7 @@ namespace Tasks
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(0, 357);
+            this.label7.Location = new System.Drawing.Point(0, 392);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(558, 17);
             this.label7.TabIndex = 18;
@@ -291,7 +292,7 @@ namespace Tasks
             this.checkBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox10.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox10.ForeColor = System.Drawing.Color.White;
-            this.checkBox10.Location = new System.Drawing.Point(12, 303);
+            this.checkBox10.Location = new System.Drawing.Point(12, 307);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(109, 24);
             this.checkBox10.TabIndex = 16;
@@ -305,7 +306,7 @@ namespace Tasks
             this.checkBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox9.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox9.ForeColor = System.Drawing.Color.White;
-            this.checkBox9.Location = new System.Drawing.Point(12, 273);
+            this.checkBox9.Location = new System.Drawing.Point(12, 277);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(68, 24);
             this.checkBox9.TabIndex = 15;
@@ -318,7 +319,7 @@ namespace Tasks
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 235);
+            this.label6.Location = new System.Drawing.Point(9, 239);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 25);
             this.label6.TabIndex = 14;
@@ -690,6 +691,7 @@ namespace Tasks
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage2.Controls.Add(this.comboBox2);
             this.tabPage2.Controls.Add(this.lblDiscordNotDetected);
             this.tabPage2.Controls.Add(this.lblSteamNotDetected);
             this.tabPage2.Controls.Add(this.lblChromeNotDetected);
@@ -724,6 +726,31 @@ namespace Tasks
             this.tabPage2.Size = new System.Drawing.Size(519, 767);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Discord",
+            "Discord PTB",
+            "Discord Canary"});
+            this.comboBox2.Location = new System.Drawing.Point(6, 356);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(134, 23);
+            this.comboBox2.TabIndex = 36;
+            // 
+            // lblDiscordNotDetected
+            // 
+            this.lblDiscordNotDetected.AutoSize = true;
+            this.lblDiscordNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblDiscordNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblDiscordNotDetected.Location = new System.Drawing.Point(130, 242);
+            this.lblDiscordNotDetected.Name = "lblDiscordNotDetected";
+            this.lblDiscordNotDetected.Size = new System.Drawing.Size(116, 23);
+            this.lblDiscordNotDetected.TabIndex = 35;
+            this.lblDiscordNotDetected.Text = "Not Detected.";
+            this.lblDiscordNotDetected.Visible = false;
             // 
             // lblSteamNotDetected
             // 
@@ -872,18 +899,6 @@ namespace Tasks
             this.btnCopyLogs.Text = "Copy Cleanup Logs";
             this.btnCopyLogs.UseVisualStyleBackColor = true;
             // 
-            // lblDiscordNotDetected
-            // 
-            this.lblDiscordNotDetected.AutoSize = true;
-            this.lblDiscordNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblDiscordNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblDiscordNotDetected.Location = new System.Drawing.Point(130, 238);
-            this.lblDiscordNotDetected.Name = "lblDiscordNotDetected";
-            this.lblDiscordNotDetected.Size = new System.Drawing.Size(116, 23);
-            this.lblDiscordNotDetected.TabIndex = 35;
-            this.lblDiscordNotDetected.Text = "Not Detected.";
-            this.lblDiscordNotDetected.Visible = false;
-            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -978,5 +993,6 @@ namespace Tasks
         private System.Windows.Forms.Label lblChromeNotDetected;
         private System.Windows.Forms.Label lblFirefoxNotDetected;
         private System.Windows.Forms.Label lblDiscordNotDetected;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
