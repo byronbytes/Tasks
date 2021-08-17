@@ -457,6 +457,7 @@ namespace Tasks
             string chromeDir = "C:\\Program Files\\Google\\Chrome";
             string firefoxDir = "C:\\Program Files\\Mozilla Firefox";
             string steamDir = "C:\\Program Files (x86)\\Steam";
+            string discordDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord");
 
             if (!Directory.Exists(chromeDir))
             {
@@ -483,6 +484,12 @@ namespace Tasks
                 lblSteamNotDetected.Visible = true;
             }
 
+            if (!Directory.Exists(discordDir))
+            {
+                checkBox9.Enabled = false;
+                checkBox10.Enabled = false;
+                lblDiscordNotDetected.Visible = true;
+            }
         }
 
 
