@@ -569,9 +569,9 @@ namespace Tasks
             this.checkBox17.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox17.Location = new System.Drawing.Point(7, 442);
             this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(161, 24);
+            this.checkBox17.Size = new System.Drawing.Size(163, 24);
             this.checkBox17.TabIndex = 27;
-            this.checkBox17.Text = "Clean Images Folder";
+            this.checkBox17.Text = "Clean Pictures Folder";
             this.checkBox17.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox17.UseVisualStyleBackColor = true;
             // 
