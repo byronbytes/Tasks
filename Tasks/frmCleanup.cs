@@ -34,29 +34,28 @@ namespace Tasks
 
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
-            var exceptionCaught = false;
-            
-            foreach (var file in directoryInfo.GetFiles()) {
+            try
+            {
+                foreach (var file in directoryInfo.GetFiles())
                 {
                     file.Delete();
                     CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
-                } catch(Exception ex) {
-                    CleanupLogsLBox.Items.Add("Exception Caught: " + ex.Message);
-                    exceptionCaught = true;
                 }
+
                 foreach (var dir in directoryInfo.GetDirectories())
                 {
                     dir.Delete(true);
                     CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
-                } catch(Exception ex) {
-                    CleanupLogsLBox.Items.Add("Exception Caught: " + ex.Message);
-                    exceptionCaught = true;
                 }
 
                 return true;
             }
-            
-            return exceptionCaught;
+            catch (Exception ex) when (ex is IOException || ex is DirectoryNotFoundException || ex is UnauthorizedAccessException || ex is SecurityException)
+            {
+                CleanupLogsLBox.Items.Add("Exception Error: " + ex.Message);
+            }
+
+            return false;
         }
 
         private void btnCleanup_Click(object sender, EventArgs e)
@@ -371,7 +370,7 @@ namespace Tasks
                 {
 
                     CleanupLogsLBox.Items.Add("Error while trying to clear ARP cache! \n" + ex);
-                    MessageBox.Show(esc.ToString());
+                    MessageBox.Show(ex.ToString());
 
                 }
             }
