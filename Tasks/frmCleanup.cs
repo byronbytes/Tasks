@@ -445,6 +445,29 @@ namespace Tasks
 
 
             }
+
+            if(checkBox18.Checked)
+            {
+
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History");
+            }
+            if(checkBox22.Checked)
+            {
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies");
+            }
+
+            if(checkBox23.Checked)
+            {
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache");
+                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache");
+                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\GPUCache");
+                var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\ShaderCache");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Cache Cleaned.");
+                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Edge Code Cache Cleaned.");
+                if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Edge GPU Cache Cleaned.");
+                if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Edge Shader Cache Cleaned.");
+            }
+
             if (CleanupLogsLBox.Items.Count > 2) btnCopyLogs.Enabled = true;
         }
 
