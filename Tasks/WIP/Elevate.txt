@@ -1,0 +1,7 @@
+﻿var permission = new FileIOPermission(FileIOPermissionAccess.Write, folder);
+var permissionSet = new PermissionSet(PermissionState.None);
+permissionSet.AddPermission(permission);
+if (permissionSet.IsSubsetOf(AppDomain.CurrentDomain.PermissionSet))
+{
+    // You have write permission for the given folder
+}

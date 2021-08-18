@@ -50,7 +50,7 @@ namespace Tasks
 
                 return true;
             }
-            catch (Exception ex) when (ex is IOException || ex is DirectoryNotFoundException || ex is UnauthorizedAccessException || ex is SecurityException)
+            catch (Exception ex)
             {
                 CleanupLogsLBox.Items.Add("Exception Error: " + ex.Message);
             }
@@ -520,7 +520,7 @@ namespace Tasks
         
         }
 
-        private void button1_Click(object sender, EventArgs e) //DISPLAYDNS
+        private void button1_Click(object sender, EventArgs e) //DisplayDNS
         {
 
             try
@@ -541,7 +541,7 @@ namespace Tasks
 
         }
 
-        private void button2_Click(object sender, EventArgs e) //displayarp
+        private void button2_Click(object sender, EventArgs e) //DisplayARP
         {
 
 
