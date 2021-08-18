@@ -284,8 +284,7 @@ namespace Tasks
                             catch (Exception ex)
                             {
 
-                                //do nothing
-
+                                CleanupLogsLBox.Items.Add("Error while trying to delete Firefox cookies! \n" + ex);
                             }
 
                         }
@@ -294,7 +293,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox cookies! \n" + ex);
+                    CleanupLogsLBox.Items.Add("Error while trying to delete Firefox cookies! \n" + ex);
                 }
 
 
@@ -379,9 +378,8 @@ namespace Tasks
                 }
             }
 
-            //DNS & ARP
 
-            //FILES
+            //RECENT FILES
 
             if (checkBox21.Checked)
             {
@@ -421,13 +419,13 @@ namespace Tasks
                             System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(file);
 
                             dir.Delete(true);
-                            CleanupLogsLBox.Items.Add(file + " Deleted!");
+                            CleanupLogsLBox.Items.Add("Deleted " + file);
 
                         }
                         catch (Exception ex)
                         {
 
-                            CleanupLogsLBox.Items.Add("Failed to delete directory" + file + " " + ex);
+                            CleanupLogsLBox.Items.Add("Failed to delete " + file + " " + ex);
 
                         }
 
@@ -492,7 +490,6 @@ namespace Tasks
                 checkBox9.Enabled = false;
                 checkBox10.Enabled = false;
                 lblDiscordNotDetected.Visible = true;
-                comboBox2.Visible = false;
                
             }
 

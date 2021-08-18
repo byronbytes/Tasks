@@ -78,7 +78,6 @@ namespace Tasks
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.lblDiscordNotDetected = new System.Windows.Forms.Label();
             this.lblSteamNotDetected = new System.Windows.Forms.Label();
             this.lblChromeNotDetected = new System.Windows.Forms.Label();
@@ -691,7 +690,6 @@ namespace Tasks
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage2.Controls.Add(this.comboBox2);
             this.tabPage2.Controls.Add(this.lblDiscordNotDetected);
             this.tabPage2.Controls.Add(this.lblSteamNotDetected);
             this.tabPage2.Controls.Add(this.lblChromeNotDetected);
@@ -726,15 +724,6 @@ namespace Tasks
             this.tabPage2.Size = new System.Drawing.Size(519, 767);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(6, 351);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(143, 23);
-            this.comboBox2.TabIndex = 36;
             // 
             // lblDiscordNotDetected
             // 
@@ -986,6 +975,5 @@ namespace Tasks
         private System.Windows.Forms.Label lblChromeNotDetected;
         private System.Windows.Forms.Label lblFirefoxNotDetected;
         private System.Windows.Forms.Label lblDiscordNotDetected;
-        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
