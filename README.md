@@ -22,13 +22,13 @@
 2. Download the top-most *zip* file (not the source code).
 3. Extract the archive, and execute the *.exe* file. After that, **Tasks** will launch.
 
+# 💗 Support The Project
+You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us.
+
 # 📐Branch Information
 The **master** branch holds the most stable updates for the project, and if you are not looking to the experimental side, or just want to simply use Tasks, then feel free to visit the **master** branch for source code.
 
 The **testing** branch is meant for testing features on the project, and it is not as stable as master. New stuff get added to this branch, but they will not be quite stable and may either work as intended or not.
-
-# 💗 Support The Project
-You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us.
 
 # 📸Gallery
 These images were taken on Version 2.0.0, designs may differ on newer versions.
