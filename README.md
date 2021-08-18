@@ -1,7 +1,7 @@
 
 
 #  ![Tasks 64x64](https://user-images.githubusercontent.com/53088136/129425927-00413aa1-ca44-4ee5-a4ce-7d276cf2189c.png) Tasks
-![GitHub Issues](https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues) ![GitHub Issues (label: bug)](https://img.shields.io/github/issues/LiteTools/Tasks/bug?label=reported%20bugs) ![GitHub Issues (label: suggestion)](https://img.shields.io/github/issues/LiteTools/Tasks/suggestion?label=suggestions) ![GitHub Issues (label: enhancement)](https://img.shields.io/github/issues/LiteTools/Tasks/enhancement?label=enhancements)
+![GitHub Issues](https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues) ![GitHub Issues (label: bug)](https://img.shields.io/github/issues/LiteTools/Tasks/enhancement?label=enhancements)
 
 ![Latest Stable Release](https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable) ![Downloads](https://img.shields.io/github/downloads/LiteTools/Tasks/total)
 
