@@ -462,10 +462,6 @@ namespace Tasks
             string steamDir = "C:\\Program Files (x86)\\Steam";
             string discordDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord");
 
-            // The other discord builds are for changing which version you want to clean
-
-            string discordcanaryDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discordcanary");
-
             if (!Directory.Exists(chromeDir))
             {
                 checkBox5.Enabled = false;
@@ -500,14 +496,7 @@ namespace Tasks
                
             }
 
-
-
-            if (Directory.Exists(discordDir))
-            {
-                comboBox2.Items.Add("Discord");
-                
-
-            }
+            
 
             // Extention Finder
             if (Directory.Exists(chromeExtDir))
@@ -527,13 +516,7 @@ namespace Tasks
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == "Browser #1")
-            {
-                listBox1.Items.Add("Extention #1");
-            } else
-            {
-                //wip
-            }
+         
         
         }
 
