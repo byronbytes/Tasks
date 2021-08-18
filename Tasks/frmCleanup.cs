@@ -99,9 +99,11 @@ namespace Tasks
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Code Cache");
                 var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\GPUCache");
+                var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\ShaderCache");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
                 if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Code Cache Cleaned.");
                 if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome GPU Cache Cleaned.");
+                if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Chrome Shader Cache Cleaned.");
             }
 
             if (checkBox6.Checked)
@@ -455,6 +457,7 @@ namespace Tasks
 
             // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
             string chromeDir = "C:\\Program Files\\Google\\Chrome";
+            string chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
             string firefoxDir = "C:\\Program Files\\Mozilla Firefox";
             string steamDir = "C:\\Program Files (x86)\\Steam";
             string discordDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord");
@@ -494,12 +497,13 @@ namespace Tasks
                 checkBox9.Enabled = false;
                 checkBox10.Enabled = false;
                 lblDiscordNotDetected.Visible = true;
+                comboBox2.Visible = false;
             }
 
             // Extention Finder
-            if (Directory.Exists(chromeDir))
+            if (Directory.Exists(chromeExtDir))
             {
-                lblChromeNotDetected.Visible = true;
+                comboBox1.Items.Add("Google Chrome");
             }
 
 

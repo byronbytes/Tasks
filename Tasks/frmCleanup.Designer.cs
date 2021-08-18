@@ -834,9 +834,6 @@ namespace Tasks
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Browser #1",
-            "Browser #2"});
             this.comboBox1.Location = new System.Drawing.Point(16, 266);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(259, 28);
