@@ -464,7 +464,6 @@ namespace Tasks
 
             // The other discord builds are for changing which version you want to clean
 
-            string discordptbDir = "";
             string discordcanaryDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discordcanary");
 
             if (!Directory.Exists(chromeDir))
@@ -498,6 +497,16 @@ namespace Tasks
                 checkBox10.Enabled = false;
                 lblDiscordNotDetected.Visible = true;
                 comboBox2.Visible = false;
+               
+            }
+
+
+
+            if (Directory.Exists(discordDir))
+            {
+                comboBox2.Items.Add("Discord");
+                
+
             }
 
             // Extention Finder
