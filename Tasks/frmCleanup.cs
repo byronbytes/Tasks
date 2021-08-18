@@ -58,9 +58,13 @@ namespace Tasks
             return false;
         }
 
+        public class ChromeCache
+        {
+
+        }
         private void btnCleanup_Click(object sender, EventArgs e)
         {
-            // Note to self, change the exception error message,
+            // Exception Error Messages are all different, and should all be the same.
 
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -499,6 +503,12 @@ namespace Tasks
             if (Directory.Exists(chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
+            }
+
+            if (Directory.Exists(firefoxDir))
+            {
+                comboBox1.Items.Add("Mozilla Firefox" +
+                    "");
             }
 
 
