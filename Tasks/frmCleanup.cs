@@ -486,6 +486,8 @@ namespace Tasks
             string chromeDir = "C:\\Program Files\\Google\\Chrome";
             string chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
             string firefoxDir = "C:\\Program Files\\Mozilla Firefox";
+            string firefoxExtDir = "";
+            string edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
             string steamDir = "C:\\Program Files (x86)\\Steam";
             string discordDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord");
 
@@ -522,7 +524,15 @@ namespace Tasks
                
             }
 
-            
+            if (!Directory.Exists(edgeDir))
+            {
+                checkBox23.Enabled = false;
+                checkBox22.Enabled = false;
+               checkBox18.Enabled = false;
+                lblEdgeNotDetected.Visible = true;
+
+            }
+
 
             // Extention Finder
             if (Directory.Exists(chromeExtDir))
