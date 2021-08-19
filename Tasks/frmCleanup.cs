@@ -434,12 +434,12 @@ namespace Tasks
                         }
 
                     }
-                    CleanupLogsLBox.Items.Add("Cleared images folder successfully.");
+                    CleanupLogsLBox.Items.Add("Cleaned images folder successfully.");
 
                 }
                 catch(Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Failed to clear images folder " + ex);
+                    CleanupLogsLBox.Items.Add("Failed to clean images folder " + ex);
                 }
 
 
@@ -450,12 +450,14 @@ namespace Tasks
             {
 
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History");
+                CleanupLogsLBox.Items.Add("Edge Search History Cleaned.");
             }
             if(checkBox22.Checked)
             {
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies");
+                CleanupLogsLBox.Items.Add("Edge Cookies Cleaned.");
             }
-
+                
             if(checkBox23.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache");
