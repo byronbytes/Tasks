@@ -24,5 +24,10 @@ namespace Tasks
             process.StartInfo.FileName = "PowerShellFiles/debloater.ps1";
             process.Start();
         }
+
+        private void frmRemoveBloat_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
