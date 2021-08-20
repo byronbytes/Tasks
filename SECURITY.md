@@ -12,6 +12,6 @@ We no longer support our legacy versions of Tasks, aka versions below 1.x.x.
 
 ## Reporting a Vulnerability
 
-Please report an issue and tag it with [SECURITY] (Exploit / Security Flaw Name) 
+Please report an issue and tag it with [SECURITY] (Exploit / Security Flaw Name)
 
 # man im not finishing this can @average do this
