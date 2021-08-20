@@ -160,6 +160,18 @@ namespace Tasks
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Discord Crashdumps Cleaned.");
             }
 
+            if (checkBox25.Checked)
+            try{
+
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies");
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies-journal");
+                CleanupLogsLBox.Items.Add("Discord Cookies Cleaned.");
+
+            } catch (Exception ex)
+            {
+                    CleanupLogsLBox.Items.Add("There was an error trying to clean Discord Cookies." + ex);
+                }
+        
 
             // Steam
 
@@ -342,8 +354,8 @@ namespace Tasks
                 try
                 {
 
-                    var cookies = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                    foreach (string direc in Directory.EnumerateDirectories(cookies))
+                    var minidump = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                    foreach (string direc in Directory.EnumerateDirectories(minidump))
                     {
                         if (direc.Contains("release") == true)
                         {
@@ -516,6 +528,8 @@ namespace Tasks
             CleanupLogsLBox.Items.Add("Cleanup logs copied to clipboard.");
             Clipboard.SetText(string.Join("\n", CleanupLogsLBox.Items.Cast<string>()));
         }
+
+
         private void frmCleanup_Load(object sender, EventArgs e)
         {
 
