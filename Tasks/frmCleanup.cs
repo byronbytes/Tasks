@@ -488,6 +488,7 @@ namespace Tasks
             string firefoxDir = "C:\\Program Files\\Mozilla Firefox";
             string firefoxExtDir = "";
             string edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
+            string edgeExtDir = "";
             string steamDir = "C:\\Program Files (x86)\\Steam";
             string discordDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord");
 
@@ -542,8 +543,7 @@ namespace Tasks
 
             if (Directory.Exists(firefoxDir))
             {
-                comboBox1.Items.Add("Mozilla Firefox" +
-                    "");
+                comboBox1.Items.Add("Mozilla Firefox");
             }
 
 
