@@ -139,7 +139,7 @@ namespace Tasks
             this.checkBox4.AutoSize = true;
             this.checkBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox4.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox4.Location = new System.Drawing.Point(7, 108);
+            this.checkBox4.Location = new System.Drawing.Point(7, 78);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(121, 24);
             this.checkBox4.TabIndex = 4;
@@ -165,7 +165,7 @@ namespace Tasks
             this.checkBox2.AutoSize = true;
             this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(7, 78);
+            this.checkBox2.Location = new System.Drawing.Point(6, 108);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(146, 24);
             this.checkBox2.TabIndex = 2;
