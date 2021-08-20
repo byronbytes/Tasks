@@ -7,7 +7,7 @@ We no longer support our legacy versions of Tasks, aka versions below 1.x.x.
 | Version | Supported          |
 | ------- | ------------------ |
 | 2.1.x   | :white_check_mark: |
-| 2.0.0   | :white_check_mark: |
+| 2.0.x   | :white_check_mark: |
 | 1.x.x   | :x: |
 
 ## Reporting a Vulnerability
