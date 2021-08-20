@@ -539,7 +539,6 @@ namespace Tasks
             string chromeDir = "C:\\Program Files\\Google\\Chrome";
             string chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
             string firefoxDir = "C:\\Program Files\\Mozilla Firefox";
-            string firefoxExtDir = "";
             string edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
             string edgeExtDir = "";
             string steamDir = "C:\\Program Files (x86)\\Steam";
