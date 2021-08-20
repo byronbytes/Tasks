@@ -608,6 +608,11 @@ namespace Tasks
         {
 
         }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     
