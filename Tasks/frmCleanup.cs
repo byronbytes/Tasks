@@ -161,13 +161,15 @@ namespace Tasks
             }
 
             if (checkBox25.Checked)
-            try{
+            try
+                {
 
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies-journal");
                 CleanupLogsLBox.Items.Add("Discord Cookies Cleaned.");
 
-            } catch (Exception ex)
+            } 
+                catch (Exception ex)
             {
                     CleanupLogsLBox.Items.Add("There was an error trying to clean Discord Cookies." + ex);
                 }
@@ -558,6 +560,7 @@ namespace Tasks
                 checkBox14.Enabled = false;
                 checkBox15.Enabled = false;
                 checkBox16.Enabled = false;
+                checkBox24.Enabled = false;
                 lblFirefoxNotDetected.Visible = true;
             }
 
@@ -572,6 +575,7 @@ namespace Tasks
             {
                 checkBox9.Enabled = false;
                 checkBox10.Enabled = false;
+                checkBox25.Checked = false;
                 lblDiscordNotDetected.Visible = true;
                
             }
