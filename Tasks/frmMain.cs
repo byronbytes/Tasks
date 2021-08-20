@@ -67,5 +67,11 @@ namespace Tasks
             frmRemoveBloat RemoveBloat = new frmRemoveBloat();
             RemoveBloat.Show();
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            frm RemoveBloat = new frmRemoveBloat();
+            RemoveBloat.Show();
+        }
     }
 }
