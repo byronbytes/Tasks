@@ -233,7 +233,7 @@ namespace Tasks
                                         try
                                         {
                                             File.Delete(file);
-                                            CleanupLogsLBox.Items.Add("Firefox Shader Cache File " + file + " Removed.");
+                                            CleanupLogsLBox.Items.Add("Deleted File: " + file);
                                         }
                                         catch
                                         {
@@ -262,7 +262,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to clean firefox cache! \n" + ex);
+                    CleanupLogsLBox.Items.Add("Error while trying to clean firefox cache! \n" + ex);
                 }
 
 
@@ -322,7 +322,7 @@ namespace Tasks
                             catch (Exception ex)
                             {
 
-                                //do nothing
+                                CleanupLogsLBox.Items.Add("Error while trying to clean Firefox History." + ex);
 
                             }
 
@@ -333,6 +333,43 @@ namespace Tasks
                 catch (Exception ex)
                 {
                     CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History! \n" + ex);
+                }
+            }
+
+
+            if(checkBox24.Checked)
+            {
+                try
+                {
+
+                    var cookies = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
+                    foreach (string direc in Directory.EnumerateDirectories(cookies))
+                    {
+                        if (direc.Contains("release") == true)
+                        {
+                            try
+                            {
+                                var minidumps1 = (direc + "\\crashes");
+                                var minidumps2 = (direc + "\\minidumps");
+                                File.Delete(minidumps1);
+                                File.Delete(minidumps2);
+                                CleanupLogsLBox.Items.Add("Firefox Crashdumps Cleaned.");
+
+                            }
+                            catch (Exception ex)
+                            {
+
+                                CleanupLogsLBox.Items.Add("Error while trying to clean Firefox Crashdumps." + ex);
+
+                            }
+
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    CleanupLogsLBox.Items.Add("Error while trying to delete Firefox Crashdumps. \n" + ex);
                 }
             }
 

@@ -96,6 +96,7 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
+            this.checkBox24 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -406,6 +407,7 @@ namespace Tasks
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage2.Controls.Add(this.checkBox24);
             this.tabPage2.Controls.Add(this.lblEdgeNotDetected);
             this.tabPage2.Controls.Add(this.checkBox18);
             this.tabPage2.Controls.Add(this.checkBox22);
@@ -562,7 +564,7 @@ namespace Tasks
             this.lblFirefoxNotDetected.AutoSize = true;
             this.lblFirefoxNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblFirefoxNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblFirefoxNotDetected.Location = new System.Drawing.Point(317, 128);
+            this.lblFirefoxNotDetected.Location = new System.Drawing.Point(317, 164);
             this.lblFirefoxNotDetected.Name = "lblFirefoxNotDetected";
             this.lblFirefoxNotDetected.Size = new System.Drawing.Size(151, 19);
             this.lblFirefoxNotDetected.TabIndex = 32;
@@ -957,6 +959,20 @@ namespace Tasks
             this.btnCopyLogs.Text = "Copy Cleanup Logs";
             this.btnCopyLogs.UseVisualStyleBackColor = true;
             // 
+            // checkBox24
+            // 
+            this.checkBox24.AutoSize = true;
+            this.checkBox24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox24.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox24.ForeColor = System.Drawing.Color.White;
+            this.checkBox24.Location = new System.Drawing.Point(318, 131);
+            this.checkBox24.Name = "checkBox24";
+            this.checkBox24.Size = new System.Drawing.Size(109, 24);
+            this.checkBox24.TabIndex = 42;
+            this.checkBox24.Text = "Crashdumps";
+            this.checkBox24.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox24.UseVisualStyleBackColor = true;
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1057,5 +1073,6 @@ namespace Tasks
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox checkBox24;
     }
 }
