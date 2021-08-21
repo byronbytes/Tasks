@@ -866,7 +866,6 @@ namespace Tasks
             this.checkBox11.Text = "Cache";
             this.checkBox11.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox11.UseVisualStyleBackColor = true;
-            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
             // 
             // label8
             // 
@@ -896,7 +895,6 @@ namespace Tasks
             this.tabPage3.Size = new System.Drawing.Size(575, 767);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extentions";
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // label16
             // 

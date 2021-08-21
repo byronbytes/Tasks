@@ -14,6 +14,7 @@ using System.Windows.Forms;
 
 namespace Tasks
 {
+
     public partial class frmCleanup : Form
     {
         public frmCleanup()
@@ -533,18 +534,23 @@ namespace Tasks
 
 
         private void frmCleanup_Load(object sender, EventArgs e)
+           
         {
+            var g = new Dirs();
+
 
             // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
-            string chromeDir = "C:\\Program Files\\Google\\Chrome";
-            string chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
-            string firefoxDir = "C:\\Program Files\\Mozilla Firefox";
-            string edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
-            string edgeExtDir = "";
-            string steamDir = "C:\\Program Files (x86)\\Steam";
-            string discordDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord");
+            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
+            g.chromeDir = localappdata + "\\Google\\Chrome\\";
+            g.chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
+            g.firefoxDir = localappdata + "\\Mozilla\\Firefox\\";
+            g.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
+            g.edgeExtDir = "";
+            g.steamDir = localappdata + "\\Steam\\";
+            g.discordDir = localappdata + "\\Discord\\"; // Makes more sense checking appdata than program files
 
-            if (!Directory.Exists(chromeDir))
+
+            if (!Directory.Exists(g.chromeDir))
             {
                 checkBox5.Enabled = false;
                 checkBox7.Enabled = false;
@@ -554,7 +560,7 @@ namespace Tasks
                 lblChromeNotDetected.Visible = true;
             }
 
-            if (!Directory.Exists(firefoxDir))
+            if (!Directory.Exists(g.firefoxDir))
             {
                 checkBox14.Enabled = false;
                 checkBox15.Enabled = false;
@@ -563,14 +569,14 @@ namespace Tasks
                 lblFirefoxNotDetected.Visible = true;
             }
 
-            if (!Directory.Exists(steamDir))
+            if (!Directory.Exists(g.steamDir))
             {
                 checkBox11.Enabled = false;
                 checkBox12.Enabled = false;
                 lblSteamNotDetected.Visible = true;
             }
 
-            if (!Directory.Exists(discordDir))
+            if (!Directory.Exists(g.discordDir))
             {
                 checkBox9.Enabled = false;
                 checkBox10.Enabled = false;
@@ -579,7 +585,7 @@ namespace Tasks
                
             }
 
-            if (!Directory.Exists(edgeDir))
+            if (!Directory.Exists(g.edgeDir))
             {
                 checkBox23.Enabled = false;
                 checkBox22.Enabled = false;
@@ -590,12 +596,12 @@ namespace Tasks
 
 
             // Extention Finder
-            if (Directory.Exists(chromeExtDir))
+            if (Directory.Exists(g.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
             }
 
-            if (Directory.Exists(firefoxDir))
+            if (Directory.Exists(g.firefoxDir))
             {
                 comboBox1.Items.Add("Mozilla Firefox");
             }
@@ -608,12 +614,6 @@ namespace Tasks
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
             taskDialog1.Show();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-         
-        
         }
 
         private void button1_Click(object sender, EventArgs e) //DisplayDNS
@@ -658,14 +658,16 @@ namespace Tasks
 
         }
 
-        private void checkBox11_CheckedChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
+            if (comboBox1.Text == "Google Chrome")
+            {
+                MessageBox.Show("google chrome");
+            }
+            else if (comboBox1.Text == "Mozilla Firefox")  //Testing, will be replaced
+            {
+                MessageBox.Show("Mozilla firefox");
+            }
         }
     }
 }
