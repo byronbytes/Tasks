@@ -797,6 +797,16 @@ namespace Tasks
             }
 
         }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExtensionsBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     
