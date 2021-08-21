@@ -1,5 +1,4 @@
-<h1>Debloater Script</h1>
-## We did NOT create the scripts that are being used in the Debloater section, all credit goes to Sycnex and his GitHub repository, https://github.com/Sycnex/Windows10Debloater
+## We did NOT create the scripts that are being used in the Debloater section, The original source of this script can be found <a href="https://github.com/Sycnex/Windows10Debloater">here</a>.
 
 The MIT License states that you are allowed to use this script for the following.
  - Commercial use
