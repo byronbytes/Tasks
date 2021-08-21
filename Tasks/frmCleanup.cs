@@ -662,11 +662,11 @@ namespace Tasks
         {
             if (comboBox1.Text == "Google Chrome")
             {
-                MessageBox.Show("google chrome");
+                MessageBox.Show("Google Chrome");
             }
             else if (comboBox1.Text == "Mozilla Firefox")  //Testing, will be replaced
             {
-                MessageBox.Show("Mozilla firefox");
+                MessageBox.Show("Mozilla Firefox");
             }
         }
     }
