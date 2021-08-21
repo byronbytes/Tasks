@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using ByteSizeLib;
 
 namespace Tasks
 {
@@ -527,30 +528,7 @@ namespace Tasks
 
 
 
-            if (ExtensionsBox.SelectedItems.Count > 0) //Check if the user selected extensions for deletion.
-            {
-                Process process = new Process();
-                process.StartInfo.FileName = "BatFiles/diefirefox.bat";
-                process.Start();
-                process.WaitForExit();
-                Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
 
-                int go = RemoveExtension.RemoveExtFirefox(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
-
-                if (go == 0)
-                {
-                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
-                    {
-                        ExtensionsBox.Items.Remove(eachItem);
-                    }
-                }
-                else if (go == 1)
-                {
-                    MessageBox.Show("An exception occured"); 
-                }
-
-
-            }
 
 
 
@@ -563,11 +541,32 @@ namespace Tasks
             CleanupLogsLBox.Items.Add("Cleanup logs copied to clipboard.");
             Clipboard.SetText(string.Join("\n", CleanupLogsLBox.Items.Cast<string>()));
         }
+        private void Tabs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab.Text == "Browser Extensions") // i dont want it to show up in the extensions thing because i'll use a diff button to make the code less messy
+            {
+                btnCleanup.Visible = false;
+                btnCopyLogs.Visible = false;
+            }
+            else
+            {
+                if (btnCleanup.Visible == false && btnCopyLogs.Visible == false)
+                {
+
+                    btnCleanup.Visible = true;
+                    btnCopyLogs.Visible = true;
+
+                }
+            }
+
+
+        }
 
 
         private void frmCleanup_Load(object sender, EventArgs e)
            
         {
+            tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged);
             var g = new Dirs();
 
 
@@ -692,6 +691,7 @@ namespace Tasks
 
         }
 
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -736,7 +736,7 @@ namespace Tasks
                                 {
                                     FileInfo fi = new FileInfo(ext);
                                     ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
-                                    extb.SubItems.Add((fi.Length).ToString());
+                                    extb.SubItems.Add("~ "+ ByteSize.FromBytes(fi.Length).ToString());
                                     extb.SubItems.Add(ext);
 
                                 }
@@ -760,6 +760,42 @@ namespace Tasks
                 }
                 
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (ExtensionsBox.SelectedItems.Count > 0) //Check if the user selected extensions for deletion.
+            {
+                
+                Process process = new Process();
+                process.StartInfo.FileName = "BatFiles/diefirefox.bat";
+                process.Start();
+                process.WaitForExit();
+                Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
+
+                int go = RemoveExtension.RemoveExtFirefox(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
+
+                if (go == 0)
+                {
+                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                    {
+                        ExtensionsBox.Items.Remove(eachItem);
+                        CleanupLogsLBox.Items.Add("Extension removed.");
+                    }
+                }
+                else if (go == 1)
+                {
+                    CleanupLogsLBox.Items.Add("Error when trying to remove extension.");
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please select an extension to remove.");
+            }
+
         }
     }
 }

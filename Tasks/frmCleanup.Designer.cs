@@ -42,6 +42,7 @@ namespace Tasks
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
@@ -90,6 +91,8 @@ namespace Tasks
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.ExtensionsBox = new System.Windows.Forms.ListView();
             this.ExtName = new System.Windows.Forms.ColumnHeader();
             this.ExtSize = new System.Windows.Forms.ColumnHeader();
@@ -233,6 +236,7 @@ namespace Tasks
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.checkBox17);
@@ -259,6 +263,18 @@ namespace Tasks
             this.tabPage1.Size = new System.Drawing.Size(683, 767);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(-6, 499);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(683, 17);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "_________________________________________________________________________________" +
+    "______________________________________________________";
             // 
             // button2
             // 
@@ -884,6 +900,8 @@ namespace Tasks
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.ExtensionsBox);
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.label15);
@@ -897,7 +915,31 @@ namespace Tasks
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabPage3.Size = new System.Drawing.Size(683, 767);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Browser Extentions";
+            this.tabPage3.Text = "Browser Extensions";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(402, 730);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(160, 34);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "Remove";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label17.Location = new System.Drawing.Point(6, 710);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(683, 17);
+            this.label17.TabIndex = 43;
+            this.label17.Text = "_________________________________________________________________________________" +
+    "______________________________________________________";
             // 
             // ExtensionsBox
             // 
@@ -914,7 +956,7 @@ namespace Tasks
             this.ExtensionsBox.HideSelection = false;
             this.ExtensionsBox.Location = new System.Drawing.Point(16, 300);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(648, 432);
+            this.ExtensionsBox.Size = new System.Drawing.Size(648, 407);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -932,7 +974,7 @@ namespace Tasks
             // ExtPath
             // 
             this.ExtPath.Text = "Path";
-            this.ExtPath.Width = 485;
+            this.ExtPath.Width = 625;
             // 
             // label16
             // 
@@ -1117,5 +1159,8 @@ namespace Tasks
         private System.Windows.Forms.ColumnHeader ExtName;
         private System.Windows.Forms.ColumnHeader ExtSize;
         private System.Windows.Forms.ColumnHeader ExtPath;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button3;
     }
 }
