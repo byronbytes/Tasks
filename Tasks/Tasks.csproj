@@ -36,11 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BatFiles\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="BatFiles\diefirefox.bat">
+    <None Update="BatFiles\killfirefox.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="BatFiles\displayarp.bat">

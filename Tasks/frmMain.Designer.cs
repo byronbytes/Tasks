@@ -311,7 +311,7 @@ namespace Tasks
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel1.Location = new System.Drawing.Point(593, 537);
+            this.linkLabel1.Location = new System.Drawing.Point(592, 537);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(104, 21);
             this.linkLabel1.TabIndex = 8;
@@ -325,7 +325,7 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(709, 567);
+            this.ClientSize = new System.Drawing.Size(708, 567);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
