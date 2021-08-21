@@ -8,8 +8,8 @@ These are the supported versions of Tasks. We will not maintain older versions o
 
 | Version       | Supported          | Release Date     | Discontinuation Date |
 | :-----------: | :----------------: | :--------------: | :------------------: |
-| **2.0** (PR)  | :heavy_check_mark: | 7th August 2021  | N/A                  |
-| **1.x** (D)   | :x:                | Unknown          | 7th August 2021      |
+| **2.x.x** (PR)  | :heavy_check_mark: | 7th August 2021  | N/A                  |
+| **1.x.x** (D)   | :x:                | Unknown          | 7th August 2021      |
 
 *(PR: Pre-Release | D: Discontinued)*
 
