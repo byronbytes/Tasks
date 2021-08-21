@@ -11,7 +11,7 @@ These are the supported versions of Tasks. We will not maintain older versions o
 | **2.x.x** (PR)  | :heavy_check_mark: | 7th August 2021  | N/A                  |
 | **1.x.x** (D)   | :x:                | Unknown          | 7th August 2021      |
 
-*(PR: Pre-Release | D: Discontinued)*
+*( R: Release | PR: Pre-Release | D: Discontinued )*
 
 ## Reporting a Vulnerability
 
