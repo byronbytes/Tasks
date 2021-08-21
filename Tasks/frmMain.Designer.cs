@@ -78,9 +78,9 @@ namespace Tasks
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(3, 471);
+            this.button5.Location = new System.Drawing.Point(15, 471);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 35);
+            this.button5.Size = new System.Drawing.Size(130, 35);
             this.button5.TabIndex = 9;
             this.button5.Text = "Toggle Overlay";
             this.button5.UseVisualStyleBackColor = true;

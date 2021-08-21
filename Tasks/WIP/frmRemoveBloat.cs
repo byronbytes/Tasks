@@ -18,17 +18,28 @@ namespace Tasks
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Process process = new Process();
-            process.StartInfo.FileName = "PowerShellFiles/debloater.ps1";
-            process.Start();
-        }
+
 
         private void frmRemoveBloat_Load(object sender, EventArgs e)
         {
 
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = "DebloaterScripts/UninstallOneDrive.ps1";
+            process.Start();
+            process.WaitForExit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = "DebloaterScripts/DisableCortana.ps1";
+            process.Start();
+            process.WaitForExit();
         }
     }
 }

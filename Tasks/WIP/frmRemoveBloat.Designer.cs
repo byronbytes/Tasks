@@ -101,6 +101,7 @@ namespace Tasks
             this.button2.Text = "Uninstall OneDrive";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -112,6 +113,7 @@ namespace Tasks
             this.button1.TabIndex = 0;
             this.button1.Text = "Disable Cortana";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tabPage2
             // 
