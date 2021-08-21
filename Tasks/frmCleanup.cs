@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Tasks
@@ -523,6 +524,37 @@ namespace Tasks
             }
 
             if (CleanupLogsLBox.Items.Count > 2) btnCopyLogs.Enabled = true;
+
+
+
+            if (ExtensionsBox.SelectedItems.Count > 0) //Check if the user selected extensions for deletion.
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = "BatFiles/diefirefox.bat";
+                process.Start();
+                process.WaitForExit();
+                Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
+
+                int go = RemoveExtension.RemoveExtFirefox(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
+
+                if (go == 0)
+                {
+                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                    {
+                        ExtensionsBox.Items.Remove(eachItem);
+                    }
+                }
+                else if (go == 1)
+                {
+                    MessageBox.Show("An exception occured"); 
+                }
+
+
+            }
+
+
+
+
         }
 
 

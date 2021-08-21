@@ -932,7 +932,7 @@ namespace Tasks
             // ExtPath
             // 
             this.ExtPath.Text = "Path";
-            this.ExtPath.Width = 285;
+            this.ExtPath.Width = 485;
             // 
             // label16
             // 

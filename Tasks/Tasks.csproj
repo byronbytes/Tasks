@@ -39,6 +39,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="BatFiles\diefirefox.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="BatFiles\displayarp.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
