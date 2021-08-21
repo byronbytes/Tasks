@@ -540,17 +540,19 @@ namespace Tasks
 
 
             // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
-            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
-            g.chromeDir = localappdata + "\\Google\\Chrome\\";
-            g.chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
-            g.firefoxDir = localappdata + "\\Mozilla\\Firefox\\";
-            g.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
-            g.edgeExtDir = "";
-            g.steamDir = localappdata + "\\Steam\\";
-            g.discordDir = localappdata + "\\Discord\\"; // Makes more sense checking appdata than program files
+            var localappdata = Environment.GetEnvironmentVariable("LocalAppData"); 
+            var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            Dirs.chromeDir = localappdata + "\\Google\\Chrome\\";
+            Dirs.chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
+            Dirs.firefoxDir = localappdata + "\\Mozilla\\Firefox\\";
+            Dirs.firefoxExtDir = roamingappdata + "\\Mozilla\\Firefox\\Profiles\\"; 
+            Dirs.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
+            Dirs.edgeExtDir = "";
+            Dirs.steamDir = localappdata + "\\Steam\\";
+            Dirs.discordDir = localappdata + "\\Discord\\"; // Makes more sense checking appdata than program files
 
 
-            if (!Directory.Exists(g.chromeDir))
+            if (!Directory.Exists(Dirs.chromeDir))
             {
                 checkBox5.Enabled = false;
                 checkBox7.Enabled = false;
@@ -560,7 +562,7 @@ namespace Tasks
                 lblChromeNotDetected.Visible = true;
             }
 
-            if (!Directory.Exists(g.firefoxDir))
+            if (!Directory.Exists(Dirs.firefoxDir))
             {
                 checkBox14.Enabled = false;
                 checkBox15.Enabled = false;
@@ -569,14 +571,14 @@ namespace Tasks
                 lblFirefoxNotDetected.Visible = true;
             }
 
-            if (!Directory.Exists(g.steamDir))
+            if (!Directory.Exists(Dirs.steamDir))
             {
                 checkBox11.Enabled = false;
                 checkBox12.Enabled = false;
                 lblSteamNotDetected.Visible = true;
             }
 
-            if (!Directory.Exists(g.discordDir))
+            if (!Directory.Exists(Dirs.discordDir))
             {
                 checkBox9.Enabled = false;
                 checkBox10.Enabled = false;
@@ -585,7 +587,7 @@ namespace Tasks
                
             }
 
-            if (!Directory.Exists(g.edgeDir))
+            if (!Directory.Exists(Dirs.edgeDir))
             {
                 checkBox23.Enabled = false;
                 checkBox22.Enabled = false;
@@ -596,12 +598,12 @@ namespace Tasks
 
 
             // Extention Finder
-            if (Directory.Exists(g.chromeExtDir))
+            if (Directory.Exists(Dirs.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
             }
 
-            if (Directory.Exists(g.firefoxDir))
+            if (Directory.Exists(Dirs.firefoxDir))
             {
                 comboBox1.Items.Add("Mozilla Firefox");
             }
@@ -660,13 +662,71 @@ namespace Tasks
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            var g = new Dirs();
+
+            
             if (comboBox1.Text == "Google Chrome")
             {
-                MessageBox.Show("Google Chrome");
+                ExtensionsBox.Items.Clear();
+
+                foreach (string ext in Directory.EnumerateDirectories(Dirs.chromeExtDir))
+
+
+
+
+
+                    //Looked a bit and it's likely gonna be a nightmare to do so uhhhhh
+                {
+
+                    
+
+
+
+
+                }
+
+
             }
-            else if (comboBox1.Text == "Mozilla Firefox")  //Testing, will be replaced
+            else if (comboBox1.Text == "Mozilla Firefox")  
             {
-                MessageBox.Show("Mozilla Firefox");
+                ExtensionsBox.Items.Clear();
+                try
+                {
+                    foreach(string fol in Directory.EnumerateDirectories(Dirs.firefoxExtDir))
+                    {
+                        if (fol.Contains("-release"))
+                        {
+                            string prf = (fol + "\\extensions\\");
+                            try
+                            {
+                                foreach(string ext in Directory.EnumerateFiles(prf))                                 
+                                {
+                                    FileInfo fi = new FileInfo(ext);
+                                    ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
+                                    extb.SubItems.Add((fi.Length).ToString());
+                                    extb.SubItems.Add(ext);
+
+                                }
+
+                            }
+                            catch (Exception Exc)
+                            {
+
+                                MessageBox.Show(Exc.ToString());
+
+                            }
+                        }
+                    }
+
+                }
+                catch(Exception Exc)
+                {
+
+                    MessageBox.Show(Exc.ToString());
+
+                }
+                
             }
         }
     }

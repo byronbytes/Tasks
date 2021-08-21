@@ -10,13 +10,13 @@ namespace Tasks
     {
 
 
-        public string firefoxDir;
-        public string chromeDir;
-        public string steamDir;
-        public string edgeDir;
-        public string discordDir;
-        public string firefoxExtDir;
-        public string chromeExtDir;
-        public string edgeExtDir;
+        public static string firefoxDir;
+        public static string chromeDir;
+        public static string steamDir;
+        public static string edgeDir;
+        public static string discordDir;
+        public static string firefoxExtDir;
+        public static string chromeExtDir;
+        public static string edgeExtDir;
     }
 }
