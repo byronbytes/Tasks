@@ -91,6 +91,9 @@ namespace Tasks
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.ExtensionsBox = new System.Windows.Forms.ListView();
             this.ExtName = new System.Windows.Forms.ColumnHeader();
@@ -671,7 +674,6 @@ namespace Tasks
             this.checkBox7.Text = "Cookies";
             this.checkBox7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // checkBox16
             // 
@@ -899,6 +901,9 @@ namespace Tasks
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.ExtensionsBox);
             this.tabPage3.Controls.Add(this.label16);
@@ -913,6 +918,37 @@ namespace Tasks
             this.tabPage3.Size = new System.Drawing.Size(683, 767);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(7, 120);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(290, 20);
+            this.label19.TabIndex = 45;
+            this.label19.Text = "Save your work before using this feature.";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(7, 100);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(510, 20);
+            this.label17.TabIndex = 44;
+            this.label17.Text = "Tasks will need to **close** browsers before it can remove any extension. ";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(7, 63);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(161, 37);
+            this.label14.TabIndex = 43;
+            this.label14.Text = "WARNING !";
             // 
             // button3
             // 
@@ -960,7 +996,7 @@ namespace Tasks
             // ExtPath
             // 
             this.ExtPath.Text = "Path";
-            this.ExtPath.Width = 625;
+            this.ExtPath.Width = 600;
             // 
             // label16
             // 
@@ -1130,11 +1166,14 @@ namespace Tasks
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBox24;
         private System.Windows.Forms.CheckBox checkBox25;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView ExtensionsBox;
         private System.Windows.Forms.ColumnHeader ExtName;
         private System.Windows.Forms.ColumnHeader ExtSize;
         private System.Windows.Forms.ColumnHeader ExtPath;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label19;
     }
 }
