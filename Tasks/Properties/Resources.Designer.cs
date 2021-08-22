@@ -283,6 +283,36 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Tasks_128x128 {
+            get {
+                object obj = ResourceManager.GetObject("Tasks 128x128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tasks_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("Tasks 512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tasks_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Tasks 64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Terminal {
             get {
                 object obj = ResourceManager.GetObject("Terminal", resourceCulture);

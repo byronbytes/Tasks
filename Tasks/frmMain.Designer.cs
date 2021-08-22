@@ -31,6 +31,7 @@ namespace Tasks
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,6 +64,7 @@ namespace Tasks
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -73,14 +75,29 @@ namespace Tasks
             this.panel1.Size = new System.Drawing.Size(145, 570);
             this.panel1.TabIndex = 0;
             // 
+            // button6
+            // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = global::Tasks.Properties.Resources.InfoWhite;
+            this.button6.Location = new System.Drawing.Point(15, 465);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(130, 41);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "About";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(15, 471);
+            this.button5.Location = new System.Drawing.Point(15, 411);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(130, 35);
+            this.button5.Size = new System.Drawing.Size(130, 41);
             this.button5.TabIndex = 9;
             this.button5.Text = "Toggle Overlay";
             this.button5.UseVisualStyleBackColor = true;
@@ -311,7 +328,7 @@ namespace Tasks
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel1.Location = new System.Drawing.Point(592, 537);
+            this.linkLabel1.Location = new System.Drawing.Point(570, 537);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(104, 21);
             this.linkLabel1.TabIndex = 8;
@@ -325,7 +342,7 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(708, 567);
+            this.ClientSize = new System.Drawing.Size(686, 567);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -375,6 +392,7 @@ namespace Tasks
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

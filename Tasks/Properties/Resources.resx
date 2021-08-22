@@ -124,6 +124,9 @@
   <data name="CleanupWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CleanupWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Placeholder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="InfoWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InfoWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,8 +157,8 @@
   <data name="Cleanup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cleanup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StartupProgramWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StartupProgramWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tasks 512x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tasks 512x512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-discord-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-discord-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,11 +172,14 @@
   <data name="Twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FirefoxPng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FirefoxPng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StartupProgramWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartupProgramWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FirefoxPng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FirefoxPng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TaskManagerWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TaskManagerWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,10 +202,13 @@
   <data name="Startup Program" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Startup Program.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tasks 64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tasks 64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Explorer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Explorer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Placeholder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tasks 128x128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tasks 128x128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

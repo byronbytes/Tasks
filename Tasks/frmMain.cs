@@ -74,5 +74,11 @@ namespace Tasks
             frmOverlay Overlay = new frmOverlay();
             Overlay.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmAbout About = new frmAbout();
+            About.Show();
+        }
     }
 }
