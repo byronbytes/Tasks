@@ -47,6 +47,8 @@ namespace Tasks
         private void button5_Click(object sender, EventArgs e)
         {
 
+            RunFile.RunBat("/BatFiles/byesolitaire.bat", true);
+
         }
     }
 }

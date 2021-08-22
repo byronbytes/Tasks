@@ -36,6 +36,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="BatFiles\byesolitaire.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="BatFiles\killfirefox.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
