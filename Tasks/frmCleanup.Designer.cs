@@ -267,7 +267,7 @@ namespace Tasks
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(-6, 499);
+            this.label9.Location = new System.Drawing.Point(-6, 513);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(683, 17);
             this.label9.TabIndex = 30;
@@ -294,6 +294,7 @@ namespace Tasks
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(154, 251);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 24);
@@ -1003,10 +1004,10 @@ namespace Tasks
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.Location = new System.Drawing.Point(6, 12);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(462, 38);
+            this.label13.Size = new System.Drawing.Size(528, 38);
             this.label13.TabIndex = 0;
-            this.label13.Text = "This will be a feature that sorts out all your extentions for your browser, \r\nand" +
-    " you can select which ones you want to remove.";
+            this.label13.Text = "This is a new feature that sorts out all your extensions for your supported brows" +
+    "er, \r\nand you can select which ones you want to remove.";
             // 
             // btnCleanup
             // 
