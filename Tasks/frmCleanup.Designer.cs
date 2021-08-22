@@ -925,9 +925,9 @@ namespace Tasks
             this.label19.ForeColor = System.Drawing.Color.Red;
             this.label19.Location = new System.Drawing.Point(7, 120);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(290, 20);
+            this.label19.Size = new System.Drawing.Size(291, 20);
             this.label19.TabIndex = 45;
-            this.label19.Text = "Save your work before using this feature.";
+            this.label19.Text = "Save your work before using this feature!";
             // 
             // label17
             // 
@@ -946,9 +946,9 @@ namespace Tasks
             this.label14.ForeColor = System.Drawing.Color.Red;
             this.label14.Location = new System.Drawing.Point(7, 63);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(161, 37);
+            this.label14.Size = new System.Drawing.Size(154, 37);
             this.label14.TabIndex = 43;
-            this.label14.Text = "WARNING !";
+            this.label14.Text = "WARNING!";
             // 
             // button3
             // 
