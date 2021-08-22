@@ -79,20 +79,20 @@ namespace Tasks
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(141, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 20);
+            this.label3.Size = new System.Drawing.Size(131, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Copyright 2021 - 2021 (c)";
+            this.label3.Text = "Copyright 2021 (c)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 140);
+            this.label4.Location = new System.Drawing.Point(141, 79);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(365, 20);
+            this.label4.Size = new System.Drawing.Size(314, 20);
             this.label4.TabIndex = 4;
-            this.label4.Text = "GitHub Repository: https://github.com/LiteTools/Tasks";
+            this.label4.Text = "Repository: https://github.com/LiteTools/Tasks";
             // 
             // listBox1
             // 
@@ -103,9 +103,10 @@ namespace Tasks
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
-            "byron - Main Contributor",
-            "Solir - Also main contributor"});
-            this.listBox1.Location = new System.Drawing.Point(12, 196);
+            "byronbytes - Main Contributor",
+            "Solirs - Secondary Main Contributor",
+            "averageftw - Adjustment Editor"});
+            this.listBox1.Location = new System.Drawing.Point(12, 176);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(278, 182);
             this.listBox1.TabIndex = 5;
@@ -115,7 +116,7 @@ namespace Tasks
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 160);
+            this.label5.Location = new System.Drawing.Point(12, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 30);
             this.label5.TabIndex = 6;
