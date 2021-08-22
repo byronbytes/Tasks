@@ -33,12 +33,12 @@ namespace Tasks
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -77,6 +77,18 @@ namespace Tasks
             this.tabPage1.Size = new System.Drawing.Size(653, 283);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Windows Features";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(216, 6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(175, 37);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "Uninstall Solitaire";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -138,18 +150,6 @@ namespace Tasks
             this.button3.TabIndex = 1;
             this.button3.Text = "Remove Bloat Registry Keys";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(216, 6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(175, 37);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Uninstall Solitaire";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmRemoveBloat
             // 
