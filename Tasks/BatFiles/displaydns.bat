@@ -1,9 +1,11 @@
 @echo on
 
-ECHO Displaying dns cache...
+rem Written by Solirs for the Tasks Project (https://github.com/LiteTools/Tasks)
+
+
+ECHO Displaying DNS Cache...
 
 ipconfig /displaydns
 
-rem written by Solirs for the Tasks project (https://github.com/LiteTools/Tasks)
 
 PAUSE

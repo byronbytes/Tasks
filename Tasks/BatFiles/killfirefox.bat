@@ -1,5 +1,6 @@
 @echo off
 
+rem Written by Solirs for the Tasks Project (https://github.com/LiteTools/Tasks)
+
 taskkill /IM firefox.exe /F
 
-rem written by Solirs for the Tasks project (https://github.com/LiteTools/Tasks)
