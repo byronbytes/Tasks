@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using System.Diagnostics;
 
 namespace Tasks
 {
-    class RemoveExtension
+    class RemoveExt
     {
+
         public static int RemoveExtFirefox(string extpath)
         {
-
             try
             {
 
@@ -24,7 +23,6 @@ namespace Tasks
             {
                 return 1;
             }
-
         }
     }
 }

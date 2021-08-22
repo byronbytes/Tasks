@@ -38,6 +38,7 @@ namespace Tasks
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -66,6 +67,7 @@ namespace Tasks
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
@@ -137,6 +139,18 @@ namespace Tasks
             this.button3.Text = "Remove Bloat Registry Keys";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(216, 6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(175, 37);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "Uninstall Solitaire";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmRemoveBloat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -169,5 +183,6 @@ namespace Tasks
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button5;
     }
 }

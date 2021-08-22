@@ -1,10 +1,7 @@
 @echo on
 
-ECHO displaying arp cache...
-
-arp -a
+powershell -Command "& {Get-AppxPackage *solitairecollection* | Remove-AppxPackage}"
 
 rem written by Solirs for the Tasks project (https://github.com/LiteTools/Tasks)
-
 
 PAUSE

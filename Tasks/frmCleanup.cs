@@ -768,13 +768,27 @@ namespace Tasks
             if (ExtensionsBox.SelectedItems.Count > 0) //Check if the user selected extensions for deletion.
             {
 
-                Process process = new Process();
-                process.StartInfo.FileName = "BatFiles/diefirefox.bat";
+                /*Process process = new Process();
+                process.StartInfo.FileName = "BatFiles/killfirefox.bat";
                 process.Start();
-                process.WaitForExit();
+                process.WaitForExit();*/
+
+
+                int aa = RunFile.RunBat("/BatFiles/killfirefox.bat", true);
+
+                if (aa == 1)
+                {
+                }
+                else if (aa == 0)
+                {
+
+                }
+
+
+
                 Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
 
-                int go = RemoveExtension.RemoveExtFirefox(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
+                int go = RemoveExt.RemoveExtFirefox(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
 
                 if (go == 0)
                 {

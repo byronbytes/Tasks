@@ -991,12 +991,12 @@ namespace Tasks
             // ExtSize
             // 
             this.ExtSize.Text = "Size";
-            this.ExtSize.Width = 75;
+            this.ExtSize.Width = 100;
             // 
             // ExtPath
             // 
             this.ExtPath.Text = "Path";
-            this.ExtPath.Width = 600;
+            this.ExtPath.Width = 700;
             // 
             // label16
             // 
