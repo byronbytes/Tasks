@@ -553,7 +553,7 @@ namespace Tasks
             }
             else
             {
-                if (btnCleanup.Visible == false && btnCopyLogs.Visible == false)
+                if (!btnCleanup.Visible && !btnCopyLogs.Visible)
                 {
 
                     btnCleanup.Visible = true;
@@ -569,6 +569,7 @@ namespace Tasks
         private void frmCleanup_Load(object sender, EventArgs e)
            
         {
+            
             tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged);
             var g = new Dirs();
 
@@ -708,7 +709,8 @@ namespace Tasks
 
 
 
-                    //Looked a bit and it's likely gonna be a nightmare to do so uhhhhh
+                    //Looked a bit and it's likely gonna be a nightmare to do so uhhhhh 
+                    // lol
                 {
 
                     

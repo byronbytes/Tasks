@@ -80,5 +80,10 @@ namespace Tasks
             frmAbout About = new frmAbout();
             About.Show();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

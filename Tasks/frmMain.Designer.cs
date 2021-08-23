@@ -250,6 +250,7 @@ namespace Tasks
             this.label5.TabIndex = 2;
             this.label5.Text = "Manage the programs that start on boot by accessing \r\nStartup Programs. You will " +
     "be able to see and modify\r\nall programs that run on startup.";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button3
             // 

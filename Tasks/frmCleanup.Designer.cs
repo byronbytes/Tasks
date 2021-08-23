@@ -206,7 +206,7 @@ namespace Tasks
             "Cleanup Logs:"});
             this.CleanupLogsLBox.Location = new System.Drawing.Point(701, 21);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(486, 819);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(486, 838);
             this.CleanupLogsLBox.TabIndex = 1;
             // 
             // taskDialog1
@@ -1048,7 +1048,7 @@ namespace Tasks
             // btnCleanup
             // 
             this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCleanup.Location = new System.Drawing.Point(410, 816);
+            this.btnCleanup.Location = new System.Drawing.Point(525, 816);
             this.btnCleanup.Name = "btnCleanup";
             this.btnCleanup.Size = new System.Drawing.Size(160, 34);
             this.btnCleanup.TabIndex = 18;
@@ -1059,7 +1059,7 @@ namespace Tasks
             // btnCopyLogs
             // 
             this.btnCopyLogs.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCopyLogs.Location = new System.Drawing.Point(234, 816);
+            this.btnCopyLogs.Location = new System.Drawing.Point(359, 816);
             this.btnCopyLogs.Name = "btnCopyLogs";
             this.btnCopyLogs.Size = new System.Drawing.Size(160, 34);
             this.btnCopyLogs.TabIndex = 37;
