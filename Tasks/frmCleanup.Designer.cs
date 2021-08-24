@@ -263,7 +263,7 @@ namespace Tasks
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(683, 767);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "𝗦𝘆𝘀𝘁𝗲𝗺";
+            this.tabPage1.Text = "System";
             // 
             // label9
             // 
@@ -469,7 +469,7 @@ namespace Tasks
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(683, 767);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻𝘀";
+            this.tabPage2.Text = "Applications";
             // 
             // checkBox25
             // 
@@ -591,7 +591,7 @@ namespace Tasks
             this.lblSteamNotDetected.AutoSize = true;
             this.lblSteamNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSteamNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblSteamNotDetected.Location = new System.Drawing.Point(249, 533);
+            this.lblSteamNotDetected.Location = new System.Drawing.Point(249, 507);
             this.lblSteamNotDetected.Name = "lblSteamNotDetected";
             this.lblSteamNotDetected.Size = new System.Drawing.Size(147, 19);
             this.lblSteamNotDetected.TabIndex = 34;
@@ -615,7 +615,7 @@ namespace Tasks
             this.lblFirefoxNotDetected.AutoSize = true;
             this.lblFirefoxNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblFirefoxNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblFirefoxNotDetected.Location = new System.Drawing.Point(317, 164);
+            this.lblFirefoxNotDetected.Location = new System.Drawing.Point(311, 164);
             this.lblFirefoxNotDetected.Name = "lblFirefoxNotDetected";
             this.lblFirefoxNotDetected.Size = new System.Drawing.Size(151, 19);
             this.lblFirefoxNotDetected.TabIndex = 32;
@@ -917,7 +917,7 @@ namespace Tasks
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabPage3.Size = new System.Drawing.Size(683, 767);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "𝗕𝗿𝗼𝘄𝘀𝗲𝗿 𝗘𝘅𝘁𝗲𝗻𝘀𝗶𝗼𝗻𝘀";
+            this.tabPage3.Text = "Browser Extensions";
             // 
             // label19
             // 
@@ -946,9 +946,9 @@ namespace Tasks
             this.label14.ForeColor = System.Drawing.Color.Red;
             this.label14.Location = new System.Drawing.Point(-4, 63);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(277, 37);
+            this.label14.Size = new System.Drawing.Size(269, 37);
             this.label14.TabIndex = 43;
-            this.label14.Text = "【﻿ＷＡＲＮＩＮＧ!】";
+            this.label14.Text = "【﻿ＷＡＲＮＩＮＧ】";
             // 
             // button3
             // 

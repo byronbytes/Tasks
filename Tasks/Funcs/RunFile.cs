@@ -32,5 +32,29 @@ namespace Tasks
                 return 1;
             }
         }
+
+           public static int RunPowershell(string psfile, bool waitexit)
+        {
+            try
+
+            {
+                string path = AppDomain.CurrentDomain.BaseDirectory;
+                Process process = new Process();
+                process.StartInfo.FileName = path + psfile;
+                process.Start();
+                if (waitexit == true)
+                {
+                    process.WaitForExit();
+                }
+                
+
+
+                return 0;
+            }
+            catch
+            {
+                return 1;
+            }
+        }
     }
 }

@@ -661,6 +661,11 @@ namespace Tasks
                 comboBox1.Items.Add("Mozilla Firefox");
             }
 
+            if (Directory.Exists(Dirs.edgeDir))
+            {
+                comboBox1.Items.Add("Microsoft Edge");
+                // this will be a pain it might be for 2.1.0
+            }
 
         }
 

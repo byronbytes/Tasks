@@ -54,6 +54,8 @@ namespace Tasks
         private void button4_Click(object sender, EventArgs e)
         {
             taskDialog1.Show();
+
+            //  RunFile.RunBat("/BatFiles/removeedge.bat", true);
         }
     }
 }
