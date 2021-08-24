@@ -134,9 +134,9 @@ namespace Tasks
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(23, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 32);
+            this.label1.Size = new System.Drawing.Size(81, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tasks";
+            this.label1.Text = "𝙏𝙖𝙨𝙠𝙨";
             // 
             // groupCleanup
             // 

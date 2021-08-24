@@ -73,16 +73,34 @@ namespace Tasks
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             if (checkBox1.Checked)
+                try
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
             }
+                    catch (Exception ex)
+            {
+                CleanupLogsLBox.Items.Add("There was an error cleaning the downloads foler. " + ex);
+
+            }
 
             if (checkBox2.Checked)
-            {
-                SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
-                CleanupLogsLBox.Items.Add("Recycle Bin Cleaned.");
-            }
+                try {
+
+                    SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
+                    CleanupLogsLBox.Items.Add("Recycle Bin Cleaned.");
+                }
+                catch (Exception ex)
+                {
+                    CleanupLogsLBox.Items.Add("There was an error cleaning the recycle bin. " + ex);
+
+                }
+
+ 
+
+  
+   
+
 
             if (checkBox3.Checked)
             {
@@ -440,9 +458,9 @@ namespace Tasks
             }
 
 
-            //RECENT FILES
+        
 
-            if (checkBox21.Checked)
+            if (checkBox21.Checked)     //RECENT FILES
             {
                 CleanRecentFiles.CleanRecents.ClearAll();
                 CleanupLogsLBox.Items.Add("Recent Files Cleared.");
@@ -527,7 +545,7 @@ namespace Tasks
                 if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Edge Shader Cache Cleaned.");
             }
 
-            if (CleanupLogsLBox.Items.Count > 2) btnCopyLogs.Enabled = true;
+            if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;
 
 
 
