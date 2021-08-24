@@ -83,7 +83,7 @@ namespace Tasks
             // 
             this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(216, 6);
+            this.button5.Location = new System.Drawing.Point(6, 189);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(175, 37);
             this.button5.TabIndex = 3;
