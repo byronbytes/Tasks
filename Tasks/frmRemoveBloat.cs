@@ -28,20 +28,32 @@ namespace Tasks
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Process process = new Process();
-            process.StartInfo.UseShellExecute = true;
-            process.StartInfo.FileName = "DebloaterScripts/UninstallOneDrive.ps1";
-            process.Start();
-            process.WaitForExit();
+            try
+            {
+                RunFile.RunBat("/DebloaterScripts/UninstallOneDrive.ps1", true);
+                dialogError.Show();
+            }
+            catch (Exception ex)
+            {
+                dialogError.Content = "An error has occurred. Error: " + ex;
+                dialogError.Show();
+            }
+            
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Process process = new Process();
-            process.StartInfo.UseShellExecute = true;
-            process.StartInfo.FileName = "DebloaterScripts/DisableCortana.ps1";
-            process.Start();
-            process.WaitForExit();
+            try
+            {
+                RunFile.RunBat("/DebloaterScripts/DisableCortana.ps1", true);
+                dialogError.Show();
+            }
+            catch (Exception ex)
+            {
+                dialogError.Content = "An error has occurred. Error: " + ex;
+                dialogError.Show();
+            }
+          
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -53,9 +65,23 @@ namespace Tasks
 
         private void button4_Click(object sender, EventArgs e)
         {
-            taskDialog1.Show();
+            try
+            {
+                //  RunFile.RunBat("/BatFiles/removeedge.bat", true);
+                dialogError.Show();
+            }
+            catch (Exception ex) 
+            {
+                dialogError.Content = "An error has occurred. Error: " + ex; 
+                dialogError.Show();
+            }
+            
+            }
 
-            //  RunFile.RunBat("/BatFiles/removeedge.bat", true);
+
+
+
         }
     }
-}
+
+

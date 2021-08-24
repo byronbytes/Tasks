@@ -493,9 +493,9 @@ namespace Tasks
             this.checkBox24.ForeColor = System.Drawing.Color.White;
             this.checkBox24.Location = new System.Drawing.Point(318, 131);
             this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(109, 24);
+            this.checkBox24.Size = new System.Drawing.Size(78, 24);
             this.checkBox24.TabIndex = 42;
-            this.checkBox24.Text = "Crashdumps";
+            this.checkBox24.Text = "Crashes";
             this.checkBox24.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox24.UseVisualStyleBackColor = true;
             // 
@@ -751,9 +751,9 @@ namespace Tasks
             this.checkBox13.ForeColor = System.Drawing.Color.White;
             this.checkBox13.Location = new System.Drawing.Point(13, 131);
             this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(109, 24);
+            this.checkBox13.Size = new System.Drawing.Size(78, 24);
             this.checkBox13.TabIndex = 25;
-            this.checkBox13.Text = "Crashdumps";
+            this.checkBox13.Text = "Crashes";
             this.checkBox13.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox13.UseVisualStyleBackColor = true;
             // 
@@ -847,9 +847,9 @@ namespace Tasks
             this.checkBox10.ForeColor = System.Drawing.Color.White;
             this.checkBox10.Location = new System.Drawing.Point(16, 510);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(109, 24);
+            this.checkBox10.Size = new System.Drawing.Size(78, 24);
             this.checkBox10.TabIndex = 16;
-            this.checkBox10.Text = "Crashdumps";
+            this.checkBox10.Text = "Crashes";
             this.checkBox10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox10.UseVisualStyleBackColor = true;
             // 

@@ -685,10 +685,10 @@ namespace Tasks
                 //Directory.SetCurrentDirectory(@"BatFiles");
                 //Process.Start("displaydns.bat");
             }
-            catch (Exception esc)
+            catch (Exception ex)
             {
 
-                MessageBox.Show(esc.ToString());
+                MessageBox.Show(ex.ToString());
 
             }
 

@@ -98,7 +98,7 @@ namespace Tasks
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
@@ -109,7 +109,7 @@ namespace Tasks
             "averagelolol"});
             this.listBox1.Location = new System.Drawing.Point(12, 176);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(278, 182);
+            this.listBox1.Size = new System.Drawing.Size(278, 180);
             this.listBox1.TabIndex = 5;
             // 
             // label5

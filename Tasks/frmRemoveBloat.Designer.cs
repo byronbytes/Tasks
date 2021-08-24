@@ -42,9 +42,11 @@ namespace Tasks
             this.button6 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.taskDialog1 = new Ookii.Dialogs.WinForms.TaskDialog(this.components);
+            this.dialogEdgeNotif = new Ookii.Dialogs.WinForms.TaskDialog(this.components);
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.taskDialogButton2 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
+            this.dialogError = new Ookii.Dialogs.WinForms.TaskDialog(this.components);
+            this.taskDialogButton3 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -126,7 +128,7 @@ namespace Tasks
             this.button1.TabIndex = 0;
             this.button1.Text = "Disable Cortana";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage2
             // 
@@ -186,16 +188,16 @@ namespace Tasks
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
-            // taskDialog1
+            // dialogEdgeNotif
             // 
-            this.taskDialog1.Buttons.Add(this.taskDialogButton1);
-            this.taskDialog1.Buttons.Add(this.taskDialogButton2);
-            this.taskDialog1.Content = "Uninstalling Edge means you will no longer be able to use the Cleanup function fo" +
+            this.dialogEdgeNotif.Buttons.Add(this.taskDialogButton1);
+            this.dialogEdgeNotif.Buttons.Add(this.taskDialogButton2);
+            this.dialogEdgeNotif.Content = "Uninstalling Edge means you will no longer be able to use the Cleanup function fo" +
     "r Edge.";
-            this.taskDialog1.MainIcon = Ookii.Dialogs.WinForms.TaskDialogIcon.Information;
-            this.taskDialog1.MainInstruction = "Uninstall Notice";
-            this.taskDialog1.WindowIcon = ((System.Drawing.Icon)(resources.GetObject("taskDialog1.WindowIcon")));
-            this.taskDialog1.WindowTitle = "Tasks";
+            this.dialogEdgeNotif.MainIcon = Ookii.Dialogs.WinForms.TaskDialogIcon.Information;
+            this.dialogEdgeNotif.MainInstruction = "Uninstall Notice";
+            this.dialogEdgeNotif.WindowIcon = ((System.Drawing.Icon)(resources.GetObject("dialogEdgeNotif.WindowIcon")));
+            this.dialogEdgeNotif.WindowTitle = "Tasks";
             // 
             // taskDialogButton1
             // 
@@ -204,6 +206,17 @@ namespace Tasks
             // taskDialogButton2
             // 
             this.taskDialogButton2.Text = "Cancel";
+            // 
+            // dialogError
+            // 
+            this.dialogError.Buttons.Add(this.taskDialogButton3);
+            this.dialogError.Content = "An error has occurred. Error: Placeholder-000.";
+            this.dialogError.MainInstruction = "An error occurred.";
+            this.dialogError.WindowTitle = "Tasks";
+            // 
+            // taskDialogButton3
+            // 
+            this.taskDialogButton3.Text = "Ok";
             // 
             // frmRemoveBloat
             // 
@@ -237,10 +250,12 @@ namespace Tasks
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button6;
-        private Ookii.Dialogs.WinForms.TaskDialog taskDialog1;
+        private Ookii.Dialogs.WinForms.TaskDialog dialogEdgeNotif;
         private Ookii.Dialogs.WinForms.TaskDialogButton taskDialogButton1;
         private Ookii.Dialogs.WinForms.TaskDialogButton taskDialogButton2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBox1;
+        private Ookii.Dialogs.WinForms.TaskDialog dialogError;
+        private Ookii.Dialogs.WinForms.TaskDialogButton taskDialogButton3;
     }
 }

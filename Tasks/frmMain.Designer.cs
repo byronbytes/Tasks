@@ -119,9 +119,9 @@ namespace Tasks
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(23, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 32);
+            this.label1.Size = new System.Drawing.Size(76, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "𝙏𝙖𝙨𝙠𝙨";
+            this.label1.Text = "𝙏asks";
             // 
             // groupCleanup
             // 
@@ -130,7 +130,7 @@ namespace Tasks
             this.groupCleanup.Controls.Add(this.button1);
             this.groupCleanup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupCleanup.ForeColor = System.Drawing.Color.White;
-            this.groupCleanup.Location = new System.Drawing.Point(140, 12);
+            this.groupCleanup.Location = new System.Drawing.Point(158, 12);
             this.groupCleanup.Name = "groupCleanup";
             this.groupCleanup.Size = new System.Drawing.Size(314, 119);
             this.groupCleanup.TabIndex = 1;
@@ -145,10 +145,10 @@ namespace Tasks
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(6, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 51);
+            this.label3.Size = new System.Drawing.Size(292, 51);
             this.label3.TabIndex = 2;
             this.label3.Text = "Cleanup will clean all junk and garbage inside temp\r\nfolders, recycle bin, downlo" +
-    "ad and other locations. \r\nYou can select which to clean when accessing Cleanup.";
+    "ad and other locations. \r\nYou can select which to clean with many options.";
             // 
             // button1
             // 
@@ -173,7 +173,7 @@ namespace Tasks
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(140, 137);
+            this.groupBox1.Location = new System.Drawing.Point(158, 137);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(314, 119);
             this.groupBox1.TabIndex = 3;
@@ -216,7 +216,7 @@ namespace Tasks
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(140, 262);
+            this.groupBox2.Location = new System.Drawing.Point(158, 262);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(314, 119);
             this.groupBox2.TabIndex = 4;
@@ -261,7 +261,7 @@ namespace Tasks
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(140, 387);
+            this.groupBox3.Location = new System.Drawing.Point(156, 387);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(314, 119);
             this.groupBox3.TabIndex = 5;
@@ -304,7 +304,7 @@ namespace Tasks
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel1.Location = new System.Drawing.Point(556, 537);
+            this.linkLabel1.Location = new System.Drawing.Point(507, 537);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(104, 21);
             this.linkLabel1.TabIndex = 8;
@@ -318,7 +318,7 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(672, 567);
+            this.ClientSize = new System.Drawing.Size(623, 567);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
