@@ -29,6 +29,7 @@ namespace Tasks
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRemoveBloat));
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -38,7 +39,9 @@ namespace Tasks
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.taskDialog1 = new Ookii.Dialogs.WinForms.TaskDialog(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -108,7 +111,6 @@ namespace Tasks
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Tasks.Properties.Resources.Warning;
             this.button2.Location = new System.Drawing.Point(6, 118);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 37);
@@ -134,6 +136,7 @@ namespace Tasks
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -141,16 +144,33 @@ namespace Tasks
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registry";
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(6, 6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(226, 37);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Remove Bloatware Registry Keys";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(3, 6);
+            this.button3.Location = new System.Drawing.Point(6, 60);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(204, 39);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Remove Bloat Registry Keys";
+            this.button3.Size = new System.Drawing.Size(175, 37);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Disable Cortana";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // taskDialog1
+            // 
+            this.taskDialog1.Content = "Uninstalling Edge means you will no longer be able to use the Cleanup function fo" +
+    "r Edge.";
+            this.taskDialog1.MainInstruction = "Uninstall Notice";
             // 
             // frmRemoveBloat
             // 
@@ -181,9 +201,11 @@ namespace Tasks
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
+        private Ookii.Dialogs.WinForms.TaskDialog taskDialog1;
     }
 }
