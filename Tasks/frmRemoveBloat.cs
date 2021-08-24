@@ -50,5 +50,10 @@ namespace Tasks
             RunFile.RunBat("/BatFiles/byesolitaire.bat", true);
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            taskDialog1.Show();
+        }
     }
 }
