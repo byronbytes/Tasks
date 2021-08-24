@@ -1,1 +1,0 @@
-Readme French coming soon
