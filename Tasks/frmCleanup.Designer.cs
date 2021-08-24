@@ -946,9 +946,9 @@ namespace Tasks
             this.label14.ForeColor = System.Drawing.Color.Red;
             this.label14.Location = new System.Drawing.Point(-4, 63);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(297, 37);
+            this.label14.Size = new System.Drawing.Size(277, 37);
             this.label14.TabIndex = 43;
-            this.label14.Text = "【﻿ＷＡＲＮＩＮＧ！】";
+            this.label14.Text = "【﻿ＷＡＲＮＩＮＧ!】";
             // 
             // button3
             // 
