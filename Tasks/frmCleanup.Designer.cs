@@ -122,7 +122,7 @@ namespace Tasks
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tasks.Properties.Resources.windows_10;
-            this.pictureBox1.Location = new System.Drawing.Point(102, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(107, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,9 +137,9 @@ namespace Tasks
             this.label2.Location = new System.Drawing.Point(7, 13);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Windows";
+            this.label2.Text = "𝙒𝙞𝙣𝙙𝙤𝙬𝙨";
             // 
             // checkBox4
             // 
@@ -263,7 +263,7 @@ namespace Tasks
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(683, 767);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "System";
+            this.tabPage1.Text = "𝗦𝘆𝘀𝘁𝗲𝗺";
             // 
             // label9
             // 
@@ -359,7 +359,7 @@ namespace Tasks
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Tasks.Properties.Resources.Terminal;
-            this.pictureBox7.Location = new System.Drawing.Point(95, 204);
+            this.pictureBox7.Location = new System.Drawing.Point(107, 208);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(32, 29);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -374,9 +374,9 @@ namespace Tasks
             this.label4.Location = new System.Drawing.Point(6, 208);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.Size = new System.Drawing.Size(81, 25);
             this.label4.TabIndex = 22;
-            this.label4.Text = "System";
+            this.label4.Text = "𝙎𝙮𝙨𝙩𝙚𝙢";
             // 
             // checkBox20
             // 
@@ -407,7 +407,7 @@ namespace Tasks
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Tasks.Properties.Resources.Explorer1;
-            this.pictureBox6.Location = new System.Drawing.Point(95, 361);
+            this.pictureBox6.Location = new System.Drawing.Point(107, 361);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(32, 29);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -419,12 +419,12 @@ namespace Tasks
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(7, 361);
+            this.label1.Location = new System.Drawing.Point(3, 361);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(81, 25);
+            this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Explorer";
+            this.label1.Text = "𝙀𝙭𝙥𝙡𝙤𝙧𝙚𝙧";
             // 
             // tabPage2
             // 
@@ -469,7 +469,7 @@ namespace Tasks
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(683, 767);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Applications";
+            this.tabPage2.Text = "𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻𝘀";
             // 
             // checkBox25
             // 
@@ -917,7 +917,7 @@ namespace Tasks
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabPage3.Size = new System.Drawing.Size(683, 767);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Browser Extensions";
+            this.tabPage3.Text = "𝗕𝗿𝗼𝘄𝘀𝗲𝗿 𝗘𝘅𝘁𝗲𝗻𝘀𝗶𝗼𝗻𝘀";
             // 
             // label19
             // 
@@ -935,20 +935,20 @@ namespace Tasks
             this.label17.ForeColor = System.Drawing.Color.Red;
             this.label17.Location = new System.Drawing.Point(7, 100);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(510, 20);
+            this.label17.Size = new System.Drawing.Size(491, 20);
             this.label17.TabIndex = 44;
-            this.label17.Text = "Tasks will need to **close** browsers before it can remove any extension. ";
+            this.label17.Text = "Tasks will need to 𝙘𝙡𝙤𝙨𝙚 browsers before it can remove any extension. ";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(7, 63);
+            this.label14.Location = new System.Drawing.Point(-4, 63);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(154, 37);
+            this.label14.Size = new System.Drawing.Size(297, 37);
             this.label14.TabIndex = 43;
-            this.label14.Text = "WARNING!";
+            this.label14.Text = "【﻿ＷＡＲＮＩＮＧ！】";
             // 
             // button3
             // 

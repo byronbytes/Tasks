@@ -106,7 +106,7 @@ namespace Tasks
             this.listBox1.Items.AddRange(new object[] {
             "byronbytes",
             "Solirs",
-            "averageftw"});
+            "averagelolol"});
             this.listBox1.Location = new System.Drawing.Point(12, 176);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(278, 182);

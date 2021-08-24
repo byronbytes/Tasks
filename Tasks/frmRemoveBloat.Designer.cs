@@ -83,7 +83,7 @@ namespace Tasks
             // 
             this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(6, 189);
+            this.button5.Location = new System.Drawing.Point(6, 64);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(175, 37);
             this.button5.TabIndex = 3;
@@ -96,7 +96,7 @@ namespace Tasks
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Image = global::Tasks.Properties.Resources.Warning;
-            this.button4.Location = new System.Drawing.Point(6, 125);
+            this.button4.Location = new System.Drawing.Point(6, 178);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(175, 37);
             this.button4.TabIndex = 2;
@@ -109,7 +109,7 @@ namespace Tasks
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = global::Tasks.Properties.Resources.Warning;
-            this.button2.Location = new System.Drawing.Point(6, 66);
+            this.button2.Location = new System.Drawing.Point(6, 118);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 37);
             this.button2.TabIndex = 1;
@@ -145,9 +145,9 @@ namespace Tasks
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(6, 28);
+            this.button3.Location = new System.Drawing.Point(3, 6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 32);
+            this.button3.Size = new System.Drawing.Size(204, 39);
             this.button3.TabIndex = 1;
             this.button3.Text = "Remove Bloat Registry Keys";
             this.button3.UseVisualStyleBackColor = true;
