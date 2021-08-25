@@ -20,7 +20,7 @@ namespace Tasks.WIP
 
         private void frmOverlay_Load(object sender, EventArgs e)
         {
-     
+            // This will added in 2.1.0 most likely
         }
       
 

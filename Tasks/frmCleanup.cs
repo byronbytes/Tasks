@@ -56,9 +56,10 @@ namespace Tasks
             catch (Exception ex)
             {
                 CleanupLogsLBox.Items.Add("Exception Error: " + ex.Message);
+                
             }
-
             return false;
+
         }
 
         public class ChromeCache
@@ -80,7 +81,7 @@ namespace Tasks
             }
                     catch (Exception ex)
             {
-                CleanupLogsLBox.Items.Add("There was an error cleaning the downloads foler. " + ex);
+                CleanupLogsLBox.Items.Add("Error cleaning the downloads foler. " + ex);
 
             }
 
@@ -92,7 +93,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("There was an error cleaning the recycle bin. " + ex);
+                    CleanupLogsLBox.Items.Add("Error cleaning the recycle bin. " + ex);
 
                 }
 
@@ -104,17 +105,32 @@ namespace Tasks
 
             if (checkBox3.Checked)
             {
-                var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
-                var usertemp = new DirectoryInfo(Path.GetTempPath());
+                try
+                {
+                    var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
+                    var usertemp = new DirectoryInfo(Path.GetTempPath());
 
-                if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Cleaned.");
-                if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Cleaned.");
+                    if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Cleaned.");
+                    if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Cleaned.");
+                }
+                catch (Exception ex)
+                {
+                    CleanupLogsLBox.Items.Add("Error while cleaning temp folders. " + ex);
+                }
+         
             }
 
             if (checkBox4.Checked)
             {
-                var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
+                try
+                {
+                    var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
+                }
+              catch(Exception ex )
+                {
+                    CleanupLogsLBox.Items.Add("Error while cleaning Prefetch. " + ex);
+                }
             }
 
             // Chrome
