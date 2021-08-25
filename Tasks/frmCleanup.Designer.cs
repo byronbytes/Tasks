@@ -406,7 +406,7 @@ namespace Tasks
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Tasks.Properties.Resources.Explorer1;
+            this.pictureBox6.Image = global::Tasks.Properties.Resources.Explorer;
             this.pictureBox6.Location = new System.Drawing.Point(107, 361);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(32, 29);
@@ -865,7 +865,7 @@ namespace Tasks
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Tasks.Properties.Resources.icons8_discord_48;
+            this.pictureBox2.Image = global::Tasks.Properties.Resources.Discord;
             this.pictureBox2.Location = new System.Drawing.Point(10, 414);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 29);

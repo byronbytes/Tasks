@@ -103,9 +103,9 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Downloads {
+        internal static System.Drawing.Bitmap Discord {
             get {
-                object obj = ResourceManager.GetObject("Downloads", resourceCulture);
+                object obj = ResourceManager.GetObject("Discord", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,29 +123,9 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Explorer1 {
-            get {
-                object obj = ResourceManager.GetObject("Explorer1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap FirefoxPng {
             get {
                 object obj = ResourceManager.GetObject("FirefoxPng", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_discord_48 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-discord-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,16 +326,6 @@ namespace Tasks.Properties {
         internal static System.Drawing.Bitmap Warning {
             get {
                 object obj = ResourceManager.GetObject("Warning", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Warning1 {
-            get {
-                object obj = ResourceManager.GetObject("Warning1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

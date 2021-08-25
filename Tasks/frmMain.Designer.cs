@@ -103,7 +103,7 @@ namespace Tasks
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Tasks.Properties.Resources.icons8_discord_48;
+            this.pictureBox1.Image = global::Tasks.Properties.Resources.Discord;
             this.pictureBox1.Location = new System.Drawing.Point(15, 535);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 32);
@@ -119,9 +119,9 @@ namespace Tasks
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(23, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 32);
+            this.label1.Size = new System.Drawing.Size(74, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "𝙏asks";
+            this.label1.Text = "Tasks";
             // 
             // groupCleanup
             // 
