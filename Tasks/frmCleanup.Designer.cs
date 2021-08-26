@@ -944,11 +944,11 @@ namespace Tasks
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(-4, 63);
+            this.label14.Location = new System.Drawing.Point(7, 63);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(269, 37);
+            this.label14.Size = new System.Drawing.Size(151, 37);
             this.label14.TabIndex = 43;
-            this.label14.Text = "【﻿ＷＡＲＮＩＮＧ】";
+            this.label14.Text = "! Warning !";
             // 
             // button3
             // 

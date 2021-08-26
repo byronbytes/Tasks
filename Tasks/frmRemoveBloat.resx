@@ -58,7 +58,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>
+    <value>Scripts Used:
+https://github.com/Sycnex/Windows10Debloater
+https://github.com/ShadowWhisperer/Remove-Edge-Chromium
+
 We did NOT create the scripts that are being used in the Debloater section, The original source of this script can be found at https://github.com/Sycnex/Windows10Debloater.
 
 The MIT License states that you are allowed to use this script for the following.

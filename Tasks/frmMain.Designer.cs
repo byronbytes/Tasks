@@ -48,6 +48,7 @@ namespace Tasks
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -257,6 +258,7 @@ namespace Tasks
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -313,6 +315,15 @@ namespace Tasks
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DarkCyan;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(163, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "WIP - Will work soon";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -367,6 +378,7 @@ namespace Tasks
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label2;
     }
 }
 

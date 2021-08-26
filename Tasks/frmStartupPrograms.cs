@@ -54,7 +54,15 @@ namespace Tasks
 
         private void button3_Click(object sender, EventArgs e)
         {
-           //wip
+            try
+            {
+                Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error: " + ex);
+            }
+        
         }
     }
     public class StartUpProgram
