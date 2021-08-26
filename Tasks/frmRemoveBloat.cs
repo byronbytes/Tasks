@@ -67,8 +67,10 @@ namespace Tasks
         {
             try
             {
-                //  RunFile.RunBat("/BatFiles/removeedge.bat", true);
-                dialogError.Show();
+                Process process = new Process();
+                process.StartInfo.FileName = "BatFiles/removeedge.bat";
+                process.Start();
+
             }
             catch (Exception ex) 
             {

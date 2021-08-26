@@ -44,6 +44,12 @@
     <None Update="BatFiles\byesolitaire.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="BatFiles\killchrome.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="BatFiles\killedge.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="BatFiles\killfirefox.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -51,6 +57,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="BatFiles\displaydns.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="BatFiles\removeedge.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="DebloaterScripts\DisableCortana.ps1">
