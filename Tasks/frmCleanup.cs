@@ -223,10 +223,18 @@ namespace Tasks
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Steam\\htmlcache\\Code Cache");
                 var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Steam\\htmlcache\\GPUCache");
                 var directory4 = new DirectoryInfo("C:\\Program Files (x86)\\Steam\\appcache");
+                var directory5 = new DirectoryInfo("C:\\Program Files (x86)\\Steam\\depotcache");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Steam Cache Cleaned.");
                 if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Steam Code Cache Cleaned.");
                 if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Steam GPU Cache Cleaned.");
                 if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Steam App Cache Cleaned.");
+                if (DeleteAllFiles(directory5)) CleanupLogsLBox.Items.Add("Steam Depot Cache Cleaned.");
+            }
+
+            if(checkBox26.Checked)
+            {
+                var directory = new DirectoryInfo("C:\\Program Files (x86)\\Steam\\dumps");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Steam Crashes Cleaned.");
             }
 
 
