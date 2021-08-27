@@ -78,7 +78,7 @@ namespace Tasks
             this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = global::Tasks.Properties.Resources.InfoWhite;
-            this.button6.Location = new System.Drawing.Point(15, 467);
+            this.button6.Location = new System.Drawing.Point(15, 530);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(130, 39);
             this.button6.TabIndex = 10;
@@ -123,12 +123,14 @@ namespace Tasks
             this.label1.Size = new System.Drawing.Size(74, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tasks";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupCleanup
             // 
             this.groupCleanup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.groupCleanup.Controls.Add(this.label3);
             this.groupCleanup.Controls.Add(this.button1);
+            this.groupCleanup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupCleanup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupCleanup.ForeColor = System.Drawing.Color.White;
             this.groupCleanup.Location = new System.Drawing.Point(158, 12);
@@ -315,7 +317,7 @@ namespace Tasks
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel1.Location = new System.Drawing.Point(569, 608);
+            this.linkLabel1.Location = new System.Drawing.Point(550, 608);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(104, 21);
             this.linkLabel1.TabIndex = 8;
@@ -329,7 +331,7 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(685, 638);
+            this.ClientSize = new System.Drawing.Size(666, 638);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

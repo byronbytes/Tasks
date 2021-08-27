@@ -77,4 +77,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Analyze\" />
+  </ItemGroup>
+
 </Project>
