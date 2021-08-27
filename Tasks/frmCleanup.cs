@@ -569,6 +569,13 @@ namespace Tasks
                 if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Edge Shader Cache Cleaned.");
             }
 
+            if(checkBox29.Checked)
+            {
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Packages\\SpotifyAB.SpotifyMusic_zpdnekdrzrea0\\LocalCache");
+                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Packages\\SpotifyAB.SpotifyMusic_zpdnekdrzrea0\\AC");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Spotify Local Cache Cleaned.");
+                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Spotify Temp Cache Cleaned.");
+            }
             if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;
 
 
@@ -611,7 +618,6 @@ namespace Tasks
         private void frmCleanup_Load(object sender, EventArgs e)
            
         {
-            
             tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged);
             var g = new Dirs();
 
