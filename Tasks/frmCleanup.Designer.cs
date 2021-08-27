@@ -90,6 +90,8 @@ namespace Tasks
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.label21 = new System.Windows.Forms.Label();
             this.lblSpotifyNotDetected = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -110,8 +112,6 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -124,9 +124,9 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -911,6 +911,21 @@ namespace Tasks
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Experimental";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.vScrollBar1);
+            this.panel1.Location = new System.Drawing.Point(311, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 328);
+            this.panel1.TabIndex = 58;
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(170, 12);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(20, 303);
+            this.vScrollBar1.TabIndex = 46;
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -1137,21 +1152,6 @@ namespace Tasks
             this.btnCopyLogs.Text = "Copy Cleanup Logs";
             this.btnCopyLogs.UseVisualStyleBackColor = true;
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(180, 5);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(20, 315);
-            this.vScrollBar1.TabIndex = 46;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.vScrollBar1);
-            this.panel1.Location = new System.Drawing.Point(311, 54);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 320);
-            this.panel1.TabIndex = 58;
-            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1182,10 +1182,10 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
