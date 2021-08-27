@@ -41,34 +41,34 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="BatFiles\byesolitaire.bat">
+    <None Update="Scripts\BatFiles\byesolitaire.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="BatFiles\killchrome.bat">
+    <None Update="Scripts\BatFiles\killchrome.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="BatFiles\killedge.bat">
+    <None Update="Scripts\BatFiles\killedge.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="BatFiles\killfirefox.bat">
+    <None Update="Scripts\BatFiles\killfirefox.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="BatFiles\displayarp.bat">
+    <None Update="Scripts\BatFiles\displayarp.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="BatFiles\displaydns.bat">
+    <None Update="Scripts\BatFiles\displaydns.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="BatFiles\removeedge.bat">
+    <None Update="Scripts\BatFiles\removeedge.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="DebloaterScripts\DisableCortana.ps1">
+    <None Update="Scripts\Debloater\DisableCortana.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="DebloaterScripts\RemoveBloatRegKeys.ps1">
+    <None Update="Scripts\Debloater\RemoveBloatRegKeys.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="DebloaterScripts\UninstallOneDrive.ps1">
+    <None Update="Scripts\Debloater\UninstallOneDrive.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Properties\Settings.settings">

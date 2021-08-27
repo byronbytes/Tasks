@@ -695,10 +695,10 @@ namespace Tasks
             try
             {
                 Process process = new Process();
-                process.StartInfo.FileName = "BatFiles/displaydns.bat";
+                process.StartInfo.FileName = "Scripts/BatFiles/displaydns.bat";
                 process.Start();
                 //Directory.SetCurrentDirectory(@"/");
-                //Directory.SetCurrentDirectory(@"BatFiles");
+                //Directory.SetCurrentDirectory(@"Scripts/BatFiles");
                 //Process.Start("displaydns.bat");
             }
             catch (Exception ex)
@@ -717,7 +717,7 @@ namespace Tasks
             try
             {
                 Process process = new Process();
-                process.StartInfo.FileName = "BatFiles/displayarp.bat";
+                process.StartInfo.FileName = "Scripts/BatFiles/displayarp.bat";
                 process.Start();
             }
             catch (Exception ex)
@@ -810,12 +810,12 @@ namespace Tasks
             {
 
                 /*Process process = new Process();
-                process.StartInfo.FileName = "BatFiles/killfirefox.bat";
+                process.StartInfo.FileName = "Scripts/BatFiles/killfirefox.bat";
                 process.Start();
                 process.WaitForExit();*/
 
 
-                int aa = RunFile.RunBat("/BatFiles/killfirefox.bat", true);
+                int aa = RunFile.RunBat("Scripts/BatFiles/killfirefox.bat", true);
 
                 if (aa == 1)
                 {

@@ -30,7 +30,7 @@ namespace Tasks
         {
             try
             {
-                RunFile.RunBat("/DebloaterScripts/UninstallOneDrive.ps1", true);
+                RunFile.RunBat("Scripts/Debloater/UninstallOneDrive.ps1", true);
                 dialogError.Show();
             }
             catch (Exception ex)
@@ -45,7 +45,7 @@ namespace Tasks
         {
             try
             {
-                RunFile.RunBat("/DebloaterScripts/DisableCortana.ps1", true);
+                RunFile.RunBat("Scripts/Debloater/DisableCortana.ps1", true);
                 dialogError.Show();
             }
             catch (Exception ex)
@@ -59,7 +59,7 @@ namespace Tasks
         private void button5_Click(object sender, EventArgs e)
         {
 
-            RunFile.RunBat("/BatFiles/byesolitaire.bat", true);
+            RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true);
 
         }
 
@@ -68,7 +68,7 @@ namespace Tasks
             try
             {
                 Process process = new Process();
-                process.StartInfo.FileName = "BatFiles/removeedge.bat";
+                process.StartInfo.FileName = "Scripts/BatFiles/removeedge.bat";
                 process.Start();
 
             }
