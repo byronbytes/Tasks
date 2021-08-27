@@ -194,11 +194,6 @@ namespace Tasks
                 if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Discord GPU Cache Cleaned.");
             }
 
-            if (checkBox10.Checked) //Discord crashdumps
-            {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Crashpad\\reports");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Discord Crashdumps Cleaned.");
-            }
 
             if (checkBox25.Checked) //Discord cookies
             try
@@ -229,12 +224,6 @@ namespace Tasks
                 if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Steam GPU Cache Cleaned.");
                 if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Steam App Cache Cleaned.");
                 if (DeleteAllFiles(directory5)) CleanupLogsLBox.Items.Add("Steam Depot Cache Cleaned.");
-            }
-
-            if(checkBox26.Checked)
-            {
-                var directory = new DirectoryInfo("C:\\Program Files (x86)\\Steam\\dumps");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Steam Crashes Cleaned.");
             }
 
 
@@ -664,7 +653,6 @@ namespace Tasks
             if (!Directory.Exists(Dirs.discordDir))
             {
                 checkBox9.Enabled = false;
-                checkBox10.Enabled = false;
                 checkBox25.Checked = false;
                 lblDiscordNotDetected.Visible = true;
                
