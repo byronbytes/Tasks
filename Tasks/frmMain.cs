@@ -73,5 +73,12 @@ namespace Tasks
         {
 
         }
+
+        public void Alert(string msg, frmNotification.enmType type)
+        {
+            frmNotification frm = new frmNotification();
+            frm.showAlert(msg, type);
+        }
+
     }
 }

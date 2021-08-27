@@ -127,13 +127,11 @@ namespace Tasks
                         // Add an unique Key as identifier for the icon (same as the ID of the process)
                         process.Id.ToString(),
                         // Add Icon to the List 
-                        System.Drawing.Icon.ExtractAssociatedIcon(process.MainModule.FileName).ToBitmap()
+                        Icon.ExtractAssociatedIcon(process.MainModule.FileName).ToBitmap()
                     );
                 }
-                catch
-                {
-
-           
+                catch {
+ 
                 }
 
                 // Create a new Item to add into the list view that expects the row of information as first argument
@@ -152,7 +150,7 @@ namespace Tasks
             listView1.SmallImageList = Imagelist;
         }
 
-        private void frmTaskManager_Load(object sender, System.EventArgs e)
+            private void frmTaskManager_Load(object sender, System.EventArgs e)
         {
             renderProcessesOnListView();
         }
@@ -161,7 +159,7 @@ namespace Tasks
         {
             try
             {
-         
+             
             }
             catch (Exception ex)
             {
@@ -172,6 +170,7 @@ namespace Tasks
         private void timer1_Tick(object sender, EventArgs e)
         {
             renderProcessesOnListView();
+
         }
 
     }

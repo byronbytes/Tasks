@@ -137,9 +137,9 @@ namespace Tasks
             this.label2.Location = new System.Drawing.Point(7, 13);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(101, 25);
+            this.label2.Size = new System.Drawing.Size(89, 25);
             this.label2.TabIndex = 6;
-            this.label2.Text = "𝙒𝙞𝙣𝙙𝙤𝙬𝙨";
+            this.label2.Text = "Windows";
             // 
             // checkBox4
             // 
@@ -374,9 +374,9 @@ namespace Tasks
             this.label4.Location = new System.Drawing.Point(6, 208);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(81, 25);
+            this.label4.Size = new System.Drawing.Size(72, 25);
             this.label4.TabIndex = 22;
-            this.label4.Text = "𝙎𝙮𝙨𝙩𝙚𝙢";
+            this.label4.Text = "System";
             // 
             // checkBox20
             // 
@@ -422,9 +422,9 @@ namespace Tasks
             this.label1.Location = new System.Drawing.Point(3, 361);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 18;
-            this.label1.Text = "𝙀𝙭𝙥𝙡𝙤𝙧𝙚𝙧";
+            this.label1.Text = "Explorer";
             // 
             // tabPage2
             // 
