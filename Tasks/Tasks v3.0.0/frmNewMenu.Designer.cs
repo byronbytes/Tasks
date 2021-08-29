@@ -1,7 +1,7 @@
 ﻿
 namespace Tasks.Tasks_v3._0._0
 {
-    partial class frmAnalyzePopup
+    partial class frmNewMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -30,41 +30,28 @@ namespace Tasks.Tasks_v3._0._0
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(246, 9);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 30);
+            this.label1.Size = new System.Drawing.Size(56, 30);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Placeholder Text.";
+            this.label1.Text = "Tasks";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(227, 307);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Improve Performance";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // frmAnalyzePopup
+            // frmNewMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(684, 361);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.ClientSize = new System.Drawing.Size(882, 621);
             this.Controls.Add(this.label1);
-            this.Name = "frmAnalyzePopup";
+            this.Name = "frmNewMenu";
             this.Text = "Tasks";
-            this.Load += new System.EventHandler(this.frmAnalyzePopup_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,6 +60,5 @@ namespace Tasks.Tasks_v3._0._0
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
     }
 }

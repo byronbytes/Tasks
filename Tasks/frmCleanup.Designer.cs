@@ -88,11 +88,6 @@ namespace Tasks
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.lblSpotifyNotDetected = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.checkBox29 = new System.Windows.Forms.CheckBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -119,8 +114,6 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -231,7 +224,6 @@ namespace Tasks
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.HotTrack = true;
@@ -877,67 +869,6 @@ namespace Tasks
             this.label8.TabIndex = 20;
             this.label8.Text = "Steam";
             // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage4.Controls.Add(this.lblSpotifyNotDetected);
-            this.tabPage4.Controls.Add(this.pictureBox9);
-            this.tabPage4.Controls.Add(this.checkBox29);
-            this.tabPage4.Controls.Add(this.label22);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(683, 767);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Experimental";
-            // 
-            // lblSpotifyNotDetected
-            // 
-            this.lblSpotifyNotDetected.AutoSize = true;
-            this.lblSpotifyNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblSpotifyNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblSpotifyNotDetected.Location = new System.Drawing.Point(22, 81);
-            this.lblSpotifyNotDetected.Name = "lblSpotifyNotDetected";
-            this.lblSpotifyNotDetected.Size = new System.Drawing.Size(152, 19);
-            this.lblSpotifyNotDetected.TabIndex = 56;
-            this.lblSpotifyNotDetected.Text = "Spotify is not detected.";
-            this.lblSpotifyNotDetected.Visible = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Tasks.Properties.Resources.Spotify;
-            this.pictureBox9.Location = new System.Drawing.Point(22, 16);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(32, 29);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 55;
-            this.pictureBox9.TabStop = false;
-            // 
-            // checkBox29
-            // 
-            this.checkBox29.AutoSize = true;
-            this.checkBox29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox29.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox29.ForeColor = System.Drawing.Color.White;
-            this.checkBox29.Location = new System.Drawing.Point(22, 54);
-            this.checkBox29.Name = "checkBox29";
-            this.checkBox29.Size = new System.Drawing.Size(68, 24);
-            this.checkBox29.TabIndex = 54;
-            this.checkBox29.Text = "Cache";
-            this.checkBox29.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox29.UseVisualStyleBackColor = true;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(60, 18);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(71, 25);
-            this.label22.TabIndex = 53;
-            this.label22.Text = "Spotify";
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
@@ -1021,7 +952,6 @@ namespace Tasks
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
-            this.ExtensionsBox.SelectedIndexChanged += new System.EventHandler(this.ExtensionsBox_SelectedIndexChanged);
             // 
             // ExtName
             // 
@@ -1059,7 +989,6 @@ namespace Tasks
             this.label15.Size = new System.Drawing.Size(478, 17);
             this.label15.TabIndex = 40;
             this.label15.Text = "Select one of the supported browsers that we have detected on your system.";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // comboBox1
             // 
@@ -1134,9 +1063,6 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
@@ -1216,10 +1142,5 @@ namespace Tasks
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label lblSpotifyNotDetected;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.CheckBox checkBox29;
-        private System.Windows.Forms.Label label22;
     }
 }

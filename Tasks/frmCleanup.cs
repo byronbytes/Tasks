@@ -62,9 +62,9 @@ namespace Tasks
 
         }
 
-        public class ChromeCache
+        public class CacheRemoval
         {
-
+            //wip, will be for removing cache to make stuff easier 
         }
         private void btnCleanup_Click(object sender, EventArgs e)
         {
@@ -558,13 +558,6 @@ namespace Tasks
                 if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Edge Shader Cache Cleaned.");
             }
 
-            if(checkBox29.Checked)
-            {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Packages\\SpotifyAB.SpotifyMusic_zpdnekdrzrea0\\LocalCache");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Packages\\SpotifyAB.SpotifyMusic_zpdnekdrzrea0\\AC");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Spotify Local Cache Cleaned.");
-                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Spotify Temp Cache Cleaned.");
-            }
             if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;
 
 
@@ -852,16 +845,6 @@ namespace Tasks
             {
                 MessageBox.Show("Please select an extension to remove.");
             }
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ExtensionsBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
