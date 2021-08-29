@@ -1,7 +1,7 @@
 ﻿
-namespace Tasks
+namespace Tasks.Tasks_v3._0._0
 {
-    partial class frmAnalyze
+    partial class frmAnalyzePopup
     {
         /// <summary>
         /// Required designer variable.
@@ -29,40 +29,30 @@ namespace Tasks
         /// </summary>
         private void InitializeComponent()
         {
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 550);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(718, 29);
-            this.progressBar1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(12, 516);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(246, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tasks is currently scanning your computer for performance issues...";
+            this.label1.Size = new System.Drawing.Size(160, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Placeholder Text.";
             // 
-            // frmAnalyze
+            // frmAnalyzePopup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(742, 591);
+            this.ClientSize = new System.Drawing.Size(684, 361);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.progressBar1);
-            this.Name = "frmAnalyze";
+            this.Name = "frmAnalyzePopup";
             this.Text = "Tasks";
-            this.Load += new System.EventHandler(this.frmAnalyze_Load);
+            this.Load += new System.EventHandler(this.frmAnalyzePopup_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,8 +60,6 @@ namespace Tasks
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

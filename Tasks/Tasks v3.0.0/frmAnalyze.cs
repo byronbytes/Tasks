@@ -28,6 +28,8 @@ namespace Tasks
     
                 DriveInfo[] allDrives = DriveInfo.GetDrives();
 
+            // will look for setttings, etc, drive space
+
               }
          
         }
