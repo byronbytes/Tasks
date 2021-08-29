@@ -78,10 +78,9 @@ namespace Tasks
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = global::Tasks.Properties.Resources.InfoWhite;
             this.button6.Location = new System.Drawing.Point(15, 523);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(130, 39);
+            this.button6.Size = new System.Drawing.Size(127, 39);
             this.button6.TabIndex = 10;
             this.button6.Text = "About";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
