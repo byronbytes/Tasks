@@ -5,7 +5,7 @@
 
 
 
-<strong>Tasks</strong> is a simple program allowing you to clean your computer, remove bloatware as well as control startup programs, while giving you the experience of the new Advanced Task Manager that works better than Windows Task Manager, faster and lets you control apps that are maliciously eating your system resources.
+<strong>Tasks</strong> is a simple program allowing you to clean your computer, remove bloatware as well as control startup programs, and a new advanced Task Manager that works better than Windows Task Manager, faster and lets you control apps that are maliciously eating your system resources.
 
 <strong>Tasks</strong> is licensed under the <strong>Apache 2.0</strong> license.
 
