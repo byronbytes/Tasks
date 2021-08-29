@@ -31,5 +31,10 @@ namespace Tasks.Tasks_v3._0._0
            // Something, brain is dead rn
            // }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Will improve the settings and change them
+        }
     }
 }

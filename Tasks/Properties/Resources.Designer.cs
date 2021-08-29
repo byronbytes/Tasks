@@ -93,6 +93,16 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cleanup_50x50_White {
+            get {
+                object obj = ResourceManager.GetObject("Cleanup 50x50 White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CleanupWhite {
             get {
                 object obj = ResourceManager.GetObject("CleanupWhite", resourceCulture);
