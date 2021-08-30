@@ -28,7 +28,7 @@ namespace Tasks
     
                 DriveInfo[] allDrives = DriveInfo.GetDrives();
 
-                // will look for setttings, etc, drive space
+                // will look for setttings, etc, drive space, if the drive is compressed / indexed, settings for windows and more.
 
               }
          
