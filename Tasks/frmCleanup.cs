@@ -209,24 +209,6 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("There was an error trying to clean Discord Cookies." + ex);
                 }
         
-
-            // Steam
-
-            if (checkBox11.Checked) //Steam Cache
-            {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Steam\\htmlcache\\Cache");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Steam\\htmlcache\\Code Cache");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Steam\\htmlcache\\GPUCache");
-                var directory4 = new DirectoryInfo("C:\\Program Files (x86)\\Steam\\appcache");
-                var directory5 = new DirectoryInfo("C:\\Program Files (x86)\\Steam\\depotcache");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Steam Cache Cleaned.");
-                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Steam Code Cache Cleaned.");
-                if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Steam GPU Cache Cleaned.");
-                if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Steam App Cache Cleaned.");
-                if (DeleteAllFiles(directory5)) CleanupLogsLBox.Items.Add("Steam Depot Cache Cleaned.");
-            }
-
-
             //Firefox
 
             if (checkBox14.Checked) //Firefox cache
@@ -613,7 +595,6 @@ namespace Tasks
             Dirs.firefoxExtDir = roamingappdata + "\\Mozilla\\Firefox\\Profiles\\"; 
             Dirs.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
             Dirs.edgeExtDir = "";
-            Dirs.steamDir = localappdata + "\\Steam\\";
             Dirs.discordDir = localappdata + "\\Discord\\"; // Makes more sense checking appdata than program files
 
 
@@ -634,13 +615,6 @@ namespace Tasks
                 checkBox16.Enabled = false;
                 checkBox24.Enabled = false;
                 lblFirefoxNotDetected.Visible = true;
-            }
-
-            if (!Directory.Exists(Dirs.steamDir))
-            {
-                checkBox11.Enabled = false;
-                checkBox12.Enabled = false;
-                lblSteamNotDetected.Visible = true;
             }
 
             if (!Directory.Exists(Dirs.discordDir))

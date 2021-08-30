@@ -129,7 +129,7 @@ namespace Tasks.Tasks_v3._0._0
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.panel6.Location = new System.Drawing.Point(16, 530);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(14, 42);
+            this.panel6.Size = new System.Drawing.Size(10, 42);
             this.panel6.TabIndex = 4;
             // 
             // panel5
@@ -137,7 +137,7 @@ namespace Tasks.Tasks_v3._0._0
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.panel5.Location = new System.Drawing.Point(16, 425);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(14, 42);
+            this.panel5.Size = new System.Drawing.Size(10, 42);
             this.panel5.TabIndex = 3;
             // 
             // panel4
@@ -145,7 +145,7 @@ namespace Tasks.Tasks_v3._0._0
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.panel4.Location = new System.Drawing.Point(16, 324);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(14, 42);
+            this.panel4.Size = new System.Drawing.Size(10, 42);
             this.panel4.TabIndex = 3;
             // 
             // panel3
@@ -153,7 +153,7 @@ namespace Tasks.Tasks_v3._0._0
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.panel3.Location = new System.Drawing.Point(16, 214);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(14, 42);
+            this.panel3.Size = new System.Drawing.Size(10, 42);
             this.panel3.TabIndex = 3;
             // 
             // panel2
@@ -161,7 +161,7 @@ namespace Tasks.Tasks_v3._0._0
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.panel2.Location = new System.Drawing.Point(16, 110);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(14, 42);
+            this.panel2.Size = new System.Drawing.Size(10, 42);
             this.panel2.TabIndex = 2;
             // 
             // frmNewMenu

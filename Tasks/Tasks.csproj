@@ -44,6 +44,9 @@
     <None Update="Scripts\BatFiles\byesolitaire.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Scripts\BatFiles\clearipconfig.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Scripts\BatFiles\killchrome.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

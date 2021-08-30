@@ -8,11 +8,8 @@ namespace Tasks
 {
     class Dirs
     {
-
-
         public static string firefoxDir;
         public static string chromeDir;
-        public static string steamDir;
         public static string edgeDir;
         public static string discordDir;
         public static string firefoxExtDir;
