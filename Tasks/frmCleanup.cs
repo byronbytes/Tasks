@@ -822,7 +822,22 @@ namespace Tasks
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
 
+            try
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = "Scripts/BatFiles/clearipconfig.bat";
+                process.Start();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+
+            }
+        }
     }
 }
     
