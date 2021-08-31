@@ -546,12 +546,13 @@ namespace Tasks
 
         }
 
-
-        private void btnCopyLogs_Click(object sender, EventArgs e)
+        private void btnCopyLogs_Click_1(object sender, EventArgs e)
         {
-            CleanupLogsLBox.Items.Add("Cleanup logs copied to clipboard.");
+            CleanupLogsLBox.Items.Add("Cleanup Logs copied to clipboard.");
             Clipboard.SetText(string.Join("\n", CleanupLogsLBox.Items.Cast<string>()));
         }
+
+
         private void Tabs_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab.Text == "Browser Extensions") // i dont want it to show up in the extensions thing because i'll use a diff button to make the code less messy
@@ -817,7 +818,8 @@ namespace Tasks
 
         }
 
-        }
+ 
+    }
     }
 
     

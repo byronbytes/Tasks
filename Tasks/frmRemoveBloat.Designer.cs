@@ -54,10 +54,10 @@ namespace Tasks
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(12, 41);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(661, 417);
+            this.tabControl1.Size = new System.Drawing.Size(671, 446);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -70,7 +70,7 @@ namespace Tasks
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(653, 384);
+            this.tabPage1.Size = new System.Drawing.Size(663, 413);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Windows Features";
             // 
@@ -132,7 +132,7 @@ namespace Tasks
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(653, 384);
+            this.tabPage3.Size = new System.Drawing.Size(663, 413);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Legal Information";
             // 
@@ -145,7 +145,7 @@ namespace Tasks
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(641, 374);
+            this.textBox1.Size = new System.Drawing.Size(641, 401);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
