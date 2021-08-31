@@ -61,11 +61,6 @@ namespace Tasks
             return false;
 
         }
-
-        public class CacheRemoval
-        {
-            //wip, will be for removing cache to make stuff easier 
-        }
         private void btnCleanup_Click(object sender, EventArgs e)
         {
             // Exception Error Messages are all different, and should all be the same.
@@ -822,23 +817,8 @@ namespace Tasks
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                Process process = new Process();
-                process.StartInfo.FileName = "Scripts/BatFiles/clearipconfig.bat";
-                process.Start();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-
-            }
         }
     }
-}
+
     
 

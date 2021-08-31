@@ -169,7 +169,7 @@ namespace Tasks.Tasks_v3._0._0
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1145, 686);
+            this.ClientSize = new System.Drawing.Size(1091, 686);
             this.Controls.Add(this.panel1);
             this.Name = "frmNewMenu";
             this.Text = "Tasks";
