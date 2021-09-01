@@ -63,8 +63,6 @@ namespace Tasks
         }
         private void btnCleanup_Click(object sender, EventArgs e)
         {
-            // Exception Error Messages are all different, and should all be the same.
-
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
@@ -635,6 +633,7 @@ namespace Tasks
             if (Directory.Exists(Dirs.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
+                // should be in 2.0.0 release
             }
 
             if (Directory.Exists(Dirs.firefoxDir))
@@ -784,6 +783,7 @@ namespace Tasks
 
                 if (aa == 1)
                 {
+
                 }
                 else if (aa == 0)
                 {
@@ -801,12 +801,12 @@ namespace Tasks
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         ExtensionsBox.Items.Remove(eachItem);
-                        CleanupLogsLBox.Items.Add("Extension removed.");
+                        CleanupLogsLBox.Items.Add("Extension Removed.");
                     }
                 }
                 else if (go == 1)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to remove extension.");
+                    CleanupLogsLBox.Items.Add("Error while trying to remove extension.");
                 }
 
 

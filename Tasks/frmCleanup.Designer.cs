@@ -473,7 +473,7 @@ namespace Tasks
             // 
             this.lblEdgeNotDetected.AutoSize = true;
             this.lblEdgeNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblEdgeNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblEdgeNotDetected.ForeColor = System.Drawing.Color.Silver;
             this.lblEdgeNotDetected.Location = new System.Drawing.Point(13, 388);
             this.lblEdgeNotDetected.Name = "lblEdgeNotDetected";
             this.lblEdgeNotDetected.Size = new System.Drawing.Size(138, 19);
@@ -548,7 +548,7 @@ namespace Tasks
             // 
             this.lblDiscordNotDetected.AutoSize = true;
             this.lblDiscordNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblDiscordNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblDiscordNotDetected.ForeColor = System.Drawing.Color.Silver;
             this.lblDiscordNotDetected.Location = new System.Drawing.Point(6, 565);
             this.lblDiscordNotDetected.Name = "lblDiscordNotDetected";
             this.lblDiscordNotDetected.Size = new System.Drawing.Size(155, 19);
@@ -560,7 +560,7 @@ namespace Tasks
             // 
             this.lblChromeNotDetected.AutoSize = true;
             this.lblChromeNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblChromeNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblChromeNotDetected.ForeColor = System.Drawing.Color.Silver;
             this.lblChromeNotDetected.Location = new System.Drawing.Point(13, 238);
             this.lblChromeNotDetected.Name = "lblChromeNotDetected";
             this.lblChromeNotDetected.Size = new System.Drawing.Size(157, 19);
@@ -572,7 +572,7 @@ namespace Tasks
             // 
             this.lblFirefoxNotDetected.AutoSize = true;
             this.lblFirefoxNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblFirefoxNotDetected.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblFirefoxNotDetected.ForeColor = System.Drawing.Color.Silver;
             this.lblFirefoxNotDetected.Location = new System.Drawing.Point(314, 216);
             this.lblFirefoxNotDetected.Name = "lblFirefoxNotDetected";
             this.lblFirefoxNotDetected.Size = new System.Drawing.Size(151, 19);
@@ -917,6 +917,7 @@ namespace Tasks
             // btnCleanup
             // 
             this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCleanup.ForeColor = System.Drawing.Color.Black;
             this.btnCleanup.Location = new System.Drawing.Point(525, 816);
             this.btnCleanup.Name = "btnCleanup";
             this.btnCleanup.Size = new System.Drawing.Size(160, 34);
@@ -928,6 +929,7 @@ namespace Tasks
             // btnCopyLogs
             // 
             this.btnCopyLogs.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCopyLogs.ForeColor = System.Drawing.Color.Black;
             this.btnCopyLogs.Location = new System.Drawing.Point(359, 816);
             this.btnCopyLogs.Name = "btnCopyLogs";
             this.btnCopyLogs.Size = new System.Drawing.Size(160, 34);
