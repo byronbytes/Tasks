@@ -614,7 +614,7 @@ namespace Tasks
             if (!Directory.Exists(Dirs.discordDir))
             {
                 checkBox9.Enabled = false;
-                checkBox25.Checked = false;
+                checkBox25.Enabled = false;
                 lblDiscordNotDetected.Visible = true;
                
             }
