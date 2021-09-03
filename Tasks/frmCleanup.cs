@@ -445,69 +445,12 @@ namespace Tasks
                 }
             }
 
-
-        
-
             if (checkBox21.Checked)     //RECENT FILES
             {
                 CleanRecentFiles.CleanRecents.ClearAll();
                 CleanupLogsLBox.Items.Add("Recent Files Cleared.");
             }
 
-            if (checkBox17.Checked)
-            {
-                try
-                {
-
-                    var imgs = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-
-                    foreach (string file in Directory.EnumerateFiles(imgs))
-                    {
-                        try
-                        {
-
-                            File.Delete(file);
-                            CleanupLogsLBox.Items.Add(file + " Deleted!");
-
-                        }
-                        catch(Exception ex)
-                        {
-
-                            CleanupLogsLBox.Items.Add("Failed to delete file" + file + " " + ex);
-
-                        }
-
-                    }
-                    foreach (string file in Directory.EnumerateDirectories(imgs))
-                    {
-                        try
-                        {
-
-                            System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(file);
-
-                            dir.Delete(true);
-                            CleanupLogsLBox.Items.Add("Deleted " + file);
-
-                        }
-                        catch (Exception ex)
-                        {
-
-                            CleanupLogsLBox.Items.Add("Failed to delete " + file + " " + ex);
-
-                        }
-
-                    }
-                    CleanupLogsLBox.Items.Add("Cleaned images folder successfully.");
-
-                }
-                catch(Exception ex)
-                {
-                    CleanupLogsLBox.Items.Add("Failed to clean images folder " + ex);
-                }
-
-
-
-            }
 
             if(checkBox18.Checked) //Edge search history
             {
@@ -531,6 +474,17 @@ namespace Tasks
                 if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Edge Code Cache Cleaned.");
                 if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Edge GPU Cache Cleaned.");
                 if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Edge Shader Cache Cleaned.");
+            }
+
+            if(checkBox10.Checked)
+            {
+                foreach (var eventLog in EventLog.GetEventLogs())
+                {
+                    eventLog.Clear();
+                    eventLog.Dispose();
+                    CleanupLogsLBox.Items.Add("Event Logs cleaned.");
+                }
+
             }
 
             if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;
