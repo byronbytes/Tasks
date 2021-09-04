@@ -42,6 +42,7 @@ namespace Tasks
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox21 = new System.Windows.Forms.CheckBox();
@@ -53,7 +54,6 @@ namespace Tasks
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.checkBox25 = new System.Windows.Forms.CheckBox();
             this.checkBox24 = new System.Windows.Forms.CheckBox();
             this.lblEdgeNotDetected = new System.Windows.Forms.Label();
@@ -95,7 +95,7 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -255,13 +255,26 @@ namespace Tasks
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox10.Location = new System.Drawing.Point(7, 135);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(124, 21);
+            this.checkBox10.TabIndex = 30;
+            this.checkBox10.Text = "Clear Event Logs";
+            this.checkBox10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(143, 261);
+            this.button2.Location = new System.Drawing.Point(171, 261);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 24);
             this.button2.TabIndex = 29;
@@ -276,7 +289,7 @@ namespace Tasks
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(143, 231);
+            this.button1.Location = new System.Drawing.Point(171, 231);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 24);
             this.button1.TabIndex = 28;
@@ -416,17 +429,6 @@ namespace Tasks
             this.label5.Size = new System.Drawing.Size(136, 30);
             this.label5.TabIndex = 45;
             this.label5.Text = "Applications";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 15.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label20.Location = new System.Drawing.Point(16, 15);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(101, 30);
-            this.label20.TabIndex = 44;
-            this.label20.Text = "Browsers";
             // 
             // checkBox25
             // 
@@ -812,9 +814,9 @@ namespace Tasks
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(491, 725);
+            this.button3.Location = new System.Drawing.Point(499, 720);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 39);
+            this.button3.Size = new System.Drawing.Size(178, 41);
             this.button3.TabIndex = 38;
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = true;
@@ -925,18 +927,16 @@ namespace Tasks
             this.btnCopyLogs.UseVisualStyleBackColor = true;
             this.btnCopyLogs.Click += new System.EventHandler(this.btnCopyLogs_Click_1);
             // 
-            // checkBox10
+            // label20
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox10.Location = new System.Drawing.Point(7, 135);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(124, 21);
-            this.checkBox10.TabIndex = 30;
-            this.checkBox10.Text = "Clear Event Logs";
-            this.checkBox10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 15.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label20.Location = new System.Drawing.Point(16, 15);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(101, 30);
+            this.label20.TabIndex = 44;
+            this.label20.Text = "Browsers";
             // 
             // frmCleanup
             // 
@@ -1034,8 +1034,8 @@ namespace Tasks
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.Label label20;
     }
 }

@@ -447,8 +447,16 @@ namespace Tasks
 
             if (checkBox21.Checked)     //RECENT FILES
             {
-                CleanRecentFiles.CleanRecents.ClearAll();
-                CleanupLogsLBox.Items.Add("Recent Files Cleared.");
+                try
+                {
+                    CleanRecentFiles.CleanRecents.ClearAll();
+                    CleanupLogsLBox.Items.Add("Recent Files Cleared.");
+                } 
+                catch (Exception ex)
+                {
+                CleanupLogsLBox.Items.Add("Error while clearing Recent Files. " + ex);
+                }
+          
             }
 
 
@@ -478,20 +486,23 @@ namespace Tasks
 
             if(checkBox10.Checked)
             {
-                foreach (var eventLog in EventLog.GetEventLogs())
+                try
                 {
-                    eventLog.Clear();
-                    eventLog.Dispose();
-                    CleanupLogsLBox.Items.Add("Event Logs cleaned.");
+                    foreach (var eventLog in EventLog.GetEventLogs())
+                    {
+                        eventLog.Clear();
+                        eventLog.Dispose();
+                        CleanupLogsLBox.Items.Add("Event Logs cleared.");
+                    }
+                } catch(Exception ex)
+                {
+                    CleanupLogsLBox.Items.Add("Error clearing event logs: " + ex);
                 }
+    
 
             }
 
             if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;
-
-
-
-
 
 
 
