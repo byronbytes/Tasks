@@ -754,13 +754,9 @@ namespace Tasks
                 {
 
                 }
-
-
-
                 Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
 
                 int go = RemoveExt.RemoveExtFirefox(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
-
                 if (go == 0)
                 {
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
@@ -773,8 +769,6 @@ namespace Tasks
                 {
                     CleanupLogsLBox.Items.Add("Error while trying to remove extension.");
                 }
-
-
             }
             else
             {
@@ -783,7 +777,11 @@ namespace Tasks
 
         }
 
- 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
     }
     }
 
