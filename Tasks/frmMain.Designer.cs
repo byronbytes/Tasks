@@ -144,11 +144,11 @@ namespace Tasks
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 62);
+            this.label3.Location = new System.Drawing.Point(4, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 51);
+            this.label3.Size = new System.Drawing.Size(307, 51);
             this.label3.TabIndex = 2;
             this.label3.Text = "Cleanup will clean all junk and garbage inside temp\r\nfolders, recycle bin, downlo" +
     "ad and other locations. \r\nYou can select which to clean with many options.";
@@ -187,11 +187,11 @@ namespace Tasks
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 9.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(6, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(289, 51);
+            this.label4.Size = new System.Drawing.Size(308, 51);
             this.label4.TabIndex = 2;
             this.label4.Text = "This will remove bloat from your computer such as \r\nbuilt in Windows Store Apps, " +
     "and remove \r\nbloatware registry keys.\r\n";
@@ -230,14 +230,14 @@ namespace Tasks
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 9.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(6, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(306, 51);
+            this.label5.Size = new System.Drawing.Size(279, 51);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Manage the programs that start on boot by accessing \r\nStartup Programs. You will " +
-    "be able to see and modify\r\nall programs that run on startup.";
+            this.label5.Text = "Manage programs that start on boot. You will \r\nbe able to see and modify\r\nall pro" +
+    "grams that run on startup.";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button3
@@ -285,14 +285,13 @@ namespace Tasks
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semilight", 9.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(6, 62);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(303, 51);
+            this.label6.Size = new System.Drawing.Size(291, 34);
             this.label6.TabIndex = 2;
-            this.label6.Text = "An advanced Task Manager with detailed information\r\nwhile being more efficient. A" +
-    "lso includes basic\r\nTask Manager features.";
+            this.label6.Text = "An advanced Task Manager with more advanced\r\n process information.";
             // 
             // button4
             // 
