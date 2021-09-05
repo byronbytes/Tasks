@@ -58,8 +58,15 @@ namespace Tasks
 
         private void button5_Click(object sender, EventArgs e)
         {
-
-            RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true);
+            try
+            {
+                RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true);
+            }catch (Exception ex)
+            {
+                dialogError.Content = "An error has occurred. Error: " + ex;
+                dialogError.Show();
+            }
+        
 
         }
 

@@ -128,8 +128,10 @@ namespace Tasks
             // groupCleanup
             // 
             this.groupCleanup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.groupCleanup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupCleanup.Controls.Add(this.label3);
             this.groupCleanup.Controls.Add(this.button1);
+            this.groupCleanup.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupCleanup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupCleanup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupCleanup.ForeColor = System.Drawing.Color.White;
