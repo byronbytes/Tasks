@@ -673,20 +673,23 @@ namespace Tasks
 
                 foreach (string ext in Directory.EnumerateDirectories(Dirs.chromeExtDir))
 
-
-
-
-
-                    //Looked a bit and it's likely gonna be a nightmare to do so uhhhhh 
-                    // lol
+     //Looked a bit and it's likely gonna be a nightmare to do so uhhhhh 
                 {
+                    FileInfo fi = new FileInfo(ext);
+                  ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
 
-                    
+                    DirectoryInfo dir = new DirectoryInfo(ext);
+                    dir.EnumerateDirectories();
+                    extb.SubItems.Add("~ " + ByteSize.FromBytes(ext.Length).ToString());
+
+                    extb.SubItems.Add(ext);
 
 
 
 
-                }
+
+                } 
+  
 
 
             }

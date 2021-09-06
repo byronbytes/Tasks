@@ -53,8 +53,6 @@ namespace Tasks
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.checkBox25 = new System.Windows.Forms.CheckBox();
             this.checkBox24 = new System.Windows.Forms.CheckBox();
             this.lblEdgeNotDetected = new System.Windows.Forms.Label();
@@ -175,7 +173,7 @@ namespace Tasks
             this.checkBox1.AutoSize = true;
             this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(12, 387);
+            this.checkBox1.Location = new System.Drawing.Point(12, 393);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(169, 21);
             this.checkBox1.TabIndex = 1;
@@ -194,9 +192,9 @@ namespace Tasks
             this.CleanupLogsLBox.ItemHeight = 19;
             this.CleanupLogsLBox.Items.AddRange(new object[] {
             "Cleanup Logs:"});
-            this.CleanupLogsLBox.Location = new System.Drawing.Point(701, 21);
+            this.CleanupLogsLBox.Location = new System.Drawing.Point(721, 21);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(486, 838);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(466, 838);
             this.CleanupLogsLBox.TabIndex = 1;
             // 
             // taskDialog1
@@ -224,7 +222,7 @@ namespace Tasks
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(691, 800);
+            this.tabControl1.Size = new System.Drawing.Size(711, 800);
             this.tabControl1.TabIndex = 36;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -252,7 +250,7 @@ namespace Tasks
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(683, 767);
+            this.tabPage1.Size = new System.Drawing.Size(703, 767);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
@@ -261,7 +259,7 @@ namespace Tasks
             this.checkBox10.AutoSize = true;
             this.checkBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox10.Location = new System.Drawing.Point(6, 135);
+            this.checkBox10.Location = new System.Drawing.Point(6, 138);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(124, 21);
             this.checkBox10.TabIndex = 30;
@@ -303,7 +301,7 @@ namespace Tasks
             this.checkBox21.AutoSize = true;
             this.checkBox21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox21.Location = new System.Drawing.Point(12, 360);
+            this.checkBox21.Location = new System.Drawing.Point(12, 363);
             this.checkBox21.Name = "checkBox21";
             this.checkBox21.Size = new System.Drawing.Size(129, 21);
             this.checkBox21.TabIndex = 24;
@@ -384,8 +382,6 @@ namespace Tasks
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.checkBox25);
             this.tabPage2.Controls.Add(this.checkBox24);
             this.tabPage2.Controls.Add(this.lblEdgeNotDetected);
@@ -416,31 +412,9 @@ namespace Tasks
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(683, 767);
+            this.tabPage2.Size = new System.Drawing.Size(703, 767);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(16, 431);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 30);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Applications";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 15.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label20.Location = new System.Drawing.Point(16, 15);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(101, 30);
-            this.label20.TabIndex = 44;
-            this.label20.Text = "Browsers";
             // 
             // checkBox25
             // 
@@ -448,7 +422,7 @@ namespace Tasks
             this.checkBox25.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox25.ForeColor = System.Drawing.Color.White;
-            this.checkBox25.Location = new System.Drawing.Point(16, 538);
+            this.checkBox25.Location = new System.Drawing.Point(16, 531);
             this.checkBox25.Name = "checkBox25";
             this.checkBox25.Size = new System.Drawing.Size(73, 21);
             this.checkBox25.TabIndex = 43;
@@ -462,7 +436,7 @@ namespace Tasks
             this.checkBox24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox24.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox24.ForeColor = System.Drawing.Color.White;
-            this.checkBox24.Location = new System.Drawing.Point(314, 187);
+            this.checkBox24.Location = new System.Drawing.Point(314, 148);
             this.checkBox24.Name = "checkBox24";
             this.checkBox24.Size = new System.Drawing.Size(73, 21);
             this.checkBox24.TabIndex = 42;
@@ -475,7 +449,7 @@ namespace Tasks
             this.lblEdgeNotDetected.AutoSize = true;
             this.lblEdgeNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblEdgeNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblEdgeNotDetected.Location = new System.Drawing.Point(13, 395);
+            this.lblEdgeNotDetected.Location = new System.Drawing.Point(16, 362);
             this.lblEdgeNotDetected.Name = "lblEdgeNotDetected";
             this.lblEdgeNotDetected.Size = new System.Drawing.Size(138, 19);
             this.lblEdgeNotDetected.TabIndex = 41;
@@ -488,7 +462,7 @@ namespace Tasks
             this.checkBox18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox18.ForeColor = System.Drawing.Color.White;
-            this.checkBox18.Location = new System.Drawing.Point(16, 371);
+            this.checkBox18.Location = new System.Drawing.Point(16, 338);
             this.checkBox18.Name = "checkBox18";
             this.checkBox18.Size = new System.Drawing.Size(111, 21);
             this.checkBox18.TabIndex = 40;
@@ -502,7 +476,7 @@ namespace Tasks
             this.checkBox22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox22.ForeColor = System.Drawing.Color.White;
-            this.checkBox22.Location = new System.Drawing.Point(16, 341);
+            this.checkBox22.Location = new System.Drawing.Point(16, 308);
             this.checkBox22.Name = "checkBox22";
             this.checkBox22.Size = new System.Drawing.Size(73, 21);
             this.checkBox22.TabIndex = 39;
@@ -516,7 +490,7 @@ namespace Tasks
             this.checkBox23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox23.ForeColor = System.Drawing.Color.White;
-            this.checkBox23.Location = new System.Drawing.Point(16, 311);
+            this.checkBox23.Location = new System.Drawing.Point(16, 278);
             this.checkBox23.Name = "checkBox23";
             this.checkBox23.Size = new System.Drawing.Size(62, 21);
             this.checkBox23.TabIndex = 38;
@@ -527,7 +501,7 @@ namespace Tasks
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Tasks.Properties.Resources.MicrosoftEdge;
-            this.pictureBox8.Location = new System.Drawing.Point(13, 276);
+            this.pictureBox8.Location = new System.Drawing.Point(13, 243);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(32, 29);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -539,7 +513,7 @@ namespace Tasks
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(48, 278);
+            this.label18.Location = new System.Drawing.Point(48, 243);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(138, 25);
             this.label18.TabIndex = 36;
@@ -550,7 +524,7 @@ namespace Tasks
             this.lblDiscordNotDetected.AutoSize = true;
             this.lblDiscordNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblDiscordNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblDiscordNotDetected.Location = new System.Drawing.Point(6, 565);
+            this.lblDiscordNotDetected.Location = new System.Drawing.Point(16, 555);
             this.lblDiscordNotDetected.Name = "lblDiscordNotDetected";
             this.lblDiscordNotDetected.Size = new System.Drawing.Size(155, 19);
             this.lblDiscordNotDetected.TabIndex = 35;
@@ -562,7 +536,7 @@ namespace Tasks
             this.lblChromeNotDetected.AutoSize = true;
             this.lblChromeNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblChromeNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblChromeNotDetected.Location = new System.Drawing.Point(13, 238);
+            this.lblChromeNotDetected.Location = new System.Drawing.Point(13, 203);
             this.lblChromeNotDetected.Name = "lblChromeNotDetected";
             this.lblChromeNotDetected.Size = new System.Drawing.Size(157, 19);
             this.lblChromeNotDetected.TabIndex = 33;
@@ -574,7 +548,7 @@ namespace Tasks
             this.lblFirefoxNotDetected.AutoSize = true;
             this.lblFirefoxNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblFirefoxNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblFirefoxNotDetected.Location = new System.Drawing.Point(314, 238);
+            this.lblFirefoxNotDetected.Location = new System.Drawing.Point(314, 203);
             this.lblFirefoxNotDetected.Name = "lblFirefoxNotDetected";
             this.lblFirefoxNotDetected.Size = new System.Drawing.Size(151, 19);
             this.lblFirefoxNotDetected.TabIndex = 32;
@@ -586,7 +560,7 @@ namespace Tasks
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 59);
+            this.label3.Location = new System.Drawing.Point(48, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 25);
             this.label3.TabIndex = 7;
@@ -598,7 +572,7 @@ namespace Tasks
             this.checkBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox5.ForeColor = System.Drawing.Color.White;
-            this.checkBox5.Location = new System.Drawing.Point(16, 93);
+            this.checkBox5.Location = new System.Drawing.Point(16, 58);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(62, 21);
             this.checkBox5.TabIndex = 8;
@@ -612,7 +586,7 @@ namespace Tasks
             this.checkBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox6.ForeColor = System.Drawing.Color.White;
-            this.checkBox6.Location = new System.Drawing.Point(16, 211);
+            this.checkBox6.Location = new System.Drawing.Point(16, 178);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(77, 21);
             this.checkBox6.TabIndex = 9;
@@ -626,7 +600,7 @@ namespace Tasks
             this.checkBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox7.ForeColor = System.Drawing.Color.White;
-            this.checkBox7.Location = new System.Drawing.Point(16, 123);
+            this.checkBox7.Location = new System.Drawing.Point(16, 88);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(73, 21);
             this.checkBox7.TabIndex = 11;
@@ -640,7 +614,7 @@ namespace Tasks
             this.checkBox16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox16.ForeColor = System.Drawing.Color.White;
-            this.checkBox16.Location = new System.Drawing.Point(313, 154);
+            this.checkBox16.Location = new System.Drawing.Point(313, 118);
             this.checkBox16.Name = "checkBox16";
             this.checkBox16.Size = new System.Drawing.Size(111, 21);
             this.checkBox16.TabIndex = 31;
@@ -654,7 +628,7 @@ namespace Tasks
             this.checkBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox8.ForeColor = System.Drawing.Color.White;
-            this.checkBox8.Location = new System.Drawing.Point(16, 153);
+            this.checkBox8.Location = new System.Drawing.Point(16, 118);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(111, 21);
             this.checkBox8.TabIndex = 12;
@@ -668,7 +642,7 @@ namespace Tasks
             this.checkBox15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox15.ForeColor = System.Drawing.Color.White;
-            this.checkBox15.Location = new System.Drawing.Point(313, 124);
+            this.checkBox15.Location = new System.Drawing.Point(313, 88);
             this.checkBox15.Name = "checkBox15";
             this.checkBox15.Size = new System.Drawing.Size(73, 21);
             this.checkBox15.TabIndex = 30;
@@ -682,7 +656,7 @@ namespace Tasks
             this.checkBox14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox14.ForeColor = System.Drawing.Color.White;
-            this.checkBox14.Location = new System.Drawing.Point(314, 94);
+            this.checkBox14.Location = new System.Drawing.Point(314, 58);
             this.checkBox14.Name = "checkBox14";
             this.checkBox14.Size = new System.Drawing.Size(62, 21);
             this.checkBox14.TabIndex = 29;
@@ -696,7 +670,7 @@ namespace Tasks
             this.checkBox13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox13.ForeColor = System.Drawing.Color.White;
-            this.checkBox13.Location = new System.Drawing.Point(16, 183);
+            this.checkBox13.Location = new System.Drawing.Point(16, 148);
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(73, 21);
             this.checkBox13.TabIndex = 25;
@@ -707,7 +681,7 @@ namespace Tasks
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(314, 59);
+            this.pictureBox5.Location = new System.Drawing.Point(314, 23);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 29);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -717,7 +691,7 @@ namespace Tasks
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Tasks.Properties.Resources.Chrome;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 58);
+            this.pictureBox4.Location = new System.Drawing.Point(13, 23);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 29);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -729,7 +703,7 @@ namespace Tasks
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(359, 59);
+            this.label10.Location = new System.Drawing.Point(352, 23);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(134, 25);
             this.label10.TabIndex = 27;
@@ -740,7 +714,7 @@ namespace Tasks
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(48, 473);
+            this.label6.Location = new System.Drawing.Point(48, 466);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 25);
             this.label6.TabIndex = 14;
@@ -752,7 +726,7 @@ namespace Tasks
             this.checkBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox9.ForeColor = System.Drawing.Color.White;
-            this.checkBox9.Location = new System.Drawing.Point(16, 508);
+            this.checkBox9.Location = new System.Drawing.Point(16, 501);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(62, 21);
             this.checkBox9.TabIndex = 15;
@@ -763,7 +737,7 @@ namespace Tasks
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Tasks.Properties.Resources.Discord;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 473);
+            this.pictureBox2.Location = new System.Drawing.Point(13, 466);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -787,7 +761,7 @@ namespace Tasks
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(683, 767);
+            this.tabPage3.Size = new System.Drawing.Size(703, 767);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
             // 
@@ -807,9 +781,9 @@ namespace Tasks
             this.label17.ForeColor = System.Drawing.Color.Red;
             this.label17.Location = new System.Drawing.Point(7, 100);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(491, 20);
+            this.label17.Size = new System.Drawing.Size(483, 20);
             this.label17.TabIndex = 44;
-            this.label17.Text = "Tasks will need to 𝙘𝙡𝙤𝙨𝙚 browsers before it can remove any extension. ";
+            this.label17.Text = "Tasks will need to close browsers before it can remove any extension. ";
             // 
             // label14
             // 
@@ -843,13 +817,13 @@ namespace Tasks
             this.ExtName,
             this.ExtSize,
             this.ExtPath});
-            this.ExtensionsBox.Font = new System.Drawing.Font("Segoe UI Semibold", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ExtensionsBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ExtensionsBox.ForeColor = System.Drawing.Color.White;
             this.ExtensionsBox.FullRowSelect = true;
             this.ExtensionsBox.HideSelection = false;
-            this.ExtensionsBox.Location = new System.Drawing.Point(16, 273);
+            this.ExtensionsBox.Location = new System.Drawing.Point(16, 253);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(648, 434);
+            this.ExtensionsBox.Size = new System.Drawing.Size(648, 444);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -857,12 +831,12 @@ namespace Tasks
             // ExtName
             // 
             this.ExtName.Text = "Name";
-            this.ExtName.Width = 270;
+            this.ExtName.Width = 250;
             // 
             // ExtSize
             // 
             this.ExtSize.Text = "Size";
-            this.ExtSize.Width = 100;
+            this.ExtSize.Width = 120;
             // 
             // ExtPath
             // 
@@ -885,7 +859,7 @@ namespace Tasks
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(6, 180);
+            this.label15.Location = new System.Drawing.Point(12, 167);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(478, 17);
             this.label15.TabIndex = 40;
@@ -898,7 +872,7 @@ namespace Tasks
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(16, 228);
+            this.comboBox1.Location = new System.Drawing.Point(16, 208);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(259, 28);
             this.comboBox1.TabIndex = 39;
@@ -1035,8 +1009,6 @@ namespace Tasks
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.Label label20;
     }
 }
