@@ -44,6 +44,7 @@ namespace Tasks
             this.taskDialogButton2 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.dialogError = new Ookii.Dialogs.WinForms.TaskDialog(this.components);
             this.taskDialogButton3 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -54,10 +55,10 @@ namespace Tasks
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(12, 39);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(671, 446);
+            this.tabControl1.Size = new System.Drawing.Size(671, 419);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -70,7 +71,7 @@ namespace Tasks
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(663, 413);
+            this.tabPage1.Size = new System.Drawing.Size(663, 386);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Windows Features";
             // 
@@ -179,12 +180,23 @@ namespace Tasks
             // 
             this.taskDialogButton3.Text = "Ok";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(445, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "This feature is still undergoing major changes and stuff might not work.";
+            // 
             // frmRemoveBloat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(695, 470);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -197,6 +209,7 @@ namespace Tasks
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -214,5 +227,6 @@ namespace Tasks
         private System.Windows.Forms.TextBox textBox1;
         private Ookii.Dialogs.WinForms.TaskDialog dialogError;
         private Ookii.Dialogs.WinForms.TaskDialogButton taskDialogButton3;
+        private System.Windows.Forms.Label label1;
     }
 }

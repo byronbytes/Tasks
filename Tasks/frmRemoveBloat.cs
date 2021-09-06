@@ -61,6 +61,7 @@ namespace Tasks
             try
             {
                 RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true);
+
             }catch (Exception ex)
             {
                 dialogError.Content = "An error has occurred. Error: " + ex;

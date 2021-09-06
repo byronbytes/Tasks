@@ -16,5 +16,10 @@ namespace Tasks.Tasks_v3._0._0
         {
             InitializeComponent();
         }
+
+        private void frmNewCleanup_Load(object sender, EventArgs e)
+        {
+            // Logs save to appdata maybe
+        }
     }
 }
