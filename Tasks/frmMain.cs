@@ -77,8 +77,8 @@ namespace Tasks
 
         private void label1_Click(object sender, EventArgs e)
         {
-            frmAnalyze Analyze = new frmAnalyze();
-            Analyze.Show();
+            //frmAnalyze Analyze = new frmAnalyze();
+            //Analyze.Show();
         }
     }
 }
