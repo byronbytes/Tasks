@@ -16,7 +16,6 @@
 - Enable/Disable Programs that run on Startup.
 - An advanced task manager that gives you more information than the internal Windows Task Manager.
 - Remove bloatware from your computer on a click of a button.
-- Blacklist sites that are known to be malicious / harmful.
 
 
 <h1>📩 Installation</h1>
