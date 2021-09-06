@@ -64,9 +64,9 @@ namespace Tasks.Tasks_v3._0._0
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(579, 23);
+            this.label2.Size = new System.Drawing.Size(276, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = "We found some settings that can be strict with performance. (placeholder text)";
+            this.label2.Text = "We found some performance issues.";
             // 
             // label3
             // 
@@ -83,7 +83,7 @@ namespace Tasks.Tasks_v3._0._0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(672, 361);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
