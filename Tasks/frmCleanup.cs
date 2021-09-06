@@ -41,14 +41,28 @@ namespace Tasks
             {
                 foreach (var file in directoryInfo.GetFiles())
                 {
-                    file.Delete();
-                    CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
+                    try
+                    {
+                        file.Delete();
+                        CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                 
                 }
-
                 foreach (var dir in directoryInfo.GetDirectories())
                 {
-                    dir.Delete(true);
-                    CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
+                    try
+                    {
+                        dir.Delete(true);
+                        CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                  
                 }
 
                 return true;
@@ -169,11 +183,7 @@ namespace Tasks
                 CleanupLogsLBox.Items.Add("Chrome Search History Cleaned.");
             }
 
-            if (checkBox13.Checked) //Chrome crashdumps
-            {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Crashpad");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Crashdumps Cleaned.");
-            }
+       
 
             // Discord
 
@@ -363,41 +373,6 @@ namespace Tasks
             }
 
 
-            if(checkBox24.Checked) //Firefox Crashdumps
-            {
-                try
-                {
-
-                    var minidump = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                    foreach (string direc in Directory.EnumerateDirectories(minidump))
-                    {
-                        if (direc.Contains("release") == true)
-                        {
-                            try
-                            {
-                                var minidumps1 = (direc + "\\crashes");
-                                var minidumps2 = (direc + "\\minidumps");
-                                File.Delete(minidumps1);
-                                File.Delete(minidumps2);
-                                CleanupLogsLBox.Items.Add("Firefox Crashdumps Cleaned.");
-
-                            }
-                            catch (Exception ex)
-                            {
-
-                                CleanupLogsLBox.Items.Add("Error while trying to clean Firefox Crashdumps." + ex);
-
-                            }
-
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    CleanupLogsLBox.Items.Add("Error while trying to delete Firefox Crashdumps. \n" + ex);
-                }
-            }
 
             //DNS & ARP
             if (checkBox19.Checked) //Clear dns
@@ -478,10 +453,12 @@ namespace Tasks
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache");
                 var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\GPUCache");
                 var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\ShaderCache");
+                var directory5 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\CacheStorage");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Cache Cleaned.");
                 if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Edge Code Cache Cleaned.");
                 if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Edge GPU Cache Cleaned.");
                 if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Edge Shader Cache Cleaned.");
+                if (DeleteAllFiles(directory5)) CleanupLogsLBox.Items.Add("Edge Cache Storage Cleaned.");
             }
 
             if(checkBox10.Checked)
@@ -500,6 +477,33 @@ namespace Tasks
                 }
     
 
+            }
+
+            if(checkBox11.Checked)
+            {
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Sessions");
+                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Session Storage");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Session Cleaned.");
+                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Edge Session Storage Cleaned.");
+            }
+
+            if (checkBox12.Checked)
+            {
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("DirectX Shader Cache Cleaned.");
+            }
+
+            if (checkBox13.Checked)
+            {
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\CrashDumps\\");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("System Memory Dumps Cleaned.");
+            }
+
+
+            if(checkBox17.Checked)
+            {
+                var directory = new DirectoryInfo("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Error Reporting Cleaned.");
             }
 
             if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;
@@ -562,7 +566,6 @@ namespace Tasks
                 checkBox5.Enabled = false;
                 checkBox7.Enabled = false;
                 checkBox8.Enabled = false;
-                checkBox13.Enabled = false;
                 checkBox6.Enabled = false;
                 lblChromeNotDetected.Visible = true;
             }
@@ -572,7 +575,6 @@ namespace Tasks
                 checkBox14.Enabled = false;
                 checkBox15.Enabled = false;
                 checkBox16.Enabled = false;
-                checkBox24.Enabled = false;
                 lblFirefoxNotDetected.Visible = true;
             }
 
@@ -589,6 +591,7 @@ namespace Tasks
                 checkBox23.Enabled = false;
                 checkBox22.Enabled = false;
                checkBox18.Enabled = false;
+                checkBox11.Enabled = false;
                 lblEdgeNotDetected.Visible = true;
 
             }
@@ -598,7 +601,6 @@ namespace Tasks
             if (Directory.Exists(Dirs.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
-                // should be in 2.0.0 release
             }
 
             if (Directory.Exists(Dirs.firefoxDir))
@@ -673,20 +675,18 @@ namespace Tasks
 
                 foreach (string ext in Directory.EnumerateDirectories(Dirs.chromeExtDir))
 
-     //Looked a bit and it's likely gonna be a nightmare to do so uhhhhh 
                 {
+
                     FileInfo fi = new FileInfo(ext);
                   ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
-
-                    DirectoryInfo dir = new DirectoryInfo(ext);
-                    dir.EnumerateDirectories();
+                    DirectoryInfo fol = new DirectoryInfo(ext);
+                    fol.EnumerateDirectories();
                     extb.SubItems.Add("~ " + ByteSize.FromBytes(ext.Length).ToString());
-
+                   
                     extb.SubItems.Add(ext);
 
 
-
-
+   
 
                 } 
   
