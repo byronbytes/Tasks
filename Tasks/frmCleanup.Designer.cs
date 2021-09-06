@@ -97,6 +97,7 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
+            this.checkBox26 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -188,16 +189,16 @@ namespace Tasks
             // 
             this.CleanupLogsLBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.CleanupLogsLBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CleanupLogsLBox.Font = new System.Drawing.Font("Segoe UI Semilight", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CleanupLogsLBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CleanupLogsLBox.ForeColor = System.Drawing.Color.White;
             this.CleanupLogsLBox.FormattingEnabled = true;
             this.CleanupLogsLBox.HorizontalScrollbar = true;
-            this.CleanupLogsLBox.ItemHeight = 19;
+            this.CleanupLogsLBox.ItemHeight = 17;
             this.CleanupLogsLBox.Items.AddRange(new object[] {
             "Cleanup Logs:"});
             this.CleanupLogsLBox.Location = new System.Drawing.Point(721, 21);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(466, 838);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(466, 835);
             this.CleanupLogsLBox.TabIndex = 1;
             // 
             // taskDialog1
@@ -232,6 +233,7 @@ namespace Tasks
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage1.Controls.Add(this.checkBox26);
             this.tabPage1.Controls.Add(this.checkBox24);
             this.tabPage1.Controls.Add(this.checkBox17);
             this.tabPage1.Controls.Add(this.checkBox13);
@@ -266,7 +268,7 @@ namespace Tasks
             this.checkBox24.AutoSize = true;
             this.checkBox24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox24.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox24.Location = new System.Drawing.Point(6, 528);
+            this.checkBox24.Location = new System.Drawing.Point(6, 531);
             this.checkBox24.Name = "checkBox24";
             this.checkBox24.Size = new System.Drawing.Size(126, 21);
             this.checkBox24.TabIndex = 34;
@@ -959,6 +961,19 @@ namespace Tasks
             this.btnCopyLogs.UseVisualStyleBackColor = true;
             this.btnCopyLogs.Click += new System.EventHandler(this.btnCopyLogs_Click_1);
             // 
+            // checkBox26
+            // 
+            this.checkBox26.AutoSize = true;
+            this.checkBox26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox26.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox26.Location = new System.Drawing.Point(6, 561);
+            this.checkBox26.Name = "checkBox26";
+            this.checkBox26.Size = new System.Drawing.Size(90, 21);
+            this.checkBox26.TabIndex = 35;
+            this.checkBox26.Text = "Icon Cache";
+            this.checkBox26.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox26.UseVisualStyleBackColor = true;
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1059,5 +1074,6 @@ namespace Tasks
         private System.Windows.Forms.CheckBox checkBox13;
         private System.Windows.Forms.CheckBox checkBox17;
         private System.Windows.Forms.CheckBox checkBox24;
+        private System.Windows.Forms.CheckBox checkBox26;
     }
 }

@@ -44,12 +44,13 @@ namespace Tasks
                     try
                     {
                         file.Delete();
-                        CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
+                        CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
                     }
                     catch (Exception ex)
                     {
+
                     }
-                 
+
                 }
                 foreach (var dir in directoryInfo.GetDirectories())
                 {
@@ -62,15 +63,15 @@ namespace Tasks
                     {
 
                     }
-                  
+
                 }
 
                 return true;
             }
             catch (Exception ex)
             {
-                CleanupLogsLBox.Items.Add("Exception Error: " + ex.Message);
-                
+                CleanupLogsLBox.Items.Add("Error: " + ex);
+
             }
             return false;
 
@@ -79,18 +80,20 @@ namespace Tasks
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
+            var usertemp = new DirectoryInfo(Path.GetTempPath());
 
             if (checkBox1.Checked)
                 try
-            {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
-            }
-                    catch (Exception ex)
-            {
-                CleanupLogsLBox.Items.Add("Error cleaning the downloads foler. " + ex);
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
+                }
+                catch (Exception)
+                {
+                    CleanupLogsLBox.Items.Add("Could not delete Downloads Folder. ");
 
-            }
+                }
 
             if (checkBox2.Checked)
                 try {
@@ -98,33 +101,30 @@ namespace Tasks
                     SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
                     CleanupLogsLBox.Items.Add("Recycle Bin Cleaned.");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    CleanupLogsLBox.Items.Add("Error cleaning the recycle bin. " + ex);
+                    CleanupLogsLBox.Items.Add("Could not clear Recycle Bin. ");
 
                 }
 
- 
 
-  
-   
+
+
+
 
 
             if (checkBox3.Checked)
             {
                 try
                 {
-                    var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
-                    var usertemp = new DirectoryInfo(Path.GetTempPath());
-
                     if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Cleaned.");
                     if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Cleaned.");
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error while cleaning temp folders. " + ex);
+                    CleanupLogsLBox.Items.Add("Could not delete Temp Folders. " + ex);
                 }
-         
+
             }
 
             if (checkBox4.Checked)
@@ -134,9 +134,9 @@ namespace Tasks
                     var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
                     if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
                 }
-              catch(Exception ex )
+                catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error while cleaning Prefetch. " + ex);
+                    CleanupLogsLBox.Items.Add("Could not delete Prefetch. " + ex);
                 }
             }
 
@@ -183,7 +183,7 @@ namespace Tasks
                 CleanupLogsLBox.Items.Add("Chrome Search History Cleaned.");
             }
 
-       
+
 
             // Discord
 
@@ -199,19 +199,19 @@ namespace Tasks
 
 
             if (checkBox25.Checked) //Discord cookies
-            try
+                try
                 {
 
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies-journal");
-                CleanupLogsLBox.Items.Add("Discord Cookies Cleaned.");
+                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies");
+                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies-journal");
+                    CleanupLogsLBox.Items.Add("Discord Cookies Cleaned.");
 
-            } 
+                }
                 catch (Exception ex)
-            {
+                {
                     CleanupLogsLBox.Items.Add("There was an error trying to clean Discord Cookies." + ex);
                 }
-        
+
             //Firefox
 
             if (checkBox14.Checked) //Firefox cache
@@ -234,7 +234,7 @@ namespace Tasks
                                 }
                                 catch (Exception ex)
                                 {
-                                    CleanupLogsLBox.Items.Add("Exception Error: " + ex);
+                                    CleanupLogsLBox.Items.Add("Could not delete Firefox Cache: " + ex);
                                 }
 
                             }
@@ -247,7 +247,7 @@ namespace Tasks
                                 }
                                 catch (Exception ex)
                                 {
-                                    CleanupLogsLBox.Items.Add("Exception Error:" + ex);
+                                    CleanupLogsLBox.Items.Add("Could not delete Firefox Cache:" + ex);
                                 }
 
                             }
@@ -269,7 +269,7 @@ namespace Tasks
                                         try
                                         {
                                             File.Delete(file);
-                                            CleanupLogsLBox.Items.Add("Deleted File: " + file);
+                                            CleanupLogsLBox.Items.Add("Deleted " + file);
                                         }
                                         catch
                                         {
@@ -324,7 +324,7 @@ namespace Tasks
                             catch (Exception ex)
                             {
 
-                                CleanupLogsLBox.Items.Add("Error while trying to delete Firefox cookies! \n" + ex);
+                                CleanupLogsLBox.Items.Add("Could not delete Firefox Cookies." + ex);
                             }
 
                         }
@@ -426,28 +426,28 @@ namespace Tasks
                 {
                     CleanRecentFiles.CleanRecents.ClearAll();
                     CleanupLogsLBox.Items.Add("Recent Files Cleared.");
-                } 
+                }
                 catch (Exception ex)
                 {
-                CleanupLogsLBox.Items.Add("Error while clearing Recent Files. " + ex);
+                    CleanupLogsLBox.Items.Add("Error while clearing Recent Files. " + ex);
                 }
-          
+
             }
 
 
-            if(checkBox18.Checked) //Edge search history
+            if (checkBox18.Checked) //Edge search history
             {
 
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History");
                 CleanupLogsLBox.Items.Add("Edge Search History Cleaned.");
             }
-            if(checkBox22.Checked) //Edge cookies
+            if (checkBox22.Checked) //Edge cookies
             {
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies");
                 CleanupLogsLBox.Items.Add("Edge Cookies Cleaned.");
             }
-                
-            if(checkBox23.Checked) //Edge cache
+
+            if (checkBox23.Checked) //Edge cache
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache");
@@ -461,25 +461,32 @@ namespace Tasks
                 if (DeleteAllFiles(directory5)) CleanupLogsLBox.Items.Add("Edge Cache Storage Cleaned.");
             }
 
-            if(checkBox10.Checked)
+            if (checkBox10.Checked)
             {
-                try
+                foreach (var eventLog in EventLog.GetEventLogs())
                 {
-                    foreach (var eventLog in EventLog.GetEventLogs())
+                    try
                     {
                         eventLog.Clear();
                         eventLog.Dispose();
-                        CleanupLogsLBox.Items.Add("Event Logs cleared.");
+                        CleanupLogsLBox.Items.Add("Event Logs Cleared.");
                     }
-                } catch(Exception ex)
-                {
-                    CleanupLogsLBox.Items.Add("Error clearing event logs: " + ex);
-                }
-    
+                    catch (Exception ex)
+                    {
+                        CleanupLogsLBox.Items.Add("Could not delete event logs." + ex);
+
+                    }
+            }
+
+
+               
+                  
+              
+
 
             }
 
-            if(checkBox11.Checked)
+            if (checkBox11.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Sessions");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Session Storage");
@@ -500,11 +507,65 @@ namespace Tasks
             }
 
 
-            if(checkBox17.Checked)
+            if (checkBox17.Checked)
             {
                 var directory = new DirectoryInfo("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Error Reporting Cleaned.");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Deleted " + directory);
             }
+
+            if (checkBox24.Checked)
+            {
+                var tc = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\Explorer\\");
+                foreach (string file in Directory.EnumerateFiles(tc))
+
+                    if (file.Contains("thumbcache") == true)
+                    {
+                        try
+                        {
+                            File.Delete(file);
+                            CleanupLogsLBox.Items.Add("Deleted " + file);
+                        }
+                        catch (Exception)
+                        {
+                            CleanupLogsLBox.Items.Add("Could not delete " + file);
+                        }
+
+                    }
+            }
+            if(checkBox25.Checked)
+            {
+                var tc = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\Explorer\\");
+                foreach (string file in Directory.EnumerateFiles(tc))
+
+                    if (file.Contains("iconcache") == true)
+                    {
+                        try
+                        {
+                            File.Delete(file);
+                            CleanupLogsLBox.Items.Add("Deleted " + file);
+                        }
+                        catch (Exception)
+                        {
+                            CleanupLogsLBox.Items.Add("Could not delete " + file);
+                        }
+
+                    }
+            }
+              
+
+  
+          
+                
+            
+
+
+ 
+
+
+
+
+       
+
 
             if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;
 
