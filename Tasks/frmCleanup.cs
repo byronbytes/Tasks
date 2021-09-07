@@ -297,7 +297,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error while trying to clean firefox cache! \n" + ex);
+                    CleanupLogsLBox.Items.Add("Error while trying to delete firefox cache! \n" + ex);
                 }
 
 
@@ -374,7 +374,7 @@ namespace Tasks
 
 
             //DNS & ARP
-            if (checkBox19.Checked) //Clear dns
+            if (checkBox19.Checked) //Clear DNS
             {
                 try
                 {

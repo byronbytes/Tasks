@@ -58,6 +58,7 @@ namespace Tasks
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBox27 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.checkBox25 = new System.Windows.Forms.CheckBox();
             this.lblEdgeNotDetected = new System.Windows.Forms.Label();
@@ -98,7 +99,6 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -493,6 +493,20 @@ namespace Tasks
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
             // 
+            // checkBox27
+            // 
+            this.checkBox27.AutoSize = true;
+            this.checkBox27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox27.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox27.ForeColor = System.Drawing.Color.White;
+            this.checkBox27.Location = new System.Drawing.Point(16, 178);
+            this.checkBox27.Name = "checkBox27";
+            this.checkBox27.Size = new System.Drawing.Size(128, 21);
+            this.checkBox27.TabIndex = 45;
+            this.checkBox27.Text = "Saved Passwords";
+            this.checkBox27.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox27.UseVisualStyleBackColor = true;
+            // 
             // checkBox11
             // 
             this.checkBox11.AutoSize = true;
@@ -526,7 +540,7 @@ namespace Tasks
             this.lblEdgeNotDetected.AutoSize = true;
             this.lblEdgeNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblEdgeNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblEdgeNotDetected.Location = new System.Drawing.Point(13, 402);
+            this.lblEdgeNotDetected.Location = new System.Drawing.Point(13, 392);
             this.lblEdgeNotDetected.Name = "lblEdgeNotDetected";
             this.lblEdgeNotDetected.Size = new System.Drawing.Size(138, 19);
             this.lblEdgeNotDetected.TabIndex = 41;
@@ -613,7 +627,7 @@ namespace Tasks
             this.lblChromeNotDetected.AutoSize = true;
             this.lblChromeNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblChromeNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblChromeNotDetected.Location = new System.Drawing.Point(14, 200);
+            this.lblChromeNotDetected.Location = new System.Drawing.Point(14, 202);
             this.lblChromeNotDetected.Name = "lblChromeNotDetected";
             this.lblChromeNotDetected.Size = new System.Drawing.Size(157, 19);
             this.lblChromeNotDetected.TabIndex = 33;
@@ -948,10 +962,10 @@ namespace Tasks
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.Location = new System.Drawing.Point(6, 12);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(528, 38);
+            this.label13.Size = new System.Drawing.Size(635, 38);
             this.label13.TabIndex = 0;
-            this.label13.Text = "This is a new feature that sorts out all your extensions for your supported brows" +
-    "er, \r\nand you can select which ones you want to remove.";
+            this.label13.Text = "This feature sorts out all your extensions for your supported browser, and you ca" +
+    "n select which ones\r\n you want to remove.";
             // 
             // btnCleanup
             // 
@@ -976,20 +990,6 @@ namespace Tasks
             this.btnCopyLogs.Text = "Copy Cleanup Logs";
             this.btnCopyLogs.UseVisualStyleBackColor = true;
             this.btnCopyLogs.Click += new System.EventHandler(this.btnCopyLogs_Click_1);
-            // 
-            // checkBox27
-            // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox27.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox27.ForeColor = System.Drawing.Color.White;
-            this.checkBox27.Location = new System.Drawing.Point(16, 178);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(128, 21);
-            this.checkBox27.TabIndex = 45;
-            this.checkBox27.Text = "Saved Passwords";
-            this.checkBox27.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox27.UseVisualStyleBackColor = true;
             // 
             // frmCleanup
             // 
