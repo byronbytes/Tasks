@@ -77,12 +77,13 @@ namespace Tasks
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
+            var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
 
             if (checkBox1.Checked)
                 try
                 {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
-                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
+
+                    if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
                 }
                 catch (Exception ex)
                 {
@@ -148,13 +149,8 @@ namespace Tasks
                     var directory5 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\CacheStorage\\");
                     var directory6 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\ScriptCache\\");
                     var directory7 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\GrShaderCache\\GPUCache\\");
-                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
-                    if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Code Cache Cleaned.");
-                    if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome GPU Cache Cleaned.");
-                    if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Chrome Cache Cache Cleaned.");
-                    if (DeleteAllFiles(directory5)) CleanupLogsLBox.Items.Add("Chrome Cache Cache Cleaned.");
-                    if (DeleteAllFiles(directory6)) CleanupLogsLBox.Items.Add("Chrome Cache Cache Cleaned.");
-                    if (DeleteAllFiles(directory7)) CleanupLogsLBox.Items.Add("Chrome Cache Cache Cleaned.");
+                    var directory8 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\File System\\000\\p\\");
+                    if(DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3) & DeleteAllFiles(directory4) & DeleteAllFiles(directory5) & DeleteAllFiles(directory6) & DeleteAllFiles(directory7) & DeleteAllFiles(directory8)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
                 }
                 catch (Exception)
                 {
@@ -167,8 +163,7 @@ namespace Tasks
 
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Session Cleaned.");
-                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Session Storage Cleaned.");
+                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Session Deleted.");
             }
 
             if (checkBox7.Checked) //Chrome cookies
@@ -179,7 +174,7 @@ namespace Tasks
 
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
-                CleanupLogsLBox.Items.Add("Chrome Cookies Cleaned.");
+                CleanupLogsLBox.Items.Add("Chrome Cookies Deleted.");
             }
 
 
@@ -188,7 +183,7 @@ namespace Tasks
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History Provider Cache");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History-journal");
-                CleanupLogsLBox.Items.Add("Chrome Search History Cleaned.");
+                CleanupLogsLBox.Items.Add("Chrome Search History Deleted.");
             }
 
 
@@ -200,9 +195,7 @@ namespace Tasks
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cache");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Code Cache");
                 var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\GPUCache");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Discord Cache Cleaned.");
-                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Discord Code Cache Cleaned.");
-                if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Discord GPU Cache Cleaned.");
+                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Discord Cache Cleaned.");
             }
 
 
@@ -400,7 +393,7 @@ namespace Tasks
                 catch (Exception ex)
                 {
 
-                    CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache! \n" + ex);
+                    CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache!" + ex);
 
                 }
             }
