@@ -98,6 +98,7 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
+            this.checkBox27 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -458,6 +459,7 @@ namespace Tasks
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage2.Controls.Add(this.checkBox27);
             this.tabPage2.Controls.Add(this.checkBox11);
             this.tabPage2.Controls.Add(this.checkBox25);
             this.tabPage2.Controls.Add(this.lblEdgeNotDetected);
@@ -611,7 +613,7 @@ namespace Tasks
             this.lblChromeNotDetected.AutoSize = true;
             this.lblChromeNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblChromeNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblChromeNotDetected.Location = new System.Drawing.Point(13, 172);
+            this.lblChromeNotDetected.Location = new System.Drawing.Point(14, 200);
             this.lblChromeNotDetected.Name = "lblChromeNotDetected";
             this.lblChromeNotDetected.Size = new System.Drawing.Size(157, 19);
             this.lblChromeNotDetected.TabIndex = 33;
@@ -975,6 +977,20 @@ namespace Tasks
             this.btnCopyLogs.UseVisualStyleBackColor = true;
             this.btnCopyLogs.Click += new System.EventHandler(this.btnCopyLogs_Click_1);
             // 
+            // checkBox27
+            // 
+            this.checkBox27.AutoSize = true;
+            this.checkBox27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox27.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox27.ForeColor = System.Drawing.Color.White;
+            this.checkBox27.Location = new System.Drawing.Point(16, 178);
+            this.checkBox27.Name = "checkBox27";
+            this.checkBox27.Size = new System.Drawing.Size(128, 21);
+            this.checkBox27.TabIndex = 45;
+            this.checkBox27.Text = "Saved Passwords";
+            this.checkBox27.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox27.UseVisualStyleBackColor = true;
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1076,5 +1092,6 @@ namespace Tasks
         private System.Windows.Forms.CheckBox checkBox17;
         private System.Windows.Forms.CheckBox checkBox24;
         private System.Windows.Forms.CheckBox checkBox26;
+        private System.Windows.Forms.CheckBox checkBox27;
     }
 }

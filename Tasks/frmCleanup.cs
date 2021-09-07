@@ -158,12 +158,13 @@ namespace Tasks
                 }
             }
 
-            if (checkBox6.Checked) //Chrome session storage
+            if (checkBox6.Checked) //Chrome Session 
             {
 
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Session Deleted.");
+                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State");
+                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
             }
 
             if (checkBox7.Checked) //Chrome cookies
@@ -171,10 +172,10 @@ namespace Tasks
 
             {
                 taskDialog1.Show();
-
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
-                CleanupLogsLBox.Items.Add("Chrome Cookies Deleted.");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Cookies Deleted.");
             }
 
 
@@ -552,6 +553,12 @@ namespace Tasks
                     }
             }
 
+            if(checkBox26.Checked)
+            {
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data\\");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Saved Passwords Deleted.");
+            }
+
 
             if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;
 
@@ -637,7 +644,7 @@ namespace Tasks
             {
                 checkBox23.Enabled = false;
                 checkBox22.Enabled = false;
-               checkBox18.Enabled = false;
+                checkBox18.Enabled = false;
                 checkBox11.Enabled = false;
                 lblEdgeNotDetected.Visible = true;
 
