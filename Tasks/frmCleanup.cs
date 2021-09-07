@@ -168,10 +168,7 @@ namespace Tasks
             }
 
             if (checkBox7.Checked) //Chrome cookies
-
-
             {
-                taskDialog1.Show();
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
@@ -842,7 +839,7 @@ namespace Tasks
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-
+            taskDialog1.Show();
         }
     }
     }
