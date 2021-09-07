@@ -43,7 +43,7 @@ namespace Tasks
                 try
                 {
                     file.Delete();
-                    CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
+                    CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
                 }
                 catch (Exception ex)
                 {
@@ -86,7 +86,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error cleaning the downloads foler. " + ex);
+                    CleanupLogsLBox.Items.Add("Error deleting the Downloads Folder. " + ex);
 
                 }
 
@@ -98,7 +98,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error cleaning the recycle bin. " + ex);
+                    CleanupLogsLBox.Items.Add("Error deleting the Recycle Bin. " + ex);
 
                 }
 
@@ -117,7 +117,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error while cleaning temp folders. " + ex);
+                    CleanupLogsLBox.Items.Add("Error while deleting temp folders. " + ex);
                 }
 
             }
@@ -149,7 +149,8 @@ namespace Tasks
                     if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Code Cache Cleaned.");
                     if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome GPU Cache Cleaned.");
                     if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Chrome Shader Cache Cleaned.");
-                }catch (Exception)
+                }
+                catch (Exception)
                 {
 
                 }
@@ -509,6 +510,7 @@ namespace Tasks
 
             if (checkBox24.Checked)
             {
+               
                 var tc = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\Explorer\\");
                 foreach (string file in Directory.EnumerateFiles(tc))
 
@@ -529,8 +531,8 @@ namespace Tasks
 
             if(checkBox25.Checked)
             {
-                var tc = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\Explorer\\");
-                foreach (string file in Directory.EnumerateFiles(tc))
+                var ic = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\Explorer\\");
+                foreach (string file in Directory.EnumerateFiles(ic))
 
                     if (file.Contains("iconcache") == true)
                     {
@@ -825,6 +827,11 @@ namespace Tasks
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

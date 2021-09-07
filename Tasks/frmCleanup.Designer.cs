@@ -42,6 +42,7 @@ namespace Tasks
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox26 = new System.Windows.Forms.CheckBox();
             this.checkBox24 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
@@ -97,7 +98,6 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.btnCopyLogs = new System.Windows.Forms.Button();
-            this.checkBox26 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -262,6 +262,19 @@ namespace Tasks
             this.tabPage1.Size = new System.Drawing.Size(703, 767);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
+            // 
+            // checkBox26
+            // 
+            this.checkBox26.AutoSize = true;
+            this.checkBox26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox26.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox26.Location = new System.Drawing.Point(6, 561);
+            this.checkBox26.Name = "checkBox26";
+            this.checkBox26.Size = new System.Drawing.Size(90, 21);
+            this.checkBox26.TabIndex = 35;
+            this.checkBox26.Text = "Icon Cache";
+            this.checkBox26.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox26.UseVisualStyleBackColor = true;
             // 
             // checkBox24
             // 
@@ -669,6 +682,7 @@ namespace Tasks
             this.checkBox7.Text = "Cookies";
             this.checkBox7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // checkBox16
             // 
@@ -960,19 +974,6 @@ namespace Tasks
             this.btnCopyLogs.Text = "Copy Cleanup Logs";
             this.btnCopyLogs.UseVisualStyleBackColor = true;
             this.btnCopyLogs.Click += new System.EventHandler(this.btnCopyLogs_Click_1);
-            // 
-            // checkBox26
-            // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox26.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox26.Location = new System.Drawing.Point(6, 561);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(90, 21);
-            this.checkBox26.TabIndex = 35;
-            this.checkBox26.Text = "Icon Cache";
-            this.checkBox26.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox26.UseVisualStyleBackColor = true;
             // 
             // frmCleanup
             // 
