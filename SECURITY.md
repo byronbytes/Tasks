@@ -1,8 +1,8 @@
-<h1>Tasks Security Policy</h1>
+# Tasks Security Policy
 
 This is the current Security Policy for Tasks. Last updated on August 21st, 2021.
 
-<h2>Supported Versions</h2>
+## Supported Versions
 
 These are the supported versions of Tasks. We will not maintain older versions of Tasks (for instance, legacy version (v1.x)).
 
