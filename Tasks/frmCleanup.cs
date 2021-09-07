@@ -37,45 +37,40 @@ namespace Tasks
 
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
-            try
+
+            foreach (var file in directoryInfo.GetFiles())
             {
-                foreach (var file in directoryInfo.GetFiles())
+                try
                 {
-                    try
-                    {
-                        file.Delete();
-                        CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
-                    }
-                    catch (Exception ex)
-                    {
-
-                    }
-
+                    file.Delete();
+                    CleanupLogsLBox.Items.Add("Deleted File " + file.FullName);
                 }
-                foreach (var dir in directoryInfo.GetDirectories())
+                catch (Exception ex)
                 {
-                    try
-                    {
-                        dir.Delete(true);
-                        CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
-                    }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    CleanupLogsLBox.Items.Add("Exception Thrown: " + ex.Message);
 
                 }
 
-                return true;
             }
-            catch (Exception ex)
+            foreach (var dir in directoryInfo.GetDirectories())
             {
-                CleanupLogsLBox.Items.Add("Error: " + ex);
+                try
+                {
+                    dir.Delete(true);
+                    CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
+                }
+                catch (Exception ex)
+                {
+                    CleanupLogsLBox.Items.Add("Exception Thrown: " + ex.Message);
+                }
 
             }
-            return false;
 
+            return true;
         }
+        
+
+        
         private void btnCleanup_Click(object sender, EventArgs e)
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
@@ -89,9 +84,9 @@ namespace Tasks
                     var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
                     if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Could not delete Downloads Folder. ");
+                    CleanupLogsLBox.Items.Add("Error cleaning the downloads foler. " + ex);
 
                 }
 
@@ -101,9 +96,9 @@ namespace Tasks
                     SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
                     CleanupLogsLBox.Items.Add("Recycle Bin Cleaned.");
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Could not clear Recycle Bin. ");
+                    CleanupLogsLBox.Items.Add("Error cleaning the recycle bin. " + ex);
 
                 }
 
@@ -122,7 +117,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Could not delete Temp Folders. " + ex);
+                    CleanupLogsLBox.Items.Add("Error while cleaning temp folders. " + ex);
                 }
 
             }
@@ -136,7 +131,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Could not delete Prefetch. " + ex);
+                    CleanupLogsLBox.Items.Add("Error while cleaning Prefetch. " + ex);
                 }
             }
 
@@ -144,14 +139,20 @@ namespace Tasks
 
             if (checkBox5.Checked)
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Code Cache");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\GPUCache");
-                var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\ShaderCache");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
-                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Code Cache Cleaned.");
-                if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome GPU Cache Cleaned.");
-                if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Chrome Shader Cache Cleaned.");
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache\\");
+                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Code Cache\\");
+                    var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\GPUCache\\");
+                    var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\ShaderCache\\");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
+                    if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Code Cache Cleaned.");
+                    if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome GPU Cache Cleaned.");
+                    if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Chrome Shader Cache Cleaned.");
+                }catch (Exception)
+                {
+
+                }
             }
 
             if (checkBox6.Checked) //Chrome session storage
@@ -234,7 +235,7 @@ namespace Tasks
                                 }
                                 catch (Exception ex)
                                 {
-                                    CleanupLogsLBox.Items.Add("Could not delete Firefox Cache: " + ex);
+                                    CleanupLogsLBox.Items.Add("Exception Error: " + ex);
                                 }
 
                             }
@@ -247,7 +248,7 @@ namespace Tasks
                                 }
                                 catch (Exception ex)
                                 {
-                                    CleanupLogsLBox.Items.Add("Could not delete Firefox Cache:" + ex);
+                                    CleanupLogsLBox.Items.Add("Exception Error:" + ex);
                                 }
 
                             }
@@ -269,7 +270,7 @@ namespace Tasks
                                         try
                                         {
                                             File.Delete(file);
-                                            CleanupLogsLBox.Items.Add("Deleted " + file);
+                                            CleanupLogsLBox.Items.Add("Deleted File: " + file);
                                         }
                                         catch
                                         {
@@ -324,7 +325,7 @@ namespace Tasks
                             catch (Exception ex)
                             {
 
-                                CleanupLogsLBox.Items.Add("Could not delete Firefox Cookies." + ex);
+                                CleanupLogsLBox.Items.Add("Error while trying to delete Firefox cookies! \n" + ex);
                             }
 
                         }
@@ -463,25 +464,18 @@ namespace Tasks
 
             if (checkBox10.Checked)
             {
-                foreach (var eventLog in EventLog.GetEventLogs())
+                try
                 {
-                    try
+                    foreach (var eventLog in EventLog.GetEventLogs())
                     {
                         eventLog.Clear();
                         eventLog.Dispose();
-                        CleanupLogsLBox.Items.Add("Event Logs Cleared.");
+                        CleanupLogsLBox.Items.Add("Event Logs cleared.");
                     }
-                    catch (Exception ex)
-                    {
-                        CleanupLogsLBox.Items.Add("Could not delete event logs." + ex);
-
-                    }
-            }
-
-
-               
-                  
-              
+                } catch (Exception ex)
+                {
+                    CleanupLogsLBox.Items.Add("Error clearing event logs: " + ex);
+                }
 
 
             }
@@ -532,6 +526,7 @@ namespace Tasks
 
                     }
             }
+
             if(checkBox25.Checked)
             {
                 var tc = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\Explorer\\");
@@ -551,20 +546,6 @@ namespace Tasks
 
                     }
             }
-              
-
-  
-          
-                
-            
-
-
- 
-
-
-
-
-       
 
 
             if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;

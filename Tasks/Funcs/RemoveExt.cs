@@ -24,5 +24,19 @@ namespace Tasks
                 return 1;
             }
         }
+            public static int RemoveExtChrome(string extpath)
+            {
+                try
+                {
+
+                    string aa = extpath;
+                    File.Delete(aa);
+                    return 0;
+                }
+                catch
+                {
+                    return 1;
+                }
+            }
     }
 }
