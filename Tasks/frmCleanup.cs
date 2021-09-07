@@ -440,26 +440,31 @@ namespace Tasks
             {
 
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History");
-                CleanupLogsLBox.Items.Add("Edge Search History Cleaned.");
+                CleanupLogsLBox.Items.Add("Edge Search History Deleted.");
             }
             if (checkBox22.Checked) //Edge cookies
             {
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies");
+           
+                     File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies");
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\IndexedDB\\");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Cookies Deleted.");
+
+
+
                 CleanupLogsLBox.Items.Add("Edge Cookies Cleaned.");
             }
 
             if (checkBox23.Checked) //Edge cache
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\GPUCache");
-                var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\ShaderCache");
-                var directory5 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\CacheStorage");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Cache Cleaned.");
-                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Edge Code Cache Cleaned.");
-                if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Edge GPU Cache Cleaned.");
-                if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Edge Shader Cache Cleaned.");
-                if (DeleteAllFiles(directory5)) CleanupLogsLBox.Items.Add("Edge Cache Storage Cleaned.");
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache\\");
+                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache\\");
+                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\");
+                var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\ShaderCache\\");
+                var directory5 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\CacheStorage\\");
+                var directory6 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\ScriptCache\\");
+                var directory7 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\GrShaderCache\\GPUCache\\");
+                var directory8 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\Database\\");
+                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3) & DeleteAllFiles(directory4) & DeleteAllFiles(directory5) & DeleteAllFiles(directory6) & DeleteAllFiles(directory7) & DeleteAllFiles(directory8)) CleanupLogsLBox.Items.Add("Edge Cache Deleted.");
             }
 
             if (checkBox10.Checked)
@@ -470,11 +475,11 @@ namespace Tasks
                     {
                         eventLog.Clear();
                         eventLog.Dispose();
-                        CleanupLogsLBox.Items.Add("Event Logs cleared.");
+                        CleanupLogsLBox.Items.Add("Event Logs Deleted.");
                     }
                 } catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error clearing event logs: " + ex);
+                    CleanupLogsLBox.Items.Add("Error deleting Event Logs: " + ex);
                 }
 
 
@@ -484,8 +489,7 @@ namespace Tasks
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Sessions");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Session Storage");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Session Cleaned.");
-                if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Edge Session Storage Cleaned.");
+                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) ) CleanupLogsLBox.Items.Add("Edge Session Deleted.");
             }
 
             if (checkBox12.Checked)
