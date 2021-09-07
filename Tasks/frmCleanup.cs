@@ -145,10 +145,16 @@ namespace Tasks
                     var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Code Cache\\");
                     var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\GPUCache\\");
                     var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\ShaderCache\\");
+                    var directory5 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\CacheStorage\\");
+                    var directory6 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\ScriptCache\\");
+                    var directory7 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\GrShaderCache\\GPUCache\\");
                     if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
                     if (DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Code Cache Cleaned.");
                     if (DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome GPU Cache Cleaned.");
-                    if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Chrome Shader Cache Cleaned.");
+                    if (DeleteAllFiles(directory4)) CleanupLogsLBox.Items.Add("Chrome Cache Cache Cleaned.");
+                    if (DeleteAllFiles(directory5)) CleanupLogsLBox.Items.Add("Chrome Cache Cache Cleaned.");
+                    if (DeleteAllFiles(directory6)) CleanupLogsLBox.Items.Add("Chrome Cache Cache Cleaned.");
+                    if (DeleteAllFiles(directory7)) CleanupLogsLBox.Items.Add("Chrome Cache Cache Cleaned.");
                 }
                 catch (Exception)
                 {
@@ -416,7 +422,7 @@ namespace Tasks
                 catch (Exception ex)
                 {
 
-                    CleanupLogsLBox.Items.Add("Error while trying to clear ARP cache! \n" + ex);
+                    CleanupLogsLBox.Items.Add("Error while trying to clear ARP cache. " + ex);
                     MessageBox.Show(ex.ToString());
 
                 }
