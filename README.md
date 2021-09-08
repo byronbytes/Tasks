@@ -12,7 +12,7 @@
 
 <h1>✅ Features</h1>
 
-- Clean folders such as Prefetch, Downloads, Temp and empty your Recycle Bin easily.
+- An advanced cleanup tool that lets you cleanup Windows directories and application cache files.
 - Enable/Disable Programs that run on Startup.
 - An advanced task manager that gives you more information than the internal Windows Task Manager.
 - Remove bloatware from your computer on a click of a button.
