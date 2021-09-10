@@ -4,7 +4,6 @@
 <img src="https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues" alt="Open Issues" /> <img src="https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable" alt="Latest Stable Version" /> <img src="https://img.shields.io/github/downloads/LiteTools/Tasks/total" alt="Total Downloads" />
 
 
-
 <strong>Tasks</strong> is a simple program allowing you to clean your computer, remove bloatware as well as control startup programs, and a new advanced Task Manager that works better than Windows Task Manager, faster and lets you control apps that are maliciously eating your system resources.
 
 <strong>Tasks</strong> is licensed under the <strong>Apache 2.0</strong> license.
@@ -12,10 +11,10 @@
 
 <h1>✅ Features</h1>
 
-- Clean folders such as Prefetch, Downloads, Temp and empty your Recycle Bin easily.
+- An advanced cleanup tool that lets you cleanup Windows directories and application cache files.
 - Enable/Disable Programs that run on Startup.
 - An advanced task manager that gives you more information than the internal Windows Task Manager.
-- Remove bloatware from your computer on a click of a button.
+- Remove bloatware from your computer in one click.
 
 
 <h1>📩 Installation</h1>
