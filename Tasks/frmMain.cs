@@ -35,22 +35,6 @@ namespace Tasks
             TaskManager.Show(); // Show Form
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Process.Start(new ProcessStartInfo { FileName = "https://twitter.com/Lite_Tools", UseShellExecute = true });
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Process.Start(new ProcessStartInfo{FileName = "https://discord.gg/nCBD9ZJjng", UseShellExecute = true});
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/issues/new", UseShellExecute = true });
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             frmStartupPrograms Startups = new frmStartupPrograms();

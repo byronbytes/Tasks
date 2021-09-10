@@ -74,6 +74,7 @@ namespace Tasks
         {
             try
             {
+                dialogEdgeNotif.ShowDialog();
                 Process process = new Process();
                 process.StartInfo.FileName = "Scripts/BatFiles/removeedge.bat";
                 process.Start();
