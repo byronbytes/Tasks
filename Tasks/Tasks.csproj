@@ -44,9 +44,6 @@
     <None Update="Scripts\BatFiles\byesolitaire.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Scripts\BatFiles\killchrome.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Scripts\BatFiles\killedge.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -63,9 +60,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Scripts\Debloater\DisableCortana.ps1">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\Debloater\RemoveBloatRegKeys.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Scripts\Debloater\UninstallOneDrive.ps1">
