@@ -46,7 +46,6 @@ namespace Tasks
             try
             {
                 RunFile.RunBat("Scripts/Debloater/DisableCortana.ps1", true);
-                dialogError.Show();
             }
             catch (Exception ex)
             {

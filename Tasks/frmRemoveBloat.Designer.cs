@@ -91,7 +91,6 @@ namespace Tasks
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::Tasks.Properties.Resources.Warning;
             this.button4.Location = new System.Drawing.Point(6, 178);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(175, 37);
@@ -133,7 +132,7 @@ namespace Tasks
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(663, 413);
+            this.tabPage3.Size = new System.Drawing.Size(663, 386);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Legal Information";
             // 
