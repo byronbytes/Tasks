@@ -10,13 +10,11 @@ namespace Tasks
     class RemoveExt
     {
 
-        public static int RemoveExtFirefox(string extpath)
+        public static int RemoveExtFirefox(string extpath) 
         {
-            try
+            try 
             {
-
-                string aa = extpath;
-                File.Delete(aa);
+                File.Delete(extpath);
                 return 0;
             }
             catch
@@ -28,9 +26,7 @@ namespace Tasks
             {
                 try
                 {
-
-                    string aa = extpath;
-                    File.Delete(aa);
+                    File.Delete(extpath);
                     return 0;
                 }
                 catch
