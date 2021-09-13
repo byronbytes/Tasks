@@ -82,8 +82,7 @@ namespace Tasks
             if (checkBox1.Checked)
                 try
                 {
-
-                    if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
+             if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Deleted.");
                 }
                 catch (Exception ex)
                 {
