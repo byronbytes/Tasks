@@ -11,6 +11,7 @@ using Microsoft.Win32;
 using System.IO;
 using System.Management;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Tasks
 {
@@ -23,6 +24,11 @@ namespace Tasks
             RenderStartupsOnListWiew();
         }
 
+        private void ClearStartupList()
+        {
+            StartupProcesses.Items.Clear();
+        }
+
         private void RenderStartupsOnListWiew()
         {
             ManagementClass mangnmt = new ManagementClass("Win32_StartupCommand");
@@ -33,7 +39,7 @@ namespace Tasks
                 oo.SubItems.Add(strt["Location"].ToString());
             }
 
-            
+
         }
 
 
@@ -41,12 +47,14 @@ namespace Tasks
         {
             //todo later
 
-         
+  
+
+
         }
 
         private void frmStartupPrograms_Load(object sender, EventArgs e)
         {
-
+            txtTargetPath.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
         }
 
         private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e)
@@ -64,32 +72,53 @@ namespace Tasks
             {
                 MessageBox.Show("Error: " + ex);
             }
-        
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "All|*.*" })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                txtFileName.Text = ofd.FileName;
+                FileInfo fileInfo = new FileInfo(txtFileName.Text);
+                txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
+                File.Copy(txtFileName.Text, txtTargetPath.Text, true);
+                Thread.Sleep(30);
+                ClearStartupList();
+                RenderStartupsOnListWiew();
+
+            }
+
+ 
+               
+            
 
         }
-    }
-    public class StartUpProgram
 
-    {
-
-        public string Name { get; set; }
-
-
-        public string Path { get; set; }
-
-        //show name in checkboxitem
-
-        public override string ToString()
+        private void button4_Click(object sender, EventArgs e)
+        {
+           
+        }
+        public class StartUpProgram
 
         {
 
-            return Name;
+            public string Name { get; set; }
+
+
+            public string Path { get; set; }
+
+            //show name in checkboxitem
+
+            public override string ToString()
+
+            {
+
+                return Name;
+
+            }
 
         }
-
     }
 }

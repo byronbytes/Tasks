@@ -9,6 +9,5 @@ namespace Tasks.Classes
     class CleanupDirectories
     {
 
-        public static string chromedir1;
     }
 }

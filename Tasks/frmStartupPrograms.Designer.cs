@@ -37,6 +37,10 @@ namespace Tasks
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.txtFileName = new System.Windows.Forms.Label();
+            this.txtTargetPath = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // StartupProcesses
@@ -109,12 +113,40 @@ namespace Tasks
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // txtFileName
+            // 
+            this.txtFileName.AutoSize = true;
+            this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
+            this.txtFileName.Location = new System.Drawing.Point(179, 609);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(96, 15);
+            this.txtFileName.TabIndex = 4;
+            this.txtFileName.Text = "Added Directory:";
+            this.txtFileName.Visible = false;
+            // 
+            // txtTargetPath
+            // 
+            this.txtTargetPath.AutoSize = true;
+            this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtTargetPath.Location = new System.Drawing.Point(179, 624);
+            this.txtTargetPath.Name = "txtTargetPath";
+            this.txtTargetPath.Size = new System.Drawing.Size(96, 15);
+            this.txtTargetPath.TabIndex = 5;
+            this.txtTargetPath.Text = "Added Directory:";
+            this.txtTargetPath.Visible = false;
+            // 
             // frmStartupPrograms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(940, 643);
+            this.ClientSize = new System.Drawing.Size(958, 648);
+            this.Controls.Add(this.txtTargetPath);
+            this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -125,6 +157,7 @@ namespace Tasks
             this.Text = "Startup Programs";
             this.Load += new System.EventHandler(this.frmStartupPrograms_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -137,5 +170,9 @@ namespace Tasks
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label txtFileName;
+        private System.Windows.Forms.Label txtTargetPath;
     }
 }
