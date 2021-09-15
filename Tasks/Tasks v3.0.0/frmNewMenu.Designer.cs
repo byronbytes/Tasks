@@ -41,6 +41,7 @@ namespace Tasks.Tasks_v3._0._0
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -76,7 +77,7 @@ namespace Tasks.Tasks_v3._0._0
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-4, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 689);
+            this.panel1.Size = new System.Drawing.Size(178, 713);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox5
@@ -123,6 +124,7 @@ namespace Tasks.Tasks_v3._0._0
             this.pictureBox1.Size = new System.Drawing.Size(53, 42);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel6
             // 
@@ -164,12 +166,20 @@ namespace Tasks.Tasks_v3._0._0
             this.panel2.Size = new System.Drawing.Size(10, 42);
             this.panel2.TabIndex = 2;
             // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(180, -4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(964, 703);
+            this.panel7.TabIndex = 2;
+            // 
             // frmNewMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1091, 686);
+            this.ClientSize = new System.Drawing.Size(1140, 700);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Name = "frmNewMenu";
             this.Text = "Tasks";
@@ -198,5 +208,6 @@ namespace Tasks.Tasks_v3._0._0
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel7;
     }
 }

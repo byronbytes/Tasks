@@ -61,8 +61,8 @@ namespace Tasks
 
         private void label1_Click(object sender, EventArgs e)
         {
-            //frmAnalyze Analyze = new frmAnalyze();
-            //Analyze.Show();
+            Tasks_v3._0._0.frmNewMenu NewMenu = new Tasks_v3._0._0.frmNewMenu();
+            NewMenu.Show();
         }
     }
 }

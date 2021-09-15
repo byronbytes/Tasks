@@ -618,6 +618,7 @@ namespace Tasks
                 checkBox7.Enabled = false;
                 checkBox8.Enabled = false;
                 checkBox6.Enabled = false;
+                checkBox27.Enabled = false;
                 lblChromeNotDetected.Visible = true;
             }
 
