@@ -1,8 +1,5 @@
-﻿
-namespace Tasks.Tasks_v3._0._0
-{
-    partial class frmNewMenu
-    {
+﻿namespace Tasks.Tasks_v3._0._0 {
+    partial class frmNewMenu {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -12,12 +9,8 @@ namespace Tasks.Tasks_v3._0._0
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) { components.Dispose(); }
             base.Dispose(disposing);
         }
 
@@ -27,8 +20,7 @@ namespace Tasks.Tasks_v3._0._0
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();

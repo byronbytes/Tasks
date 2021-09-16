@@ -8,17 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tasks.Tasks_v3._0._0
-{
-    public partial class frmNewCleanup : Form
-    {
-        public frmNewCleanup()
-        {
-            InitializeComponent();
-        }
+namespace Tasks.Tasks_v3._0._0 {
+    public partial class frmNewCleanup : Form {
+        public frmNewCleanup() { InitializeComponent(); }
 
-        private void frmNewCleanup_Load(object sender, EventArgs e)
-        {
+        private void frmNewCleanup_Load(object sender, EventArgs e) {
             // Logs save to appdata maybe
         }
     }

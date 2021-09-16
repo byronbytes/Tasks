@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+// TODO: Cleanup and change the code style
 namespace Tasks.Properties {
     
     

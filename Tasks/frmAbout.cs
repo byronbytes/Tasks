@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+// TODO: Cleanup and change the code style
 namespace Tasks
 {
     public partial class frmAbout : Form

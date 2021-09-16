@@ -13,6 +13,7 @@ using System.Management;
 using System.Diagnostics;
 using System.Threading;
 
+// TODO: Cleanup and change the code style
 namespace Tasks
 {
 

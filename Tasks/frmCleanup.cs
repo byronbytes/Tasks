@@ -14,6 +14,7 @@ using System.Threading;
 using System.Windows.Forms;
 using ByteSizeLib;
 
+// TODO: Cleanup and change the code style
 namespace Tasks
 {
 

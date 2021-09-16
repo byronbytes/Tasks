@@ -1,4 +1,4 @@
-﻿
+﻿// TODO: Cleanup and change the code style
 namespace Tasks.Tasks_v3._0._0
 {
     partial class frmAnalyzePopup

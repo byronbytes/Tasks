@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+// TODO: Cleanup and change the code style
 namespace Tasks
 {
     class RemoveExt

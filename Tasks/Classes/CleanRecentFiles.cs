@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
+// TODO: Cleanup and change the code style
 namespace Tasks
 {
     class CleanRecentFiles

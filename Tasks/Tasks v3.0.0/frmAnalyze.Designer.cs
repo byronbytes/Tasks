@@ -1,4 +1,4 @@
-﻿
+﻿// TODO: Cleanup and change the code style
 namespace Tasks
 {
     partial class frmAnalyze

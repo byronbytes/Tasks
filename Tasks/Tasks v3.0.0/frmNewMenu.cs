@@ -8,17 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tasks.Tasks_v3._0._0
-{
-    public partial class frmNewMenu : Form
-    {
-        public frmNewMenu()
-        {
-            InitializeComponent();
-        }
+namespace Tasks.Tasks_v3._0._0 {
+    public partial class frmNewMenu : Form {
+        public frmNewMenu() { InitializeComponent(); }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+        private void pictureBox1_Click(object sender, EventArgs e) {
             frmNewCleanup Cleanup = new frmNewCleanup();
             Cleanup.TopLevel = false;
             Cleanup.AutoScroll = true;

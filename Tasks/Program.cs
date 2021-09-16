@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// TODO: Cleanup and change the code style
 namespace Tasks
 {
     static class Program

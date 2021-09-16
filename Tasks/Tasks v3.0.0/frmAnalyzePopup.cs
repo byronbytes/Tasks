@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// TODO: Cleanup and change the code style
 namespace Tasks.Tasks_v3._0._0
 {
     public partial class frmAnalyzePopup : Form
