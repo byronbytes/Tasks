@@ -101,10 +101,11 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Tasks.Properties.Resources.Cleanup_50x50_White;
+            this.pictureBox2.Image = global::Tasks.Properties.Resources.Startup_Programs_White;
             this.pictureBox2.Location = new System.Drawing.Point(52, 214);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 42);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
@@ -160,9 +161,9 @@
             // 
             // panel7
             // 
-            this.panel7.Location = new System.Drawing.Point(180, -4);
+            this.panel7.Location = new System.Drawing.Point(174, -4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(964, 703);
+            this.panel7.Size = new System.Drawing.Size(943, 689);
             this.panel7.TabIndex = 2;
             // 
             // frmNewMenu
@@ -170,7 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1140, 700);
+            this.ClientSize = new System.Drawing.Size(1115, 681);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Name = "frmNewMenu";

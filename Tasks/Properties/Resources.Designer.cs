@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// TODO: Cleanup and change the code style
 namespace Tasks.Properties {
     using System;
     
@@ -227,6 +226,16 @@ namespace Tasks.Properties {
         internal static System.Drawing.Bitmap Startup_Program {
             get {
                 object obj = ResourceManager.GetObject("Startup Program", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Startup_Programs_White {
+            get {
+                object obj = ResourceManager.GetObject("Startup Programs White", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
