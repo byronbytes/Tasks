@@ -130,6 +130,7 @@
             this.tabPage1.Size = new System.Drawing.Size(907, 635);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // checkBox26
             // 
@@ -765,7 +766,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(907, 627);
+            this.tabPage3.Size = new System.Drawing.Size(907, 635);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
             // 
@@ -775,7 +776,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(907, 627);
+            this.tabPage4.Size = new System.Drawing.Size(907, 635);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Cookie Whitelist";
             // 
@@ -785,7 +786,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 30);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(907, 627);
+            this.tabPage5.Size = new System.Drawing.Size(907, 635);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Remove Bloatware";
             // 
