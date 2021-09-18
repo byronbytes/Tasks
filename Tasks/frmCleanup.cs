@@ -14,12 +14,6 @@ using System.Threading;
 using System.Windows.Forms;
 using ByteSizeLib;
 
-//!-----------------------------------------
-// TODO Further code style change
-// TODO Change DeleteAllFiles(DirectoryInfo) to return (int, int, int) and refactor the name to CleanDirectory
-// //* Reason: To prevent misleading name
-// TODO Turn if(DeleteAllFiles(DirectoryInfo)) into CleanDirectory(DirectoryInfo)
-//!-----------------------------------------
 namespace Tasks {
     public partial class frmCleanup : Form {
         public frmCleanup() { InitializeComponent(); }
@@ -32,17 +26,15 @@ namespace Tasks {
             SHERB_NOSOUND = 0x00000004 // No sound when the emptying of the recycle bin is complete
         }
 
-
-
-        private bool DeleteAllFiles(DirectoryInfo directoryInfo) {
-            // int fileCount = directoryInfo.GetFiles().Length, folderCount = directoryInfo.GetDirectories().Length; 
-            // int deletedFile = 0, deletedFolder = 0;
+        private void CleanDirectory(DirectoryInfo directoryInfo) {
+            int fileCount = directoryInfo.GetFiles().Length, dirCount = directoryInfo.GetDirectories().Length; 
+            int deletedFile = 0, deletedDir = 0;
             
             foreach(var file in directoryInfo.GetFiles()) {
                 try {
                     file.Delete();
                     CleanupLogsLBox.Items.Add("Deleted file '" + file.FullName + "' successfully.");
-                    // ++deletedFile;
+                    ++deletedFile;
                 }
                 catch (Exception ex) {
                     CleanupLogsLBox.Items.Add("Unable to delete file '" + file.FullName + "': " + ex.Message);
@@ -53,109 +45,88 @@ namespace Tasks {
                 try {
                     dir.Delete(true);
                     CleanupLogsLBox.Items.Add("Deleted Directory '" + dir.FullName + "' successfully.");
-                    // ++deletedFolder;
+                    ++deletedDir;
                 }
                 catch (Exception ex) {
                     CleanupLogsLBox.Items.Add("Unable to delete directory '" + dir.FullName + "': " + ex.Message);
                 }
             }
 
-            return true;
-            // return (deletedFile, fileCount, deletedFolder, folderCount)
+            CleanupLogsLBox.Items.Add("Cleaned " + directoryInfo.FullName + " folder. (File count: " + deletedFile + "/" + 
+                                        fileCount + " | Folder count: " + deletedDir + "/" + dirCount);
         }
-        
-        private void logCleanupResult(
-            (int deletedFile, int fileCount, int deletedFolder, int folderCount) cleanupResult,
-            ListBox lbox
-        ) {
 
-        }
+        private void CleanupCompletionLog(string cleanupName) { CleanupLogsLBox.Items.Add("Cleanup for " + cleanupName + " has completed."); }
 
         private void btnCleanup_Click(object sender, EventArgs e) {
-            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
-            var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
-            var usertemp = new DirectoryInfo(Path.GetTempPath());
-            var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
+            var userPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            // Local User directories
+            var localAppdata = Environment.GetEnvironmentVariable("LocalAppData");
+            var roamingAppdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var userTemp = new DirectoryInfo(Path.GetTempPath());
+            var downloads = new DirectoryInfo(userPath + "\\Downloads");
 
-            if(checkBox1.Checked)
-                try {
-                    if(DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
-                }
-                catch(Exception ex) {
-                    CleanupLogsLBox.Items.Add("Error deleting the Downloads Folder. " + ex);
-                }
+            // Windows directories
+            var windowsTemp = new DirectoryInfo("C:\\Windows\\Temp");
+            var prefetch = new DirectoryInfo("C:\\Windows\\Prefetch");
+            
+            if(checkBox1.Checked) { 
+                CleanDirectory(downloads); 
+                CleanupCompletionLog("Downloads"); 
+            }
 
             if(checkBox2.Checked)
                 try {
                     SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
-                    CleanupLogsLBox.Items.Add("Recycle Bin Cleaned.");
+                    CleanupCompletionLog("Recycle Bin");    
                 }
-                catch(Exception ex) {
-                    CleanupLogsLBox.Items.Add("Error deleting the Recycle Bin. " + ex);
+                catch(Exception ex) { CleanupLogsLBox.Items.Add("Error deleting the Recycle Bin. " + ex); }
 
-                }
-
-            if(checkBox3.Checked) {
-                try {
-                    if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Cleaned.");
-                    if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Cleaned.");
-                }
-                catch (Exception ex) {
-                    CleanupLogsLBox.Items.Add("Error while deleting temp folders. " + ex);
-                }
-
+            if(checkBox3.Checked) { 
+                CleanDirectory(windowsTemp); CleanDirectory(userTemp); 
+                CleanupCompletionLog("Temporary Files");
             }
 
-            if (checkBox4.Checked) {
-                try {
-                    var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
-                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
-                }
-                catch (Exception ex) {
-                    CleanupLogsLBox.Items.Add("Error while cleaning Prefetch. " + ex);
-                }
+            if(checkBox4.Checked) { 
+                CleanDirectory(prefetch); 
+                CleanupCompletionLog("Prefetch"); 
             }
 
-            // Chrome
-
+            //! Chrome
             if (checkBox5.Checked) {
-                try {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache\\");
-                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Code Cache\\");
-                    var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\GPUCache\\");
-                    var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\ShaderCache\\");
-                    var directory5 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\CacheStorage\\");
-                    var directory6 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\ScriptCache\\");
-                    var directory7 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\GrShaderCache\\GPUCache\\");
-                    var directory8 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\File System\\000\\p\\");
-                    if(DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3) & DeleteAllFiles(directory4) & DeleteAllFiles(directory5) & DeleteAllFiles(directory6) & DeleteAllFiles(directory7) & DeleteAllFiles(directory8)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
-                }
-                catch (Exception) {}
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache\\"));
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Code Cache\\"));
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\GPUCache\\"));
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\ShaderCache\\"));
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\CacheStorage\\"))
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\ScriptCache\\"));
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\GrShaderCache\\GPUCache\\"));
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\File System\\000\\p\\"));
+                CleanupCompletionLog("Chrome Cache");
             }
 
-            // Chrome Session
             if (checkBox6.Checked) {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions")); 
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage")); 
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State"));
+                CleanupCompletionLog("Chrome Session");
             }
 
             if (checkBox7.Checked) //Chrome cookies
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
+                var directory = new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
+                File.Delete(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
+                File.Delete(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
+                CleanDirectory(directory);
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Cookies Deleted.");
             }
 
 
             if (checkBox8.Checked) //Chrome search history
             {
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History Provider Cache");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History-journal");
+                File.Delete(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History");
+                File.Delete(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History Provider Cache");
+                File.Delete(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History-journal");
                 CleanupLogsLBox.Items.Add("Chrome Search History Deleted.");
             }
 
@@ -166,107 +137,40 @@ namespace Tasks {
             if (checkBox9.Checked) //Discord cache
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cache");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Code Cache");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\GPUCache");
+                var directory2 = new DirectoryInfo(userPath + "\\AppData\\Roaming\\discord\\Code Cache");
+                var directory3 = new DirectoryInfo(userPath + "\\AppData\\Roaming\\discord\\GPUCache");
                 if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Discord Cache Cleaned.");
             }
 
 
             if (checkBox25.Checked) //Discord cookies
-                try
-                {
-
+                try {
                     File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies");
                     File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies-journal");
                     CleanupLogsLBox.Items.Add("Discord Cookies Cleaned.");
-
                 }
-                catch (Exception ex)
-                {
+                catch(Exception ex) {
                     CleanupLogsLBox.Items.Add("There was an error trying to clean Discord Cookies." + ex);
                 }
 
-            //Firefox
-
-            if (checkBox14.Checked) //Firefox cache
-            {
-                try
-                {
-
-                    var cache = (localappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                    foreach (string direc in Directory.EnumerateDirectories(cache))
-                    {
-                        if (direc.Contains("release") == true)
-                        {
-                            var cachefile = (direc + "\\cache2");
-                            foreach (string file in Directory.EnumerateFiles(cachefile))
-                            {
-                                try
-                                {
+            // Firefox
+            // Firefox Cache
+            // TODO: Rework on Firefox cache cleaning
+            if (checkBox14.Checked) {
+                var cache = new DirectoryInfo(localAppdata + "\\Mozilla\\Firefox\\Profiles\\");
+                CleanDirectory(cache, "Firefox cache");
+                try {
+                    var profile = roamingAppdata + "\\Mozilla\\Firefox\\Profiles\\";
+                    foreach (string dir in Directory.EnumerateDirectories(profile)) {
+                        if (dir.Contains("release") == true) {
+                            var shadercache = (dir + "\\shader-cache");
+                            foreach (string file in Directory.EnumerateFiles(shadercache)) {
+                                try {
                                     File.Delete(file);
-                                    CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
-                                }
-                                catch (Exception ex)
-                                {
-                                    CleanupLogsLBox.Items.Add("Exception Error: " + ex);
-                                }
-
-                            }
-                            foreach (string dir in Directory.EnumerateDirectories(cachefile))
-                            {
-                                try
-                                {
-                                    Directory.Delete(dir, true);
-                                    CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
-                                }
-                                catch (Exception ex)
-                                {
-                                    CleanupLogsLBox.Items.Add("Exception Error:" + ex);
-                                }
-
+                                    CleanupLogsLBox.Items.Add("Deleted File: " + file);
+                                } catch {}
                             }
                         }
-                    }
-                    try
-                    {
-
-                        var profile = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                        foreach (string direc in Directory.EnumerateDirectories(profile))
-                        {
-                            if (direc.Contains("release") == true)
-                            {
-                                try
-                                {
-                                    var shadercache = (direc + "\\shader-cache");
-                                    foreach (string file in Directory.EnumerateFiles(shadercache))
-                                    {
-                                        try
-                                        {
-                                            File.Delete(file);
-                                            CleanupLogsLBox.Items.Add("Deleted File: " + file);
-                                        }
-                                        catch
-                                        {
-                                            //do nothing
-                                        }
-
-                                    }
-
-                                }
-                                catch
-                                {
-
-                                    //do nothing
-
-                                }
-
-                            }
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        CleanupLogsLBox.Items.Add("Error while trying to delete Firefox Shader Cache! \n" + ex);
                     }
 
                 }
@@ -274,23 +178,17 @@ namespace Tasks {
                 {
                     CleanupLogsLBox.Items.Add("Error while trying to delete firefox cache! \n" + ex);
                 }
-
-
-
             }
 
-            if (checkBox15.Checked) //Firefox cookies
-            {
-                try
-                {
-                    var cookies = (roamingappdata + "\\Mozilla\\Firefox\\Profiles\\");
-                    foreach (string direc in Directory.EnumerateDirectories(cookies))
-                    {
-                        if (direc.Contains("release") == true)
-                        {
+            // Firefox cookies
+            if (checkBox15.Checked) {
+                try {
+                    var cookies = roamingAppdata + "\\Mozilla\\Firefox\\Profiles\\";
+                    foreach (string dir in Directory.EnumerateDirectories(cookies)) {
+                        if (dir.Contains("release") == true) {
                             try
                             {
-                                var cookiefile = (direc + "\\cookies.sqlite");
+                                var cookiefile = (dir + "\\cookies.sqlite");
                                 File.Delete(cookiefile);
                                 CleanupLogsLBox.Items.Add("Firefox Cookies Cleaned.");
 
