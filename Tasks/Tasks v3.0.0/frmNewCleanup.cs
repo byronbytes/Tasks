@@ -12,8 +12,10 @@ namespace Tasks.Tasks_v3._0._0 {
     public partial class frmNewCleanup : Form {
         public frmNewCleanup() { InitializeComponent(); }
 
-        private void frmNewCleanup_Load(object sender, EventArgs e) {
-            // Logs save to appdata maybe
-        }
+        /*
+         TODO: Save logs to appdata
+         ! Logs should be named Tasks_Log_(Cleanup type)_(Unix timestamp).txt (possibly?)
+         */
+        private void frmNewCleanup_Load(object sender, EventArgs e) {}
     }
 }

@@ -11,11 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 // TODO: Cleanup and change the code style
-namespace Tasks
-{
-    public partial class frmAbout : Form
-
-    {
+namespace Tasks {
+    public partial class frmAbout : Form {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
              (
@@ -26,36 +23,26 @@ namespace Tasks
                  int nWidthEllipse, // width of ellipse
                  int nHeightEllipse // height of ellipse
              );
-        public frmAbout()
-        {
+
+        public frmAbout() {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
         }
 
-        private void frmAbout_Load(object sender, EventArgs e)
-        {
+        private void frmAbout_Load(object sender, EventArgs e) {}
 
-        }
+        private void label1_Click(object sender, EventArgs e) {}
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/issues/new", UseShellExecute = true });
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
+        private void pictureBox2_Click(object sender, EventArgs e) {
             Process.Start(new ProcessStartInfo { FileName = "https://discord.gg/nCBD9ZJjng", UseShellExecute = true });
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
+        private void pictureBox3_Click(object sender, EventArgs e) {
             Process.Start(new ProcessStartInfo { FileName = "https://twitter.com/Lite_Tools", UseShellExecute = true });
         }
 
@@ -67,10 +54,8 @@ namespace Tasks
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
+        private void panel1_MouseDown(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Left) {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }

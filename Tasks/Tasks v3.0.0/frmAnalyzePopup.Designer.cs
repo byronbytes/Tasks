@@ -1,8 +1,6 @@
 ﻿// TODO: Cleanup and change the code style
-namespace Tasks.Tasks_v3._0._0
-{
-    partial class frmAnalyzePopup
-    {
+namespace Tasks.Tasks_v3._0._0 {
+    partial class frmAnalyzePopup {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -12,12 +10,8 @@ namespace Tasks.Tasks_v3._0._0
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) { components.Dispose(); }
             base.Dispose(disposing);
         }
 
