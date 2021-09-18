@@ -26,37 +26,44 @@ namespace Tasks {
             SHERB_NOSOUND = 0x00000004 // No sound when the emptying of the recycle bin is complete
         }
 
-        private void CleanDirectory(DirectoryInfo directoryInfo) {
-            int fileCount = directoryInfo.GetFiles().Length, dirCount = directoryInfo.GetDirectories().Length; 
-            int deletedFile = 0, deletedDir = 0;
-            
-            foreach(var file in directoryInfo.GetFiles()) {
-                try {
+        private bool DeleteAllFiles(DirectoryInfo directoryInfo)
+        {
+
+            foreach (var file in directoryInfo.GetFiles())
+            {
+                try
+                {
                     file.Delete();
-                    CleanupLogsLBox.Items.Add("Deleted file '" + file.FullName + "' successfully.");
-                    ++deletedFile;
+                    CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
                 }
-                catch (Exception ex) {
-                    CleanupLogsLBox.Items.Add("Unable to delete file '" + file.FullName + "': " + ex.Message);
-                }
-            }
+                catch (Exception ex)
+                {
+                    CleanupLogsLBox.Items.Add("Exception Thrown: " + ex.Message);
 
-            foreach (var dir in directoryInfo.GetDirectories()) {
-                try {
+                }
+
+            }
+            foreach (var dir in directoryInfo.GetDirectories())
+            {
+                try
+                {
                     dir.Delete(true);
-                    CleanupLogsLBox.Items.Add("Deleted Directory '" + dir.FullName + "' successfully.");
-                    ++deletedDir;
+                    CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
                 }
-                catch (Exception ex) {
-                    CleanupLogsLBox.Items.Add("Unable to delete directory '" + dir.FullName + "': " + ex.Message);
+                catch (Exception ex)
+                {
+                    CleanupLogsLBox.Items.Add("Exception Thrown: " + ex.Message);
                 }
+
             }
 
-            CleanupLogsLBox.Items.Add("Cleaned " + directoryInfo.FullName + " folder. (File count: " + deletedFile + "/" + 
-                                        fileCount + " | Folder count: " + deletedDir + "/" + dirCount);
+            return true;
         }
 
-        private void CleanupCompletionLog(string cleanupName) { CleanupLogsLBox.Items.Add("Cleanup for " + cleanupName + " has completed."); }
+        private void CleanupCompletionLog(string cleanupName) 
+        { 
+            CleanupLogsLBox.Items.Add("Cleanup for " + cleanupName + " has completed.");
+        }
 
         private void btnCleanup_Click(object sender, EventArgs e) {
             var userPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);

@@ -130,7 +130,6 @@
             this.tabPage1.Size = new System.Drawing.Size(907, 635);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // checkBox26
             // 
