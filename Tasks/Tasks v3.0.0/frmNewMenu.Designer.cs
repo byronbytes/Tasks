@@ -251,13 +251,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1115, 681);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblLastRegistryBackup);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.lblLastRegistryBackup);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
             this.Name = "frmNewMenu";
             this.Text = "Tasks";
             this.Load += new System.EventHandler(this.frmNewMenu_Load);

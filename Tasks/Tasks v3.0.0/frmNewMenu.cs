@@ -14,7 +14,6 @@ namespace Tasks.Tasks_v3._0._0 {
 
         private void HidePanel(string PanelClicked)
         {
-
             if (PanelClicked == "Cleanup")
             {
                 panel2.Visible = true;
@@ -40,8 +39,27 @@ namespace Tasks.Tasks_v3._0._0 {
                 panel5.Visible = false;
                 panel6.Visible = false;
             }
-
         }
+
+        private void DashboardSendToBack(bool isUpdated)
+        {
+
+            if(isUpdated == true)
+            {
+                label2.SendToBack();
+                groupBox1.SendToBack();
+                lblLastRegistryBackup.SendToBack();
+                label3.SendToBack();
+                button1.SendToBack();
+              
+            }
+
+            if(isUpdated == false)
+            {
+
+            }
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e) {
             HidePanel("Cleanup");
                 
@@ -51,9 +69,8 @@ namespace Tasks.Tasks_v3._0._0 {
             panel7.Controls.Add(Cleanup);
             Cleanup.FormBorderStyle = FormBorderStyle.None;
             Cleanup.Show();
+            DashboardSendToBack(true);
 
-            panel2.Visible = true;
-            panel2.Visible = true;
         }
 
 
@@ -69,7 +86,7 @@ namespace Tasks.Tasks_v3._0._0 {
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            label2.SendToBack();
         }
     }
 }
