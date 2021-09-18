@@ -15,10 +15,5 @@ namespace Tasks.Tasks_v3._0._0 {
         private void frmNewCleanup_Load(object sender, EventArgs e) {
             // Logs save to appdata maybe
         }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

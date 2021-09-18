@@ -1,8 +1,5 @@
-﻿// TODO: Cleanup and change the code style
-namespace Tasks
-{
-    partial class frmAbout
-    {
+﻿namespace Tasks {
+    partial class frmAbout {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -12,12 +9,8 @@ namespace Tasks
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) { components.Dispose(); }
             base.Dispose(disposing);
         }
 
@@ -27,8 +20,7 @@ namespace Tasks
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -89,7 +81,7 @@ namespace Tasks
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Copyright 2021 (c)";
+            this.label3.Text = "Copyright (c) 2021";
             // 
             // label4
             // 
@@ -238,7 +230,6 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
