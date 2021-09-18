@@ -12,7 +12,7 @@ namespace Tasks.Tasks_v3._0._0 {
     public partial class frmNewMenu : Form {
         public frmNewMenu() { InitializeComponent(); }
 
-        private void HidePanel(string PanelClicked)
+        private void SelectedButton(string PanelClicked)
         {
             if (PanelClicked == "Cleanup")
             {
@@ -21,6 +21,7 @@ namespace Tasks.Tasks_v3._0._0 {
                 panel4.Visible = false;
                 panel5.Visible = false;
                 panel6.Visible = false;
+                panel7.Visible = true;
             }
             if (PanelClicked == "Startup")
             {
@@ -29,8 +30,8 @@ namespace Tasks.Tasks_v3._0._0 {
                 panel4.Visible = false;
                 panel5.Visible = false;
                 panel6.Visible = false;
+                panel7.Visible = false;
             }
-
             if (PanelClicked == "TaskManager")
             {
                 panel2.Visible = false;
@@ -38,6 +39,16 @@ namespace Tasks.Tasks_v3._0._0 {
                 panel4.Visible = true;
                 panel5.Visible = false;
                 panel6.Visible = false;
+                panel7.Visible = false;
+            }
+            if (PanelClicked == "Other")
+            {
+                panel2.Visible = false;
+                panel3.Visible = false;
+                panel4.Visible = false;
+                panel5.Visible = false;
+                panel6.Visible = true;
+                panel7.Visible = false;
             }
         }
 
@@ -56,27 +67,32 @@ namespace Tasks.Tasks_v3._0._0 {
 
             if(isUpdated == false)
             {
-
+                label2.BringToFront();
+                groupBox1.BringToFront();
+                lblLastRegistryBackup.BringToFront();
+                label3.BringToFront();
+                button1.BringToFront();
             }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {
-            HidePanel("Cleanup");
-                
+            SelectedButton("Cleanup");
+            DashboardSendToBack(true);
+
             frmNewCleanup Cleanup = new frmNewCleanup();
             Cleanup.TopLevel = false;
             Cleanup.AutoScroll = true;
             panel7.Controls.Add(Cleanup);
             Cleanup.FormBorderStyle = FormBorderStyle.None;
             Cleanup.Show();
-            DashboardSendToBack(true);
+          
 
         }
 
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            HidePanel("Startup");
+            SelectedButton("Startup");
         }
 
         private void frmNewMenu_Load(object sender, EventArgs e)
@@ -86,7 +102,12 @@ namespace Tasks.Tasks_v3._0._0 {
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label2.SendToBack();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            DashboardSendToBack(false);
+            SelectedButton("Other");
         }
     }
 }
