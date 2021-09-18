@@ -797,7 +797,7 @@
             this.ClientSize = new System.Drawing.Size(939, 687);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmNewCleanup";
-            this.Text = "Cleanup v3.0.0";
+            this.Text = "Cleanup";
             this.Load += new System.EventHandler(this.frmNewCleanup_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

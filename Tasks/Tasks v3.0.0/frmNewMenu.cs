@@ -75,17 +75,42 @@ namespace Tasks.Tasks_v3._0._0 {
             }
         }
 
+        private void ShowForm(string FormSelected)
+        {
+            // Initialize what we're working with..
+            frmNewCleanup Cleanup = new frmNewCleanup();
+            frmNewStartupPrograms Startup = new frmNewStartupPrograms();
+
+
+            if(FormSelected == "Cleanup")
+            {
+                // Before we show the form, we must close any other forms that could be overlapping.
+                Startup.Hide();
+                // Get all the form details and setup for showing.
+                Cleanup.TopLevel = false;
+                Cleanup.AutoScroll = true;
+                panel7.Controls.Add(Cleanup);
+                Cleanup.FormBorderStyle = FormBorderStyle.None;
+                Cleanup.Show();
+            }
+
+            if (FormSelected == "Startup")
+            {
+                // Before we show the form, we must close any other forms that could be overlapping.
+                Cleanup.Hide();
+                // Get all the form details and setup for showing.
+                Startup.TopLevel = false;
+                Startup.AutoScroll = true;
+                panel7.Controls.Add(Startup);
+                Startup.FormBorderStyle = FormBorderStyle.None;
+                Startup.Show();
+            }
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e) {
             SelectedButton("Cleanup");
             DashboardSendToBack(true);
-
-            frmNewCleanup Cleanup = new frmNewCleanup();
-            Cleanup.TopLevel = false;
-            Cleanup.AutoScroll = true;
-            panel7.Controls.Add(Cleanup);
-            Cleanup.FormBorderStyle = FormBorderStyle.None;
-            Cleanup.Show();
-          
+            ShowForm("Cleanup");
 
         }
 
@@ -93,6 +118,9 @@ namespace Tasks.Tasks_v3._0._0 {
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             SelectedButton("Startup");
+            DashboardSendToBack(true);
+            ShowForm("Startup");
+
         }
 
         private void frmNewMenu_Load(object sender, EventArgs e)
