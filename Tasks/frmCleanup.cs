@@ -105,7 +105,7 @@ namespace Tasks {
                 CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Code Cache\\"));
                 CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\GPUCache\\"));
                 CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\ShaderCache\\"));
-                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\CacheStorage\\"))
+                CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\CacheStorage\\"));
                 CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\ScriptCache\\"));
                 CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\GrShaderCache\\GPUCache\\"));
                 CleanDirectory(new DirectoryInfo(userPath + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\File System\\000\\p\\"));
