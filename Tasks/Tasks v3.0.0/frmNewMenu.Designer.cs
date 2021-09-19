@@ -81,6 +81,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::Tasks.Properties.Resources.Cleanup_50x50_White;
             this.pictureBox5.Location = new System.Drawing.Point(52, 530);
             this.pictureBox5.Name = "pictureBox5";
@@ -91,6 +92,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::Tasks.Properties.Resources.Cleanup_50x50_White;
             this.pictureBox4.Location = new System.Drawing.Point(52, 425);
             this.pictureBox4.Name = "pictureBox4";
@@ -100,6 +102,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Tasks.Properties.Resources.Cleanup_50x50_White;
             this.pictureBox3.Location = new System.Drawing.Point(52, 324);
             this.pictureBox3.Name = "pictureBox3";
@@ -109,6 +112,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Tasks.Properties.Resources.Startup_Programs_White;
             this.pictureBox2.Location = new System.Drawing.Point(52, 214);
             this.pictureBox2.Name = "pictureBox2";
@@ -120,6 +124,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Tasks.Properties.Resources.Cleanup_50x50_White;
             this.pictureBox1.Location = new System.Drawing.Point(52, 110);
             this.pictureBox1.Name = "pictureBox1";
