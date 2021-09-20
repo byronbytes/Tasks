@@ -105,9 +105,11 @@ namespace Tasks.Tasks_v3._0._0 {
                 Startup.FormBorderStyle = FormBorderStyle.None;
                 Startup.Show();
             }
+
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e) {
+        private void pictureBox1_Click(object sender, EventArgs e) 
+        {
             SelectedButton("Cleanup");
             DashboardSendToBack(true);
             ShowForm("Cleanup");
@@ -136,6 +138,11 @@ namespace Tasks.Tasks_v3._0._0 {
         {
             DashboardSendToBack(false);
             SelectedButton("Other");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

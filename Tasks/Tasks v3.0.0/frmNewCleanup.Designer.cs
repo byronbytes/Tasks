@@ -216,7 +216,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(124, 325);
+            this.button2.Location = new System.Drawing.Point(124, 329);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 24);
             this.button2.TabIndex = 50;
@@ -231,7 +231,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(124, 295);
+            this.button1.Location = new System.Drawing.Point(124, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 24);
             this.button1.TabIndex = 49;
@@ -256,7 +256,7 @@
             this.checkBox20.AutoSize = true;
             this.checkBox20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox20.Location = new System.Drawing.Point(10, 327);
+            this.checkBox20.Location = new System.Drawing.Point(10, 329);
             this.checkBox20.Name = "checkBox20";
             this.checkBox20.Size = new System.Drawing.Size(89, 21);
             this.checkBox20.TabIndex = 45;
@@ -269,7 +269,7 @@
             this.checkBox19.AutoSize = true;
             this.checkBox19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox19.Location = new System.Drawing.Point(10, 295);
+            this.checkBox19.Location = new System.Drawing.Point(10, 299);
             this.checkBox19.Name = "checkBox19";
             this.checkBox19.Size = new System.Drawing.Size(92, 21);
             this.checkBox19.TabIndex = 44;
