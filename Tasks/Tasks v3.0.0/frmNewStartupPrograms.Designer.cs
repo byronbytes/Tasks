@@ -127,6 +127,7 @@ namespace Tasks.Tasks_v3._0._0
             this.Controls.Add(this.StartupProcesses);
             this.Name = "frmNewStartupPrograms";
             this.Text = "frmNewStartupPrograms";
+            this.Load += new System.EventHandler(this.frmNewStartupPrograms_Load);
             this.ResumeLayout(false);
 
         }

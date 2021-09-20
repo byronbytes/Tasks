@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,24 @@ namespace Tasks.Tasks_v3._0._0
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmNewStartupPrograms_Load(object sender, EventArgs e)
+        {
+            getStartupPrograms();
+        }
+
+
+        private void getStartupPrograms()
+        {
+            // This method is currently used in 2.0.0, I might change the method soon.
+            ManagementClass mangnmt = new ManagementClass("Win32_StartupCommand");
+            ManagementObjectCollection mcol = mangnmt.GetInstances();
+            foreach (ManagementObject strt in mcol)
+            {
+                ListViewItem oo = StartupProcesses.Items.Add(strt["Name"].ToString(), 0);  //Changed the way the items work so we can add more than one subitem.
+                oo.SubItems.Add(strt["Location"].ToString());
+            }
         }
     }
 }
