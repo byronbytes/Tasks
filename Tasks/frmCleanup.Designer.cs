@@ -966,7 +966,8 @@
             this.label13.Size = new System.Drawing.Size(635, 38);
             this.label13.TabIndex = 0;
             this.label13.Text = "This feature sorts out all your extensions for your supported browser, and you ca" +
-    "n select which ones\r\n you want to remove.";
+    "n select which ones\r\n you want to remove. Currently, the only supported browser " +
+    "is Firefox and partially Google Chrome.";
             // 
             // tabPage4
             // 

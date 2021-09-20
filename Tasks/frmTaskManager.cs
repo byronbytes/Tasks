@@ -87,6 +87,10 @@ namespace Tasks
             return number.ToString();
         }
 
+        public void clearProcesses()
+        {
+            listView1.Clear();
+        }
         public void renderProcessesOnListView()
         {
             // Create an array to store the processes
@@ -160,7 +164,10 @@ namespace Tasks
         {
             try
             {
-             
+               // Process[] processList = Process.GetProcesses();
+              //  processList[].Kill();
+               // clearProcesses();
+               // renderProcessesOnListView();
             }
             catch (Exception ex)
             {
@@ -170,9 +177,13 @@ namespace Tasks
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            renderProcessesOnListView();
+         
 
         }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

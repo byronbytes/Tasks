@@ -15,15 +15,13 @@ using System.Windows.Forms;
 using ByteSizeLib;
 
 // TODO: Cleanup and change the code style
+// TODO: Work on Remove Bloat, here's a helpful article: https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.powershell?view=powershellsdk-7.0.0
 namespace Tasks
 {
 
     public partial class frmCleanup : Form
     {
-        public frmCleanup()
-        {
-            InitializeComponent();
-        }
+        public frmCleanup() { InitializeComponent(); }
 
         [DllImport("Shell32.dll")]
         static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
