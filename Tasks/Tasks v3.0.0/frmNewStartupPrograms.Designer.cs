@@ -56,6 +56,7 @@ namespace Tasks.Tasks_v3._0._0
             this.StartupProcesses.TabIndex = 1;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
+            this.StartupProcesses.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.StartupProcesses_ItemSelectionChanged);
             // 
             // ProcessName
             // 
@@ -113,6 +114,7 @@ namespace Tasks.Tasks_v3._0._0
             this.button4.TabIndex = 5;
             this.button4.Text = "Refresh List";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frmNewStartupPrograms
             // 
