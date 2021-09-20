@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tasks.Tasks_v3._0._0 {
-    public partial class frmNewMenu : Form {
+    public partial class frmNewMenu : Form
+    {
         public frmNewMenu() { InitializeComponent(); }
 
         private void SelectedButton(string PanelClicked)
@@ -30,7 +31,7 @@ namespace Tasks.Tasks_v3._0._0 {
                 panel4.Visible = false;
                 panel5.Visible = false;
                 panel6.Visible = false;
-                panel7.Visible = false;
+                panel7.Visible = true;
             }
             if (PanelClicked == "TaskManager")
             {
@@ -39,7 +40,7 @@ namespace Tasks.Tasks_v3._0._0 {
                 panel4.Visible = true;
                 panel5.Visible = false;
                 panel6.Visible = false;
-                panel7.Visible = false;
+                panel7.Visible = true;
             }
             if (PanelClicked == "Other")
             {
@@ -55,17 +56,17 @@ namespace Tasks.Tasks_v3._0._0 {
         private void DashboardSendToBack(bool isUpdated)
         {
 
-            if(isUpdated == true)
+            if (isUpdated == true)
             {
                 label2.SendToBack();
                 groupBox1.SendToBack();
                 lblLastRegistryBackup.SendToBack();
                 label3.SendToBack();
                 button1.SendToBack();
-              
+
             }
 
-            if(isUpdated == false)
+            if (isUpdated == false)
             {
                 label2.BringToFront();
                 groupBox1.BringToFront();
@@ -75,44 +76,28 @@ namespace Tasks.Tasks_v3._0._0 {
             }
         }
 
-        private void ShowForm(string FormSelected)
+        private Form _currentForm;
+        private void ShowForm(Form newForm)
         {
-            // Initialize what we're working with..
-            frmNewCleanup Cleanup = new frmNewCleanup();
-            frmNewStartupPrograms Startup = new frmNewStartupPrograms();
+            // credit to Anu6is
+            if (_currentForm != null) _currentForm.Hide();
 
+            newForm.TopLevel = false;
+            newForm.AutoScroll = true;
+            newForm.FormBorderStyle = FormBorderStyle.None;
+            panel7.Controls.Add(newForm);
+            newForm.Show();
 
-            if(FormSelected == "Cleanup")
-            {
-                // Before we show the form, we must close any other forms that could be overlapping.
-                Startup.Hide();
-                // Get all the form details and setup for showing.
-                Cleanup.TopLevel = false;
-                Cleanup.AutoScroll = true;
-                panel7.Controls.Add(Cleanup);
-                Cleanup.FormBorderStyle = FormBorderStyle.None;
-                Cleanup.Show();
-            }
-
-            if (FormSelected == "Startup")
-            {
-                // Before we show the form, we must close any other forms that could be overlapping.
-                Cleanup.Hide();
-                // Get all the form details and setup for showing.
-                Startup.TopLevel = false;
-                Startup.AutoScroll = true;
-                panel7.Controls.Add(Startup);
-                Startup.FormBorderStyle = FormBorderStyle.None;
-                Startup.Show();
-            }
-
+            _currentForm = newForm;
         }
+    
+    
 
         private void pictureBox1_Click(object sender, EventArgs e) 
         {
             SelectedButton("Cleanup");
             DashboardSendToBack(true);
-            ShowForm("Cleanup");
+            ShowForm(new frmNewCleanup());
 
         }
 
@@ -121,7 +106,8 @@ namespace Tasks.Tasks_v3._0._0 {
         {
             SelectedButton("Startup");
             DashboardSendToBack(true);
-            ShowForm("Startup");
+            panel7.Visible = true;
+            ShowForm(new frmNewStartupPrograms());
 
         }
 
