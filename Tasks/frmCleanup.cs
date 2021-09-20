@@ -845,6 +845,44 @@ namespace Tasks
         {
             taskDialog1.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred." + ex);
+            }
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RunFile.RunBat("Scripts/Debloater/DisableCortana.ps1", true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred." + ex);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RunFile.RunBat("Scripts/Debloater/UninstallOneDrive.ps1", true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred." + ex);
+            }
+        }
     }
 }
 

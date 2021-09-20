@@ -90,13 +90,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnCleanup = new System.Windows.Forms.Button();
-            this.btnCopyLogs = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnCleanup = new System.Windows.Forms.Button();
+            this.btnCopyLogs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -970,6 +971,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Controls.Add(this.button5);
             this.tabPage4.Controls.Add(this.button4);
             this.tabPage4.Controls.Add(this.button6);
@@ -982,40 +984,18 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
-            // btnCleanup
+            // textBox1
             // 
-            this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCleanup.ForeColor = System.Drawing.Color.Black;
-            this.btnCleanup.Location = new System.Drawing.Point(525, 816);
-            this.btnCleanup.Name = "btnCleanup";
-            this.btnCleanup.Size = new System.Drawing.Size(160, 34);
-            this.btnCleanup.TabIndex = 18;
-            this.btnCleanup.Text = "Clean";
-            this.btnCleanup.UseVisualStyleBackColor = true;
-            this.btnCleanup.Click += new System.EventHandler(this.btnCleanup_Click);
-            // 
-            // btnCopyLogs
-            // 
-            this.btnCopyLogs.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCopyLogs.ForeColor = System.Drawing.Color.Black;
-            this.btnCopyLogs.Location = new System.Drawing.Point(359, 816);
-            this.btnCopyLogs.Name = "btnCopyLogs";
-            this.btnCopyLogs.Size = new System.Drawing.Size(160, 34);
-            this.btnCopyLogs.TabIndex = 37;
-            this.btnCopyLogs.Text = "Copy Cleanup Logs";
-            this.btnCopyLogs.UseVisualStyleBackColor = true;
-            this.btnCopyLogs.Click += new System.EventHandler(this.btnCopyLogs_Click_1);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(12, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(441, 40);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "This feature will be releasing in a patch (2.1.0)\r\nOnly the \"Remove Solitare\" but" +
-    "ton should work at the moment.";
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(12, 414);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(625, 347);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // button5
             // 
@@ -1027,6 +1007,7 @@
             this.button5.TabIndex = 7;
             this.button5.Text = "Uninstall Solitaire";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -1051,6 +1032,7 @@
             this.button6.Text = "Uninstall OneDrive";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -1062,6 +1044,42 @@
             this.button7.TabIndex = 4;
             this.button7.Text = "Disable Cortana";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(12, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(397, 40);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "This feature will be releasing in a patch (2.1.0)\r\nOnly the \"Remove Solitare\" but" +
+    "ton works at the moment.";
+            // 
+            // btnCleanup
+            // 
+            this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCleanup.ForeColor = System.Drawing.Color.Black;
+            this.btnCleanup.Location = new System.Drawing.Point(525, 816);
+            this.btnCleanup.Name = "btnCleanup";
+            this.btnCleanup.Size = new System.Drawing.Size(160, 34);
+            this.btnCleanup.TabIndex = 18;
+            this.btnCleanup.Text = "Clean";
+            this.btnCleanup.UseVisualStyleBackColor = true;
+            this.btnCleanup.Click += new System.EventHandler(this.btnCleanup_Click);
+            // 
+            // btnCopyLogs
+            // 
+            this.btnCopyLogs.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCopyLogs.ForeColor = System.Drawing.Color.Black;
+            this.btnCopyLogs.Location = new System.Drawing.Point(359, 816);
+            this.btnCopyLogs.Name = "btnCopyLogs";
+            this.btnCopyLogs.Size = new System.Drawing.Size(160, 34);
+            this.btnCopyLogs.TabIndex = 37;
+            this.btnCopyLogs.Text = "Copy Cleanup Logs";
+            this.btnCopyLogs.UseVisualStyleBackColor = true;
+            this.btnCopyLogs.Click += new System.EventHandler(this.btnCopyLogs_Click_1);
             // 
             // frmCleanup
             // 
@@ -1173,5 +1191,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
