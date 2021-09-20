@@ -104,7 +104,6 @@ namespace Tasks.Tasks_v3._0._0 {
         {
             SelectedButton("Startup");
             DashboardSendToBack(true);
-            panel7.Visible = true;
             ShowForm(new frmNewStartupPrograms());
 
         }
