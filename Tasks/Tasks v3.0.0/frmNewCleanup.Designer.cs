@@ -75,6 +75,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -97,7 +98,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(915, 669);
+            this.tabControl1.Size = new System.Drawing.Size(915, 619);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -127,7 +128,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(907, 635);
+            this.tabPage1.Size = new System.Drawing.Size(907, 585);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
@@ -416,7 +417,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(907, 635);
+            this.tabPage2.Size = new System.Drawing.Size(907, 585);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Application";
             // 
@@ -789,12 +790,24 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Remove Bloatware";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(762, 631);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(165, 44);
+            this.button3.TabIndex = 57;
+            this.button3.Text = "Clean";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frmNewCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(939, 687);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmNewCleanup";
             this.Text = "Cleanup";
@@ -869,5 +882,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button3;
     }
 }

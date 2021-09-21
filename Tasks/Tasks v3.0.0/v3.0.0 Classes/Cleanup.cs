@@ -9,13 +9,15 @@ namespace Tasks.Cleanup_Modules
 {
     public class Cleanup
     {
+        // TODO: I have no idea
+
         public Dictionary<string, string> Folders
         {
             get; set;
         }
 
 
-        // Todo: idk
+      
 
 
 
