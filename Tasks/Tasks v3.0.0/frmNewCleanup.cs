@@ -18,15 +18,21 @@ namespace Tasks.Tasks_v3._0._0 {
             // I want to still keep the feature of logging, but it needs to save somewhere, maybe in a settings?
         }
         //also will be removed and replaced, only for debugging
+        int deletedFile = 0;
+        int deletedDir = 0;
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
-
+         
             foreach (var file in directoryInfo.GetFiles())
             {
+             
+               
                 try
                 {
                     file.Delete();
                     listBox1.Items.Add("Deleted " + file.FullName);
+                    ++deletedFile;
+
                 }
                 catch (Exception ex)
                 {
@@ -35,12 +41,14 @@ namespace Tasks.Tasks_v3._0._0 {
                 }
 
             }
+      
             foreach (var dir in directoryInfo.GetDirectories())
             {
                 try
                 {
                     dir.Delete(true);
                     listBox1.Items.Add("Deleted Folder " + dir.FullName);
+                    ++deletedDir;
                 }
                 catch (Exception ex)
                 {
@@ -59,17 +67,26 @@ namespace Tasks.Tasks_v3._0._0 {
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
 
-    // The code below will be replaced soon, this is only for testing / debugging
-            try
+            // The code below will be replaced soon, this is only for testing / debugging
+            if (checkBox3.Checked)
             {
-               
-                if (DeleteAllFiles(windowstemp)) listBox1.Items.Add("System Temp Folder Cleaned.");
-                if (DeleteAllFiles(usertemp)) listBox1.Items.Add("User Temp Folder Cleaned.");
-                cleanupSummary();
-            }
-            catch (Exception ex)
-            {
-                listBox1.Items.Add("Error while deleting temp folders. " + ex);
+                try
+                {
+
+                    if (DeleteAllFiles(windowstemp) & DeleteAllFiles(usertemp))
+                    {
+                        listBox1.Items.Add("Temp Files Deleted.");
+                        listBox1.Items.Add("Deleted Files: " + deletedFile + "\n" + "Deleted Directories: " + deletedDir);
+                        listBox1.Items.Add("Cleanup Log - End");
+                        cleanupSummary();
+                        label9.Text = "Deleted Files: " + deletedFile + "\n" + "Deleted Directories: " + deletedDir;
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    listBox1.Items.Add("Error while deleting temp folders. " + ex);
+                }
             }
         }
 
