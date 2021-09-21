@@ -71,8 +71,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Tasks v3.0.0\Analyze\" />
-  </ItemGroup>
-
 </Project>

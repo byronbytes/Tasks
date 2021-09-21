@@ -84,10 +84,11 @@
             // pictureBox5
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::Tasks.Properties.Resources.Cleanup_50x50_White;
+            this.pictureBox5.Image = global::Tasks.Properties.Resources.SettingsWhite;
             this.pictureBox5.Location = new System.Drawing.Point(52, 530);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(53, 42);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);

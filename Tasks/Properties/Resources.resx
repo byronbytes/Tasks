@@ -172,6 +172,9 @@
   <data name="Bloatware" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bloatware.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Startup Programs White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Startup Programs White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,7 +208,7 @@
   <data name="Steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Startup Programs White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Startup Programs White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SettingsWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

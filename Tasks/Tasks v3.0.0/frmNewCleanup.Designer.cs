@@ -76,6 +76,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -766,7 +767,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(907, 635);
+            this.tabPage3.Size = new System.Drawing.Size(907, 585);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
             // 
@@ -776,7 +777,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(907, 635);
+            this.tabPage4.Size = new System.Drawing.Size(907, 585);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Cookie Whitelist";
             // 
@@ -786,7 +787,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 30);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(907, 635);
+            this.tabPage5.Size = new System.Drawing.Size(907, 585);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Remove Bloatware";
             // 
@@ -801,12 +802,23 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(12, 656);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 19);
+            this.listBox1.TabIndex = 58;
+            this.listBox1.Visible = false;
+            // 
             // frmNewCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(939, 687);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmNewCleanup";
@@ -883,5 +895,6 @@
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

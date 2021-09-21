@@ -42,14 +42,14 @@ namespace Tasks.Tasks_v3._0._0 {
                 panel6.Visible = false;
                 panel7.Visible = true;
             }
-            if (PanelClicked == "Other")
+            if (PanelClicked == "Settings")
             {
                 panel2.Visible = false;
                 panel3.Visible = false;
                 panel4.Visible = false;
                 panel5.Visible = false;
                 panel6.Visible = true;
-                panel7.Visible = false;
+                panel7.Visible = true;
             }
         }
 
@@ -118,8 +118,9 @@ namespace Tasks.Tasks_v3._0._0 {
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            DashboardSendToBack(false);
-            SelectedButton("Other");
+            DashboardSendToBack(true);
+            SelectedButton("Settings");
+            ShowForm(new frmSettings());
         }
 
         private void timer1_Tick(object sender, EventArgs e)
