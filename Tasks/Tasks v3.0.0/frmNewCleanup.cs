@@ -67,6 +67,7 @@ namespace Tasks.Tasks_v3._0._0 {
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
 
+
             // The code below will be replaced soon, this is only for testing / debugging
             if (checkBox3.Checked)
             {
@@ -76,8 +77,6 @@ namespace Tasks.Tasks_v3._0._0 {
                     if (DeleteAllFiles(windowstemp) & DeleteAllFiles(usertemp))
                     {
                         listBox1.Items.Add("Temp Files Deleted.");
-                        listBox1.Items.Add("Deleted Files: " + deletedFile + "\n" + "Deleted Directories: " + deletedDir);
-                        listBox1.Items.Add("Cleanup Log - End");
                         cleanupSummary();
                         label9.Text = "Deleted Files: " + deletedFile + "\n" + "Deleted Directories: " + deletedDir;
 
@@ -86,6 +85,24 @@ namespace Tasks.Tasks_v3._0._0 {
                 catch (Exception ex)
                 {
                     listBox1.Items.Add("Error while deleting temp folders. " + ex);
+                }
+            }
+
+            if(cbTasksCleanupLogs.Checked)
+            {
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Tasks");
+                    if (DeleteAllFiles(directory))
+                        {
+                        listBox1.Items.Add("Tasks Cleanup Logs Deleted.");
+                        cleanupSummary();
+                        label9.Text = "Deleted Files: " + deletedFile + "\n" + "Deleted Directories: " + deletedDir;
+                    }
+                }
+                catch
+                {
+
                 }
             }
         }

@@ -46,7 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox29 = new System.Windows.Forms.CheckBox();
+            this.cbTasksCleanupLogs = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox27 = new System.Windows.Forms.CheckBox();
@@ -80,7 +80,6 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -395,7 +394,7 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.checkBox29);
+            this.tabPage2.Controls.Add(this.cbTasksCleanupLogs);
             this.tabPage2.Controls.Add(this.pictureBox3);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.checkBox27);
@@ -442,19 +441,19 @@
             this.label8.TabIndex = 76;
             this.label8.Text = "Tasks";
             // 
-            // checkBox29
+            // cbTasksCleanupLogs
             // 
-            this.checkBox29.AutoSize = true;
-            this.checkBox29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox29.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox29.ForeColor = System.Drawing.Color.White;
-            this.checkBox29.Location = new System.Drawing.Point(315, 342);
-            this.checkBox29.Name = "checkBox29";
-            this.checkBox29.Size = new System.Drawing.Size(106, 21);
-            this.checkBox29.TabIndex = 77;
-            this.checkBox29.Text = "Cleanup Logs";
-            this.checkBox29.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox29.UseVisualStyleBackColor = true;
+            this.cbTasksCleanupLogs.AutoSize = true;
+            this.cbTasksCleanupLogs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbTasksCleanupLogs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbTasksCleanupLogs.ForeColor = System.Drawing.Color.White;
+            this.cbTasksCleanupLogs.Location = new System.Drawing.Point(315, 342);
+            this.cbTasksCleanupLogs.Name = "cbTasksCleanupLogs";
+            this.cbTasksCleanupLogs.Size = new System.Drawing.Size(106, 21);
+            this.cbTasksCleanupLogs.TabIndex = 77;
+            this.cbTasksCleanupLogs.Text = "Cleanup Logs";
+            this.cbTasksCleanupLogs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbTasksCleanupLogs.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -856,25 +855,15 @@
             this.listBox1.TabIndex = 58;
             this.listBox1.Visible = false;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(12, 631);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(315, 15);
-            this.label7.TabIndex = 59;
-            this.label7.Text = "This cleanup removed {0} {B/MB/GB} from your computer.";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(12, 648);
+            this.label9.Location = new System.Drawing.Point(12, 631);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 30);
+            this.label9.Size = new System.Drawing.Size(118, 30);
             this.label9.TabIndex = 60;
-            this.label9.Text = "Deleted Files: {0}\r\nDeleted Directories: {0}";
+            this.label9.Text = "Deleted Files: 0\r\nDeleted Directories: 0";
             // 
             // frmNewCleanup
             // 
@@ -883,7 +872,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(939, 687);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tabControl1);
@@ -965,9 +953,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox29;
+        private System.Windows.Forms.CheckBox cbTasksCleanupLogs;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
     }
 }

@@ -62,7 +62,7 @@ namespace Tasks.Tasks_v3._0._0
             // 
             this.button1.Location = new System.Drawing.Point(12, 448);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 29);
+            this.button1.Size = new System.Drawing.Size(133, 29);
             this.button1.TabIndex = 2;
             this.button1.Text = "View Folder";
             this.button1.UseVisualStyleBackColor = true;
