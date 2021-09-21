@@ -19,27 +19,28 @@
 
 <h1>📩 Installation</h1>
 
-1. Pick the stable release or the beta/development release (which is prone to bugs).
+1. Pick the stable release or the beta release.
 2. Download the top-most archive, or zip file (not the source code).
 3. Extract the archive, and execute the <i>.exe</i> file. After that, <strong>Tasks</strong> will launch.
 
 
 <h1>💗 Support The Project</h1>
 
-You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us.
+You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us. Even downloading the application supports us.
 
 
 <h1>📐 Branch Information</h1>
 
 The <strong>master</strong> branch holds the most stable updates for the project, and if you are not looking to the experimental side, or just want to simply use Tasks, then feel free to visit the <strong>master</strong> branch for source code.
 
-The <strong>testing</strong> branch is meant for testing features on the project, and it is not as stable as master. New stuff get added to this branch, but they will not be quite stable and may either work as intended or not.
-
 
 <h1>📸 Gallery</h1>
 
 These images were taken on Version 2.0.0, designs may differ on newer versions.
 
-<img src="https://user-images.githubusercontent.com/53088136/129365571-cb0541b6-f480-42d1-8cdc-6303980de983.png" alt="image" />
-<img src="https://user-images.githubusercontent.com/53088136/129365600-4fb10c17-c929-4eb7-9646-d5e423b40c54.png" alt="image" />
+![image](https://user-images.githubusercontent.com/53088136/134250645-5d19703b-62b7-49b3-9ee2-5546a63065e4.png)
+![image](https://user-images.githubusercontent.com/53088136/134250674-bdcb3d73-775b-48e4-82fa-5f764d4081a5.png)
+![image](https://user-images.githubusercontent.com/53088136/134250709-c612a1cb-7c6d-42ca-8e60-281eef069d4e.png)
+![image](https://user-images.githubusercontent.com/53088136/134250741-2cbce4d8-fbcf-4f0f-8771-7234ef07826c.png)
+
 
