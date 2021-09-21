@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Management;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -62,6 +65,34 @@ namespace Tasks.Tasks_v3._0._0
                 button3.Enabled = true;
             }
          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error opening the folder: " + ex);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "All|*.*" })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                    txtFileName.Text = ofd.FileName;
+                FileInfo fileInfo = new FileInfo(txtFileName.Text);
+                txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
+                File.Copy(txtFileName.Text, txtTargetPath.Text, true);
+                Thread.Sleep(30);
+                refreshStartupList();
+                getStartupPrograms();
+
+            }
         }
     }
 }
