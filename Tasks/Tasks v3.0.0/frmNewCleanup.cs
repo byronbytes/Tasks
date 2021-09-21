@@ -14,12 +14,13 @@ namespace Tasks.Tasks_v3._0._0 {
     public partial class frmNewCleanup : Form {
         public frmNewCleanup() { InitializeComponent(); }
 
-        private void frmNewCleanup_Load(object sender, EventArgs e) {
-            // I want to still keep the feature of logging, but it needs to save somewhere, maybe in a settings?
-        }
-        //also will be removed and replaced, only for debugging
+        private void frmNewCleanup_Load(object sender, EventArgs e) {}
+
+
+        // Credit to @averagelolol for the idea of listing what files and directories got deleted.
         int deletedFile = 0;
         int deletedDir = 0;
+        // DeleteAllFiles is prone to change and be replaced with a new and more efficient method.
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
          
@@ -30,6 +31,7 @@ namespace Tasks.Tasks_v3._0._0 {
                 try
                 {
                     file.Delete();
+                  
                     listBox1.Items.Add("Deleted " + file.FullName);
                     ++deletedFile;
 
@@ -41,7 +43,6 @@ namespace Tasks.Tasks_v3._0._0 {
                 }
 
             }
-      
             foreach (var dir in directoryInfo.GetDirectories())
             {
                 try
@@ -61,15 +62,12 @@ namespace Tasks.Tasks_v3._0._0 {
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
-            var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
-            var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
 
 
-            // The code below will be replaced soon, this is only for testing / debugging
-            if (checkBox3.Checked)
+            // The deleting / checkbox method is also prone to change soon.
+            if (cbTempFiles.Checked)
             {
                 try
                 {
@@ -114,9 +112,8 @@ namespace Tasks.Tasks_v3._0._0 {
 
             TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
             int secondsSinceEpoch = (int)t.TotalSeconds;
-
              string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-           string folderTasks = Path.Combine(folder, "Tasks");
+            string folderTasks = Path.Combine(folder, "Tasks");
             Directory.CreateDirectory(folderTasks);
             System.IO.File.WriteAllLines(folderTasks + "\\cleanupSummary" + secondsSinceEpoch + ".txt", listBox1.Items.Cast<string>().ToArray());
         }

@@ -37,7 +37,7 @@
             this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.cbTempFiles = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -104,7 +104,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(915, 619);
+            this.tabControl1.Size = new System.Drawing.Size(915, 618);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -123,7 +123,7 @@
             this.tabPage1.Controls.Add(this.checkBox19);
             this.tabPage1.Controls.Add(this.pictureBox6);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.checkBox3);
+            this.tabPage1.Controls.Add(this.cbTempFiles);
             this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.checkBox4);
             this.tabPage1.Controls.Add(this.checkBox2);
@@ -134,7 +134,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(907, 585);
+            this.tabPage1.Size = new System.Drawing.Size(907, 584);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
@@ -306,18 +306,18 @@
             this.label2.TabIndex = 42;
             this.label2.Text = "Explorer";
             // 
-            // checkBox3
+            // cbTempFiles
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.Location = new System.Drawing.Point(10, 79);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(106, 21);
-            this.checkBox3.TabIndex = 38;
-            this.checkBox3.Text = "Temp Folders";
-            this.checkBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbTempFiles.AutoSize = true;
+            this.cbTempFiles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbTempFiles.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbTempFiles.Location = new System.Drawing.Point(10, 79);
+            this.cbTempFiles.Name = "cbTempFiles";
+            this.cbTempFiles.Size = new System.Drawing.Size(144, 21);
+            this.cbTempFiles.TabIndex = 38;
+            this.cbTempFiles.Text = "Temp Files / Folders";
+            this.cbTempFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbTempFiles.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -837,7 +837,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(762, 631);
+            this.button3.Location = new System.Drawing.Point(762, 634);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(165, 44);
             this.button3.TabIndex = 57;
@@ -859,7 +859,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(12, 631);
+            this.label9.Location = new System.Drawing.Point(12, 651);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(118, 30);
             this.label9.TabIndex = 60;
@@ -917,7 +917,7 @@
         private System.Windows.Forms.CheckBox checkBox19;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox cbTempFiles;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox2;
