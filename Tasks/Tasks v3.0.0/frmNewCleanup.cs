@@ -65,8 +65,7 @@ namespace Tasks.Tasks_v3._0._0 {
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
 
-
-            // The deleting / checkbox method is also prone to change soon.
+                        // The deleting / checkbox method is also prone to change soon.
             if (cbTempFiles.Checked)
             {
                 try
@@ -100,7 +99,6 @@ namespace Tasks.Tasks_v3._0._0 {
                 }
                 catch
                 {
-
                 }
             }
         }
