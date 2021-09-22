@@ -110,6 +110,7 @@ namespace Tasks.Tasks_v3._0._0 {
 
         private void frmNewMenu_Load(object sender, EventArgs e)
         {
+            TasksLibCore.TestDebug.Debug();
         }
 
         private void button1_Click(object sender, EventArgs e)

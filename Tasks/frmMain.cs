@@ -25,7 +25,7 @@ namespace Tasks
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            TasksLibCore.TestDebug.Debug();
         }
         private void button1_Click(object sender, EventArgs e)
         {

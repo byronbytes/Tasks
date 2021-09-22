@@ -107,12 +107,11 @@ namespace Tasks.Tasks_v3._0._0 {
 
         public void cleanupSummary()
         {
-
+           
             TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
             int secondsSinceEpoch = (int)t.TotalSeconds;
              string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string folderTasks = Path.Combine(folder, "Tasks");
-            Directory.CreateDirectory(folderTasks);
             File.WriteAllLines(folderTasks + "\\cleanupSummary" + secondsSinceEpoch + ".txt", listBox1.Items.Cast<string>().ToArray());
         }
     }
