@@ -115,7 +115,7 @@ namespace Tasks.Tasks_v3._0._0 {
              string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string folderTasks = Path.Combine(folder, "Tasks");
             Directory.CreateDirectory(folderTasks);
-            System.IO.File.WriteAllLines(folderTasks + "\\cleanupSummary" + secondsSinceEpoch + ".txt", listBox1.Items.Cast<string>().ToArray());
+            File.WriteAllLines(folderTasks + "\\cleanupSummary" + secondsSinceEpoch + ".txt", listBox1.Items.Cast<string>().ToArray());
         }
     }
 }
