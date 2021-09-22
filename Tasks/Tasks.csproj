@@ -18,7 +18,7 @@
     <PackageReference Include="ByteSize" Version="2.0.0" />
     <PackageReference Include="Ookii.Dialogs.WinForms" Version="3.0.0" />
     <PackageReference Include="System.Management" Version="5.0.0" />
-    <PackageReference Include="TasksLibCore" Version="1.0.1" />
+    <PackageReference Include="TasksLibCore" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
