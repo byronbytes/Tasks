@@ -46,12 +46,6 @@ namespace Tasks
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frmRemoveBloat RemoveBloat = new frmRemoveBloat();
-            RemoveBloat.Show();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             frmAbout About = new frmAbout();

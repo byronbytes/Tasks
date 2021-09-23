@@ -38,5 +38,10 @@ namespace Tasks.Tasks_v3._0._0
             string folderTasks = Path.Combine(folder, "Tasks");
             Process.Start("explorer.exe", @folderTasks);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TasksLibCore.DirectorySetup.DeleteCleanupSummaries();
+        }
     }
 }

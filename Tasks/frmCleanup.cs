@@ -36,7 +36,7 @@ namespace Tasks
 
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
-
+    
             foreach (var file in directoryInfo.GetFiles())
             {
                 try

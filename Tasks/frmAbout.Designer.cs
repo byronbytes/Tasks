@@ -70,7 +70,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Running Version 2.0.0";
+            this.label2.Text = "Running Version 2.1.0";
             // 
             // label3
             // 
@@ -108,7 +108,7 @@
             "averagelolol"});
             this.listBox1.Location = new System.Drawing.Point(17, 183);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(278, 180);
+            this.listBox1.Size = new System.Drawing.Size(260, 180);
             this.listBox1.TabIndex = 5;
             // 
             // label5
@@ -230,6 +230,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

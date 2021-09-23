@@ -6,19 +6,20 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Tasks64x64.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <Version>2.0.0</Version>
+    <Version>2.1.0</Version>
     <Copyright>LiteTools 2021</Copyright>
     <Description>Tasks is a simple program allowing you to clean your computer, remove bloatware as well as control startup programs.</Description>
     <Company>LiteTools</Company>
     <Authors>Byron</Authors>
     <RepositoryUrl>https://github.com/LiteTools/Tasks</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ByteSize" Version="2.0.0" />
     <PackageReference Include="Ookii.Dialogs.WinForms" Version="3.0.0" />
     <PackageReference Include="System.Management" Version="5.0.0" />
-    <PackageReference Include="TasksLibCore" Version="1.0.3" />
+    <PackageReference Include="TasksLibCore" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>

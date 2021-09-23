@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tasks.Tasks_v3._0._0.v3._0._0_References;
 
 namespace Tasks.Tasks_v3._0._0 {
     public partial class frmNewCleanup : Form {
