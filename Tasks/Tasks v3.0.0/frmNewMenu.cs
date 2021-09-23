@@ -60,8 +60,6 @@ namespace Tasks.Tasks_v3._0._0 {
             {
                 label2.SendToBack();
                 groupBox1.SendToBack();
-                label3.SendToBack();
-                button1.SendToBack();
 
             }
 
@@ -69,8 +67,6 @@ namespace Tasks.Tasks_v3._0._0 {
             {
                 label2.BringToFront();
                 groupBox1.BringToFront();
-                label3.BringToFront();
-                button1.BringToFront();
             }
         }
 
@@ -110,7 +106,6 @@ namespace Tasks.Tasks_v3._0._0 {
 
         private void frmNewMenu_Load(object sender, EventArgs e)
         {
-            TasksLibCore.TestDebug.Debug();
         }
 
         private void button1_Click(object sender, EventArgs e)

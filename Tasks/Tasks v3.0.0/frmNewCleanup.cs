@@ -20,14 +20,14 @@ namespace Tasks.Tasks_v3._0._0 {
         // Credit to @averagelolol for the idea of listing what files and directories got deleted.
         int deletedFile = 0;
         int deletedDir = 0;
+
+   
         // DeleteAllFiles is prone to change and be replaced with a new and more efficient method.
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
-         
             foreach (var file in directoryInfo.GetFiles())
             {
-             
-               
+
                 try
                 {
                     file.Delete();
@@ -75,7 +75,7 @@ namespace Tasks.Tasks_v3._0._0 {
                     {
                         listBox1.Items.Add("Temp Files Deleted.");
                         cleanupSummary();
-                        label9.Text = "Deleted Files: " + deletedFile + "\n" + "Deleted Directories: " + deletedDir;
+                        label9.Text = "Deleted Files: " + deletedFile  + "\n" + "Deleted Directories: " + deletedDir;
 
                     }
                 }
@@ -107,7 +107,6 @@ namespace Tasks.Tasks_v3._0._0 {
 
         public void cleanupSummary()
         {
-           
             TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
             int secondsSinceEpoch = (int)t.TotalSeconds;
              string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);

@@ -38,8 +38,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -223,27 +221,6 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Application Crashing?";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(194, 187);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 25);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Create New Restore";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(177, 156);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Last System Restore:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -269,8 +246,6 @@
             this.ClientSize = new System.Drawing.Size(1115, 681);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Name = "frmNewMenu";
@@ -308,8 +283,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.LinkLabel linkLabel2;
     }
