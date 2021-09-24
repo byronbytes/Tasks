@@ -104,11 +104,6 @@ namespace Tasks
                 }
 
 
-
-
-
-
-
             if (checkBox3.Checked)
             {
                 try
