@@ -6,14 +6,14 @@
 This README has been translated into multiple languages.
 Click [here](https://github.com/LiteTools/Tasks/blob/master/Other%20Language%20READMEs/README-PL.MD) for the Polish version.
 
-<strong>Tasks</strong> is a simple program allowing you to clean your computer, remove bloatware as well as control startup programs, and a new advanced Task Manager that works better than Windows Task Manager, faster and lets you control apps that are maliciously eating your system resources.
+<strong>Tasks</strong> is an application that helps optimize computer performance. Tasks has an advanced cleanup tool, a startup manager, and an advanced task manager.
 
 <strong>Tasks</strong> is licensed under the <strong>Apache 2.0</strong> license.
 
 
 <h1>✅ Features</h1>
 
-- An advanced cleanup tool that lets you cleanup Windows directories and application cache files.
+- An advanced cleanup tool that lets you clean application cache files, cookies, web history, and remove unused extensions.
 - Enable/Disable Programs that run on Startup.
 - An advanced task manager that gives you more information than the internal Windows Task Manager.
 - Remove bloatware from your computer in one click.
