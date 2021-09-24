@@ -23,7 +23,7 @@ namespace Tasks.Tasks_v3._0._0
         {
 
        
-            DirectoryInfo di = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks");
+            DirectoryInfo di = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary");
             FileInfo[] files = di.GetFiles("*.txt");
 
             foreach (FileInfo file in files)
@@ -36,7 +36,8 @@ namespace Tasks.Tasks_v3._0._0
         {
             string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string folderTasks = Path.Combine(folder, "Tasks");
-            Process.Start("explorer.exe", @folderTasks);
+            string folderTasksCS = Path.Combine(folderTasks, "Cleanup Summary");
+            Process.Start("explorer.exe", @folderTasksCS);
         }
 
         private void button2_Click(object sender, EventArgs e)
