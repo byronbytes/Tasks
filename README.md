@@ -5,14 +5,14 @@
 
 This README has been translated into multiple languages. Click the flag that applies to your language.
 
-# [🇵🇱](https://github.com/LiteTools/Tasks/blob/master/Other%20Language%20READMEs/README-PL.MD) 
+## [🇵🇱](https://github.com/LiteTools/Tasks/blob/master/Other%20Language%20READMEs/README-PL.MD) 
 
 <strong>Tasks</strong> is an application that helps optimize computer performance. Tasks has an advanced cleanup tool, a startup manager, and an advanced task manager.
 
 <strong>Tasks</strong> is licensed under the <strong>Apache 2.0</strong> license.
 
 
-<h1>✅ Features</h1>
+## ✅ Features
 
 - An advanced cleanup tool that lets you clean application cache files, cookies, web history, and remove unused extensions.
 - Enable/Disable Programs that run on Startup.
@@ -20,24 +20,18 @@ This README has been translated into multiple languages. Click the flag that app
 - Remove bloatware from your computer in one click.
 
 
-<h1>📩 Installation</h1>
+## 📩 Installation
 
 1. Pick the stable release or the beta release.
 2. Download the top-most archive, or zip file (not the source code).
 3. Extract the archive, and execute the <i>.exe</i> file. After that, <strong>Tasks</strong> will launch.
 
 
-<h1>💗 Support The Project</h1>
+## 💗 Support The Project
 
 You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us. Even downloading the application supports us.
 
-
-<h1>📐 Branch Information</h1>
-
-The <strong>master</strong> branch holds the most stable updates for the project, and if you are not looking to the experimental side, or just want to simply use Tasks, then feel free to visit the <strong>master</strong> branch for source code.
-
-
-<h1>📸 Gallery</h1>
+## 📸 Images
 
 These images were taken on Version 2.0.0, designs may differ on newer versions.
 
