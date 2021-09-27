@@ -10,7 +10,7 @@
 Installing Tasks is very simple, as the application is currently portable.
 
 1. Download the stable release from the Releases tab.
-2. Extract the .zip, and execute the <i>.exe</i> file. After that, <strong>Tasks</strong> will launch.
+2. Extract the .zip, and execute the <i>.exe</i> file. After that, Tasks will launch.
 
 Notice that the dependencies must be kept in the same folder, and we are working on a fix for that.
 
@@ -51,5 +51,5 @@ These images were taken on Version 2.0.0, designs may differ on newer versions.
 
 ## License
 
-This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for more details and information.
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](docs/LICENSE.md) file for more details and information.
 
