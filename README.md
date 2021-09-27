@@ -3,7 +3,7 @@
 # <img src="https://user-images.githubusercontent.com/53088136/129425927-00413aa1-ca44-4ee5-a4ce-7d276cf2189c.png" alt="Tasks Logo" width='56' height='56' />  Tasks 
 <img src="https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues" alt="Open Issues" /> 
 ![image](https://img.shields.io/github/v/tag/LiteTools/Tasks?style=flat-square)
-![image](https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square)
+https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square
 
 
 <strong>Tasks</strong> is an application that helps optimize computer performance. Tasks has an advanced cleanup tool, a startup manager, and a detailed task manager.
