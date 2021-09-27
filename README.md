@@ -14,7 +14,6 @@ Installing Tasks is very simple, as the application is currently portable.
 
 Notice that the dependencies must be kept in the same folder, and we are working on a fix for that.
 
-
 ### Prerequisites
 
 Before you can run Tasks, you will need to install .NET Core (Add download link).
@@ -36,12 +35,7 @@ See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) 
 
 * This application was inspired by CCleaner, but we built up on the idea to make it better.
 * Integrated the Windows 10 Debloater made by https://github.com/Sycnex/Windows10Debloater
-* Integrated the Remove Microsoft Edge Script by https://github.com/ShadowWhisperer/Remove-Edge-Chromium
-
-
-## License
-
-This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for more details and information.
+* Integrated the Remove Microsoft Edge Script made by https://github.com/ShadowWhisperer/Remove-Edge-Chromium
 
 ## Images
 
@@ -52,4 +46,10 @@ These images were taken on Version 2.0.0, designs may differ on newer versions.
 ![image](https://user-images.githubusercontent.com/53088136/134250709-c612a1cb-7c6d-42ca-8e60-281eef069d4e.png)
 ![image](https://user-images.githubusercontent.com/53088136/134250741-2cbce4d8-fbcf-4f0f-8771-7234ef07826c.png)
 
+
+
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for more details and information.
 
