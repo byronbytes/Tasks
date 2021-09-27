@@ -78,7 +78,7 @@ namespace Tasks
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
 
-            if (checkBox1.Checked)
+            if (cbExplorerDownloads.Checked)
                 try
                 {
 
@@ -90,7 +90,7 @@ namespace Tasks
 
                 }
 
-            if (checkBox2.Checked)
+            if (cbSystemRecycleBin.Checked)
                 try
                 {
 
@@ -104,7 +104,7 @@ namespace Tasks
                 }
 
 
-            if (checkBox3.Checked)
+            if (cbSystemTempFolders.Checked)
             {
                 try
                 {
@@ -118,7 +118,7 @@ namespace Tasks
 
             }
 
-            if (checkBox4.Checked)
+            if (cbSystemPrefetch.Checked)
             {
                 try
                 {
@@ -133,7 +133,7 @@ namespace Tasks
 
             // Chrome
 
-            if (checkBox5.Checked)
+            if (cbChromeCache.Checked)
             {
                 try
                 {
@@ -153,7 +153,7 @@ namespace Tasks
                 }
             }
 
-            if (checkBox6.Checked) //Chrome Session 
+            if (cbChromeSessions.Checked) //Chrome Session 
             {
 
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
@@ -162,7 +162,7 @@ namespace Tasks
                 if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
             }
 
-            if (checkBox7.Checked) //Chrome cookies
+            if (cbChromeCookies.Checked) //Chrome cookies
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
@@ -171,7 +171,7 @@ namespace Tasks
             }
 
 
-            if (checkBox8.Checked) //Chrome search history
+            if (cbChromeSearchHistory.Checked) //Chrome search history
             {
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History Provider Cache");
@@ -183,7 +183,7 @@ namespace Tasks
 
             // Discord
 
-            if (checkBox9.Checked) //Discord cache
+            if (cbDiscordCache.Checked) //Discord cache
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cache");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Code Cache");
@@ -192,7 +192,7 @@ namespace Tasks
             }
 
 
-            if (checkBox25.Checked) //Discord cookies
+            if (cbDiscordCookies.Checked) //Discord cookies
                 try
                 {
 
@@ -208,7 +208,7 @@ namespace Tasks
 
             //Firefox
 
-            if (checkBox14.Checked) //Firefox cache
+            if (cbFirefoxCache.Checked) //Firefox cache
             {
                 try
                 {
@@ -299,7 +299,7 @@ namespace Tasks
 
             }
 
-            if (checkBox15.Checked) //Firefox cookies
+            if (cbFirefoxCookies.Checked) //Firefox cookies
             {
                 try
                 {
@@ -332,7 +332,7 @@ namespace Tasks
 
 
             }
-            if (checkBox16.Checked) //Firefox search history
+            if (cbFirefoxSearchHistory.Checked) //Firefox search history
             {
                 try
                 {
@@ -369,7 +369,7 @@ namespace Tasks
 
 
             //DNS & ARP
-            if (checkBox19.Checked) //Clear DNS
+            if (cbSystemDNSCache.Checked) //Clear DNS
             {
                 try
                 {
@@ -390,7 +390,7 @@ namespace Tasks
 
                 }
             }
-            if (checkBox20.Checked) //Clear ARP
+            if (cbSystemARPCache.Checked) //Clear ARP
             {
                 try
                 {
@@ -414,7 +414,7 @@ namespace Tasks
                 }
             }
 
-            if (checkBox21.Checked)     //RECENT FILES
+            if (cbExplorerRecents.Checked)     //RECENT FILES
             {
                 try
                 {
@@ -429,13 +429,13 @@ namespace Tasks
             }
 
 
-            if (checkBox18.Checked) //Edge search history
+            if (cbEdgeSearchHistory.Checked) //Edge search history
             {
 
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History");
                 CleanupLogsLBox.Items.Add("Edge Search History Deleted.");
             }
-            if (checkBox22.Checked) //Edge cookies
+            if (cbEdgeCookies.Checked) //Edge cookies
             {
 
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies");
@@ -447,7 +447,7 @@ namespace Tasks
                 CleanupLogsLBox.Items.Add("Edge Cookies Cleaned.");
             }
 
-            if (checkBox23.Checked) //Edge cache
+            if (cbEdgeCache.Checked) //Edge cache
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache\\");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache\\");
@@ -460,7 +460,7 @@ namespace Tasks
                 if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3) & DeleteAllFiles(directory4) & DeleteAllFiles(directory5) & DeleteAllFiles(directory6) & DeleteAllFiles(directory7) & DeleteAllFiles(directory8)) CleanupLogsLBox.Items.Add("Edge Cache Deleted.");
             }
 
-            if (checkBox10.Checked)
+            if (cbSystemEventLogs.Checked)
             {
                 try
                 {
@@ -479,33 +479,33 @@ namespace Tasks
 
             }
 
-            if (checkBox11.Checked)
+            if (cbEdgeSessions.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Sessions");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Session Storage");
                 if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Edge Session Deleted.");
             }
 
-            if (checkBox12.Checked)
+            if (cbSystemDirectXCache.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("DirectX Shader Cache Cleaned.");
             }
 
-            if (checkBox13.Checked)
+            if (cbSystemMemDumps.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\CrashDumps\\");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("System Memory Dumps Cleaned.");
             }
 
 
-            if (checkBox17.Checked)
+            if (cbSystemErrorReporting.Checked)
             {
                 var directory = new DirectoryInfo("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Deleted " + directory);
             }
 
-            if (checkBox24.Checked)
+            if (cbExplorerThumbCache.Checked)
             {
 
                 var tc = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\Explorer\\");
@@ -526,7 +526,7 @@ namespace Tasks
                     }
             }
 
-            if (checkBox25.Checked)
+            if (cbExplorerIconCache.Checked)
             {
                 var ic = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\Explorer\\");
                 foreach (string file in Directory.EnumerateFiles(ic))
@@ -546,7 +546,7 @@ namespace Tasks
                     }
             }
 
-            if (checkBox26.Checked)
+            if (cbChromeSavedPasswords.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data\\");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Saved Passwords Deleted.");
@@ -610,36 +610,36 @@ namespace Tasks
 
             if (!Directory.Exists(Dirs.chromeDir))
             {
-                checkBox5.Enabled = false;
-                checkBox7.Enabled = false;
-                checkBox8.Enabled = false;
-                checkBox6.Enabled = false;
-                checkBox27.Enabled = false;
+                cbChromeCache.Enabled = false;
+                cbChromeCookies.Enabled = false;
+                cbChromeSearchHistory.Enabled = false;
+                cbChromeSessions.Enabled = false;
+                cbChromeSavedPasswords.Enabled = false;
                 lblChromeNotDetected.Visible = true;
             }
 
             if (!Directory.Exists(Dirs.firefoxDir))
             {
-                checkBox14.Enabled = false;
-                checkBox15.Enabled = false;
-                checkBox16.Enabled = false;
+                cbFirefoxCache.Enabled = false;
+                cbFirefoxCookies.Enabled = false;
+                cbFirefoxSearchHistory.Enabled = false;
                 lblFirefoxNotDetected.Visible = true;
             }
 
             if (!Directory.Exists(Dirs.discordDir))
             {
-                checkBox9.Enabled = false;
-                checkBox25.Enabled = false;
+                cbDiscordCache.Enabled = false;
+                cbDiscordCookies.Enabled = false;
                 lblDiscordNotDetected.Visible = true;
 
             }
 
             if (!Directory.Exists(Dirs.edgeDir))
             {
-                checkBox23.Enabled = false;
-                checkBox22.Enabled = false;
-                checkBox18.Enabled = false;
-                checkBox11.Enabled = false;
+                cbEdgeCache.Enabled = false;
+                cbEdgeCookies.Enabled = false;
+                cbEdgeSearchHistory.Enabled = false;
+                cbEdgeSessions.Enabled = false;
                 lblEdgeNotDetected.Visible = true;
 
             }

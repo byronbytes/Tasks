@@ -93,7 +93,7 @@ namespace Tasks
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button2.Location = new System.Drawing.Point(791, 601);
+            this.button2.Location = new System.Drawing.Point(804, 601);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 37);
             this.button2.TabIndex = 2;
@@ -144,7 +144,7 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(958, 648);
+            this.ClientSize = new System.Drawing.Size(953, 648);
             this.Controls.Add(this.txtTargetPath);
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.button3);

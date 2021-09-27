@@ -49,11 +49,15 @@ namespace Tasks.Tasks_v3._0._0
          string folderTasks = Path.Combine(folder, "Tasks");
          string folderTasksCS = Path.Combine(folderTasks, "Cleanup Summary");
 
-            foreach (var file in Directory.EnumerateDirectories(folderTasksCS))
+            foreach (string file in Directory.EnumerateDirectories(folderTasksCS))
             {
                 File.Delete(file);
                 Console.WriteLine("Deleted File " + file);
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
