@@ -31,6 +31,18 @@ This README has been translated into multiple languages. Click the flag that app
 
 You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us. Even downloading the application supports us.
 
+## Authors
+
+* **Byron** - *Initial work* - [Tasks Development](https://github.com/LiteTools/Tasks)
+* **Average** - *Code Improvement & Suggestions*
+* **Solirs** - *Firefox cleanup, browser extension cleaning, remove bloat, etc*
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more details and information.
+
 ## 📸 Images
 
 These images were taken on Version 2.0.0, designs may differ on newer versions.
