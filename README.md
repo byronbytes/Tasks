@@ -1,40 +1,43 @@
 
 
-## <img src="https://user-images.githubusercontent.com/53088136/129425927-00413aa1-ca44-4ee5-a4ce-7d276cf2189c.png" alt="Tasks Logo" width='48' height='48' /> Tasks 
-<img src="https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues" alt="Open Issues" /> <img src="https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable" alt="Latest Stable Version" /> <img src="https://img.shields.io/github/downloads/LiteTools/Tasks/total" alt="Total Downloads" />
+# <img src="https://user-images.githubusercontent.com/53088136/129425927-00413aa1-ca44-4ee5-a4ce-7d276cf2189c.png" alt="Tasks Logo" width='56' height='56' />  Tasks 
+<img src="https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues" alt="Open Issues" /> 
+
+**Tasks** is an application that helps optimize computer performance and efficiency. Tasks includes an advanced cleanup tool that lets you clean application cache files, delete unused browser extensions, clear cookies, and remove bloatware. Tasks also has a startup manager that lets you create, modify, and disable programs that run on startup.
+
+## Installation
+
+Installing Tasks is very simple, as the application is currently portable.
+
+1. Download the stable release from the Releases tab.
+2. Extract the .zip, and execute the <i>.exe</i> file. After that, Tasks will launch.
+
+Notice that the dependencies must be kept in the same folder, and we are working on a fix for that.
+
+### Prerequisites
+
+Before you can run Tasks, you will need to install .NET Core (Add download link).
 
 
-<strong>Tasks</strong> is a simple program allowing you to clean your computer, remove bloatware as well as control startup programs, and a new advanced Task Manager that works better than Windows Task Manager, faster and lets you control apps that are maliciously eating your system resources.
-
-<strong>Tasks</strong> is licensed under the <strong>Apache 2.0</strong> license.
-
-
-<h1>✅ Features</h1>
-
-- An advanced cleanup tool that lets you cleanup Windows directories and application cache files.
-- Enable/Disable Programs that run on Startup.
-- An advanced task manager that gives you more information than the internal Windows Task Manager.
-- Remove bloatware from your computer in one click.
-
-
-<h1>📩 Installation</h1>
-
-1. Pick the stable release or the beta release.
-2. Download the top-most archive, or zip file (not the source code).
-3. Extract the archive, and execute the <i>.exe</i> file. After that, <strong>Tasks</strong> will launch.
-
-
-<h1>💗 Support The Project</h1>
+## Support The Project
 
 You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us. Even downloading the application supports us.
 
+## Authors
 
-<h1>📐 Branch Information</h1>
+* **Byron** - *Initial work and development.*
+* **Average** - *Code Improvement & Suggestions.*
+* **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 
-The <strong>master</strong> branch holds the most stable updates for the project, and if you are not looking to the experimental side, or just want to simply use Tasks, then feel free to visit the <strong>master</strong> branch for source code.
+See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
+## Acknowledgments
 
-<h1>📸 Gallery</h1>
+* This application was inspired by CCleaner, but we built up on the idea to make it better.
+* Integrated the Windows 10 Debloater made by https://github.com/Sycnex/Windows10Debloater
+* Integrated the Remove Microsoft Edge Script made by https://github.com/ShadowWhisperer/Remove-Edge-Chromium
+
+## Images
 
 These images were taken on Version 2.0.0, designs may differ on newer versions.
 
@@ -43,4 +46,10 @@ These images were taken on Version 2.0.0, designs may differ on newer versions.
 ![image](https://user-images.githubusercontent.com/53088136/134250709-c612a1cb-7c6d-42ca-8e60-281eef069d4e.png)
 ![image](https://user-images.githubusercontent.com/53088136/134250741-2cbce4d8-fbcf-4f0f-8771-7234ef07826c.png)
 
+
+
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](docs/LICENSE.md) file for more details and information.
 
