@@ -7,7 +7,7 @@ This README has been translated into multiple languages. Click the flag that app
 
 **[🇵🇱](https://github.com/LiteTools/Tasks/blob/master/Other%20Language%20READMEs/README-PL.MD)**
 
-<strong>Tasks</strong> is an application that helps optimize computer performance. Tasks has an advanced cleanup tool, a startup manager, and an advanced task manager.
+<strong>Tasks</strong> is an application that helps optimize computer performance. Tasks has an advanced cleanup tool, a startup manager, and a detailed task manager.
 
 <strong>Tasks</strong> is licensed under the <strong>Apache 2.0</strong> license.
 
@@ -16,7 +16,7 @@ This README has been translated into multiple languages. Click the flag that app
 
 - An advanced cleanup tool that lets you clean application cache files, cookies, web history, and remove unused extensions.
 - Enable/Disable Programs that run on Startup.
-- An advanced task manager that gives you more information than the internal Windows Task Manager.
+- An extra detailed task manager that gives you more information than the internal Windows Task Manager.
 - Remove bloatware from your computer in one click.
 
 
