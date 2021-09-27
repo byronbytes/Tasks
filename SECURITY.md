@@ -1,15 +1,15 @@
 # Tasks Security Policy
 
-This is the current Security Policy for Tasks. Last updated on August 21st, 2021.
+This is the current Security Policy for Tasks. Last updated on September 27th, 2021.
 
 ## Supported Versions
 
-These are the supported versions of Tasks. We will not maintain older versions of Tasks (for instance, legacy version (v1.x)).
+These are the supported versions of Tasks. We will not maintain older versions of Tasks (for instance, legacy version (v1.x.x)).
 
 | Version         | Supported          | Release Date     | Discontinuation Date |
 | :-------------- | :----------------: | :--------------: | :------------------: |
 | **2.0.0** (R)   | ✔️                 | 20th September, 2021 | N/A              |
-| **2.x.x** (PR)  | :heavy_check_mark: | 7th August, 2021  | N/A                 |
+| **2.0.0 Dev1** (PR)| :heavy_check_mark: | 7th August, 2021  | N/A                 |
 | **1.3.x** (D)   | :x:                | 27th July, 2021  | 20th August 2021     |
 | **1.x.x** (D)   | :x:                | 24th July, 2021  | 7th August 2021      |
 
