@@ -2,11 +2,9 @@
 
 # <img src="https://user-images.githubusercontent.com/53088136/129425927-00413aa1-ca44-4ee5-a4ce-7d276cf2189c.png" alt="Tasks Logo" width='56' height='56' />  Tasks 
 <img src="https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues" alt="Open Issues" /> 
-![image](https://img.shields.io/github/v/tag/LiteTools/Tasks?style=flat-square)
-https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square
 
 
-<strong>Tasks</strong> is an application that helps optimize computer performance. Tasks has an advanced cleanup tool, a startup manager, and a detailed task manager.
+**Tasks** is an application that helps optimize computer performance and efficiency. Tasks includes an advanced cleanup tool that lets you clean application cache files, delete unused browser extensions, clear cookies, and remove bloatware. Tasks also has a startup manager that lets you create, modify, and disable programs that run on startup.
 
 ## Features
 
@@ -16,14 +14,19 @@ https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square
 - Remove bloatware from your computer in one click.
 
 
-## 📩 Installation
+## Installation
 
 1. Pick the stable release or the beta release.
 2. Download the top-most archive, or zip file (not the source code).
 3. Extract the archive, and execute the <i>.exe</i> file. After that, <strong>Tasks</strong> will launch.
 
 
-## 💗 Support The Project
+### Prerequisites
+
+Before you can run Tasks, you will need to install .NET Core (Add download link).
+
+
+## Support The Project
 
 You can support our project in many ways, simply by leaving a star, forking, watching, and reporting bugs too. We also made a donation system, so all your donations and sponsors go directly to us. Even downloading the application supports us.
 
@@ -39,7 +42,7 @@ See also the list of [contributors](https://github.com/LiteTools/Tasks/contribut
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for more details and information.
 
-## 📸 Images
+## Images
 
 These images were taken on Version 2.0.0, designs may differ on newer versions.
 
