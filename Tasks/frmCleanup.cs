@@ -588,62 +588,13 @@ namespace Tasks
 
         }
 
+      
 
         private void frmCleanup_Load(object sender, EventArgs e)
-
         {
             tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged);
-            var g = new Dirs();
 
-
-            // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
-            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
-            var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            Dirs.chromeDir = localappdata + "\\Google\\Chrome\\";
-            Dirs.chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
-            Dirs.firefoxDir = localappdata + "\\Mozilla\\Firefox\\";
-            Dirs.firefoxExtDir = roamingappdata + "\\Mozilla\\Firefox\\Profiles\\";
-            Dirs.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
-            Dirs.edgeExtDir = "";
-            Dirs.discordDir = localappdata + "\\Discord\\"; // Makes more sense checking appdata than program files
-
-
-            if (!Directory.Exists(Dirs.chromeDir))
-            {
-                cbChromeCache.Enabled = false;
-                cbChromeCookies.Enabled = false;
-                cbChromeSearchHistory.Enabled = false;
-                cbChromeSessions.Enabled = false;
-                cbChromeSavedPasswords.Enabled = false;
-                lblChromeNotDetected.Visible = true;
-            }
-
-            if (!Directory.Exists(Dirs.firefoxDir))
-            {
-                cbFirefoxCache.Enabled = false;
-                cbFirefoxCookies.Enabled = false;
-                cbFirefoxSearchHistory.Enabled = false;
-                lblFirefoxNotDetected.Visible = true;
-            }
-
-            if (!Directory.Exists(Dirs.discordDir))
-            {
-                cbDiscordCache.Enabled = false;
-                cbDiscordCookies.Enabled = false;
-                lblDiscordNotDetected.Visible = true;
-
-            }
-
-            if (!Directory.Exists(Dirs.edgeDir))
-            {
-                cbEdgeCache.Enabled = false;
-                cbEdgeCookies.Enabled = false;
-                cbEdgeSearchHistory.Enabled = false;
-                cbEdgeSessions.Enabled = false;
-                lblEdgeNotDetected.Visible = true;
-
-            }
-
+            DirectoryExists();
 
             // Extention Finder
             if (Directory.Exists(Dirs.chromeExtDir))
@@ -659,7 +610,7 @@ namespace Tasks
             if (Directory.Exists(Dirs.edgeDir))
             {
                 comboBox1.Items.Add("Microsoft Edge");
-                // this will be a pain it might be for 2.1.0
+                // this will be a pain
             }
 
         }
@@ -828,16 +779,7 @@ namespace Tasks
 
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-            taskDialog1.Show();
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -875,6 +817,109 @@ namespace Tasks
             {
                 MessageBox.Show("An error occurred." + ex);
             }
+        }
+
+        private void DirectoryExists()
+        {
+            var g = new Dirs();
+
+
+            // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
+            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
+            var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            Dirs.chromeDir = localappdata + "\\Google\\Chrome\\";
+            Dirs.chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
+            Dirs.firefoxDir = localappdata + "\\Mozilla\\Firefox\\";
+            Dirs.firefoxExtDir = roamingappdata + "\\Mozilla\\Firefox\\Profiles\\";
+            Dirs.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
+            Dirs.edgeExtDir = "";
+            Dirs.discordDir = localappdata + "\\Discord\\"; // Makes more sense checking appdata than program files
+
+
+            if (!Directory.Exists(Dirs.chromeDir))
+            {
+                cbChromeCache.Enabled = false;
+                cbChromeCookies.Enabled = false;
+                cbChromeSearchHistory.Enabled = false;
+                cbChromeSessions.Enabled = false;
+                cbChromeSavedPasswords.Enabled = false;
+                lblChromeNotDetected.Visible = true;
+            }
+
+            if (!Directory.Exists(Dirs.firefoxDir))
+            {
+                cbFirefoxCache.Enabled = false;
+                cbFirefoxCookies.Enabled = false;
+                cbFirefoxSearchHistory.Enabled = false;
+                lblFirefoxNotDetected.Visible = true;
+            }
+
+            if (!Directory.Exists(Dirs.discordDir))
+            {
+                cbDiscordCache.Enabled = false;
+                cbDiscordCookies.Enabled = false;
+                lblDiscordNotDetected.Visible = true;
+
+            }
+
+            if (!Directory.Exists(Dirs.edgeDir))
+            {
+                cbEdgeCache.Enabled = false;
+                cbEdgeCookies.Enabled = false;
+                cbEdgeSearchHistory.Enabled = false;
+                cbEdgeSessions.Enabled = false;
+                lblEdgeNotDetected.Visible = true;
+
+            }
+        }
+
+        private void cbEdgeCookies_CheckStateChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                taskDialog1.Show();
+            } catch
+            {
+                Console.WriteLine("An error happened.");
+            }
+            
+        }
+
+        private void cbChromeCache_CheckStateChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                taskDialog1.Show();
+            } catch
+            {
+                Console.WriteLine("An error happened.");
+            }
+           
+        }
+
+        private void cbFirefoxCookies_CheckStateChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                taskDialog1.Show();
+            }
+            catch
+            {
+                Console.WriteLine("An error happened.");
+            }
+        }
+
+        private void cbChromeCookies_CheckStateChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                taskDialog1.Show();
+            }
+            catch
+            {
+                Console.WriteLine("An error happened.");
+            }
+           
         }
     }
 }

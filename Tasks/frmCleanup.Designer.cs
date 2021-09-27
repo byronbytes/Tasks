@@ -205,7 +205,8 @@
             // taskDialog1
             // 
             this.taskDialog1.Buttons.Add(this.taskDialogButton1);
-            this.taskDialog1.Content = "This will log you out on all websites you are currently signed into.";
+            this.taskDialog1.Content = "Clearing a browser\'s cache will log you out on any current website you are logged" +
+    " into.";
             this.taskDialog1.MainIcon = Ookii.Dialogs.WinForms.TaskDialogIcon.Warning;
             this.taskDialog1.MainInstruction = "Warning";
             this.taskDialog1.WindowIcon = ((System.Drawing.Icon)(resources.GetObject("taskDialog1.WindowIcon")));
@@ -230,7 +231,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(733, 800);
             this.tabControl1.TabIndex = 36;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -575,6 +575,7 @@
             this.cbEdgeCookies.Text = "Cookies";
             this.cbEdgeCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbEdgeCookies.UseVisualStyleBackColor = true;
+            this.cbEdgeCookies.CheckStateChanged += new System.EventHandler(this.cbEdgeCookies_CheckStateChanged);
             // 
             // cbEdgeCache
             // 
@@ -671,6 +672,7 @@
             this.cbChromeCache.Text = "Cache";
             this.cbChromeCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbChromeCache.UseVisualStyleBackColor = true;
+            this.cbChromeCache.CheckStateChanged += new System.EventHandler(this.cbChromeCache_CheckStateChanged);
             // 
             // cbChromeSessions
             // 
@@ -699,7 +701,7 @@
             this.cbChromeCookies.Text = "Cookies";
             this.cbChromeCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbChromeCookies.UseVisualStyleBackColor = true;
-            this.cbChromeCookies.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            this.cbChromeCookies.CheckStateChanged += new System.EventHandler(this.cbChromeCookies_CheckStateChanged);
             // 
             // cbFirefoxSearchHistory
             // 
@@ -742,6 +744,7 @@
             this.cbFirefoxCookies.Text = "Cookies";
             this.cbFirefoxCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbFirefoxCookies.UseVisualStyleBackColor = true;
+            this.cbFirefoxCookies.CheckStateChanged += new System.EventHandler(this.cbFirefoxCookies_CheckStateChanged);
             // 
             // cbFirefoxCache
             // 
