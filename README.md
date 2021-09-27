@@ -3,22 +3,16 @@
 # <img src="https://user-images.githubusercontent.com/53088136/129425927-00413aa1-ca44-4ee5-a4ce-7d276cf2189c.png" alt="Tasks Logo" width='56' height='56' />  Tasks 
 <img src="https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues" alt="Open Issues" /> 
 
-
 **Tasks** is an application that helps optimize computer performance and efficiency. Tasks includes an advanced cleanup tool that lets you clean application cache files, delete unused browser extensions, clear cookies, and remove bloatware. Tasks also has a startup manager that lets you create, modify, and disable programs that run on startup.
-
-## Features
-
-- An advanced cleanup tool that lets you clean application cache files, cookies, web history, and remove unused extensions.
-- Enable/Disable Programs that run on Startup.
-- An extra detailed task manager that gives you more information than the internal Windows Task Manager.
-- Remove bloatware from your computer in one click.
-
 
 ## Installation
 
-1. Pick the stable release or the beta release.
-2. Download the top-most archive, or zip file (not the source code).
-3. Extract the archive, and execute the <i>.exe</i> file. After that, <strong>Tasks</strong> will launch.
+Installing Tasks is very simple, as the application is currently portable.
+
+1. Download the stable release from the Releases tab.
+2. Extract the .zip, and execute the <i>.exe</i> file. After that, <strong>Tasks</strong> will launch.
+
+Notice that the dependencies must be kept in the same folder, and we are working on a fix for that.
 
 
 ### Prerequisites
@@ -32,11 +26,11 @@ You can support our project in many ways, simply by leaving a star, forking, wat
 
 ## Authors
 
-* **Byron** - *Initial work*
-* **Average** - *Code Improvement & Suggestions*
-* **Solirs** - *Firefox cleanup, browser extension cleaning, remove bloat, etc*
+* **Byron** - *Initial work and development.*
+* **Average** - *Code Improvement & Suggestions.*
+* **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 
-See also the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
+See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
 ## License
 
