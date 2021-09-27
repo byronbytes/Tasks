@@ -25,7 +25,6 @@ namespace Tasks
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            TasksLibCore.DirectorySetup.CreateDirectories();
         }
         private void button1_Click(object sender, EventArgs e)
         {

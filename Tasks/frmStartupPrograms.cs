@@ -83,13 +83,24 @@ namespace Tasks
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "All|*.*" })
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
-                txtFileName.Text = ofd.FileName;
-                FileInfo fileInfo = new FileInfo(txtFileName.Text);
-                txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
-                File.Copy(txtFileName.Text, txtTargetPath.Text, true);
-                Thread.Sleep(30);
+                {
+                    txtFileName.Text = ofd.FileName;
+                    FileInfo fileInfo = new FileInfo(txtFileName.Text);
+                    txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
+                    File.Copy(txtFileName.Text, txtTargetPath.Text, true);
+                    Thread.Sleep(30);
+                    ClearStartupList();
+                    RenderStartupsOnListWiew();
+                }
+                else
+                {
+                    MessageBox.Show("test");
+                }
+
+
                 ClearStartupList();
                 RenderStartupsOnListWiew();
+
 
             }
 

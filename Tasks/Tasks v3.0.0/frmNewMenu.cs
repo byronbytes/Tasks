@@ -123,5 +123,10 @@ namespace Tasks.Tasks_v3._0._0 {
         {
 
         }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
