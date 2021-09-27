@@ -1,15 +1,13 @@
 
 
 # <img src="https://user-images.githubusercontent.com/53088136/129425927-00413aa1-ca44-4ee5-a4ce-7d276cf2189c.png" alt="Tasks Logo" width='56' height='56' />  Tasks 
-<img src="https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues" alt="Open Issues" /> <img src="https://img.shields.io/github/v/release/LiteTools/Tasks?label=latest%20stable" alt="Latest Stable Version" /> <img src="https://img.shields.io/github/downloads/LiteTools/Tasks/total" alt="Total Downloads" />
-
-This README has been translated into multiple languages. Click the flag that applies to your language.
-
-**[🇵🇱](https://github.com/LiteTools/Tasks/blob/master/Other%20Language%20READMEs/README-PL.MD)**
+<img src="https://img.shields.io/github/issues-raw/LiteTools/Tasks?label=total%20open%20issues" alt="Open Issues" /> 
+https://img.shields.io/github/v/tag/LiteTools/Tasks?style=flat-square
+https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square
 
 <strong>Tasks</strong> is an application that helps optimize computer performance. Tasks has an advanced cleanup tool, a startup manager, and a detailed task manager.
 
-## ✅ Features
+## Features
 
 - An advanced cleanup tool that lets you clean application cache files, cookies, web history, and remove unused extensions.
 - Enable/Disable Programs that run on Startup.
