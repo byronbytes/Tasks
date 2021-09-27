@@ -70,6 +70,7 @@ namespace Tasks
             {
                 // will add a method to auto update the list when the window closes
                 Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
+
             }
             catch (Exception ex)
             {
@@ -94,12 +95,12 @@ namespace Tasks
                 }
                 else
                 {
-                    MessageBox.Show("test");
+                    ClearStartupList();
+                    RenderStartupsOnListWiew();
                 }
 
 
-                ClearStartupList();
-                RenderStartupsOnListWiew();
+          
 
 
             }
