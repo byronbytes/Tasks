@@ -33,7 +33,7 @@ You can support our project in many ways, simply by leaving a star, forking, wat
 
 ## Authors
 
-* **Byron** - *Initial work* - [Tasks Development](https://github.com/LiteTools/Tasks)
+* **Byron** - *Initial work*
 * **Average** - *Code Improvement & Suggestions*
 * **Solirs** - *Firefox cleanup, browser extension cleaning, remove bloat, etc*
 
