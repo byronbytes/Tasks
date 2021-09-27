@@ -585,6 +585,7 @@ namespace Tasks
                 }
             }
 
+       
 
         }
 
@@ -821,7 +822,6 @@ namespace Tasks
 
         private void DirectoryExists()
         {
-            var g = new Dirs();
 
 
             // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
