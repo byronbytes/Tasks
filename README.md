@@ -32,6 +32,13 @@ You can support our project in many ways, simply by leaving a star, forking, wat
 
 See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
+## Acknowledgments
+
+* This application was inspired by CCleaner, but we built up on the idea to make it better.
+* Integrated the Windows 10 Debloater made by https://github.com/Sycnex/Windows10Debloater
+* Integrated the Remove Microsoft Edge Script by https://github.com/ShadowWhisperer/Remove-Edge-Chromium
+
+
 ## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for more details and information.
