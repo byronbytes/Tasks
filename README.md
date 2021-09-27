@@ -9,9 +9,6 @@ This README has been translated into multiple languages. Click the flag that app
 
 <strong>Tasks</strong> is an application that helps optimize computer performance. Tasks has an advanced cleanup tool, a startup manager, and a detailed task manager.
 
-<strong>Tasks</strong> is licensed under the <strong>Apache 2.0</strong> license.
-
-
 ## ✅ Features
 
 - An advanced cleanup tool that lets you clean application cache files, cookies, web history, and remove unused extensions.
@@ -37,11 +34,11 @@ You can support our project in many ways, simply by leaving a star, forking, wat
 * **Average** - *Code Improvement & Suggestions*
 * **Solirs** - *Firefox cleanup, browser extension cleaning, remove bloat, etc*
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more details and information.
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for more details and information.
 
 ## 📸 Images
 
