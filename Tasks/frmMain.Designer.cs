@@ -65,11 +65,11 @@ namespace Tasks
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(15, 424);
+            this.button6.Location = new System.Drawing.Point(15, 420);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 29);
+            this.button6.Size = new System.Drawing.Size(127, 33);
             this.button6.TabIndex = 10;
             this.button6.Text = "About";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -79,11 +79,11 @@ namespace Tasks
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(23, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 32);
+            this.label1.Size = new System.Drawing.Size(66, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tasks";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -122,12 +122,12 @@ namespace Tasks
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Tasks.Properties.Resources.CleanupWhite;
             this.button1.Location = new System.Drawing.Point(9, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 40);
+            this.button1.Size = new System.Drawing.Size(167, 40);
             this.button1.TabIndex = 0;
             this.button1.Text = "Cleanup";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -166,12 +166,12 @@ namespace Tasks
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Tasks.Properties.Resources.StartupProgramWhite;
             this.button3.Location = new System.Drawing.Point(9, 19);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 40);
+            this.button3.Size = new System.Drawing.Size(167, 40);
             this.button3.TabIndex = 0;
             this.button3.Text = "Startup Programs";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -197,11 +197,11 @@ namespace Tasks
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(163, 21);
+            this.label2.Location = new System.Drawing.Point(182, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 17);
+            this.label2.Size = new System.Drawing.Size(118, 34);
             this.label2.TabIndex = 3;
-            this.label2.Text = "WIP";
+            this.label2.Text = "Work In Progress \r\nStill very buggy.";
             // 
             // label6
             // 
@@ -219,12 +219,12 @@ namespace Tasks
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::Tasks.Properties.Resources.TaskManagerWhite;
             this.button4.Location = new System.Drawing.Point(9, 19);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 40);
+            this.button4.Size = new System.Drawing.Size(167, 40);
             this.button4.TabIndex = 0;
             this.button4.Text = "Task Manager";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

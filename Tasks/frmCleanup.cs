@@ -578,13 +578,13 @@ namespace Tasks
             {
                 if (!btnCleanup.Visible && !btnCopyLogs.Visible)
                 {
-
                     btnCleanup.Visible = true;
                     btnCopyLogs.Visible = true;
 
                 }
             }
 
+           
 
 
         }
@@ -888,7 +888,7 @@ namespace Tasks
         {
             try
             {
-                RunFile.RunBat("Scripts/Debloater/UninstallOneDrive.ps1", true);
+                RunFile.RunPowershell("Scripts/Debloater/UninstallOneDrive.ps1", true);
             }
             catch (Exception ex)
             {
