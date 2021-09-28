@@ -819,35 +819,39 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Error while trying to remove extension.");
                 }
             }
-           
 
-        }
+
+                if (comboBox1.Text == "Microsoft Edge")
+                {
+                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                    {
+                        try
+                        {
+                            var item = ExtensionsBox.SelectedItems[0];
+                            var subItem = item.SubItems[2].Text;
+
+                            RemoveExt.RemoveExtChrome(subItem);
+                            Thread.Sleep(85);
+                            ExtensionsBox.Items.Remove(eachItem);
+                            CleanupLogsLBox.Items.Add("Extension Removed.");
+
+                        }
+                        catch (Exception ex)
+                        {
+                            CleanupLogsLBox.Items.Add("Error while trying to remove extension." + ex);
+                        }
+                    }
+                }
+
+            }
+
             else
             {
                 MessageBox.Show("Please select an extension to remove.");
             }
 
-            if (comboBox1.Text == "Microsoft Edge")
-            {
-                foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
-                {
-                    try
-                    {
-                        var item = ExtensionsBox.SelectedItems[0];
-                        var subItem = item.SubItems[2].Text;
 
-                        RemoveExt.RemoveExtChrome(subItem);
-                        Thread.Sleep(85);
-                        ExtensionsBox.Items.Remove(eachItem);
-                        CleanupLogsLBox.Items.Add("Extension Removed.");
-
-                    }
-                    catch (Exception ex)
-                    {
-                        CleanupLogsLBox.Items.Add("Error while trying to remove extension." + ex);
-                    }
-                }
-            }
+         
 
 
         }
