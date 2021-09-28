@@ -45,17 +45,41 @@ namespace Tasks.Tasks_v3._0._0
         {
 
 
-         string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-         string folderTasks = Path.Combine(folder, "Tasks");
-         string folderTasksCS = Path.Combine(folderTasks, "Cleanup Summary");
+            string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string folderTasks = Path.Combine(folder, "Tasks");
+            string folderTasksCS = @Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary";
 
-            foreach (string file in Directory.EnumerateDirectories(folderTasksCS))
+            foreach (string file in Directory.EnumerateDirectories(@folderTasksCS))
             {
-                File.Delete(file);
-                Console.WriteLine("Deleted File " + file);
+                try
+                {
+                    File.Delete(file);
+                    Console.WriteLine("Deleted" + file);
+
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("idk" + ex);
+                }
+
+                RefreshCleanupLogs();
+  
             }
         }
 
+        public void RefreshCleanupLogs()
+        {
+            listBox1.Items.Clear();
+
+            DirectoryInfo di = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary");
+            FileInfo[] files = di.GetFiles("*.txt");
+
+            foreach (FileInfo file in files)
+            {
+                listBox1.Items.Add(file.Name);
+            }
+
+
+        }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
         }

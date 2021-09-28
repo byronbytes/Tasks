@@ -25,7 +25,13 @@ namespace Tasks
             RenderStartupsOnListWiew();
         }
 
-        private void ClearStartupList()
+        private void RefreshList()
+        {
+            StartupProcesses.Items.Clear();
+            RenderStartupsOnListWiew();
+        }
+
+        private void OnlyClearList() // This does not re-render the cleanup box.
         {
             StartupProcesses.Items.Clear();
         }
@@ -70,8 +76,7 @@ namespace Tasks
             {
                 // will add a method to auto update the list when the window closes
                 Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
-                ClearStartupList();
-                RenderStartupsOnListWiew();
+                RefreshList();
             }
             catch (Exception ex)
             {
@@ -91,12 +96,11 @@ namespace Tasks
                     txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
                     File.Copy(txtFileName.Text, txtTargetPath.Text, true);
                     Thread.Sleep(30);
-                    ClearStartupList();
-                    RenderStartupsOnListWiew();
+                    RefreshList();
                 }
                 else
                 {
-                    ClearStartupList();
+                    OnlyClearList();
                     RenderStartupsOnListWiew();
                 }
 
@@ -135,6 +139,11 @@ namespace Tasks
 
             }
 
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            RefreshList();
         }
     }
 }

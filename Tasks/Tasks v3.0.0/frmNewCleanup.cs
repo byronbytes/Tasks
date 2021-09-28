@@ -84,22 +84,6 @@ namespace Tasks.Tasks_v3._0._0 {
                 }
             }
 
-            if(cbTasksCleanupLogs.Checked)
-            {
-                try
-                {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Tasks");
-                    if (DeleteAllFiles(directory))
-                        {
-                        listBox1.Items.Add("Tasks Cleanup Logs Deleted.");
-                        cleanupSummary();
-                        label9.Text = "Deleted Files: " + deletedFile + "\n" + "Deleted Directories: " + deletedDir;
-                    }
-                }
-                catch
-                {
-                }
-            }
         }
 
 

@@ -45,9 +45,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbTasksCleanupLogs = new System.Windows.Forms.CheckBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox27 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
@@ -86,7 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -393,9 +389,6 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.cbTasksCleanupLogs);
-            this.tabPage2.Controls.Add(this.pictureBox3);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.checkBox27);
             this.tabPage2.Controls.Add(this.checkBox11);
@@ -426,44 +419,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(907, 585);
+            this.tabPage2.Size = new System.Drawing.Size(907, 584);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Application";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(348, 310);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 21);
-            this.label8.TabIndex = 76;
-            this.label8.Text = "Tasks";
-            // 
-            // cbTasksCleanupLogs
-            // 
-            this.cbTasksCleanupLogs.AutoSize = true;
-            this.cbTasksCleanupLogs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbTasksCleanupLogs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbTasksCleanupLogs.ForeColor = System.Drawing.Color.White;
-            this.cbTasksCleanupLogs.Location = new System.Drawing.Point(315, 342);
-            this.cbTasksCleanupLogs.Name = "cbTasksCleanupLogs";
-            this.cbTasksCleanupLogs.Size = new System.Drawing.Size(106, 21);
-            this.cbTasksCleanupLogs.TabIndex = 77;
-            this.cbTasksCleanupLogs.Text = "Cleanup Logs";
-            this.cbTasksCleanupLogs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbTasksCleanupLogs.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Tasks.Properties.Resources.Tasks_64x64;
-            this.pictureBox3.Location = new System.Drawing.Point(309, 305);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 78;
-            this.pictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -810,7 +768,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(907, 585);
+            this.tabPage3.Size = new System.Drawing.Size(907, 584);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
             // 
@@ -820,7 +778,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(907, 585);
+            this.tabPage4.Size = new System.Drawing.Size(907, 584);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Cookie Whitelist";
             // 
@@ -830,7 +788,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 30);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(907, 585);
+            this.tabPage5.Size = new System.Drawing.Size(907, 584);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Remove Bloatware";
             // 
@@ -885,7 +843,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -952,9 +909,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox cbTasksCleanupLogs;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label9;
     }
 }

@@ -41,6 +41,7 @@ namespace Tasks
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.txtFileName = new System.Windows.Forms.Label();
             this.txtTargetPath = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StartupProcesses
@@ -56,7 +57,7 @@ namespace Tasks
             this.StartupProcesses.HideSelection = false;
             this.StartupProcesses.Location = new System.Drawing.Point(12, 12);
             this.StartupProcesses.Name = "StartupProcesses";
-            this.StartupProcesses.Size = new System.Drawing.Size(915, 562);
+            this.StartupProcesses.Size = new System.Drawing.Size(915, 507);
             this.StartupProcesses.TabIndex = 0;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
@@ -121,7 +122,7 @@ namespace Tasks
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(179, 609);
+            this.txtFileName.Location = new System.Drawing.Point(845, 568);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(96, 15);
             this.txtFileName.TabIndex = 4;
@@ -132,12 +133,24 @@ namespace Tasks
             // 
             this.txtTargetPath.AutoSize = true;
             this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTargetPath.Location = new System.Drawing.Point(179, 624);
+            this.txtTargetPath.Location = new System.Drawing.Point(845, 583);
             this.txtTargetPath.Name = "txtTargetPath";
             this.txtTargetPath.Size = new System.Drawing.Size(96, 15);
             this.txtTargetPath.TabIndex = 5;
             this.txtTargetPath.Text = "Added Directory:";
             this.txtTargetPath.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(12, 556);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(161, 37);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Refresh List";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // frmStartupPrograms
             // 
@@ -145,6 +158,7 @@ namespace Tasks
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(953, 648);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.txtTargetPath);
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.button3);
@@ -174,5 +188,6 @@ namespace Tasks
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label txtFileName;
         private System.Windows.Forms.Label txtTargetPath;
+        private System.Windows.Forms.Button button4;
     }
 }
