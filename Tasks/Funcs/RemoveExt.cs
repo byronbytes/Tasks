@@ -11,13 +11,12 @@ namespace Tasks
     class RemoveExt
     {
 
-        public static int RemoveExtFirefox(string extpath)
+        public static int RemoveExtFirefox(string extpath) // Firefox uses a removal method with files and not directories.
         {
             try
             {
 
-                string aa = extpath;
-                File.Delete(aa);
+                File.Delete(extpath);
                 return 0;
             }
             catch
@@ -27,17 +26,10 @@ namespace Tasks
         }
             public static int RemoveExtChrome(string extpath)
             {
-                try
-                {
-
-                    string aa = extpath;
-                    File.Delete(aa);
+                 string path = extpath;
+                    Directory.Delete(path, true);
                     return 0;
-                }
-                catch
-                {
-                    return 1;
-                }
+             
             }
     }
 }

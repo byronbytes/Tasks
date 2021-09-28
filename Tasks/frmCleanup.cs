@@ -36,7 +36,7 @@ namespace Tasks
 
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
-    
+
             foreach (var file in directoryInfo.GetFiles())
             {
                 try
@@ -585,11 +585,11 @@ namespace Tasks
                 }
             }
 
-       
+
 
         }
 
-      
+
 
         private void frmCleanup_Load(object sender, EventArgs e)
         {
@@ -611,7 +611,6 @@ namespace Tasks
             if (Directory.Exists(Dirs.edgeDir))
             {
                 comboBox1.Items.Add("Microsoft Edge");
-                // this will be a pain
             }
 
         }
@@ -692,6 +691,7 @@ namespace Tasks
 
 
 
+
             }
             else if (comboBox1.Text == "Mozilla Firefox")
             {
@@ -733,20 +733,66 @@ namespace Tasks
                 }
 
             }
+
+            else if (comboBox1.Text == "Microsoft Edge")
+            {
+                ExtensionsBox.Items.Clear();
+                foreach (string ext in Directory.EnumerateDirectories(Dirs.edgeExtDir))
+                {
+                    FileInfo fi = new FileInfo(ext);
+
+                    ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
+                    DirectoryInfo fol = new DirectoryInfo(ext);
+                    fol.EnumerateDirectories();
+                    extb.SubItems.Add("~ " + ByteSize.FromBytes(ext.Length).ToString());
+
+                    extb.SubItems.Add(ext);
+                }
+
+
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
-            if (ExtensionsBox.SelectedItems.Count > 0) //Check if the user selected extensions for deletion.
+            if (ExtensionsBox.SelectedItems.Count >= 0) //Check if the user selected extensions for deletion.
             {
 
                 /*Process process = new Process();
                 process.StartInfo.FileName = "Scripts/BatFiles/killfirefox.bat";
                 process.Start();
                 process.WaitForExit();*/
+                if (comboBox1.Text == "Google Chrome")
+                {
+                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                    {
+                        try
+                        {
+                            var item = ExtensionsBox.SelectedItems[0];
+                            var subItem = item.SubItems[2].Text;
 
+                            RemoveExt.RemoveExtChrome(subItem);
+                            Thread.Sleep(85);
+                            ExtensionsBox.Items.Remove(eachItem);
+                               CleanupLogsLBox.Items.Add("Extension Removed.");
 
+                        }
+                        catch (Exception ex)
+                        {
+                            CleanupLogsLBox.Items.Add("Error while trying to remove extension." + ex);
+                        }
+                    }
+                }
+                
+                
+            
+            
+                
+            
+
+            if (comboBox1.Text == "Mozilla Firefox")
+            {
                 int aa = RunFile.RunBat("Scripts/BatFiles/killfirefox.bat", true);
 
                 if (aa == 1)
@@ -773,10 +819,36 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Error while trying to remove extension.");
                 }
             }
+           
+
+        }
             else
             {
                 MessageBox.Show("Please select an extension to remove.");
             }
+
+            if (comboBox1.Text == "Microsoft Edge")
+            {
+                foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                {
+                    try
+                    {
+                        var item = ExtensionsBox.SelectedItems[0];
+                        var subItem = item.SubItems[2].Text;
+
+                        RemoveExt.RemoveExtChrome(subItem);
+                        Thread.Sleep(85);
+                        ExtensionsBox.Items.Remove(eachItem);
+                        CleanupLogsLBox.Items.Add("Extension Removed.");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        CleanupLogsLBox.Items.Add("Error while trying to remove extension." + ex);
+                    }
+                }
+            }
+
 
         }
 
@@ -832,7 +904,7 @@ namespace Tasks
             Dirs.firefoxDir = localappdata + "\\Mozilla\\Firefox\\";
             Dirs.firefoxExtDir = roamingappdata + "\\Mozilla\\Firefox\\Profiles\\";
             Dirs.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
-            Dirs.edgeExtDir = "";
+            Dirs.edgeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extensions\\");
             Dirs.discordDir = localappdata + "\\Discord\\"; // Makes more sense checking appdata than program files
 
 

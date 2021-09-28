@@ -882,7 +882,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(499, 720);
+            this.button3.Location = new System.Drawing.Point(541, 720);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(178, 41);
             this.button3.TabIndex = 38;
@@ -905,7 +905,7 @@
             this.ExtensionsBox.HideSelection = false;
             this.ExtensionsBox.Location = new System.Drawing.Point(16, 253);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(648, 444);
+            this.ExtensionsBox.Size = new System.Drawing.Size(703, 444);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -990,14 +990,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(12, 414);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(625, 347);
+            this.textBox1.Size = new System.Drawing.Size(688, 347);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -1056,10 +1056,10 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(12, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(397, 40);
+            this.label5.Size = new System.Drawing.Size(562, 40);
             this.label5.TabIndex = 0;
-            this.label5.Text = "This feature will be releasing in a patch (2.1.0)\r\nOnly the \"Remove Solitare\" but" +
-    "ton works at the moment.";
+            this.label5.Text = "You can remove bloatware using our built in panel, which has much more variety\r\n " +
+    "and has more built in scripts.";
             // 
             // btnCleanup
             // 
