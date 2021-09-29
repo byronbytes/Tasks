@@ -14,30 +14,25 @@ namespace Tasks.Tasks_v3._0._0 {
         public frmNewCleanup() { InitializeComponent(); }
 
         private void frmNewCleanup_Load(object sender, EventArgs e) {}
-
-
-        // Credit to @averagelolol for the idea of listing what files and directories got deleted.
-        int deletedFile = 0;
-        int deletedDir = 0;
-
-   
+  
         // DeleteAllFiles is prone to change and be replaced with a new and more efficient method.
-        private void DeleteAllFiles(DirectoryInfo directoryInfo)
+        // 
+        private (deletedFile, fileCount, deletedDir, dirCount) DeleteAllFiles(DirectoryInfo directoryInfo)
         {
             // reinitialize variables
-            deletedFile = 0;
-            deletedDir = 0;
+            int deletedFile = 0;
+            int deletedDir = 0;
+            int fileCount = directoryInfo.GetFiles().GetLength();
+            int dirCount = directoryInfo.GetDirectories().GetLength();
             
             foreach (var file in directoryInfo.GetFiles())
             {
-
                 try
                 {
                     file.Delete();
                   
                     listBox1.Items.Add("Deleted file '" + file.FullName + "'");
                     ++deletedFile;
-
                 }
                 catch (Exception ex)
                 {
@@ -58,8 +53,9 @@ namespace Tasks.Tasks_v3._0._0 {
                 {
                     listBox1.Items.Add("Exception Thrown: " + ex.Message);
                 }
-
             }
+            
+            return (deletedFile, fileCount, deletedDir, dirCount);
         }
         
         private void button3_Click(object sender, EventArgs e)
@@ -67,12 +63,14 @@ namespace Tasks.Tasks_v3._0._0 {
             // The deleting / checkbox method is also prone to change soon.
             if (cbTempFiles.Checked)
             {
-                DeleteAllFiles(new DirectoryInfo("C:\\Windows\\Temp")); 
-                DeleteAllFiles(new DirectoryInfo(Path.GetTempPath()));
+                // Windows Temp = wt ; User Temp = ut
+                // df = deleted file, fc = file count, dd = deleted dir, dc = dir count
+                var (wtdf, wtfc, wtdd, wtdc) = DeleteAllFiles(new DirectoryInfo("C:\\Windows\\Temp")); 
+                var (utdf, utfc, utdd, utdc) = DeleteAllFiles(new DirectoryInfo(Path.GetTempPath()));
 
                 listBox1.Items.Add("Temp Files Deleted.");
                 cleanupSummary();
-                label9.Text = "Deleted " + deletedFile  + " files and " + deletedDir + " directories.";
+                label9.Text = "Deleted " + (wtdf+utdf) + "/" + (wtfc+utfc) + " files and " + (wtdd+utdd) + "/" + (wtdc+utdc) + " directories.";
             }
 
         }
