@@ -22,8 +22,12 @@ namespace Tasks.Tasks_v3._0._0 {
 
    
         // DeleteAllFiles is prone to change and be replaced with a new and more efficient method.
-        private bool DeleteAllFiles(DirectoryInfo directoryInfo)
+        private void DeleteAllFiles(DirectoryInfo directoryInfo)
         {
+            // reinitialize variables
+            deletedFile = 0;
+            deletedDir = 0;
+            
             foreach (var file in directoryInfo.GetFiles())
             {
 
@@ -31,7 +35,7 @@ namespace Tasks.Tasks_v3._0._0 {
                 {
                     file.Delete();
                   
-                    listBox1.Items.Add("Deleted " + file.FullName);
+                    listBox1.Items.Add("Deleted file '" + file.FullName + "'");
                     ++deletedFile;
 
                 }
@@ -47,7 +51,7 @@ namespace Tasks.Tasks_v3._0._0 {
                 try
                 {
                     dir.Delete(true);
-                    listBox1.Items.Add("Deleted Folder " + dir.FullName);
+                    listBox1.Items.Add("Deleted folder '" + dir.FullName + "'");
                     ++deletedDir;
                 }
                 catch (Exception ex)
@@ -56,32 +60,19 @@ namespace Tasks.Tasks_v3._0._0 {
                 }
 
             }
-
-            return true;
         }
+        
         private void button3_Click(object sender, EventArgs e)
         {
-            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
-            var usertemp = new DirectoryInfo(Path.GetTempPath());
-
-                        // The deleting / checkbox method is also prone to change soon.
+            // The deleting / checkbox method is also prone to change soon.
             if (cbTempFiles.Checked)
             {
-                try
-                {
+                DeleteAllFiles(new DirectoryInfo("C:\\Windows\\Temp")); 
+                DeleteAllFiles(new DirectoryInfo(Path.GetTempPath()));
 
-                    if (DeleteAllFiles(windowstemp) & DeleteAllFiles(usertemp))
-                    {
-                        listBox1.Items.Add("Temp Files Deleted.");
-                        cleanupSummary();
-                        label9.Text = "Deleted Files: " + deletedFile  + "\n" + "Deleted Directories: " + deletedDir;
-
-                    }
-                }
-                catch (Exception ex)
-                {
-                    listBox1.Items.Add("Error while deleting temp folders. " + ex);
-                }
+                listBox1.Items.Add("Temp Files Deleted.");
+                cleanupSummary();
+                label9.Text = "Deleted " + deletedFile  + " files and " + deletedDir + " directories.";
             }
 
         }
@@ -92,7 +83,7 @@ namespace Tasks.Tasks_v3._0._0 {
         {
             TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
             int secondsSinceEpoch = (int)t.TotalSeconds;
-             string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string folderTasks = Path.Combine(folder, "Tasks");
             string folderTasksCleanup = Path.Combine(folderTasks, "Cleanup Summary");
             File.WriteAllLines(folderTasksCleanup + "\\cleanupSummary" + secondsSinceEpoch + ".txt", listBox1.Items.Cast<string>().ToArray());
