@@ -17,13 +17,13 @@ namespace Tasks.Tasks_v3._0._0 {
   
         // DeleteAllFiles is prone to change and be replaced with a new and more efficient method.
         // 
-        private (deletedFile, fileCount, deletedDir, dirCount) DeleteAllFiles(DirectoryInfo directoryInfo)
+        private (int, int, int, int) DeleteAllFiles(DirectoryInfo directoryInfo)
         {
             // reinitialize variables
             int deletedFile = 0;
             int deletedDir = 0;
-            int fileCount = directoryInfo.GetFiles().GetLength();
-            int dirCount = directoryInfo.GetDirectories().GetLength();
+            int fileCount = directoryInfo.GetFiles().Length;
+            int dirCount = directoryInfo.GetDirectories().Length;
             
             foreach (var file in directoryInfo.GetFiles())
             {
