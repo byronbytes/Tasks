@@ -31,5 +31,31 @@ namespace Tasks
                     return 0;
              
             }
+
+        public static void RemoveExtension(string path, int Browser)
+        {
+
+            switch (Browser)
+            {
+                case 1:
+                    try
+                    {
+
+                        File.Delete(path);
+
+                    }
+                    catch
+                    {
+                        // ex
+                    }
+                    break;
+
+                case 2:
+                    Directory.Delete(path, true);
+                    break;
+            
+
+            }
+        }
     }
 }

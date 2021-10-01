@@ -137,15 +137,27 @@ namespace Tasks
             {
                 try
                 {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache\\");
-                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Code Cache\\");
-                    var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\GPUCache\\");
-                    var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\ShaderCache\\");
-                    var directory5 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\CacheStorage\\");
-                    var directory6 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Service Worker\\ScriptCache\\");
-                    var directory7 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\GrShaderCache\\GPUCache\\");
-                    var directory8 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\File System\\000\\p\\");
-                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3) & DeleteAllFiles(directory4) & DeleteAllFiles(directory5) & DeleteAllFiles(directory6) & DeleteAllFiles(directory7) & DeleteAllFiles(directory8)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
+                    string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
+                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code CacheCode Cache", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "File System\\000\\p" };
+                     DirectoryInfo[] directoryInfos = new DirectoryInfo[] { };
+
+                    foreach (string subdir in userDataCacheDirs)
+                    {
+                        // Make a new DirectoryInfo with the info of that subdirectory and then add it into the directoryInfos array
+                        directoryInfos[]  new DirectoryInfo(mainSubdirectory + subdir + "\\");
+                    }
+
+                    bool isDeleted = true;
+                    // For each DirectoryInfo inside of the directoryInfos array
+                    foreach (DirectoryInfo d in directoryInfos)
+                    {
+                        // If DeleteAllFiles returns false, set the isDeleted value to false
+                        if (!DeleteAllFiles(d))
+                            isDeleted = false;
+                    }
+
+                    if (isDeleted)
+                        CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
                 }
                 catch (Exception)
                 {
