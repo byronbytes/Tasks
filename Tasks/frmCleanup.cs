@@ -138,19 +138,27 @@ namespace Tasks
                 try
                 {
                     string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
-                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code CacheCode Cache", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "File System\\000\\p" };
-                     DirectoryInfo[] directoryInfos = new DirectoryInfo[] { };
+                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "File System\\000\\p" };
+                    List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
 
                     foreach (string subdir in userDataCacheDirs)
                     {
                         // Make a new DirectoryInfo with the info of that subdirectory and then add it into the directoryInfos array
-                        directoryInfos[]  new DirectoryInfo(mainSubdirectory + subdir + "\\");
+                        directoryInfos.Add(new DirectoryInfo(mainSubdirectory + subdir + "\\"));
+
                     }
 
                     bool isDeleted = true;
                     // For each DirectoryInfo inside of the directoryInfos array
                     foreach (DirectoryInfo d in directoryInfos)
                     {
+                        try
+                        {
+                            DeleteAllFiles(d);
+                        }catch (Exception ex)
+                        {
+                            CleanupLogsLBox.Items.Add("erorr test ." + ex);
+                        }
                         // If DeleteAllFiles returns false, set the isDeleted value to false
                         if (!DeleteAllFiles(d))
                             isDeleted = false;
