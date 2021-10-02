@@ -3,7 +3,9 @@
 # <img src="https://user-images.githubusercontent.com/53088136/129425927-00413aa1-ca44-4ee5-a4ce-7d276cf2189c.png" alt="Tasks Logo" width='42' height='42' />  Tasks 
 **Tasks** is an application that helps optimize computer performance and efficiency. Tasks includes an advanced cleanup tool that lets you clean application cache files, delete unused browser extensions, clear cookies, and remove bloatware. Tasks also has a startup manager that lets you create, modify, and disable programs that run on startup.
 
-This project is licensed under the Apache 2.0 License. You may obtain a copy of the License [here](https://www.apache.org/licenses/LICENSE-2.0).
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
+
+This project is licensed under the Apache 2.0 License.
 
 ## Installation
 Installing Tasks is very simple, as the application is currently portable.
@@ -25,7 +27,7 @@ You can support our project in many ways, simply by leaving a star, forking, wat
 See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
 ## Acknowledgments
-* This application was inspired by CCleaner, but we built up on the idea to make it better.
+* This application was inspired by CCleaner, but we built up on the idea and improved it in our own ways.
 * Integrated the Windows 10 Debloater made by https://github.com/Sycnex/Windows10Debloater
 * Integrated the Remove Microsoft Edge Script made by https://github.com/ShadowWhisperer/Remove-Edge-Chromium
 
