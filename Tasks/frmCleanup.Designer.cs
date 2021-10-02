@@ -672,6 +672,7 @@
             this.cbChromeCache.Text = "Cache";
             this.cbChromeCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbChromeCache.UseVisualStyleBackColor = true;
+            this.cbChromeCache.CheckedChanged += new System.EventHandler(this.cbChromeCache_CheckedChanged);
             this.cbChromeCache.CheckStateChanged += new System.EventHandler(this.cbChromeCache_CheckStateChanged);
             // 
             // cbChromeSessions

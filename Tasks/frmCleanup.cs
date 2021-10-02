@@ -138,7 +138,7 @@ namespace Tasks
                 try
                 {
                     string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
-                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "File System\\000\\p" };
+                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "\\Default\\File System\\" };
                     List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
 
                     foreach (string subdir in userDataCacheDirs)
@@ -155,10 +155,12 @@ namespace Tasks
                         try
                         {
                             DeleteAllFiles(d);
-                        }catch (Exception ex)
+                        }
+                        catch (Exception ex)
                         {
                             CleanupLogsLBox.Items.Add("erorr test ." + ex);
                         }
+
                         // If DeleteAllFiles returns false, set the isDeleted value to false
                         if (!DeleteAllFiles(d))
                             isDeleted = false;
@@ -984,14 +986,7 @@ namespace Tasks
 
         private void cbChromeCache_CheckStateChanged(object sender, EventArgs e)
         {
-            try
-            {
-                taskDialog1.Show();
-            } catch
-            {
-                Console.WriteLine("An error happened.");
-            }
-           
+         
         }
 
         private void cbFirefoxCookies_CheckStateChanged(object sender, EventArgs e)
@@ -1017,6 +1012,11 @@ namespace Tasks
                 Console.WriteLine("An error happened.");
             }
            
+        }
+
+        private void cbChromeCache_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
