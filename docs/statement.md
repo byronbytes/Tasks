@@ -1,4 +1,1 @@
-This app is completely safe to run and use. We make sure to test the application hundreds of times while we debug to make sure we never make any crucial mistakes.
-
-
-wip wip wip 
+This app is completely safe to run and use. We make sure to test the application hundreds of times while we debug to make sure we never make any crucial mistakes. We also take privacy very seriously and if there are any ways we can improve let us know, we try our best to make sure everyone is safe.
