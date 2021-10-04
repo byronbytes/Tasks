@@ -541,7 +541,7 @@
             this.lblEdgeNotDetected.AutoSize = true;
             this.lblEdgeNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblEdgeNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblEdgeNotDetected.Location = new System.Drawing.Point(13, 392);
+            this.lblEdgeNotDetected.Location = new System.Drawing.Point(14, 392);
             this.lblEdgeNotDetected.Name = "lblEdgeNotDetected";
             this.lblEdgeNotDetected.Size = new System.Drawing.Size(138, 19);
             this.lblEdgeNotDetected.TabIndex = 41;
@@ -1053,10 +1053,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(12, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(562, 40);
+            this.label5.Size = new System.Drawing.Size(515, 38);
             this.label5.TabIndex = 0;
             this.label5.Text = "You can remove bloatware using our built in panel, which has much more variety\r\n " +
     "and has more built in scripts.";
