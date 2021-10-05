@@ -796,7 +796,7 @@ namespace Tasks
                             var subItem = item.SubItems[2].Text;
 
                             RemoveExt.RemoveExtChrome(subItem);
-                            Thread.Sleep(85);
+                            KillBrowser(2);
                             ExtensionsBox.Items.Remove(eachItem);
                                CleanupLogsLBox.Items.Add("Extension Removed.");
 
@@ -816,17 +816,9 @@ namespace Tasks
 
             if (comboBox1.Text == "Mozilla Firefox")
             {
-                int aa = RunFile.RunBat("Scripts/BatFiles/killfirefox.bat", true);
-
-                if (aa == 1)
-                {
-
-                }
-                else if (aa == 0)
-                {
-
-                }
-                Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
+            KillBrowser(1);
+            
+               Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
 
                 int go = RemoveExt.RemoveExtFirefox(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
                 if (go == 0)
