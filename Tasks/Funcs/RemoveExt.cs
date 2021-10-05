@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-// TODO: Cleanup and change the code style
 namespace Tasks
 {
     class RemoveExt
@@ -15,7 +14,6 @@ namespace Tasks
         {
             try
             {
-
                 File.Delete(extpath);
                 return 0;
             }
@@ -26,8 +24,7 @@ namespace Tasks
         }
             public static int RemoveExtChrome(string extpath)
             {
-                 string path = extpath;
-                    Directory.Delete(path, true);
+                    Directory.Delete(extpath, true);
                     return 0;
              
             }
@@ -35,14 +32,13 @@ namespace Tasks
         public static void RemoveExtension(string path, int Browser)
         {
             // Case 1: Firefox
-            // Case 2: Chrome
-
+            // Case 2: Chrome + Edge
+    
             switch (Browser)
             {
                 case 1:
                     try
                     {
-
                      File.Delete(path);
                     }
                     catch
@@ -51,7 +47,7 @@ namespace Tasks
                     }
                     break;
 
-                case 2:
+                case 2: // Chrome will say that the extension is corrupted, and will try to repair it, we will try to mitigate this by clearing the extension history.
                     try 
                     {
                     Directory.Delete(path, true);
