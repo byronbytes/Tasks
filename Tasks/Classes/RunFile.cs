@@ -10,7 +10,7 @@ namespace Tasks
 {
     class RunFile
     {
-        public static int RunFile(string batfile, bool waitexit)
+        public static int RunBat(string batfile, bool waitexit)
         {
             try
 
@@ -33,13 +33,15 @@ namespace Tasks
             }
         }
 
-          public static void RunProcess(string processname, bool shellexec) 
-          {
-              // this will replace the use for Process.Start
-              Process.Start(new ProcessStartInfo { FileName = processname, UseShellExecute = true } ); 
-              if(shellexec == false) {
-              
-              } 
-          
-          }
+        public static void RunProcess(string processname, bool shellexec)
+        {
+            // this will replace the use for Process.Start
+            Process.Start(new ProcessStartInfo { FileName = processname, UseShellExecute = true });
+            if (shellexec == false)
+            {
+
+            }
+
+        }
+    }
 }

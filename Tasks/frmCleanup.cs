@@ -792,13 +792,13 @@ namespace Tasks
                     {
                         try
                         {
+                            Kill.Browser(1);
+                            Thread.Sleep(75);
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
-
                             RemoveExt.RemoveExtChrome(subItem);
-                            KillBrowser(2);
                             ExtensionsBox.Items.Remove(eachItem);
-                               CleanupLogsLBox.Items.Add("Extension Removed.");
+                            CleanupLogsLBox.Items.Add("Extension Removed.");
 
                         }
                         catch (Exception ex)
@@ -816,9 +816,8 @@ namespace Tasks
 
             if (comboBox1.Text == "Mozilla Firefox")
             {
-            KillBrowser(1);
-            
-               Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
+                    Kill.Browser(2);
+                    Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
 
                 int go = RemoveExt.RemoveExtFirefox(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
                 if (go == 0)
@@ -842,11 +841,11 @@ namespace Tasks
                     {
                         try
                         {
+                            Kill.Browser(3);
+                            Thread.Sleep(75);
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
-
                             RemoveExt.RemoveExtChrome(subItem);
-                            Thread.Sleep(85);
                             ExtensionsBox.Items.Remove(eachItem);
                             CleanupLogsLBox.Items.Add("Extension Removed.");
 
@@ -903,7 +902,7 @@ namespace Tasks
         {
             try
             {
-                RunFile.RunPowershell("Scripts/Debloater/UninstallOneDrive.ps1", true);
+                RunFile.RunBat("Scripts/Debloater/UninstallOneDrive.ps1", true);
             }
             catch (Exception ex)
             {

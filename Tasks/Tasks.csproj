@@ -72,4 +72,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Funcs\" />
+  </ItemGroup>
+
 </Project>
