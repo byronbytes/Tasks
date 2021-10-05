@@ -36,13 +36,10 @@ namespace Tasks
           public static void RunProcess(string processname, bool shellexec) 
           {
               // this will replace the use for Process.Start
-              Process.Start(new ProcessStartInfo { FileName = processname } ); 
-              if(shellexec == true) {
+              Process.Start(new ProcessStartInfo { FileName = processname, UseShellExecute = true } ); 
+              if(shellexec == false) {
               
               } 
-              else
-              {
-                  
-              }
+          
           }
 }
