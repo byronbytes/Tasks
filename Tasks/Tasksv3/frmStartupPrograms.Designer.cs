@@ -29,6 +29,7 @@ namespace Tasks.Tasks_v3._0._0
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStartupPrograms));
             this.StartupProcesses = new System.Windows.Forms.ListView();
             this.ProcessName = new System.Windows.Forms.ColumnHeader();
             this.ProcessPath = new System.Windows.Forms.ColumnHeader();
@@ -146,7 +147,7 @@ namespace Tasks.Tasks_v3._0._0
             this.txtFileName.Text = "Added Directory:";
             this.txtFileName.Visible = false;
             // 
-            // frmNewStartupPrograms
+            // frmStartupPrograms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,7 +160,8 @@ namespace Tasks.Tasks_v3._0._0
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.StartupProcesses);
-            this.Name = "frmNewStartupPrograms";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmStartupPrograms";
             this.Text = "frmNewStartupPrograms";
             this.Load += new System.EventHandler(this.frmNewStartupPrograms_Load);
             this.ResumeLayout(false);

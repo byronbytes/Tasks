@@ -22,6 +22,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInterface));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -239,7 +240,7 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // frmNewMenu
+            // frmInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,7 +250,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
-            this.Name = "frmNewMenu";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmInterface";
             this.Text = "Tasks";
             this.Load += new System.EventHandler(this.frmNewMenu_Load);
             this.panel1.ResumeLayout(false);
