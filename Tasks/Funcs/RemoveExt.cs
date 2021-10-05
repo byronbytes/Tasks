@@ -34,6 +34,8 @@ namespace Tasks
 
         public static void RemoveExtension(string path, int Browser)
         {
+            // Case 1: Firefox
+            // Case 2: Chrome
 
             switch (Browser)
             {
@@ -41,8 +43,7 @@ namespace Tasks
                     try
                     {
 
-                        File.Delete(path);
-
+                     File.Delete(path);
                     }
                     catch
                     {
@@ -51,7 +52,14 @@ namespace Tasks
                     break;
 
                 case 2:
+                    try 
+                    {
                     Directory.Delete(path, true);
+                    }
+                    catch
+                    {
+                        // ex
+                    }
                     break;
             
 
