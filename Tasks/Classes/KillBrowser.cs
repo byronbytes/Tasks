@@ -45,7 +45,18 @@ namespace Tasks
       }
       
       break;
-      
+   
+       case 3:
+          try
+          {
+             Process.Kill("msedge.exe");
+          }
+          catch(Exception ex)
+          {
+             MessageBox.ShowDialog("Error.");
+          }
+          
+
   }
 }
 }
