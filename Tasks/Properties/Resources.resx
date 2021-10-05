@@ -172,6 +172,9 @@
   <data name="Bloatware" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bloatware.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tasks 256x256 Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tasks 256x256 Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Startup Programs White" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Startup Programs White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,7 +214,7 @@
   <data name="Steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tasks 256x256 Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tasks 256x256 Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tasks 256x256 v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tasks 256x256 v22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

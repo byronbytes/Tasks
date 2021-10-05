@@ -313,6 +313,16 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Tasks_256x256_v2 {
+            get {
+                object obj = ResourceManager.GetObject("Tasks 256x256 v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tasks_512x512 {
             get {
                 object obj = ResourceManager.GetObject("Tasks 512x512", resourceCulture);
