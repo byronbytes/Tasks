@@ -34,27 +34,16 @@ namespace Tasks
             }
         }
 
-           public static int RunPowershell(string psfile, bool waitexit)
+          public static void RunProcess(string processname, bool shellexec) 
+          {
+              // this will replace the use for Process.Start
+              Process.Start(new ProcessStartInfo { FileName = processname} );
+             
+              if(shellexec == true) {
+              
+              } else
               {
-            try
-            {
-                string path = AppDomain.CurrentDomain.BaseDirectory;
-                Process process = new Process();
-                process.StartInfo.FileName = path + psfile;
-                process.Start();
-                if (waitexit == true)
-                {
-                    process.WaitForExit();
-                }
-                
-
-
-                return 0;
-            }
-            catch
-            {
-                return 1;
-            }
-        }
-    }
+                  
+              }
+          }
 }
