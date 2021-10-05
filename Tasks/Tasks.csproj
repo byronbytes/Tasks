@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>Tasks 256x256 v2.ico</ApplicationIcon>
+    <ApplicationIcon>Tasks 256x256 Logo.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Version>2.1.0</Version>
     <Copyright>LiteTools 2021</Copyright>
