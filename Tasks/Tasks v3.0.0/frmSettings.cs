@@ -47,18 +47,18 @@ namespace Tasks.Tasks_v3._0._0
 
             string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string folderTasks = Path.Combine(folder, "Tasks");
-            string folderTasksCS = @Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary";
+            string folderTasksCS = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary";
 
-            foreach (string file in Directory.EnumerateDirectories(@folderTasksCS))
+            foreach (string file in Directory.EnumerateDirectories(folderTasksCS))
             {
                 try
                 {
                     File.Delete(file);
-                    Console.WriteLine("Deleted" + file);
 
-                } catch(Exception ex)
+                } 
+                catch(Exception ex)
                 {
-                    MessageBox.Show("idk" + ex);
+                    MessageBox.Show("Error " + ex);
                 }
 
                 RefreshCleanupLogs();
