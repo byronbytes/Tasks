@@ -17,6 +17,7 @@ namespace Tasks
     // Case 2: Kills Firefox
     // Case 3: Kills MS Edge
     
+       // If bool wait = true, it will freeze for 85ms so it has time to taskkill.
     
     switch(Browser) 
       {
