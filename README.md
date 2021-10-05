@@ -1,6 +1,4 @@
-
-
-# <img src="https://user-images.githubusercontent.com/53088136/129425927-00413aa1-ca44-4ee5-a4ce-7d276cf2189c.png" alt="Tasks Logo" width='42' height='42' />  Tasks 
+# ![Tasks 256x256 v2](https://user-images.githubusercontent.com/53088136/136105294-a0ca488d-39a8-49b0-b9b4-f51c9a308f96.png) Tasks 
 **Tasks** is an application that helps optimize computer performance and efficiency. Tasks includes an advanced cleanup tool that lets you clean application cache files, delete unused browser extensions, clear cookies, and remove bloatware. Tasks also has a startup manager that lets you create, modify, and disable programs that run on startup.
 
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
