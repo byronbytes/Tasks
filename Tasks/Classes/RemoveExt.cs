@@ -22,12 +22,6 @@ namespace Tasks
                 return 1;
             }
         }
-            public static int RemoveExtChrome(string extpath)
-            {
-                    Directory.Delete(extpath, true);
-                    return 0;
-             
-            }
 
         public static void RemoveExtension(string path, int Browser)
         {

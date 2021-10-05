@@ -7,20 +7,17 @@ using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-// TODO: Cleanup and change the code style
 namespace Tasks
 {
-    class Kill
+    class Taskkill
     {
-
+        // Class for taskkilling certain things.
         public static void Browser(int Browser)
         {
 
             // Case 1: Kills Chrome
             // Case 2: Kills Firefox
             // Case 3: Kills MS Edge
-
-            // If bool wait = true, it will freeze for 85ms so it has time to taskkill.
 
             switch (Browser)
             {

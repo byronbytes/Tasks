@@ -792,11 +792,11 @@ namespace Tasks
                     {
                         try
                         {
-                            Kill.Browser(1);
+                            Taskkill.Browser(1);
                             Thread.Sleep(75);
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
-                            RemoveExt.RemoveExtChrome(subItem);
+                            RemoveExt.RemoveExtension(subItem, 2);
                             ExtensionsBox.Items.Remove(eachItem);
                             CleanupLogsLBox.Items.Add("Extension Removed.");
 
@@ -816,22 +816,27 @@ namespace Tasks
 
             if (comboBox1.Text == "Mozilla Firefox")
             {
-                    Kill.Browser(2);
+                    Taskkill.Browser(2);
                     Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
 
-                int go = RemoveExt.RemoveExtFirefox(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
-                if (go == 0)
-                {
-                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                    try
                     {
-                        ExtensionsBox.Items.Remove(eachItem);
-                        CleanupLogsLBox.Items.Add("Extension Removed.");
+                        RemoveExt.RemoveExtension(ExtensionsBox.SelectedItems[0].SubItems[2].Text, 1);
+
+                        foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                        {
+                            ExtensionsBox.Items.Remove(eachItem);
+                            CleanupLogsLBox.Items.Add("Extension Removed.");
+                        }
                     }
-                }
-                else if (go == 1)
-                {
-                    CleanupLogsLBox.Items.Add("Error while trying to remove extension.");
-                }
+                    catch
+                    {
+                        CleanupLogsLBox.Items.Add("Failed to remove extension");
+
+                    }
+           
+         
+               
             }
 
 
@@ -841,11 +846,11 @@ namespace Tasks
                     {
                         try
                         {
-                            Kill.Browser(3);
+                            Taskkill.Browser(3);
                             Thread.Sleep(75);
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
-                            RemoveExt.RemoveExtChrome(subItem);
+                            RemoveExt.RemoveExtension(subItem, 2);
                             ExtensionsBox.Items.Remove(eachItem);
                             CleanupLogsLBox.Items.Add("Extension Removed.");
 
