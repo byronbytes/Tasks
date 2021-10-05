@@ -31,11 +31,6 @@ namespace Tasks
             RenderStartupsOnListWiew();
         }
 
-        private void OnlyClearList() // This does not re-render the cleanup box.
-        {
-            StartupProcesses.Items.Clear();
-        }
-
         private void RenderStartupsOnListWiew()
         {
             ManagementClass mangnmt = new ManagementClass("Win32_StartupCommand");
@@ -100,8 +95,7 @@ namespace Tasks
                 }
                 else
                 {
-                    OnlyClearList();
-                    RenderStartupsOnListWiew();
+                  RefreshList();
                 }
 
 
