@@ -47,7 +47,7 @@ namespace Tasks
                     }
                     break;
 
-                case 2: // Chrome will say that the extension is corrupted, and will try to repair it, we will try to mitigate this by clearing the extension history.
+                case 2: // Chrome will say that the extension is corrupted, and will try to repair it, we will try to mitigate this.
                     try 
                     {
                     Directory.Delete(path, true);
@@ -61,5 +61,6 @@ namespace Tasks
 
             }
         }
+        
     }
 }
