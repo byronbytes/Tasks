@@ -1,5 +1,5 @@
 ﻿namespace Tasks.Tasks_v3._0._0 {
-    partial class frmNewMenu {
+    partial class frmInterface {
         /// <summary>
         /// Required designer variable.
         /// </summary>

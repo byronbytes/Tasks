@@ -1,5 +1,5 @@
 ﻿namespace Tasks.Tasks_v3._0._0 {
-    partial class frmNewCleanup {
+    partial class frmCleanup {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -21,7 +21,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewCleanup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCleanup));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.checkBox26 = new System.Windows.Forms.CheckBox();

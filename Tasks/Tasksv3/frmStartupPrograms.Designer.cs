@@ -1,7 +1,7 @@
 ﻿
 namespace Tasks.Tasks_v3._0._0
 {
-    partial class frmNewStartupPrograms
+    partial class frmStartupPrograms
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,6 @@ namespace Tasks.Tasks_v3._0._0
             this.StartupProcesses.TabIndex = 1;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
-            this.StartupProcesses.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.StartupProcesses_ItemSelectionChanged);
             // 
             // ProcessName
             // 

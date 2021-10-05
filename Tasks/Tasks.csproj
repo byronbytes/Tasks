@@ -48,9 +48,6 @@
     <None Update="Scripts\BatFiles\killedge.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Scripts\BatFiles\killfirefox.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Scripts\BatFiles\displayarp.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

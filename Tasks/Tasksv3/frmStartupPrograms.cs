@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace Tasks.Tasks_v3._0._0
 {
-    public partial class frmNewStartupPrograms : Form
+    public partial class frmStartupPrograms : Form
     {
-        public frmNewStartupPrograms()
+        public frmStartupPrograms()
         {
             InitializeComponent();
         }
@@ -33,8 +33,8 @@ namespace Tasks.Tasks_v3._0._0
 
         private void refreshStartupList()
         {
-            // this should only be used alongside getStartupPrograms()
             StartupProcesses.Items.Clear();
+            getStartupPrograms();
         }
         private void getStartupPrograms()
         {
@@ -51,20 +51,6 @@ namespace Tasks.Tasks_v3._0._0
         private void button4_Click(object sender, EventArgs e)
         {
             refreshStartupList();
-            getStartupPrograms();
-        }
-
-        private void StartupProcesses_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
-        {
-            if(!StartupProcesses.Focused)
-            {
-                button3.Enabled = false;
-            }
-            else
-            {
-                button3.Enabled = true;
-            }
-         
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -84,13 +70,19 @@ namespace Tasks.Tasks_v3._0._0
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "All|*.*" })
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
+                {
                     txtFileName.Text = ofd.FileName;
-                FileInfo fileInfo = new FileInfo(txtFileName.Text);
-                txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
-                File.Copy(txtFileName.Text, txtTargetPath.Text, true);
-                Thread.Sleep(30);
-                refreshStartupList();
-                getStartupPrograms();
+                    FileInfo fileInfo = new FileInfo(txtFileName.Text);
+                    txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
+                    File.Copy(txtFileName.Text, txtTargetPath.Text, true);
+                    refreshStartupList();
+                }
+             
+            else
+            {
+                // Do nothing.
+            }
+           
 
             }
         }

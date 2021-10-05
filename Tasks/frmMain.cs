@@ -58,7 +58,7 @@ namespace Tasks
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Tasks_v3._0._0.frmNewMenu NewMenu = new Tasks_v3._0._0.frmNewMenu();
+            Tasks_v3._0._0.frmInterface NewMenu = new Tasks_v3._0._0.frmInterface();
             NewMenu.Show();
         }
     }

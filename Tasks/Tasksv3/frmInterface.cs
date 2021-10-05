@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tasks.Tasks_v3._0._0 {
-    public partial class frmNewMenu : Form
+    public partial class frmInterface : Form
     {
-        public frmNewMenu() { InitializeComponent(); }
+        public frmInterface() { InitializeComponent(); }
 
         private void SelectedButton(string PanelClicked)
         {
@@ -91,7 +91,7 @@ namespace Tasks.Tasks_v3._0._0 {
         {
             SelectedButton("Cleanup");
             DashboardSendToBack(true);
-            ShowForm(new frmNewCleanup());
+            ShowForm(new frmCleanup());
 
         }
 
@@ -100,7 +100,7 @@ namespace Tasks.Tasks_v3._0._0 {
         {
             SelectedButton("Startup");
             DashboardSendToBack(true);
-            ShowForm(new frmNewStartupPrograms());
+            ShowForm(new frmStartupPrograms());
 
         }
 
