@@ -1,12 +1,9 @@
 ﻿@echo off
 
-::
-:: Checks if the newer Microsoft Edge is installed, and attemps to uninstall it. (Chromium Version)
-::
 :: Creator: ShadowWhisperer
 ::  GitHub: https://github.com/ShadowWhisperer
 :: Updated: 12/09/2020
-::
+
 
 :: Check if ran as Admin
 net session >nul 2>&1
@@ -44,7 +41,7 @@ cd /d "C:\Program Files\Microsoft\Edge\Application\%%a\Installer\"
 if exist "setup.exe" (
 echo - Removing Microsoft Edge
 start /w setup.exe --uninstall --system-level --force-uninstall)
-echo Finished
+echo Finished.
 timeout /t 3 & exit
 ))
 
