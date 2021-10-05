@@ -30,7 +30,7 @@ namespace Tasks
     
     catch(Exception ex) 
     {
-    MessageBox.ShowDialog("Error.");
+    MessageBox.Show("Error.");
     }
     
     break;
@@ -42,7 +42,7 @@ namespace Tasks
           }
       catch(Exception ex) 
       {
-      MessageBox.ShowDialog("Error.");
+      MessageBox.Show("Error.");
       }
       
       break;
@@ -54,7 +54,7 @@ namespace Tasks
           }
           catch(Exception ex)
           {
-             MessageBox.ShowDialog("Error.");
+             MessageBox.Show("Error.");
           }
           
 
