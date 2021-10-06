@@ -58,8 +58,6 @@ namespace Tasks.Cleanup_Modules
 
                 }
             }
-    }
-
 
     public bool Delete(DirectoryInfo dirInfo) // idk yet will work on at home if i can
     {
