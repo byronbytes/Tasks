@@ -13,10 +13,17 @@ namespace Tasks
 {
     class TasksLib
     {
+        
     public static void Initialize() {
       
+     Debug.Log("Tasks has loaded successfully.")   
+       
+    }
         
-    }
-    }
+     public void CreateCoreFiles(bool exists) 
+     {
+        
+     }
+   }
 }
 
