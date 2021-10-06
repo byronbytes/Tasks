@@ -26,12 +26,24 @@ namespace Tasks
 
         private void frmAnalyze_Load(object sender, EventArgs e)
         {
+    RunAnalytics();
     
+        }
+              
+              public void RunAnalytics()
+              {
+              
                 DriveInfo[] allDrives = DriveInfo.GetDrives();
 
                 // will look for setttings, etc, drive space, if the drive is compressed / indexed, settings for windows and more.
 
+                    bool indexedfilespace;
+                    bool compression;
+                    int drives;
+                    string powermode;
+                    
               }
+              
          
         }
     }
