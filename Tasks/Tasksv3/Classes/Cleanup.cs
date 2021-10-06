@@ -24,16 +24,14 @@ namespace Tasks.Cleanup_Modules
         
         
         public void Clean(string subdir, cacheDir) 
-        {
-             
+        {      
             List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
-
                     foreach (string subdir in cacheDir)
                     {
-                        // Make a new DirectoryInfo with the info of that subdirectory and then add it into the directoryInfos array
                         directoryInfos.Add(new DirectoryInfo(mainSubdirectory + subdir + "\\"));
                     }
 
+            
                     bool isDeleted = true;
                     // For each DirectoryInfo inside of the directoryInfos array
                     foreach (DirectoryInfo d in directoryInfos)
@@ -61,10 +59,6 @@ namespace Tasks.Cleanup_Modules
                 }
             }
 
-}
-      
-
- }
 
     public bool Delete(DirectoryInfo dirInfo) // idk yet will work on at home if i can
     {
