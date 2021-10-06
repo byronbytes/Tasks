@@ -40,7 +40,7 @@ namespace Tasks.Cleanup_Modules
                     {
                         try
                         {
-                            DeleteAllFiles(d);
+                            Delete(d);
                         }
                         catch (Exception ex)
                         {
@@ -66,8 +66,38 @@ namespace Tasks.Cleanup_Modules
 
  }
 
-    public void CleanSingleFolder() // idk yet will work on at home if i can
+    public bool Delete(DirectoryInfo dirInfo) // idk yet will work on at home if i can
     {
+        foreach (var file in directoryInfo.GetFiles())
+            {
+                try
+                {
+                    file.Delete();
+                    Debug.Log("Deleted " + file.FullName);
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log("Exception Thrown: " + ex.Message);
+
+                }
+
+            }
+            foreach (var dir in directoryInfo.GetDirectories())
+            {
+                try
+                {
+                    dir.Delete(true);
+                    Debug.Log("Deleted Folder " + dir.FullName);
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log("Exception Thrown: " + ex.Message);
+                }
+
+            }
+
+            return true;
+        
     }
 
     }
