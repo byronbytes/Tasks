@@ -22,7 +22,7 @@ namespace Tasks.Cleanup_Modules
     
         
         
-        public void Clean(string subdir, cacheDir) 
+        public void Clean(string subdir, string cacheDir) 
         {      
             List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
                     foreach (string subdir in cacheDir)
@@ -30,7 +30,6 @@ namespace Tasks.Cleanup_Modules
                         directoryInfos.Add(new DirectoryInfo(mainSubdirectory + subdir + "\\"));
                     }
 
-            
                     bool isDeleted = true;
                     // For each DirectoryInfo inside of the directoryInfos array
                     foreach (DirectoryInfo d in directoryInfos)
@@ -45,20 +44,12 @@ namespace Tasks.Cleanup_Modules
                         }
 
                         // If DeleteAllFiles returns false, set the isDeleted value to false
-                        if (!DeleteAllFiles(d))
-                            isDeleted = false;
-                    }
-
-                    if (isDeleted) {
-                        
-             
-                }
-                catch (Exception)
-                {
-
-                }
-            }
-
+                        if (!DeleteAllFiles(d)) isDeleted = false;
+              
+                        }
+        }
+        
+    
     public bool Delete(DirectoryInfo dirInfo) // idk yet will work on at home if i can
     {
         foreach (var file in directoryInfo.GetFiles())
@@ -92,6 +83,4 @@ namespace Tasks.Cleanup_Modules
             return true;
         
     }
-
-    }
-
+    
