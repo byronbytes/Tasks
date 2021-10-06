@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace Tasks.Cleanup_Modules
 {
     public class Cleanup
-    {
-       
+    {    
 
   // Strings for the subdir and cachedirs will be listed on top, and the clean will be able to select the directories, so if chromeSubDir = subdir in the main code,
          // it should clean the chrome cache. This will be more efficient since you wouldn't need to repeat the code 10000 times. Although, after a cleanup it will need
@@ -50,14 +49,16 @@ namespace Tasks.Cleanup_Modules
                             isDeleted = false;
                     }
 
-                    if (isDeleted)
-                     
+                    if (isDeleted) {
+                        
+             
                 }
                 catch (Exception)
                 {
 
                 }
             }
+    }
 
 
     public bool Delete(DirectoryInfo dirInfo) // idk yet will work on at home if i can
