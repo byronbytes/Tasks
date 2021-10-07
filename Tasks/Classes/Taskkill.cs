@@ -25,12 +25,12 @@ namespace Tasks
                 case 1:
                     try
                     {
-                        Process.Start("taskkill", "/F /IM chrome.exe");
+                        Process.Start("taskkill", "/f /im chrome.exe");
                     }
 
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error.");
+                        MessageBox.Show("Could not kill Chrome.");
                     }
 
                     break;
@@ -38,11 +38,11 @@ namespace Tasks
                 case 2:
                     try
                     {
-                        Process.Start("taskkill", "/F /IM firefox.exe");
+                        Process.Start("taskkill", "/f /im firefox.exe");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error.");
+                        MessageBox.Show("Could not kill Firefox.");
                     }
 
                     break;
@@ -50,11 +50,11 @@ namespace Tasks
                 case 3:
                     try
                     {
-                        Process.Start("taskkill", "/F /IM msedge.exe");
+                        Process.Start("taskkill", "/f /im msedge.exe");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error.");
+                        MessageBox.Show("Coud not kill Edge.");
                     }
                     break;
 
