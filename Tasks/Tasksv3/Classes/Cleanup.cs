@@ -54,7 +54,7 @@ namespace Tasks.Cleanup_Modules
 
         public static bool Delete(DirectoryInfo dirInfo) // idk yet will work on at home if i can
         {
-            foreach (var file in directoryInfo.GetFiles())
+            foreach (var file in DirectoryInfo.GetFiles())
             {
                 try
                 {
