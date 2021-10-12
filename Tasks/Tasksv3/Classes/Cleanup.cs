@@ -86,5 +86,24 @@ namespace Tasks.Cleanup_Modules
 
         }
     }
+    
+     public static class CleanRecents()
+        {
+            public enum ShellAddToRecentDocsFlags
+            {
+                Pidl = 0x001,
+                Path = 0x002,
+                PathW = 0x003
+            }
+
+            [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
+            private static extern void SHAddToRecentDocs(ShellAddToRecentDocsFlags flag, string path);
+
+            public static void ClearRecents()
+            {
+                SHAddToRecentDocs(ShellAddToRecentDocsFlags.Pidl, null);
+            }
+        }
+    }
 }
     
