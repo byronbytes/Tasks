@@ -30,8 +30,8 @@ See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) 
 * Integrated the Windows 10 Debloater made by https://github.com/Sycnex/Windows10Debloater
 * Integrated the Remove Microsoft Edge Script made by https://github.com/ShadowWhisperer/Remove-Edge-Chromium
 
-## Images
-These images were taken on Version 2.0.0, designs may differ on newer versions.<br>
+## Gallery
+These images were taken on v2.0.0, future version designs may vary.<br>
 ![image](https://user-images.githubusercontent.com/53088136/134250645-5d19703b-62b7-49b3-9ee2-5546a63065e4.png)
 ![image](https://user-images.githubusercontent.com/53088136/134250674-bdcb3d73-775b-48e4-82fa-5f764d4081a5.png)
 ![image](https://user-images.githubusercontent.com/53088136/134250709-c612a1cb-7c6d-42ca-8e60-281eef069d4e.png)
