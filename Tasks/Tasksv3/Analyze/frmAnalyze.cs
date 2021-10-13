@@ -26,12 +26,13 @@ namespace Tasks
 
         private void frmAnalyze_Load(object sender, EventArgs e)
         {
-    RunAnalytics();
-    
+          RunAnalytics();
         }
               
-              public void RunAnalytics()
+              
+              public void RunAnalytics(bool completed)
               {
+              
               
                 DriveInfo[] allDrives = DriveInfo.GetDrives();
 
