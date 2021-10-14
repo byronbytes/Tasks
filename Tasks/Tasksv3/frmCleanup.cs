@@ -76,8 +76,15 @@ namespace Tasks.Tasks_v3._0._0 {
         }
 
 
-
-        public void cleanupSummary()
+        // This method will deprecate the need for listboxes, even invisible ones.
+        // as a good coder once said "NEVER NEVER NEVER use a UI object for a non-UI method.
+        public void CleanupLog()
+        {
+            
+        }
+            
+            
+        public void CleanupSummary()
         {
             TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
             int secondsSinceEpoch = (int)t.TotalSeconds;
