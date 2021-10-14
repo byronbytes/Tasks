@@ -86,7 +86,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error deleting the Downloads Folder. " + ex);
+                    CleanupLogsLBox.Items.Add("Error clearing the Downloads Folder. " + ex);
 
                 }
 
@@ -99,7 +99,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error deleting the Recycle Bin. " + ex);
+                    CleanupLogsLBox.Items.Add("Error clearing the Recycle Bin. " + ex);
 
                 }
 
