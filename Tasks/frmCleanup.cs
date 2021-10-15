@@ -72,6 +72,7 @@ namespace Tasks
 
         private void btnCleanup_Click(object sender, EventArgs e)
         {
+        // List our local directories so we don't need to repeat a lot of code.
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
@@ -93,7 +94,7 @@ namespace Tasks
             if (cbSystemRecycleBin.Checked)
                 try
                 {
-
+                    // Silently deletes the recycle bin.
                     SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
                     CleanupLogsLBox.Items.Add("Recycle Bin Cleaned.");
                 }
