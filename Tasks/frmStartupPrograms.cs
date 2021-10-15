@@ -82,11 +82,14 @@ namespace Tasks
 
         private void button2_Click(object sender, EventArgs e)
         {
+        // Opens the file dialog for selecting a program
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "All|*.*" })
             {
-                if (ofd.ShowDialog() == DialogResult.OK)
+                if (ofd.ShowDialog() == DialogResult.OK)  // If statement because if you closed it would error
                 {
-                    txtFileName.Text = ofd.FileName;
+                string program = ofd.FileName.ToString();
+                
+                    txtFileName.Text = ofd.FileName; 
                     FileInfo fileInfo = new FileInfo(txtFileName.Text);
                     txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
                     File.Copy(txtFileName.Text, txtTargetPath.Text, true);
