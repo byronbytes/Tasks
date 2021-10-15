@@ -95,7 +95,7 @@ namespace Tasks.Cleanup_Modules
             
     }
     
-    public static void DeleteBrowserExtension() 
+    public static void DeleteBrowserExtension(int Browser, string path) 
     {
     
     }
