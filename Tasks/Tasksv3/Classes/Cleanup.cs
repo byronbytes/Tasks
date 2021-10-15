@@ -52,17 +52,20 @@ namespace Tasks.Cleanup_Modules
         }
 
 
-        public static bool Delete(DirectoryInfo dirInfo) // idk yet will work on at home if i can
+        public static bool Delete(DirectoryInfo dirInfo) 
         {
+            // For each file in the directory selected.
             foreach (var file in DirectoryInfo.GetFiles())
             {
                 try
                 {
+                    // Delete the file and print it in debug
                     file.Delete();
                     Debug.Print("Deleted " + file.FullName);
                 }
                 catch (Exception ex)
                 {
+                    // Any errors get printed in debug.
                     Debug.Print("Exception Thrown: " + ex.Message);
 
                 }
@@ -70,13 +73,16 @@ namespace Tasks.Cleanup_Modules
             }
             foreach (var dir in DirectoryInfo.GetDirectories())
             {
+                // For each directory in a directory.
                 try
                 {
+                    // Delete the directory and print it in debug
                     dir.Delete(true);
                     Debug.Print("Deleted Folder " + dir.FullName);
                 }
                 catch (Exception ex)
                 {
+                    // Any errors get printed in debug.
                     Debug.Print("Exception Thrown: " + ex.Message);
                 }
 
@@ -85,25 +91,15 @@ namespace Tasks.Cleanup_Modules
             return true;
 
         }
+        
+            
     }
     
-     public static class CleanRecents()
-        {
-            public enum ShellAddToRecentDocsFlags
-            {
-                Pidl = 0x001,
-                Path = 0x002,
-                PathW = 0x003
-            }
-
-            [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
-            private static extern void SHAddToRecentDocs(ShellAddToRecentDocsFlags flag, string path);
-
-            public static void ClearRecents()
-            {
-                SHAddToRecentDocs(ShellAddToRecentDocsFlags.Pidl, null);
-            }
-        }
+    public static void DeleteBrowserExtension() 
+    {
+    
+    }
+    
     }
 }
     
