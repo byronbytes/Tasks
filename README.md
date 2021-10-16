@@ -1,6 +1,6 @@
 # ![Tasks 256x256 v2](https://user-images.githubusercontent.com/53088136/136106972-30a9cca8-7a32-479a-9368-74ffe2d60a43.png)
 
-**Tasks** is an application that helps optimize computer performance and a computer cleaner. Tasks includes an advanced cleanup tool that lets you clean application cache files, delete unused browser extensions, clear cookies, and remove bloatware. Tasks also has a startup manager that lets you create, modify, and disable programs that run on startup.
+**Tasks** is an application that boosts computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and also remove bloatware! Tasks also include a startup manager that allows the modification of programs that run on startup.
 
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
 
@@ -20,7 +20,7 @@ You can support our project in many ways, simply by leaving a star, forking, wat
 
 ## Authors
 * **Byron** - *Initial work and development.*
-* **Average** - *Code Improvement & Suggestions.*
+* **unknownbruh** - *Code Improvement & Suggestions.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 
 See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
