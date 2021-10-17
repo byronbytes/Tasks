@@ -22,10 +22,7 @@ namespace Tasks.Tasks_v3._0._0
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
-
-       
-            DirectoryInfo di = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary");
-            FileInfo[] files = di.GetFiles("*.txt");
+            FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary").GetFiles("*.txt");
 
             foreach (FileInfo file in files)
             {
@@ -58,7 +55,7 @@ namespace Tasks.Tasks_v3._0._0
                 } 
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Error " + ex);
+                    MessageBox.Show(Ex.GetType().FullName + "caught: " + ex.Message);
                 }
 
                 RefreshCleanupLogs();
