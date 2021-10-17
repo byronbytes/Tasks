@@ -19,7 +19,6 @@ namespace Tasks.Tasks_v3._0._0 {
         // 
         private (int, int, int, int) DeleteAllFiles(DirectoryInfo directoryInfo)
         {
-            // reinitialize variables
             int deletedFile = 0;
             int deletedDir = 0;
             int fileCount = directoryInfo.GetFiles().Length;
@@ -30,7 +29,6 @@ namespace Tasks.Tasks_v3._0._0 {
                 try
                 {
                     file.Delete();
-                  
                     listBox1.Items.Add("Deleted file '" + file.FullName + "'");
                     ++deletedFile;
                 }
@@ -63,14 +61,11 @@ namespace Tasks.Tasks_v3._0._0 {
             // The deleting / checkbox method is also prone to change soon.
             if (cbTempFiles.Checked)
             {
-                // Windows Temp = wt ; User Temp = ut
-                // df = deleted file, fc = file count, dd = deleted dir, dc = dir count
                 var (wtdf, wtfc, wtdd, wtdc) = DeleteAllFiles(new DirectoryInfo("C:\\Windows\\Temp")); 
                 var (utdf, utfc, utdd, utdc) = DeleteAllFiles(new DirectoryInfo(Path.GetTempPath()));
 
                 listBox1.Items.Add("Temp Files Deleted.");
-                cleanupSummary();
-                label9.Text = "Deleted " + (wtdf+utdf) + "/" + (wtfc+utfc) + " files and " + (wtdd+utdd) + "/" + (wtdc+utdc) + " directories.";
+                CleanupLog((wtdf+utdf), (wtfc+utfc), (wtdd+utdd), (wtdc+utdc));
             }
 
         }
@@ -78,9 +73,10 @@ namespace Tasks.Tasks_v3._0._0 {
 
         // This method will deprecate the need for listboxes, even invisible ones.
         // as a good coder once said "NEVER NEVER NEVER use a UI object for a non-UI method.
-        public void CleanupLog()
+        public void CleanupLog(int df, int fc, int dd, int dc)
         {
-            
+            CleanupSummary();
+            label9.Text = "Deleted " + df + "/" + fc + "files and " + dd + "/" + dc + " directories.";
         }
             
             
