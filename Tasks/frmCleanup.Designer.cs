@@ -205,8 +205,7 @@
             // taskDialog1
             // 
             this.taskDialog1.Buttons.Add(this.taskDialogButton1);
-            this.taskDialog1.Content = "Clearing a browser\'s cache will log you out on any current website you are logged" +
-    " into.";
+            this.taskDialog1.Content = "Clearing browser cache will log you out of all websites you previously logged into. Proceed with caution.";
             this.taskDialog1.MainIcon = Ookii.Dialogs.WinForms.TaskDialogIcon.Warning;
             this.taskDialog1.MainInstruction = "Warning";
             this.taskDialog1.WindowIcon = ((System.Drawing.Icon)(resources.GetObject("taskDialog1.WindowIcon")));
@@ -969,8 +968,8 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(635, 38);
             this.label13.TabIndex = 0;
-            this.label13.Text = "This feature sorts out all your extensions for your supported browser, and you ca" +
-    "n select which ones\r\n you want to remove.";
+            this.label13.Text = "This feature sorts out all your extensions for your supported browser, and you can" +
+    "select which ones\r\n you want to remove.";
             // 
             // tabPage4
             // 
