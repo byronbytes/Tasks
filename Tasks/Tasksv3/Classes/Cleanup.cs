@@ -27,7 +27,7 @@ namespace Tasks.Cleanup_Modules
         {
             List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
 
-            foreach (string subdir in cacheDir)
+            foreach (char subdir1 in cacheDir)
             {
                 directoryInfos.Add(new DirectoryInfo(subdir + subdir + "\\"));
             }
@@ -55,7 +55,7 @@ namespace Tasks.Cleanup_Modules
         public static bool Delete(DirectoryInfo dirInfo) 
         {
             // For each file in the directory selected.
-            foreach (var file in DirectoryInfo.GetFiles())
+            foreach (var file in dirInfo.GetFiles())
             {
                 try
                 {
@@ -71,13 +71,13 @@ namespace Tasks.Cleanup_Modules
                 }
 
             }
-            foreach (var dir in DirectoryInfo.GetDirectories())
+            foreach (var dir in dirInfo.GetFiles())
             {
                 // For each directory in a directory.
                 try
                 {
                     // Delete the directory and print it in debug
-                    dir.Delete(true);
+                    dir.Delete();
                     Debug.Print("Deleted Folder " + dir.FullName);
                 }
                 catch (Exception ex)
@@ -94,12 +94,10 @@ namespace Tasks.Cleanup_Modules
         
             
     }
-    
-    public static void DeleteBrowserExtension(int Browser, string path) 
-    {
+
     
     }
-    
-    }
-}
+
+
+
     
