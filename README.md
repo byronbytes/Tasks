@@ -1,10 +1,10 @@
-# ![Tasks 256x256 v2](https://user-images.githubusercontent.com/53088136/136106972-30a9cca8-7a32-479a-9368-74ffe2d60a43.png)
+<h1 align="center"><img src="https://user-images.githubusercontent.com/53088136/136106972-30a9cca8-7a32-479a-9368-74ffe2d60a43.png" alt="Tasks" height="128" /></h1>
 
 **Tasks** is an application that boosts computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and also remove bloatware! Tasks also include a startup manager that allows the modification of programs that run on startup.
 
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
 
-This project is licensed under the Apache 2.0 License.
+**This project is licensed under the Apache 2.0 License.**
 
 ## Installation
 Installing Tasks is very simple, as the application is currently portable.
