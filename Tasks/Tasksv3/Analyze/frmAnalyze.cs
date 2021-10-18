@@ -29,17 +29,7 @@ namespace Tasks
           RunAnalytics();
         }
      
-     
-      public static Boolean IsRunningOnBattery
-    {
-    get
-    {
-      PowerLineStatus pls = System.Windows.Forms.SystemInformation.PowerStatus.PowerLineStatus;
-
-      //Offline means running on battery
-      return (pls == PowerLineStatus.Offline);
-    }
-   }
+   
         
               public void RunAnalytics(bool completed)
               {
