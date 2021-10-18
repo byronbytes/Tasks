@@ -11,17 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-// and then i realized
-// wow thats a familiar vibe
-// and then
-// what the _ is going on
-// wait hold it
-// i just had a ______ bruh moment
-
-// but i dont even careeeee
-
-
-
 // TODO: Cleanup and change the code style
 namespace Tasks {
     public partial class frmAbout : Form {
