@@ -16,7 +16,8 @@ if %errorLevel% == 0
 else 
 (
  echo You need to run this script as administrator.
- pause & exit
+ pause 
+ exit
 )
 
 :: Set Exist Variable - Check if Edge is intalled  *Show Message, if not installed
