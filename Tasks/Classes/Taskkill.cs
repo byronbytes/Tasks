@@ -62,10 +62,10 @@ namespace Tasks
             }
         }
     }
-    
-    public static void TaskManagerKill(string process) 
+
+    public void TaskManagerKill(string process) 
     {
-        process = task + ".exe";
+
     }
         
 }
