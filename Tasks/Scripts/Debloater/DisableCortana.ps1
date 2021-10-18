@@ -1,4 +1,4 @@
-﻿Write-Host "Disabling Cortana"
+﻿Write-Host "Disabling Cortana:"
     $Cortana1 = "HKCU:\SOFTWARE\Microsoft\Personalization\Settings"
     $Cortana2 = "HKCU:\SOFTWARE\Microsoft\InputPersonalization"
     $Cortana3 = "HKCU:\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore"
