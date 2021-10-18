@@ -105,9 +105,10 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
-            "Byron (@byronbytes)",
-            "Solirs (@Solirs)",
-            "Average (@averagebruh)"});
+                "Byron (@byronbytes)",
+                "Solirs (@Solirs)",
+                "unknownbruh (@unknownbruh)"
+            });
             this.listBox1.Location = new System.Drawing.Point(17, 183);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(260, 180);
@@ -147,7 +148,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(104, 21);
             this.linkLabel1.TabIndex = 9;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Found a bug?";
+            this.linkLabel1.Text = "Report an issue";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DarkCyan;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
