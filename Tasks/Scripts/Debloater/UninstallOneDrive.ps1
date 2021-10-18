@@ -11,18 +11,18 @@
 	}
 	Start-Process $onedrive "/uninstall" -NoNewWindow -Wait
 	Start-Sleep 2
-    Write-Output "Stopping Explorer"
+    Write-Output "Stopping Explorer."
     Start-Sleep 1
-	.\taskkill.exe /F /IM explorer.exe
+	.\taskkill.exe /f /im explorer.exe
 	Start-Sleep 3
-    Write-Output "Removing leftover files"
+    Write-Output "Removing leftover files."
 	Remove-Item "$env:USERPROFILE\OneDrive" -Force -Recurse
 	Remove-Item "$env:LOCALAPPDATA\Microsoft\OneDrive" -Force -Recurse
 	Remove-Item "$env:PROGRAMDATA\Microsoft OneDrive" -Force -Recurse
 	If (Test-Path "$env:SYSTEMDRIVE\OneDriveTemp") {
 		Remove-Item "$env:SYSTEMDRIVE\OneDriveTemp" -Force -Recurse
 	}
-    Write-Output "Removing OneDrive from windows explorer"
+    Write-Output "Removing OneDrive from explorer."
     If (!(Test-Path $ExplorerReg1)) {
         New-Item $ExplorerReg1
     }
@@ -31,5 +31,5 @@
         New-Item $ExplorerReg2
     }
     Set-ItemProperty $ExplorerReg2 System.IsPinnedToNameSpaceTree -Value 0
-    Write-Output "Restarting Explorer that was shut down before."
+    Write-Output "Restarting Explorer."
     Start explorer.exe -NoNewWindow
