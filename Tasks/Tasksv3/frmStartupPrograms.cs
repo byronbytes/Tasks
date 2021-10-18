@@ -48,7 +48,7 @@ namespace Tasks.Tasks_v3._0._0
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) 
         {
             refreshStartupList();
         }
@@ -77,13 +77,6 @@ namespace Tasks.Tasks_v3._0._0
                     File.Copy(txtFileName.Text, txtTargetPath.Text, true);
                     refreshStartupList();
                 }
-             
-            else
-            {
-                // Do nothing.
-            }
-           
-
             }
         }
     }
