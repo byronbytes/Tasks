@@ -3,7 +3,7 @@
   <img alt="GitHub license" src="https://img.shields.io/github/license/litetools/tasks?style=flat-square"> <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
 </h1>
 
-**Tasks** is an application that boosts computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and also remove bloatware! Tasks also include a startup manager that allows the modification of programs that run on startup.
+**Tasks** is an application that boosts computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and also remove bloatware. Tasks also include a startup manager that allows the modification of programs that run on startup.
 
 ## Installation
 ### Prerequisites
