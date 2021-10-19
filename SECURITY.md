@@ -16,7 +16,7 @@ These are the supported versions of Tasks. Please note that we will not fix vuln
 | **2.0.0 Dev1** (PR) | :heavy_check_mark: | 7th August, 2021     | 31st December 2021   |
 | **1.x.x** (L)       | :x:                | 24th July, 2021      | 7th August 2021      |
 
-*(R: release ; PR: pre-release ; L: Legacy)*
+Legend: *(R: release ; PR: pre-release ; L: Legacy)*
 
 ## Reporting a vulnerability
 To report any vulnerabilities, please create a new Issue using the **Security Vulnerability** template (Click [here]("https://github.com/LiteTools/Tasks/issues") to go to the Issues Tab).
