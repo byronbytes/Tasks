@@ -19,6 +19,9 @@ namespace Tasks.Cleanup_Modules
         public string[] chromeCacheDir = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "\\Default\\File System\\" };
         public string[] windowsTemp = { "C:\\Windows\\Temp", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Temp" }; // might be incorrect.
 
+        
+        // Proper Syntax: Clean(chromeSubDir, chromeCacheDir);
+        
         public void Clean(string subdir, string cacheDir)
         {
             List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
