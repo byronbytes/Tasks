@@ -30,7 +30,10 @@ namespace Tasks
             string powermode;
             bool onbattery;
 
-        if(status == PowerLineStatus.Offline) { Debug.Print("Currently not on battery.") }
+        if(status == PowerLineStatus.Offline) 
+        { 
+          Debug.Print("Currently not on battery.") 
+        }
      }
     }
 }
