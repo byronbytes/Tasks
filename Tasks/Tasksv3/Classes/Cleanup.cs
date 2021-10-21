@@ -35,7 +35,7 @@ namespace Tasks.Cleanup_Modules
             foreach (DirectoryInfo d in directoryInfos)
             {
                 try { Delete(d); }
-                catch (Exception ex) {}
+                catch (Exception) {}
 
                 // If DeleteAllFiles returns false, set the isDeleted value to false
                 // WARN: ISDELETED IS ALWAYS TRUE
