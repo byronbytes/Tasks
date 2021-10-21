@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-// TODO: Cleanup and change the code style
 namespace Tasks
 {
     class RunFile
@@ -33,15 +32,5 @@ namespace Tasks
             }
         }
 
-      //  public static void RunProcess(string processname, bool shellexec)
-      //  {
-            // this will replace the use for Process.Start
-          //  Process.Start(new ProcessStartInfo { FileName = processname, UseShellExecute = true });
-           // if (shellexec == false)
-          //  {
-
-          //  }
-
-      //  }
     }
 }
