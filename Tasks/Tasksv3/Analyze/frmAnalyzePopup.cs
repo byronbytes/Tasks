@@ -21,16 +21,6 @@ namespace Tasks.Tasks_v3._0._0
         private void frmAnalyzePopup_Load(object sender, EventArgs e)
         {
             // Placeholder Text Messages. 
-            // No Errors: I have no idea yet
-            // Errors: There are performance issues with your computer, click here to fix them.
-
-
-
-
-           // if (lists analytics that can be improved)
-           // {
-           // Something, brain is dead rn
-           // }
         }
 
         private void button1_Click(object sender, EventArgs e)

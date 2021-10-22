@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasks.Cleanup_Modules
+namespace Tasks.SystemTools
 {
     public class SystemTools
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasks.Cleanup_Modules
+namespace Tasks.CleanupModules
 {
     public class Cleanup
     {
@@ -40,6 +40,22 @@ namespace Tasks.Cleanup_Modules
                 // If DeleteAllFiles returns false, set the isDeleted value to false
                 // WARN: ISDELETED IS ALWAYS TRUE
                 if (!Delete(d)) isDeleted = false;
+            }
+        }
+
+        public static void GetTempFolderSize(DirectoryInfo dirsize)
+        {
+
+            foreach(var files in dirsize.GetFiles("*", SearchOption.AllDirectories))
+            {
+                try
+                {
+                    Strings.tempfolder = +files.Length;
+                }
+                catch
+                {
+         
+                }
             }
         }
 

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tasks.Cleanup_Modules
+namespace Tasks
 {
     public class Strings
     {
@@ -19,7 +19,7 @@ namespace Tasks.Cleanup_Modules
             string limitedpower = "Your computer is currently running on a limited power mode.";
             string filecompression = "Your computer does not have file compression turned on.";
             string drives = "Your computer currently has" + "drive(s) currently plugged in.";
-            string tempspace = "Your temp folders are taking up " + " of space.";
+            string tempsize = "Your temp folders are taking up " + tempfolder + " of space.";
 
             // Analyze No Issues
             string perfect = "Your computer has no performance issues!";
@@ -27,6 +27,10 @@ namespace Tasks.Cleanup_Modules
             string completed = "Tasks has optimized your computer.";
         }
 
+
+        //stupid vs errors if i put a public string in a class, so i guess no class.
+            public static long tempfolder = 1;
+    
 
         public void DetectApplications()
         {

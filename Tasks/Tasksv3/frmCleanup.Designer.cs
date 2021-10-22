@@ -78,6 +78,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -817,23 +818,34 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(12, 651);
+            this.label9.Location = new System.Drawing.Point(12, 663);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 30);
+            this.label9.Size = new System.Drawing.Size(73, 15);
             this.label9.TabIndex = 60;
-            this.label9.Text = "Deleted Files: 0\r\nDeleted Directories: 0";
+            this.label9.Text = "Deleted Files\r\n";
             // 
-            // frmNewCleanup
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(16, 634);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 15);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "test";
+            // 
+            // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(939, 687);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tabControl1);
-            this.Name = "frmNewCleanup";
+            this.Name = "frmCleanup";
             this.Text = "Cleanup";
             this.Load += new System.EventHandler(this.frmNewCleanup_Load);
             this.tabControl1.ResumeLayout(false);
@@ -910,5 +922,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
     }
 }

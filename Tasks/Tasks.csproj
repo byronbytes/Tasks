@@ -84,4 +84,8 @@ Tasks is an application that helps optimize computer performance. Some of Tasks'
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>

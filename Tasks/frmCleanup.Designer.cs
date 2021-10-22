@@ -159,6 +159,7 @@
             this.cbSystemTempFolders.Text = "Temp Folders";
             this.cbSystemTempFolders.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbSystemTempFolders.UseVisualStyleBackColor = true;
+            this.cbSystemTempFolders.CheckedChanged += new System.EventHandler(this.cbSystemTempFolders_CheckedChanged);
             // 
             // cbSystemRecycleBin
             // 
@@ -205,7 +206,8 @@
             // taskDialog1
             // 
             this.taskDialog1.Buttons.Add(this.taskDialogButton1);
-            this.taskDialog1.Content = "Clearing browser cache will log you out of all websites you previously logged into. Proceed with caution.";
+            this.taskDialog1.Content = "Clearing browser cache will log you out of all websites you previously logged int" +
+    "o. Proceed with caution.";
             this.taskDialog1.MainIcon = Ookii.Dialogs.WinForms.TaskDialogIcon.Warning;
             this.taskDialog1.MainInstruction = "Warning";
             this.taskDialog1.WindowIcon = ((System.Drawing.Icon)(resources.GetObject("taskDialog1.WindowIcon")));
@@ -966,10 +968,10 @@
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.Location = new System.Drawing.Point(6, 12);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(635, 38);
+            this.label13.Size = new System.Drawing.Size(631, 38);
             this.label13.TabIndex = 0;
-            this.label13.Text = "This feature sorts out all your extensions for your supported browser, and you can" +
-    "select which ones\r\n you want to remove.";
+            this.label13.Text = "This feature sorts out all your extensions for your supported browser, and you ca" +
+    "nselect which ones\r\n you want to remove.";
             // 
             // tabPage4
             // 

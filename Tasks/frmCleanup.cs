@@ -1015,6 +1015,11 @@ namespace Tasks
         {
 
         }
+
+        private void cbSystemTempFolders_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

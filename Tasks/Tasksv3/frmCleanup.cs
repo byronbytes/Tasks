@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -13,7 +14,19 @@ namespace Tasks.Tasks_v3._0._0 {
     public partial class frmCleanup : Form {
         public frmCleanup() { InitializeComponent(); }
 
-        private void frmNewCleanup_Load(object sender, EventArgs e) {}
+        private void frmNewCleanup_Load(object sender, EventArgs e) {
+
+            try
+            {
+                CleanupModules.Cleanup.GetTempFolderSize(new DirectoryInfo(Path.GetTempPath()));
+            }
+            catch(Exception ex)
+            {
+                Debug.Print("error " + ex);
+            }
+           
+            label7.Text = "Temp Folder Size: " + Strings.tempfolder.ToString();
+        }
   
         // @experimental: Expect changes to the method
         private (int, int, int, int) DeleteAllFiles(DirectoryInfo directoryInfo) {
@@ -57,7 +70,7 @@ namespace Tasks.Tasks_v3._0._0 {
         // as a good coder once said "NEVER NEVER NEVER use a UI object for a non-UI method.
         public void CleanupLog(int df, int fc, int dd, int dc) {
             CleanupSummary();
-            label9.Text = "Deleted " + df + "/" + fc + "files and " + dd + "/" + dc + " directories.";
+            label9.Text = "Deleted " + df + "/" + fc + " files and " + dd + "/" + dc + " directories.";
         }
             
             
