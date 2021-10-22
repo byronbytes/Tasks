@@ -128,5 +128,10 @@ namespace Tasks.Tasks_v3._0._0 {
         {
 
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmAnalyzePopup());
+        }
     }
 }

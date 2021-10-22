@@ -15,17 +15,6 @@ namespace Tasks.Tasks_v3._0._0 {
         public frmCleanup() { InitializeComponent(); }
 
         private void frmNewCleanup_Load(object sender, EventArgs e) {
-
-            try
-            {
-                CleanupModules.Cleanup.GetTempFolderSize(new DirectoryInfo(Path.GetTempPath()));
-            }
-            catch(Exception ex)
-            {
-                Debug.Print("error " + ex);
-            }
-           
-            label7.Text = "Temp Folder Size: " + Strings.tempfolder.ToString();
         }
   
         // @experimental: Expect changes to the method

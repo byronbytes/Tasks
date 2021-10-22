@@ -21,7 +21,6 @@ namespace Tasks.CleanupModules
 
         
         // Proper Syntax: Clean(chromeSubDir, chromeCacheDir);
-        
         public void Clean(string subdir, string cacheDir)
         {
             List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();

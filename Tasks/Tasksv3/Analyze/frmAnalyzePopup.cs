@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,8 @@ namespace Tasks.Tasks_v3._0._0
 
         private void frmAnalyzePopup_Load(object sender, EventArgs e)
         {
-            // Placeholder Text Messages. 
+            CleanupModules.Cleanup.GetTempFolderSize(new DirectoryInfo(Path.GetTempPath()));
+            label2.Text = Strings.tempfolder.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
