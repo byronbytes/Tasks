@@ -28,7 +28,7 @@ namespace Tasks
                         Process.Start("taskkill", "/f /im chrome.exe");
                     }
 
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         MessageBox.Show("Could not kill Chrome.");
                     }
@@ -40,7 +40,7 @@ namespace Tasks
                     {
                         Process.Start("taskkill", "/f /im firefox.exe");
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         MessageBox.Show("Could not kill Firefox.");
                     }
@@ -52,7 +52,7 @@ namespace Tasks
                     {
                         Process.Start("taskkill", "/f /im msedge.exe");
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         MessageBox.Show("Coud not kill Edge.");
                     }
