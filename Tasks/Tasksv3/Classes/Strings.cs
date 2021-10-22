@@ -10,7 +10,8 @@ namespace Tasks.Cleanup_Modules
 {
     public class Strings
     {
-   // This class is for strings, any types of strings will be listed here.
+        
+         // This class is for strings, any types of strings will be listed here. This will have cross compatibility with v2.1.0 -> 3.0.0
   
         public void AnalyzeStrings()
         {
@@ -20,13 +21,13 @@ namespace Tasks.Cleanup_Modules
           public string 3 = "Your computer does not have file compression turned on.";
           public string 4 = "Your computer currently has" + numdrives + "drive(s) currently plugged in.";
           public string 5 = "Your temp folders are taking up " + addfolders +  " of space.";
-          public string 6 = "Placeholder Text.";
+          public string 6 = "You are currently running " + winver;
         
             
           // Analyze No Issues
           public string perfect = "Your computer has no performance issues!";
           public string finish = "Your computer has finished analyzing.";
-          public string perfect2 = "Tasks has optimized your computer.";
+          public string completed = "Tasks has optimized your computer.";
             
             
            
@@ -41,6 +42,9 @@ namespace Tasks.Cleanup_Modules
              
             public string SpotifyApp = "Spotify";
             public string SpotifyWindows = "Spotify (Windows Store Edition)";
+            
+            
+           
             
         }
         
