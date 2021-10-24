@@ -41,6 +41,7 @@ namespace Tasks {
         private void button1_Click(object sender, EventArgs e) {
             // idk
             // update, i still dont know can someone please help me with this
+            // update 2, still don't know...
         }
         
         private void button2_Click(object sender, EventArgs e) {
@@ -48,14 +49,21 @@ namespace Tasks {
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "All|*.*" }) {
                 // If statement because if you closed it would throw an exception
                 if (ofd.ShowDialog() == DialogResult.OK)  {
-                    string program = ofd.FileName.ToString();
-                
-                    txtFileName.Text = ofd.FileName; 
-                    FileInfo fileInfo = new FileInfo(txtFileName.Text);
-                    txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
-                    File.Copy(txtFileName.Text, txtTargetPath.Text, true);
-                    Thread.Sleep(30);
-                    RefreshList();
+                    try
+                    {
+                        string program = ofd.FileName.ToString();
+
+                        txtFileName.Text = ofd.FileName;
+                        FileInfo fileInfo = new FileInfo(txtFileName.Text);
+                        txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
+                        File.Copy(txtFileName.Text, txtTargetPath.Text, true);
+                        RefreshList();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("There was an unexpected error.");
+                    }
+                  
                 } else RefreshList();
             }
         }
@@ -73,12 +81,10 @@ namespace Tasks {
         
         public class StartUpProgram {
             public string Name { get; set; }
-            public string Path { get; set; }
-            
+            public string Path { get; set; }            
             //show name in checkboxitem
             public override string ToString() { return Name; }
         }
-
         private void button4_Click_1(object sender, EventArgs e) { RefreshList(); }
     }
 }
