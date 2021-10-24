@@ -3,13 +3,13 @@
   <img alt="GitHub license" src="https://img.shields.io/github/license/litetools/tasks?style=flat-square"> <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
 </h1>
 
-**Tasks** is an application that boosts computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and also remove bloatware. Tasks also include a startup manager that allows the modification of programs that run on startup.
+**Tasks** is an application that improves computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and a bloatware removal tool. Tasks also include a startup manager that allows the modification of programs that run on startup.
 
 ## Installation
-1. First, you will need to install [.NET Core](https://dotnet.microsoft.com/download). Feel free to ignore this step if you already have it.
-2. Download the stable release from the **Releases** tab (don't download the source code!)
+1. First, you will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
+2. Download the stable release from the **Releases** tab.
 3. Extract the `.zip`, and execute the executable `.exe` file. After that, Tasks will launch.
-Note that the dependencies must be kept in the same folder. This is not a Tasks problem.
+Note that the dependencies must be kept in the same folder.
 
 ## Authors
 * **Byron** - *Initial work and development.*
