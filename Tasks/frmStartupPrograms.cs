@@ -14,80 +14,41 @@ using System.Diagnostics;
 using System.Threading;
 
 // TODO: Cleanup and change the code style
-namespace Tasks
-{
-
-    public partial class frmStartupPrograms : Form
-    {
-        public frmStartupPrograms()
-        {
+namespace Tasks {
+    public partial class frmStartupPrograms : Form {
+        public frmStartupPrograms() {
             InitializeComponent();
             RenderStartupsOnListWiew();
         }
 
-        private void RefreshList()
-        {
+        private void RefreshList() {
             StartupProcesses.Items.Clear();
             RenderStartupsOnListWiew();
         }
 
-        private void RenderStartupsOnListWiew()
-        {
-            ManagementClass mangnmt = new ManagementClass("Win32_StartupCommand");
-            ManagementObjectCollection mcol = mangnmt.GetInstances();
-            foreach (ManagementObject strt in mcol)
-            {
-                ListViewItem oo = StartupProcesses.Items.Add(strt["Name"].ToString(), 0);  //Changed the way the items work so we can add more than one subitem.
-                oo.SubItems.Add(strt["Location"].ToString());
+        private void RenderStartupsOnListWiew() {
+            foreach (ManagementObject strt in (new ManagementClass("Win32_StartupCommand").GetInstances())) { 
+                StartupProcesses.Items.Add(strt["Name"].ToString(), 0).SubItems.Add(strt["Location"].ToString()); 
             }
-
-
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-    // idk
-            // update, i still dont know can someone please help me with this
-          
-
-
-
-        }
-
-        private void frmStartupPrograms_Load(object sender, EventArgs e)
-        {
+        private void frmStartupPrograms_Load(object sender, EventArgs e) {
             txtTargetPath.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
         }
 
-        private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e) {}
 
+        private void button1_Click(object sender, EventArgs e) {
+            // idk
+            // update, i still dont know can someone please help me with this
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // will add a method to auto update the list when the window closes
-                Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
-                RefreshList();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex);
-            }
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-        // Opens the file dialog for selecting a program
-            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "All|*.*" })
-            {
-                if (ofd.ShowDialog() == DialogResult.OK)  // If statement because if you closed it would error
-                {
-                string program = ofd.FileName.ToString();
+        
+        private void button2_Click(object sender, EventArgs e) {
+            // Opens the file dialog for selecting a program
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "All|*.*" }) {
+                // If statement because if you closed it would throw an exception
+                if (ofd.ShowDialog() == DialogResult.OK)  {
+                    string program = ofd.FileName.ToString();
                 
                     txtFileName.Text = ofd.FileName; 
                     FileInfo fileInfo = new FileInfo(txtFileName.Text);
@@ -95,52 +56,29 @@ namespace Tasks
                     File.Copy(txtFileName.Text, txtTargetPath.Text, true);
                     Thread.Sleep(30);
                     RefreshList();
-                }
-                else
-                {
-                  RefreshList();
-                }
-
-
-          
-
-
+                } else RefreshList();
             }
-
- 
-               
-            
+        }
+        
+        private void button3_Click(object sender, EventArgs e) {
+            try {
+                // will add a method to auto update the list when the window closes
+                Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
+                RefreshList();
+            } catch(Exception ex) { MessageBox.Show(ex.GetType().FullName + " caught: " + ex.FullMessage); }
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-           
-        }
-        public class StartUpProgram
-
-        {
-
+        private void button4_Click(object sender, EventArgs e) {}
+        
+        public class StartUpProgram {
             public string Name { get; set; }
-
-
             public string Path { get; set; }
-
+            
             //show name in checkboxitem
-
-            public override string ToString()
-
-            {
-
-                return Name;
-
-            }
-
+            public override string ToString() { return Name; }
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
+        private void button4_Click_1(object sender, EventArgs e) { RefreshList(); }
     }
 }
