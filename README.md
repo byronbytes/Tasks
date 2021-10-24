@@ -6,17 +6,10 @@
 **Tasks** is an application that boosts computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and also remove bloatware. Tasks also include a startup manager that allows the modification of programs that run on startup.
 
 ## Installation
-### Prerequisites
-Before you can run Tasks, you will need to install [.NET Core](https://dotnet.microsoft.com/download).
-
-### Tasks Executable file
-After you installed **.NET Core**, get Tasks executable by:
-1. Download the stable release from the **Releases** tab (don't download the source code!)
-2. Extract the `.zip`, and execute the executable `.exe` file. After that, Tasks will launch.
-Note that the dependencies must be kept in the same folder
-
-## Support The Project
-You can support our project in many ways, simply by using Tasks, leaving a star, forking, watching and reporting issues too. We also set up a donation system, so all your donations and sponsors go directly to us.
+1. First, you will need to install [.NET Core](https://dotnet.microsoft.com/download). Feel free to ignore this step if you already have it.
+2. Download the stable release from the **Releases** tab (don't download the source code!)
+3. Extract the `.zip`, and execute the executable `.exe` file. After that, Tasks will launch.
+Note that the dependencies must be kept in the same folder. This is not a Tasks problem.
 
 ## Authors
 * **Byron** - *Initial work and development.*
@@ -24,6 +17,9 @@ You can support our project in many ways, simply by using Tasks, leaving a star,
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 
 See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
+
+## Support The Project
+You can support our project in many ways, simply by using Tasks, leaving a star, forking, watching and reporting issues too. We also set up a donation system, so all your donations and sponsors go directly to us.
 
 ## Acknowledgments
 * This application was inspired by CCleaner, but we built up on the idea and improved it in our own ways.
