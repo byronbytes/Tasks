@@ -21,7 +21,7 @@ namespace Tasks.Tasks_v3._0._0
 
         private void frmAnalyzePopup_Load(object sender, EventArgs e)
         {
-            CleanupModules.Cleanup.GetTempFolderSize(new DirectoryInfo(Path.GetTempPath()));
+            CleanupModules.Cleanup.GetFolderSize(new DirectoryInfo(Path.GetTempPath()));
             label2.Text = Strings.tempfolder.ToString();
         }
 

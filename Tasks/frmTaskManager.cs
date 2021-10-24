@@ -190,7 +190,7 @@ namespace Tasks
         {
             frmCreateNewProcess NewProcess = new frmCreateNewProcess();
             NewProcess.Show();
-            // coming soon
+
         }
     }
 }
