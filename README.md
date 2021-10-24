@@ -7,7 +7,7 @@
 
 ## Installation
 ### Prerequisites
-Before you can run Tasks, you will need to install [.NET Core](https://dotnet.microsoft.com/download) directly from Microsoft.
+Before you can run Tasks, you will need to install [.NET Core](https://dotnet.microsoft.com/download).
 
 ### Tasks Executable file
 After you installed **.NET Core**, get Tasks executable by:
