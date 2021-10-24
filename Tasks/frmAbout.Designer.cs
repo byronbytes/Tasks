@@ -72,7 +72,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Running Version 2.1.0";
+            this.label2.Text = "Running Version 2.1.1";
             // 
             // label3
             // 
@@ -105,10 +105,9 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
-                "Byron (@byronbytes)",
-                "Solirs (@Solirs)",
-                "unknownbruh (@unknownbruh)"
-            });
+            "Byron (@byronbytes)",
+            "Solirs (@Solirs)",
+            "unknownbruh (@unknownbruh)"});
             this.listBox1.Location = new System.Drawing.Point(17, 183);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(260, 180);
@@ -145,7 +144,7 @@
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
             this.linkLabel1.Location = new System.Drawing.Point(146, 126);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(104, 21);
+            this.linkLabel1.Size = new System.Drawing.Size(117, 21);
             this.linkLabel1.TabIndex = 9;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Report an issue";
@@ -195,9 +194,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(385, 352);
+            this.button2.Location = new System.Drawing.Point(364, 344);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 28);
+            this.button2.Size = new System.Drawing.Size(145, 36);
             this.button2.TabIndex = 30;
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = false;

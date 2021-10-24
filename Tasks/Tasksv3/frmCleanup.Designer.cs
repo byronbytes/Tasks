@@ -78,7 +78,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -796,7 +795,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(762, 634);
+            this.button3.Location = new System.Drawing.Point(762, 640);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(165, 44);
             this.button3.TabIndex = 57;
@@ -824,23 +823,12 @@
             this.label9.TabIndex = 60;
             this.label9.Text = "Deleted Files\r\n";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(16, 634);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 15);
-            this.label7.TabIndex = 61;
-            this.label7.Text = "test";
-            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(939, 687);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);
@@ -922,6 +910,5 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
     }
 }

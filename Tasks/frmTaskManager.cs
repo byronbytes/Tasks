@@ -188,6 +188,8 @@ namespace Tasks
 
         private void button2_Click(object sender, EventArgs e)
         {
+            frmCreateNewProcess NewProcess = new frmCreateNewProcess();
+            NewProcess.Show();
             // coming soon
         }
     }

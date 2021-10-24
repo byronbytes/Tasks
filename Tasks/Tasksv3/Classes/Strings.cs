@@ -22,7 +22,6 @@ namespace Tasks
         public static string limitedpower = "Your computer is currently running on a limited power mode.";
         public static string filecompression = "Your computer does not have file compression turned on.";
         public static string drives = "Your computer currently has" + "drive(s) currently plugged in.";
-
         public static string tempsize = "Your temp folders are taking up " + Strings.tempfolder.ToString() + "B of space.";
 
         // Analyze No Issues
