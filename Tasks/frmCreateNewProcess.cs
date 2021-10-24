@@ -20,7 +20,27 @@ namespace Tasks
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "All|*.*" })
+            {
+                // If statement because if you closed it would throw an exception
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string task = ofd.FileName.ToString();
+                        Process.Start(task);
+                    }
+                    catch
+                    {
+                        // An Error.
+                    }
+                   
+                }
+                else
+                {
+                    // Do Nothing.
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
