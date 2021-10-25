@@ -54,17 +54,12 @@ namespace Tasks
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Coud not kill Edge.");
+                        MessageBox.Show("Could not kill Edge.");
                     }
                     break;
 
 
             }
-        }
-
-        public void TaskManagerKill(string process)
-        {
-
         }
 
     }
