@@ -14,7 +14,7 @@ namespace Tasks
         // This class is for strings, any types of strings will be listed here. 
 
 
-        // Core Variables / preload
+        // Other Variables
         public static long tempfolder = 1;
 
         // Analyze Strings
@@ -28,14 +28,15 @@ namespace Tasks
         public static string perfect = "Your computer has no performance issues!";
         public static string finish = "Your computer has finished analyzing.";
         public static string completed = "Tasks has optimized your computer.";
+        public static string issues = "Your computer has a few performance issues.";
 
      
        // Application Detection
        public static string spotify = "Tasks has detected Spotify on your computer.";
        public static string spotifywinstore = "Tasks has detected Spotify (Windows Store Edition) on your computer.";
+        
+        
     }
-
-
 }
 
 
