@@ -14,7 +14,6 @@ using System.Threading;
 using System.Windows.Forms;
 using ByteSizeLib;
 
-// TODO: Cleanup and change the code style
 // TODO: Work on Remove Bloat, here's a helpful article: https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.powershell?view=powershellsdk-7.0.0
 namespace Tasks
 {
@@ -82,12 +81,11 @@ namespace Tasks
             if (cbExplorerDownloads.Checked)
                 try
                 {
-
-                    if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
+                  if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error clearing the Downloads Folder. " + ex);
+                    CleanupLogsLBox.Items.Add("Error cleaning the Downloads Folder. " + ex);
 
                 }
 
@@ -132,7 +130,7 @@ namespace Tasks
                 }
             }
 
-            // Chrome
+           
 
             if (cbChromeCache.Checked)
             {
@@ -464,16 +462,12 @@ namespace Tasks
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies");
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\IndexedDB\\");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Cookies Deleted.");
-
-
-
-                CleanupLogsLBox.Items.Add("Edge Cookies Cleaned.");
             }
 
             if (cbEdgeCache.Checked) //Edge cache
             {
-            try
-            {
+             try
+                 {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache\\");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache\\");
                 var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\");
@@ -486,7 +480,7 @@ namespace Tasks
                 }
                 catch
                 {
-                
+                CleanupLogsLBox.Items.Add("Error while deleting Edge Cache.");
                 }
             }
 
@@ -520,13 +514,13 @@ namespace Tasks
             if (cbSystemDirectXCache.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("DirectX Shader Cache Cleaned.");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("DirectX Shader Cache Deleted.");
             }
 
             if (cbSystemMemDumps.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\CrashDumps\\");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("System Memory Dumps Cleaned.");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("System Memory Dumps Deleted.");
             }
 
 
@@ -582,6 +576,7 @@ namespace Tasks
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data\\");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Saved Passwords Deleted.");
             }
+
 
 
             if (CleanupLogsLBox.Items.Count < 2) btnCopyLogs.Enabled = true;
