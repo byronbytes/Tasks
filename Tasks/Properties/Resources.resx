@@ -121,9 +121,6 @@
   <data name="CleanupWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CleanupWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Placeholder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="SettingsWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SettingsWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,17 +151,11 @@
   <data name="Utility Scripts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Utility Scripts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tasks 128x128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tasks 128x128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Recycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Recycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cleanup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cleanup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tasks 512x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tasks 512x512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -207,12 +198,6 @@
   </data>
   <data name="Startup Program" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Startup Program.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tasks 64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tasks 64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tasks 256x256 v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tasks 256x256 v22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -5,7 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Tasks 256x256 Logo.ico</ApplicationIcon>
-    <Version>2.1.1</Version>
+    <Version>2.2.0</Version>
     <Copyright>LiteTools 2021</Copyright>
     <Description>Tasks is an application that helps optimize computer performance. Some of Tasks's features include an advanced cleanup tool for unnecessary system files and application caches and a startup manager that lets you manage programs that run on startup.</Description>
     <Company>LiteTools</Company>
@@ -23,6 +23,10 @@
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Placeholder.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ByteSize" Version="2.1.0" />
