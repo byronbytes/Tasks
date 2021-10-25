@@ -128,7 +128,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error while cleaning Prefetch. " + ex);
+                    CleanupLogsLBox.Items.Add("Error while deleting Prefetch. " + ex);
                 }
             }
 
@@ -159,7 +159,7 @@ namespace Tasks
                         }
                         catch (Exception ex)
                         {
-                            CleanupLogsLBox.Items.Add("erorr test ." + ex);
+                            CleanupLogsLBox.Items.Add("Error deleting Chrome Cache. " + ex);
                         }
 
                         // If DeleteAllFiles returns false, set the isDeleted value to false
@@ -226,7 +226,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("There was an error trying to clean Discord Cookies." + ex);
+                    CleanupLogsLBox.Items.Add("Error deleting Discord Cookies." + ex);
                 }
 
             //Firefox
@@ -309,13 +309,13 @@ namespace Tasks
                     }
                     catch (Exception ex)
                     {
-                        CleanupLogsLBox.Items.Add("Error while trying to delete Firefox Shader Cache! \n" + ex);
+                        CleanupLogsLBox.Items.Add("Error trying to delete Firefox Shader Cache. " + ex);
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error while trying to delete firefox cache! \n" + ex);
+                    CleanupLogsLBox.Items.Add("Error trying to delete firefox cache. " + ex);
                 }
 
 
