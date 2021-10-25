@@ -44,13 +44,15 @@ namespace Tasks
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(12, 57);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(372, 35);
+            this.textBox1.Size = new System.Drawing.Size(381, 35);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(488, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 30);
@@ -61,6 +63,7 @@ namespace Tasks
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(341, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 30);
