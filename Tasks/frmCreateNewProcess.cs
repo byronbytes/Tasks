@@ -30,9 +30,9 @@ namespace Tasks
                         string task = ofd.FileName.ToString();
                         Process.Start(task);
                     }
-                    catch
+                    catch(Exception ex)
                     {
-                        // An Error.
+                        MessageBox.Show("An error has occurred: " + ex.Message);
                     }
                    
                 }
@@ -45,7 +45,16 @@ namespace Tasks
 
         private void button1_Click(object sender, EventArgs e)
         {
+        try
+        {
             Process.Start(textBox1.Text);
+        }catch
+        {
+         MessageBox.Show("An error has occurred.");
+        }
+        
+        
+        
         }
     }
 }
