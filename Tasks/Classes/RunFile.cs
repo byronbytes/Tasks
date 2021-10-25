@@ -12,7 +12,6 @@ namespace Tasks
         public static int RunBat(string batfile, bool waitexit)
         {
             try
-
             {
                 string path = AppDomain.CurrentDomain.BaseDirectory;
                 Process process = new Process();
@@ -22,8 +21,6 @@ namespace Tasks
                 {
                     process.WaitForExit();
                 }
-
-
                 return 0;
             }
             catch
