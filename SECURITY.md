@@ -11,9 +11,9 @@ These are the supported versions of Tasks. Please note that we will not fix vuln
 
 | Version             | Supported          | Release Date         | Discontinuation Date |
 | :------------------ | :----------------: | :--------------:     | :------------------: |
-| **2.1.0** (R)       | ✔️                 | undefined            | N/A
-| **2.0.0** (R)       | ✔️                 | 20th September, 2021 | N/A                  |
-| **2.0.0 Dev1** (PR) | :heavy_check_mark: | 7th August, 2021     | 31st December 2021   |
+| **2.1.0** (R)       | ✅                 | undefined            | N/A
+| **2.0.0** (R)       | ✅                 | 20th September, 2021 | N/A                  |
+| **2.0.0 Dev1** (PR) | :x:                | 7th August, 2021     | 31st December 2021   |
 | **1.x.x** (L)       | :x:                | 24th July, 2021      | 7th August 2021      |
 
 Legend: *(R: release ; PR: pre-release ; L: Legacy)*
