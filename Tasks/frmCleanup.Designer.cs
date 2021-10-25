@@ -159,7 +159,6 @@
             this.cbSystemTempFolders.Text = "Temp Folders";
             this.cbSystemTempFolders.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbSystemTempFolders.UseVisualStyleBackColor = true;
-            this.cbSystemTempFolders.CheckedChanged += new System.EventHandler(this.cbSystemTempFolders_CheckedChanged);
             // 
             // cbSystemRecycleBin
             // 
@@ -673,7 +672,6 @@
             this.cbChromeCache.Text = "Cache";
             this.cbChromeCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbChromeCache.UseVisualStyleBackColor = true;
-            this.cbChromeCache.CheckedChanged += new System.EventHandler(this.cbChromeCache_CheckedChanged);
             this.cbChromeCache.CheckStateChanged += new System.EventHandler(this.cbChromeCache_CheckStateChanged);
             // 
             // cbChromeSessions
@@ -1025,6 +1023,7 @@
             this.button4.Text = "Uninstall Edge";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 

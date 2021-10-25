@@ -14,7 +14,6 @@ using System.Threading;
 using System.Windows.Forms;
 using ByteSizeLib;
 
-// TODO: Work on Remove Bloat, here's a helpful article: https://docs.microsoft.com/en-us/dotnet/api/system.management.automation.powershell?view=powershellsdk-7.0.0
 namespace Tasks
 {
 
@@ -891,7 +890,7 @@ namespace Tasks
         {
             try
             {
-                RunFile.RunBat("Scripts/Debloater/DisableCortana.ps1", true);
+                Process.Start("powershell", "-ExecutionPolicy Bypass -File Scripts/Debloater/DisableCortana.ps1");
             }
             catch (Exception ex)
             {
@@ -903,12 +902,19 @@ namespace Tasks
         {
             try
             {
-                RunFile.RunBat("Scripts/Debloater/UninstallOneDrive.ps1", true);
+                Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloater/UninstallOneDrive.ps1");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred." + ex);
             }
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            RunFile.RunBat("removeedge.bat", true);
         }
 
         private void DirectoryExists()
@@ -1006,15 +1012,7 @@ namespace Tasks
            
         }
 
-        private void cbChromeCache_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void cbSystemTempFolders_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
