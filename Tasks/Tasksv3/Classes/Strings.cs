@@ -30,16 +30,9 @@ namespace Tasks
         public static string completed = "Tasks has optimized your computer.";
 
      
-
-
-        //stupid vs errors if i put a public string in a class, so i guess no class.
-           
-    
-
-        public void DetectApplications()
-        {
-
-        }
+       // Application Detection
+       public static string spotify = "Tasks has detected Spotify on your computer.";
+       public static string spotifywinstore = "Tasks has detected Spotify (Windows Store Edition) on your computer.";
     }
 
 
