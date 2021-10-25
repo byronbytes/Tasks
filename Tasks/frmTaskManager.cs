@@ -106,10 +106,16 @@ namespace Tasks {
 
                 //
                 // As not every process has an icon then, prevent the app from crash
+                
+                // !!! This is the code that is suspected to be causing the 60 second freeze bug, also some icons do not exist.
                 try {
                     // Add an unique Key as identifier for the icon (same as the ID of the process) + Icon
                     Imagelist.Images.Add(process.Id.ToString(),  Icon.ExtractAssociatedIcon(process.MainModule.FileName).ToBitmap());
-                } catch {}
+                } 
+                catch 
+                {
+                   //Needs a catch.
+                }
 
                 // Create a new Item to add into the list view that expects the row of information as first argument
                 ListViewItem item = new ListViewItem(row) {
