@@ -27,8 +27,15 @@ You can support our project in many ways, simply by using Tasks, leaving a star,
 * Uses the Remove Microsoft Edge Script made by https://github.com/ShadowWhisperer/Remove-Edge-Chromium
 
 ## Gallery
-These images were taken on v2.0.0. The interface may vary between versions.<br>
-![image](https://user-images.githubusercontent.com/53088136/134250645-5d19703b-62b7-49b3-9ee2-5546a63065e4.png)
-![image](https://user-images.githubusercontent.com/53088136/134250674-bdcb3d73-775b-48e4-82fa-5f764d4081a5.png)
-![image](https://user-images.githubusercontent.com/53088136/134250709-c612a1cb-7c6d-42ca-8e60-281eef069d4e.png)
-![image](https://user-images.githubusercontent.com/53088136/134250741-2cbce4d8-fbcf-4f0f-8771-7234ef07826c.png)
+These images were last taken on v2.1.1. The design may vary for newer versions.
+![image](https://user-images.githubusercontent.com/53088136/138777568-108d56b8-5f93-4a19-8055-52816defe49b.png)
+![image](https://user-images.githubusercontent.com/53088136/138777602-c4a7cc43-4892-4711-9811-fafdb4948208.png)
+![image](https://user-images.githubusercontent.com/53088136/138777626-fe92818e-dc16-45c2-8734-bedd7746178c.png)
+![image](https://user-images.githubusercontent.com/53088136/138777656-ec60c2ed-fc2c-4ce0-8ea2-4c6a7fe6a19f.png)
+![image](https://user-images.githubusercontent.com/53088136/138777673-6a2b2ba3-7a77-4413-92c4-5313da218880.png)
+![image](https://user-images.githubusercontent.com/53088136/138777693-cedc569e-abbc-4df6-b669-0c6695eff6d7.png)
+![image](https://user-images.githubusercontent.com/53088136/138777780-9e1d4222-be12-4015-8bae-fa2f9e495b54.png)
+![image](https://user-images.githubusercontent.com/53088136/138777811-442fe635-465f-4eff-8525-da301cf1731c.png)
+![image](https://user-images.githubusercontent.com/53088136/138777830-c2c6b688-9254-4fe1-85d6-cb5ec7a90d57.png)
+
+
