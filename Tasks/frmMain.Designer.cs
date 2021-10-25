@@ -199,9 +199,9 @@ namespace Tasks
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(182, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 34);
+            this.label2.Size = new System.Drawing.Size(118, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Work In Progress \r\nStill very buggy.";
+            this.label2.Text = "Work In Progress!";
             // 
             // label6
             // 

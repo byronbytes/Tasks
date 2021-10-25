@@ -42,7 +42,6 @@ namespace Tasks
             this.txtFileName = new System.Windows.Forms.Label();
             this.txtTargetPath = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StartupProcesses
@@ -153,24 +152,12 @@ namespace Tasks
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(493, 601);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(137, 37);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Remove";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // frmStartupPrograms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(953, 648);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtTargetPath);
             this.Controls.Add(this.txtFileName);
@@ -202,6 +189,5 @@ namespace Tasks
         private System.Windows.Forms.Label txtFileName;
         private System.Windows.Forms.Label txtTargetPath;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
     }
 }

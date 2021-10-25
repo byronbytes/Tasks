@@ -140,7 +140,10 @@ namespace Tasks {
               //  processList[].Kill();
                // clearProcesses();
                // renderProcessesOnListView();
-            } catch (Exception ex) { MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            } catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
         }
         
         private void button2_Click(object sender, EventArgs e) { new frmCreateNewProcess().Show(); }
