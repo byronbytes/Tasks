@@ -135,7 +135,10 @@ namespace Tasks {
         private void frmTaskManager_Load(object sender, System.EventArgs e) { renderProcessesOnListView(); }
 
         private void button1_Click(object sender, EventArgs e) {
+            string selected = "";
+  
             try {
+                Process.Start("taskkill", selected);
                // Process[] processList = Process.GetProcesses();
               //  processList[].Kill();
                // clearProcesses();
