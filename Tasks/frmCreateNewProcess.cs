@@ -45,5 +45,12 @@ namespace Tasks
                  MessageBox.Show("An error has occurred: " + ex.Message);
             }
         }
+                                                     
+                                                     
+        public static void MostRecentlyRan()
+        {
+            // Will put a listbox of 5 of the most recently created tasks
+        }
+                                                     
     }
 }
