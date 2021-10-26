@@ -108,18 +108,13 @@ namespace Tasks {
 
         private void button1_Click(object sender, EventArgs e) {
 
-
-            string test = listView1.SelectedItems[0].SubItems[1].Text;
-
-        
+            string selectedProcess = listView1.SelectedItems[0].SubItems[1].Text;
 
             try {
-                Process.Start("taskkill", "/f /im " + test);
-                // Process[] processList = Process.GetProcesses();
-                //  processList[].Kill();
+                Process.Start("taskkill", "/f /im " + selectedProcess);
                 // clearProcesses();
                 // renderProcessesOnListView();
-            } catch(Exception ex) { MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            } catch(Exception ex) { MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         
         private void button2_Click(object sender, EventArgs e) { new frmCreateNewProcess().Show(); }
