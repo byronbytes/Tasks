@@ -4,11 +4,11 @@ Last Updated: 10/26/21
 Repository: https://github.com/LiteTools/Tasks
 #>
 
-Write-Host "This is the proprietary Tasks powershell patching tool, this tool will attempt to fix Remove Bloat issues and bugs with powershell."
+Write-Host "This is the propriatary Tasks powershell patching tool, this tool will attempt to fix Remove Bloat issues and bugs with powershell."
 
   if (-not(Check-IsElevated))
  { 
-  Write-Host "WARN: It is highly suggested you run this script as administrator." 
+  Write-Host "WARNING: It is highly suggested you run this script as administrator." 
  }
  
 $CurrentPolicy = Get-ExecutionPolicy
@@ -22,7 +22,7 @@ $BlockedPolicy = "Restricted"
    try 
       {
         Set-ExecutionPolicy -ExecutionPolicy Bypass
-        Write-Host "Execution Policy has now changed to bypass."
+        Write-Host "Execution Policy has changed to Bypass."
       }
       catch
         {
