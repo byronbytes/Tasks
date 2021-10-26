@@ -107,14 +107,18 @@ namespace Tasks {
         private void frmTaskManager_Load(object sender, System.EventArgs e) { renderProcessesOnListView(); }
 
         private void button1_Click(object sender, EventArgs e) {
-            string selected = "";
-  
+
+
+            string test = listView1.SelectedItems[0].SubItems[1].Text;
+
+        
+
             try {
-                Process.Start("taskkill", selected);
-               // Process[] processList = Process.GetProcesses();
-              //  processList[].Kill();
-               // clearProcesses();
-               // renderProcessesOnListView();
+                Process.Start("taskkill", "/f /im " + test);
+                // Process[] processList = Process.GetProcesses();
+                //  processList[].Kill();
+                // clearProcesses();
+                // renderProcessesOnListView();
             } catch(Exception ex) { MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         
