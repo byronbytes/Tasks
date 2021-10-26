@@ -27,10 +27,11 @@ $BlockedPolicy = "Restricted"
       catch
         {
           Write-Host "An error has occurred and Tasks was unable to patch."
-          
+          Write-Host $_         
         }
  }
-  
+ 
+ 
   if ($CurrentPolicy = Bypass)
  {
     try
@@ -40,6 +41,6 @@ $BlockedPolicy = "Restricted"
       catch
         {
           Write-Host "An error occurred."
-         
+          Write-Host $_
         }
   }
