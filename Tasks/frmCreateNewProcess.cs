@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,18 +11,12 @@ using System.Windows.Forms;
 
 namespace Tasks
 {
-    public partial class frmCreateNewProcess : Form
-    {
-        public frmCreateNewProcess()
-        {
-            InitializeComponent();
-        }
-
+    public partial class frmCreateNewProcess : Form { public frmCreateNewProcess(){ InitializeComponent(); }
+                                                     
         private void button2_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe*" })
             {
-                // If statement because if you closed it would throw an exception
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     try
@@ -36,16 +30,12 @@ namespace Tasks
                     }
                    
                 }
-                else
-                {
-                    // Do Nothing.
-                }
+                else { }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-        
+        {     
          try
            {
              Process.Start(textBox1.Text);
@@ -55,5 +45,12 @@ namespace Tasks
                  MessageBox.Show("An error has occurred: " + ex.Message);
             }
         }
+                                                     
+                                                     
+        public static void MostRecentlyRan()
+        {
+            // Will put a listbox of 5 of the most recently created tasks
+        }
+                                                     
     }
 }

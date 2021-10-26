@@ -1,9 +1,8 @@
 # Tasks Security Policy
 
-This is the current Security Policy for Tasks. Last updated on September 27th, 2021.
+This is the current Security Policy for Tasks. Last updated on October 26th, 2021.
 
 ## Supported Versions
-
 These are the supported versions of Tasks. We will not maintain older versions of Tasks (for instance, legacy version (v1.x.x)).
 
 | Version         | Supported          | Release Date     | Discontinuation Date |
@@ -19,6 +18,17 @@ These are the supported versions of Tasks. We will not maintain older versions o
 
 To report any vulnerabilities, please create a new Issue using the <strong>Security Vulnerability</strong> template (Click <a href="https://github.com/LiteTools/Tasks/issues">here</a> to go to the Issues Tab).
 
-Please note that we will not fix vulnerabilities in older versions of Tasks. Please only submit vulnerabilities if those exist in supported versions of Tasks.
+## Supported Operating Systems
+We will support bug fixes if you are running on a certain operating system, if bugs occur on only one Windows version, we will not fix it.
 
 
+| Windows OS      | Supported          | 
+| :-------------- | :----------------: | 
+| Windows 11      | ✔️                 | 
+| Windows 10      | ✔️                 |
+| Windows 8.1 / 8 | ✔️                 | 
+| Windows 7       | ✔️                 | 
+| Windows Vista   | ❗                 |
+| Windows XP      | ❗                 |
+
+Legend: ✔️ = Supported | ❗ = Supported w/ Performance Issues

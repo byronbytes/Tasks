@@ -29,28 +29,22 @@ namespace Tasks {
 
             // Create a dynamic object to store some properties on it
             dynamic response = new ExpandoObject();
-            response.Description = "";
             response.Username = "System";
+            response.Description = "";
 
-            foreach (ManagementObject obj in processList) {
+            foreach(ManagementObject obj in processList) {
                 // Retrieve username 
                 string[] argList = new string[] { string.Empty, string.Empty };
                 int returnVal = Convert.ToInt32(obj.InvokeMethod("GetOwner", argList));
-                if (returnVal == 0) {
-                    // return Username
+                
+                // You can return the domain too like (PCDesktop-123123\Username using instead
+                //response.Username = argList[1] + "\\" + argList[0];
+                if (returnVal == 0) 
                     response.Username = argList[0];
 
-                    // You can return the domain too like (PCDesktop-123123\Username using instead
-                    //response.Username = argList[1] + "\\" + argList[0];
-                }
-
                 // Retrieve process description if exists
-                if (obj["ExecutablePath"] != null) {
-                    try {
-                        FileVersionInfo info = FileVersionInfo.GetVersionInfo(obj["ExecutablePath"].ToString());
-                        response.Description = info.FileDescription;
-                    } catch {}
-                }
+                if (obj["ExecutablePath"] != null) 
+                    try { response.Description = FileVersionInfo.GetVersionInfo(obj["ExecutablePath"].ToString()).FileDescription; } catch {}
             }
 
             return response;
@@ -74,18 +68,11 @@ namespace Tasks {
         public void clearProcesses() { listView1.Clear(); }
         
         public void renderProcessesOnListView() {
-            // Create an array to store the processes
             Process[] processList = Process.GetProcesses();
+            ImageList imgList = new ImageList();
 
-            // Create an Imagelist that will store the icons of every process
-            ImageList Imagelist = new ImageList();
-
-            // Loop through the array of processes to show information of every process in your console
             foreach (Process process in processList) {
-                // Define the status from a boolean to a simple string
                 string status = (process.Responding == true ? "Responding" : "Not Responding");
-
-                // Retrieve the object of extra information of the process (to retrieve Username and Description)
                 dynamic extraProcessInfo = GetProcessExtraInformation(process.Id);
 
                 // Create an array of string that will store the information to display in our 
@@ -103,33 +90,18 @@ namespace Tasks {
                     // 6 Description of the process
                     extraProcessInfo.Description
                 };
-
-                //
-                // As not every process has an icon then, prevent the app from crash
                 
+                // Not all apps have an icon!
+                // The try statement below will add the process ID alongside the icon.
                 // !!! This is the code that is suspected to be causing the 60 second freeze bug, also some icons do not exist.
-                try {
-                    // Add an unique Key as identifier for the icon (same as the ID of the process) + Icon
-                    Imagelist.Images.Add(process.Id.ToString(),  Icon.ExtractAssociatedIcon(process.MainModule.FileName).ToBitmap());
-                } 
-                catch 
-                {
-                   //Needs a catch.
-                }
-
-                // Create a new Item to add into the list view that expects the row of information as first argument
-                ListViewItem item = new ListViewItem(row) {
-                    // Set the ImageIndex of the item as the same defined in the previous try-catch
-                    ImageIndex = Imagelist.Images.IndexOfKey(process.Id.ToString())
-                };
-
-                // Add the Item
-                listView1.Items.Add(item);
+                try { imgList.Images.Add(process.Id.ToString(),  Icon.ExtractAssociatedIcon(process.MainModule.FileName).ToBitmap()); } catch {}
+                
+                listView1.Items.Add(new ListViewItem(row) { ImageIndex = imgList.Images.IndexOfKey(process.Id.ToString()) });
             }
 
             // Set the imagelist of your list view the previous created list :)
-            listView1.LargeImageList = Imagelist;
-            listView1.SmallImageList = Imagelist;
+            listView1.LargeImageList = imgList;
+            listView1.SmallImageList = imgList;
         }
 
         private void frmTaskManager_Load(object sender, System.EventArgs e) { renderProcessesOnListView(); }
@@ -143,10 +115,7 @@ namespace Tasks {
               //  processList[].Kill();
                // clearProcesses();
                // renderProcessesOnListView();
-            } catch (Exception ex) 
-            { 
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error); 
-            }
+            } catch(Exception ex) { MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         
         private void button2_Click(object sender, EventArgs e) { new frmCreateNewProcess().Show(); }
