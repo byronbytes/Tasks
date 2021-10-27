@@ -15,16 +15,18 @@ Note that the dependencies must be kept in the same folder.
 * **Byron** - *Initial work and development.*
 * **unknownbruh** - *Code Improvement & Suggestions.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
+* **The very helpful people in the VB.NET support server.** - *Helps me fix bugs*
 
 See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
 ## Support The Project
-You can support our project in many ways, simply by using Tasks, leaving a star, forking, watching and reporting issues too. We also set up a donation system, so all your donations and sponsors go directly to us.
+You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too. We also set up a donation system, so all your donations and sponsors go directly to us.
 
 ## Acknowledgments
 * This application was inspired by CCleaner, but we built up on the idea and improved it in our own ways.
 * Uses the Windows 10 Debloater made by https://github.com/Sycnex/Windows10Debloater
 * Uses the Remove Microsoft Edge Script made by https://github.com/ShadowWhisperer/Remove-Edge-Chromium
+
 
 ## Gallery
 These images were last taken on v2.1.1. The design may vary for newer versions.
