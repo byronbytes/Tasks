@@ -91,10 +91,14 @@ namespace Tasks {
                     extraProcessInfo.Description
                 };
                 
-                // Not all apps have an icon!
-                // The try statement below will add the process ID alongside the icon.
                 // !!! This is the code that is suspected to be causing the 60 second freeze bug, also some icons do not exist.
-                try { imgList.Images.Add(process.Id.ToString(),  Icon.ExtractAssociatedIcon(process.MainModule.FileName).ToBitmap()); } catch {}
+                try
+                { 
+                    imgList.Images.Add(process.Id.ToString(),  Icon.ExtractAssociatedIcon(process.MainModule.FileName).ToBitmap()); 
+                } catch 
+                {
+                  // Add a placeholder icon?  
+                }
                 
                 listView1.Items.Add(new ListViewItem(row) { ImageIndex = imgList.Images.IndexOfKey(process.Id.ToString()) });
             }
@@ -107,14 +111,18 @@ namespace Tasks {
         private void frmTaskManager_Load(object sender, System.EventArgs e) { renderProcessesOnListView(); }
 
         private void button1_Click(object sender, EventArgs e) {
-
-            string selectedProcess = listView1.SelectedItems[0].SubItems[1].Text;
+            
+            string selectedProcess = listView1.SelectedItems[0].SubItems[1].Text; // it was this easy. -.-
 
             try {
                 Process.Start("taskkill", "/f /im " + selectedProcess);
                 // clearProcesses();
                 // renderProcessesOnListView();
-            } catch(Exception ex) { MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            } 
+            catch(Exception ex) 
+            { 
+                MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
         }
         
         private void button2_Click(object sender, EventArgs e) { new frmCreateNewProcess().Show(); }
