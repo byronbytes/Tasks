@@ -39,9 +39,8 @@ namespace Tasks {
         private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e) {}
 
         private void button1_Click(object sender, EventArgs e) {
-            // idk
-            // update, i still dont know can someone please help me with this
-            // update 2, still don't know...
+      
+            //if(StartupProcesses)
         }
         
         private void button2_Click(object sender, EventArgs e) {
