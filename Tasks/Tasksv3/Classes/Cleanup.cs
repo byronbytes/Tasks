@@ -15,9 +15,13 @@ namespace Tasks.CleanupModules
         // to clear the strings so it doesn't mess up and delete other files.
         // This could be fixed by saying if(checkbox is checked then string = appsubdir, appcachedir)
 
+        // OR
+        // The strings will be user defined in the cleanup form, and whenever it is selected it will get the directories.
+        // Basically, in the cleanup form it will define the string and the "invalid code" method will run.
+        
         public string chromeSubDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
         public string[] chromeCacheDir = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "\\Default\\File System\\" };
-        public string[] windowsTemp = { "C:\\Windows\\Temp", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Temp" }; // might be incorrect.
+        public string[] windowsTemp = { "C:\\Windows\\Temp", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Temp" };
 
         
         /// <summary>
@@ -27,6 +31,7 @@ namespace Tasks.CleanupModules
         /// <param name="cacheDir"></param>
         public static void Clean(string subdir, string cacheDir)
         {
+                 
             List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
 
             // WARN: INVALID CODE
