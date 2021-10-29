@@ -90,16 +90,20 @@ namespace Tasks {
                     // 6 Description of the process
                     extraProcessInfo.Description
                 };
-                
+
+                imgList.Images.Add(Properties.Resources.InfoWhite);
                 // !!! This is the code that is suspected to be causing the 60 second freeze bug, also some icons do not exist.
                 try
-                { 
-                    imgList.Images.Add(process.Id.ToString(),  Icon.ExtractAssociatedIcon(process.MainModule.FileName).ToBitmap()); 
-                } catch 
                 {
-                  // Add a placeholder icon?  
+                    String PathToProcess = process.MainModule.FileName;
+                    Icon ico = Icon.ExtractAssociatedIcon(PathToProcess);
+                    imgList.Images.Add(process.Id.ToString(), ico.ToBitmap());
                 }
-                
+                catch (Exception e)
+                {
+                    imgList.Images.Add(process.Id.ToString(), SystemIcons.WinLogo.ToBitmap());
+                }
+
                 listView1.Items.Add(new ListViewItem(row) { ImageIndex = imgList.Images.IndexOfKey(process.Id.ToString()) });
             }
 
