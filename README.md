@@ -19,9 +19,9 @@ Note that the dependencies must be kept in the same folder.
 * **Byron** - *Initial work and development.*
 * **unknownbruh** - *Code Improvement & Suggestions.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
-* **The very helpful people in the VB.NET support server.** - *Helps me fix bugs*
+* **The very helpful people in the VB.NET server.** - *You guys know who you are, thank you. You helped me fix bugs and taught me to do stuff myself.*
 
-See the list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
+See the full list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
 ## Support The Project
 You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too. We also set up a donation system, so all your donations and sponsors go directly to us.
@@ -34,6 +34,7 @@ You can support our project in many ways, simply by downloading our application,
 
 ## Gallery
 These images were last taken on v2.1.1. The design may vary for newer versions.
+
 ![image](https://user-images.githubusercontent.com/53088136/138777568-108d56b8-5f93-4a19-8055-52816defe49b.png)
 ![image](https://user-images.githubusercontent.com/53088136/138777602-c4a7cc43-4892-4711-9811-fafdb4948208.png)
 ![image](https://user-images.githubusercontent.com/53088136/138777626-fe92818e-dc16-45c2-8734-bedd7746178c.png)
