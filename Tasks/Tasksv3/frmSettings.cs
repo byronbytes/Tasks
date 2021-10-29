@@ -55,7 +55,7 @@ namespace Tasks.Tasks_v3._0._0
                 } 
                 catch(Exception ex)
                 {
-                    MessageBox.Show(ex.GetType().FullName + "caught: " + ex.Message);
+                    MessageBox.Show(ex.GetType().FullName + "Caught: " + ex.Message);
                 }
 
                 RefreshCleanupLogs();
