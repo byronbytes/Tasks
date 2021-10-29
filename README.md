@@ -7,7 +7,7 @@
 
 ### Our Goal
 
-Our goal is to make a lightweight cleaning tool that is free for everyone, requires little to no effort to use, and a responsive and quick interface. We run the application hundreds of times while making new versions so everything is stable, and is always a better experience than previous versions. We will NEVER make paywalls in our application, or restrict anything to anyone.
+Our goal is to make a lightweight cleaning tool that is free for everyone, requires little to no effort to use, and a responsive and quick interface. We run the application hundreds of times while making new versions so everything is stable, and we make sure there is a better experience than previous versions. We will NEVER make paywalls in our application, or restrict any features. We believe that computer performance is crucial to everyone.
 
 ## Installation
 1. First, you will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
