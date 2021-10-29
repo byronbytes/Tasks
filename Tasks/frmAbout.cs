@@ -10,6 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+// im about to get wanted by the government
+// uh oh 
+
+
 namespace Tasks {
     public partial class frmAbout : Form {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
