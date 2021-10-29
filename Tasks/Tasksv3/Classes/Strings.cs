@@ -35,6 +35,12 @@ namespace Tasks
        public static string spotify = "Tasks has detected Spotify on your computer.";
        public static string spotifywinstore = "Tasks has detected Spotify (Windows Store Edition) on your computer.";
         
+      
+        // Language (Coming Soon.)
+        public static string English = "English (US)";
+        public static string French = "Français";
+        public static string Polish = "Polskie";
+        public static string Korean = "한국인";
         
     }
 }
