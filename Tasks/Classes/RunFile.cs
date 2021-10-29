@@ -22,10 +22,12 @@ namespace Tasks
                     process.WaitForExit();
                 }
                 return 0;
+                Debug.Print("RunBat succeeded.")
             }
             catch
             {
                 return 1;
+                Debug.Print("RunBat failed.")
             }
         }
 
