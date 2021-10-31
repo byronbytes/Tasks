@@ -1,7 +1,7 @@
 <# 
 Creator: byronbytes
 Last Updated: 10/26/21
-Repository: https://github.com/LiteTools/Tasks
+Repo: https://github.com/LiteTools/Tasks
 #>
 
 Write-Host "This is the propriatary Tasks powershell patching tool, this tool will attempt to fix Remove Bloat issues and bugs with powershell."
@@ -10,12 +10,10 @@ Write-Host "This is the propriatary Tasks powershell patching tool, this tool wi
  { 
   Write-Host "WARNING: It is highly suggested you run this script as administrator." 
  }
- 
+
 $CurrentPolicy = Get-ExecutionPolicy
-$BlockedPolicy = "Restricted"
 
-
-<#This is currently a WIP, I have little to no resources, and will be changed throughout time.#>
+<#This is currently a WIP.#>
 
   if ($CurrentPolicy = Restricted)
  {
@@ -30,7 +28,6 @@ $BlockedPolicy = "Restricted"
           Write-Host $_         
         }
  }
- 
  
   if ($CurrentPolicy = Bypass)
  {

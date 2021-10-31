@@ -71,7 +71,6 @@ namespace Tasks {
             try {
                 // will add a method to auto update the list when the window closes
                 Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
-                RefreshList();
             } catch(Exception ex) { MessageBox.Show(ex.GetType().FullName + " caught: " + ex.Message); }
 
         }

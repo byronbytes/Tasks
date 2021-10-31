@@ -29,6 +29,7 @@ namespace Tasks
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStartupPrograms));
             this.StartupProcesses = new System.Windows.Forms.ListView();
             this.ProcessName = new System.Windows.Forms.ColumnHeader();
@@ -42,6 +43,7 @@ namespace Tasks
             this.txtFileName = new System.Windows.Forms.Label();
             this.txtTargetPath = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // StartupProcesses
@@ -87,6 +89,7 @@ namespace Tasks
             this.button1.Size = new System.Drawing.Size(137, 37);
             this.button1.TabIndex = 1;
             this.button1.Text = "Disable";
+            this.toolTip1.SetToolTip(this.button1, "Disable Program");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -99,6 +102,7 @@ namespace Tasks
             this.button2.Size = new System.Drawing.Size(137, 37);
             this.button2.TabIndex = 2;
             this.button2.Text = "Add New";
+            this.toolTip1.SetToolTip(this.button2, "New Program");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -111,6 +115,7 @@ namespace Tasks
             this.button3.Size = new System.Drawing.Size(161, 37);
             this.button3.TabIndex = 3;
             this.button3.Text = "View Startup Folder";
+            this.toolTip1.SetToolTip(this.button3, "View Startup Folder");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -122,33 +127,34 @@ namespace Tasks
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(845, 568);
+            this.txtFileName.Location = new System.Drawing.Point(822, 568);
             this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(96, 15);
+            this.txtFileName.Size = new System.Drawing.Size(119, 15);
             this.txtFileName.TabIndex = 4;
-            this.txtFileName.Text = "Added Directory:";
+            this.txtFileName.Text = "PlaceholderFileName";
             this.txtFileName.Visible = false;
             // 
             // txtTargetPath
             // 
             this.txtTargetPath.AutoSize = true;
             this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTargetPath.Location = new System.Drawing.Point(845, 583);
+            this.txtTargetPath.Location = new System.Drawing.Point(822, 583);
             this.txtTargetPath.Name = "txtTargetPath";
-            this.txtTargetPath.Size = new System.Drawing.Size(96, 15);
+            this.txtTargetPath.Size = new System.Drawing.Size(125, 15);
             this.txtTargetPath.TabIndex = 5;
-            this.txtTargetPath.Text = "Added Directory:";
+            this.txtTargetPath.Text = "PlaceholderTargetPath";
             this.txtTargetPath.Visible = false;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(12, 556);
+            this.button4.Location = new System.Drawing.Point(179, 601);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(161, 37);
             this.button4.TabIndex = 6;
             this.button4.Text = "Refresh List";
+            this.toolTip1.SetToolTip(this.button4, "Refresh List");
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
@@ -189,5 +195,6 @@ namespace Tasks
         private System.Windows.Forms.Label txtFileName;
         private System.Windows.Forms.Label txtTargetPath;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
