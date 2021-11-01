@@ -21,6 +21,8 @@ $CurrentPolicy = Get-ExecutionPolicy
       {
         Set-ExecutionPolicy -ExecutionPolicy Bypass
         Write-Host "Execution Policy has changed to Bypass."
+        Write-Host "Press any key to continue ....."
+        $x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
       }
       catch
         {
@@ -34,10 +36,14 @@ $CurrentPolicy = Get-ExecutionPolicy
     try
       {
         Write-Host "Execution Policy is already set to Bypass, no need for patching."
+        Write-Host "Press any key to continue ....."
+        $x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
       }
       catch
         {
           Write-Host "An error occurred."
           Write-Host $_
+          Write-Host "Press any key to continue ....."
+          $x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
         }
   }
