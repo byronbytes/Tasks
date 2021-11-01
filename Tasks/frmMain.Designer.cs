@@ -40,7 +40,6 @@ namespace Tasks
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -182,7 +181,6 @@ namespace Tasks
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -194,15 +192,6 @@ namespace Tasks
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Task Manager";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(182, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Work In Progress!";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -211,9 +200,9 @@ namespace Tasks
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(6, 62);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(291, 34);
+            this.label6.Size = new System.Drawing.Size(285, 34);
             this.label6.TabIndex = 2;
-            this.label6.Text = "An advanced Task Manager with more advanced\r\n process information.";
+            this.label6.Text = "An advanced Task Manager with more process \r\ninformation and details.";
             // 
             // button4
             // 
@@ -272,7 +261,6 @@ namespace Tasks
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label2;
     }
 }
 
