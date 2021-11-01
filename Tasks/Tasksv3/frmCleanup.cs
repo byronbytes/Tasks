@@ -46,20 +46,20 @@ namespace Tasks.Tasks_v3._0._0 {
         private void button3_Click(object sender, EventArgs e) {
             // The deleting / checkbox method is also prone to change soon.
             if (cbTempFiles.Checked) {
-                var (wtdf, wtfc, wtdd, wtdc) = DeleteAllFiles(new DirectoryInfo("C:\\Windows\\Temp")); 
-                var (utdf, utfc, utdd, utdc) = DeleteAllFiles(new DirectoryInfo(Path.GetTempPath()));
+                var (wtdf, wtfc) = DeleteAllFiles(new DirectoryInfo("C:\\Windows\\Temp")); 
+                var (utdf, utfc) = DeleteAllFiles(new DirectoryInfo(Path.GetTempPath()));
 
                 listBox1.Items.Add("Temp Files Deleted.");
-                CleanupLog((wtdf+utdf), (wtfc+utfc), (wtdd+utdd), (wtdc+utdc));
+                CleanupLog((wtdf+utdf), (wtfc+utfc));
             }
         }
 
 
         // This method will deprecate the need for listboxes, even invisible ones.
         // as a good coder once said "NEVER NEVER NEVER use a UI object for a non-UI method.
-        public void CleanupLog(int df, int fc, int dd, int dc) {
+        public void CleanupLog(int df, int fc) {
             CleanupSummary();
-            label9.Text = "Deleted " + df + "/" + fc + " files and " + dd + "/" + dc + " directories.";
+            label9.Text = "Deleted " + df + "/" + " files and " + dd + " directories.";
         }
             
             
