@@ -1,7 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<strings>
+<locfile>
+
+	<!--Languages that are currently supported: en-->
+	<!--Languages that are being worked on: es, pl-->
+	<!--Languages that will be worked on later: fr, nl-->
+	
+	<!--Title-->
 	<string name="Tasks" lang="en">Tasks</string>
 	<string name="Tasks" lang="es">Tareas</string>
-</strings>
+	<string name="Tasks" lang="fr">Tasks</string>
+	<string name="Tasks" lang="pl">Tasks</string>
+
+
+	<!--Main Interface - Cleanup Box-->
+	<string name="Cleanup" lang="en">Cleanup</string>
+	<string name="CleanupDescription" lang="en">
+		Cleanup will clean all junk and garbage inside temp
+		folders, recycle bin, download and other locations.
+		You can select which to clean with many options.
+	</string>
+
+	<!--Main Interface - Startup Programs Box-->
+	<string name="StartupPrograms" lang="en">Startup Programs</string>
+	<string name="StartupProgramsDescription" lang="en">
+		Manage programs that start on boot. You will
+		be able to see and modify all programs
+		that run on startup.
+	</string>
+
+	<!--Main Interface - Task Manager Box-->
+	<string name="TaskManager" lang="en">Task Manager</string>
+	<string name="TaskManagerDescription" lang="en">
+		An advanced Task Manager with more process
+		information and details.
+	</string>
+
+
+</locfile>
 
 

@@ -157,8 +157,8 @@ namespace Tasks
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(279, 51);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Manage programs that start on boot. You will \r\nbe able to see and modify\r\nall pro" +
-    "grams that run on startup.";
+            this.label5.Text = "Manage programs that start on boot. You will \r\nbe able to see and modify all prog" +
+    "rams\r\nthat run on startup.";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button3
