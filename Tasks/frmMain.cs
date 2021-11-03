@@ -25,7 +25,6 @@ namespace Tasks {
 
         private void label1_Click(object sender, EventArgs e) 
         { 
-            new Tasks_v3._0._0.frmInterface().Show();
         }
         private void label5_Click(object sender, EventArgs e) {}
     }
