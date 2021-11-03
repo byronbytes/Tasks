@@ -4,15 +4,14 @@
 </h1>
 
 # Security Policy
-This is the current Security Policy for Tasks. Last updated on October 25th, 2021.
+This is the current Security Policy for Tasks. Last updated on November 3rd, 2021.
+
+## Reporting a Vulnerability
+To report any vulnerabilities, please create a new Issue using the **Security Vulnerability** template (Click [here](https://github.com/LiteTools/Tasks/issues) to go to the Issues Tab).
+
 
 ## Supported Versions
 These are the supported versions of Tasks. Please note that we will not fix vulnerabilities in older versions. If you are running a legacy version, we suggest you to update to a newer version for more features, and a stable and safe experience.
-
-## Reporting a vulnerability
-To report any vulnerabilities, please create a new Issue using the **Security Vulnerability** template (Click [here]("https://github.com/LiteTools/Tasks/issues") to go to the Issues Tab).
-
-
 
 | Version             | Supported          | Release Date         | Discontinuation Date |
 | :------------------ | :----------------: | :--------------:     | :------------------: |
@@ -27,7 +26,6 @@ Legend: *(R: release ; PR: pre-release ; L: Legacy)*
 ## Supported Operating Systems
 We will support bug fixes if you are running on a certain operating system, if bugs occur on only one Windows version, we will not fix it.
 
-
 | Windows OS      | Supported          | 
 | :-------------- | :----------------: | 
 | Windows 11      | ✔️                 | 
@@ -35,7 +33,8 @@ We will support bug fixes if you are running on a certain operating system, if b
 | Windows 8.1 / 8 | ✔️                 | 
 | Windows 7       | ✔️                 | 
 | Windows Vista   | ❗                 |
-| Windows XP      | ❗                 |
+| Windows XP      | 🚫*                 |
 
-Legend: ✔️ = Supported | ❗ = Supported w/ Performance Issues
+Legend: ✔️ = Supported | ❗ = Supported w/ Performance Issues | 🚫 = Unsupported
 
+*You may still run Tasks on Windows XP, but it is highly unrecommended.
