@@ -61,7 +61,7 @@ namespace Tasks.CleanupModules
             {
                 try
                 {
-                    Strings.tempfolder = +files.Length;
+                   
                 }
                 catch
                 {

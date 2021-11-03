@@ -912,11 +912,6 @@ namespace Tasks
         {
             RunFile.RunBat("removeedge.bat", true);
         }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Process.Start("powershell", "-noexit -File Scripts/Debloater/TasksPatcher.ps1");
-        }
         private void DirectoryExists()
         {
 

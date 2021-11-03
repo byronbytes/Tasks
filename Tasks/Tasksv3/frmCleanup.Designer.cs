@@ -48,14 +48,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox27 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
             this.lblEdgeNotDetected = new System.Windows.Forms.Label();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.checkBox22 = new System.Windows.Forms.CheckBox();
             this.checkBox23 = new System.Windows.Forms.CheckBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.lblDiscordNotDetected = new System.Windows.Forms.Label();
             this.lblChromeNotDetected = new System.Windows.Forms.Label();
             this.lblFirefoxNotDetected = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,15 +67,17 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox25 = new System.Windows.Forms.CheckBox();
+            this.lblSpotifyNotDetected = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -132,7 +132,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(907, 584);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "System";
+            this.tabPage1.Text = "Windows";
             // 
             // checkBox26
             // 
@@ -362,9 +362,9 @@
             this.label3.Location = new System.Drawing.Point(54, 44);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(77, 21);
+            this.label3.Size = new System.Drawing.Size(63, 21);
             this.label3.TabIndex = 40;
-            this.label3.Text = "Windows";
+            this.label3.Text = "System";
             // 
             // pictureBox1
             // 
@@ -392,14 +392,12 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.checkBox27);
             this.tabPage2.Controls.Add(this.checkBox11);
-            this.tabPage2.Controls.Add(this.checkBox25);
             this.tabPage2.Controls.Add(this.lblEdgeNotDetected);
             this.tabPage2.Controls.Add(this.checkBox18);
             this.tabPage2.Controls.Add(this.checkBox22);
             this.tabPage2.Controls.Add(this.checkBox23);
             this.tabPage2.Controls.Add(this.pictureBox8);
             this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.lblDiscordNotDetected);
             this.tabPage2.Controls.Add(this.lblChromeNotDetected);
             this.tabPage2.Controls.Add(this.lblFirefoxNotDetected);
             this.tabPage2.Controls.Add(this.label4);
@@ -413,6 +411,8 @@
             this.tabPage2.Controls.Add(this.pictureBox5);
             this.tabPage2.Controls.Add(this.pictureBox4);
             this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.checkBox25);
+            this.tabPage2.Controls.Add(this.lblSpotifyNotDetected);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.checkBox9);
             this.tabPage2.Controls.Add(this.pictureBox2);
@@ -421,7 +421,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(907, 584);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Application";
+            this.tabPage2.Text = "Applications";
             // 
             // label5
             // 
@@ -461,20 +461,6 @@
             this.checkBox11.Text = "Sessions";
             this.checkBox11.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox25
-            // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox25.ForeColor = System.Drawing.Color.White;
-            this.checkBox25.Location = new System.Drawing.Point(13, 372);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(73, 21);
-            this.checkBox25.TabIndex = 69;
-            this.checkBox25.Text = "Cookies";
-            this.checkBox25.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox25.UseVisualStyleBackColor = true;
             // 
             // lblEdgeNotDetected
             // 
@@ -550,18 +536,6 @@
             this.label18.Size = new System.Drawing.Size(123, 21);
             this.label18.TabIndex = 63;
             this.label18.Text = "Microsoft Edge";
-            // 
-            // lblDiscordNotDetected
-            // 
-            this.lblDiscordNotDetected.AutoSize = true;
-            this.lblDiscordNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblDiscordNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblDiscordNotDetected.Location = new System.Drawing.Point(12, 396);
-            this.lblDiscordNotDetected.Name = "lblDiscordNotDetected";
-            this.lblDiscordNotDetected.Size = new System.Drawing.Size(155, 19);
-            this.lblDiscordNotDetected.TabIndex = 62;
-            this.lblDiscordNotDetected.Text = "Discord is not detected.";
-            this.lblDiscordNotDetected.Visible = false;
             // 
             // lblChromeNotDetected
             // 
@@ -727,41 +701,6 @@
             this.label10.TabIndex = 55;
             this.label10.Text = "Mozilla Firefox";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(46, 310);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 21);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "Discord";
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox9.ForeColor = System.Drawing.Color.White;
-            this.checkBox9.Location = new System.Drawing.Point(13, 342);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(62, 21);
-            this.checkBox9.TabIndex = 52;
-            this.checkBox9.Text = "Cache";
-            this.checkBox9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Tasks.Properties.Resources.Discord;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 305);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 53;
-            this.pictureBox2.TabStop = false;
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
@@ -771,16 +710,6 @@
             this.tabPage3.Size = new System.Drawing.Size(907, 584);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(907, 584);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Cookie Whitelist";
             // 
             // tabPage5
             // 
@@ -823,6 +752,77 @@
             this.label9.TabIndex = 60;
             this.label9.Text = "Deleted Files\r\n";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.tabPage4.Location = new System.Drawing.Point(4, 30);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(907, 584);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Cookie Whitelist";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Tasks.Properties.Resources.Spotify;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 305);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 53;
+            this.pictureBox2.TabStop = false;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox9.ForeColor = System.Drawing.Color.White;
+            this.checkBox9.Location = new System.Drawing.Point(13, 342);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(62, 21);
+            this.checkBox9.TabIndex = 52;
+            this.checkBox9.Text = "Cache";
+            this.checkBox9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox25
+            // 
+            this.checkBox25.AutoSize = true;
+            this.checkBox25.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox25.ForeColor = System.Drawing.Color.White;
+            this.checkBox25.Location = new System.Drawing.Point(13, 372);
+            this.checkBox25.Name = "checkBox25";
+            this.checkBox25.Size = new System.Drawing.Size(100, 21);
+            this.checkBox25.TabIndex = 69;
+            this.checkBox25.Text = "Music Cache";
+            this.checkBox25.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox25.UseVisualStyleBackColor = true;
+            // 
+            // lblSpotifyNotDetected
+            // 
+            this.lblSpotifyNotDetected.AutoSize = true;
+            this.lblSpotifyNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblSpotifyNotDetected.ForeColor = System.Drawing.Color.Silver;
+            this.lblSpotifyNotDetected.Location = new System.Drawing.Point(12, 396);
+            this.lblSpotifyNotDetected.Name = "lblSpotifyNotDetected";
+            this.lblSpotifyNotDetected.Size = new System.Drawing.Size(152, 19);
+            this.lblSpotifyNotDetected.TabIndex = 62;
+            this.lblSpotifyNotDetected.Text = "Spotify is not detected.";
+            this.lblSpotifyNotDetected.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(46, 310);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 21);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Spotify";
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -834,6 +834,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmCleanup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cleanup";
             this.Load += new System.EventHandler(this.frmNewCleanup_Load);
             this.tabControl1.ResumeLayout(false);
@@ -859,7 +860,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.CheckBox checkBox26;
         private System.Windows.Forms.CheckBox checkBox24;
@@ -883,14 +883,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox27;
         private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox25;
         private System.Windows.Forms.Label lblEdgeNotDetected;
         private System.Windows.Forms.CheckBox checkBox18;
         private System.Windows.Forms.CheckBox checkBox22;
         private System.Windows.Forms.CheckBox checkBox23;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label lblDiscordNotDetected;
         private System.Windows.Forms.Label lblChromeNotDetected;
         private System.Windows.Forms.Label lblFirefoxNotDetected;
         private System.Windows.Forms.Label label4;
@@ -904,11 +902,14 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBox25;
+        private System.Windows.Forms.Label lblSpotifyNotDetected;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }

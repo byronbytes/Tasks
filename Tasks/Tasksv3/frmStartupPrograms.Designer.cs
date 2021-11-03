@@ -78,7 +78,7 @@ namespace Tasks.Tasks_v3._0._0
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(740, 636);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 39);
@@ -89,7 +89,7 @@ namespace Tasks.Tasks_v3._0._0
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(12, 636);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 39);
@@ -101,7 +101,7 @@ namespace Tasks.Tasks_v3._0._0
             // button3
             // 
             this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(547, 636);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(187, 39);
@@ -112,7 +112,7 @@ namespace Tasks.Tasks_v3._0._0
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.Location = new System.Drawing.Point(12, 493);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(187, 39);
@@ -129,7 +129,7 @@ namespace Tasks.Tasks_v3._0._0
             // 
             this.txtTargetPath.AutoSize = true;
             this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTargetPath.Location = new System.Drawing.Point(12, 608);
+            this.txtTargetPath.Location = new System.Drawing.Point(831, 505);
             this.txtTargetPath.Name = "txtTargetPath";
             this.txtTargetPath.Size = new System.Drawing.Size(96, 15);
             this.txtTargetPath.TabIndex = 7;
@@ -140,7 +140,7 @@ namespace Tasks.Tasks_v3._0._0
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(12, 593);
+            this.txtFileName.Location = new System.Drawing.Point(831, 490);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(96, 15);
             this.txtFileName.TabIndex = 6;
@@ -162,7 +162,7 @@ namespace Tasks.Tasks_v3._0._0
             this.Controls.Add(this.StartupProcesses);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStartupPrograms";
-            this.Text = "frmNewStartupPrograms";
+            this.Text = "Startup Programs";
             this.Load += new System.EventHandler(this.frmNewStartupPrograms_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

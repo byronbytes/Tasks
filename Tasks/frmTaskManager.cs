@@ -14,7 +14,11 @@ using System.Windows.Forms;
 // TODO: Cleanup and change the code style
 namespace Tasks {
     public partial class frmTaskManager : Form {
-        public frmTaskManager() { InitializeComponent(); }
+        public frmTaskManager() 
+        { 
+            InitializeComponent();
+            renderProcessesOnListView();
+        }
         
         /// <summary>
         /// Returns an Expando object with the description and username of a process from the process ID.
@@ -92,7 +96,7 @@ namespace Tasks {
                 };
 
                 imgList.Images.Add(Properties.Resources.InfoWhite);
-                // !!! This is the code that is suspected to be causing the 60 second freeze bug, also some icons do not exist.
+                // !!! This is the code that is suspected to be causing the 60 second freeze bug.
                 try
                 {
                     String PathToProcess = process.MainModule.FileName;
@@ -112,7 +116,7 @@ namespace Tasks {
             listView1.SmallImageList = imgList;
         }
 
-        private void frmTaskManager_Load(object sender, System.EventArgs e) { renderProcessesOnListView(); }
+        private void frmTaskManager_Load(object sender, System.EventArgs e) { }
 
         private void button1_Click(object sender, EventArgs e) {
             

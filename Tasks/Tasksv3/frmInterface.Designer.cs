@@ -97,7 +97,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::Tasks.Properties.Resources.SettingsWhite;
+            this.pictureBox5.Image = global::Tasks.Properties.Resources.Settings1;
             this.pictureBox5.Location = new System.Drawing.Point(52, 530);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(53, 42);
@@ -119,12 +119,14 @@
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Tasks.Properties.Resources.Cleanup_50x50_White;
+            this.pictureBox3.Image = global::Tasks.Properties.Resources.TaskManagerWhiteAlt;
             this.pictureBox3.Location = new System.Drawing.Point(52, 324);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(53, 42);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 

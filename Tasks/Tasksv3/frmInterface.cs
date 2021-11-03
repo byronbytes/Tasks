@@ -132,5 +132,13 @@ namespace Tasks.Tasks_v3._0._0 {
         private void pictureBox6_Click(object sender, EventArgs e)
         {
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+            DashboardSendToBack(true);
+            SelectedButton("TaskManager");
+            ShowForm(new Tasksv3.frmTaskManager());
+        }
     }
 }
