@@ -4,7 +4,7 @@ Last Updated: 10/26/21
 Repo: https://github.com/LiteTools/Tasks
 #>
 
-Write-Host "This is the propriatary Tasks powershell patching tool, this tool will attempt to fix Remove Bloat issues and bugs with powershell."
+Write-Host "Just in case the scripts fail to work, running this may fix any issues."
 
   if (-not(Check-IsElevated))
  { 
@@ -43,7 +43,5 @@ $CurrentPolicy = Get-ExecutionPolicy
         {
           Write-Host "An error occurred."
           Write-Host $_
-          Write-Host "Press any key to continue ....."
-          $x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
         }
   }
