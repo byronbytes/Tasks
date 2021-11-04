@@ -348,6 +348,15 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Scripts Used:
+https://github.com/Sycnex/Windows10Debloater
+https://github.com/ShadowWhisperer/Remove-Edge-Chromium
+
+
+We did NOT create the scripts that are being used in the Debloater section, The original sources of these scripts are listed where it says "Scripts Used".
+</value>
+  </data>
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABLAAAARrCAYAAACT2F8jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -7991,24 +8000,6 @@
         QRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAE
         QRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEuZKyZs3/D2ke0yXE
         B6EQAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>Scripts Used:
-https://github.com/Sycnex/Windows10Debloater
-https://github.com/ShadowWhisperer/Remove-Edge-Chromium
-
-
-We did NOT create the scripts that are being used in the Debloater section, The original source of this script can be found at https://github.com/Sycnex/Windows10Debloater.
-
-The MIT License states that you are allowed to use this script for the following.
- - Commercial use
- - Modification
- - Distribution
- - Private use
-
-Tasks is following their MIT License and if it is being incorrectly used please email litetoolsfoundation@gmail.com with the subject as "Feature Notice" and it will be 
-on our highest priority.
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
