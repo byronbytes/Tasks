@@ -10,12 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
-// im about to get wanted by the government
-// uh oh 
-
-
 namespace Tasks {
     public partial class frmAbout : Form {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -37,10 +31,6 @@ namespace Tasks {
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/issues/new", UseShellExecute = true });
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e) {
-            Process.Start(new ProcessStartInfo { FileName = "https://discord.gg/nCBD9ZJjng", UseShellExecute = true });
         }
 
         private void pictureBox3_Click(object sender, EventArgs e) {

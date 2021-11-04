@@ -68,7 +68,7 @@ namespace Tasks
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(15, 420);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 33);
+            this.button6.Size = new System.Drawing.Size(74, 33);
             this.button6.TabIndex = 10;
             this.button6.Text = "About";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

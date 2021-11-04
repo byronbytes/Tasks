@@ -124,8 +124,6 @@ namespace Tasks {
 
             try {
                 Process.Start("taskkill", "/f /im " + selectedProcess);
-                // clearProcesses();
-                // renderProcessesOnListView();
             } 
             catch(Exception ex) 
             { 
@@ -137,5 +135,11 @@ namespace Tasks {
         
         private void timer1_Tick(object sender, EventArgs e) {}
         private void listView1_SelectedIndexChanged(object sender, EventArgs e) {}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            clearProcesses();
+            renderProcessesOnListView();
+        }
     }
 }
