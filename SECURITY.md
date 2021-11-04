@@ -11,7 +11,7 @@ To report any vulnerabilities, please create a new Issue using the **Security Vu
 
 
 ## Supported Versions
-These are the supported versions of Tasks. Please note that we will not fix vulnerabilities in older versions. If you are running a legacy version, we suggest you to update to a newer version for more features, and a stable and safe experience.
+These are the supported versions of Tasks. Please note that we will not fix vulnerabilities in older versions.
 
 | Version             | Supported          | Release Date         | Discontinuation Date |
 | :------------------ | :----------------: | :--------------:     | :------------------: |
@@ -24,7 +24,7 @@ These are the supported versions of Tasks. Please note that we will not fix vuln
 Legend: *(R: release ; PR: pre-release ; L: Legacy)*
 
 ## Supported Operating Systems
-We will support bug fixes if you are running on a certain operating system, if bugs occur on only one Windows version, we will not fix it.
+We will support bug fixes if you are running on a supported operating system.
 
 | Windows OS      | Supported          | 
 | :-------------- | :----------------: | 
