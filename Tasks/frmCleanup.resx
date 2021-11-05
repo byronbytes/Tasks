@@ -348,15 +348,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>Scripts Used:
-https://github.com/Sycnex/Windows10Debloater
-https://github.com/ShadowWhisperer/Remove-Edge-Chromium
-
-
-We did NOT create the scripts that are being used in the Debloater section, The original sources of these scripts are listed where it says "Scripts Used".
-</value>
-  </data>
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABLAAAARrCAYAAACT2F8jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -8000,6 +7991,15 @@ We did NOT create the scripts that are being used in the Debloater section, The 
         QRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAE
         QRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEuZKyZs3/D2ke0yXE
         B6EQAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Scripts Used:
+https://github.com/Sycnex/Windows10Debloater
+https://github.com/ShadowWhisperer/Remove-Edge-Chromium
+
+
+We did NOT create the scripts that are being used in the Debloater section, The original sources of these scripts are listed where it says "Scripts Used".
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

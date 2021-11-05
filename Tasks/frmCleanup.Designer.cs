@@ -266,7 +266,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1137, 767);
+            this.tabPage1.Size = new System.Drawing.Size(1058, 767);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
@@ -495,7 +495,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1137, 767);
+            this.tabPage2.Size = new System.Drawing.Size(1058, 767);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
             // 
@@ -533,7 +533,7 @@
             this.cbDiscordCookies.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDiscordCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbDiscordCookies.ForeColor = System.Drawing.Color.White;
-            this.cbDiscordCookies.Location = new System.Drawing.Point(16, 565);
+            this.cbDiscordCookies.Location = new System.Drawing.Point(16, 429);
             this.cbDiscordCookies.Name = "cbDiscordCookies";
             this.cbDiscordCookies.Size = new System.Drawing.Size(73, 21);
             this.cbDiscordCookies.TabIndex = 43;
@@ -622,7 +622,7 @@
             this.lblDiscordNotDetected.AutoSize = true;
             this.lblDiscordNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblDiscordNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblDiscordNotDetected.Location = new System.Drawing.Point(16, 589);
+            this.lblDiscordNotDetected.Location = new System.Drawing.Point(16, 453);
             this.lblDiscordNotDetected.Name = "lblDiscordNotDetected";
             this.lblDiscordNotDetected.Size = new System.Drawing.Size(155, 19);
             this.lblDiscordNotDetected.TabIndex = 35;
@@ -801,7 +801,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(48, 500);
+            this.label6.Location = new System.Drawing.Point(48, 364);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 25);
             this.label6.TabIndex = 14;
@@ -813,7 +813,7 @@
             this.cbDiscordCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDiscordCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbDiscordCache.ForeColor = System.Drawing.Color.White;
-            this.cbDiscordCache.Location = new System.Drawing.Point(16, 535);
+            this.cbDiscordCache.Location = new System.Drawing.Point(16, 399);
             this.cbDiscordCache.Name = "cbDiscordCache";
             this.cbDiscordCache.Size = new System.Drawing.Size(62, 21);
             this.cbDiscordCache.TabIndex = 15;
@@ -824,7 +824,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Tasks.Properties.Resources.Discord;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 500);
+            this.pictureBox2.Location = new System.Drawing.Point(13, 364);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
