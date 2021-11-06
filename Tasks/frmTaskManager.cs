@@ -20,11 +20,13 @@ namespace Tasks {
             InitializeComponent();
 
             Task<List<ProcessInfoEx>> ProcessInfoList = Task.Run(async () => await GetProcessAsync());
-
             ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
         }
 
-        private void frmTaskManager_Load(object sender, System.EventArgs e) { }
+        private void frmTaskManager_Load(object sender, System.EventArgs e)
+        {
+         
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

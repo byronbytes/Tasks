@@ -83,22 +83,22 @@ namespace Tasks
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "PID";
+            this.columnHeader2.Text = "";
             this.columnHeader2.Width = 80;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Status";
+            this.columnHeader3.Text = "PID";
             this.columnHeader3.Width = 115;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "User Running";
+            this.columnHeader4.Text = "CPU Usage";
             this.columnHeader4.Width = 120;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Memory";
+            this.columnHeader5.Text = "Directory";
             this.columnHeader5.Width = 90;
             // 
             // columnHeader6
