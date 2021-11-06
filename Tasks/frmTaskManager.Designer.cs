@@ -67,9 +67,11 @@ namespace Tasks
             listViewGroup1,
             listViewGroup2});
             this.listView1.HideSelection = false;
+            this.listView1.LargeImageList = this.imageList1;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1058, 631);
+            this.listView1.SmallImageList = this.imageList1;
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
