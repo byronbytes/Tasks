@@ -29,6 +29,7 @@ namespace Tasks
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Running Apps", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Background Apps", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaskManager));
@@ -42,7 +43,7 @@ namespace Tasks
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // listView1
@@ -68,7 +69,7 @@ namespace Tasks
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(947, 631);
+            this.listView1.Size = new System.Drawing.Size(1058, 631);
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -109,7 +110,7 @@ namespace Tasks
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Brown;
-            this.button1.Location = new System.Drawing.Point(642, 661);
+            this.button1.Location = new System.Drawing.Point(755, 661);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 35);
             this.button1.TabIndex = 1;
@@ -121,7 +122,7 @@ namespace Tasks
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button2.Location = new System.Drawing.Point(811, 661);
+            this.button2.Location = new System.Drawing.Point(922, 661);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 35);
             this.button2.TabIndex = 2;
@@ -141,21 +142,18 @@ namespace Tasks
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox1
+            // imageList1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1000, 63);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 354);
-            this.textBox1.TabIndex = 4;
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // frmTaskManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(1239, 708);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1082, 708);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -166,7 +164,6 @@ namespace Tasks
             this.Text = "Task Manager";
             this.Load += new System.EventHandler(this.frmTaskManager_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -182,6 +179,6 @@ namespace Tasks
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
