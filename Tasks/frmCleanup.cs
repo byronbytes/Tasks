@@ -81,11 +81,11 @@ namespace Tasks
             if (cbExplorerDownloads.Checked)
                 try
                 {
-                    if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleaned.");
+                    if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleared.");
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error cleaning the Downloads Folder. " + ex);
+                    CleanupLogsLBox.Items.Add("Error clearing the Downloads Folder. " + ex);
 
                 }
 
@@ -94,7 +94,7 @@ namespace Tasks
                 {
                     // Silently deletes the recycle bin.
                     SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
-                    CleanupLogsLBox.Items.Add("Recycle Bin Cleaned.");
+                    CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
                 }
                 catch (Exception ex)
                 {
@@ -107,8 +107,8 @@ namespace Tasks
             {
                 try
                 {
-                    if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Cleaned.");
-                    if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Cleaned.");
+                    if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Deleted.");
+                    if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Deleted.");
 
                 }
                 catch (Exception ex)
