@@ -97,6 +97,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -144,6 +145,8 @@
             this.cbSystemPrefetch.TabIndex = 4;
             this.cbSystemPrefetch.Text = "Prefetch";
             this.cbSystemPrefetch.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbSystemPrefetch, "The cache of application loading times.\r\nNote that programs may take longer to lo" +
+        "ad if you delete this. ");
             this.cbSystemPrefetch.UseVisualStyleBackColor = true;
             // 
             // cbSystemTempFolders
@@ -157,6 +160,7 @@
             this.cbSystemTempFolders.TabIndex = 3;
             this.cbSystemTempFolders.Text = "Temp Folders";
             this.cbSystemTempFolders.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbSystemTempFolders, "Cleans temporary files that the system no longer needs.");
             this.cbSystemTempFolders.UseVisualStyleBackColor = true;
             // 
             // cbSystemRecycleBin
@@ -170,6 +174,7 @@
             this.cbSystemRecycleBin.TabIndex = 2;
             this.cbSystemRecycleBin.Text = "Empty Recycle Bin";
             this.cbSystemRecycleBin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbSystemRecycleBin, "Empties your Recycle Bin.");
             this.cbSystemRecycleBin.UseVisualStyleBackColor = true;
             // 
             // cbExplorerDownloads
@@ -1080,6 +1085,10 @@
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.btnCleanup_Click);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1189,5 +1198,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
