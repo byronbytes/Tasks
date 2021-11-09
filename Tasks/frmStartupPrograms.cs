@@ -39,8 +39,20 @@ namespace Tasks {
         private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e) {}
 
         private void button1_Click(object sender, EventArgs e) {
-      
-            //if(StartupProcesses)
+            string file = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
+
+            if (StartupProcesses.SelectedItems[0].SubItems[1].Text == "Startup")
+            {
+                try
+                {
+                    File.Delete(file);
+                    RefreshList();
+                }
+                catch
+                {
+                    MessageBox.Show("An error has occurred.");
+                }
+            }
         }
         
         private void button2_Click(object sender, EventArgs e) {
