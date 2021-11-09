@@ -22,7 +22,7 @@ Our goal is to make a lightweight cleaning tool that is free for everyone, requi
 Note that the dependencies must be kept in the same folder.
 
 ## Authors
-* **Byron** - *Initial work and development.*
+* **Byron (@byronbytes)** - *Initial work / creation and development.*
 * **unknownbruh** - *Code Improvement & Suggestions.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 * **The very helpful people in the VB.NET server.** - *You guys know who you are, thank you. You helped me fix bugs and taught me to do stuff myself.*
