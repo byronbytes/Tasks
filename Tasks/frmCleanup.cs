@@ -1017,7 +1017,7 @@ namespace Tasks
               Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt",
               CleanupLogsLBox.Items.Cast<string>().ToArray()
             );
-            MessageBox.Show("Cleanup is logged at " + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks", "Cleanup Summary" +"\\tasks-cleanup-summary-" + t + ".txt");
+            MessageBox.Show("Cleanup is logged at " + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks\\" + "Cleanup Summary" +"\\tasks-cleanup-summary-" + t + ".txt");
 
 
         }
