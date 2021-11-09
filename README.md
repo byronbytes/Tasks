@@ -6,7 +6,7 @@
 **Tasks** is an application that improves computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and a bloatware removal tool. Tasks also include a startup manager that allows the modification of programs that run on startup.
 
 #### Translations
-This README has been translated into multiple languages. Please select the language that suits you.
+This README has been translated into multiple languages. Please select the language that you perfer.
 
 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD)
 
