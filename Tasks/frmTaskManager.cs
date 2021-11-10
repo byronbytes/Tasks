@@ -13,91 +13,50 @@ using System.Windows.Forms;
 
 // TODO: Cleanup and change the code style
 namespace Tasks {
-    public partial class frmTaskManager : Form
-    {
-        public frmTaskManager()
-        {
+    public partial class frmTaskManager : Form {
+        public class ProcessInfoEx {
+            public Process TargetProcess = null;
+            public string Path = string.Empty;
+            public string ComandLine = string.Empty;
+        }
+        
+        string OldItemSelected = "";
+        
+        public frmTaskManager() {
             InitializeComponent();
-
-            Task<List<ProcessInfoEx>> ProcessInfoList = Task.Run(async () => await GetProcessAsync());
-            ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
+            Task.Run(async () => await GetProcessAsync()).GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
         }
 
-        private void frmTaskManager_Load(object sender, System.EventArgs e)
-        {
-         
-        }
+        private void frmTaskManager_Load(object sender, System.EventArgs e) {}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+        private void button1_Click(object sender, EventArgs e) {
             string selectedProcess = listView1.SelectedItems[0].SubItems[2].Text; // it was this easy. -.-
-
-            try
-            {
-                Process.Start("taskkill", "/f /im " + selectedProcess);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
+            try { Process.Start("taskkill", "/f /im " + selectedProcess); } 
+            catch (Exception ex) { MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
-
-        string OldItemSelected = string.Empty;
-
-
-        private void CPUMon_Check() //Laggin
-        {
-            try
-            {
-
-
-                foreach (ListViewItem LvItem in this.listView1.Items)
-                {
-
-                    try
-                    {
-
-                        int ProID = System.Convert.ToInt32(LvItem.SubItems[2].Text);
-
-                        Process TargetProcess = Process.GetProcessById(ProID);
-
+        // lags
+        private void CPUMon_Check() {
+            try {
+                foreach (ListViewItem LvItem in this.listView1.Items) {
+                    try {
+                        int ProcID = System.Convert.ToInt32(LvItem.SubItems[2].Text);
+                        Process TargetProcess = Process.GetProcessById(ProcID);
                         string CPUPercentUsage = GetProcessCPUPercentUsage(TargetProcess).ToString();
-
                         LvItem.SubItems[3].Text = CPUPercentUsage + "%";
-
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-
+                    } catch (Exception ex) { Console.WriteLine(ex.Message); }
                 }
-
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            } catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
 
-        public void ListProcess(List<ProcessInfoEx> ProcessInfoList)
-        {
-
+        public void ListProcess(List<ProcessInfoEx> ProcessInfoList) {
             this.listView1.Items.Clear();
-            if (this.imageList1.Images.Count != 0)
-            {
-                this.imageList1.Images.Clear();
-            }
+            if (this.imageList1.Images.Count != 0) this.imageList1.Images.Clear();
 
             int ID = 0;
-            foreach (ProcessInfoEx ProcessInfo in ProcessInfoList)
-            {
-
-                try
-                {
+            foreach (ProcessInfoEx ProcessInfo in ProcessInfoList) {
+                try {
                     Bitmap IconImg = Icon.ExtractAssociatedIcon(ProcessInfo.Path).ToBitmap();
                     this.imageList1.Images.Add(IconImg);
 
@@ -128,77 +87,43 @@ namespace Tasks {
                     this.listView1.Items.Add(lvi);
 
                     ID += 1;
-
-
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+                } catch (Exception ex) { Console.WriteLine(ex.Message); }
 
                 Application.DoEvents();
             }
 
         }
 
-        public void SetProcessCPU(ListViewItem.ListViewSubItem SubItem, string CPUPercentUsage)
-        {
+        public void SetProcessCPU(ListViewItem.ListViewSubItem SubItem, string CPUPercentUsage) {
             SubItem.Text = CPUPercentUsage + "%"; // Process CPU Percent
         }
 
-        public async Task<List<ProcessInfoEx>> GetProcessAsync()
-        {
-
+        public async Task<List<ProcessInfoEx>> GetProcessAsync() {
             List<ProcessInfoEx> TempList = new List<ProcessInfoEx>();
 
-            try
-            {
-
+            try {
                 var wmiQueryString = "SELECT ProcessId, ExecutablePath, CommandLine FROM Win32_Process";
 
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher(wmiQueryString);
-
                 ManagementObjectCollection results = searcher.Get();
-                foreach (ManagementObject QueryObject in results)
-                {
-
-                    try
-                    {
-
+                
+                foreach (ManagementObject QueryObject in results) {
+                    try {
                         ProcessInfoEx InfoProc = new ProcessInfoEx();
                         int ProcessPid = System.Convert.ToInt32(QueryObject["ProcessId"]);
 
                         InfoProc.TargetProcess = Process.GetProcessById(ProcessPid);
 
-                        if (QueryObject["ExecutablePath"] != null)
-                        {
-                            InfoProc.Path = QueryObject["ExecutablePath"].ToString();
-                        }
-
-                        if (QueryObject["CommandLine"] != null)
-                        {
-                            InfoProc.ComandLine = QueryObject["CommandLine"].ToString();
-                        }
+                        if (QueryObject["ExecutablePath"] != null) { InfoProc.Path = QueryObject["ExecutablePath"].ToString(); }
+                        if (QueryObject["CommandLine"] != null) { InfoProc.ComandLine = QueryObject["CommandLine"].ToString(); }
 
                         TempList.Add(InfoProc);
-
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-
+                    } catch (Exception ex) { Console.WriteLine(ex.Message); }
                 }
-
-
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            
             return TempList;
-
         }
 
 
@@ -221,23 +146,12 @@ namespace Tasks {
 
         ///     ''' ----------------------------------------------------------------------------------------------------
         [DebuggerStepThrough]
-        public async Task<double> GetProcessCPUPercentUsage(Process p)
-        {
-            using (PerformanceCounter perf = new PerformanceCounter("Process", "% Processor Time", p.ProcessName, true))
-            {
+        public async Task<double> GetProcessCPUPercentUsage(Process p) {
+            using (PerformanceCounter perf = new PerformanceCounter("Process", "% Processor Time", p.ProcessName, true)) {
                 perf.NextValue();
                 System.Threading.Thread.Sleep(TimeSpan.FromMilliseconds(250)); // Recommended value: 1 second
                 return (Math.Round(perf.NextValue() / (double)Environment.ProcessorCount, 1));
             }
-        }
-
-        public class ProcessInfoEx
-        {
-
-            public Process TargetProcess = null;
-            public string Path = string.Empty;
-            public string ComandLine = string.Empty;
-
         }
 
 
@@ -246,13 +160,6 @@ namespace Tasks {
         private void timer1_Tick(object sender, EventArgs e) { }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        private void button3_Click(object sender, EventArgs e) { }
     }
-
- 
-
-    }
+}
