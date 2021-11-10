@@ -19,7 +19,12 @@ namespace Tasks {
         public frmStartupPrograms() {
             InitializeComponent();
             RenderStartupsOnListWiew();
-        }
+    }
+
+        
+       
+
+
 
         private void RefreshList() {
             StartupProcesses.Items.Clear();
@@ -38,19 +43,52 @@ namespace Tasks {
 
         private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e) {}
 
+
+
+    
+
+
         private void button1_Click(object sender, EventArgs e) {
-            string file = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
+            string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
 
             if (StartupProcesses.SelectedItems[0].SubItems[1].Text == "Startup")
             {
                 try
                 {
-                    File.Delete(file);
+                    File.Delete(fileStartup);
                     RefreshList();
                 }
                 catch
                 {
                     MessageBox.Show("An error has occurred.");
+                }
+            }
+
+
+            if(StartupProcesses.SelectedItems[0].SubItems[1].Text == "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run")
+            {
+                try
+                {
+                    string keyName = @"Software\Microsoft\Windows\CurrentVersion\Run";
+                    string Value = StartupProcesses.SelectedItems[0].SubItems[0].Text;
+
+                    using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Value, false))
+                    {
+                        if (key == null)
+                        {
+                            Debug.Print(Value + "And" + keyName);
+                            MessageBox.Show("penis error");
+                        }
+                        else
+                        {
+                            key.DeleteValue(keyName + Value);
+                            Debug.Print(keyName + "And" + Value);
+                        }
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("error" + ex.Message);
                 }
             }
         }
@@ -96,5 +134,27 @@ namespace Tasks {
             public override string ToString() { return Name; }
         }
         private void button4_Click_1(object sender, EventArgs e) { RefreshList(); }
+
+        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
+            if (StartupProcesses.SelectedItems[0].SubItems[1].Text == "Startup")
+            {
+                try
+                {
+                    File.Delete(fileStartup);
+                    RefreshList();
+                }
+                catch
+                {
+                    MessageBox.Show("An error has occurred.");
+                }
+            }
+        }
+
+        private void moreInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Coming Soon.");
+        }
     }
 }

@@ -35,6 +35,9 @@ namespace Tasks
             this.ProcessName = new System.Windows.Forms.ColumnHeader();
             this.ProcessPath = new System.Windows.Forms.ColumnHeader();
             this.ProcessStatus = new System.Windows.Forms.ColumnHeader();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moreInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,6 +47,7 @@ namespace Tasks
             this.txtTargetPath = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // StartupProcesses
@@ -54,6 +58,7 @@ namespace Tasks
             this.ProcessName,
             this.ProcessPath,
             this.ProcessStatus});
+            this.StartupProcesses.ContextMenuStrip = this.contextMenuStrip1;
             this.StartupProcesses.ForeColor = System.Drawing.Color.White;
             this.StartupProcesses.FullRowSelect = true;
             this.StartupProcesses.HideSelection = false;
@@ -80,6 +85,28 @@ namespace Tasks
             this.ProcessStatus.Text = "Status";
             this.ProcessStatus.Width = 120;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeToolStripMenuItem,
+            this.moreInfoToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+            // 
+            // moreInfoToolStripMenuItem
+            // 
+            this.moreInfoToolStripMenuItem.Name = "moreInfoToolStripMenuItem";
+            this.moreInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.moreInfoToolStripMenuItem.Text = "More Info";
+            this.moreInfoToolStripMenuItem.Click += new System.EventHandler(this.moreInfoToolStripMenuItem_Click);
+            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -88,7 +115,7 @@ namespace Tasks
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 37);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Disable";
+            this.button1.Text = "Remove";
             this.toolTip1.SetToolTip(this.button1, "Disable Program");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -176,14 +203,13 @@ namespace Tasks
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Startup Programs";
             this.Load += new System.EventHandler(this.frmStartupPrograms_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView StartupProcesses;
         private System.Windows.Forms.ColumnHeader ProcessName;
         private System.Windows.Forms.ColumnHeader ProcessPath;
         private System.Windows.Forms.ColumnHeader ProcessStatus;
@@ -196,5 +222,9 @@ namespace Tasks
         private System.Windows.Forms.Label txtTargetPath;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moreInfoToolStripMenuItem;
+        private System.Windows.Forms.ListView StartupProcesses;
     }
 }
