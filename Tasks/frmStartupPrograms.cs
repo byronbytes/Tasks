@@ -72,7 +72,7 @@ namespace Tasks {
                     string keyName = @"Software\Microsoft\Windows\CurrentVersion\Run";
                     string Value = StartupProcesses.SelectedItems[0].SubItems[0].Text;
 
-                    using (RegistryKey key = Registry.CurrentUser.OpenSubKey(Value, false))
+                    using (RegistryKey key = Registry.CurrentUser.OpenSubKey(keyName, false))
                     {
                         if (key == null)
                         {
