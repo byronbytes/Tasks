@@ -69,15 +69,15 @@ namespace Tasks {
             {
                 try
                 {
-                    string keyName = @"Software\Microsoft\Windows\CurrentVersion\Run";
+                    string keyName = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
                     string Value = StartupProcesses.SelectedItems[0].SubItems[0].Text;
 
-                    using (RegistryKey key = Registry.CurrentUser.OpenSubKey(keyName, false))
+                    using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyName, false))
                     {
                         if (key == null)
                         {
                             Debug.Print(Value + "And" + keyName);
-                            MessageBox.Show("penis error");
+                            MessageBox.Show("Error");
                         }
                         else
                         {
