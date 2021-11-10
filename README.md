@@ -14,22 +14,22 @@ Our goal is to make a lightweight cleaning tool that is free for everyone, requi
 1. You will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
 2. Download Tasks from the **Releases** tab.
 3. Extract the `.zip` and execute the executable `.exe` file. After that, Tasks will launch.
-Note that the dependencies must be kept in the same folder. In the future, Tasks aims to bundle .NET Core alongside with the application to ensure internal library compatibility and portability (download once, execute anywhere).
+Note that the dependencies must be kept in the same folder, we are working on a fix for this.
 
 ## Credits
 * **Byron (@byronbytes)** - *Initial work / creation and development.*
 * **unknownbruh** - *Code Improvement & Suggestions.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 * **The very helpful people in the VB.NET server.** - *You guys know who you are, thank you. You helped me fix bugs and taught me to do stuff myself.*
+
 See the full list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
 ## Support
 You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too. We also set up a donation system, so all your donations and sponsors go directly to us.
 
 ## Acknowledgments
-* Tasks is inspired by CCleaner. We built Tasks upon the aim of CCleaner.
 * Tasks uses the Windows 10 Debloater made by [Sycnex](https://github.com/Sycnex/Windows10Debloater).
-* Tasks uses the Remove Microsoft Edge Script made by [ShadowWhisperer](https://github.com/ShadowWhisperer/Remove-Edge-Chromium).
+* Tasks uses the Remove Microsoft Edge script made by [ShadowWhisperer](https://github.com/ShadowWhisperer/Remove-Edge-Chromium).
 
 
 ## Gallery
