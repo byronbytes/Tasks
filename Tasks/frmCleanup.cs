@@ -582,16 +582,6 @@ namespace Tasks
 
 
             WriteCleanupSummary();
-
-
-
-
-        }
-
-        private void btnCopyLogs_Click_1(object sender, EventArgs e)
-        {
-            CleanupLogsLBox.Items.Add("Cleanup Logs copied to clipboard.");
-            Clipboard.SetText(string.Join("\n", CleanupLogsLBox.Items.Cast<string>()));
         }
 
 
