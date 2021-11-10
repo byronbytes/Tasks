@@ -1,46 +1,39 @@
 <h1 align="center">
   <img src="https://user-images.githubusercontent.com/53088136/136106972-30a9cca8-7a32-479a-9368-74ffe2d60a43.png" alt="Tasks" height="128" /><br>
   <img alt="GitHub license" src="https://img.shields.io/github/license/litetools/tasks?style=flat-square"> <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
+  
+  🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD)
 </h1>
 
 **Tasks** is an application that improves computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and a bloatware removal tool. Tasks also include a startup manager that allows the modification of programs that run on startup.
 
-#### Translations
-This README has been translated into multiple languages. Please select the language that you perfer.
-
-[🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD)
-
-
-### Our Goal
-
+### Intention
 Our goal is to make a lightweight cleaning tool that is free for everyone, requires little to no effort to use, and a responsive and quick interface. We run the application hundreds of times while making new versions so everything is stable, and we make sure there is a better experience than previous versions. We will NEVER make paywalls in our application, or restrict any features. We believe that computer performance is crucial to everyone.
 
 ## Installation
-1. First, you will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
-2. Download the stable release from the **Releases** tab.
-3. Extract the `.zip`, and execute the executable `.exe` file. After that, Tasks will launch.
-Note that the dependencies must be kept in the same folder.
+1. You will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
+2. Download Tasks from the **Releases** tab.
+3. Extract the `.zip` and execute the executable `.exe` file. After that, Tasks will launch.
+Note that the dependencies must be kept in the same folder. In the future, Tasks aims to bundle .NET Core alongside with the application to ensure internal library compatibility and portability (download once, execute anywhere).
 
-## Authors
+## Credits
 * **Byron (@byronbytes)** - *Initial work / creation and development.*
 * **unknownbruh** - *Code Improvement & Suggestions.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 * **The very helpful people in the VB.NET server.** - *You guys know who you are, thank you. You helped me fix bugs and taught me to do stuff myself.*
-
 See the full list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
-## Support The Project
+## Support
 You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too. We also set up a donation system, so all your donations and sponsors go directly to us.
 
 ## Acknowledgments
-* This application was inspired by CCleaner, but we built up on the idea and improved it in our own ways.
-* Uses the Windows 10 Debloater made by https://github.com/Sycnex/Windows10Debloater
-* Uses the Remove Microsoft Edge Script made by https://github.com/ShadowWhisperer/Remove-Edge-Chromium
+* Tasks is inspired by CCleaner. We built Tasks upon the aim of CCleaner.
+* Tasks uses the Windows 10 Debloater made by [Sycnex](https://github.com/Sycnex/Windows10Debloater).
+* Tasks uses the Remove Microsoft Edge Script made by [ShadowWhisperer](https://github.com/ShadowWhisperer/Remove-Edge-Chromium).
 
 
 ## Gallery
 These images were last taken on v2.1.1. The design may vary for newer versions.
-
 ![image](https://user-images.githubusercontent.com/53088136/138777568-108d56b8-5f93-4a19-8055-52816defe49b.png)
 ![image](https://user-images.githubusercontent.com/53088136/138777602-c4a7cc43-4892-4711-9811-fafdb4948208.png)
 ![image](https://user-images.githubusercontent.com/53088136/138777626-fe92818e-dc16-45c2-8734-bedd7746178c.png)
@@ -50,5 +43,3 @@ These images were last taken on v2.1.1. The design may vary for newer versions.
 ![image](https://user-images.githubusercontent.com/53088136/138777780-9e1d4222-be12-4015-8bae-fa2f9e495b54.png)
 ![image](https://user-images.githubusercontent.com/53088136/138777811-442fe635-465f-4eff-8525-da301cf1731c.png)
 ![image](https://user-images.githubusercontent.com/53088136/138777830-c2c6b688-9254-4fe1-85d6-cb5ec7a90d57.png)
-
-
