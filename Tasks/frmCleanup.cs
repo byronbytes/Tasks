@@ -965,7 +965,7 @@ namespace Tasks
             }
             catch
             {
-                Console.WriteLine("An error happened.");
+                Console.WriteLine("An error has occurred.");
             }
 
         }
@@ -983,7 +983,7 @@ namespace Tasks
             }
             catch
             {
-                Console.WriteLine("An error happened.");
+                Console.WriteLine("An error has occurred.");
             }
         }
 
@@ -995,7 +995,7 @@ namespace Tasks
             }
             catch
             {
-                Console.WriteLine("An error happened.");
+                Console.WriteLine("An error has occurred.");
             }
 
         }
