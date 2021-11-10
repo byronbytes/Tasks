@@ -67,9 +67,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(146, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Running Version 2.2.0";
+            this.label2.Text = "Version: 2.2.0";
             // 
             // label3
             // 
@@ -78,9 +78,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(146, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 20);
+            this.label3.Size = new System.Drawing.Size(215, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Copyright (c) 2021";
+            this.label3.Text = "(c) 2021 LiteTools Organization";
             // 
             // label4
             // 
@@ -153,7 +153,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Tasks.Properties.Resources.Twitter;
-            this.pictureBox3.Location = new System.Drawing.Point(474, 16);
+            this.pictureBox3.Location = new System.Drawing.Point(474, 19);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

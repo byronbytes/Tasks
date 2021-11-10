@@ -21,11 +21,6 @@ namespace Tasks {
             RenderStartupsOnListWiew();
     }
 
-        
-       
-
-
-
         private void RefreshList() {
             StartupProcesses.Items.Clear();
             RenderStartupsOnListWiew();
