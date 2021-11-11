@@ -862,53 +862,29 @@ namespace Tasks
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try
-            {
-                RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred." + ex);
-            }
-
+            try { RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true); }
+            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start("powershell", "-ExecutionPolicy Bypass -File Scripts/Debloater/DisableCortana.ps1");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred." + ex);
-            }
+            try { Process.Start("powershell", "-ExecutionPolicy Bypass -File Scripts/Debloater/DisableCortana.ps1"); }
+            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloater/UninstallOneDrive.ps1");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred." + ex);
-            }
-
-
+            try { Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloater/UninstallOneDrive.ps1"); }
+            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            RunFile.RunBat("removeedge.bat", true);
+            try { RunFile.RunBat("removeedge.bat", true); }
+            catch (Exception ex){ MessageBox.Show("An error occurred." + ex); }
         }
         private void DirectoryExists()
         {
-
-
-            // Todo: Check if the applications are on the computer and disable the checkboxes if it doesn't exist.
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             Dirs.chromeDir = localappdata + "\\Google\\Chrome\\";
@@ -917,7 +893,7 @@ namespace Tasks
             Dirs.firefoxExtDir = roamingappdata + "\\Mozilla\\Firefox\\Profiles\\";
             Dirs.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
             Dirs.edgeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extensions\\");
-            Dirs.discordDir = localappdata + "\\Discord\\"; // Makes more sense checking appdata than program files
+            Dirs.discordDir = localappdata + "\\Discord\\";
 
 
             if (!Directory.Exists(Dirs.chromeDir))
@@ -959,45 +935,19 @@ namespace Tasks
 
         private void cbEdgeCookies_CheckStateChanged(object sender, EventArgs e)
         {
-            try
-            {
-                taskDialog1.Show();
-            }
-            catch
-            {
-                Console.WriteLine("An error has occurred.");
-            }
-
+            try { taskDialog1.Show(); }
+            catch { Console.WriteLine("An error has occurred."); }
         }
-
-        private void cbChromeCache_CheckStateChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbFirefoxCookies_CheckStateChanged(object sender, EventArgs e)
         {
-            try
-            {
-                taskDialog1.Show();
-            }
-            catch
-            {
-                Console.WriteLine("An error has occurred.");
-            }
+            try { taskDialog1.Show(); }
+            catch { Console.WriteLine("An error has occurred."); }
         }
 
         private void cbChromeCookies_CheckStateChanged(object sender, EventArgs e)
         {
-            try
-            {
-                taskDialog1.Show();
-            }
-            catch
-            {
-                Console.WriteLine("An error has occurred.");
-            }
-
+            try { taskDialog1.Show(); }
+            catch { Console.WriteLine("An error has occurred."); }
         }
 
         public void WriteCleanupSummary()
@@ -1013,4 +963,3 @@ namespace Tasks
         }
     }
 }
-

@@ -50,6 +50,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblNotDetected = new System.Windows.Forms.Label();
             this.cbChromeSavedPasswords = new System.Windows.Forms.CheckBox();
             this.cbEdgeSessions = new System.Windows.Forms.CheckBox();
             this.cbDiscordCookies = new System.Windows.Forms.CheckBox();
@@ -94,7 +95,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.lblNotDetected = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -497,6 +497,19 @@
             this.tabPage2.Size = new System.Drawing.Size(1058, 767);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
+            // 
+            // lblNotDetected
+            // 
+            this.lblNotDetected.AutoSize = true;
+            this.lblNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblNotDetected.ForeColor = System.Drawing.Color.Silver;
+            this.lblNotDetected.Location = new System.Drawing.Point(6, 745);
+            this.lblNotDetected.Name = "lblNotDetected";
+            this.lblNotDetected.Size = new System.Drawing.Size(550, 19);
+            this.lblNotDetected.TabIndex = 46;
+            this.lblNotDetected.Text = "Some applications are not detected, the checkboxes have been automatically disabl" +
+    "ed.";
+            this.lblNotDetected.Visible = false;
             // 
             // cbChromeSavedPasswords
             // 
@@ -1034,18 +1047,6 @@
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
-            // 
-            // lblNotDetected
-            // 
-            this.lblNotDetected.AutoSize = true;
-            this.lblNotDetected.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblNotDetected.ForeColor = System.Drawing.Color.Silver;
-            this.lblNotDetected.Location = new System.Drawing.Point(6, 745);
-            this.lblNotDetected.Name = "lblNotDetected";
-            this.lblNotDetected.Size = new System.Drawing.Size(493, 19);
-            this.lblNotDetected.TabIndex = 46;
-            this.lblNotDetected.Text = "Some applications are not detected, so the checkboxes for those are disabled.";
-            this.lblNotDetected.Visible = false;
             // 
             // frmCleanup
             // 
