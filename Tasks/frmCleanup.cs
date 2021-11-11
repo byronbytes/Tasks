@@ -494,13 +494,12 @@ namespace Tasks
                     foreach (var eventLog in EventLog.GetEventLogs())
                     {
                         eventLog.Clear();
-                        eventLog.Dispose();
                         CleanupLogsLBox.Items.Add("Event Logs Deleted.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error deleting Event Logs: " + ex);
+                    CleanupLogsLBox.Items.Add("Error deleting Event Logs. " + ex);
                 }
 
 
@@ -576,10 +575,17 @@ namespace Tasks
 
             if (cbChromeSavedPasswords.Checked)
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data\\");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Saved Passwords Deleted.");
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data\\");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Saved Passwords Deleted.");
+                }
+                catch
+                {
+                    CleanupLogsLBox.Items.Add("Error while deleting Chrome Saved Passwords.");
+                }
+              
             }
-
 
             WriteCleanupSummary();
         }
@@ -723,9 +729,7 @@ namespace Tasks
                             }
                             catch (Exception Exc)
                             {
-
                                 MessageBox.Show(Exc.ToString());
-
                             }
                         }
                     }
@@ -754,8 +758,6 @@ namespace Tasks
 
                     extb.SubItems.Add(ext);
                 }
-
-
             }
         }
 
@@ -791,16 +793,10 @@ namespace Tasks
                     }
                 }
 
-
-
-
-
-
-
                 if (comboBox1.Text == "Mozilla Firefox")
                 {
                     Taskkill.Browser(2);
-                    Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
+                    Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons?
 
                     try
                     {
@@ -814,11 +810,9 @@ namespace Tasks
                     }
                     catch
                     {
-                        CleanupLogsLBox.Items.Add("Failed to remove extension");
+                        CleanupLogsLBox.Items.Add("Failed to remove extension.");
 
                     }
-
-
 
                 }
 
@@ -852,13 +846,7 @@ namespace Tasks
                 MessageBox.Show("Please select an extension to remove.");
             }
 
-
-
-
-
         }
-
-
 
         private void button5_Click(object sender, EventArgs e)
         {
