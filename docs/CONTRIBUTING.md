@@ -1,7 +1,3 @@
-To contribute, you need the following prerequisites.
-
-## Prerequisites
-
-- A decent understanding of C#.
-- An IDE for debugging such as Visual Studio 2019.
-- 
+As a contributor, we would expect you to have:
+- A decent knowledge of C#
+- Visual Studio IDE installed (preferably the latest version)
