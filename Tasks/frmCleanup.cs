@@ -26,84 +26,59 @@ namespace Tasks {
             SHERB_NOSOUND = 0x00000004          // No sound when the emptying of the recycle bin is complete
         }
 
-        // private bool DeleteAllFiles(DirectoryInfo directoryInfo, bool condition)
-        private bool DeleteAllFiles(DirectoryInfo directoryInfo) {
-            foreach (var file in directoryInfo.GetFiles()) {
-                try {
-                    file.Delete();
-                    CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
-                } catch (Exception ex) {
-                    CleanupLogsLBox.Items.Add("Exception: " + ex.Message);
-                }
-
-            }
-            foreach (var dir in directoryInfo.GetDirectories()) {
-                try {
-                    dir.Delete(true);
-                    CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
-                } catch (Exception ex) {
-                    CleanupLogsLBox.Items.Add("Exception: " + ex.Message);
+        private bool DeleteAllFiles(DirectoryInfo[] directoryInfos, bool condition) {
+            if(condition) {
+                foreach(dirInfo in directoryInfos) {
+                    foreach (var file in dirInfo.GetFiles())
+                        try { file.Delete(); CleanupLogsLBox.Items.Add("Deleted " + file.FullName); }
+                        catch (Exception ex) { CleanupLogsLBox.Items.Add("Exception: " + ex.Message); }
+                    
+                    foreach (var dir in dirInfo.GetDirectories())
+                        try { dir.Delete(true); CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName); }
+                        catch (Exception ex) { CleanupLogsLBox.Items.Add("Exception: " + ex.Message); }
                 }
             }
-
-            return true;
+            
+            return condition;
         }
 
 
 
         private void btnCleanup_Click(object sender, EventArgs e) {
-            // List our local directories so we don't need to repeat a lot of code.
-            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
-            var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
-            var usertemp = new DirectoryInfo(Path.GetTempPath());
-            var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
-
-            if (cbExplorerDownloads.Checked)
-                if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleared.");
-
+            var localappdata    = { Environment.GetEnvironmentVariable("LocalAppData") };
+            var roamingappdata  = { Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) };
+            var temp            = { new DirectoryInfo(Path.GetTempPath()), new DirectoryInfo("C:\\Windows\\Temp") };
+            var downloads       = { new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads") };
+            var prefetch        = { new DirectoryInfo("C:\\Windows\\Prefetch") };
+            
             if (cbSystemRecycleBin.Checked) {
                 SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
                 CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
             }
-
-
-            if (cbSystemTempFolders.Checked) {
-                if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Deleted.");
-                if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Deleted.");
-            }
-
-            if (cbSystemPrefetch.Checked) {
-                var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
-            }
-
+            
+            if (DeleteAllFiles(downloads, cbExplorerDownloads.Checked)) CleanupLogsLBox.Items.Add("Downloads Folder Cleared.");
+            if (DeleteAllFiles(temp, cbSystemTempFolders.Checked)) CleanupLogsLBox.Items.Add("Temp Folder Cleaned.");
+            if (DeleteAllFiles(prefetch, cbSystemPrefetch.Checked)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
+            
 
 
             if (cbChromeCache.Checked) {
-                try {
-                    string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
-                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "\\Default\\File System\\" };
-                    List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
+                string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
+                string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "\\Default\\File System\\" };
+                List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
 
-                    foreach (string subdir in userDataCacheDirs)
-                        // Make a new DirectoryInfo with the info of that subdirectory and then add it into the directoryInfos array
-                        directoryInfos.Add(new DirectoryInfo(mainSubdirectory + subdir + "\\"));
+                // Make a new DirectoryInfo with the info of that subdirectory and then add it into the directoryInfos array
+                foreach (string subdir in userDataCacheDirs)
+                    directoryInfos.Add(new DirectoryInfo(mainSubdirectory + subdir + "\\"));
 
-                    // For each DirectoryInfo inside of the directoryInfos array
-                    foreach (DirectoryInfo d in directoryInfos)
-                        DeleteAllFiles(d);
-
-                    CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
-                } catch {}
+                if (DeleteAllFiles(directoryInfos, cbChromeCache.Checked)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
             }
 
             // Chrome Session
             if (cbChromeSessions.Checked) {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
+                var _cs = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\";
+                var ds = { new DirectoryInfo(_cs + "Sessions"), new DirectoryInfo(_cs + "Session Storage"), new DirectoryInfo(_cs + "Extension State") };
+                if (DeleteAllFiles(ds, cbChromeSessions.Checked)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
             }
             
             // Chrome Cookies
