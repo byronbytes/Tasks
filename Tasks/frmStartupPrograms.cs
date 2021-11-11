@@ -72,12 +72,13 @@ namespace Tasks {
                         if (key == null)
                         {
                             Debug.Print(Value + "And" + keyName);
-                            MessageBox.Show("Error");
+                            MessageBox.Show("There was an error.");
                         }
                         else
                         {
                             key.DeleteValue(keyName + Value);
                             Debug.Print(keyName + "And" + Value);
+                            RefreshList();
                         }
                     }
                 }
