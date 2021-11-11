@@ -7,8 +7,8 @@ assignees: byronbytes
 
 ---
 
-**Suggestions List**
+## Suggestions List
 + Example Suggestion: Please tell us how to implement this suggestion.
 
-**Reason for Improvement**
+## Reason for Improvement
 Provide your reason for why should we implement the suggestion here.
