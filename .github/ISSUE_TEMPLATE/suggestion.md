@@ -1,6 +1,6 @@
 ---
 name: Suggestion
-about: Give us some suggestions on how to improve Tasks!
+about: Tell us how to improve Tasks!
 title: 'Suggestion: '
 labels: 'suggestion'
 assignees: byronbytes
@@ -8,10 +8,7 @@ assignees: byronbytes
 ---
 
 **Suggestions List**
-List your suggestions below.
-
-Format: (SUGGESTION DETAILS) : (HOW TO IMPLEMENT).
-
++ Example Suggestion: Please tell us how to implement this suggestion.
 
 **Reason for Improvement**
 Provide your reason for why should we implement the suggestion here.
