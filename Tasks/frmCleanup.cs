@@ -14,24 +14,19 @@ using System.Threading;
 using System.Windows.Forms;
 using ByteSizeLib;
 
-namespace Tasks
-{
-
-    public partial class frmCleanup : Form
-    {
+namespace Tasks {
+    public partial class frmCleanup : Form {
         public frmCleanup() { InitializeComponent(); }
 
         [DllImport("Shell32.dll")]
         static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
-        enum RecycleFlag : int
-        {
-            SHERB_NOCONFIRMATION = 0x00000001, // No confirmation, when emptying
-            SHERB_NOPROGRESSUI = 0x00000001, // No progress tracking window during the emptying of the recycle bin
-            SHERB_NOSOUND = 0x00000004 // No sound when the emptying of the recycle bin is complete
+        enum RecycleFlag : int {
+            SHERB_NOCONFIRMATION = 0x00000001,  // No confirmation, when emptying
+            SHERB_NOPROGRESSUI = 0x00000001,    // No progress tracking window during the emptying of the recycle bin
+            SHERB_NOSOUND = 0x00000004          // No sound when the emptying of the recycle bin is complete
         }
 
-        
-
+        // private bool DeleteAllFiles(DirectoryInfo directoryInfo, bool condition)
         private bool DeleteAllFiles(DirectoryInfo directoryInfo) {
             foreach (var file in directoryInfo.GetFiles()) {
                 try {
@@ -42,18 +37,13 @@ namespace Tasks
                 }
 
             }
-            foreach (var dir in directoryInfo.GetDirectories())
-            {
-                try
-                {
+            foreach (var dir in directoryInfo.GetDirectories()) {
+                try {
                     dir.Delete(true);
                     CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
-                }
-                catch (Exception ex)
-                {
+                } catch (Exception ex) {
                     CleanupLogsLBox.Items.Add("Exception: " + ex.Message);
                 }
-
             }
 
             return true;
@@ -61,8 +51,7 @@ namespace Tasks
 
 
 
-        private void btnCleanup_Click(object sender, EventArgs e)
-        {
+        private void btnCleanup_Click(object sender, EventArgs e) {
             // List our local directories so we don't need to repeat a lot of code.
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -70,93 +59,43 @@ namespace Tasks
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
 
-            
-
             if (cbExplorerDownloads.Checked)
-                try
-                {
-                    if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleared.");
-                }
-                catch (Exception ex)
-                {
-                    CleanupLogsLBox.Items.Add("Error clearing the Downloads Folder. " + ex);
+                if (DeleteAllFiles(downloads)) CleanupLogsLBox.Items.Add("Downloads Folder Cleared.");
 
-                }
-
-            if (cbSystemRecycleBin.Checked)
-                try
-                {
-                    // Silently deletes the recycle bin.
-                    SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
-                    CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
-                }
-                catch (Exception ex)
-                {
-                    CleanupLogsLBox.Items.Add("Error clearing the Recycle Bin. " + ex);
-
-                }
-
-
-            if (cbSystemTempFolders.Checked)
-            {
-                try
-                {
-                    if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Deleted.");
-                    if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Deleted.");
-
-                }
-                catch (Exception ex)
-                {
-                    CleanupLogsLBox.Items.Add("Error while deleting temp folders. " + ex);
-                }
-
+            if (cbSystemRecycleBin.Checked) {
+                SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
+                CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
             }
 
-      
 
-            if (cbSystemPrefetch.Checked)
-            {
-                try
-                {
-                    var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
-                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
-                }
-                catch (Exception ex)
-                {
-                    CleanupLogsLBox.Items.Add("Error while deleting Prefetch. " + ex);
-                }
+            if (cbSystemTempFolders.Checked) {
+                if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Deleted.");
+                if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Deleted.");
+            }
+
+            if (cbSystemPrefetch.Checked) {
+                var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
             }
 
 
 
-            if (cbChromeCache.Checked)
-            {
-                try
-                {
+            if (cbChromeCache.Checked) {
+                try {
                     string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
                     string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "\\Default\\File System\\" };
                     List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
 
                     foreach (string subdir in userDataCacheDirs)
-                    {
                         // Make a new DirectoryInfo with the info of that subdirectory and then add it into the directoryInfos array
                         directoryInfos.Add(new DirectoryInfo(mainSubdirectory + subdir + "\\"));
 
-                    }
-
-                    bool isDeleted = true;
                     // For each DirectoryInfo inside of the directoryInfos array
-                    foreach (DirectoryInfo d in directoryInfos) {
-                        try {
-                            DeleteAllFiles(d);
-                        } catch (Exception ex) { CleanupLogsLBox.Items.Add("Error deleting Chrome Cache. " + ex); }
-                        // If DeleteAllFiles returns false, set the isDeleted value to false
-                        if (!DeleteAllFiles(d)) isDeleted = false;
-                    }
+                    foreach (DirectoryInfo d in directoryInfos)
+                        DeleteAllFiles(d);
 
-                    if (isDeleted) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
-                }
-                catch {}
+                    CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
+                } catch {}
             }
 
             // Chrome Session
@@ -502,20 +441,13 @@ namespace Tasks
         }
 
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
             var g = new Dirs();
 
-
-            if (comboBox1.Text == "Google Chrome")
-            {
+            if (comboBox1.Text == "Google Chrome") {
                 ExtensionsBox.Items.Clear();
 
-                foreach (string ext in Directory.EnumerateDirectories(Dirs.chromeExtDir))
-
-                {
-
+                foreach (string ext in Directory.EnumerateDirectories(Dirs.chromeExtDir)) {
                     FileInfo fi = new FileInfo(ext);
                     ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
                     DirectoryInfo fol = new DirectoryInfo(ext);
@@ -524,57 +456,32 @@ namespace Tasks
 
                     extb.SubItems.Add(ext);
                 }
-
-
-
-
             }
-            else if (comboBox1.Text == "Mozilla Firefox")
-            {
+            else if (comboBox1.Text == "Mozilla Firefox") {
                 ExtensionsBox.Items.Clear();
-                try
-                {
-                    foreach (string fol in Directory.EnumerateDirectories(Dirs.firefoxExtDir))
-                    {
-                        if (fol.Contains("-release"))
-                        {
+                try {
+                    foreach (string fol in Directory.EnumerateDirectories(Dirs.firefoxExtDir)) {
+                        if (fol.Contains("-release")) {
                             string prf = (fol + "\\extensions\\");
-                            try
-                            {
-                                foreach (string ext in Directory.EnumerateFiles(prf))
-                                {
+
+                            try {
+                                foreach (string ext in Directory.EnumerateFiles(prf)) {
                                     FileInfo fi = new FileInfo(ext);
                                     ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
                                     extb.SubItems.Add("~ " + ByteSize.FromBytes(fi.Length).ToString());
                                     extb.SubItems.Add(ext);
-
                                 }
-
                             }
-                            catch (Exception Exc)
-                            {
-
+                            catch (Exception Exc) {
                                 MessageBox.Show(Exc.ToString());
-
                             }
                         }
                     }
-
                 }
-                catch (Exception Exc)
-                {
-
-                    MessageBox.Show(Exc.ToString());
-
-                }
-
-            }
-
-            else if (comboBox1.Text == "Microsoft Edge")
-            {
+                catch (Exception Exc) { MessageBox.Show(Exc.ToString()); }
+            } else if (comboBox1.Text == "Microsoft Edge") {
                 ExtensionsBox.Items.Clear();
-                foreach (string ext in Directory.EnumerateDirectories(Dirs.edgeExtDir))
-                {
+                foreach (string ext in Directory.EnumerateDirectories(Dirs.edgeExtDir)) {
                     FileInfo fi = new FileInfo(ext);
 
                     ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
@@ -584,27 +491,18 @@ namespace Tasks
 
                     extb.SubItems.Add(ext);
                 }
-
-
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-            if (ExtensionsBox.SelectedItems.Count >= 0) //Check if the user selected extensions for deletion.
-            {
-
+        private void button3_Click(object sender, EventArgs e) {
+            if (ExtensionsBox.SelectedItems.Count >= 0) { //Check if the user selected extensions for deletion.
                 /*Process process = new Process();
                 process.StartInfo.FileName = "Scripts/BatFiles/killfirefox.bat";
                 process.Start();
                 process.WaitForExit();*/
-                if (comboBox1.Text == "Google Chrome")
-                {
-                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
-                    {
-                        try
-                        {
+                if (comboBox1.Text == "Google Chrome") {
+                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems) {
+                        try {
                             Taskkill.Browser(1);
                             Thread.Sleep(75);
                             var item = ExtensionsBox.SelectedItems[0];
@@ -612,53 +510,28 @@ namespace Tasks
                             RemoveExt.RemoveExtension(subItem, 2);
                             ExtensionsBox.Items.Remove(eachItem);
                             CleanupLogsLBox.Items.Add("Extension Removed.");
-
-                        }
-                        catch (Exception ex)
-                        {
-                            CleanupLogsLBox.Items.Add("Error while trying to remove extension." + ex);
-                        }
+                        } catch (Exception ex) { CleanupLogsLBox.Items.Add("Error while trying to remove extension." + ex); }
                     }
                 }
 
-
-
-
-
-
-
-                if (comboBox1.Text == "Mozilla Firefox")
-                {
+                if (comboBox1.Text == "Mozilla Firefox") {
                     Taskkill.Browser(2);
                     Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons ?
 
-                    try
-                    {
+                    try {
                         RemoveExt.RemoveExtension(ExtensionsBox.SelectedItems[0].SubItems[2].Text, 1);
 
-                        foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
-                        {
+                        foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems) {
                             ExtensionsBox.Items.Remove(eachItem);
                             CleanupLogsLBox.Items.Add("Extension Removed.");
                         }
-                    }
-                    catch
-                    {
-                        CleanupLogsLBox.Items.Add("Failed to remove extension");
-
-                    }
-
-
-
+                    } catch { CleanupLogsLBox.Items.Add("Failed to remove extension"); }
                 }
 
 
-                if (comboBox1.Text == "Microsoft Edge")
-                {
-                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
-                    {
-                        try
-                        {
+                if (comboBox1.Text == "Microsoft Edge") {
+                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems) {
+                        try {
                             Taskkill.Browser(3);
                             Thread.Sleep(75);
                             var item = ExtensionsBox.SelectedItems[0];
@@ -666,68 +539,27 @@ namespace Tasks
                             RemoveExt.RemoveExtension(subItem, 2);
                             ExtensionsBox.Items.Remove(eachItem);
                             CleanupLogsLBox.Items.Add("Extension Removed.");
-
-                        }
-                        catch (Exception ex)
-                        {
-                            CleanupLogsLBox.Items.Add("Error while trying to remove extension." + ex);
-                        }
+                        } catch (Exception ex) { CleanupLogsLBox.Items.Add("Error while trying to remove extension." + ex); }
                     }
                 }
-
-            }
-
-            else
-            {
-                MessageBox.Show("Please select an extension to remove.");
-            }
-
-
-
-
-
+            } else MessageBox.Show("Please select an extension to remove.");
         }
 
 
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred." + ex);
-            }
-
+        private void button5_Click(object sender, EventArgs e) {
+            try { RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true); }
+            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start("powershell", "-ExecutionPolicy Bypass -File Scripts/Debloater/DisableCortana.ps1");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred." + ex);
-            }
+        private void button7_Click(object sender, EventArgs e) {
+            try { Process.Start("powershell", "-ExecutionPolicy Bypass -File Scripts/Debloater/DisableCortana.ps1"); }
+            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloater/UninstallOneDrive.ps1");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred." + ex);
-            }
-
-
+        private void button6_Click(object sender, EventArgs e) {
+            try { Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloater/UninstallOneDrive.ps1"); }
+            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
         private void button4_Click(object sender, EventArgs e) {
@@ -776,7 +608,6 @@ namespace Tasks
                 cbEdgeSearchHistory.Enabled = false;
                 cbEdgeSessions.Enabled = false;
                 lblEdgeNotDetected.Visible = true;
-
             }
         }
 
