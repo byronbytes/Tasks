@@ -5,7 +5,7 @@
   🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD)
 </h1>
 
-**Tasks** is an application that improves computer performance and cleans computer files. **Tasks** has an advanced cleanup tool that allows you to clean application, cache files as well as uninstall unused browser extensions, clear cookies, and a bloatware removal tool. Tasks also include a startup manager that allows the modification of programs that run on startup.
+**Tasks** is an application which improves computer performance. **Tasks** has an advanced cleanup tool, allowing you to clean application, cache files as well as manage browser extensions, clear cookies and remove bloatware. Tasks also feature a startup manager, letting you control programs that run on startup.
 
 ### Intention
 Our goal is to make a lightweight cleaning tool that is free for everyone, requires little to no effort to use, and a responsive and quick interface. We run the application hundreds of times while making new versions so everything is stable, and we make sure there is a better experience than previous versions. We will NEVER make paywalls in our application, or restrict any features. We believe that computer performance is crucial to everyone.
