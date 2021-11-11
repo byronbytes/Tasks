@@ -1,17 +1,20 @@
 <h1 align="center">
-  <img src="https://user-images.githubusercontent.com/53088136/136106972-30a9cca8-7a32-479a-9368-74ffe2d60a43.png" alt="Tasks" height="128" /><br>
-  <img alt="GitHub license" src="https://img.shields.io/github/license/litetools/tasks?style=flat-square"> <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
-  
-  🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD)
+  <img src="https://user-images.githubusercontent.com/53088136/136106972-30a9cca8-7a32-479a-9368-74ffe2d60a43.png" alt="Tasks" height="96" /><br>
+  README<br>
 </h1>
+
+<h3 align="center">
+  <img alt="GitHub license" src="https://img.shields.io/github/license/litetools/tasks?style=flat-square"> <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square"><br>
+  🇺🇸 <a href="https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD)">🇪🇸</a>
+</h3>
 
 **Tasks** is an application which improves computer performance. **Tasks** has an advanced cleanup tool, allowing you to clean application, cache files as well as manage browser extensions, clear cookies and remove bloatware. Tasks also feature a startup manager, letting you control programs that run on startup.
 
 ## Installation
-1. You will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
-2. Download Tasks from the **Releases** tab.
-3. Extract the `.zip` and execute the executable `.exe` file. After that, Tasks will launch.
-Note that the dependencies must be kept in the same folder, we are working on a fix for this.
+1. Get [.NET Core](https://dotnet.microsoft.com/download) directly from Microsoft. (Tasks will notice if you have installed .NET Core or not.)
+2. Get Tasks from the **Releases** tab.
+3. Extract the `.zip` and execute the `.exe` file.
+Please put the dependencies alongside with the `.exe` file. Tasks will not work without the dependencies.
 
 ## Contribution
 To contribute to this project, please read [**CONTRIBUTING.md**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
