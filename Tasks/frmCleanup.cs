@@ -927,7 +927,7 @@ namespace Tasks
                 cbChromeSearchHistory.Enabled = false;
                 cbChromeSessions.Enabled = false;
                 cbChromeSavedPasswords.Enabled = false;
-                lblChromeNotDetected.Visible = true;
+                lblNotDetected.Visible = true;
             }
 
             if (!Directory.Exists(Dirs.firefoxDir))
@@ -935,14 +935,14 @@ namespace Tasks
                 cbFirefoxCache.Enabled = false;
                 cbFirefoxCookies.Enabled = false;
                 cbFirefoxSearchHistory.Enabled = false;
-                lblFirefoxNotDetected.Visible = true;
+                lblNotDetected.Visible = true;
             }
 
             if (!Directory.Exists(Dirs.discordDir))
             {
                 cbDiscordCache.Enabled = false;
                 cbDiscordCookies.Enabled = false;
-                lblDiscordNotDetected.Visible = true;
+                lblNotDetected.Visible = true;
 
             }
 
@@ -952,7 +952,7 @@ namespace Tasks
                 cbEdgeCookies.Enabled = false;
                 cbEdgeSearchHistory.Enabled = false;
                 cbEdgeSessions.Enabled = false;
-                lblEdgeNotDetected.Visible = true;
+                lblNotDetected.Visible = true;
 
             }
         }

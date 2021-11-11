@@ -8005,6 +8005,9 @@ https://github.com/ShadowWhisperer/Remove-Edge-Chromium
 We did NOT create the scripts that are being used in the Debloater section, The original sources of these scripts are listed where it says "Scripts Used".
 </value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>30</value>
   </metadata>
