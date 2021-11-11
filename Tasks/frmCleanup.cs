@@ -45,11 +45,63 @@ namespace Tasks {
 
 
         private void btnCleanup_Click(object sender, EventArgs e) {
+            var _up             = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            
+            var chrome_ud_nodef = _up + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
+            var chrome_ud       = chrome_ud_nodef + "Default\\";
+            var discord         = _up + "\\AppData\\Roaming\\discord";
+            var edge_ud_nodef   = _up + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\";
+            var edge_ud         = edge_ud_nodef + "Default\\";
+            
             var localappdata    = { Environment.GetEnvironmentVariable("LocalAppData") };
             var roamingappdata  = { Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) };
             var temp            = { new DirectoryInfo(Path.GetTempPath()), new DirectoryInfo("C:\\Windows\\Temp") };
             var downloads       = { new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads") };
             var prefetch        = { new DirectoryInfo("C:\\Windows\\Prefetch") };
+            
+            var chrome_cache    = {
+                new DirectoryInfo(chrome_ud + "Cache"),
+                new DirectoryInfo(chrome_ud + "Code Cache"),
+                new DirectoryInfo(chrome_ud + "GPUCache"),
+                new DirectoryInfo(chrome_ud_nodef + "ShaderCache"),
+                new DirectoryInfo(chrome_ud + "Service Worker\\CacheStorage"),
+                new DirectoryInfo(chrome_ud + "Service Worker\\ScriptCache"),
+                new DirectoryInfo(chrome_ud_nodef + "GrShaderCache\\GPUCache"),
+                new DirectoryInfo(chrome_ud + "File System")
+            };
+            var chrome_sessions = { 
+                new DirectoryInfo(chrome_ud + "Sessions"),
+                new DirectoryInfo(chrome_ud + "Session Storage"),
+                new DirectoryInfo(chrome_ud + "Extension State")
+            };
+            var chrome_cookies  = {
+                new DirectoryInfo(chrome_ud + "IndexedDB"),
+                new DirectoryInfo(chrome_ud + "Cookies"),
+                new DirectoryInfo(chrome_ud + "Cookies-journal")
+            };
+            var chrome_history  = {
+                new DirectoryInfo(chrome_ud + "History"),
+                new DirectoryInfo(chrome_ud + "History Provider Cache"),
+                new DirectoryInfo(chrome_ud + "History-journal")
+            };
+            var discord_cache   = {
+                new DirectoryInfo(discord + "Cache"),
+                new DirectoryInfo(discord + "Code Cache"),
+                new DirectoryInfo(discord + "GPUCache")
+            };
+            var discord_cookies = {
+                new DirectoryInfo(discord + "Cookies"),
+                new DirectoryInfo(discord + "Cookies-journal")
+            };
+            var edge_history    = {
+                new DirectoryInfo(edge_ud + "History")
+            };
+            var edge_cache      = {
+            };
+            var edge_cookies    = {
+                new DirectoryInfo(edge_ud + "Cookies"),
+                new DirectoryInfo(edge_ud + "IndexedDB")
+            };
             
             if (cbSystemRecycleBin.Checked) {
                 SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
@@ -60,62 +112,15 @@ namespace Tasks {
             if (DeleteAllFiles(temp, cbSystemTempFolders.Checked)) CleanupLogsLBox.Items.Add("Temp Folder Cleaned.");
             if (DeleteAllFiles(prefetch, cbSystemPrefetch.Checked)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
             
-
-
-            if (cbChromeCache.Checked) {
-                string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
-                string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "\\Default\\File System\\" };
-                List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
-
-                // Make a new DirectoryInfo with the info of that subdirectory and then add it into the directoryInfos array
-                foreach (string subdir in userDataCacheDirs)
-                    directoryInfos.Add(new DirectoryInfo(mainSubdirectory + subdir + "\\"));
-
-                if (DeleteAllFiles(directoryInfos, cbChromeCache.Checked)) CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
-            }
-
-            // Chrome Session
-            if (cbChromeSessions.Checked) {
-                var _cs = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\";
-                var ds = { new DirectoryInfo(_cs + "Sessions"), new DirectoryInfo(_cs + "Session Storage"), new DirectoryInfo(_cs + "Extension State") };
-                if (DeleteAllFiles(ds, cbChromeSessions.Checked)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
-            }
+            // Chrome
+            if (DeleteAllFiles(chrome_cache, cbChromeCache.Checked)) CleanupLogsLBox.Items.Add("Chrome Cache cleaned.");
+            if (DeleteAllFiles(chrome_sessions, cbChromeSessions.Checked)) CleanupLogsLBox.Items.Add("Chrome Sessions cleaned."); 
+            if (DeleteAllFiles(chrome_cookies, cbChromeCookies.Checked)) CleanupLogsLBox.Items.Add("Chrome Cookies cleaned.");
+            if (DeleteAllFiles(chrome_history, cbChromeSearchHistory.Checked)) CleanupLogsLBox.Items.Add("Chrome Search History cleaned.");
             
-            // Chrome Cookies
-            if (cbChromeCookies.Checked) {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Cookies Deleted.");
-            }
-
-
-            // Chrome History
-            if (cbChromeSearchHistory.Checked) {
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History Provider Cache");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History-journal");
-                CleanupLogsLBox.Items.Add("Chrome Search History Deleted.");
-            }
-            
-            // Discord cache
-            if (cbDiscordCache.Checked) {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cache");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Code Cache");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\GPUCache");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Discord Cache Cleaned.");
-            }
-
-
-            // Discord cookies
-            if (cbDiscordCookies.Checked)
-                try {
-                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies");
-                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies-journal");
-                    CleanupLogsLBox.Items.Add("Discord Cookies Cleaned.");
-                } catch (Exception ex) {
-                    CleanupLogsLBox.Items.Add("Error deleting Discord Cookies." + ex);
-                }
+            // Discord
+            if (DeleteAllFiles(discord_cache, cbDiscordCache.Checked)) CleanupLogsLBox.Items.Add("Discord Cache cleaned.");
+            if (DeleteAllFiles(discord_cookies, cbDiscordCookies.Checked)) CleanupLogsLBox.Items.Add("Discord Cookies cleaned.");
 
             //Firefox
 
@@ -243,34 +248,18 @@ namespace Tasks {
             }
 
 
-            // Edge Search History
-            if (cbEdgeSearchHistory.Checked) {
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History");
-                CleanupLogsLBox.Items.Add("Edge Search History Deleted.");
-            }
-            
-            // Edge Cookies
-            if (cbEdgeCookies.Checked) {
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies");
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\IndexedDB\\");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Cookies Deleted.");
-            }
-
-            // Edge Cache
+            if (DeleteAllFiles(edge_history, cbEdgeSearchHistory.Checked)) CleanupLogsLBox.Items.Add("Edge Search History cleaned.");
+            if (DeleteAllFiles(edge_cookies, cbEdgeCookies.Checked)) CleanupLogsLBox.Items.Add("Edge Cookies Deleted.");
             if (cbEdgeCache.Checked) {
-                try {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache\\");
-                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache\\");
-                    var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\");
-                    var directory4 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\ShaderCache\\");
-                    var directory5 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\CacheStorage\\");
-                    var directory6 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\ScriptCache\\");
-                    var directory7 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\GrShaderCache\\GPUCache\\");
-                    var directory8 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\Database\\");
-                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3) & DeleteAllFiles(directory4) & DeleteAllFiles(directory5) & DeleteAllFiles(directory6) & DeleteAllFiles(directory7) & DeleteAllFiles(directory8)) CleanupLogsLBox.Items.Add("Edge Cache Deleted.");
-                } catch {
-                    CleanupLogsLBox.Items.Add("Error while deleting Edge Cache.");
-                }
+                    "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache\\";
+                    "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Code Cache\\";
+                    "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\";
+                    "\\AppData\\Local\\Microsoft\\Edge\\User Data\\ShaderCache\\";
+                    "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\CacheStorage\\";
+                    "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\ScriptCache\\";
+                    "\\AppData\\Local\\Microsoft\\Edge\\User Data\\GrShaderCache\\GPUCache\\";
+                    "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Service Worker\\Database\\";
+                    CleanupLogsLBox.Items.Add("Edge Cache Deleted.");
             }
 
             if (cbSystemEventLogs.Checked) {
