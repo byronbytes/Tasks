@@ -12,34 +12,29 @@ namespace Tasks
 
         public static void RemoveExtension(string path, int Browser)
         {
-            // Case 1: Firefox
-            // Case 2: Chrome + Edge
-    
+            // Case 1: File based extensions (Firefox)
+            // Case 2: Directory based extensions (Chrome + Edge)
             switch (Browser)
             {
                 case 1:
+                    
                     try
                     {
                      File.Delete(path);
                     }
                     catch
-                    {
-                        // ex
-                    }
+                    { }
                     break;
-
-                case 2: // Chrome will say that the extension is corrupted, and will attempt to repair it / restore it. We are working on a fix for this.
+                    
+                case 2:
+                    
                     try 
                     {
-                    Directory.Delete(path, true);
+                     Directory.Delete(path, true);
                     }
                     catch
-                    {
-                        // ex
-                    }
+                    { }
                     break;
-            
-
             }
         }
         
