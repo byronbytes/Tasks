@@ -13,13 +13,7 @@ using System.Windows.Forms;
 
 namespace Tasks {
     public partial class frmMain : Form {
-      
-        public frmMain()
-        {
-            Directory.CreateDirectory(Classes.TasksDirectories.TasksCleanup);
-            InitializeComponent(); 
-        }
-
+        public frmMain() { Directory.CreateDirectory(Classes.TasksDirectories.TasksCleanup); InitializeComponent(); }
         private void frmMain_Load(object sender, EventArgs e) {}
         private void button1_Click(object sender, EventArgs e) { new frmCleanup().Show(); }
         private void button3_Click(object sender, EventArgs e) { new frmStartupPrograms().Show(); }
