@@ -11,6 +11,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tasks {
+    
+    // of course im not going to say it.
+    // but we all know what i was thinking
+    // (please)
+    
     public partial class frmAbout : Form {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -23,18 +28,21 @@ namespace Tasks {
                  int nHeightEllipse // height of ellipse
              );
 
-        public frmAbout() {
+        public frmAbout() 
+        {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/issues/new", UseShellExecute = true });
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) 
+        {
+          Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/issues/new", UseShellExecute = true });
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e) {
-            Process.Start(new ProcessStartInfo { FileName = "https://twitter.com/Lite_Tools", UseShellExecute = true });
+        private void pictureBox3_Click(object sender, EventArgs e) 
+        {
+          Process.Start(new ProcessStartInfo { FileName = "https://twitter.com/Lite_Tools", UseShellExecute = true });
         }
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
