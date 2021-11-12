@@ -85,7 +85,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error clearing the Downloads Folder. " + ex);
+                    CleanupLogsLBox.Items.Add("Error deleting the Downloads Folder. " + ex);
 
                 }
 
@@ -125,7 +125,7 @@ namespace Tasks
                 try
                 {
                     var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
-                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Cleaned.");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Prefetch Deleted.");
                 }
                 catch (Exception ex)
                 {
@@ -169,7 +169,7 @@ namespace Tasks
                     }
 
                     if (isDeleted)
-                        CleanupLogsLBox.Items.Add("Chrome Cache Cleaned.");
+                        CleanupLogsLBox.Items.Add("Chrome Cache Deleted.");
                 }
                 catch (Exception)
                 {
@@ -212,7 +212,7 @@ namespace Tasks
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cache");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Code Cache");
                 var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\GPUCache");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Discord Cache Cleaned.");
+                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Discord Cache Deleted.");
             }
 
 
@@ -222,7 +222,7 @@ namespace Tasks
 
                     File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies");
                     File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies-journal");
-                    CleanupLogsLBox.Items.Add("Discord Cookies Cleaned.");
+                    CleanupLogsLBox.Items.Add("Discord Cookies Deleted.");
 
                 }
                 catch (Exception ex)
@@ -248,7 +248,7 @@ namespace Tasks
                                 try
                                 {
                                     File.Delete(file);
-                                    CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
+                                    CleanupLogsLBox.Items.Add("Firefox Cache Deleted.");
                                 }
                                 catch (Exception ex)
                                 {
@@ -261,7 +261,7 @@ namespace Tasks
                                 try
                                 {
                                     Directory.Delete(dir, true);
-                                    CleanupLogsLBox.Items.Add("Firefox Cache Cleaned.");
+                                    CleanupLogsLBox.Items.Add("Firefox Cache Deleted.");
                                 }
                                 catch (Exception ex)
                                 {
@@ -336,13 +336,13 @@ namespace Tasks
                             {
                                 var cookiefile = (direc + "\\cookies.sqlite");
                                 File.Delete(cookiefile);
-                                CleanupLogsLBox.Items.Add("Firefox Cookies Cleaned.");
+                                CleanupLogsLBox.Items.Add("Firefox Cookies Deleted.");
 
                             }
                             catch (Exception ex)
                             {
 
-                                CleanupLogsLBox.Items.Add("Error while trying to delete Firefox cookies! \n" + ex);
+                                CleanupLogsLBox.Items.Add("Error while trying to delete Firefox cookies. " + ex);
                             }
 
                         }
@@ -351,7 +351,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error while trying to delete Firefox cookies! \n" + ex);
+                    CleanupLogsLBox.Items.Add("Error while trying to delete Firefox cookies. " + ex);
                 }
 
 
@@ -370,13 +370,13 @@ namespace Tasks
                             {
                                 var cookiefile = (direc + "\\places.sqlite");
                                 File.Delete(cookiefile);
-                                CleanupLogsLBox.Items.Add("Firefox History Cleaned.");
+                                CleanupLogsLBox.Items.Add("Firefox History Deleted.");
 
                             }
                             catch (Exception ex)
                             {
 
-                                CleanupLogsLBox.Items.Add("Error while trying to clean Firefox History." + ex);
+                                CleanupLogsLBox.Items.Add("Error while trying to delete Firefox History." + ex);
 
                             }
 
@@ -386,7 +386,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History! \n" + ex);
+                    CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History. " + ex);
                 }
             }
 
