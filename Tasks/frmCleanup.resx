@@ -8002,8 +8002,7 @@ https://github.com/Sycnex/Windows10Debloater
 https://github.com/ShadowWhisperer/Remove-Edge-Chromium
 
 
-We did NOT create the scripts that are being used in the Debloater section, The original sources of these scripts are listed where it says "Scripts Used".
-</value>
+These scripts are distributed under the MIT License, which allows distributions of the original source code.</value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>30</value>

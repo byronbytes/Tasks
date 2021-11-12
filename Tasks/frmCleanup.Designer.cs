@@ -34,6 +34,7 @@
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbWindowsDefScanHistory = new System.Windows.Forms.CheckBox();
             this.cbExplorerIconCache = new System.Windows.Forms.CheckBox();
             this.cbExplorerThumbCache = new System.Windows.Forms.CheckBox();
             this.cbSystemErrorReporting = new System.Windows.Forms.CheckBox();
@@ -74,7 +75,6 @@
             this.cbDiscordCache = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -95,7 +95,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnCleanup = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -186,6 +185,7 @@
             this.cbExplorerDownloads.TabIndex = 1;
             this.cbExplorerDownloads.Text = "Downloads Folder";
             this.cbExplorerDownloads.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbExplorerDownloads, "The Downloads Folder.");
             this.cbExplorerDownloads.UseVisualStyleBackColor = true;
             // 
             // CleanupLogsLBox
@@ -237,13 +237,13 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1066, 800);
+            this.tabControl1.Size = new System.Drawing.Size(972, 800);
             this.tabControl1.TabIndex = 36;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.cbWindowsDefScanHistory);
             this.tabPage1.Controls.Add(this.cbExplorerIconCache);
             this.tabPage1.Controls.Add(this.cbExplorerThumbCache);
             this.tabPage1.Controls.Add(this.cbSystemErrorReporting);
@@ -270,9 +270,23 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1058, 767);
+            this.tabPage1.Size = new System.Drawing.Size(964, 767);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
+            // 
+            // cbWindowsDefScanHistory
+            // 
+            this.cbWindowsDefScanHistory.AutoSize = true;
+            this.cbWindowsDefScanHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbWindowsDefScanHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbWindowsDefScanHistory.Location = new System.Drawing.Point(12, 271);
+            this.cbWindowsDefScanHistory.Name = "cbWindowsDefScanHistory";
+            this.cbWindowsDefScanHistory.Size = new System.Drawing.Size(214, 21);
+            this.cbWindowsDefScanHistory.TabIndex = 36;
+            this.cbWindowsDefScanHistory.Text = "Windows Defender Scan History";
+            this.cbWindowsDefScanHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbWindowsDefScanHistory, "The scan history for Windows Defender.");
+            this.cbWindowsDefScanHistory.UseVisualStyleBackColor = true;
             // 
             // cbExplorerIconCache
             // 
@@ -285,6 +299,7 @@
             this.cbExplorerIconCache.TabIndex = 35;
             this.cbExplorerIconCache.Text = "Icon Cache";
             this.cbExplorerIconCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbExplorerIconCache, "Windows Icon Cache.");
             this.cbExplorerIconCache.UseVisualStyleBackColor = true;
             // 
             // cbExplorerThumbCache
@@ -298,6 +313,7 @@
             this.cbExplorerThumbCache.TabIndex = 34;
             this.cbExplorerThumbCache.Text = "Thumbnail Cache";
             this.cbExplorerThumbCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbExplorerThumbCache, "Windows Thumbnail Cache.");
             this.cbExplorerThumbCache.UseVisualStyleBackColor = true;
             // 
             // cbSystemErrorReporting
@@ -311,6 +327,7 @@
             this.cbSystemErrorReporting.TabIndex = 33;
             this.cbSystemErrorReporting.Text = "Error Reporting";
             this.cbSystemErrorReporting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbSystemErrorReporting, "Windows Error Reports.");
             this.cbSystemErrorReporting.UseVisualStyleBackColor = true;
             // 
             // cbSystemMemDumps
@@ -324,6 +341,7 @@
             this.cbSystemMemDumps.TabIndex = 32;
             this.cbSystemMemDumps.Text = "Memory Dumps";
             this.cbSystemMemDumps.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbSystemMemDumps, "Crash reports after memory dumps occurr.");
             this.cbSystemMemDumps.UseVisualStyleBackColor = true;
             // 
             // cbSystemDirectXCache
@@ -337,6 +355,7 @@
             this.cbSystemDirectXCache.TabIndex = 31;
             this.cbSystemDirectXCache.Text = "DirectX Shader Cache";
             this.cbSystemDirectXCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbSystemDirectXCache, "The DirectX Shader Cache.");
             this.cbSystemDirectXCache.UseVisualStyleBackColor = true;
             // 
             // cbSystemEventLogs
@@ -350,6 +369,7 @@
             this.cbSystemEventLogs.TabIndex = 30;
             this.cbSystemEventLogs.Text = "Event Logs";
             this.cbSystemEventLogs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbSystemEventLogs, "The event logs found in eventvwr.exe");
             this.cbSystemEventLogs.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -394,6 +414,8 @@
             this.cbExplorerRecents.TabIndex = 24;
             this.cbExplorerRecents.Text = "Recent Files";
             this.cbExplorerRecents.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbExplorerRecents, "Clears the \"Recent Files\" tab in explorer.exe\r\nThis does not delete the files IN " +
+        "the Recent Files.");
             this.cbExplorerRecents.UseVisualStyleBackColor = true;
             // 
             // pictureBox7
@@ -496,7 +518,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1058, 767);
+            this.tabPage2.Size = new System.Drawing.Size(964, 767);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
             // 
@@ -799,7 +821,6 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.button3);
@@ -813,29 +834,20 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(1058, 767);
+            this.tabPage3.Size = new System.Drawing.Size(964, 767);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(7, 120);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(291, 20);
-            this.label19.TabIndex = 45;
-            this.label19.Text = "Save your work before using this feature!";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(7, 100);
+            this.label17.Location = new System.Drawing.Point(12, 100);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(483, 20);
+            this.label17.Size = new System.Drawing.Size(432, 40);
             this.label17.TabIndex = 44;
-            this.label17.Text = "Tasks will need to close browsers before it can remove any extension. ";
+            this.label17.Text = "Tasks will close the browsers before removing any extensions. \r\nMake sure you sav" +
+    "e your work before using this!";
             // 
             // label14
             // 
@@ -844,15 +856,15 @@
             this.label14.ForeColor = System.Drawing.Color.Red;
             this.label14.Location = new System.Drawing.Point(7, 63);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(151, 37);
+            this.label14.Size = new System.Drawing.Size(120, 37);
             this.label14.TabIndex = 43;
-            this.label14.Text = "! Warning !";
+            this.label14.Text = "Caution.";
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(541, 720);
+            this.button3.Location = new System.Drawing.Point(698, 720);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(178, 41);
             this.button3.TabIndex = 38;
@@ -875,7 +887,7 @@
             this.ExtensionsBox.HideSelection = false;
             this.ExtensionsBox.Location = new System.Drawing.Point(16, 253);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(703, 444);
+            this.ExtensionsBox.Size = new System.Drawing.Size(860, 444);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -883,7 +895,7 @@
             // ExtName
             // 
             this.ExtName.Text = "Name";
-            this.ExtName.Width = 250;
+            this.ExtName.Width = 240;
             // 
             // ExtSize
             // 
@@ -893,7 +905,7 @@
             // ExtPath
             // 
             this.ExtPath.Text = "Path";
-            this.ExtPath.Width = 700;
+            this.ExtPath.Width = 650;
             // 
             // label16
             // 
@@ -910,12 +922,12 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(12, 167);
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(12, 166);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(478, 17);
+            this.label15.Size = new System.Drawing.Size(417, 23);
             this.label15.TabIndex = 40;
-            this.label15.Text = "Select one of the supported browsers that we have detected on your system.";
+            this.label15.Text = "Select a supported browser detected on your system.";
             // 
             // comboBox1
             // 
@@ -926,7 +938,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(16, 208);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(282, 28);
+            this.comboBox1.Size = new System.Drawing.Size(350, 28);
             this.comboBox1.TabIndex = 39;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -936,10 +948,10 @@
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.Location = new System.Drawing.Point(6, 12);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(631, 38);
+            this.label13.Size = new System.Drawing.Size(413, 38);
             this.label13.TabIndex = 0;
-            this.label13.Text = "This feature sorts out all your extensions for your supported browser, and you ca" +
-    "nselect which ones\r\n you want to remove.";
+            this.label13.Text = "All extensions installed on suppored browsers will be listed here.\r\nYou can choos" +
+    "e which ones to remove.";
             // 
             // tabPage4
             // 
@@ -953,7 +965,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1058, 767);
+            this.tabPage4.Size = new System.Drawing.Size(964, 767);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
@@ -966,7 +978,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(1040, 135);
+            this.textBox1.Size = new System.Drawing.Size(946, 135);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -1037,7 +1049,7 @@
             this.btnCleanup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCleanup.ForeColor = System.Drawing.Color.Black;
-            this.btnCleanup.Location = new System.Drawing.Point(868, 818);
+            this.btnCleanup.Location = new System.Drawing.Point(774, 818);
             this.btnCleanup.Name = "btnCleanup";
             this.btnCleanup.Size = new System.Drawing.Size(198, 34);
             this.btnCleanup.TabIndex = 18;
@@ -1049,25 +1061,12 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(12, 271);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(214, 21);
-            this.checkBox1.TabIndex = 36;
-            this.checkBox1.Text = "Windows Defender Scan History";
-            this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(1078, 862);
+            this.ClientSize = new System.Drawing.Size(984, 862);
             this.Controls.Add(this.btnCleanup);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.CleanupLogsLBox);
@@ -1151,7 +1150,6 @@
         private System.Windows.Forms.ColumnHeader ExtPath;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.CheckBox cbSystemEventLogs;
         private System.Windows.Forms.CheckBox cbEdgeSessions;
         private System.Windows.Forms.CheckBox cbSystemDirectXCache;
@@ -1169,6 +1167,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblNotDetected;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbWindowsDefScanHistory;
     }
 }
