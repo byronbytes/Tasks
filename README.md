@@ -7,6 +7,9 @@
 
 **Tasks** is an application which improves computer performance. **Tasks** has an advanced cleanup tool, allowing you to clean application, cache files as well as manage browser extensions, clear cookies and remove bloatware. Tasks also feature a startup manager, letting you control programs that run on startup.
 
+### Intentions
+We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial and does not include any hidden paywalls in the application.
+
 ## Installation
 1. You will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
 2. Download Tasks from the **Releases** tab.
@@ -30,8 +33,7 @@ See the full list of [contributors](https://github.com/LiteTools/Tasks/contribut
 ## Acknowledgments
 * Tasks uses the Windows 10 Debloater made by [Sycnex](https://github.com/Sycnex/Windows10Debloater).
 * Tasks uses the Remove Microsoft Edge script made by [ShadowWhisperer](https://github.com/ShadowWhisperer/Remove-Edge-Chromium).
-### Intentions
-We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial and does not include any hidden paywalls in the application.
+
 
 ## Gallery
 These images were last taken on v2.1.1. The design may vary for newer versions.
