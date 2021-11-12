@@ -43,10 +43,10 @@ namespace Tasks {
                     string keyName = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
                     string Value = StartupProcesses.SelectedItems[0].SubItems[0].Text;
 
-                    using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyName, false)) {
-                        if (key == null) { Debug.Print(Value + "And" + keyName); MessageBox.Show("Error"); }
-                        else { key.DeleteValue(keyName + Value); Debug.Print(keyName + "And" + Value); }
-                    }
+                    using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyName, false))
+                        if (key == null) { Debug.Print(Value + "And" + keyName); MessageBox.Show("There was an error."); }
+                        else { key.DeleteValue(keyName + Value); Debug.Print(keyName + "And" + Value); RefreshList(); }
+
                 } catch(Exception ex) { MessageBox.Show("error" + ex.Message); }
         }
         
