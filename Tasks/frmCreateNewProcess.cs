@@ -26,7 +26,7 @@ namespace Tasks
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show("An error has occurred: " + ex.Message);
+                        MessageBox.Show("An error has occurred. " + ex.Message);
                     }
                    
                 }
@@ -42,15 +42,10 @@ namespace Tasks
            } 
             catch(Exception ex)
             {
-                 MessageBox.Show("An error has occurred: " + ex.Message);
+                 MessageBox.Show("An error has occurred. " + ex.Message);
             }
         }
-                                                     
-                                                     
-        public static void MostRecentlyRan()
-        {
-            // Will put a listbox of 5 of the most recently created tasks
-        }
+                                                  
                                                      
     }
 }
