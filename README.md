@@ -14,6 +14,7 @@
 1. Get [.NET Core](https://dotnet.microsoft.com/download) directly from Microsoft. (Tasks will notice if you have installed .NET Core or not.)
 2. Get Tasks from the **Releases** tab.
 3. Extract the `.zip` and execute the `.exe` file.
+
 Please put the dependencies alongside with the `.exe` file. Tasks will not work without the dependencies.
 
 ## Contribution
@@ -34,7 +35,7 @@ See the full list of [contributors](https://github.com/LiteTools/Tasks/contribut
 * Tasks uses the Windows 10 Debloater made by [Sycnex](https://github.com/Sycnex/Windows10Debloater).
 * Tasks uses the Remove Microsoft Edge script made by [ShadowWhisperer](https://github.com/ShadowWhisperer/Remove-Edge-Chromium).
 ### Intentions
-We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial and does not include any hidden paywalls in the application.
+We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial and will never include any hidden paywalls in the application.
 
 ## Gallery
 These images were last taken on v2.1.1. The design may vary for newer versions.
