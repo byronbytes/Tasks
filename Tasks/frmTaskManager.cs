@@ -31,7 +31,7 @@ namespace Tasks {
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string selectedProcess = listView1.SelectedItems[0].SubItems[2].Text; // it was this easy. -.-
+            string selectedProcess = listView1.SelectedItems[0].SubItems[2].Text;
 
             try
             {
@@ -47,7 +47,7 @@ namespace Tasks {
         string OldItemSelected = string.Empty;
 
 
-        private void CPUMon_Check() //Laggin
+        private void CPUMon_Check()
         {
             try
             {
@@ -154,7 +154,7 @@ namespace Tasks {
             try
             {
 
-                var wmiQueryString = "SELECT ProcessId, ExecutablePath, CommandLine FROM Win32_Process";
+                var wmiQueryString = "SELECT ProcessId, ExecutablePath, CommandLine, Description FROM Win32_Process";
 
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher(wmiQueryString);
 
@@ -178,6 +178,11 @@ namespace Tasks {
                         if (QueryObject["CommandLine"] != null)
                         {
                             InfoProc.ComandLine = QueryObject["CommandLine"].ToString();
+                        }
+
+                        if (QueryObject["Description"] != null)
+                        {
+                            InfoProc.ComandLine = QueryObject["Description"].ToString();
                         }
 
                         TempList.Add(InfoProc);
@@ -237,20 +242,26 @@ namespace Tasks {
             public Process TargetProcess = null;
             public string Path = string.Empty;
             public string ComandLine = string.Empty;
-
+            public string Description = string.Empty;
         }
 
 
         private void button2_Click(object sender, EventArgs e) { new frmCreateNewProcess().Show(); }
 
-        private void timer1_Tick(object sender, EventArgs e) { }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e) { }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
 
+            Task<List<ProcessInfoEx>> ProcessInfoList = Task.Run(async () => await GetProcessAsync());
+            ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 
  

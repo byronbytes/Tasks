@@ -72,7 +72,7 @@ namespace Tasks {
                         if (key == null)
                         {
                             MessageBox.Show("This key does not exist or equals null. This error should not happen and if you encounter it, please report it.");
-                            Debug.Print("Key Path: " keyName + "(/)" + Value);
+                            Debug.Print("Key Path: " + keyName + "(/)" + Value);
                         }
                         else
                         {

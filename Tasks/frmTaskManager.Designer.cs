@@ -38,12 +38,12 @@ namespace Tasks
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // listView1
@@ -55,7 +55,6 @@ namespace Tasks
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5,
             this.columnHeader6});
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.FullRowSelect = true;
@@ -85,8 +84,8 @@ namespace Tasks
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "";
-            this.columnHeader2.Width = 80;
+            this.columnHeader2.Text = "Directory";
+            this.columnHeader2.Width = 200;
             // 
             // columnHeader3
             // 
@@ -96,17 +95,18 @@ namespace Tasks
             // columnHeader4
             // 
             this.columnHeader4.Text = "CPU Usage";
-            this.columnHeader4.Width = 120;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Directory";
-            this.columnHeader5.Width = 90;
+            this.columnHeader4.Width = 110;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Process Description";
             this.columnHeader6.Width = 150;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // button1
             // 
@@ -144,11 +144,11 @@ namespace Tasks
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // imageList1
+            // timer1
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmTaskManager
             // 
@@ -176,11 +176,11 @@ namespace Tasks
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
