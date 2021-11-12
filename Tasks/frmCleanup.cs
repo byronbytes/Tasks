@@ -187,7 +187,7 @@ namespace Tasks {
 
             if (DeleteAllFiles(edge_history, cbEdgeSearchHistory.Checked)) CleanupLogsLBox.Items.Add("Edge Search History cleaned.");
             if (DeleteAllFiles(edge_cookies, cbEdgeCookies.Checked)) CleanupLogsLBox.Items.Add("Edge Cookies cleaned.");
-            if (DeleteAllFiles(edge_cache, cbEdgeCache.Checked) CleanupLogsLBox.Items.Add("Edge Cache cleaned.");
+            if (DeleteAllFiles(edge_cache, cbEdgeCache.Checked)) CleanupLogsLBox.Items.Add("Edge Cache cleaned.");
             if (DeleteAllFiles(edge_session, cbEdgeSessions.Checked)) CleanupLogsLBox.Items.Add("Edge Session Deleted.");
                 
             if (DeleteAllFiles(dxcache, cbSystemDirectXCache.Checked)) CleanupLogsLBox.Items.Add("DirectX Shader Cache Deleted.");
