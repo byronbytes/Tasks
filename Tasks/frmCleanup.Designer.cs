@@ -143,8 +143,7 @@
             this.cbSystemPrefetch.TabIndex = 4;
             this.cbSystemPrefetch.Text = "Prefetch";
             this.cbSystemPrefetch.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbSystemPrefetch, "The cache of application loading times.\r\nNote that programs may take longer to lo" +
-        "ad if you delete this. ");
+            this.toolTip1.SetToolTip(this.cbSystemPrefetch, "Local applications cache.\r\nPrograms may take longer to load if you clean Prefetch.");
             this.cbSystemPrefetch.UseVisualStyleBackColor = true;
             // 
             // cbSystemTempFolders
@@ -200,8 +199,7 @@
             this.CleanupLogsLBox.FormattingEnabled = true;
             this.CleanupLogsLBox.HorizontalScrollbar = true;
             this.CleanupLogsLBox.ItemHeight = 17;
-            this.CleanupLogsLBox.Items.AddRange(new object[] {
-            "Cleanup Logs:"});
+            this.CleanupLogsLBox.Items.AddRange(new object[] { "Cleanup Logs:" });
             this.CleanupLogsLBox.Location = new System.Drawing.Point(8, 816);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
             this.CleanupLogsLBox.Size = new System.Drawing.Size(158, 36);
@@ -211,8 +209,7 @@
             // taskDialog1
             // 
             this.taskDialog1.Buttons.Add(this.taskDialogButton1);
-            this.taskDialog1.Content = "Clearing browser cache will log you out of all websites you previously logged int" +
-    "o. Proceed with caution.";
+            this.taskDialog1.Content = "Caution: Clearing browser cache will log you out of all websites you previously logged into.";
             this.taskDialog1.MainIcon = Ookii.Dialogs.WinForms.TaskDialogIcon.Warning;
             this.taskDialog1.MainInstruction = "Warning";
             this.taskDialog1.WindowIcon = ((System.Drawing.Icon)(resources.GetObject("taskDialog1.WindowIcon")));
@@ -835,7 +832,7 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(483, 20);
             this.label17.TabIndex = 44;
-            this.label17.Text = "Tasks will need to close browsers before it can remove any extension. ";
+            this.label17.Text = "Your browser will be closed before Tasks can make any changes.";
             // 
             // label14
             // 
@@ -904,8 +901,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(683, 17);
             this.label16.TabIndex = 41;
-            this.label16.Text = "_________________________________________________________________________________" +
-    "______________________________________________________";
+            this.label16.Text = new String('_', 135);
             // 
             // label15
             // 
@@ -915,7 +911,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(478, 17);
             this.label15.TabIndex = 40;
-            this.label15.Text = "Select one of the supported browsers that we have detected on your system.";
+            this.label15.Text = "Select a supported browser detected on your system.";
             // 
             // comboBox1
             // 
@@ -938,8 +934,8 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(631, 38);
             this.label13.TabIndex = 0;
-            this.label13.Text = "This feature sorts out all your extensions for your supported browser, and you ca" +
-    "nselect which ones\r\n you want to remove.";
+            this.label13.Text = "All extensions installed on suppored browsers will be listed here.\r\n"
+                              + "You can choose which ones to remove.";
             // 
             // tabPage4
             // 
