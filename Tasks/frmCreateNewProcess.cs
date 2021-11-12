@@ -15,7 +15,7 @@ namespace Tasks
                                                      
         private void button2_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe*" })
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" })
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
@@ -46,6 +46,6 @@ namespace Tasks
             }
         }
                                                   
-                                                     
+                                                
     }
 }
