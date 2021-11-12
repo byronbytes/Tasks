@@ -64,19 +64,19 @@ namespace Tasks {
             {
                 try
                 {
-                    string keyName = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
+                    string keyName = "Software\\Microsoft\\Windows\\CurrentVersion\\Run\\";
                     string Value = StartupProcesses.SelectedItems[0].SubItems[0].Text;
 
                     using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyName, false))
                     {
                         if (key == null)
                         {
-                            MessageBox.Show("This key does not exist. If you get this error, please report it.");
+                            MessageBox.Show("This key does not exist or equals null. This error should not happen and if you encounter it, please report it.");
+                            Debug.Print("Key Path: " keyName + "(/)" + Value);
                         }
                         else
                         {
                             key.DeleteValue(keyName + Value);
-                            Debug.Print(keyName + "and" + Value);
                             RefreshList();
                         }
                     }
@@ -113,11 +113,14 @@ namespace Tasks {
         }
         
         private void button3_Click(object sender, EventArgs e) {
-            try {
-                // will add a method to auto update the list when the window closes
+            try 
+            {
                 Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
-            } catch(Exception ex) { MessageBox.Show(ex.GetType().FullName + " caught: " + ex.Message); }
-
+            } 
+            catch(Exception ex) 
+            {
+                MessageBox.Show("An error occurred. " + ex.Message); 
+            }
         }
 
         private void button4_Click(object sender, EventArgs e) {}
