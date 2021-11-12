@@ -12,12 +12,9 @@ namespace Tasks
         ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
+        protected override void Dispose(bool disposing) {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
@@ -27,8 +24,7 @@ namespace Tasks
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -114,8 +110,9 @@ namespace Tasks
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(307, 51);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Cleanup will clean all junk and garbage inside temp\r\nfolders, recycle bin, downlo" +
-    "ad and other locations. \r\nYou can select which to clean with many options.";
+            this.label3.Text = "Cleanup feature allows you to clean unneeded files in\r\n"
+                             + "various Windows folders, recycle bin, download and\r\n"
+                             + "other locations. You can choose what to clean later.";
             // 
             // button1
             // 
@@ -157,8 +154,9 @@ namespace Tasks
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(279, 51);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Manage programs that start on boot. You will \r\nbe able to see and modify all prog" +
-    "rams\r\nthat run on startup.";
+            this.label5.Text = "Manage programs that run on boot. You\r\n"
+                             + "can modify which programs that will run\r\n"
+                             + "on startup";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button3
@@ -202,7 +200,8 @@ namespace Tasks
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(285, 34);
             this.label6.TabIndex = 2;
-            this.label6.Text = "An advanced Task Manager with more process \r\ninformation and details.";
+            this.label6.Text = "An advanced Task Manager, featuring advanced\r\n"
+                             + "task information and details. Work in progress.";
             // 
             // button4
             // 
@@ -244,7 +243,6 @@ namespace Tasks
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
