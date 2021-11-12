@@ -13,7 +13,6 @@ using System.Management;
 using System.Diagnostics;
 using System.Threading;
 
-// TODO: Cleanup and change the code style
 namespace Tasks {
     public partial class frmStartupPrograms : Form {
         public frmStartupPrograms() { InitializeComponent(); RenderStartupsOnListWiew(); }
@@ -35,8 +34,15 @@ namespace Tasks {
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
 
             if (StartupProcesses.SelectedItems[0].SubItems[1].Text == "Startup")
-                try { File.Delete(fileStartup); RefreshList(); }
-                catch { MessageBox.Show("An error has occurred."); }
+                try
+                { 
+                    File.Delete(fileStartup); 
+                    RefreshList(); 
+                }
+                catch 
+                {
+                    MessageBox.Show("An error has occurred.");
+                }
 
             if(StartupProcesses.SelectedItems[0].SubItems[1].Text == "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run")
                 try {
@@ -86,10 +92,17 @@ namespace Tasks {
         private void button4_Click_1(object sender, EventArgs e) { RefreshList(); }
 
         private void removeToolStripMenuItem_Click(object sender, EventArgs e) {
+            
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
             if (StartupProcesses.SelectedItems[0].SubItems[1].Text == "Startup")
-                try { File.Delete(fileStartup); RefreshList(); }
-                catch { MessageBox.Show("An error has occurred."); }
+                try 
+                {
+                    File.Delete(fileStartup); RefreshList(); 
+                }
+                catch 
+                {
+                    MessageBox.Show("An error has occurred."); 
+                }
         }
 
         private void moreInfoToolStripMenuItem_Click(object sender, EventArgs e) { MessageBox.Show("Coming Soon."); }
