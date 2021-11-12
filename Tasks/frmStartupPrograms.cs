@@ -71,20 +71,19 @@ namespace Tasks {
                     {
                         if (key == null)
                         {
-                            Debug.Print(Value + "And" + keyName);
-                            MessageBox.Show("There was an error.");
+                            MessageBox.Show("This key does not exist. If you get this error, please report it.");
                         }
                         else
                         {
                             key.DeleteValue(keyName + Value);
-                            Debug.Print(keyName + "And" + Value);
+                            Debug.Print(keyName + "and" + Value);
                             RefreshList();
                         }
                     }
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("error" + ex.Message);
+                    MessageBox.Show("Error. " + ex.Message);
                 }
             }
         }
@@ -150,7 +149,7 @@ namespace Tasks {
 
         private void moreInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming Soon.");
+            MessageBox.Show("Currently being worked on.");
         }
     }
 }
