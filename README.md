@@ -36,14 +36,17 @@ See the full list of [contributors](https://github.com/LiteTools/Tasks/contribut
 
 
 ## Gallery
-These images were last taken on v2.1.1. The design may vary for newer versions.
+These images were last taken on v2.2.0 The design may vary for newer versions.
+You are allowed to distribute these screenshots for showcase purposes, in fact, it is highly recommended.
 
-![image](https://user-images.githubusercontent.com/53088136/138777568-108d56b8-5f93-4a19-8055-52816defe49b.png)
-![image](https://user-images.githubusercontent.com/53088136/138777602-c4a7cc43-4892-4711-9811-fafdb4948208.png)
-![image](https://user-images.githubusercontent.com/53088136/138777626-fe92818e-dc16-45c2-8734-bedd7746178c.png)
-![image](https://user-images.githubusercontent.com/53088136/138777656-ec60c2ed-fc2c-4ce0-8ea2-4c6a7fe6a19f.png)
-![image](https://user-images.githubusercontent.com/53088136/138777673-6a2b2ba3-7a77-4413-92c4-5313da218880.png)
-![image](https://user-images.githubusercontent.com/53088136/138777693-cedc569e-abbc-4df6-b669-0c6695eff6d7.png)
-![image](https://user-images.githubusercontent.com/53088136/138777780-9e1d4222-be12-4015-8bae-fa2f9e495b54.png)
-![image](https://user-images.githubusercontent.com/53088136/138777811-442fe635-465f-4eff-8525-da301cf1731c.png)
-![image](https://user-images.githubusercontent.com/53088136/138777830-c2c6b688-9254-4fe1-85d6-cb5ec7a90d57.png)
+![image](https://user-images.githubusercontent.com/53088136/141648801-7305acfa-99f5-484a-a15c-123460dc999c.png)
+![image](https://user-images.githubusercontent.com/53088136/141648811-f355bed2-afb1-44da-b011-3e0368fdd123.png)
+![image](https://user-images.githubusercontent.com/53088136/141648826-e543f849-75b1-458e-9f9b-c41cdc3c489d.png)
+![image](https://user-images.githubusercontent.com/53088136/141648832-252bb905-1eef-4326-803e-d36da11c01bd.png)
+![image](https://user-images.githubusercontent.com/53088136/141648848-0e01b893-42ae-46f6-b172-55d32f1b6dd9.png)
+![image](https://user-images.githubusercontent.com/53088136/141648856-a7d20627-8cfd-4364-b383-6ac4a6173019.png)
+![image](https://user-images.githubusercontent.com/53088136/141648886-ee4fc9bc-21fc-4f95-9f97-b7efe9fab83f.png)
+![image](https://user-images.githubusercontent.com/53088136/141648894-77a937ed-b2ac-40b4-914a-7faa67c94125.png)
+![image](https://user-images.githubusercontent.com/53088136/141648915-445dc1aa-5380-48c5-97a2-263ef3d880da.png)
+
+
