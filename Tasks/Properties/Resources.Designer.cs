@@ -193,6 +193,16 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Settings {
+            get {
+                object obj = ResourceManager.GetObject("Settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Spotify {
             get {
                 object obj = ResourceManager.GetObject("Spotify", resourceCulture);
@@ -246,6 +256,16 @@ namespace Tasks.Properties {
         internal static System.Drawing.Bitmap TaskManagerWhite {
             get {
                 object obj = ResourceManager.GetObject("TaskManagerWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TaskManagerWhite1 {
+            get {
+                object obj = ResourceManager.GetObject("TaskManagerWhite1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
