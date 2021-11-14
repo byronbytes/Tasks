@@ -38,11 +38,8 @@ namespace Tasks
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupCleanup = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
@@ -50,9 +47,6 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupCleanup.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,7 +102,8 @@ namespace Tasks
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Cleanup will clean all junk and garbage inside temp");
+            this.toolTip1.SetToolTip(this.pictureBox1, "Cleanup will clean all temp folders and cache files for \r\napplications and the sy" +
+        "stem.");
             // 
             // button6
             // 
@@ -137,22 +132,6 @@ namespace Tasks
             this.label1.Text = "Tasks";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // groupCleanup
-            // 
-            this.groupCleanup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.groupCleanup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupCleanup.Controls.Add(this.button1);
-            this.groupCleanup.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupCleanup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupCleanup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupCleanup.ForeColor = System.Drawing.Color.White;
-            this.groupCleanup.Location = new System.Drawing.Point(198, 36);
-            this.groupCleanup.Name = "groupCleanup";
-            this.groupCleanup.Size = new System.Drawing.Size(314, 119);
-            this.groupCleanup.TabIndex = 1;
-            this.groupCleanup.TabStop = false;
-            this.groupCleanup.Text = "Cleanup";
-            // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -160,7 +139,7 @@ namespace Tasks
             this.button1.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Tasks.Properties.Resources.CleanupWhite;
-            this.button1.Location = new System.Drawing.Point(9, 19);
+            this.button1.Location = new System.Drawing.Point(277, 149);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(167, 40);
             this.button1.TabIndex = 0;
@@ -169,19 +148,6 @@ namespace Tasks
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(198, 181);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(314, 119);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Startup Programs";
-            // 
             // button3
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -189,7 +155,7 @@ namespace Tasks
             this.button3.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Tasks.Properties.Resources.StartupProgramWhite;
-            this.button3.Location = new System.Drawing.Point(9, 19);
+            this.button3.Location = new System.Drawing.Point(277, 248);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(167, 40);
             this.button3.TabIndex = 0;
@@ -199,19 +165,6 @@ namespace Tasks
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(198, 324);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(314, 119);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Task Manager";
-            // 
             // button4
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -219,7 +172,7 @@ namespace Tasks
             this.button4.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::Tasks.Properties.Resources.TaskManagerWhite;
-            this.button4.Location = new System.Drawing.Point(9, 19);
+            this.button4.Location = new System.Drawing.Point(277, 359);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(167, 40);
             this.button4.TabIndex = 0;
@@ -234,9 +187,9 @@ namespace Tasks
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(894, 591);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupCleanup);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
@@ -249,9 +202,6 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupCleanup.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -260,10 +210,7 @@ namespace Tasks
 
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.GroupBox groupCleanup;
-        public System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
