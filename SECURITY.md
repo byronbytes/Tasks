@@ -12,14 +12,14 @@ To report any vulnerabilities, please create a new Issue using the **Security Vu
 ### Supported Versions
 These are the supported versions of Tasks. Please note that we will not fix vulnerabilities in older versions that are marked with the :x: sign.
 
-| Version             | Supported          | Release Date         | Discontinuation Date |
-| :------------------ | :----------------: | :--------------:     | :------------------: |
-| **2.2.0** (R)      | ✅                  | 12th November, 2021   | N/A                 |
-| **2.1.1** (R)       | ✅                 | 24th October, 2021     | N/A
-| **2.1.0** (R)       | ✅                 | 22nd October, 2021     | N/A
-| **2.0.0** (R)       | ✅                 | 20th September, 2021 | December 14th 2021         |
-| **2.0.0 PreRelease** (PR) | :x:                | 7th August, 2021     | 31st November 2021   |
-| **1.x.x** (L)       | :x:                | 24th July, 2021      | 7th August 2021      |
+| Version             | Supported          | Release Date         | Discontinuation Date | Version Type |
+| :------------------ | :----------------: | :--------------:     | :------------------: | :------------------: | 
+| **2.2.0** (R)      | ✅                  | 12th November, 2021   | N/A                 | Release| 
+| **2.1.1** (R)       | ✅                 | 24th October, 2021     | N/A                | Release |
+| **2.1.0** (R)       | ✅                 | 22nd October, 2021     | N/A                | Release
+| **2.0.0** (R)       | ✅                 | 20th September, 2021 | December 14th 2021         | Release |
+| **2.0.0 PreRelease** (PR) | :x:                | 7th August, 2021     | 31st November 2021   | Pre - Release |
+| **1.x.x** (L)       | :x:                | 24th July, 2021      | 7th August 2021      | Legacy |
 
 Legend: *(R: release ; PR: pre-release ; L: Legacy)*
 
