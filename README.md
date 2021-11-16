@@ -5,19 +5,20 @@
   🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD)
 </h1>
 
-**Tasks** is an application which improves computer performance. **Tasks** has an advanced cleanup tool, allowing you to clean application, cache files as well as manage browser extensions, clear cookies and remove bloatware. Tasks also feature a startup manager, letting you control programs that run on startup.
+**Tasks** is an application which improves computer performance. **Tasks** has an advanced cleanup tool, allowing you to clean application and system cache files as well as manage browser extensions, clear cookies and remove bloatware. Tasks also feature a startup manager, letting you control programs that run on startup.
 
 ### Intentions
-We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial and does not include any hidden paywalls in the application.
+We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial to everyone and should not include any hidden paywalls inside the application. Our goal is to make a tool that anyone can use from anywhere.
 
 ## Installation
 1. You will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
 2. Download Tasks from the **Releases** tab.
 3. Extract the `.zip` and execute the executable `.exe` file. After that, Tasks will launch.
-Note that the dependencies must be kept in the same folder, we are working on a fix for this.
+
+The dependencies must be kept in the same folder, we are working on a fix for this.
 
 ## Contribution
-To contribute to this project, please read [**CONTRIBUTING.md**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
+To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
 
 ## Support
 You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too. We also set up a donation system, so all your donations and sponsors go directly to us.
