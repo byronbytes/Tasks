@@ -69,13 +69,13 @@ namespace Tasks
 
         private void btnCleanup_Click(object sender, EventArgs e)
         {
-            // List our local directories so we don't need to repeat a lot of code.
+            // List our local directories.
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
-
+            
             
 
             if (cbExplorerDownloads.Checked)
@@ -773,12 +773,13 @@ namespace Tasks
                 process.WaitForExit();*/
                 if (comboBox1.Text == "Google Chrome")
                 {
+                   Taskkill.Browser(1);
+                   Thread.Sleep(75);
+                            
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try
                         {
-                            Taskkill.Browser(1);
-                            Thread.Sleep(75);
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
                             RemoveExt.RemoveExtension(subItem, 2);
