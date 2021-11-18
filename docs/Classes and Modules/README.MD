@@ -1,2 +1,6 @@
 # Docs - Classes and Modules
-This has every single class and module in Tasks, with descriptions. This is so people who are willing to help and contribute know what these do.
+Every single class / module documented in Tasks.
+
+## Why?
+This is meant for people who want to help contribute to Tasks, but don't know what these features do, or where to start. 
+It makes it easier for people to understand the backend of our code.
