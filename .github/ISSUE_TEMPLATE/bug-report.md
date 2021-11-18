@@ -7,25 +7,28 @@ assignees: byronbytes
 
 ---
 
-**Describe the bug**
+# Describe the bug
 A clear and concise description of what the bug is.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. See error
+## How to Replicate
+List the steps to replicate the behavior of the bug.
+-
+-
+-
+-
 
-**Expected behavior**
+## Expected Output
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. Windows 10]
-- OS Version: [e.g. 21H1]
- - App Version [e.g. 2.0.0]
+## Screenshots
+Screenshots of the problem, if neccessary.
 
-**Additional context**
+
+## Desktop Information
+ - Current OS: []
+ - OS Version: []
+ - App Version []
+
+## Other Information
 Add any other context about the problem here.
