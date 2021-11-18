@@ -1,5 +1,5 @@
 # Remove Extension (string path, int Browser)
-This is a class in Tasks that is for removing extensions.
+This is a class in Tasks for removing extensions.
 
 
 ## Input #1 - string path
