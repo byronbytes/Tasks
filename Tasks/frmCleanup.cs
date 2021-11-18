@@ -935,23 +935,14 @@ namespace Tasks
             catch { Console.WriteLine("An error has occurred."); }
         }
 
-        public void WriteCleanupSummary(bool showNotice)
+        public void WriteCleanupSummary()
         {
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
             File.WriteAllLines(
               Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt",
               CleanupLogsLBox.Items.Cast<string>().ToArray()
             );
-            if(showNotice = true)
-            {
-            MessageBox.Show("Cleanup is logged at " + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks\\" + "Cleanup Summary" +"\\tasks-cleanup-summary-" + t + ".txt");
-            }
-            else
-            {
-            // do nothing. Aso WIP.
-            }
             
-
         }
     }
 }
