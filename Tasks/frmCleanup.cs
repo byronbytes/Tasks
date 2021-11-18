@@ -610,30 +610,8 @@ namespace Tasks
         private void frmCleanup_Load(object sender, EventArgs e)
         {
             tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged);
-
             DirectoryExists();
-
-            // Extention Finder
-            if (Directory.Exists(Dirs.chromeExtDir))
-            {
-                comboBox1.Items.Add("Google Chrome");
-            }
-
-            if (Directory.Exists(Dirs.firefoxDir))
-            {
-                comboBox1.Items.Add("Mozilla Firefox");
-            }
-
-            if (Directory.Exists(Dirs.edgeDir))
-            {
-                comboBox1.Items.Add("Microsoft Edge");
-            }
-
         }
-
-
-
-
 
         private void button1_Click(object sender, EventArgs e) //DisplayDNS
         {
@@ -920,6 +898,24 @@ namespace Tasks
                 lblNotDetected.Visible = true;
 
             }
+            
+              // Extention Finder
+            if (Directory.Exists(Dirs.chromeExtDir))
+            {
+                comboBox1.Items.Add("Google Chrome");
+            }
+
+            if (Directory.Exists(Dirs.firefoxDir))
+            {
+                comboBox1.Items.Add("Mozilla Firefox");
+            }
+
+            if (Directory.Exists(Dirs.edgeDir))
+            {
+                comboBox1.Items.Add("Microsoft Edge");
+            }
+            
+            
         }
 
         private void cbEdgeCookies_CheckStateChanged(object sender, EventArgs e)
@@ -939,15 +935,22 @@ namespace Tasks
             catch { Console.WriteLine("An error has occurred."); }
         }
 
-        public void WriteCleanupSummary()
+        public void WriteCleanupSummary(bool showNotice)
         {
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
             File.WriteAllLines(
               Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt",
               CleanupLogsLBox.Items.Cast<string>().ToArray()
             );
+            if(showNotice = true)
+            {
             MessageBox.Show("Cleanup is logged at " + Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks\\" + "Cleanup Summary" +"\\tasks-cleanup-summary-" + t + ".txt");
-
+            }
+            else
+            {
+            // do nothing. Aso WIP.
+            }
+            
 
         }
     }
