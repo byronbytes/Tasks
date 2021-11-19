@@ -36,7 +36,6 @@ namespace Tasks
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -60,17 +59,16 @@ namespace Tasks
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-11, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(152, 598);
+            this.panel1.Size = new System.Drawing.Size(152, 621);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Tasks.Properties.Resources.Settings;
-            this.pictureBox4.Location = new System.Drawing.Point(55, 453);
+            this.pictureBox4.Location = new System.Drawing.Point(55, 544);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.TabIndex = 13;
@@ -79,7 +77,7 @@ namespace Tasks
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Tasks.Properties.Resources.TaskManagerWhite1;
-            this.pictureBox3.Location = new System.Drawing.Point(55, 334);
+            this.pictureBox3.Location = new System.Drawing.Point(55, 399);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.TabIndex = 12;
@@ -89,12 +87,13 @@ namespace Tasks
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Tasks.Properties.Resources.Startup_Programs_White;
-            this.pictureBox2.Location = new System.Drawing.Point(55, 207);
+            this.pictureBox2.Location = new System.Drawing.Point(55, 236);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox2, "Manage programs that start on boot. You will ");
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -106,21 +105,7 @@ namespace Tasks
             this.pictureBox1.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox1, "Cleanup will clean all temp folders and cache files for \r\napplications and the sy" +
         "stem.");
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(3, 563);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(149, 40);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "About";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -190,7 +175,7 @@ namespace Tasks
             this.panel2.Controls.Add(this.button3);
             this.panel2.Location = new System.Drawing.Point(138, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(863, 598);
+            this.panel2.Size = new System.Drawing.Size(1024, 626);
             this.panel2.TabIndex = 1;
             // 
             // frmMain
@@ -198,7 +183,7 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(997, 599);
+            this.ClientSize = new System.Drawing.Size(1157, 622);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -224,7 +209,6 @@ namespace Tasks
         public System.Windows.Forms.Button button3;
         public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox4;

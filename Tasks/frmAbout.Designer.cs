@@ -128,9 +128,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(146, 106);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(290, 20);
+            this.label6.Size = new System.Drawing.Size(202, 20);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Inquiries: LiteToolsFoundation@gmail.com";
+            this.label6.Text = "Inquiries: matty@litetools.net";
             // 
             // linkLabel1
             // 
