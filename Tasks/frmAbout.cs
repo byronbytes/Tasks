@@ -12,10 +12,6 @@ using System.Windows.Forms;
 
 namespace Tasks {
     
-    // of course im not going to say it.
-    // but we all know what i was thinking
-    // (please)
-    
     public partial class frmAbout : Form {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -62,6 +58,16 @@ namespace Tasks {
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo { FileName = "https://litetools.net", UseShellExecute = true });
         }
     }
 }
