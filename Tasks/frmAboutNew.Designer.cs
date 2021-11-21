@@ -32,7 +32,6 @@ namespace Tasks
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,6 +42,8 @@ namespace Tasks
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -76,6 +77,7 @@ namespace Tasks
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage2.Controls.Add(this.linkLabel2);
             this.tabPage2.Controls.Add(this.pictureBox3);
             this.tabPage2.Controls.Add(this.linkLabel1);
             this.tabPage2.Controls.Add(this.label6);
@@ -92,16 +94,6 @@ namespace Tasks
             this.tabPage2.Size = new System.Drawing.Size(1003, 551);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "About";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage3.Location = new System.Drawing.Point(4, 30);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1003, 551);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Check For Updates";
             // 
             // pictureBox3
             // 
@@ -162,8 +154,7 @@ namespace Tasks
             this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
             "Byron (@byronbytes)",
-            "Solirs (@Solirs)",
-            "unknownbruh (@unknownbruh)"});
+            "Solirs (@Solirs)"});
             this.listBox1.Location = new System.Drawing.Point(15, 173);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(331, 360);
@@ -224,6 +215,31 @@ namespace Tasks
             this.label1.TabIndex = 31;
             this.label1.Text = "Tasks";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage3.Location = new System.Drawing.Point(4, 30);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1003, 551);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Check For Updates";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel2.LinkColor = System.Drawing.SystemColors.ActiveCaption;
+            this.linkLabel2.Location = new System.Drawing.Point(308, 116);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(65, 21);
+            this.linkLabel2.TabIndex = 41;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Website";
+            this.linkLabel2.VisitedLinkColor = System.Drawing.Color.DarkCyan;
+            // 
             // frmAboutNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -258,5 +274,6 @@ namespace Tasks
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

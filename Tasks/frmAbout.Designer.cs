@@ -104,8 +104,7 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
             "Byron (@byronbytes)",
-            "Solirs (@Solirs)",
-            "unknownbruh (@unknownbruh)"});
+            "Solirs (@Solirs)"});
             this.listBox1.Location = new System.Drawing.Point(17, 183);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(260, 180);
@@ -195,7 +194,7 @@
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel2.Location = new System.Drawing.Point(293, 126);
+            this.linkLabel2.Location = new System.Drawing.Point(283, 126);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(65, 21);
             this.linkLabel2.TabIndex = 31;
