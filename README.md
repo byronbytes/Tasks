@@ -21,11 +21,10 @@ The dependencies must be kept in the same folder, we are working on a fix for th
 To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
 
 ## Support
-You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too. We also set up a donation system, so all your donations and sponsors go directly to us.
+You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too.
 
 ## Credits
 * **Byron (@byronbytes)** - *Initial work / creation and development.*
-* **unknownbruh** - *Code Improvement & Suggestions.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 * **The very helpful people in the VB.NET server.** - *You guys know who you are, thank you. You helped me fix bugs and taught me to do stuff myself.*
 
@@ -38,7 +37,7 @@ See the full list of [contributors](https://github.com/LiteTools/Tasks/contribut
 
 ## Gallery
 These images were last taken on v2.2.0 The design may vary for newer versions.
-You are allowed to distribute these screenshots for showcase purposes, in fact, it is highly recommended.
+You are allowed to distribute these screenshots for showcase purposes, it is also highly recommended.
 
 ![image](https://user-images.githubusercontent.com/53088136/141648801-7305acfa-99f5-484a-a15c-123460dc999c.png)
 ![image](https://user-images.githubusercontent.com/53088136/141648811-f355bed2-afb1-44da-b011-3e0368fdd123.png)
