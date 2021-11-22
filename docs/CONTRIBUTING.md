@@ -9,10 +9,8 @@ As a contributor, we would expect you to have:
 ## Helpful Notes
 Before creating a pull request, please think of the following.
 
-[] Did I double check for errors?
+[x] Did I double check for errors?
 
-[] Are there any typos?
-
-[] Did I do my best?
+[x] Did I do my best?
 
 
