@@ -65,9 +65,17 @@ namespace Tasks
             return true;
         }
 
+        public void WriteCleanupSummary()
+        {
+            int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
+            File.WriteAllLines(
+              Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt",
+              CleanupLogsLBox.Items.Cast<string>().ToArray()
+            );
 
+        }
 
-        private void btnCleanup_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
             // List our local directories.
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
@@ -75,8 +83,8 @@ namespace Tasks
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
-            
-            
+
+
 
             if (cbExplorerDownloads.Checked)
                 try
@@ -118,7 +126,7 @@ namespace Tasks
 
             }
 
-      
+
 
             if (cbSystemPrefetch.Checked)
             {
@@ -584,19 +592,19 @@ namespace Tasks
                 {
                     CleanupLogsLBox.Items.Add("Error while deleting Chrome Saved Passwords.");
                 }
-              
+
             }
+
 
             WriteCleanupSummary();
         }
-
-
+   
         private void Tabs_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab.Text == "Browser Extensions") // i dont want it to show up in the extensions thing because i'll use a diff button to make the code less messy
             {
                 btnCleanup.Visible = false;
-             
+
             }
             else
             {
@@ -751,9 +759,9 @@ namespace Tasks
                 process.WaitForExit();*/
                 if (comboBox1.Text == "Google Chrome")
                 {
-                   Taskkill.Browser(1);
-                   Thread.Sleep(75);
-                            
+                    Taskkill.Browser(1);
+                    Thread.Sleep(75);
+
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try
@@ -848,7 +856,7 @@ namespace Tasks
         private void button4_Click(object sender, EventArgs e)
         {
             try { RunFile.RunBat("removeedge.bat", true); }
-            catch (Exception ex){ MessageBox.Show("An error occurred." + ex); }
+            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
         private void DirectoryExists()
         {
@@ -898,8 +906,8 @@ namespace Tasks
                 lblNotDetected.Visible = true;
 
             }
-            
-              // Extention Finder
+
+            // Extention Finder
             if (Directory.Exists(Dirs.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
@@ -914,8 +922,8 @@ namespace Tasks
             {
                 comboBox1.Items.Add("Microsoft Edge");
             }
-            
-            
+
+
         }
 
         private void cbEdgeCookies_CheckStateChanged(object sender, EventArgs e)
@@ -935,14 +943,6 @@ namespace Tasks
             catch { Console.WriteLine("An error has occurred."); }
         }
 
-        public void WriteCleanupSummary()
-        {
-            int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
-            File.WriteAllLines(
-              Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt",
-              CleanupLogsLBox.Items.Cast<string>().ToArray()
-            );
-            
-        }
+      
     }
 }

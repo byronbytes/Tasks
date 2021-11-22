@@ -95,6 +95,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnClean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -202,9 +203,9 @@
             this.CleanupLogsLBox.ItemHeight = 17;
             this.CleanupLogsLBox.Items.AddRange(new object[] {
             "Cleanup Logs:"});
-            this.CleanupLogsLBox.Location = new System.Drawing.Point(8, 797);
+            this.CleanupLogsLBox.Location = new System.Drawing.Point(8, 819);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(134, 53);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(134, 36);
             this.CleanupLogsLBox.TabIndex = 1;
             this.CleanupLogsLBox.Visible = false;
             // 
@@ -233,11 +234,11 @@
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.HotTrack = true;
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.Location = new System.Drawing.Point(8, 1);
+            this.tabControl1.Location = new System.Drawing.Point(8, 12);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(964, 753);
+            this.tabControl1.Size = new System.Drawing.Size(964, 790);
             this.tabControl1.TabIndex = 36;
             // 
             // tabPage1
@@ -270,7 +271,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(956, 720);
+            this.tabPage1.Size = new System.Drawing.Size(956, 757);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
@@ -519,7 +520,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(956, 720);
+            this.tabPage2.Size = new System.Drawing.Size(956, 757);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
             // 
@@ -534,7 +535,6 @@
             this.btnCleanup.TabIndex = 18;
             this.btnCleanup.Text = "Clean";
             this.btnCleanup.UseVisualStyleBackColor = true;
-            this.btnCleanup.Click += new System.EventHandler(this.btnCleanup_Click);
             // 
             // lblNotDetected
             // 
@@ -848,7 +848,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(956, 720);
+            this.tabPage3.Size = new System.Drawing.Size(956, 757);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
             // 
@@ -979,7 +979,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(956, 720);
+            this.tabPage4.Size = new System.Drawing.Size(956, 757);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
@@ -1062,12 +1062,25 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
+            // btnClean
+            // 
+            this.btnClean.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClean.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnClean.Location = new System.Drawing.Point(799, 814);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(173, 41);
+            this.btnClean.TabIndex = 37;
+            this.btnClean.Text = "Cleanup";
+            this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.button8_Click);
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(984, 862);
+            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.CleanupLogsLBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1168,5 +1181,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblNotDetected;
         private System.Windows.Forms.CheckBox cbWindowsDefScanHistory;
+        private System.Windows.Forms.Button btnClean;
     }
 }
