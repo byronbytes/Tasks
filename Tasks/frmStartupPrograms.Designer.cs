@@ -64,7 +64,7 @@ namespace Tasks
             this.StartupProcesses.HideSelection = false;
             this.StartupProcesses.Location = new System.Drawing.Point(12, 12);
             this.StartupProcesses.Name = "StartupProcesses";
-            this.StartupProcesses.Size = new System.Drawing.Size(915, 507);
+            this.StartupProcesses.Size = new System.Drawing.Size(984, 507);
             this.StartupProcesses.TabIndex = 0;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
@@ -91,19 +91,19 @@ namespace Tasks
             this.removeToolStripMenuItem,
             this.moreInfoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(127, 48);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.removeToolStripMenuItem.Text = "Remove";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // moreInfoToolStripMenuItem
             // 
             this.moreInfoToolStripMenuItem.Name = "moreInfoToolStripMenuItem";
-            this.moreInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.moreInfoToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.moreInfoToolStripMenuItem.Text = "More Info";
             this.moreInfoToolStripMenuItem.Click += new System.EventHandler(this.moreInfoToolStripMenuItem_Click);
             // 
@@ -111,7 +111,7 @@ namespace Tasks
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(648, 601);
+            this.button1.Location = new System.Drawing.Point(706, 634);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 37);
             this.button1.TabIndex = 1;
@@ -124,7 +124,7 @@ namespace Tasks
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button2.Location = new System.Drawing.Point(804, 601);
+            this.button2.Location = new System.Drawing.Point(859, 634);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 37);
             this.button2.TabIndex = 2;
@@ -137,7 +137,7 @@ namespace Tasks
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(12, 601);
+            this.button3.Location = new System.Drawing.Point(12, 634);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(161, 37);
             this.button3.TabIndex = 3;
@@ -154,7 +154,7 @@ namespace Tasks
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(822, 568);
+            this.txtFileName.Location = new System.Drawing.Point(877, 599);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(119, 15);
             this.txtFileName.TabIndex = 4;
@@ -165,7 +165,7 @@ namespace Tasks
             // 
             this.txtTargetPath.AutoSize = true;
             this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTargetPath.Location = new System.Drawing.Point(822, 583);
+            this.txtTargetPath.Location = new System.Drawing.Point(871, 614);
             this.txtTargetPath.Name = "txtTargetPath";
             this.txtTargetPath.Size = new System.Drawing.Size(125, 15);
             this.txtTargetPath.TabIndex = 5;
@@ -176,7 +176,7 @@ namespace Tasks
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(179, 601);
+            this.button4.Location = new System.Drawing.Point(179, 634);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(161, 37);
             this.button4.TabIndex = 6;
@@ -190,7 +190,7 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(953, 648);
+            this.ClientSize = new System.Drawing.Size(1008, 683);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtTargetPath);
             this.Controls.Add(this.txtFileName);

@@ -595,15 +595,16 @@ namespace Tasks
 
             }
 
-
             WriteCleanupSummary();
+
+
         }
    
         private void Tabs_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab.Text == "Browser Extensions") // i dont want it to show up in the extensions thing because i'll use a diff button to make the code less messy
             {
-                btnCleanup.Visible = false;
+               btnCleanup.Visible = false;
 
             }
             else

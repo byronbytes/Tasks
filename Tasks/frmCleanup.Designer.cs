@@ -51,7 +51,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnCleanup = new System.Windows.Forms.Button();
             this.lblNotDetected = new System.Windows.Forms.Label();
             this.cbChromeSavedPasswords = new System.Windows.Forms.CheckBox();
             this.cbEdgeSessions = new System.Windows.Forms.CheckBox();
@@ -95,7 +94,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnClean = new System.Windows.Forms.Button();
+            this.btnCleanup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -180,7 +179,7 @@
             this.cbExplorerDownloads.AutoSize = true;
             this.cbExplorerDownloads.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbExplorerDownloads.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbExplorerDownloads.Location = new System.Drawing.Point(12, 515);
+            this.cbExplorerDownloads.Location = new System.Drawing.Point(362, 94);
             this.cbExplorerDownloads.Name = "cbExplorerDownloads";
             this.cbExplorerDownloads.Size = new System.Drawing.Size(133, 21);
             this.cbExplorerDownloads.TabIndex = 1;
@@ -203,9 +202,9 @@
             this.CleanupLogsLBox.ItemHeight = 17;
             this.CleanupLogsLBox.Items.AddRange(new object[] {
             "Cleanup Logs:"});
-            this.CleanupLogsLBox.Location = new System.Drawing.Point(8, 819);
+            this.CleanupLogsLBox.Location = new System.Drawing.Point(8, 657);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(134, 36);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(178, 19);
             this.CleanupLogsLBox.TabIndex = 1;
             this.CleanupLogsLBox.Visible = false;
             // 
@@ -234,11 +233,11 @@
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.HotTrack = true;
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.Location = new System.Drawing.Point(8, 12);
+            this.tabControl1.Location = new System.Drawing.Point(8, 5);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(964, 790);
+            this.tabControl1.Size = new System.Drawing.Size(988, 621);
             this.tabControl1.TabIndex = 36;
             // 
             // tabPage1
@@ -271,7 +270,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(956, 757);
+            this.tabPage1.Size = new System.Drawing.Size(980, 588);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
@@ -294,7 +293,7 @@
             this.cbExplorerIconCache.AutoSize = true;
             this.cbExplorerIconCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbExplorerIconCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbExplorerIconCache.Location = new System.Drawing.Point(12, 575);
+            this.cbExplorerIconCache.Location = new System.Drawing.Point(362, 154);
             this.cbExplorerIconCache.Name = "cbExplorerIconCache";
             this.cbExplorerIconCache.Size = new System.Drawing.Size(90, 21);
             this.cbExplorerIconCache.TabIndex = 35;
@@ -308,7 +307,7 @@
             this.cbExplorerThumbCache.AutoSize = true;
             this.cbExplorerThumbCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbExplorerThumbCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbExplorerThumbCache.Location = new System.Drawing.Point(12, 545);
+            this.cbExplorerThumbCache.Location = new System.Drawing.Point(362, 124);
             this.cbExplorerThumbCache.Name = "cbExplorerThumbCache";
             this.cbExplorerThumbCache.Size = new System.Drawing.Size(126, 21);
             this.cbExplorerThumbCache.TabIndex = 34;
@@ -380,7 +379,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(124, 383);
+            this.button2.Location = new System.Drawing.Point(716, 97);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 24);
             this.button2.TabIndex = 29;
@@ -396,7 +395,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(124, 353);
+            this.button1.Location = new System.Drawing.Point(716, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 24);
             this.button1.TabIndex = 28;
@@ -409,7 +408,7 @@
             this.cbExplorerRecents.AutoSize = true;
             this.cbExplorerRecents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbExplorerRecents.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbExplorerRecents.Location = new System.Drawing.Point(12, 485);
+            this.cbExplorerRecents.Location = new System.Drawing.Point(362, 64);
             this.cbExplorerRecents.Name = "cbExplorerRecents";
             this.cbExplorerRecents.Size = new System.Drawing.Size(95, 21);
             this.cbExplorerRecents.TabIndex = 24;
@@ -422,7 +421,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Tasks.Properties.Resources.Terminal;
-            this.pictureBox7.Location = new System.Drawing.Point(113, 312);
+            this.pictureBox7.Location = new System.Drawing.Point(705, 26);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(32, 29);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -434,7 +433,7 @@
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(12, 312);
+            this.label4.Location = new System.Drawing.Point(604, 26);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(72, 25);
@@ -446,7 +445,7 @@
             this.cbSystemARPCache.AutoSize = true;
             this.cbSystemARPCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSystemARPCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbSystemARPCache.Location = new System.Drawing.Point(12, 385);
+            this.cbSystemARPCache.Location = new System.Drawing.Point(604, 99);
             this.cbSystemARPCache.Name = "cbSystemARPCache";
             this.cbSystemARPCache.Size = new System.Drawing.Size(89, 21);
             this.cbSystemARPCache.TabIndex = 21;
@@ -459,7 +458,7 @@
             this.cbSystemDNSCache.AutoSize = true;
             this.cbSystemDNSCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSystemDNSCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbSystemDNSCache.Location = new System.Drawing.Point(12, 355);
+            this.cbSystemDNSCache.Location = new System.Drawing.Point(604, 69);
             this.cbSystemDNSCache.Name = "cbSystemDNSCache";
             this.cbSystemDNSCache.Size = new System.Drawing.Size(92, 21);
             this.cbSystemDNSCache.TabIndex = 20;
@@ -470,7 +469,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Tasks.Properties.Resources.Explorer;
-            this.pictureBox6.Location = new System.Drawing.Point(112, 443);
+            this.pictureBox6.Location = new System.Drawing.Point(462, 22);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(32, 29);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -482,7 +481,7 @@
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 447);
+            this.label1.Location = new System.Drawing.Point(362, 26);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(81, 25);
@@ -492,7 +491,6 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage2.Controls.Add(this.btnCleanup);
             this.tabPage2.Controls.Add(this.lblNotDetected);
             this.tabPage2.Controls.Add(this.cbChromeSavedPasswords);
             this.tabPage2.Controls.Add(this.cbEdgeSessions);
@@ -520,21 +518,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(956, 757);
+            this.tabPage2.Size = new System.Drawing.Size(980, 588);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
-            // 
-            // btnCleanup
-            // 
-            this.btnCleanup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCleanup.ForeColor = System.Drawing.Color.Black;
-            this.btnCleanup.Location = new System.Drawing.Point(758, 637);
-            this.btnCleanup.Name = "btnCleanup";
-            this.btnCleanup.Size = new System.Drawing.Size(155, 0);
-            this.btnCleanup.TabIndex = 18;
-            this.btnCleanup.Text = "Clean";
-            this.btnCleanup.UseVisualStyleBackColor = true;
             // 
             // lblNotDetected
             // 
@@ -848,7 +834,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(956, 757);
+            this.tabPage3.Size = new System.Drawing.Size(980, 588);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
             // 
@@ -856,7 +842,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(12, 100);
+            this.label17.Location = new System.Drawing.Point(16, 87);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(432, 40);
             this.label17.TabIndex = 44;
@@ -868,7 +854,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(7, 63);
+            this.label14.Location = new System.Drawing.Point(10, 50);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(120, 37);
             this.label14.TabIndex = 43;
@@ -899,9 +885,9 @@
             this.ExtensionsBox.ForeColor = System.Drawing.Color.White;
             this.ExtensionsBox.FullRowSelect = true;
             this.ExtensionsBox.HideSelection = false;
-            this.ExtensionsBox.Location = new System.Drawing.Point(16, 253);
+            this.ExtensionsBox.Location = new System.Drawing.Point(10, 236);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(860, 444);
+            this.ExtensionsBox.Size = new System.Drawing.Size(940, 346);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -926,7 +912,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(0, 132);
+            this.label16.Location = new System.Drawing.Point(3, 127);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(683, 17);
             this.label16.TabIndex = 41;
@@ -937,7 +923,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(12, 166);
+            this.label15.Location = new System.Drawing.Point(10, 157);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(417, 23);
             this.label15.TabIndex = 40;
@@ -950,7 +936,7 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(16, 208);
+            this.comboBox1.Location = new System.Drawing.Point(10, 191);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(350, 28);
             this.comboBox1.TabIndex = 39;
@@ -960,7 +946,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(7, 3);
+            this.label13.Location = new System.Drawing.Point(10, 12);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(413, 38);
             this.label13.TabIndex = 0;
@@ -979,7 +965,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(956, 757);
+            this.tabPage4.Size = new System.Drawing.Size(980, 588);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
@@ -988,11 +974,11 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(3, 579);
+            this.textBox1.Location = new System.Drawing.Point(12, 446);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(946, 135);
+            this.textBox1.Size = new System.Drawing.Size(774, 136);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -1051,7 +1037,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(6, 3);
+            this.label5.Location = new System.Drawing.Point(12, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(515, 38);
             this.label5.TabIndex = 0;
@@ -1062,25 +1048,25 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
-            // btnClean
+            // btnCleanup
             // 
-            this.btnClean.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClean.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnClean.Location = new System.Drawing.Point(799, 814);
-            this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(173, 41);
-            this.btnClean.TabIndex = 37;
-            this.btnClean.Text = "Cleanup";
-            this.btnClean.UseVisualStyleBackColor = true;
-            this.btnClean.Click += new System.EventHandler(this.button8_Click);
+            this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCleanup.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCleanup.Location = new System.Drawing.Point(823, 632);
+            this.btnCleanup.Name = "btnCleanup";
+            this.btnCleanup.Size = new System.Drawing.Size(173, 44);
+            this.btnCleanup.TabIndex = 37;
+            this.btnCleanup.Text = "Cleanup";
+            this.btnCleanup.UseVisualStyleBackColor = true;
+            this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
             // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(984, 862);
-            this.Controls.Add(this.btnClean);
+            this.ClientSize = new System.Drawing.Size(1008, 683);
+            this.Controls.Add(this.btnCleanup);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.CleanupLogsLBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1120,7 +1106,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button btnCleanup;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox cbSystemDNSCache;
@@ -1132,7 +1117,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1181,6 +1165,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblNotDetected;
         private System.Windows.Forms.CheckBox cbWindowsDefScanHistory;
-        private System.Windows.Forms.Button btnClean;
+        private System.Windows.Forms.Button btnCleanup;
+        private System.Windows.Forms.Label label16;
     }
 }

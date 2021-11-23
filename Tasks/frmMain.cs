@@ -46,5 +46,10 @@ namespace Tasks {
             ShowForm(new frmStartupPrograms());
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmTaskManager());
+        }
     }
 }
