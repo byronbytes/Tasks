@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// TODO: Cleanup and change the code style
 namespace Tasks.Properties {
     
     
@@ -21,6 +20,18 @@ namespace Tasks.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool CleanupMessageBox {
+            get {
+                return ((bool)(this["CleanupMessageBox"]));
+            }
+            set {
+                this["CleanupMessageBox"] = value;
             }
         }
     }

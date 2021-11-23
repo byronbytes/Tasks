@@ -73,6 +73,11 @@ namespace Tasks
               CleanupLogsLBox.Items.Cast<string>().ToArray()
             );
 
+            if (Properties.Settings.Default.CleanupMessageBox == true)
+            {
+                MessageBox.Show("Cleanup has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt");
+            }
+
         }
 
         private void button8_Click(object sender, EventArgs e)

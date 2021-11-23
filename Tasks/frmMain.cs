@@ -51,5 +51,10 @@ namespace Tasks {
         {
             ShowForm(new frmTaskManager());
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmSettings());
+        }
     }
 }
