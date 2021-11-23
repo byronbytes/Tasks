@@ -40,5 +40,15 @@ namespace Tasks
             }
    
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox1.SelectedText == "English (en-us)")
+            {
+                // Do nothing right now.
+            }
+
+
+        }
     }
 }
