@@ -43,7 +43,12 @@ namespace Tasks
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedText == "English (en-us)")
+            if(comboBox1.SelectedText == "English")
+            {
+                // Do nothing right now.
+            }
+
+            if(comboBox1.SelectedText == "Spanish")
             {
                 // Do nothing right now.
             }

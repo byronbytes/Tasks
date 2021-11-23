@@ -32,6 +32,7 @@ namespace Tasks
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -39,7 +40,6 @@ namespace Tasks
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,11 +62,23 @@ namespace Tasks
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(152, 714);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Tomato;
+            this.label2.Location = new System.Drawing.Point(55, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "BETA";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Tasks.Properties.Resources.Settings;
-            this.pictureBox4.Location = new System.Drawing.Point(55, 544);
+            this.pictureBox4.Location = new System.Drawing.Point(55, 540);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.TabIndex = 13;
@@ -76,7 +88,7 @@ namespace Tasks
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Tasks.Properties.Resources.TaskManagerWhite1;
-            this.pictureBox3.Location = new System.Drawing.Point(55, 399);
+            this.pictureBox3.Location = new System.Drawing.Point(55, 400);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.TabIndex = 12;
@@ -87,7 +99,7 @@ namespace Tasks
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Tasks.Properties.Resources.Startup_Programs_White;
-            this.pictureBox2.Location = new System.Drawing.Point(55, 236);
+            this.pictureBox2.Location = new System.Drawing.Point(55, 235);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 11;
@@ -98,7 +110,7 @@ namespace Tasks
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tasks.Properties.Resources.Cleanup_50x50_White;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(55, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 6;
@@ -125,17 +137,6 @@ namespace Tasks
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1024, 734);
             this.panel2.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Tomato;
-            this.label2.Location = new System.Drawing.Point(55, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 17);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "BETA";
             // 
             // frmMain
             // 

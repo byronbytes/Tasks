@@ -56,5 +56,10 @@ namespace Tasks {
         {
             ShowForm(new frmSettings());
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
