@@ -974,11 +974,11 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(12, 446);
+            this.textBox1.Location = new System.Drawing.Point(6, 446);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(774, 136);
+            this.textBox1.Size = new System.Drawing.Size(738, 136);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
