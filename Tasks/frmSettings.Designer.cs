@@ -56,8 +56,9 @@ namespace Tasks
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -108,9 +109,9 @@ namespace Tasks
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label14.Location = new System.Drawing.Point(20, 172);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(320, 15);
+            this.label14.Size = new System.Drawing.Size(173, 15);
             this.label14.TabIndex = 10;
-            this.label14.Text = "Gives the user a messagebox when the cleanup is successful.";
+            this.label14.Text = "Second placeholder description.";
             // 
             // checkBox2
             // 
@@ -118,9 +119,9 @@ namespace Tasks
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.checkBox2.Location = new System.Drawing.Point(20, 144);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(249, 25);
+            this.checkBox2.Size = new System.Drawing.Size(185, 25);
             this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Show Cleanup Log MessageBox";
+            this.checkBox2.Text = "Placeholder Setting #2";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label13
@@ -150,13 +151,14 @@ namespace Tasks
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "English",
             "Spanish"});
             this.comboBox1.Location = new System.Drawing.Point(20, 312);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(209, 29);
+            this.comboBox1.Size = new System.Drawing.Size(221, 29);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -268,7 +270,7 @@ namespace Tasks
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel2.Location = new System.Drawing.Point(311, 116);
+            this.linkLabel2.Location = new System.Drawing.Point(294, 116);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(65, 21);
             this.linkLabel2.TabIndex = 41;
@@ -338,7 +340,7 @@ namespace Tasks
             "Solirs (@Solirs)"});
             this.listBox1.Location = new System.Drawing.Point(15, 173);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(331, 360);
+            this.listBox1.Size = new System.Drawing.Size(331, 460);
             this.listBox1.TabIndex = 36;
             // 
             // label4
@@ -372,13 +374,13 @@ namespace Tasks
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Version: 3.0.0 - Build 112221";
+            this.label2.Text = "Version: 3.0.0 - Build 112321";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::Tasks.Properties.Resources.Tasks_256x256_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -399,6 +401,7 @@ namespace Tasks
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
@@ -407,6 +410,16 @@ namespace Tasks
             this.tabPage3.Size = new System.Drawing.Size(987, 648);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check For Updates";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label17.Location = new System.Drawing.Point(7, 96);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(176, 21);
+            this.label17.TabIndex = 33;
+            this.label17.Text = "Your version: 3.0.0-dev";
             // 
             // label16
             // 
@@ -420,14 +433,15 @@ namespace Tasks
             this.label16.Text = "Tasks has a new experimental feature that checks for updates and updates automati" +
     "cally.\r\nThis feautre might have multiple bugs.";
             // 
-            // label17
+            // button1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(7, 104);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(176, 21);
-            this.label17.TabIndex = 33;
-            this.label17.Text = "Your version: 3.0.0-dev";
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(189, 93);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 29);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Check For Updates";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmSettings
             // 
@@ -482,5 +496,6 @@ namespace Tasks
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button1;
     }
 }
