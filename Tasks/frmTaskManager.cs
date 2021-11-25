@@ -41,11 +41,6 @@ namespace Tasks {
             {
                 MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            //if(listview1.SelectedItems[0].SubItems[0].Text == "Tasks")
-            // {
-            // MessageBox.Show("You cannot taskkill Tasks.");
-            // }
         }
 
 

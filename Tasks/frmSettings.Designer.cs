@@ -56,9 +56,9 @@ namespace Tasks
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -109,9 +109,10 @@ namespace Tasks
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label14.Location = new System.Drawing.Point(20, 172);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(173, 15);
+            this.label14.Size = new System.Drawing.Size(373, 30);
             this.label14.TabIndex = 10;
-            this.label14.Text = "Second placeholder description.";
+            this.label14.Text = "When you create a new task in Task Manager, there will be a dropdown\r\n of the las" +
+    "t 5 tasks you created. Uncheck this setting to disable this.";
             // 
             // checkBox2
             // 
@@ -119,9 +120,9 @@ namespace Tasks
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.checkBox2.Location = new System.Drawing.Point(20, 144);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(185, 25);
+            this.checkBox2.Size = new System.Drawing.Size(257, 25);
             this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Placeholder Setting #2";
+            this.checkBox2.Text = "Show Recently Created Tasks List";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label13
@@ -190,7 +191,7 @@ namespace Tasks
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(7, 236);
+            this.label9.Location = new System.Drawing.Point(7, 251);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(280, 21);
             this.label9.TabIndex = 3;
@@ -201,7 +202,7 @@ namespace Tasks
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(7, 204);
+            this.label10.Location = new System.Drawing.Point(7, 219);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(167, 32);
             this.label10.TabIndex = 2;
@@ -255,13 +256,13 @@ namespace Tasks
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label15.Location = new System.Drawing.Point(354, 603);
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label15.Location = new System.Drawing.Point(516, 603);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(627, 42);
+            this.label15.Size = new System.Drawing.Size(465, 42);
             this.label15.TabIndex = 11;
-            this.label15.Text = "This is a confidential build of Tasks. Since this is also experimental, edits mad" +
-    "e in this build\r\nmay not reflect the newer releases.";
+            this.label15.Text = "This is a confidential build of Tasks.\r\nFeatures in confidential versions may not" +
+    " represent newer releases.";
             // 
             // linkLabel2
             // 
@@ -374,7 +375,7 @@ namespace Tasks
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Version: 3.0.0 - Build 112321";
+            this.label2.Text = "Version: 3.0.0 - Build 112521";
             // 
             // pictureBox1
             // 
@@ -411,6 +412,16 @@ namespace Tasks
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check For Updates";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(189, 93);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 29);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Check For Updates";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -432,16 +443,6 @@ namespace Tasks
             this.label16.TabIndex = 32;
             this.label16.Text = "Tasks has a new experimental feature that checks for updates and updates automati" +
     "cally.\r\nThis feautre might have multiple bugs.";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(189, 93);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 29);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Check For Updates";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmSettings
             // 

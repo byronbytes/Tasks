@@ -35,6 +35,7 @@ namespace Tasks
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@ namespace Tasks
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(12, 57);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(431, 35);
+            this.textBox1.Size = new System.Drawing.Size(384, 35);
             this.textBox1.TabIndex = 0;
             // 
             // button1
@@ -75,6 +76,7 @@ namespace Tasks
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(-9, 133);
@@ -85,6 +87,16 @@ namespace Tasks
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(21, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(141, 30);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Browse";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // frmCreateNewProcess
             // 
@@ -110,5 +122,6 @@ namespace Tasks
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button3;
     }
 }

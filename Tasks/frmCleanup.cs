@@ -600,6 +600,11 @@ namespace Tasks
 
             }
 
+            if(cbWindowsDefScanHistory.Checked)
+            {
+                
+            }
+
             WriteCleanupSummary();
 
 

@@ -840,19 +840,19 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(10, 51);
+            this.label17.Location = new System.Drawing.Point(10, 52);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(432, 40);
+            this.label17.Size = new System.Drawing.Size(491, 40);
             this.label17.TabIndex = 44;
-            this.label17.Text = "Tasks will close the browsers before removing any extensions. \r\nMake sure you sav" +
-    "e your work before using this!";
+            this.label17.Text = "Tasks will close any opened browsers before removing any extensions. \r\nSave your " +
+    "work before using this!";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(10, 14);
+            this.label14.Location = new System.Drawing.Point(10, 15);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(120, 37);
             this.label14.TabIndex = 43;
@@ -910,12 +910,13 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(3, 102);
+            this.label16.Location = new System.Drawing.Point(10, 107);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(683, 17);
+            this.label16.Size = new System.Drawing.Size(943, 17);
             this.label16.TabIndex = 41;
             this.label16.Text = "_________________________________________________________________________________" +
-    "______________________________________________________";
+    "________________________________________________________________________________" +
+    "__________________________";
             // 
             // label15
             // 
@@ -965,7 +966,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(738, 136);
+            this.textBox1.Size = new System.Drawing.Size(750, 136);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
