@@ -105,6 +105,7 @@ namespace Tasks {
                     ListViewItem.ListViewSubItem lvsi = new ListViewItem.ListViewSubItem();
                     ListViewItem.ListViewSubItem lvsisi = new ListViewItem.ListViewSubItem();
                     ListViewItem.ListViewSubItem lvsisi2 = new ListViewItem.ListViewSubItem();
+                    ListViewItem.ListViewSubItem lvsisi3 = new ListViewItem.ListViewSubItem();
 
                     lvi.Text = ProcessInfo.TargetProcess.ProcessName;
                     lvi.Tag = ProcessInfo.ComandLine; // Commandline in Item Tag
@@ -119,11 +120,17 @@ namespace Tasks {
                     lvsisi.Text = ProcessInfo.TargetProcess.Id.ToString(); // Process PID
                     lvi.SubItems.Add(lvsisi);
 
+
                     Task<double> ProcessCPUTask = Task.Run(async () => await GetProcessCPUPercentUsage(ProcessInfo.TargetProcess));
 
                     ProcessCPUTask.GetAwaiter().OnCompleted(() => SetProcessCPU(lvsisi2, ProcessCPUTask.Result.ToString()));
 
                     lvi.SubItems.Add(lvsisi2);
+
+
+                    lvsisi3.Text = ProcessInfo.Status.ToString(); // Hopefully Process Description
+                    lvi.SubItems.Add(lvsisi3);
+
 
                     this.listView1.Items.Add(lvi);
 
@@ -154,7 +161,7 @@ namespace Tasks {
             try
             {
 
-                var wmiQueryString = "SELECT ProcessId, ExecutablePath, CommandLine, Description FROM Win32_Process";
+                var wmiQueryString = "SELECT ProcessId, ExecutablePath, CommandLine, Status FROM Win32_Process";
 
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher(wmiQueryString);
 
@@ -180,9 +187,9 @@ namespace Tasks {
                             InfoProc.ComandLine = QueryObject["CommandLine"].ToString();
                         }
 
-                        if (QueryObject["Description"] != null)
+                        if (QueryObject["Status"] != null)
                         {
-                            InfoProc.ComandLine = QueryObject["Description"].ToString();
+                            InfoProc.ComandLine = QueryObject["Status"].ToString();
                         }
 
                         TempList.Add(InfoProc);
@@ -242,7 +249,7 @@ namespace Tasks {
             public Process TargetProcess = null;
             public string Path = string.Empty;
             public string ComandLine = string.Empty;
-            public string Description = string.Empty;
+            public string Status = string.Empty;
         }
 
 
