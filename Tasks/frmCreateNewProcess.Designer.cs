@@ -89,7 +89,7 @@ namespace Tasks
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(21, 15);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 30);
+            this.button3.Size = new System.Drawing.Size(159, 30);
             this.button3.TabIndex = 4;
             this.button3.Text = "Recently Created";
             this.button3.UseVisualStyleBackColor = true;

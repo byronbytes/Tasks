@@ -222,14 +222,6 @@ namespace Tasks
 
             if (cbDiscordCache.Checked) //Discord cache
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cache");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Code Cache");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\GPUCache");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Discord Cache Deleted.");
-            }
-
-
-            if (cbDiscordCookies.Checked) //Discord cookies
                 try
                 {
 
@@ -237,13 +229,17 @@ namespace Tasks
                     File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies-journal");
                     CleanupLogsLBox.Items.Add("Discord Cookies Deleted.");
 
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cache");
+                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Code Cache");
+                    var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\GPUCache");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Discord Cache Deleted.");
                 }
                 catch (Exception ex)
                 {
                     CleanupLogsLBox.Items.Add("Error deleting Discord Cookies." + ex);
                 }
 
-            //Firefox
+            }
 
             if (cbFirefoxCache.Checked) //Firefox cache
             {
@@ -954,6 +950,9 @@ namespace Tasks
             catch { Console.WriteLine("An error has occurred."); }
         }
 
-      
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

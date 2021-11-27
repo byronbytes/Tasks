@@ -54,7 +54,6 @@
             this.lblNotDetected = new System.Windows.Forms.Label();
             this.cbChromeSavedPasswords = new System.Windows.Forms.CheckBox();
             this.cbEdgeSessions = new System.Windows.Forms.CheckBox();
-            this.cbDiscordCookies = new System.Windows.Forms.CheckBox();
             this.cbEdgeSearchHistory = new System.Windows.Forms.CheckBox();
             this.cbEdgeCookies = new System.Windows.Forms.CheckBox();
             this.cbEdgeCache = new System.Windows.Forms.CheckBox();
@@ -73,7 +72,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cbDiscordCache = new System.Windows.Forms.CheckBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -103,7 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
@@ -493,7 +490,6 @@
             this.tabPage2.Controls.Add(this.lblNotDetected);
             this.tabPage2.Controls.Add(this.cbChromeSavedPasswords);
             this.tabPage2.Controls.Add(this.cbEdgeSessions);
-            this.tabPage2.Controls.Add(this.cbDiscordCookies);
             this.tabPage2.Controls.Add(this.cbEdgeSearchHistory);
             this.tabPage2.Controls.Add(this.cbEdgeCookies);
             this.tabPage2.Controls.Add(this.cbEdgeCache);
@@ -512,7 +508,6 @@
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.cbDiscordCache);
-            this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
@@ -561,20 +556,6 @@
             this.cbEdgeSessions.Text = "Sessions";
             this.cbEdgeSessions.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbEdgeSessions.UseVisualStyleBackColor = true;
-            // 
-            // cbDiscordCookies
-            // 
-            this.cbDiscordCookies.AutoSize = true;
-            this.cbDiscordCookies.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbDiscordCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbDiscordCookies.ForeColor = System.Drawing.Color.White;
-            this.cbDiscordCookies.Location = new System.Drawing.Point(19, 340);
-            this.cbDiscordCookies.Name = "cbDiscordCookies";
-            this.cbDiscordCookies.Size = new System.Drawing.Size(73, 21);
-            this.cbDiscordCookies.TabIndex = 43;
-            this.cbDiscordCookies.Text = "Cookies";
-            this.cbDiscordCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbDiscordCookies.UseVisualStyleBackColor = true;
             // 
             // cbEdgeSearchHistory
             // 
@@ -787,11 +768,12 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(51, 275);
+            this.label6.Location = new System.Drawing.Point(13, 279);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 25);
+            this.label6.Size = new System.Drawing.Size(168, 25);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Discord";
+            this.label6.Text = "Other Applications";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // cbDiscordCache
             // 
@@ -799,23 +781,14 @@
             this.cbDiscordCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDiscordCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbDiscordCache.ForeColor = System.Drawing.Color.White;
-            this.cbDiscordCache.Location = new System.Drawing.Point(19, 310);
+            this.cbDiscordCache.Location = new System.Drawing.Point(16, 318);
             this.cbDiscordCache.Name = "cbDiscordCache";
-            this.cbDiscordCache.Size = new System.Drawing.Size(62, 21);
+            this.cbDiscordCache.Size = new System.Drawing.Size(72, 21);
             this.cbDiscordCache.TabIndex = 15;
-            this.cbDiscordCache.Text = "Cache";
+            this.cbDiscordCache.Text = "Discord";
             this.cbDiscordCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbDiscordCache, "Cleans Discord\'s cache and cookies.");
             this.cbDiscordCache.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Tasks.Properties.Resources.Discord;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 275);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
             // 
             // tabPage3
             // 
@@ -1073,7 +1046,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -1125,8 +1097,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox cbDiscordCache;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.CheckBox cbDiscordCookies;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView ExtensionsBox;
         private System.Windows.Forms.ColumnHeader ExtName;
