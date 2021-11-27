@@ -124,6 +124,7 @@ namespace Tasks
             this.checkBox2.TabIndex = 9;
             this.checkBox2.Text = "Show Recently Created Tasks List";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label13
             // 
@@ -375,7 +376,7 @@ namespace Tasks
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Version: 3.0.0 - Build 112521";
+            this.label2.Text = "Version: 3.0.0 - Build 112721";
             // 
             // pictureBox1
             // 

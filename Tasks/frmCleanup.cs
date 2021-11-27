@@ -217,10 +217,7 @@ namespace Tasks
             }
 
 
-
-            // Discord
-
-            if (cbDiscordCache.Checked) //Discord cache
+            if (cbDiscord.Checked) //Discord
             {
                 try
                 {
@@ -241,7 +238,7 @@ namespace Tasks
 
             }
 
-            if (cbFirefoxCache.Checked) //Firefox cache
+            if (cbFirefoxCache.Checked) //Firefox Cache
             {
                 try
                 {
@@ -898,8 +895,7 @@ namespace Tasks
 
             if (!Directory.Exists(Dirs.discordDir))
             {
-                cbDiscordCache.Enabled = false;
-                cbDiscordCookies.Enabled = false;
+                cbDiscord.Enabled = false;
                 lblNotDetected.Visible = true;
 
             }

@@ -71,7 +71,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbDiscordCache = new System.Windows.Forms.CheckBox();
+            this.cbDiscord = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -507,7 +507,7 @@
             this.tabPage2.Controls.Add(this.pictureBox4);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.cbDiscordCache);
+            this.tabPage2.Controls.Add(this.cbDiscord);
             this.tabPage2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
@@ -775,20 +775,20 @@
             this.label6.Text = "Other Applications";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // cbDiscordCache
+            // cbDiscord
             // 
-            this.cbDiscordCache.AutoSize = true;
-            this.cbDiscordCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbDiscordCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbDiscordCache.ForeColor = System.Drawing.Color.White;
-            this.cbDiscordCache.Location = new System.Drawing.Point(16, 318);
-            this.cbDiscordCache.Name = "cbDiscordCache";
-            this.cbDiscordCache.Size = new System.Drawing.Size(72, 21);
-            this.cbDiscordCache.TabIndex = 15;
-            this.cbDiscordCache.Text = "Discord";
-            this.cbDiscordCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbDiscordCache, "Cleans Discord\'s cache and cookies.");
-            this.cbDiscordCache.UseVisualStyleBackColor = true;
+            this.cbDiscord.AutoSize = true;
+            this.cbDiscord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbDiscord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbDiscord.ForeColor = System.Drawing.Color.White;
+            this.cbDiscord.Location = new System.Drawing.Point(16, 318);
+            this.cbDiscord.Name = "cbDiscord";
+            this.cbDiscord.Size = new System.Drawing.Size(72, 21);
+            this.cbDiscord.TabIndex = 15;
+            this.cbDiscord.Text = "Discord";
+            this.cbDiscord.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbDiscord, "Cleans Discord\'s cache and cookies.");
+            this.cbDiscord.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -1096,7 +1096,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox cbDiscordCache;
+        private System.Windows.Forms.CheckBox cbDiscord;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView ExtensionsBox;
         private System.Windows.Forms.ColumnHeader ExtName;

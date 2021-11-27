@@ -55,5 +55,17 @@ namespace Tasks
 
 
         }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+              // Change Setting WIP.
+            }
+            if (checkBox2.Checked == false)
+            {
+              // Change Setting WIP.
+            }
+        }
     }
 }
