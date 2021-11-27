@@ -194,9 +194,9 @@ namespace Tasks
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(7, 251);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(280, 21);
+            this.label9.Size = new System.Drawing.Size(299, 21);
             this.label9.TabIndex = 3;
-            this.label9.Text = "Options to make Tasks look more fancy.";
+            this.label9.Text = "Options to make Tasks feel more personal.";
             // 
             // label10
             // 
@@ -416,7 +416,7 @@ namespace Tasks
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(189, 93);
+            this.button1.Location = new System.Drawing.Point(166, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 29);
             this.button1.TabIndex = 34;
@@ -429,9 +429,9 @@ namespace Tasks
             this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label17.Location = new System.Drawing.Point(7, 96);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(176, 21);
+            this.label17.Size = new System.Drawing.Size(143, 21);
             this.label17.TabIndex = 33;
-            this.label17.Text = "Your version: 3.0.0-dev";
+            this.label17.Text = "Your version: 3.0.0";
             // 
             // label16
             // 

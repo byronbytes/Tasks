@@ -38,7 +38,6 @@ namespace Tasks
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -54,8 +53,7 @@ namespace Tasks
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader6});
+            this.columnHeader4});
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.FullRowSelect = true;
             listViewGroup1.Header = "Running Apps";
@@ -96,11 +94,6 @@ namespace Tasks
             // 
             this.columnHeader4.Text = "CPU Usage";
             this.columnHeader4.Width = 110;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Process Description";
-            this.columnHeader6.Width = 150;
             // 
             // imageList1
             // 
@@ -176,7 +169,6 @@ namespace Tasks
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

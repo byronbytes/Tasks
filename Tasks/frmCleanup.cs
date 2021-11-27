@@ -593,13 +593,7 @@ namespace Tasks
 
             }
 
-            if(cbWindowsDefScanHistory.Checked)
-            {
-                
-            }
-
             WriteCleanupSummary();
-
 
         }
    
@@ -946,9 +940,5 @@ namespace Tasks
             catch { Console.WriteLine("An error has occurred."); }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

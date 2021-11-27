@@ -34,7 +34,6 @@
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.cbWindowsDefScanHistory = new System.Windows.Forms.CheckBox();
             this.cbExplorerIconCache = new System.Windows.Forms.CheckBox();
             this.cbExplorerThumbCache = new System.Windows.Forms.CheckBox();
             this.cbSystemErrorReporting = new System.Windows.Forms.CheckBox();
@@ -239,7 +238,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage1.Controls.Add(this.cbWindowsDefScanHistory);
             this.tabPage1.Controls.Add(this.cbExplorerIconCache);
             this.tabPage1.Controls.Add(this.cbExplorerThumbCache);
             this.tabPage1.Controls.Add(this.cbSystemErrorReporting);
@@ -268,21 +266,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(980, 588);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "System";
-            // 
-            // cbWindowsDefScanHistory
-            // 
-            this.cbWindowsDefScanHistory.AutoSize = true;
-            this.cbWindowsDefScanHistory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbWindowsDefScanHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbWindowsDefScanHistory.Location = new System.Drawing.Point(12, 271);
-            this.cbWindowsDefScanHistory.Name = "cbWindowsDefScanHistory";
-            this.cbWindowsDefScanHistory.Size = new System.Drawing.Size(214, 21);
-            this.cbWindowsDefScanHistory.TabIndex = 36;
-            this.cbWindowsDefScanHistory.Text = "Windows Defender Scan History";
-            this.cbWindowsDefScanHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbWindowsDefScanHistory, "The scan history for Windows Defender.");
-            this.cbWindowsDefScanHistory.UseVisualStyleBackColor = true;
+            this.tabPage1.Text = "Cleanup";
             // 
             // cbExplorerIconCache
             // 
@@ -773,7 +757,6 @@
             this.label6.Size = new System.Drawing.Size(168, 25);
             this.label6.TabIndex = 14;
             this.label6.Text = "Other Applications";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // cbDiscord
             // 
@@ -1121,7 +1104,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblNotDetected;
-        private System.Windows.Forms.CheckBox cbWindowsDefScanHistory;
         private System.Windows.Forms.Button btnCleanup;
         private System.Windows.Forms.Label label16;
     }

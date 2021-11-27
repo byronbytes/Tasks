@@ -121,7 +121,7 @@ namespace Tasks {
                     lvi.SubItems.Add(lvsisi);
 
 
-                    Task<double> ProcessCPUTask = Task.Run(async () => await GetProcessCPUPercentUsage(ProcessInfo.TargetProcess));
+                    Task<double> ProcessCPUTask = Task.Run(async () => GetProcessCPUPercentUsage(ProcessInfo.TargetProcess));
 
                     ProcessCPUTask.GetAwaiter().OnCompleted(() => SetProcessCPU(lvsisi2, ProcessCPUTask.Result.ToString()));
 
@@ -233,7 +233,7 @@ namespace Tasks {
 
         ///     ''' ----------------------------------------------------------------------------------------------------
         [DebuggerStepThrough]
-        public async Task<double> GetProcessCPUPercentUsage(Process p)
+        public double GetProcessCPUPercentUsage(Process p)
         {
             using (PerformanceCounter perf = new PerformanceCounter("Process", "% Processor Time", p.ProcessName, true))
             {
