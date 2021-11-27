@@ -128,7 +128,6 @@ namespace Tasks {
         public class StartUpProgram {
             public string Name { get; set; }
             public string Path { get; set; }            
-            //show name in checkboxitem
             public override string ToString() { return Name; }
         }
         private void button4_Click_1(object sender, EventArgs e) { RefreshList(); }

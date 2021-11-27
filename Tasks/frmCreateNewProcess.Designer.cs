@@ -34,8 +34,8 @@ namespace Tasks
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button3 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,19 +84,19 @@ namespace Tasks
             this.panel1.Size = new System.Drawing.Size(663, 69);
             this.panel1.TabIndex = 3;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(21, 15);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 30);
+            this.button3.Size = new System.Drawing.Size(149, 30);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Browse";
+            this.button3.Text = "Recently Created";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmCreateNewProcess
             // 
