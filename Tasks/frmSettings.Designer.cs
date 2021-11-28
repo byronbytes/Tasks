@@ -31,6 +31,10 @@ namespace Tasks
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label14 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -59,6 +63,7 @@ namespace Tasks
             this.button1 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -72,17 +77,22 @@ namespace Tasks
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(1, 0);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(995, 682);
+            this.tabControl1.Size = new System.Drawing.Size(1006, 682);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage1.Controls.Add(this.label19);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.radioButton2);
+            this.tabPage1.Controls.Add(this.radioButton1);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.checkBox2);
             this.tabPage1.Controls.Add(this.label13);
@@ -98,9 +108,56 @@ namespace Tasks
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(987, 648);
+            this.tabPage1.Size = new System.Drawing.Size(998, 648);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Settings";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Location = new System.Drawing.Point(20, 417);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(155, 15);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "Changes the theme of Tasks.";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label18.Location = new System.Drawing.Point(20, 396);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(57, 21);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Theme";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radioButton2.Location = new System.Drawing.Point(167, 445);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(114, 25);
+            this.radioButton2.TabIndex = 12;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Light Theme";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radioButton1.Location = new System.Drawing.Point(20, 445);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(112, 25);
+            this.radioButton1.TabIndex = 11;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Dark Theme";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label14
             // 
@@ -249,7 +306,7 @@ namespace Tasks
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(987, 648);
+            this.tabPage2.Size = new System.Drawing.Size(998, 648);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "About";
             // 
@@ -272,7 +329,7 @@ namespace Tasks
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel2.Location = new System.Drawing.Point(294, 116);
+            this.linkLabel2.Location = new System.Drawing.Point(305, 116);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(65, 21);
             this.linkLabel2.TabIndex = 41;
@@ -299,7 +356,7 @@ namespace Tasks
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel1.Location = new System.Drawing.Point(144, 116);
+            this.linkLabel1.Location = new System.Drawing.Point(155, 116);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(117, 21);
             this.linkLabel1.TabIndex = 39;
@@ -376,7 +433,7 @@ namespace Tasks
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Version: 3.0.0 - Build 112721";
+            this.label2.Text = "Version: 3.0.0 - Build 112821";
             // 
             // pictureBox1
             // 
@@ -409,7 +466,7 @@ namespace Tasks
             this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(987, 648);
+            this.tabPage3.Size = new System.Drawing.Size(998, 648);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check For Updates";
             // 
@@ -445,6 +502,16 @@ namespace Tasks
             this.label16.Text = "Tasks has a new experimental feature that checks for updates and updates automati" +
     "cally.\r\nThis feautre might have multiple bugs.";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage4.Location = new System.Drawing.Point(4, 30);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(998, 648);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Tasks Files";
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -454,6 +521,7 @@ namespace Tasks
             this.Controls.Add(this.tabControl1);
             this.Name = "frmSettings";
             this.Text = "Settings";
+            this.Load += new System.EventHandler(this.frmSettings_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -499,5 +567,10 @@ namespace Tasks
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

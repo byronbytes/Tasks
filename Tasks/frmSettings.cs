@@ -26,6 +26,16 @@ namespace Tasks
                 checkBox1.Checked = false;
             }
 
+            if (Properties.Settings.Default.Theme == "dark")
+            {
+                radioButton1.Checked = true;
+            }
+
+            if (Properties.Settings.Default.Theme == "light")
+            {
+                radioButton2.Checked = true;
+            }
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -41,6 +51,19 @@ namespace Tasks
    
         }
 
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                // Change Setting WIP.
+            }
+            if (checkBox2.Checked == false)
+            {
+                // Change Setting WIP.
+            }
+        }
+
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(comboBox1.SelectedText == "English")
@@ -55,17 +78,25 @@ namespace Tasks
 
 
         }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        frmMain Main = new frmMain();
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked == true)
+            if(radioButton1.Checked)
             {
-              // Change Setting WIP.
+                Properties.Settings.Default.Theme = "dark";
+                Main.CheckTheme();
             }
-            if (checkBox2.Checked == false)
+
+            if(radioButton2.Checked)
             {
-              // Change Setting WIP.
+                Properties.Settings.Default.Theme = "light";
+                Main.CheckTheme();
             }
+        }
+
+        private void frmSettings_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

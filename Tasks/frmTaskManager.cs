@@ -105,7 +105,6 @@ namespace Tasks {
                     ListViewItem.ListViewSubItem lvsi = new ListViewItem.ListViewSubItem();
                     ListViewItem.ListViewSubItem lvsisi = new ListViewItem.ListViewSubItem();
                     ListViewItem.ListViewSubItem lvsisi2 = new ListViewItem.ListViewSubItem();
-                    ListViewItem.ListViewSubItem lvsisi3 = new ListViewItem.ListViewSubItem();
 
                     lvi.Text = ProcessInfo.TargetProcess.ProcessName;
                     lvi.Tag = ProcessInfo.ComandLine; // Commandline in Item Tag
@@ -127,16 +126,9 @@ namespace Tasks {
 
                     lvi.SubItems.Add(lvsisi2);
 
-
-                    lvsisi3.Text = ProcessInfo.Status.ToString(); // Hopefully Process Description
-                    lvi.SubItems.Add(lvsisi3);
-
-
                     this.listView1.Items.Add(lvi);
 
                     ID += 1;
-
-
                 }
                 catch (Exception ex)
                 {
