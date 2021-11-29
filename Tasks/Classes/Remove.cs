@@ -50,7 +50,11 @@ namespace Tasks
       public static void DeleteCleanupLogs()
       {
           //This class deletes the cleanup logs.
-         // WIP
+          
+         string path = "Placeholder";
+          
+          
+         
        
       }
         
