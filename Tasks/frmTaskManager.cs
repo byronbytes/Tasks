@@ -275,7 +275,10 @@ namespace Tasks {
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
 
+            Task<List<ProcessInfoEx>> ProcessInfoList = Task.Run(async () => await GetProcessAsync());
+            ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
         }
     }
 
