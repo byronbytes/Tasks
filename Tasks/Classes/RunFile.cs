@@ -1,4 +1,7 @@
-﻿using System;
+// (c) LiteTools 2021
+// All rights reserved under the MIT license.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +30,6 @@ namespace Tasks
             catch
             {
                 return 1;
-               
             }
         }
 
