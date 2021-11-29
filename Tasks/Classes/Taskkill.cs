@@ -1,4 +1,7 @@
-﻿using System;
+// (c) LiteTools 2021
+// All rights reserved under the MIT license.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -61,7 +64,22 @@ namespace Tasks
 
             }
         }
-
+        
+        
+        public static void General(string processname)
+        {
+             // Taskkills a general process.      
+            try
+            {
+                Process.Start("taskkill", "/f /im " + processname);
+            }
+            catch(Exception)
+            {
+               MessageBox.Show("Failed to kill task.");
+            }
+            
+        
+        }
     }
 
 
