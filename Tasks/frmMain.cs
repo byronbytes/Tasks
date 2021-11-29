@@ -36,6 +36,7 @@ namespace Tasks {
             if(Properties.Settings.Default.Theme == "dark")
             {
                 panel1.BackColor = Color.FromArgb(20, 20, 20);
+                panel2.BackColor = Color.FromArgb(20, 20, 20);
 
                 label1.ForeColor = Color.White;
 

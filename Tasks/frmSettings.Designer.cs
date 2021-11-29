@@ -119,9 +119,9 @@ namespace Tasks
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label19.Location = new System.Drawing.Point(20, 417);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(155, 15);
+            this.label19.Size = new System.Drawing.Size(206, 15);
             this.label19.TabIndex = 14;
-            this.label19.Text = "Changes the theme of Tasks.";
+            this.label19.Text = "Changes the complete theme of Tasks.";
             // 
             // label18
             // 

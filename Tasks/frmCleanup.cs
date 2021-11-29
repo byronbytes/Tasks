@@ -36,6 +36,7 @@ namespace Tasks
             {
                 this.BackColor = Color.FromArgb(18, 18, 18);
                 label1.ForeColor = Color.White;
+                // Most of the stuff already goes back to default, no need to change everything again.
             }
 
             if (Properties.Settings.Default.Theme == "light")
@@ -55,6 +56,19 @@ namespace Tasks
                 cbExplorerIconCache.ForeColor = Color.Black;
                 cbExplorerRecents.ForeColor = Color.Black;
                 cbExplorerThumbCache.ForeColor = Color.Black;
+                cbFirefoxCache.ForeColor = Color.Black;
+                cbFirefoxCookies.ForeColor = Color.Black;
+                cbFirefoxSearchHistory.ForeColor = Color.Black;
+                cbSystemARPCache.ForeColor = Color.Black;
+                cbSystemDirectXCache.ForeColor = Color.Black;
+                cbSystemDNSCache.ForeColor = Color.Black;
+                cbSystemErrorReporting.ForeColor = Color.Black;
+                cbSystemEventLogs.ForeColor = Color.Black;
+                cbSystemMemDumps.ForeColor = Color.Black;
+                cbSystemPrefetch.ForeColor = Color.Black;
+                cbSystemRecycleBin.ForeColor = Color.Black;
+                cbSystemTempFolders.ForeColor = Color.Black;
+                
 
                 tabPage1.BackColor = Color.White;
                 tabPage2.BackColor = Color.White;
@@ -67,10 +81,10 @@ namespace Tasks
                 label5.ForeColor = Color.Black;
                 label6.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
-                label14.ForeColor = Color.Black;
+                label14.ForeColor = Color.DarkRed;
                 label15.ForeColor = Color.Black;
                 label16.ForeColor = Color.Black;
-                label17.ForeColor = Color.Black;
+                label17.ForeColor = Color.DarkRed;
                 label18.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.Gray;
                 ExtensionsBox.BackColor = Color.White;
