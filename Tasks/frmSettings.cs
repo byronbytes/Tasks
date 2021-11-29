@@ -132,6 +132,7 @@ namespace Tasks
                 label16.ForeColor = Color.Black;
                 label17.ForeColor = Color.Black;
                 label18.ForeColor = Color.Black;
+                label19.ForeColor = Color.Black;
                 checkBox1.ForeColor = Color.Black;
                 checkBox2.ForeColor = Color.Black;
                 radioButton1.ForeColor = Color.Black;
@@ -139,7 +140,13 @@ namespace Tasks
                 comboBox1.BackColor = Color.Gray;
                 listBox1.BackColor = Color.FromArgb(240, 240, 240);
                 listBox1.ForeColor = Color.Black;
+                
             }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

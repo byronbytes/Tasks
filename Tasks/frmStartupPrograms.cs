@@ -19,6 +19,7 @@ namespace Tasks {
         public frmStartupPrograms() {
             InitializeComponent();
             RenderStartupsOnListWiew();
+            CheckTheme();
     }
 
         private void RefreshList() {
@@ -34,6 +35,7 @@ namespace Tasks {
 
         private void frmStartupPrograms_Load(object sender, EventArgs e) {
             txtTargetPath.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
+            CheckTheme();
         }
 
         private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e) {}
@@ -153,5 +155,23 @@ namespace Tasks {
         {
             MessageBox.Show("Currently being worked on.");
         }
+
+        public void CheckTheme()
+        {
+            if (Properties.Settings.Default.Theme == "dark")
+            {
+
+           
+            }
+
+            if (Properties.Settings.Default.Theme == "light")
+            {
+                StartupProcesses.BackColor = Color.White;
+                StartupProcesses.ForeColor = Color.Black;
+                this.BackColor = Color.White;
+            }
+        }
+
+
     }
 }

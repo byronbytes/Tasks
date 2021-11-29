@@ -21,13 +21,29 @@ namespace Tasks {
 
             Task<List<ProcessInfoEx>> ProcessInfoList = Task.Run(async () => await GetProcessAsync());
             ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
+
+            CheckTheme();
         }
 
         private void frmTaskManager_Load(object sender, System.EventArgs e)
         {
-         
+            CheckTheme();
         }
 
+        public void CheckTheme()
+        {
+            if (Properties.Settings.Default.Theme == "dark")
+            {
+                
+            }
+
+            if (Properties.Settings.Default.Theme == "light")
+            {
+                listView1.BackColor = Color.White;
+                listView1.ForeColor = Color.Black;
+                this.BackColor = Color.FromArgb(240, 240, 240);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 

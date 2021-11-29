@@ -19,7 +19,7 @@ namespace Tasks
 
     public partial class frmCleanup : Form
     {
-        public frmCleanup() { InitializeComponent(); }
+        public frmCleanup() { InitializeComponent(); CheckTheme();  }
 
         [DllImport("Shell32.dll")]
         static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
@@ -30,7 +30,56 @@ namespace Tasks
             SHERB_NOSOUND = 0x00000004 // No sound when the emptying of the recycle bin is complete
         }
 
+        public void CheckTheme()
+        {
+            if (Properties.Settings.Default.Theme == "dark")
+            {
+                this.BackColor = Color.FromArgb(18, 18, 18);
+                label1.ForeColor = Color.White;
+            }
 
+            if (Properties.Settings.Default.Theme == "light")
+            {
+                this.BackColor = Color.FromArgb(250, 250, 250);
+                cbChromeCache.ForeColor = Color.Black;
+                cbChromeCookies.ForeColor = Color.Black;
+                cbChromeSavedPasswords.ForeColor = Color.Black;
+                cbChromeSearchHistory.ForeColor = Color.Black;
+                cbChromeSessions.ForeColor = Color.Black;
+                cbDiscord.ForeColor = Color.Black;
+                cbEdgeCache.ForeColor = Color.Black;
+                cbEdgeCookies.ForeColor = Color.Black;
+                cbEdgeSearchHistory.ForeColor = Color.Black;
+                cbEdgeSessions.ForeColor = Color.Black;
+                cbExplorerDownloads.ForeColor = Color.Black;
+                cbExplorerIconCache.ForeColor = Color.Black;
+                cbExplorerRecents.ForeColor = Color.Black;
+                cbExplorerThumbCache.ForeColor = Color.Black;
+
+                tabPage1.BackColor = Color.White;
+                tabPage2.BackColor = Color.White;
+                tabPage3.BackColor = Color.White;
+                tabPage4.BackColor = Color.White;
+                label1.ForeColor = Color.Black;
+                label2.ForeColor = Color.Black;
+                label3.ForeColor = Color.Black;
+                label4.ForeColor = Color.Black;
+                label5.ForeColor = Color.Black;
+                label6.ForeColor = Color.Black;
+                label10.ForeColor = Color.Black;
+                label14.ForeColor = Color.Black;
+                label15.ForeColor = Color.Black;
+                label16.ForeColor = Color.Black;
+                label17.ForeColor = Color.Black;
+                label18.ForeColor = Color.Black;
+                comboBox1.BackColor = Color.Gray;
+                ExtensionsBox.BackColor = Color.White;
+                ExtensionsBox.ForeColor = Color.Black;
+                textBox1.BackColor = Color.Gray;
+                textBox1.ForeColor = Color.Black;
+
+            }
+        }
 
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
@@ -617,6 +666,7 @@ namespace Tasks
         {
             tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged);
             DirectoryExists();
+            CheckTheme();
         }
 
         private void button1_Click(object sender, EventArgs e) //DisplayDNS
