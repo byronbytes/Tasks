@@ -10,3 +10,8 @@ For the `int Browser` input, you can choose between `1`, `2`, or `3`.
 2: Taskkills `firefox.exe`.
 
 3: Taskkills `msedge.exe`.
+
+## Example
+
+`MessageBox.Show("Chrome is going to be taskkilled.");
+Taskkill(1);`
