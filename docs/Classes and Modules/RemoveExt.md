@@ -1,6 +1,10 @@
 # Remove Extension (string path, int Browser)
 This is a class in Tasks for removing extensions.
 
+## Notice:
+This will be deprecated with the 3.1.0 release as it's being introduced with a new class and method.
+
+
 
 ## Input #1 - string path
 
