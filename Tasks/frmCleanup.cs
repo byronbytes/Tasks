@@ -1,4 +1,5 @@
-// scary reddit post go brrrrrrrr
+// (c) LiteTools 2021
+// All rights reserved under the MIT license.
 
 using System;
 using System.Collections.Generic;
@@ -282,7 +283,7 @@ namespace Tasks
             }
 
 
-            if (cbDiscord.Checked) //Discord
+            if (cbDiscord.Checked)
             {
                 try
                 {
@@ -303,7 +304,7 @@ namespace Tasks
 
             }
 
-            if (cbFirefoxCache.Checked) //Firefox Cache
+            if (cbFirefoxCache.Checked)
             {
                 try
                 {
@@ -370,9 +371,7 @@ namespace Tasks
                                 }
                                 catch
                                 {
-
                                     //do nothing
-
                                 }
 
                             }
@@ -394,7 +393,7 @@ namespace Tasks
 
             }
 
-            if (cbFirefoxCookies.Checked) //Firefox cookies
+            if (cbFirefoxCookies.Checked) 
             {
                 try
                 {
@@ -427,7 +426,7 @@ namespace Tasks
 
 
             }
-            if (cbFirefoxSearchHistory.Checked) //Firefox search history
+            if (cbFirefoxSearchHistory.Checked)
             {
                 try
                 {
