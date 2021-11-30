@@ -64,7 +64,7 @@ namespace Tasks
             this.StartupProcesses.HideSelection = false;
             this.StartupProcesses.Location = new System.Drawing.Point(12, 12);
             this.StartupProcesses.Name = "StartupProcesses";
-            this.StartupProcesses.Size = new System.Drawing.Size(984, 507);
+            this.StartupProcesses.Size = new System.Drawing.Size(984, 570);
             this.StartupProcesses.TabIndex = 0;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
