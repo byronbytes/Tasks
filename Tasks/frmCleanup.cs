@@ -1003,5 +1003,9 @@ namespace Tasks
             catch { Console.WriteLine("An error has occurred."); }
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
