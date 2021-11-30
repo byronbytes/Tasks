@@ -5,10 +5,21 @@
   🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD) [🇵🇱](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-PL.md)
 </h1>
 
-**Tasks** is an application which improves computer performance. **Tasks** has an advanced cleanup tool, allowing you to clean application and system cache files as well as manage browser extensions, clear cookies and remove bloatware. Tasks also feature a startup manager, letting you control programs that run on startup.
+**Tasks** is an application that helps improve computer performance. **Tasks** includes an advanced cleanup tool that deletes junk and temp files from various apps, system temp folders, and unwanted browser extensions. Tasks has a startup manager which lets you manage what programs run on start. Tasks also has a task manager which gives more details than the built in Windows task manager.
 
 ### Intentions
 We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial to everyone and should not include any hidden paywalls inside the application. Our goal is to make a tool that anyone can use from anywhere.
+
+## List Of Features
+- Advanced Cleanup Tool to help computer performance
+
+- Extension Removal Tool to help remove malicious or unwanted extensions
+
+- Bloatware Removal Tool to help remove bloat on your computer
+
+- Startup Manager to improve system boot times
+
+- Advanced Task Manager to give more details about processes.
 
 ## Installation
 1. You will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
