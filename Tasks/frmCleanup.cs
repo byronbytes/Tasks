@@ -1,4 +1,6 @@
-﻿using System;
+// scary reddit post go brrrrrrrr
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -458,8 +460,6 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History. " + ex);
                 }
             }
-
-
 
             //DNS & ARP
             if (cbSystemDNSCache.Checked) //Clear DNS
