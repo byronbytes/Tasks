@@ -50,8 +50,8 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.cbSpotifyCookies = new System.Windows.Forms.CheckBox();
+            this.cbSpotifyCache = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblNotDetected = new System.Windows.Forms.Label();
@@ -87,15 +87,15 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -478,8 +478,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage2.Controls.Add(this.checkBox2);
-            this.tabPage2.Controls.Add(this.checkBox3);
+            this.tabPage2.Controls.Add(this.cbSpotifyCookies);
+            this.tabPage2.Controls.Add(this.cbSpotifyCache);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.lblNotDetected);
@@ -511,33 +511,33 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
             // 
-            // checkBox2
+            // cbSpotifyCookies
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(16, 302);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(73, 21);
-            this.checkBox2.TabIndex = 50;
-            this.checkBox2.Text = "Cookies";
-            this.checkBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbSpotifyCookies.AutoSize = true;
+            this.cbSpotifyCookies.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbSpotifyCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbSpotifyCookies.ForeColor = System.Drawing.Color.White;
+            this.cbSpotifyCookies.Location = new System.Drawing.Point(16, 302);
+            this.cbSpotifyCookies.Name = "cbSpotifyCookies";
+            this.cbSpotifyCookies.Size = new System.Drawing.Size(73, 21);
+            this.cbSpotifyCookies.TabIndex = 50;
+            this.cbSpotifyCookies.Text = "Cookies";
+            this.cbSpotifyCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbSpotifyCookies.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cbSpotifyCache
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(16, 275);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(62, 21);
-            this.checkBox3.TabIndex = 49;
-            this.checkBox3.Text = "Cache";
-            this.checkBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbSpotifyCache.AutoSize = true;
+            this.cbSpotifyCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbSpotifyCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbSpotifyCache.ForeColor = System.Drawing.Color.White;
+            this.cbSpotifyCache.Location = new System.Drawing.Point(16, 275);
+            this.cbSpotifyCache.Name = "cbSpotifyCache";
+            this.cbSpotifyCache.Size = new System.Drawing.Size(62, 21);
+            this.cbSpotifyCache.TabIndex = 49;
+            this.cbSpotifyCache.Text = "Cache";
+            this.cbSpotifyCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbSpotifyCache.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -855,10 +855,11 @@
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(10, 52);
+            this.label17.Location = new System.Drawing.Point(10, 54);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(491, 40);
+            this.label17.Size = new System.Drawing.Size(451, 38);
             this.label17.TabIndex = 44;
             this.label17.Text = "Tasks will close any opened browsers before removing any extensions. \r\nSave your " +
     "work before using this!";
@@ -868,7 +869,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(10, 15);
+            this.label14.Location = new System.Drawing.Point(10, 17);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(120, 37);
             this.label14.TabIndex = 43;
@@ -901,7 +902,7 @@
             this.ExtensionsBox.HideSelection = false;
             this.ExtensionsBox.Location = new System.Drawing.Point(10, 211);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(940, 371);
+            this.ExtensionsBox.Size = new System.Drawing.Size(943, 371);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -926,7 +927,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(10, 107);
+            this.label16.Location = new System.Drawing.Point(10, 92);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(943, 17);
             this.label16.TabIndex = 41;
@@ -938,7 +939,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(10, 139);
+            this.label15.Location = new System.Drawing.Point(10, 124);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(417, 23);
             this.label15.TabIndex = 40;
@@ -951,7 +952,7 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(10, 177);
+            this.comboBox1.Location = new System.Drawing.Point(10, 160);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(350, 28);
             this.comboBox1.TabIndex = 39;
@@ -970,18 +971,32 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
-            // textBox1
+            // groupBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(6, 446);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(968, 136);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Location = new System.Drawing.Point(12, 73);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(417, 273);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Uninstall and Remove Bloat";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(6, 26);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(175, 37);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "Disable Cortana";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button5
             // 
@@ -1021,17 +1036,18 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // textBox1
             // 
-            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(6, 26);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(175, 37);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Disable Cortana";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(6, 446);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(968, 136);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // label5
             // 
@@ -1060,21 +1076,6 @@
             this.btnCleanup.Text = "Cleanup";
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 73);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 256);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Uninstall and Remove Bloat";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // frmCleanup
             // 
@@ -1180,8 +1181,8 @@
         private System.Windows.Forms.Label lblNotDetected;
         private System.Windows.Forms.Button btnCleanup;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox cbSpotifyCookies;
+        private System.Windows.Forms.CheckBox cbSpotifyCache;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
