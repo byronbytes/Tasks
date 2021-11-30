@@ -5,7 +5,7 @@
   🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD) [🇵🇱](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-PL.md)
 </h1>
 
-**Tasks** is an application that helps improve computer performance. **Tasks** includes an advanced cleanup tool that deletes junk and temp files from various apps, system temp folders. Tasks has a startup manager which lets you manage what programs run on start and a task manager which gives more details than the built in Windows task manager.
+**Tasks** is an application that helps improve computer performance. **Tasks**'s main features include an advanced cleanup tool, a startup manager, and a detailed Task Manager. These tools help improve computer performance, system boot times, and a safer experience.
 
 ### Intentions
 We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial to everyone and should not include any hidden paywalls inside the application. Our goal is to make a tool that anyone can use from anywhere.
@@ -26,7 +26,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 2. Download Tasks from the **Releases** tab.
 3. Extract the `.zip` and execute the executable `.exe` file. After that, Tasks will launch.
 
-The dependencies must be kept in the same folder, we are working on a fix for this.
+The dependencies must be kept in the same folder for now.
 
 ## Contribution
 To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
