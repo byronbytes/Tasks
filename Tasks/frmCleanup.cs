@@ -682,7 +682,7 @@ namespace Tasks
             CheckTheme();
         }
 
-        private void button1_Click(object sender, EventArgs e) //DisplayDNS
+        private void button1_Click(object sender, EventArgs e)
         {
 
             try
@@ -696,17 +696,12 @@ namespace Tasks
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
-
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e) //DisplayARP
         {
-
-
             try
             {
                 Process process = new Process();
@@ -720,16 +715,12 @@ namespace Tasks
 
             }
 
-
-
         }
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             var g = new Dirs();
-
 
             if (comboBox1.Text == "Google Chrome")
             {
@@ -830,12 +821,10 @@ namespace Tasks
                             var subItem = item.SubItems[2].Text;
                             Remove.DeleteExtension(subItem, false);
                             ExtensionsBox.Items.Remove(eachItem);
-                            CleanupLogsLBox.Items.Add("Extension Removed.");
-
                         }
                         catch (Exception ex)
                         {
-                            CleanupLogsLBox.Items.Add("Error while trying to remove extension." + ex);
+                            MessageBox.Show("Error while trying to remove extension." + ex);
                         }
                     }
                 }
