@@ -113,16 +113,6 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap InfoWhite {
-            get {
-                object obj = ResourceManager.GetObject("InfoWhite", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap MicrosoftEdge {
             get {
                 object obj = ResourceManager.GetObject("MicrosoftEdge", resourceCulture);
@@ -226,16 +216,6 @@ namespace Tasks.Properties {
         internal static System.Drawing.Bitmap Terminal {
             get {
                 object obj = ResourceManager.GetObject("Terminal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Warning {
-            get {
-                object obj = ResourceManager.GetObject("Warning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

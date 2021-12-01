@@ -17,10 +17,10 @@ namespace Tasks
        public static void ValidifyUpdate()
        {
       // This will validify that the update is not from a development build. This is a current draft.
-           if(lblNewVersion.Contains("dev") == true)
-           {
-              btnDownload.Visible = false;
-           }
+           //if(lblNewVersion.Contains("dev") == true)
+         //  {
+           //   btnDownload.Visible = false;
+          // }
            
         }
        

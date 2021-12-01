@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace Tasks
 {
@@ -17,7 +18,7 @@ namespace Tasks
         {
             // This class is meant for deleting extensions.
             
-            if(isFile = true)
+            if(isFile == true)
             {
                 try
                     {
@@ -29,7 +30,7 @@ namespace Tasks
                     }
              }
             
-            if(isFile = false)
+            if(isFile == false)
             {
                  
                     try 
