@@ -34,6 +34,7 @@
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbWindowsLogFiles = new System.Windows.Forms.CheckBox();
             this.cbExplorerIconCache = new System.Windows.Forms.CheckBox();
             this.cbExplorerThumbCache = new System.Windows.Forms.CheckBox();
             this.cbSystemErrorReporting = new System.Windows.Forms.CheckBox();
@@ -50,6 +51,9 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbIECache = new System.Windows.Forms.CheckBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.cbSpotifyCookies = new System.Windows.Forms.CheckBox();
             this.cbSpotifyCache = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -102,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -245,6 +250,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage1.Controls.Add(this.cbWindowsLogFiles);
             this.tabPage1.Controls.Add(this.cbExplorerIconCache);
             this.tabPage1.Controls.Add(this.cbExplorerThumbCache);
             this.tabPage1.Controls.Add(this.cbSystemErrorReporting);
@@ -274,6 +280,20 @@
             this.tabPage1.Size = new System.Drawing.Size(980, 588);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cleanup";
+            // 
+            // cbWindowsLogFiles
+            // 
+            this.cbWindowsLogFiles.AutoSize = true;
+            this.cbWindowsLogFiles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbWindowsLogFiles.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbWindowsLogFiles.Location = new System.Drawing.Point(12, 268);
+            this.cbWindowsLogFiles.Name = "cbWindowsLogFiles";
+            this.cbWindowsLogFiles.Size = new System.Drawing.Size(135, 21);
+            this.cbWindowsLogFiles.TabIndex = 36;
+            this.cbWindowsLogFiles.Text = "Windows Log Files";
+            this.cbWindowsLogFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbWindowsLogFiles, "Logs that are usually created on boot.");
+            this.cbWindowsLogFiles.UseVisualStyleBackColor = true;
             // 
             // cbExplorerIconCache
             // 
@@ -478,6 +498,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage2.Controls.Add(this.cbIECache);
+            this.tabPage2.Controls.Add(this.pictureBox3);
+            this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.cbSpotifyCookies);
             this.tabPage2.Controls.Add(this.cbSpotifyCache);
             this.tabPage2.Controls.Add(this.pictureBox2);
@@ -511,13 +534,48 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Applications";
             // 
+            // cbIECache
+            // 
+            this.cbIECache.AutoSize = true;
+            this.cbIECache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbIECache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbIECache.ForeColor = System.Drawing.Color.White;
+            this.cbIECache.Location = new System.Drawing.Point(13, 282);
+            this.cbIECache.Name = "cbIECache";
+            this.cbIECache.Size = new System.Drawing.Size(62, 21);
+            this.cbIECache.TabIndex = 53;
+            this.cbIECache.Text = "Cache";
+            this.cbIECache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbIECache.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Tasks.Properties.Resources.MicrosoftEdge;
+            this.pictureBox3.Location = new System.Drawing.Point(13, 239);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 52;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(48, 239);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 25);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "Internet Explorer";
+            // 
             // cbSpotifyCookies
             // 
             this.cbSpotifyCookies.AutoSize = true;
             this.cbSpotifyCookies.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSpotifyCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbSpotifyCookies.ForeColor = System.Drawing.Color.White;
-            this.cbSpotifyCookies.Location = new System.Drawing.Point(16, 302);
+            this.cbSpotifyCookies.Location = new System.Drawing.Point(320, 301);
             this.cbSpotifyCookies.Name = "cbSpotifyCookies";
             this.cbSpotifyCookies.Size = new System.Drawing.Size(73, 21);
             this.cbSpotifyCookies.TabIndex = 50;
@@ -531,7 +589,7 @@
             this.cbSpotifyCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSpotifyCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbSpotifyCache.ForeColor = System.Drawing.Color.White;
-            this.cbSpotifyCache.Location = new System.Drawing.Point(16, 275);
+            this.cbSpotifyCache.Location = new System.Drawing.Point(320, 274);
             this.cbSpotifyCache.Name = "cbSpotifyCache";
             this.cbSpotifyCache.Size = new System.Drawing.Size(62, 21);
             this.cbSpotifyCache.TabIndex = 49;
@@ -542,7 +600,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Tasks.Properties.Resources.Spotify;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 240);
+            this.pictureBox2.Location = new System.Drawing.Point(314, 239);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -554,7 +612,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(48, 240);
+            this.label7.Location = new System.Drawing.Point(352, 239);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 25);
             this.label7.TabIndex = 47;
@@ -812,7 +870,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(313, 230);
+            this.label6.Location = new System.Drawing.Point(616, 243);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(168, 25);
             this.label6.TabIndex = 14;
@@ -824,7 +882,7 @@
             this.cbDiscord.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDiscord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbDiscord.ForeColor = System.Drawing.Color.White;
-            this.cbDiscord.Location = new System.Drawing.Point(316, 269);
+            this.cbDiscord.Location = new System.Drawing.Point(619, 282);
             this.cbDiscord.Name = "cbDiscord";
             this.cbDiscord.Size = new System.Drawing.Size(72, 21);
             this.cbDiscord.TabIndex = 15;
@@ -1099,6 +1157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1186,5 +1245,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox cbIECache;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox cbWindowsLogFiles;
     }
 }

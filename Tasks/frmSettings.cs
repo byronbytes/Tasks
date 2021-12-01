@@ -51,19 +51,6 @@ namespace Tasks
 
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox2.Checked == true)
-            {
-                // Change Setting WIP.
-            }
-            if (checkBox2.Checked == false)
-            {
-                // Change Setting WIP.
-            }
-        }
-
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedText == "English")
@@ -127,14 +114,12 @@ namespace Tasks
                 label11.ForeColor = Color.Black;
                 label12.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
-                label14.ForeColor = Color.Black;
                 label15.ForeColor = Color.Black;
                 label16.ForeColor = Color.Black;
                 label17.ForeColor = Color.Black;
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
                 checkBox1.ForeColor = Color.Black;
-                checkBox2.ForeColor = Color.Black;
                 radioButton1.ForeColor = Color.Black;
                 radioButton2.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.Gray;

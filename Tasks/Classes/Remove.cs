@@ -18,7 +18,7 @@ namespace Tasks
         {
             // This class is meant for deleting extensions.
             
-            if(isFile == true)
+            if (isFile == true)
             {
                 try
                     {
@@ -30,7 +30,7 @@ namespace Tasks
                     }
              }
             
-            if(isFile == false)
+            if (isFile == false)
             {
                  
                     try 
@@ -47,7 +47,7 @@ namespace Tasks
       public static void DeleteCleanupLogs()
       {
           //This class deletes the cleanup logs.
-          string cleanupDir = "Placeholder";
+          string cleanupDir = Dirs.tasksCleanup;
           
       }
       

@@ -655,7 +655,41 @@ namespace Tasks
 
             }
 
+            if (cbIECache.Checked)
+            {
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\INetCache\\IE\\");
+                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Windows\\WebCache.old\\");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Internet Explorer Cache Deleted.");
+                }
+                catch
+                {
+                    CleanupLogsLBox.Items.Add("Error while deleting Internet Explorer Cache.");
+                }
+
+            }
+
+            if (cbWindowsLogFiles.Checked)
+            {
+                try
+                {
+                    var directory = new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot");
+                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\CLR_v4.0\\UsageLogs");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Windows Log Files Deleted.");
+                }
+                catch
+                {
+                    CleanupLogsLBox.Items.Add("Error while deleting Windows Log Files.");
+                }
+
+            }
+
+
+
             WriteCleanupSummary();
+
+            // END OF CLEANUP
 
         }
    
@@ -810,7 +844,7 @@ namespace Tasks
                 process.WaitForExit();*/
                 if (comboBox1.Text == "Google Chrome")
                 {
-                    Taskkill.Browser(1);
+                    Remove.KillBrowser(1);
                     Thread.Sleep(75);
 
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
@@ -831,7 +865,7 @@ namespace Tasks
 
                 if (comboBox1.Text == "Mozilla Firefox")
                 {
-                    Taskkill.Browser(2);
+                    Remove.KillBrowser(2);
                     Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons?
 
                     try
@@ -859,7 +893,7 @@ namespace Tasks
                     {
                         try
                         {
-                            Taskkill.Browser(3);
+                            Remove.KillBrowser(3);
                             Thread.Sleep(75);
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
