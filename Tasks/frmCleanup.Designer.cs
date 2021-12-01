@@ -34,6 +34,7 @@
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -256,6 +257,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage5.Controls.Add(this.button9);
             this.tabPage5.Controls.Add(this.label11);
             this.tabPage5.Controls.Add(this.button8);
             this.tabPage5.Controls.Add(this.label9);
@@ -266,12 +268,24 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Quick Clean";
             // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.Location = new System.Drawing.Point(558, 173);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(223, 56);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Clean";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(17, 246);
+            this.label11.Location = new System.Drawing.Point(17, 356);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(487, 25);
             this.label11.TabIndex = 2;
@@ -281,22 +295,22 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(336, 144);
+            this.button8.Location = new System.Drawing.Point(281, 173);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(250, 67);
+            this.button8.Size = new System.Drawing.Size(223, 56);
             this.button8.TabIndex = 1;
-            this.button8.Text = "Analyze Now";
+            this.button8.Text = "Analyze";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(17, 16);
+            this.label9.Location = new System.Drawing.Point(17, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(882, 84);
+            this.label9.Size = new System.Drawing.Size(764, 84);
             this.label9.TabIndex = 0;
             this.label9.Text = resources.GetString("label9.Text");
             // 
@@ -1308,5 +1322,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button9;
     }
 }

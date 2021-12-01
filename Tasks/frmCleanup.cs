@@ -1033,11 +1033,12 @@ namespace Tasks
         private void button8_Click_1(object sender, EventArgs e)
         {
             label11.Visible = true;
+            button9.Visible = true;
             long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp"));
             long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
             long allsize = size1 + size2;
             double allsizeMB = ConvertBytesToMegabytes(allsize);
-            label11.Text = "Quick Clean has analyzed " + allsizeMB + "MB that can be deleted.";
+            label11.Text = "Quick Clean has analyzed " + allsizeMB + "MB can be deleted.";
           
         }
 
@@ -1072,6 +1073,10 @@ namespace Tasks
             return (bytes / 1024f) / 1024f;
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
