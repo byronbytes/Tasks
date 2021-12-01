@@ -10,7 +10,7 @@
 ### Intentions
 We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial to everyone and should not include any hidden paywalls inside the application. Our goal is to make a tool that anyone can use from anywhere.
 
-## List Of Features
+## List of Features
 - Advanced Cleanup Tool to help computer performance
 
 - Extension Removal Tool to help remove malicious or unwanted extensions
