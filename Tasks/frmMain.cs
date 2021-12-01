@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Tasks {
     public partial class frmMain : Form {
-        public frmMain() { Directory.CreateDirectory(Classes.TasksDirectories.TasksCleanup); InitializeComponent(); CheckTheme(); }
+        public frmMain() { Directory.CreateDirectory(Classes.Dirs.tasksCleanup); InitializeComponent(); CheckTheme(); }
 
         private Form _currentForm;
         private void ShowForm(Form newForm)
@@ -60,9 +60,6 @@ namespace Tasks {
         }
 
         private void frmMain_Load(object sender, EventArgs e) { CheckTheme(); }
-        private void button1_Click(object sender, EventArgs e) { new frmCleanup().Show(); }
-        private void button3_Click(object sender, EventArgs e) { new frmStartupPrograms().Show(); }
-        private void button4_Click(object sender, EventArgs e) { new frmTaskManager().Show(); }
         private void label1_Click(object sender, EventArgs e) {}
 
         private void pictureBox1_Click(object sender, EventArgs e)
