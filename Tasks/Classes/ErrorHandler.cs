@@ -16,6 +16,12 @@ namespace Tasks
             {
                 Debug.Print("Manually induced error.");
             }
+            
+            if(errortype = 1)
+            {
+                Debug.Print("Please try running this task as an administrator.")
+            }
+            
         }
      
     }
