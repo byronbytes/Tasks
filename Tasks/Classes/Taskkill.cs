@@ -64,22 +64,6 @@ namespace Tasks
 
             }
         }
-        
-        
-        public static void General(string processname)
-        {
-             // Taskkills a general process.      
-            try
-            {
-                Process.Start("taskkill", "/f /im " + processname);
-            }
-            catch(Exception)
-            {
-               MessageBox.Show("Failed to kill task.");
-            }
-            
-        
-        }
     }
 
 
