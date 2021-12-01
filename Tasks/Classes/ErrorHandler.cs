@@ -9,9 +9,13 @@ namespace Tasks
     class ErrorHandler
     {
         
-        public static void InduceMessageError()
+        public static void InduceMessageError(int errortype)
         {
             
+            if(errortype = 0)
+            {
+                Debug.Print("Manually induced error.");
+            }
         }
      
     }
