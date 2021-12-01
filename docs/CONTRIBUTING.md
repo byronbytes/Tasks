@@ -13,9 +13,3 @@ Before creating a pull request, please think of the following.
 
 - [x] Did I do my best?
 
-
-
-## Types of PR's
-There are various types of pull requests that we validify.
-
-
