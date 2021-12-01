@@ -41,12 +41,8 @@ namespace Tasks
                         Debug.Print("Error deleting directory.");
                     }
                 
-            }
-
-  
-            }
-        }
-        
+            }  
+        }  
         
       public static void DeleteCleanupLogs()
       {
