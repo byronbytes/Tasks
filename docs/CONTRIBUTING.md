@@ -9,8 +9,13 @@ As a contributor, we would expect you to have:
 ## Helpful Notes
 Before creating a pull request, please think of the following.
 
-[x] Did I double check for errors?
+- [x] Did I double check for errors?
 
-[x] Did I do my best?
+- [x] Did I do my best?
+
+
+
+## Types of PR's
+There are various types of pull requests that we validify.
 
 
