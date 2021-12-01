@@ -8,6 +8,11 @@ namespace Tasks
 {
     class ErrorHandler
     {
-     // WIP.
+        
+        public static void InduceMessageError()
+        {
+            
+        }
+     
     }
 }
