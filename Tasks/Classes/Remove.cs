@@ -21,13 +21,13 @@ namespace Tasks
             {
                 try
                     {
-                     File.Delete(path);
+                         File.Delete(path);
                     }
                     catch
                     {
                         Debug.Print("Error deleting file.");
                     }
-            }
+             }
             
             if(isFile = false)
             {
@@ -39,8 +39,7 @@ namespace Tasks
                     catch
                     {
                         Debug.Print("Error deleting directory.");
-                    }
-                
+                    }     
             }  
         }  
         
