@@ -915,7 +915,7 @@ namespace Tasks
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try { RunFile.RunBat("removeedge.bat", true); }
+            try { RunFile.RunBat("Scripts/BatFiles/removeedge.bat", true); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
         private void DirectoryExists()
