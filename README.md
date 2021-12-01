@@ -24,9 +24,9 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 ## Installation
 1. You will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
 2. Download Tasks from the **Releases** tab.
-3. Extract the `.zip` and execute the executable `.exe` file. After that, Tasks will launch.
+3. Extract the `.zip` and execute the executable `.exe` file.
 
-The dependencies must be kept in the same folder for now.
+The dependencies must be kept in the same folder. This will be fixed soon.
 
 ## Contribution
 To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
