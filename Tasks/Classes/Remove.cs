@@ -13,17 +13,13 @@ namespace Tasks
 {
     class Remove
     {
-        public static void DeleteExtension(string path, int browser)
+        public static void DeleteExtension(string path, bool isFile)
         {
             // This class is meant for deleting extensions.
             
-            // Case 1: File based extensions (Firefox)
-            // Case 2: Directory based extensions (Chrome + Edge)
-            switch (browser)
+            if(isFile = true)
             {
-                case 1:
-                    
-                    try
+                try
                     {
                      File.Delete(path);
                     }
@@ -31,9 +27,10 @@ namespace Tasks
                     {
                         Debug.Print("Error deleting file.");
                     }
-                    break;
-                    
-                case 2:
+            }
+            
+            if(isFile = false)
+            {
                  
                     try 
                     {
@@ -43,7 +40,10 @@ namespace Tasks
                     {
                         Debug.Print("Error deleting directory.");
                     }
-                    break;
+                
+            }
+
+  
             }
         }
         
