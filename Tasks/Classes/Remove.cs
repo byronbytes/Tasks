@@ -47,6 +47,7 @@ namespace Tasks
       public static void DeleteCleanupLogs()
       {
           //This class deletes the cleanup logs.
+          string cleanupDir = "Placeholder";
           
       }
       
@@ -68,7 +69,7 @@ namespace Tasks
 
                     catch (Exception)
                     {
-                        MessageBox.Show("Could not kill Chrome.");
+                        MessageBox.Show("Tasks was unable to taskkill Chrome.");
                     }
 
                     break;
@@ -80,7 +81,7 @@ namespace Tasks
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Could not kill Firefox.");
+                        MessageBox.Show("Tasks was unable to taskkill Firefox.");
                     }
 
                     break;
@@ -92,7 +93,7 @@ namespace Tasks
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Could not kill Edge.");
+                        MessageBox.Show("Tasks was unable to taskkill Edge.");
                     }
                     break;
 
