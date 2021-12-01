@@ -17,7 +17,8 @@ namespace Tasks
         public static string firefoxExtDir;
         public static string chromeExtDir;
         public static string edgeExtDir;  
-        // Debugging Purposes:
-        public static string tasksDir;
+        // Tasks Directories:
+        public static string tasksDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks";
+        public static string tasksCleanup = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary";
     }
 }
