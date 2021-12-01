@@ -815,7 +815,6 @@ namespace Tasks
             {
 
                 /*Process process = new Process();
-                process.StartInfo.FileName = "Scripts/BatFiles/killfirefox.bat";
                 process.Start();
                 process.WaitForExit();*/
                 if (comboBox1.Text == "Google Chrome")
@@ -829,7 +828,7 @@ namespace Tasks
                         {
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
-                            RemoveExt.RemoveExtension(subItem, 2);
+                            Remove.DeleteExtension(subItem, false);
                             ExtensionsBox.Items.Remove(eachItem);
                             CleanupLogsLBox.Items.Add("Extension Removed.");
 
@@ -848,7 +847,7 @@ namespace Tasks
 
                     try
                     {
-                        RemoveExt.RemoveExtension(ExtensionsBox.SelectedItems[0].SubItems[2].Text, 1);
+                        Remove.DeleteExtension(ExtensionsBox.SelectedItems[0].SubItems[2].Text, true);
 
                         foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                         {
@@ -875,7 +874,7 @@ namespace Tasks
                             Thread.Sleep(75);
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
-                            RemoveExt.RemoveExtension(subItem, 2);
+                            Remove.DeleteExtension(subItem, false);
                             ExtensionsBox.Items.Remove(eachItem);
                             CleanupLogsLBox.Items.Add("Extension Removed.");
 
