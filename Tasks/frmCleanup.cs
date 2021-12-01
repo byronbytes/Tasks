@@ -22,7 +22,7 @@ namespace Tasks
 
     public partial class frmCleanup : Form
     {
-        public frmCleanup() { InitializeComponent(); CheckTheme();  }
+        public frmCleanup() { InitializeComponent(); CheckTheme(); }
 
         [DllImport("Shell32.dll")]
         static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
@@ -71,7 +71,7 @@ namespace Tasks
                 cbSystemPrefetch.ForeColor = Color.Black;
                 cbSystemRecycleBin.ForeColor = Color.Black;
                 cbSystemTempFolders.ForeColor = Color.Black;
-                
+
 
                 tabPage1.BackColor = Color.White;
                 tabPage2.BackColor = Color.White;
@@ -393,7 +393,7 @@ namespace Tasks
 
             }
 
-            if (cbFirefoxCookies.Checked) 
+            if (cbFirefoxCookies.Checked)
             {
                 try
                 {
@@ -692,12 +692,12 @@ namespace Tasks
             // END OF CLEANUP
 
         }
-   
+
         private void Tabs_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab.Text == "Browser Extensions") // i dont want it to show up in the extensions thing because i'll use a diff button to make the code less messy
             {
-               btnCleanup.Visible = false;
+                btnCleanup.Visible = false;
 
             }
             else
@@ -1029,5 +1029,49 @@ namespace Tasks
         {
 
         }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            label11.Visible = true;
+            long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp"));
+            long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
+            long allsize = size1 + size2;
+            double allsizeMB = ConvertBytesToMegabytes(allsize);
+            label11.Text = "Quick Clean has analyzed " + allsizeMB + "MB that can be deleted.";
+          
+        }
+
+        public static long DirSize(DirectoryInfo d)
+        {
+
+            long size = 0;
+            // Add file sizes.
+            try
+            {
+                FileInfo[] fis = d.GetFiles();
+                foreach (FileInfo fi in fis)
+                {
+                    size += fi.Length;
+                }
+                // Add subdirectory sizes.
+                DirectoryInfo[] dis = d.GetDirectories();
+                foreach (DirectoryInfo di in dis)
+                {
+                    size += DirSize(di);
+                }
+                return size;
+            }
+            catch
+            {
+                return size;
+            }
+        }
+
+        static double ConvertBytesToMegabytes(long bytes)
+        {
+            return (bytes / 1024f) / 1024f;
+        }
+
     }
 }
+

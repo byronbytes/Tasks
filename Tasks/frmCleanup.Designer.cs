@@ -33,6 +33,10 @@
             this.taskDialog1 = new Ookii.Dialogs.WinForms.TaskDialog(this.components);
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cbWindowsLogFiles = new System.Windows.Forms.CheckBox();
             this.cbExplorerIconCache = new System.Windows.Forms.CheckBox();
@@ -102,6 +106,7 @@
             this.btnCleanup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -233,6 +238,7 @@
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -246,6 +252,53 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(988, 621);
             this.tabControl1.TabIndex = 36;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage5.Controls.Add(this.label11);
+            this.tabPage5.Controls.Add(this.button8);
+            this.tabPage5.Controls.Add(this.label9);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(980, 588);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Quick Clean";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(17, 246);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(487, 25);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Quick Clean has analyzed %num%  that can be cleaned.";
+            this.label11.Visible = false;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.Location = new System.Drawing.Point(336, 144);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(250, 67);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Analyze Now";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(17, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(882, 84);
+            this.label9.TabIndex = 0;
+            this.label9.Text = resources.GetString("label9.Text");
             // 
             // tabPage1
             // 
@@ -550,7 +603,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Tasks.Properties.Resources.MicrosoftEdge;
+            this.pictureBox3.Image = global::Tasks.Properties.Resources.InternetExplorer;
             this.pictureBox3.Location = new System.Drawing.Point(13, 239);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 29);
@@ -1151,6 +1204,8 @@
             this.Load += new System.EventHandler(this.frmCleanup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -1249,5 +1304,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox cbWindowsLogFiles;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label11;
     }
 }
