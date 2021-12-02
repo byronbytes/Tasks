@@ -768,7 +768,7 @@ namespace Tasks
                     ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
                     DirectoryInfo fol = new DirectoryInfo(ext);
                     fol.EnumerateDirectories();
-                    extb.SubItems.Add("~ " + ByteSize.FromBytes(ext.Length).ToString());
+                    extb.SubItems.Add("~ " + DirSize(Dirs.chromeExtDir));
 
                     extb.SubItems.Add(ext);
                 }
