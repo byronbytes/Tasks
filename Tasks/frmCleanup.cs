@@ -1055,7 +1055,7 @@ namespace Tasks
 
         static double ConvertBytesToMegabytes(long bytes)
         {
-            double ConvertedByte = Math.Round(bytes / 1024f / 1024f, .00);
+            double ConvertedByte = Math.Round(bytes / 1024f / 1024f, 2);
             return (ConvertedByte);
           
         }
