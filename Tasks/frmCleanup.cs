@@ -1020,7 +1020,8 @@ namespace Tasks
             button9.Visible = true;
             long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp"));
             long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
-            long allsize = size1 + size2;
+            long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache")));
+            long allsize = size1 + size2 + size3;
             double allsizeMB = ConvertBytesToMegabytes(allsize);
             label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
           
@@ -1062,7 +1063,10 @@ namespace Tasks
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
+            var usertemp = new DirectoryInfo(Path.GetTempPath());
+            if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Deleted.");
+            if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Deleted.");
         }
     }
 }
