@@ -1038,7 +1038,7 @@ namespace Tasks
             long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
             long allsize = size1 + size2;
             double allsizeMB = ConvertBytesToMegabytes(allsize);
-            label11.Text = "Quick Clean has analyzed " + allsizeMB + "MB can be deleted.";
+            label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
           
         }
 
@@ -1064,6 +1064,7 @@ namespace Tasks
             }
             catch
             {
+            // Needs a more advanced catch method.
                 return size;
             }
         }
