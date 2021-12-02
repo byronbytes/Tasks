@@ -1,9 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <locfile>
 
 	<!--Languages that are currently supported: en-->
-	<!--Languages that are being worked on: es, pl-->
-	<!--Languages that will be worked on later: fr, nl-->
+	<!--Languages that are being worked on: es, fr-->
 	
 	<!--Title-->
 	<string name="Tasks" lang="en">Tasks</string>
@@ -11,14 +10,15 @@
 	<string name="Tasks" lang="pl">Tasks</string>
 
 
-
+	<!-- Sections / Tool Names -->
 	<string name="Cleanup" lang="en">Cleanup</string>
-
+	<string name="Cleanup" lang="es">Cleanup</string>
 
 	<string name="StartupPrograms" lang="en">Startup Programs</string>
-	
 
 	<string name="TaskManager" lang="en">Task Manager</string>
+	
+	
 
 
 
