@@ -301,12 +301,12 @@ namespace Tasks
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel2.Location = new System.Drawing.Point(305, 116);
+            this.linkLabel2.Location = new System.Drawing.Point(290, 116);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(65, 21);
+            this.linkLabel2.Size = new System.Drawing.Size(99, 21);
             this.linkLabel2.TabIndex = 41;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Website";
+            this.linkLabel2.Text = "Visit Website";
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.DarkCyan;
             // 
             // linkLabel1
@@ -316,7 +316,7 @@ namespace Tasks
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel1.Location = new System.Drawing.Point(155, 116);
+            this.linkLabel1.Location = new System.Drawing.Point(144, 116);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(117, 21);
             this.linkLabel1.TabIndex = 39;
@@ -394,7 +394,7 @@ namespace Tasks
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Version: 3.0.0 - Build 112821";
+            this.label2.Text = "Version: 3.0.0 - Build 120221";
             // 
             // pictureBox1
             // 
