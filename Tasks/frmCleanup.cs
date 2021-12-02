@@ -746,7 +746,22 @@ namespace Tasks
             }
 
         }
+        private void GetExtensionList(DirectoryInfo directoryInfo)
+        {
+            foreach (var ext in directoryInfo.GetDirectories())
 
+            {
+
+                FileInfo fi = new FileInfo(ext.ToString());
+                ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
+
+                long dirSize = DirSize(new DirectoryInfo(ext.ToString()));
+
+                double dirsizeMB = ConvertBytesToMegabytes(dirSize);
+                extb.SubItems.Add("~ " + dirsizeMB + "MB");
+                extb.SubItems.Add(ext.ToString());
+            }
+        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -756,18 +771,8 @@ namespace Tasks
             {
                 ExtensionsBox.Items.Clear();
 
-                foreach (string ext in Directory.EnumerateDirectories(Dirs.chromeExtDir))
-
-                {
-
-                    FileInfo fi = new FileInfo(ext);
-                    ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
-                    DirectoryInfo fol = new DirectoryInfo(ext);
-                    fol.EnumerateDirectories();
-                    extb.SubItems.Add("~ " + DirSize(Dirs.chromeExtDir));
-
-                    extb.SubItems.Add(ext);
-                }
+                GetExtensionList(new DirectoryInfo(Dirs.chromeExtDir));
+             
 
 
 
@@ -1065,7 +1070,9 @@ namespace Tasks
 
         static double ConvertBytesToMegabytes(long bytes)
         {
-            return (bytes / 1024f) / 1024f;
+            double ConvertedByte = Math.Round(bytes / 1024f / 1024f);
+            return (ConvertedByte);
+          
         }
 
         private void button9_Click(object sender, EventArgs e)

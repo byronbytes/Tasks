@@ -285,11 +285,11 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(17, 356);
+            this.label11.Location = new System.Drawing.Point(17, 125);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(487, 25);
+            this.label11.Size = new System.Drawing.Size(476, 25);
             this.label11.TabIndex = 2;
-            this.label11.Text = "Quick Clean has analyzed %num%  that can be cleaned.";
+            this.label11.Text = "Quick Clean has analyzed %num% MB can be cleaned.";
             this.label11.Visible = false;
             // 
             // button8
