@@ -113,7 +113,7 @@ namespace Tasks
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(20, 417);
+            this.label19.Location = new System.Drawing.Point(20, 365);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(206, 15);
             this.label19.TabIndex = 14;
@@ -124,7 +124,7 @@ namespace Tasks
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(20, 396);
+            this.label18.Location = new System.Drawing.Point(20, 344);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(57, 21);
             this.label18.TabIndex = 13;
@@ -134,7 +134,7 @@ namespace Tasks
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton2.Location = new System.Drawing.Point(167, 445);
+            this.radioButton2.Location = new System.Drawing.Point(167, 393);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(114, 25);
             this.radioButton2.TabIndex = 12;
@@ -147,7 +147,7 @@ namespace Tasks
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton1.Location = new System.Drawing.Point(20, 445);
+            this.radioButton1.Location = new System.Drawing.Point(20, 393);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(112, 25);
             this.radioButton1.TabIndex = 11;
@@ -161,7 +161,7 @@ namespace Tasks
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(20, 288);
+            this.label13.Location = new System.Drawing.Point(20, 236);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(190, 21);
             this.label13.TabIndex = 8;
@@ -172,7 +172,7 @@ namespace Tasks
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(20, 344);
+            this.label12.Location = new System.Drawing.Point(20, 292);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(204, 15);
             this.label12.TabIndex = 7;
@@ -188,7 +188,7 @@ namespace Tasks
             this.comboBox1.Items.AddRange(new object[] {
             "English",
             "Spanish"});
-            this.comboBox1.Location = new System.Drawing.Point(20, 312);
+            this.comboBox1.Location = new System.Drawing.Point(20, 260);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(225, 29);
             this.comboBox1.TabIndex = 6;
@@ -222,7 +222,7 @@ namespace Tasks
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(7, 251);
+            this.label9.Location = new System.Drawing.Point(7, 199);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(299, 21);
             this.label9.TabIndex = 3;
@@ -233,7 +233,7 @@ namespace Tasks
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(7, 219);
+            this.label10.Location = new System.Drawing.Point(7, 167);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(167, 32);
             this.label10.TabIndex = 2;

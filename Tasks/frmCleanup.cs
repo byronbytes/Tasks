@@ -584,8 +584,18 @@ namespace Tasks
 
             if (cbSystemMemDumps.Checked)
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\CrashDumps\\");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("System Memory Dumps Deleted.");
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\CrashDumps\\");
+                    var directory2 = new DirectoryInfo("C:\\Windows\\MiniDump\\");
+                    File.Delete("C:\\Windows\\MEMORY.DMP");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("System Memory Dumps Deleted.");
+                }
+                catch
+                {
+                    CleanupLogsLBox.Items.Add("Error Deleting System Memory Dumps.");
+                }
+             
             }
 
 
