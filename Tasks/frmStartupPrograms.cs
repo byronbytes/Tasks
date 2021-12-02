@@ -13,14 +13,14 @@ using System.Management;
 using System.Diagnostics;
 using System.Threading;
 
-// TODO: Cleanup and change the code style
 namespace Tasks {
     public partial class frmStartupPrograms : Form {
-        public frmStartupPrograms() {
+        public frmStartupPrograms() 
+        {
             InitializeComponent();
             RenderStartupsOnListWiew();
             CheckTheme();
-    }
+        }
 
         private void RefreshList() {
             StartupProcesses.Items.Clear();
@@ -39,10 +39,6 @@ namespace Tasks {
         }
 
         private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e) {}
-
-
-
-    
 
 
         private void button1_Click(object sender, EventArgs e) {
