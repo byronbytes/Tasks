@@ -13,6 +13,10 @@ namespace Tasks
             return (bytes / 1024f) / 1024f;
         }  
         
+        static string Test(string test2)
+        {
+            return test2;
+        }
     
     }
 }
