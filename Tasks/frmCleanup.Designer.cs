@@ -33,30 +33,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.ExtensionsBox = new System.Windows.Forms.ListView();
-            this.ExtName = new System.Windows.Forms.ColumnHeader();
-            this.ExtSize = new System.Windows.Forms.ColumnHeader();
-            this.ExtPath = new System.Windows.Forms.ColumnHeader();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnCleanup = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.cbWindowsLogFiles = new System.Windows.Forms.CheckBox();
             this.cbExplorerIconCache = new System.Windows.Forms.CheckBox();
             this.cbExplorerThumbCache = new System.Windows.Forms.CheckBox();
@@ -79,6 +57,7 @@
             this.cbSystemRecycleBin = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.cbIECache = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -106,23 +85,44 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cbDiscord = new System.Windows.Forms.CheckBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ExtensionsBox = new System.Windows.Forms.ListView();
+            this.ExtName = new System.Windows.Forms.ColumnHeader();
+            this.ExtSize = new System.Windows.Forms.ColumnHeader();
+            this.ExtPath = new System.Windows.Forms.ColumnHeader();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnCleanup = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CleanupLogsLBox
@@ -250,250 +250,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cleanup";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.ExtensionsBox);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.comboBox1);
-            this.tabPage3.ForeColor = System.Drawing.Color.White;
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(980, 588);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Browser Extensions";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(10, 54);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(451, 38);
-            this.label17.TabIndex = 44;
-            this.label17.Text = "Tasks will close any opened browsers before removing any extensions. \r\nSave your " +
-    "work before using this!";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(10, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(120, 37);
-            this.label14.TabIndex = 43;
-            this.label14.Text = "Caution.";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(698, 720);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 41);
-            this.button3.TabIndex = 38;
-            this.button3.Text = "Remove";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // ExtensionsBox
-            // 
-            this.ExtensionsBox.AutoArrange = false;
-            this.ExtensionsBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.ExtensionsBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ExtensionsBox.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ExtName,
-            this.ExtSize,
-            this.ExtPath});
-            this.ExtensionsBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ExtensionsBox.ForeColor = System.Drawing.Color.White;
-            this.ExtensionsBox.FullRowSelect = true;
-            this.ExtensionsBox.HideSelection = false;
-            this.ExtensionsBox.Location = new System.Drawing.Point(10, 211);
-            this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(943, 371);
-            this.ExtensionsBox.TabIndex = 42;
-            this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
-            this.ExtensionsBox.View = System.Windows.Forms.View.Details;
-            // 
-            // ExtName
-            // 
-            this.ExtName.Text = "Name";
-            this.ExtName.Width = 240;
-            // 
-            // ExtSize
-            // 
-            this.ExtSize.Text = "Size";
-            this.ExtSize.Width = 120;
-            // 
-            // ExtPath
-            // 
-            this.ExtPath.Text = "Path";
-            this.ExtPath.Width = 650;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(10, 92);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(943, 17);
-            this.label16.TabIndex = 41;
-            this.label16.Text = "_________________________________________________________________________________" +
-    "________________________________________________________________________________" +
-    "__________________________";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(10, 124);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(417, 23);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Select a supported browser detected on your system.";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(10, 160);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(350, 28);
-            this.comboBox1.TabIndex = 39;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage4.Controls.Add(this.groupBox1);
-            this.tabPage4.Controls.Add(this.textBox1);
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(980, 588);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Remove Bloatware";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 73);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(417, 273);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Uninstall and Remove Bloat";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(6, 26);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(175, 37);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Disable Cortana";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(6, 80);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(175, 37);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Uninstall Solitaire";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(6, 198);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 37);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Uninstall Edge";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(6, 140);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(175, 37);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Uninstall OneDrive";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(6, 446);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(968, 136);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(12, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(515, 38);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "You can remove bloatware using our built in panel, which has much more variety\r\n " +
-    "and has more built in scripts.";
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.IsBalloon = true;
-            // 
-            // btnCleanup
-            // 
-            this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCleanup.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCleanup.Location = new System.Drawing.Point(823, 632);
-            this.btnCleanup.Name = "btnCleanup";
-            this.btnCleanup.Size = new System.Drawing.Size(173, 44);
-            this.btnCleanup.TabIndex = 37;
-            this.btnCleanup.Text = "Cleanup";
-            this.btnCleanup.UseVisualStyleBackColor = true;
-            this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
-            // 
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage6);
@@ -536,43 +292,6 @@
             this.tabPage6.Size = new System.Drawing.Size(960, 542);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "System";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage7.Controls.Add(this.cbIECache);
-            this.tabPage7.Controls.Add(this.pictureBox3);
-            this.tabPage7.Controls.Add(this.label8);
-            this.tabPage7.Controls.Add(this.cbSpotifyCookies);
-            this.tabPage7.Controls.Add(this.cbSpotifyCache);
-            this.tabPage7.Controls.Add(this.pictureBox2);
-            this.tabPage7.Controls.Add(this.label7);
-            this.tabPage7.Controls.Add(this.cbChromeSavedPasswords);
-            this.tabPage7.Controls.Add(this.cbEdgeSessions);
-            this.tabPage7.Controls.Add(this.cbEdgeSearchHistory);
-            this.tabPage7.Controls.Add(this.cbEdgeCookies);
-            this.tabPage7.Controls.Add(this.cbEdgeCache);
-            this.tabPage7.Controls.Add(this.pictureBox8);
-            this.tabPage7.Controls.Add(this.label18);
-            this.tabPage7.Controls.Add(this.label3);
-            this.tabPage7.Controls.Add(this.cbChromeCache);
-            this.tabPage7.Controls.Add(this.cbChromeSessions);
-            this.tabPage7.Controls.Add(this.cbChromeCookies);
-            this.tabPage7.Controls.Add(this.cbFirefoxSearchHistory);
-            this.tabPage7.Controls.Add(this.cbChromeSearchHistory);
-            this.tabPage7.Controls.Add(this.cbFirefoxCookies);
-            this.tabPage7.Controls.Add(this.cbFirefoxCache);
-            this.tabPage7.Controls.Add(this.pictureBox5);
-            this.tabPage7.Controls.Add(this.pictureBox4);
-            this.tabPage7.Controls.Add(this.label10);
-            this.tabPage7.Controls.Add(this.label6);
-            this.tabPage7.Controls.Add(this.cbDiscord);
-            this.tabPage7.Location = new System.Drawing.Point(4, 30);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(960, 542);
-            this.tabPage7.TabIndex = 1;
-            this.tabPage7.Text = "Applications";
             // 
             // cbWindowsLogFiles
             // 
@@ -865,6 +584,44 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage7.Controls.Add(this.cbIECache);
+            this.tabPage7.Controls.Add(this.pictureBox3);
+            this.tabPage7.Controls.Add(this.label8);
+            this.tabPage7.Controls.Add(this.cbSpotifyCookies);
+            this.tabPage7.Controls.Add(this.cbSpotifyCache);
+            this.tabPage7.Controls.Add(this.pictureBox2);
+            this.tabPage7.Controls.Add(this.label7);
+            this.tabPage7.Controls.Add(this.cbChromeSavedPasswords);
+            this.tabPage7.Controls.Add(this.cbEdgeSessions);
+            this.tabPage7.Controls.Add(this.cbEdgeSearchHistory);
+            this.tabPage7.Controls.Add(this.cbEdgeCookies);
+            this.tabPage7.Controls.Add(this.cbEdgeCache);
+            this.tabPage7.Controls.Add(this.pictureBox8);
+            this.tabPage7.Controls.Add(this.label18);
+            this.tabPage7.Controls.Add(this.label3);
+            this.tabPage7.Controls.Add(this.cbChromeCache);
+            this.tabPage7.Controls.Add(this.cbChromeSessions);
+            this.tabPage7.Controls.Add(this.cbChromeCookies);
+            this.tabPage7.Controls.Add(this.cbFirefoxSearchHistory);
+            this.tabPage7.Controls.Add(this.cbChromeSearchHistory);
+            this.tabPage7.Controls.Add(this.cbFirefoxCookies);
+            this.tabPage7.Controls.Add(this.cbFirefoxCache);
+            this.tabPage7.Controls.Add(this.pictureBox5);
+            this.tabPage7.Controls.Add(this.pictureBox4);
+            this.tabPage7.Controls.Add(this.label10);
+            this.tabPage7.Controls.Add(this.label6);
+            this.tabPage7.Controls.Add(this.cbDiscord);
+            this.tabPage7.ForeColor = System.Drawing.SystemColors.Window;
+            this.tabPage7.Location = new System.Drawing.Point(4, 30);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(960, 542);
+            this.tabPage7.TabIndex = 1;
+            this.tabPage7.Text = "Applications";
+            // 
             // cbIECache
             // 
             this.cbIECache.AutoSize = true;
@@ -955,7 +712,7 @@
             this.cbChromeSavedPasswords.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbChromeSavedPasswords.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbChromeSavedPasswords.ForeColor = System.Drawing.Color.White;
-            this.cbChromeSavedPasswords.Location = new System.Drawing.Point(16, 168);
+            this.cbChromeSavedPasswords.Location = new System.Drawing.Point(16, 172);
             this.cbChromeSavedPasswords.Name = "cbChromeSavedPasswords";
             this.cbChromeSavedPasswords.Size = new System.Drawing.Size(128, 21);
             this.cbChromeSavedPasswords.TabIndex = 73;
@@ -1045,7 +802,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 13);
+            this.label3.Location = new System.Drawing.Point(48, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 25);
             this.label3.TabIndex = 54;
@@ -1057,7 +814,7 @@
             this.cbChromeCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbChromeCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbChromeCache.ForeColor = System.Drawing.Color.White;
-            this.cbChromeCache.Location = new System.Drawing.Point(16, 48);
+            this.cbChromeCache.Location = new System.Drawing.Point(16, 52);
             this.cbChromeCache.Name = "cbChromeCache";
             this.cbChromeCache.Size = new System.Drawing.Size(62, 21);
             this.cbChromeCache.TabIndex = 55;
@@ -1071,7 +828,7 @@
             this.cbChromeSessions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbChromeSessions.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbChromeSessions.ForeColor = System.Drawing.Color.White;
-            this.cbChromeSessions.Location = new System.Drawing.Point(16, 138);
+            this.cbChromeSessions.Location = new System.Drawing.Point(16, 142);
             this.cbChromeSessions.Name = "cbChromeSessions";
             this.cbChromeSessions.Size = new System.Drawing.Size(77, 21);
             this.cbChromeSessions.TabIndex = 56;
@@ -1085,7 +842,7 @@
             this.cbChromeCookies.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbChromeCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbChromeCookies.ForeColor = System.Drawing.Color.White;
-            this.cbChromeCookies.Location = new System.Drawing.Point(16, 78);
+            this.cbChromeCookies.Location = new System.Drawing.Point(16, 82);
             this.cbChromeCookies.Name = "cbChromeCookies";
             this.cbChromeCookies.Size = new System.Drawing.Size(73, 21);
             this.cbChromeCookies.TabIndex = 57;
@@ -1113,7 +870,7 @@
             this.cbChromeSearchHistory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbChromeSearchHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbChromeSearchHistory.ForeColor = System.Drawing.Color.White;
-            this.cbChromeSearchHistory.Location = new System.Drawing.Point(16, 108);
+            this.cbChromeSearchHistory.Location = new System.Drawing.Point(16, 112);
             this.cbChromeSearchHistory.Name = "cbChromeSearchHistory";
             this.cbChromeSearchHistory.Size = new System.Drawing.Size(111, 21);
             this.cbChromeSearchHistory.TabIndex = 58;
@@ -1162,7 +919,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Tasks.Properties.Resources.Chrome;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox4.Location = new System.Drawing.Point(13, 17);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 29);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1206,6 +963,250 @@
             this.toolTip1.SetToolTip(this.cbDiscord, "Cleans Discord\'s cache and cookies.");
             this.cbDiscord.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.ExtensionsBox);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.ForeColor = System.Drawing.Color.White;
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabPage3.Size = new System.Drawing.Size(980, 588);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Browser Extensions";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(10, 54);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(451, 38);
+            this.label17.TabIndex = 44;
+            this.label17.Text = "Tasks will close any opened browsers before removing any extensions. \r\nSave your " +
+    "work before using this!";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(10, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 37);
+            this.label14.TabIndex = 43;
+            this.label14.Text = "Caution.";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(698, 720);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(178, 41);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "Remove";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // ExtensionsBox
+            // 
+            this.ExtensionsBox.AutoArrange = false;
+            this.ExtensionsBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.ExtensionsBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ExtensionsBox.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ExtName,
+            this.ExtSize,
+            this.ExtPath});
+            this.ExtensionsBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExtensionsBox.ForeColor = System.Drawing.Color.White;
+            this.ExtensionsBox.FullRowSelect = true;
+            this.ExtensionsBox.HideSelection = false;
+            this.ExtensionsBox.Location = new System.Drawing.Point(10, 211);
+            this.ExtensionsBox.Name = "ExtensionsBox";
+            this.ExtensionsBox.Size = new System.Drawing.Size(943, 371);
+            this.ExtensionsBox.TabIndex = 42;
+            this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
+            this.ExtensionsBox.View = System.Windows.Forms.View.Details;
+            // 
+            // ExtName
+            // 
+            this.ExtName.Text = "Name";
+            this.ExtName.Width = 240;
+            // 
+            // ExtSize
+            // 
+            this.ExtSize.Text = "Size";
+            this.ExtSize.Width = 120;
+            // 
+            // ExtPath
+            // 
+            this.ExtPath.Text = "Path";
+            this.ExtPath.Width = 650;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label16.Location = new System.Drawing.Point(10, 92);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(943, 17);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "_________________________________________________________________________________" +
+    "________________________________________________________________________________" +
+    "__________________________";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(10, 124);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(417, 23);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Select a supported browser detected on your system.";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(10, 160);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(350, 28);
+            this.comboBox1.TabIndex = 39;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage4.Controls.Add(this.groupBox1);
+            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.label5);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(980, 588);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Remove Bloatware";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Location = new System.Drawing.Point(12, 73);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(417, 273);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Uninstall and Remove Bloat";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(6, 26);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(175, 37);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "Disable Cortana";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(6, 80);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(175, 37);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Uninstall Solitaire";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(6, 198);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(175, 37);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Uninstall Edge";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(6, 140);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(175, 37);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Uninstall OneDrive";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(6, 446);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(968, 136);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(12, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(515, 38);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "You can remove bloatware using our built in panel, which has much more variety\r\n " +
+    "and has more built in scripts.";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
+            // btnCleanup
+            // 
+            this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCleanup.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCleanup.Location = new System.Drawing.Point(823, 632);
+            this.btnCleanup.Name = "btnCleanup";
+            this.btnCleanup.Size = new System.Drawing.Size(173, 44);
+            this.btnCleanup.TabIndex = 37;
+            this.btnCleanup.Text = "Cleanup";
+            this.btnCleanup.UseVisualStyleBackColor = true;
+            this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1224,24 +1225,24 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
