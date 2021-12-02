@@ -141,7 +141,7 @@ namespace Tasks
 
             if (Properties.Settings.Default.CleanupMessageBox == true)
             {
-                MessageBox.Show("Cleanup has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt");
+                MessageBox.Show("Cleanup has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
             }
 
         }
@@ -165,7 +165,6 @@ namespace Tasks
                 catch (Exception ex)
                 {
                     CleanupLogsLBox.Items.Add("Error deleting the Downloads Folder. " + ex);
-
                 }
 
             if (cbSystemRecycleBin.Checked)
@@ -197,8 +196,6 @@ namespace Tasks
 
             }
 
-
-
             if (cbSystemPrefetch.Checked)
             {
                 try
@@ -211,7 +208,6 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Error while deleting Prefetch. " + ex);
                 }
             }
-
 
 
             if (cbChromeCache.Checked)
@@ -941,6 +937,7 @@ namespace Tasks
             try { RunFile.RunBat("Scripts/BatFiles/removeedge.bat", true); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
+        
         private void DirectoryExists()
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
@@ -952,7 +949,6 @@ namespace Tasks
             Dirs.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
             Dirs.edgeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extensions\\");
             Dirs.discordDir = localappdata + "\\Discord\\";
-
 
             if (!Directory.Exists(Dirs.chromeDir))
             {
@@ -976,7 +972,6 @@ namespace Tasks
             {
                 cbDiscord.Enabled = false;
                 lblNotDetected.Visible = true;
-
             }
 
             if (!Directory.Exists(Dirs.edgeDir))
