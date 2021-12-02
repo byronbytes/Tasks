@@ -885,12 +885,13 @@ namespace Tasks
 
                 if (comboBox1.Text == "Microsoft Edge")
                 {
-                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                   Remove.KillBrowser(3);
+                   Thread.Sleep(75);
+                   
+                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try
-                        {
-                            Remove.KillBrowser(3);
-                            Thread.Sleep(75);
+                        {       
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
                             Remove.DeleteExtension(subItem, false);
@@ -999,8 +1000,6 @@ namespace Tasks
             {
                 comboBox1.Items.Add("Microsoft Edge");
             }
-
-
         }
 
         private void cbEdgeCookies_CheckStateChanged(object sender, EventArgs e)
