@@ -74,7 +74,6 @@ namespace Tasks
 
 
                 tabPage1.BackColor = Color.White;
-                tabPage2.BackColor = Color.White;
                 tabPage3.BackColor = Color.White;
                 tabPage4.BackColor = Color.White;
                 label1.ForeColor = Color.Black;
@@ -756,7 +755,6 @@ namespace Tasks
                 ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
 
                 long dirSize = DirSize(new DirectoryInfo(ext.ToString()));
-
                 double dirsizeMB = ConvertBytesToMegabytes(dirSize);
                 extb.SubItems.Add("~ " + dirsizeMB + "MB");
                 extb.SubItems.Add(ext.ToString());
@@ -772,9 +770,6 @@ namespace Tasks
                 ExtensionsBox.Items.Clear();
 
                 GetExtensionList(new DirectoryInfo(Dirs.chromeExtDir));
-             
-
-
 
 
             }
@@ -790,14 +785,7 @@ namespace Tasks
                             string prf = (fol + "\\extensions\\");
                             try
                             {
-                                foreach (string ext in Directory.EnumerateFiles(prf))
-                                {
-                                    FileInfo fi = new FileInfo(ext);
-                                    ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
-                                    extb.SubItems.Add("~ " + ByteSize.FromBytes(fi.Length).ToString());
-                                    extb.SubItems.Add(ext);
-
-                                }
+                                GetExtensionList(new DirectoryInfo(Dirs.firefoxExtDir));
 
                             }
                             catch (Exception Exc)
@@ -820,17 +808,8 @@ namespace Tasks
             else if (comboBox1.Text == "Microsoft Edge")
             {
                 ExtensionsBox.Items.Clear();
-                foreach (string ext in Directory.EnumerateDirectories(Dirs.edgeExtDir))
-                {
-                    FileInfo fi = new FileInfo(ext);
 
-                    ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
-                    DirectoryInfo fol = new DirectoryInfo(ext);
-                    fol.EnumerateDirectories();
-                    extb.SubItems.Add("~ " + ByteSize.FromBytes(ext.Length).ToString());
-
-                    extb.SubItems.Add(ext);
-                }
+                GetExtensionList(new DirectoryInfo(Dirs.edgeExtDir));
             }
         }
 
@@ -963,7 +942,6 @@ namespace Tasks
                 cbChromeSearchHistory.Enabled = false;
                 cbChromeSessions.Enabled = false;
                 cbChromeSavedPasswords.Enabled = false;
-                lblNotDetected.Visible = true;
             }
 
             if (!Directory.Exists(Dirs.firefoxDir))
@@ -971,13 +949,11 @@ namespace Tasks
                 cbFirefoxCache.Enabled = false;
                 cbFirefoxCookies.Enabled = false;
                 cbFirefoxSearchHistory.Enabled = false;
-                lblNotDetected.Visible = true;
             }
 
             if (!Directory.Exists(Dirs.discordDir))
             {
                 cbDiscord.Enabled = false;
-                lblNotDetected.Visible = true;
             }
 
             if (!Directory.Exists(Dirs.edgeDir))
@@ -986,7 +962,6 @@ namespace Tasks
                 cbEdgeCookies.Enabled = false;
                 cbEdgeSearchHistory.Enabled = false;
                 cbEdgeSessions.Enabled = false;
-                lblNotDetected.Visible = true;
 
             }
 
@@ -1070,7 +1045,7 @@ namespace Tasks
 
         static double ConvertBytesToMegabytes(long bytes)
         {
-            double ConvertedByte = Math.Round(bytes / 1024f / 1024f);
+            double ConvertedByte = Math.Round(bytes / 1024f / 1024f, .00);
             return (ConvertedByte);
           
         }
