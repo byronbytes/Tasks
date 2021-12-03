@@ -20,7 +20,12 @@ namespace Tasks
             
             if(errortype == 1)
             {
-                Debug.Print("Please try running this task as an administrator.");
+                Debug.Print("Please try running the app as an administrator.");
+            }
+            
+            if(errortype == 2)
+            {
+                Debug.Print("This is currently being used by another program.");   
             }
             
         }
