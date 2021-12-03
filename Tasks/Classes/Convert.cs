@@ -10,13 +10,7 @@ namespace Tasks
     {
         static double ConvertBytesToMegabytes(long bytes)
         {
-            return (bytes / 1024f) / 1024f;
+            return (bytes / 1024f) / 1024f, 2;
         }  
-        
-        static double ConvertTest(long bytes)
-        {
-            return (bytes);
-        }
-    
     }
 }
