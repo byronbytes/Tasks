@@ -13,6 +13,8 @@ using System.Management;
 using System.Diagnostics;
 using System.Threading;
 
+//Todo: Startup Services as well.
+
 namespace Tasks {
     public partial class frmStartupPrograms : Form {
         public frmStartupPrograms() 
@@ -69,7 +71,7 @@ namespace Tasks {
                     {
                         if (key == null)
                         {
-                            MessageBox.Show("This key does not exist or equals null. This error should not happen and if you encounter it, please report it.");
+                            MessageBox.Show("This key does not exist or equals null.");
                             Debug.Print("Key Path: " + keyName + "(/)" + Value);
                         }
                         else
