@@ -349,7 +349,7 @@
 </value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>Quick Clean is a new feature that cleans directories that clutter up with temp folders faster.
+    <value>Quick Clean is a new feature that cleans directories that clutter up with temp folders.
 These folders are known to pile up quick and slow down computer performance, so it's 
 best to optimize them regularly.</value>
   </data>
@@ -8009,6 +8009,9 @@ https://github.com/ShadowWhisperer/Remove-Edge-Chromium
 
 These scripts are distributed under the MIT License, which allows distributions of the original source code.</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>41</value>
   </metadata>

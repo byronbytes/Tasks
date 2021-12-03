@@ -933,6 +933,8 @@ namespace Tasks
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
         
+
+
         private void DirectoryExists()
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
@@ -975,7 +977,7 @@ namespace Tasks
 
             }
 
-            // Extention Finder
+            // Extention Finder & More
             if (Directory.Exists(Dirs.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
@@ -1016,15 +1018,33 @@ namespace Tasks
 
         private void button8_Click_1(object sender, EventArgs e)
         {
+            if (Directory.Exists(Dirs.chromeDir))
+            {
+                long size5 = DirSize(new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\"));
+
+            }
+
             label11.Visible = true;
             button9.Visible = true;
+            label13.Visible = true;
+            label19.Visible = true;
             long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp"));
             long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
             long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache")));
-            long allsize = size1 + size2 + size3;
-            double allsizeMB = ConvertBytesToMegabytes(allsize);
-            label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
+            long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive")));
           
+
+
+            long allsize = size1 + size2 + size3 + size4;
+            long tempsize = size1 + size2;
+            long systemsize = size3 + size4;
+            // Conversion stuff
+            double allsizeMB = ConvertBytesToMegabytes(allsize);
+            double tempsizeMB = ConvertBytesToMegabytes(tempsize);
+            double systemsizeMB = ConvertBytesToMegabytes(systemsize);
+            label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
+            label13.Text = tempsizeMB + "MB";
+            label19.Text = systemsizeMB + "MB";
         }
 
         public static long DirSize(DirectoryInfo d)

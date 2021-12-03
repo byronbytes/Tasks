@@ -13,9 +13,9 @@ namespace Tasks
             return (bytes / 1024f) / 1024f;
         }  
         
-        static string Test(string test2)
+        static double ConvertDecimalCount(long bytes)
         {
-            return test2;
+            return (bytes);
         }
     
     }
