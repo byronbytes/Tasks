@@ -89,9 +89,8 @@ namespace Tasks {
         }
         
         private void button2_Click(object sender, EventArgs e) {
-            // Opens the file dialog for selecting a program
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" }) {
-                // If statement because if you closed it would throw an exception
+
                 if (ofd.ShowDialog() == DialogResult.OK)  {
                     try
                     {
