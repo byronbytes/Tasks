@@ -1018,7 +1018,7 @@ namespace Tasks
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            if (Directory.Exists(Dirs.chromeDir))
+            if (Directory.Exists(Dirs.chromeDir)) // Would be used to imploment a Browser Cache for Quick Clean.
             {
                 long size5 = DirSize(new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\"));
 
@@ -1034,10 +1034,10 @@ namespace Tasks
             long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive")));
           
 
-
             long allsize = size1 + size2 + size3 + size4;
             long tempsize = size1 + size2;
             long systemsize = size3 + size4;
+            
             // Conversion stuff
             double allsizeMB = ConvertBytesToMegabytes(allsize);
             double tempsizeMB = ConvertBytesToMegabytes(tempsize);
