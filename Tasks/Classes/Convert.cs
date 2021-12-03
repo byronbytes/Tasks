@@ -13,7 +13,7 @@ namespace Tasks
             return (bytes / 1024f) / 1024f;
         }  
         
-        static double ConvertDecimalCount(long bytes)
+        static double ConvertTest(long bytes)
         {
             return (bytes);
         }
