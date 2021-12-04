@@ -70,7 +70,7 @@ namespace Tasks
             this.StartupProcesses.HideSelection = false;
             this.StartupProcesses.Location = new System.Drawing.Point(6, 3);
             this.StartupProcesses.Name = "StartupProcesses";
-            this.StartupProcesses.Size = new System.Drawing.Size(974, 567);
+            this.StartupProcesses.Size = new System.Drawing.Size(974, 565);
             this.StartupProcesses.TabIndex = 0;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
@@ -160,7 +160,7 @@ namespace Tasks
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(877, 599);
+            this.txtFileName.Location = new System.Drawing.Point(371, 646);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(119, 15);
             this.txtFileName.TabIndex = 4;
@@ -171,7 +171,7 @@ namespace Tasks
             // 
             this.txtTargetPath.AutoSize = true;
             this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTargetPath.Location = new System.Drawing.Point(871, 614);
+            this.txtTargetPath.Location = new System.Drawing.Point(365, 661);
             this.txtTargetPath.Name = "txtTargetPath";
             this.txtTargetPath.Size = new System.Drawing.Size(125, 15);
             this.txtTargetPath.TabIndex = 5;
@@ -199,7 +199,7 @@ namespace Tasks
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(995, 599);
+            this.tabControl1.Size = new System.Drawing.Size(995, 605);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -209,7 +209,7 @@ namespace Tasks
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(987, 565);
+            this.tabPage1.Size = new System.Drawing.Size(987, 571);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Startup Programs";
             // 

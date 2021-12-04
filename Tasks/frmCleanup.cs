@@ -1018,6 +1018,7 @@ namespace Tasks
 
         private void button8_Click_1(object sender, EventArgs e)
         {
+            progressBar1.Value = 0;
             if (Directory.Exists(Dirs.chromeDir)) // Would be used to imploment a Browser Cache for Quick Clean.
             {
                 long size5 = DirSize(new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\"));
@@ -1029,10 +1030,14 @@ namespace Tasks
             label13.Visible = true;
             label19.Visible = true;
             long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp"));
+            progressBar1.PerformStep();
             long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
+            progressBar1.PerformStep();
             long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache")));
+            progressBar1.PerformStep();
             long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive")));
-          
+            progressBar1.PerformStep();
+
 
             long allsize = size1 + size2 + size3 + size4;
             long tempsize = size1 + size2;
@@ -1040,8 +1045,11 @@ namespace Tasks
             
             // Conversion stuff
             double allsizeMB = ConvertBytesToMegabytes(allsize);
+            progressBar1.PerformStep();
             double tempsizeMB = ConvertBytesToMegabytes(tempsize);
+            progressBar1.PerformStep();
             double systemsizeMB = ConvertBytesToMegabytes(systemsize);
+            progressBar1.PerformStep();
             label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
             label13.Text = tempsizeMB + "MB";
             label19.Text = systemsizeMB + "MB";
