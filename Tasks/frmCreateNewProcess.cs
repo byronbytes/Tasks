@@ -45,7 +45,5 @@ namespace Tasks
                  MessageBox.Show("An error has occurred. " + ex.Message);
             }
         }
-                                                  
-                                                
     }
 }

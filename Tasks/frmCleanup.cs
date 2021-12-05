@@ -155,7 +155,6 @@ namespace Tasks
             var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
 
 
-
             if (cbExplorerDownloads.Checked)
                 try
                 {
@@ -460,9 +459,9 @@ namespace Tasks
             {
                 try
                 {
-                    System.Diagnostics.Process process = new System.Diagnostics.Process();
-                    System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                    startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    Process process = new Process();
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.WindowStyle = ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
                     startInfo.Arguments = "/c ipconfig /flushdns";
                     startInfo.RedirectStandardError = true;
@@ -481,9 +480,9 @@ namespace Tasks
             {
                 try
                 {
-                    System.Diagnostics.Process process = new System.Diagnostics.Process();
-                    System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-                    startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    Process process = new Process();
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.WindowStyle = ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
                     startInfo.Verb = "runas"; //give cmd admin perms
                     startInfo.UseShellExecute = true;
