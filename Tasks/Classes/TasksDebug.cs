@@ -1,16 +1,17 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Tasks
 {
-    class Convert
+    class TasksDebug
     {
-        static double ConvertBytesToMegabytes(long bytes)
+        public static void Null()
         {
-            return (bytes / 1024f / 1024f);
-        }  
+            Debug.Print("Null.");
+        }
     }
 }

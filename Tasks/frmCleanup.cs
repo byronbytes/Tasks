@@ -1092,8 +1092,16 @@ namespace Tasks
         {
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
-            if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Deleted.");
-            if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Deleted.");
+            try
+            {
+                if (DeleteAllFiles(windowstemp)) TasksDebug.Null();
+                if (DeleteAllFiles(usertemp)) TasksDebug.Null(); 
+            }
+            catch
+            {
+
+            }
+        
         }
     }
 }
