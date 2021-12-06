@@ -2,12 +2,9 @@
 
 :: Creator: ShadowWhisperer
 :: GitHub: https://github.com/ShadowWhisperer
-:: Updated: 11/18/2021
+:: Updated: 12/06/2021
 
-:: TODO: Check and show which versions were installed. 
-
-
-:: Check if the user ran the script as admin.
+:: Check if the uesr has administrator perms.
 net session >nul 2>&1
 if %errorLevel% == 0 
 (
@@ -39,13 +36,13 @@ reg add HKLM\SOFTWARE\Microsoft\EdgeUpdate /t REG_DWORD /v DoNotUpdateToEdgeWith
 if exist "C:\Program Files (x86)\Microsoft\Edge\Application\" 
 (
 set "EXIST=1"
-echo Microsoft Edge (32bit) has been found and will start removing.
+echo Microsoft Edge (32bit) has been detected and will be removed.
 for /f "delims=" %%a in ('dir /b "C:\Program Files (x86)\Microsoft\Edge\Application\"') do 
 (
 cd /d "C:\Program Files (x86)\Microsoft\Edge\Application\%%a\Installer\"
 if exist "setup.exe" 
 (
-echo - Removing Microsoft Edge
+echo - Removing Microsoft Edge -
 start /w setup.exe --uninstall --system-level --force-uninstall
 )
 echo Finished.
@@ -58,13 +55,13 @@ timeout /t 3 & exit
 if exist "C:\Program Files\Microsoft\Edge\Application\" 
 (
 set "EXIST=1"
-echo Microsoft Edge (64bit) has been found and will start removing.
+echo Microsoft Edge (64bit) has been detected and will be removed.
 for /f "delims=" %%a in ('dir /b "C:\Program Files\Microsoft\Edge\Application\"') do
 (
 cd /d "C:\Program Files\Microsoft\Edge\Application\%%a\Installer\"
 if exist "setup.exe" 
 (
-echo - Removing Microsoft Edge
+echo - Removing Microsoft Edge -
 start /w setup.exe --uninstall --system-level --force-uninstall
 )
 echo Finished.
