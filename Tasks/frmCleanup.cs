@@ -250,7 +250,7 @@ namespace Tasks
                 }
             }
 
-            if (cbChromeSessions.Checked) //Chrome Session 
+            if (cbChromeSessions.Checked)
             {
 
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
@@ -259,7 +259,7 @@ namespace Tasks
                 if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
             }
 
-            if (cbChromeCookies.Checked) //Chrome cookies
+            if (cbChromeCookies.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
@@ -268,7 +268,7 @@ namespace Tasks
             }
 
 
-            if (cbChromeSearchHistory.Checked) //Chrome search history
+            if (cbChromeSearchHistory.Checked)
             {
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History Provider Cache");
@@ -454,8 +454,7 @@ namespace Tasks
                 }
             }
 
-            //DNS & ARP
-            if (cbSystemDNSCache.Checked) //Clear DNS
+            if (cbSystemDNSCache.Checked)
             {
                 try
                 {
@@ -472,11 +471,11 @@ namespace Tasks
                 catch (Exception ex)
                 {
 
-                    CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache!" + ex);
+                    CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache." + ex);
 
                 }
             }
-            if (cbSystemARPCache.Checked) //Clear ARP
+            if (cbSystemARPCache.Checked)
             {
                 try
                 {
@@ -500,7 +499,7 @@ namespace Tasks
                 }
             }
 
-            if (cbExplorerRecents.Checked)     //RECENT FILES
+            if (cbExplorerRecents.Checked)
             {
                 try
                 {
@@ -515,13 +514,13 @@ namespace Tasks
             }
 
 
-            if (cbEdgeSearchHistory.Checked) //Edge search history
+            if (cbEdgeSearchHistory.Checked)
             {
 
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History");
                 CleanupLogsLBox.Items.Add("Edge Search History Deleted.");
             }
-            if (cbEdgeCookies.Checked) //Edge cookies
+            if (cbEdgeCookies.Checked)
             {
 
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies");
@@ -529,7 +528,7 @@ namespace Tasks
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Cookies Deleted.");
             }
 
-            if (cbEdgeCache.Checked) //Edge cache
+            if (cbEdgeCache.Checked)
             {
                 try
                 {
