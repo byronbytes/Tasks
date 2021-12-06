@@ -60,8 +60,6 @@ namespace Tasks {
         }
 
         private void frmMain_Load(object sender, EventArgs e) { CheckTheme(); }
-        private void label1_Click(object sender, EventArgs e) {}
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ShowForm(new frmCleanup());
@@ -69,7 +67,6 @@ namespace Tasks {
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             ShowForm(new frmStartupPrograms());
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -81,12 +78,6 @@ namespace Tasks {
         {
             ShowForm(new frmSettings());
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             CheckTheme();
