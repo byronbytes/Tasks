@@ -23,6 +23,13 @@ namespace Tasks
           // }
            
         }
+        
+        
+        public static void InstallUpdate()
+        {
+            //Installs the update from the servers.
+        }
+        
        
     }
 }
