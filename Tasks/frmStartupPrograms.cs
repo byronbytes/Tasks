@@ -58,35 +58,6 @@ namespace Tasks {
                     MessageBox.Show("An error has occurred.");
                 }
             }
-
-
-            if(StartupProcesses.SelectedItems[0].SubItems[1].Text == "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run")
-            {
-                try
-                {
-                    string keyName = "Software\\Microsoft\\Windows\\CurrentVersion\\Run\\";
-                    string Value = StartupProcesses.SelectedItems[0].SubItems[0].Text;
-
-                    using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyName, false))
-                    {
-                        if (key == null)
-                        {
-                            MessageBox.Show("This key does not exist or equals null.");
-                            Debug.Print("Key Path: " + keyName + "(/)" + Value);
-                        }
-                        else
-                        {
-                            key.DeleteValue(keyName + Value);
-                            RefreshList();
-                        }
-                    }
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Error. " + ex.Message);
-                }
-            }
-        }
         
         private void button2_Click(object sender, EventArgs e) {
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" }) {
@@ -130,23 +101,6 @@ namespace Tasks {
             public override string ToString() { return Name; }
         }
         private void button4_Click_1(object sender, EventArgs e) { RefreshList(); }
-
-        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
-            if (StartupProcesses.SelectedItems[0].SubItems[1].Text == "Startup")
-            {
-                try
-                {
-                    File.Delete(fileStartup);
-                    RefreshList();
-                }
-                catch
-                {
-                    MessageBox.Show("An error has occurred.");
-                }
-            }
-        }
 
         private void moreInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
