@@ -221,8 +221,6 @@ namespace Tasks {
 
         }
 
-
-        /// XylonV2.Antivir.API Code Extracted and converted to C#
         /// ----------------------------------------------------------------------------------------------------
 
         ///     ''' <summary>
@@ -273,15 +271,7 @@ namespace Tasks {
             ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            listView1.Items.Clear();
-
-            Task<List<ProcessInfoEx>> ProcessInfoList = Task.Run(async () => await GetProcessAsync());
-            ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
-        }
     }
 
- 
 
     }
