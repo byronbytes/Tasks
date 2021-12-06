@@ -821,9 +821,7 @@ namespace Tasks
                 }
                 catch (Exception Exc)
                 {
-
                     MessageBox.Show(Exc.ToString());
-
                 }
 
             }
@@ -840,11 +838,8 @@ namespace Tasks
         {
 
             if (ExtensionsBox.SelectedItems.Count >= 0) //Check if the user selected extensions for deletion.
-            {
+                {
 
-                /*Process process = new Process();
-                process.Start();
-                process.WaitForExit();*/
                 if (comboBox1.Text == "Google Chrome")
                 {
                     Remove.KillBrowser(1);
