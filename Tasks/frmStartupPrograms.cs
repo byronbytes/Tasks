@@ -43,7 +43,8 @@ namespace Tasks {
         private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e) {}
 
 
-        private void button1_Click(object sender, EventArgs e) {
+        private void button1_Click(object sender, EventArgs e)
+        {
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
 
             if (StartupProcesses.SelectedItems[0].SubItems[1].Text == "Startup")
@@ -58,44 +59,9 @@ namespace Tasks {
                     MessageBox.Show("An error has occurred.");
                 }
             }
-        
-        private void button2_Click(object sender, EventArgs e) {
-            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" }) {
-
-                if (ofd.ShowDialog() == DialogResult.OK)  {
-                    try
-                    {
-                        string program = ofd.FileName.ToString();
-
-                        txtFileName.Text = ofd.FileName;
-                        FileInfo fileInfo = new FileInfo(txtFileName.Text);
-                        txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
-                        File.Copy(txtFileName.Text, txtTargetPath.Text, true);
-                        RefreshList();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("There was an unexpected error.");
-                    }
-                  
-                } else RefreshList();
-            }
         }
         
-        private void button3_Click(object sender, EventArgs e) {
-            try 
-            {
-                Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
-            } 
-            catch(Exception ex) 
-            {
-                MessageBox.Show("An error occurred. " + ex.Message); 
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e) {}
-        
-        public class StartUpProgram {
+         class StartUpProgram {
             public string Name { get; set; }
             public string Path { get; set; }            
             public override string ToString() { return Name; }
@@ -123,6 +89,43 @@ namespace Tasks {
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" })
+            {
 
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string program = ofd.FileName.ToString();
+
+                        txtFileName.Text = ofd.FileName;
+                        FileInfo fileInfo = new FileInfo(txtFileName.Text);
+                        txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
+                        File.Copy(txtFileName.Text, txtTargetPath.Text, true);
+                        RefreshList();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("There was an unexpected error.");
+                    }
+
+                }
+                else RefreshList();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred. " + ex.Message);
+            }
+        }
     }
 }

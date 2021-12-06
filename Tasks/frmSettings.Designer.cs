@@ -141,7 +141,6 @@ namespace Tasks
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Light Theme";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -323,7 +322,6 @@ namespace Tasks
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Report an issue";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DarkCyan;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label6
             // 
