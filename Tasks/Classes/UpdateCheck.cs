@@ -17,11 +17,6 @@ namespace Tasks
        public static void ValidifyUpdate()
        {
       // This will validify that the update is not from a development build. This is a current draft.
-           //if(lblNewVersion.Contains("dev") == true)
-         //  {
-           //   btnDownload.Visible = false;
-          // }
-           
         }
         
         
@@ -29,7 +24,6 @@ namespace Tasks
         {
             //Installs the update from the servers.
         }
-        
        
     }
 }
