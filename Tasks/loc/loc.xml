@@ -15,8 +15,11 @@
 	<string name="Cleanup" lang="es">Cleanup</string>
 
 	<string name="StartupPrograms" lang="en">Startup Programs</string>
-
+	<string name="StartupPrograms" lang="es">Startup Programs</string>
+	
 	<string name="TaskManager" lang="en">Task Manager</string>
+	<string name="TaskManager" lang="es">Task Manager</string>
+	
 	
 	
 
