@@ -688,12 +688,26 @@ namespace Tasks
                 }
 
             }
+            
+            if (cbSpotifyCache.Checked)
+           {
+           
+           try
+            {
+           
+            }
+           catch
+            {
+           
+            }
+           
+           }
 
 
 
             WriteCleanupSummary();
 
-            // END OF CLEANUP
+            // END OF CLEANUP.
 
         }
 
