@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -84,6 +86,13 @@ namespace Tasks
         private void frmSettings_Load(object sender, EventArgs e)
         {
             CheckTheme();
+            FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary").GetFiles("*.txt");
+
+            foreach (FileInfo file in files)
+            {
+                listBox2.Items.Add(file.Name);
+            }
+
         }
 
         public void CheckTheme()
@@ -114,7 +123,6 @@ namespace Tasks
                 label11.ForeColor = Color.Black;
                 label12.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
-                label15.ForeColor = Color.Black;
                 label16.ForeColor = Color.Black;
                 label17.ForeColor = Color.Black;
                 label18.ForeColor = Color.Black;
@@ -134,6 +142,21 @@ namespace Tasks
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            File.Delete(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary\\" + listBox2.SelectedItem.ToString());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary\\").GetFiles("*.txt");
+
+            foreach (FileInfo file in files)
+            {
+                File.Delete(file.ToString());
+            }
         }
     }
 }

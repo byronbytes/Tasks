@@ -103,6 +103,10 @@ namespace Tasks {
                 StartupProcesses.BackColor = Color.White;
                 StartupProcesses.ForeColor = Color.Black;
                 this.BackColor = Color.White;
+                tabPage1.BackColor = Color.White;
+                tabPage2.BackColor = Color.White;
+                listView1.BackColor = Color.White;
+                listView1.ForeColor = Color.Black;
             }
         }
 
