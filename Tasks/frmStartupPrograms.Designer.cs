@@ -33,8 +33,9 @@ namespace Tasks
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStartupPrograms));
             this.StartupProcesses = new System.Windows.Forms.ListView();
             this.ProcessName = new System.Windows.Forms.ColumnHeader();
+            this.ProcessDescription = new System.Windows.Forms.ColumnHeader();
             this.ProcessPath = new System.Windows.Forms.ColumnHeader();
-            this.ProcessStatus = new System.Windows.Forms.ColumnHeader();
+            this.ProcessUser = new System.Windows.Forms.ColumnHeader();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moreInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,8 +67,9 @@ namespace Tasks
             this.StartupProcesses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.StartupProcesses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ProcessName,
+            this.ProcessDescription,
             this.ProcessPath,
-            this.ProcessStatus});
+            this.ProcessUser});
             this.StartupProcesses.ContextMenuStrip = this.contextMenuStrip1;
             this.StartupProcesses.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.StartupProcesses.ForeColor = System.Drawing.Color.White;
@@ -86,15 +88,20 @@ namespace Tasks
             this.ProcessName.Text = "Name";
             this.ProcessName.Width = 250;
             // 
+            // ProcessDescription
+            // 
+            this.ProcessDescription.Text = "Description";
+            this.ProcessDescription.Width = 240;
+            // 
             // ProcessPath
             // 
             this.ProcessPath.Text = "Path";
-            this.ProcessPath.Width = 300;
+            this.ProcessPath.Width = 220;
             // 
-            // ProcessStatus
+            // ProcessUser
             // 
-            this.ProcessStatus.Text = "Status";
-            this.ProcessStatus.Width = 120;
+            this.ProcessUser.Text = "User";
+            this.ProcessUser.Width = 130;
             // 
             // contextMenuStrip1
             // 
@@ -293,7 +300,7 @@ namespace Tasks
         #endregion
         private System.Windows.Forms.ColumnHeader ProcessName;
         private System.Windows.Forms.ColumnHeader ProcessPath;
-        private System.Windows.Forms.ColumnHeader ProcessStatus;
+        private System.Windows.Forms.ColumnHeader ProcessUser;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -314,5 +321,6 @@ namespace Tasks
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader ProcessDescription;
     }
 }

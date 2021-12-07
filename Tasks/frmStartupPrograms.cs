@@ -38,12 +38,15 @@ namespace Tasks {
 
                 string ProcessName = strt["Name"].ToString();
 
+                string ProcessDescription = strt["Description"].ToString();
+
                 string ProcessLocation = strt["Location"].ToString();
 
                 string ProcessUser = strt["User"].ToString();
 
 
                 var StartupProcessList = new ListViewItem(ProcessName + " ");
+                StartupProcessList.SubItems.Add(ProcessDescription + "");
                 StartupProcessList.SubItems.Add(ProcessLocation + "");
                 StartupProcessList.SubItems.Add(ProcessUser + "");
 
