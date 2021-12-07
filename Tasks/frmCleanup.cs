@@ -293,7 +293,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error deleting Discord Cookies." + ex);
+                    CleanupLogsLBox.Items.Add("Error deleting Discord Cache." + ex);
                 }
 
             }
