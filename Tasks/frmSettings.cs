@@ -119,6 +119,9 @@ namespace Tasks
                 label17.ForeColor = Color.Black;
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
+                label20.ForeColor = Color.Black;
+                label21.ForeColor = Color.Black;
+                label22.ForeColor = Color.Black;
                 checkBox1.ForeColor = Color.Black;
                 radioButton1.ForeColor = Color.Black;
                 radioButton2.ForeColor = Color.Black;
