@@ -298,11 +298,11 @@ namespace Tasks
 
             }
 
+            // TODO: Improve the Firefox Cleanups so it takes up less code + works better.
             if (cbFirefoxCache.Checked)
             {
                 try
                 {
-
                     var cache = (localappdata + "\\Mozilla\\Firefox\\Profiles\\");
                     foreach (string direc in Directory.EnumerateDirectories(cache))
                     {
@@ -337,6 +337,7 @@ namespace Tasks
                             }
                         }
                     }
+                    
                     try
                     {
 
@@ -380,7 +381,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error trying to delete firefox cache. " + ex);
+                    CleanupLogsLBox.Items.Add("Error trying to delete Firefox cache. " + ex);
                 }
 
 
