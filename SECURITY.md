@@ -4,18 +4,21 @@
 </h1>
 
 # Security Policy
-This is the current Security Policy for Tasks. Last updated on November 16th, 2021.
+This is the current Security Policy for Tasks. Last updated on December 7th, 2021.
 
 ## About
-Although our application is not the most exploit-prone application, things can still happen and we take it very seriously.
+This is the guideline for reporting security vulnerabilities. If you have found one it is very important you report it as soon as possible before any malicious intents get to any other people.
 
 ## Reporting a Vulnerability
-To report any vulnerabilities, please create a new Issue using the **Security Vulnerability** template (Click [here](https://github.com/LiteTools/Tasks/issues) to go to the Issues Tab).
+To report a new vulnerability, please create a new issue using the **Security Vulnerability** template. Click [here](https://github.com/LiteTools/Tasks/issues) to go to the Issues Tab.
+
+### Notice
+Even though Tasks is more of a "local" application and does not have a public API yet, there can still be vulnerabilites within our code. 
 
 
 
 ### Supported Versions
-These are the supported versions of Tasks. Please note that we will not fix vulnerabilities in older versions that are marked with the :x: sign.
+These are the supported versions of Tasks. We will not fix vulnerabilities in older versions that are marked with the :x: sign.
 
 | Version             | Supported          | Release Date         | Discontinuation Date | Version Type |
 | :------------------ | :----------------: | :--------------:     | :------------------: | :------------------: | 
