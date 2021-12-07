@@ -120,6 +120,7 @@ namespace Tasks
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
                 label20.ForeColor = Color.Black;
+                tabControl1.BackColor = Color.White;
                 checkBox1.ForeColor = Color.Black;
                 radioButton1.ForeColor = Color.Black;
                 radioButton2.ForeColor = Color.Black;
@@ -128,6 +129,11 @@ namespace Tasks
                 listBox1.ForeColor = Color.Black;
                 
             }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

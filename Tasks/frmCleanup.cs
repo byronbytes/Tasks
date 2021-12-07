@@ -71,11 +71,19 @@ namespace Tasks
                 cbSystemPrefetch.ForeColor = Color.Black;
                 cbSystemRecycleBin.ForeColor = Color.Black;
                 cbSystemTempFolders.ForeColor = Color.Black;
-
+                cbWindowsLogFiles.ForeColor = Color.Black;
+                cbSpotifyCache.ForeColor = Color.Black;
+                cbSpotifyCookies.ForeColor = Color.Black;
+                cbIECache.ForeColor = Color.Black;
 
                 tabPage1.BackColor = Color.White;
+                tabPage7.BackColor = Color.White;
                 tabPage3.BackColor = Color.White;
                 tabPage4.BackColor = Color.White;
+                tabControl2.BackColor = Color.White;
+                tabControl1.BackColor = Color.White;
+                tabPage5.BackColor = Color.White;
+                tabPage6.BackColor = Color.White;
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
                 label3.ForeColor = Color.Black;
@@ -88,6 +96,16 @@ namespace Tasks
                 label16.ForeColor = Color.Black;
                 label17.ForeColor = Color.DarkRed;
                 label18.ForeColor = Color.Black;
+                label19.ForeColor = Color.Black;
+                label7.ForeColor = Color.Black;
+                label8.ForeColor = Color.Black;
+                label9.ForeColor = Color.Black;
+                label13.ForeColor = Color.Black;
+                groupBox1.ForeColor = Color.Black;
+                groupBox2.ForeColor = Color.Black;
+                groupBox3.ForeColor = Color.Black;
+                
+                
                 comboBox1.BackColor = Color.Gray;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;

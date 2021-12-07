@@ -29,8 +29,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -116,7 +114,6 @@
             this.btnCleanup = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -192,7 +189,6 @@
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.tabPage5.Controls.Add(this.progressBar1);
-            this.tabPage5.Controls.Add(this.groupBox4);
             this.tabPage5.Controls.Add(this.groupBox3);
             this.tabPage5.Controls.Add(this.groupBox2);
             this.tabPage5.Controls.Add(this.button9);
@@ -214,34 +210,11 @@
             this.progressBar1.Size = new System.Drawing.Size(478, 23);
             this.progressBar1.TabIndex = 8;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox4.Location = new System.Drawing.Point(651, 482);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(278, 100);
-            this.groupBox4.TabIndex = 7;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Temp Browser Caches";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label20.Location = new System.Drawing.Point(19, 32);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(210, 47);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "%num%MB";
-            this.label20.Visible = false;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(350, 482);
+            this.groupBox3.Location = new System.Drawing.Point(478, 482);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(278, 100);
             this.groupBox3.TabIndex = 6;
@@ -264,7 +237,7 @@
             // 
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(45, 482);
+            this.groupBox2.Location = new System.Drawing.Point(155, 482);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(278, 100);
             this.groupBox2.TabIndex = 5;
@@ -1329,8 +1302,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1446,8 +1417,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label12;
     }
