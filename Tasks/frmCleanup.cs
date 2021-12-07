@@ -1050,7 +1050,7 @@ namespace Tasks
             long allsize = size1 + size2 + size3 + size4;
             long tempsize = size1 + size2;
             long systemsize = size3 + size4;
-            
+
             // Conversion stuff
             double allsizeMB = ConvertBytesToMegabytes(allsize);
             progressBar1.PerformStep();

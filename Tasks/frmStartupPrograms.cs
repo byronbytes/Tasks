@@ -12,6 +12,7 @@ using System.IO;
 using System.Management;
 using System.Diagnostics;
 using System.Threading;
+using System.ServiceProcess;
 
 //Todo: Startup Services as well.
 
@@ -22,6 +23,7 @@ namespace Tasks {
             InitializeComponent();
             RenderStartupsOnListWiew();
             CheckTheme();
+            GetAllServices();
         }
 
         private void RefreshList() {
@@ -77,8 +79,6 @@ namespace Tasks {
         {
             if (Properties.Settings.Default.Theme == "dark")
             {
-
-           
             }
 
             if (Properties.Settings.Default.Theme == "light")
@@ -115,6 +115,23 @@ namespace Tasks {
                 else RefreshList();
             }
         }
+
+        private void GetAllServices()
+        {
+            foreach (ServiceController service in ServiceController.GetServices())
+            {
+                string serviceName = service.ServiceName;
+
+                string serviceDisplayName = service.DisplayName;
+
+                string serviceType = service.ServiceType.ToString();
+
+                string status = service.Status.ToString();
+
+                listView1.Items.Add(serviceName + "  " + serviceDisplayName).SubItems.Add( serviceType + " " + status);
+            }
+        }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
