@@ -11,15 +11,17 @@
 We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial to everyone and should not include any hidden paywalls inside the application. Our goal is to make a tool that anyone can use from anywhere.
 
 ## List of Features
+
 - Advanced Cleanup Tool to help computer performance
 
 - Extension Removal Tool to help remove malicious or unwanted extensions
 
 - Bloatware Removal Tool to help remove bloat on your computer
 
-- Startup Manager to improve system boot times
+- Startup Manager to improve system boot times.
 
 - Advanced Task Manager to give more details about processes.
+
 
 ## Installation
 1. You will need to install [.NET Core](https://dotnet.microsoft.com/download). (If .NET Core is not installed, it will prompt you on opening Tasks.)
@@ -29,10 +31,10 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 The dependencies must be kept in the same folder. This will be fixed soon.
 
 ## Contribution
-To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
+To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first. Anyone can contribute because it helps us greatly!
 
 ## Support
-You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too.
+You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too. This really helps us improve our applications in many ways.
 
 ## Credits
 * **Byron (@byronbytes)** - *Initial work / creation and development.*
