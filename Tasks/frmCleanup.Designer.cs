@@ -273,7 +273,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(210, 372);
+            this.label11.Location = new System.Drawing.Point(219, 372);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(469, 28);
             this.label11.TabIndex = 2;
