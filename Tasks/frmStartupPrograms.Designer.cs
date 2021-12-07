@@ -258,11 +258,11 @@ namespace Tasks
             // columnHeader1
             // 
             this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 250;
+            this.columnHeader1.Width = 300;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Path";
+            this.columnHeader2.Text = "Service Type";
             this.columnHeader2.Width = 300;
             // 
             // columnHeader3
