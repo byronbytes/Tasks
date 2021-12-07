@@ -173,6 +173,16 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Startup_Programs_Black {
+            get {
+                object obj = ResourceManager.GetObject("Startup Programs Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap StartupProgramsWhite {
             get {
                 object obj = ResourceManager.GetObject("StartupProgramsWhite", resourceCulture);

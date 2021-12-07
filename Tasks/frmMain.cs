@@ -51,7 +51,7 @@ namespace Tasks {
                 panel1.BackColor = Color.FromArgb(250, 250, 250);
                 panel2.BackColor = Color.FromArgb(250, 250, 250);
                 pictureBox1.Image = Properties.Resources.Cleanup;
-                pictureBox2.Image = Properties.Resources.Startup_Program;
+                pictureBox2.Image = Properties.Resources.Startup_Programs_Black;
                 pictureBox3.Image = Properties.Resources.Task_Manager;
                 pictureBox4.Image = Properties.Resources.Settings;
                
