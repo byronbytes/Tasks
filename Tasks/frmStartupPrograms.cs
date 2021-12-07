@@ -32,8 +32,22 @@ namespace Tasks {
         }
 
         private void RenderStartupsOnListWiew() {
-            foreach (ManagementObject strt in (new ManagementClass("Win32_StartupCommand").GetInstances())) { 
-                StartupProcesses.Items.Add(strt["Name"].ToString(), 0).SubItems.Add(strt["Location"].ToString()); 
+            foreach (ManagementObject strt in (new ManagementClass("Win32_StartupCommand").GetInstances())) 
+            { 
+                //StartupProcesses.Items.Add(strt["Name"].ToString(), 0).SubItems.Add(strt["Location"].ToString());
+
+                string ProcessName = strt["Name"].ToString();
+
+                string ProcessLocation = strt["Location"].ToString();
+
+                string ProcessUser = strt["User"].ToString();
+
+
+                var StartupProcessList = new ListViewItem(ProcessName + " ");
+                StartupProcessList.SubItems.Add(ProcessLocation + "");
+                StartupProcessList.SubItems.Add(ProcessUser + "");
+
+                StartupProcesses.Items.Add(StartupProcessList);
             }
         }
 
@@ -128,7 +142,13 @@ namespace Tasks {
 
                 string status = service.Status.ToString();
 
-                listView1.Items.Add(serviceName + "  " + serviceDisplayName).SubItems.Add( serviceType + " " + status);
+                var listViewItem = new ListViewItem(serviceName + " " + serviceDisplayName);
+                listViewItem.SubItems.Add(serviceType);
+                listViewItem.SubItems.Add(status);
+
+                listView1.Items.Add(listViewItem);
+
+                
             }
         }
 

@@ -65,6 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.cbIECache = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -113,7 +114,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -715,6 +715,17 @@
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Applications";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(320, 315);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(99, 20);
+            this.label12.TabIndex = 81;
+            this.label12.Text = "x86 / MS Store";
+            // 
             // cbIECache
             // 
             this.cbIECache.AutoSize = true;
@@ -1129,6 +1140,7 @@
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
+            this.ExtensionsBox.SelectedIndexChanged += new System.EventHandler(this.ExtensionsBox_SelectedIndexChanged);
             // 
             // ExtName
             // 
@@ -1299,17 +1311,6 @@
             this.btnCleanup.Text = "Cleanup";
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(320, 315);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 20);
-            this.label12.TabIndex = 81;
-            this.label12.Text = "x86 / MS Store";
             // 
             // frmCleanup
             // 

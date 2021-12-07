@@ -1112,6 +1112,11 @@ namespace Tasks
             }
         
         }
+
+        private void ExtensionsBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
