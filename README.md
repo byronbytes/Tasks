@@ -34,7 +34,7 @@ The dependencies must be kept in the same folder. This will be fixed soon.
 To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first. Anyone can contribute because it helps us greatly!
 
 ## Support
-You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too. This really helps us improve our applications in many ways.
+You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too.
 
 ## Credits
 * **Byron (@byronbytes)** - *Initial work / creation and development.*
