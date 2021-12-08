@@ -169,9 +169,9 @@ namespace Tasks
             // List our local directories.
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
+            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp\\");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
-            var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads");
+            var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\");
 
 
             if (cbExplorerDownloads.Checked)
@@ -232,7 +232,7 @@ namespace Tasks
                 try
                 {
                     string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
-                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache", "ShaderCache", "Default\\Service Worker\\CacheStorage", "Default\\Service Worker\\ScriptCache", "GrShaderCache\\GPUCache", "\\Default\\File System\\", "\\Default\\JumpListIconsMostVisited\\", "\\Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database" };
+                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "\\Default\\File System\\", "\\Default\\JumpListIconsMostVisited\\", "\\Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database" };
                     List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
 
                     foreach (string subdir in userDataCacheDirs)
@@ -967,7 +967,7 @@ namespace Tasks
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             Dirs.chromeDir = localappdata + "\\Google\\Chrome\\";
-            Dirs.chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions");
+            Dirs.chromeExtDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\");
             Dirs.firefoxDir = localappdata + "\\Mozilla\\Firefox\\";
             Dirs.firefoxExtDir = roamingappdata + "\\Mozilla\\Firefox\\Profiles\\";
             Dirs.edgeDir = (Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\");
@@ -1055,7 +1055,7 @@ namespace Tasks
             button9.Visible = true;
             label13.Visible = true;
             label19.Visible = true;
-            long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp"));
+            long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp\\"));
             progressBar1.PerformStep();
             long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
             progressBar1.PerformStep();
@@ -1117,7 +1117,7 @@ namespace Tasks
 
         private void button9_Click(object sender, EventArgs e)
         {
-            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp");
+            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp\\");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             try
             {
