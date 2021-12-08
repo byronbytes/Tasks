@@ -1,3 +1,6 @@
+// (c) LiteTools 2021
+// All rights reserved under the MIT license.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +19,7 @@ namespace Tasks
        
        public static void ValidifyUpdate()
        {
-      // This will validify that the update is not from a development build. This is a current draft.
+          // This will validify that the update is not from a development build. This is a current draft.
         }
         
         

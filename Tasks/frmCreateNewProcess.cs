@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Tasks
 {
-    public partial class frmCreateNewProcess : Form { public frmCreateNewProcess(){ InitializeComponent(); }
+    public partial class frmCreateNewProcess : Form { public frmCreateNewProcess(){ InitializeComponent(); CheckTheme(); }
                                                      
         private void button2_Click(object sender, EventArgs e)
         {
@@ -45,5 +45,17 @@ namespace Tasks
                  MessageBox.Show("An error has occurred. " + ex.Message);
             }
         }
+                                                     
+                                                     
+                                                     
+          public void CheckTheme()
+          {
+              if(Properties.Settings.Default.Theme == "light")
+              {
+              this.BackColor = Color.White;
+              panel1.BackColor = Color.Gray;
+              
+              }
+          }
     }
 }

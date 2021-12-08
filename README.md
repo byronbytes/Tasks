@@ -26,8 +26,8 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 ## Installation
 1. You will need to install [.NET Core](https://dotnet.microsoft.com/download) if it is not installed already.
 2. Download Tasks from the **Releases** tab.
-3. Extract the `.zip` and execute the executable `.exe` file.
-4. Open the `Tasks.exe` file and click Run Anyways if you get the SafeScreen message.
+3. Extract the `.zip` and execute `Tasks.exe`.
+4. If you get the Windows SafeScreen message, click "Run Anyways".
 
 *The dependencies must be kept in the same folder. This will be fixed soon.*
 
