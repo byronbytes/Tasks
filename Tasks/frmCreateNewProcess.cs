@@ -45,5 +45,13 @@ namespace Tasks
                  MessageBox.Show("An error has occurred. " + ex.Message);
             }
         }
+                                                     
+                                                     
+                                                     
+          public void CheckTheme()
+          {
+              this.BackColor = Color.White;
+              panel1.BackColor = Color.Gray;
+          }
     }
 }
