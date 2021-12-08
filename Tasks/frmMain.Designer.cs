@@ -1,4 +1,4 @@
-﻿// TODO: Cleanup and change the code style
+
 namespace Tasks
 {
     partial class frmMain
@@ -80,7 +80,7 @@ namespace Tasks
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox3, "An advanced Task Manager with more process ");
+            this.toolTip1.SetToolTip(this.pictureBox3, "An advanced Task Manager with more process information.");
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
@@ -91,7 +91,7 @@ namespace Tasks
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Manage programs that start on boot. You will ");
+            this.toolTip1.SetToolTip(this.pictureBox2, "Manage programs that start on boot.");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
