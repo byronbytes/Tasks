@@ -166,7 +166,7 @@ namespace Tasks
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Tasks.UpdateCheck.CheckForUpdates();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
