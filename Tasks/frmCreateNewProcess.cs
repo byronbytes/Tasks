@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Tasks
 {
-    public partial class frmCreateNewProcess : Form { public frmCreateNewProcess(){ InitializeComponent(); }
+    public partial class frmCreateNewProcess : Form { public frmCreateNewProcess(){ InitializeComponent(); CheckTheme(); }
                                                      
         private void button2_Click(object sender, EventArgs e)
         {
