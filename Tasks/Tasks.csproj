@@ -7,7 +7,7 @@
     <ApplicationIcon>Tasks 256x256 Logo.ico</ApplicationIcon>
     <Version>3.0.0</Version>
     <Copyright>LiteTools 2021</Copyright>
-    <Description>Tasks is an application that helps optimize computer performance. Some of Tasks's features include an advanced cleanup tool for unnecessary system files and application caches and a startup manager that lets you manage programs that run on startup.</Description>
+    <Description>Tasks is an application that improves computer performance. Tasks's main features include an advanced cleanup tool, a startup manager, and a detailed Task Manager. These tools help improve computer performance, system boot times, and ensures a safer experience while using your computer.</Description>
     <Company>LiteTools</Company>
     <Authors>Matty</Authors>
     <RepositoryUrl>https://github.com/LiteTools/Tasks</RepositoryUrl>

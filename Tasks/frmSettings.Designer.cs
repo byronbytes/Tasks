@@ -298,6 +298,7 @@ namespace Tasks
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Visit Website";
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.DarkCyan;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -313,6 +314,7 @@ namespace Tasks
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Report an issue";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DarkCyan;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label6
             // 
