@@ -50,8 +50,12 @@ namespace Tasks
                                                      
           public void CheckTheme()
           {
+              if(Properties.Settings.Default.Theme == "light")
+              {
               this.BackColor = Color.White;
               panel1.BackColor = Color.Gray;
+              
+              }
           }
     }
 }
