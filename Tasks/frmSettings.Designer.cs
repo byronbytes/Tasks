@@ -64,6 +64,7 @@ namespace Tasks
             this.button2 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -454,6 +455,7 @@ namespace Tasks
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage4.Controls.Add(this.button4);
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.button2);
             this.tabPage4.Controls.Add(this.listBox2);
@@ -467,7 +469,7 @@ namespace Tasks
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(189, 561);
+            this.button3.Location = new System.Drawing.Point(189, 566);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 31);
             this.button3.TabIndex = 36;
@@ -477,7 +479,7 @@ namespace Tasks
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(350, 561);
+            this.button2.Location = new System.Drawing.Point(350, 566);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 31);
             this.button2.TabIndex = 35;
@@ -508,6 +510,16 @@ namespace Tasks
             this.label20.Size = new System.Drawing.Size(464, 30);
             this.label20.TabIndex = 33;
             this.label20.Text = "Cleanup logs and Tasks related files are put here.\r\n";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(16, 566);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(130, 31);
+            this.button4.TabIndex = 37;
+            this.button4.Text = "View Folder";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frmSettings
             // 
@@ -570,5 +582,6 @@ namespace Tasks
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
     }
 }
