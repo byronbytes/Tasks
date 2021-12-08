@@ -708,7 +708,7 @@ namespace Tasks
             }
             
             if (cbSpotifyCache.Checked)
-           {
+             {
            
            try
             {
@@ -1046,7 +1046,7 @@ namespace Tasks
             progressBar1.Value = 0;
             if (Directory.Exists(Dirs.chromeDir)) // Would be used to imploment a Browser Cache for Quick Clean.
             {
-                long size5 = DirSize(new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\"));
+                long sizeC = DirSize(new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\"));
 
             }
 
@@ -1062,11 +1062,12 @@ namespace Tasks
             progressBar1.PerformStep();
             long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
             progressBar1.PerformStep();
+            long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
+            progressBar1.PerformStep();
 
-
-            long allsize = size1 + size2 + size3 + size4;
+            long allsize = size1 + size2 + size3 + size4 + size5;
             long tempsize = size1 + size2;
-            long systemsize = size3 + size4;
+            long systemsize = size3 + size4 + size5;
 
             // Conversion stuff
             double allsizeMB = ConvertBytesToMegabytes(allsize);
@@ -1118,10 +1119,14 @@ namespace Tasks
         {
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp\\");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
+            var directCache = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
+            var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
             try
             {
                 if (DeleteAllFiles(windowstemp)) TasksDebug.Null();
-                if (DeleteAllFiles(usertemp)) TasksDebug.Null(); 
+                if (DeleteAllFiles(usertemp)) TasksDebug.Null();
+                if (DeleteAllFiles(directCache)) TasksDebug.Null();
+                if (DeleteAllFiles(windowsReport)) TasksDebug.Null();
             }
             catch
             {

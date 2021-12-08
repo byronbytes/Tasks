@@ -54,7 +54,8 @@ namespace Tasks
               {
               this.BackColor = Color.White;
               panel1.BackColor = Color.Gray;
-              
+              textBox1.BackColor = Color.Gray;
+              textBox1.ForeColor = Color.Black;
               }
           }
     }

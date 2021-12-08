@@ -163,5 +163,10 @@ namespace Tasks
         {
             Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Tasks\\Cleanup Summary\\");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

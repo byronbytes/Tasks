@@ -60,11 +60,11 @@ namespace Tasks
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -345,7 +345,7 @@ namespace Tasks
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
-            "Byron (@byronbytes)",
+            "Matty (@byronbytes)",
             "Solirs (@Solirs)"});
             this.listBox1.Location = new System.Drawing.Point(15, 173);
             this.listBox1.Name = "listBox1";
@@ -429,6 +429,7 @@ namespace Tasks
             this.button1.TabIndex = 34;
             this.button1.Text = "Check For Updates";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label17
             // 
@@ -466,6 +467,16 @@ namespace Tasks
             this.tabPage4.Size = new System.Drawing.Size(998, 648);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tasks Files";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(16, 566);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(130, 31);
+            this.button4.TabIndex = 37;
+            this.button4.Text = "View Folder";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -510,16 +521,6 @@ namespace Tasks
             this.label20.Size = new System.Drawing.Size(464, 30);
             this.label20.TabIndex = 33;
             this.label20.Text = "Cleanup logs and Tasks related files are put here.\r\n";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(16, 566);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 31);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "View Folder";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frmSettings
             // 
