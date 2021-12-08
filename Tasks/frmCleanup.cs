@@ -1062,7 +1062,7 @@ namespace Tasks
             progressBar1.PerformStep();
             long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\")));
             progressBar1.PerformStep();
-            long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\  ")));
+            long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
             progressBar1.PerformStep();
 
 
