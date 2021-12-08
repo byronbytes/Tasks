@@ -1040,7 +1040,6 @@ namespace Tasks
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
         }
 
         private void button8_Click_1(object sender, EventArgs e)
