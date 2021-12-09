@@ -33,11 +33,11 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - Refresh Task Manager with one button.
   
 - Settings:
-  - Ability to change the theme of Tasks (Dark / Light Mode)
+  - Ability to change the theme of Tasks. (Dark / Light Mode)
   - View and delete Cleanup Summaries that Tasks created.
   - Change general settings about Tasks.
-  - Checking for updates (WIP)
-  - Change the language of Tasks (WIP)
+  - Checking for updates. (WIP)
+  - Change the language of Tasks. (WIP)
  
 
 ## Installation
