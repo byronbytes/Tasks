@@ -12,7 +12,12 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 
 ## List of Features
 
-- Advanced Cleanup Tool to help computer performance.
+- Cleanup:
+  - Bloatware removal tool to remove unwanted Windows bloat.
+  - Quick Clean to help optimize folders that get filled fast.
+  - Extension removal tool to remove malicious or unwanted extensions. (Supports Edge, Chrome, and Firefox)
+  - Advanced cleaning tool that helps with computer performance.
+  - Diverse support for multiple applications and browsers. (Discord, Chrome, Firefox, Spotify, and more.)
 
 - Extension Removal Tool to help remove malicious or unwanted extensions.
 
