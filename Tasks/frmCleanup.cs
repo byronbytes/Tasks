@@ -165,7 +165,7 @@ namespace Tasks
 
         private void button8_Click(object sender, EventArgs e)
         {
-            // List our local directories.
+            // List local directories.
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp\\");
@@ -1126,7 +1126,7 @@ namespace Tasks
             }
             catch
             {
-
+                // no catch yet.
             }
         
         }
