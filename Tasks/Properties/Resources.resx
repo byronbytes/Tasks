@@ -148,11 +148,14 @@
   <data name="Spotify" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spotify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Startup Programs Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Startup Programs Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TaskManagerWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TaskManagerWhite1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FirefoxPng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FirefoxPng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tasks 256x256 v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tasks 256x256 v22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,10 +172,10 @@
   <data name="Chrome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chrome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tasks 256x256 v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tasks 256x256 v22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FirefoxPng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FirefoxPng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Startup Programs Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Startup Programs Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RegistryWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RegistryWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

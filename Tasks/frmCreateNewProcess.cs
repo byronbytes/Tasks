@@ -32,7 +32,7 @@ namespace Tasks
                     }
                    
                 }
-                else { // nothing }
+                else { }
             }
         }
 
