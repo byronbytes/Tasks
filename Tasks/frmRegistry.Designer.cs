@@ -30,17 +30,20 @@ namespace Tasks
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Test", "RegistryWhite.png");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Placeholder #1", "RegistryWhite.png");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Placeholder #2", "RegistryWhite.png");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistry));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +61,7 @@ namespace Tasks
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
@@ -80,13 +84,35 @@ namespace Tasks
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registry Backup";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(165, 468);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 38);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Create Backup";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(6, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 30);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Registry Backups";
+            // 
             // listView1
             // 
+            this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.Left;
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
             listViewItem2});
             this.listView1.Location = new System.Drawing.Point(6, 172);
             this.listView1.Name = "listView1";
@@ -111,31 +137,22 @@ namespace Tasks
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(541, 84);
+            this.label1.Size = new System.Drawing.Size(518, 84);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Here you can back up your registry or create a new \r\nbackup point. This is highly" +
-    " recommended since your computer\r\ncan fail to boot if the registry gets corrupte" +
-    "d.";
+            this.label1.Text = "You can back up your registry or create a new backup point. \r\nThis is highly reco" +
+    "mmended since your computer can fail to\r\n boot if the registry gets corrupted.";
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(6, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 30);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Registry Backups";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(165, 468);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 38);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Create Backup";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 14.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(6, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(364, 56);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "I don\'t really know what to put here, but it \r\nshould do with cleaning the regist" +
+    "ry.";
             // 
             // frmRegistry
             // 
@@ -147,6 +164,8 @@ namespace Tasks
             this.Name = "frmRegistry";
             this.Text = "Registry";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -163,5 +182,6 @@ namespace Tasks
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
