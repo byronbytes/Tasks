@@ -386,7 +386,7 @@ namespace Tasks
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Version: 3.0.0";
+            this.label2.Text = "Version: 3.1.0";
             // 
             // pictureBox1
             // 
@@ -428,7 +428,7 @@ namespace Tasks
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(166, 93);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 29);
+            this.button1.Size = new System.Drawing.Size(157, 35);
             this.button1.TabIndex = 34;
             this.button1.Text = "Check For Updates";
             this.button1.UseVisualStyleBackColor = true;
@@ -440,9 +440,9 @@ namespace Tasks
             this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label17.Location = new System.Drawing.Point(7, 96);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(143, 21);
+            this.label17.Size = new System.Drawing.Size(140, 21);
             this.label17.TabIndex = 33;
-            this.label17.Text = "Your version: 3.0.0";
+            this.label17.Text = "Your version: 3.1.0";
             // 
             // label16
             // 
