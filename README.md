@@ -34,7 +34,8 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   
 - Settings
   - Ability to change the theme of Tasks (Dark / Light Mode)
-  - View and delete Cleanup Summaries that Tasks created
+  - View and delete Cleanup Summaries that Tasks created.
+  - Change general settings about Tasks.
   - Checking for updates (WIP)
   - Change the language of Tasks (WIP)
  
@@ -68,6 +69,7 @@ See the full list of [contributors](https://github.com/LiteTools/Tasks/contribut
 ## Gallery
 These images were last taken on v3.0.0 The design may vary for newer versions.
 You are allowed to distribute these screenshots for showcase purposes, it is also highly recommended.
+
 (I will post screenshots of the latest version later)
 
 ![image](https://user-images.githubusercontent.com/53088136/141648801-7305acfa-99f5-484a-a15c-123460dc999c.png)
