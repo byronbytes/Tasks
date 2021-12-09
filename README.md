@@ -12,11 +12,11 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 
 ## List of Features
 
-- Advanced Cleanup Tool to help computer performance
+- Advanced Cleanup Tool to help computer performance.
 
-- Extension Removal Tool to help remove malicious or unwanted extensions
+- Extension Removal Tool to help remove malicious or unwanted extensions.
 
-- Bloatware Removal Tool to help remove bloat on your computer
+- Bloatware Removal Tool to help remove bloat on your computer.
 
 - Startup Manager to improve system boot times.
 
@@ -50,8 +50,9 @@ See the full list of [contributors](https://github.com/LiteTools/Tasks/contribut
 
 
 ## Gallery
-These images were last taken on v2.2.0 The design may vary for newer versions.
+These images were last taken on v3.0.0 The design may vary for newer versions.
 You are allowed to distribute these screenshots for showcase purposes, it is also highly recommended.
+(I will post screenshots of the latest version later)
 
 ![image](https://user-images.githubusercontent.com/53088136/141648801-7305acfa-99f5-484a-a15c-123460dc999c.png)
 ![image](https://user-images.githubusercontent.com/53088136/141648811-f355bed2-afb1-44da-b011-3e0368fdd123.png)
