@@ -16,24 +16,21 @@ namespace Tasks {
         public frmMain() { Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme(); }
 
         private Form _currentForm;
+        
         private void ShowForm(Form newForm)
         {
-            // credit to Anu6is
             if (_currentForm != null) _currentForm.Hide();
-
             newForm.TopLevel = false;
             newForm.AutoScroll = true;
             newForm.FormBorderStyle = FormBorderStyle.None;
             panel2.Controls.Add(newForm);
             newForm.Show();
-
             _currentForm = newForm;
         }
 
-
         public void CheckTheme()
         {
-            if(Properties.Settings.Default.Theme == "dark")
+            if (Properties.Settings.Default.Theme == "dark")
             {
                 panel1.BackColor = Color.FromArgb(20, 20, 20);
                 panel2.BackColor = Color.FromArgb(20, 20, 20);
