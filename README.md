@@ -21,8 +21,9 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 
 - Startup Manager:
   - View detailed information about programs that run on start. (Name, Description, Directory, and User)
-  - Create and delete programs that run on start.
-  - View detailed information about startup services that run on start. (Name, Service, Stopped or Running)
+  - Create new programs that run on start.
+  - Remove malicious programs that run on start with one click.
+  - View detailed information about services that run on start. (Name, Service, Stopped or Running)
   - Open the startup folder with one click.
 
 - Task Manager
