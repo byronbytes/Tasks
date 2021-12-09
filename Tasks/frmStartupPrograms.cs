@@ -34,16 +34,11 @@ namespace Tasks {
         private void RenderStartupsOnListWiew() {
             foreach (ManagementObject strt in (new ManagementClass("Win32_StartupCommand").GetInstances())) 
             { 
-                //StartupProcesses.Items.Add(strt["Name"].ToString(), 0).SubItems.Add(strt["Location"].ToString());
 
                 string ProcessName = strt["Name"].ToString();
-
                 string ProcessDescription = strt["Description"].ToString();
-
                 string ProcessLocation = strt["Location"].ToString();
-
                 string ProcessUser = strt["User"].ToString();
-
 
                 var StartupProcessList = new ListViewItem(ProcessName + " ");
                 StartupProcessList.SubItems.Add(ProcessDescription + "");
@@ -142,11 +137,8 @@ namespace Tasks {
             foreach (ServiceController service in ServiceController.GetServices())
             {
                 string serviceName = service.ServiceName;
-
                 string serviceDisplayName = service.DisplayName;
-
                 string serviceType = service.ServiceType.ToString();
-
                 string status = service.Status.ToString();
 
                 var listViewItem = new ListViewItem(serviceName + " " + serviceDisplayName);
