@@ -192,7 +192,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Error clearing the Recycle Bin. " + ex);
+                    CleanupLogsLBox.Items.Add("Error deleting the Recycle Bin. " + ex);
 
                 }
 
@@ -299,7 +299,6 @@ namespace Tasks
             {
                 try
                 {
-
                     File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies");
                     File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\discord\\Cookies-journal");
                     CleanupLogsLBox.Items.Add("Discord Cookies Deleted.");
@@ -959,8 +958,6 @@ namespace Tasks
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
         
-
-
         private void DirectoryExists()
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
@@ -1063,7 +1060,6 @@ namespace Tasks
             long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
             progressBar1.PerformStep();
             long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
-            progressBar1.PerformStep();
 
             long allsize = size1 + size2 + size3 + size4 + size5;
             long tempsize = size1 + size2;
