@@ -25,8 +25,18 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - View detailed information about startup services that run on start. (Name, Service, Stopped or Running)
   - Open the startup folder with one click.
 
-- Advanced Task Manager to give more details about processes.
-
+- Task Manager
+  - Advanced task manager with more details. (Name, PID, CPU Usage, Directory)
+  - Create new tasks easily with a familiar interface.
+  - Quickly end tasks with one button.
+  - Refresh Task Manager with one button.
+  
+- Settings
+  - Ability to change the theme of Tasks (Dark / Light Mode)
+  - View and delete Cleanup Summaries that Tasks created
+  - Checking for updates (WIP)
+  - Change the language of Tasks (WIP)
+ 
 
 ## Installation
 1. You will need to install [.NET Core](https://dotnet.microsoft.com/download) if it is not installed already.
