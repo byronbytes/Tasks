@@ -167,9 +167,9 @@ namespace Tasks
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label13.Location = new System.Drawing.Point(20, 236);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(190, 21);
+            this.label13.Size = new System.Drawing.Size(78, 21);
             this.label13.TabIndex = 8;
-            this.label13.Text = "Language (Coming Soon.)";
+            this.label13.Text = "Language";
             // 
             // label12
             // 
