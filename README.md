@@ -19,11 +19,11 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - Advanced cleaning tool that helps with computer performance.
   - Diverse support for multiple applications and browsers. (Discord, Chrome, Firefox, Spotify, and more.)
 
-- Extension Removal Tool to help remove malicious or unwanted extensions.
-
-- Bloatware Removal Tool to help remove bloat on your computer.
-
-- Startup Manager to improve system boot times.
+- Startup Manager:
+  - View detailed information about programs that run on start. (Name, Description, Directory, and User)
+  - Create and delete programs that run on start.
+  - View detailed information about startup services that run on start. (Name, Service, Stopped or Running)
+  - Open the startup folder with one click.
 
 - Advanced Task Manager to give more details about processes.
 
