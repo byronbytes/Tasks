@@ -1,3 +1,5 @@
+
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +32,7 @@ namespace Tasks
                     }
                    
                 }
-                else { }
+                else { // nothing }
             }
         }
 
@@ -42,21 +44,19 @@ namespace Tasks
            } 
             catch(Exception ex)
             {
-                 MessageBox.Show("An error has occurred. " + ex.Message);
+              MessageBox.Show("An error has occurred. " + ex.Message);
             }
         }
                                                      
-                                                     
-                                                     
           public void CheckTheme()
           {
-              if(Properties.Settings.Default.Theme == "light")
-              {
+              if (Properties.Settings.Default.Theme == "light")
+             {
               this.BackColor = Color.White;
               panel1.BackColor = Color.Gray;
               textBox1.BackColor = Color.Gray;
               textBox1.ForeColor = Color.Black;
-              }
+             }
           }
     }
 }
