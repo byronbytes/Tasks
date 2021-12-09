@@ -12,16 +12,32 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 
 ## List of Features
 
-- Advanced Cleanup Tool to help computer performance.
+- Cleanup:
+  - Bloatware removal tool to remove unwanted Windows bloat.
+  - Quick Clean to help optimize folders that get filled fast.
+  - Extension removal tool to remove malicious or unwanted extensions. (Supports Edge, Chrome, and Firefox)
+  - Advanced cleaning tool that helps with computer performance.
+  - Diverse support for multiple applications and browsers. (Discord, Chrome, Firefox, Spotify, and more.)
 
-- Extension Removal Tool to help remove malicious or unwanted extensions.
+- Startup Manager:
+  - View detailed information about programs that run on start. (Name, Description, Directory, and User)
+  - Create new programs that run on start.
+  - Remove malicious programs that run on start with one click.
+  - View detailed information about services that run on start. (Name, Service, Stopped or Running)
+  - Open the startup folder with one click.
 
-- Bloatware Removal Tool to help remove bloat on your computer.
-
-- Startup Manager to improve system boot times.
-
-- Advanced Task Manager to give more details about processes.
-
+- Task Manager
+  - Advanced task manager with more details. (Name, PID, CPU Usage, Directory)
+  - Create new tasks easily with a familiar interface.
+  - Quickly end tasks with one button.
+  - Refresh Task Manager with one button.
+  
+- Settings
+  - Ability to change the theme of Tasks (Dark / Light Mode)
+  - View and delete Cleanup Summaries that Tasks created
+  - Checking for updates (WIP)
+  - Change the language of Tasks (WIP)
+ 
 
 ## Installation
 1. You will need to install [.NET Core](https://dotnet.microsoft.com/download) if it is not installed already.
