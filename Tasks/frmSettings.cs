@@ -102,7 +102,8 @@ namespace Tasks
             
             try
             {
-            FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary").GetFiles("*.txt");
+                 FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary").GetFiles("*.txt");
+
             foreach (FileInfo file in files)
             {
                 listBox2.Items.Add(file.Name);
