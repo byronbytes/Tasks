@@ -28,6 +28,16 @@ namespace Tasks
                 checkBox1.Checked = false;
             }
 
+            if (Properties.Settings.Default.EnableCleanupLogs == true)
+            {
+                checkBox2.Checked = true;
+            }
+
+            if (Properties.Settings.Default.EnableCleanupLogs == false)
+            {
+                checkBox2.Checked = false;
+            }
+
             if (Properties.Settings.Default.Theme == "dark")
             {
                 radioButton1.Checked = true;
@@ -50,6 +60,7 @@ namespace Tasks
             {
                 Properties.Settings.Default.CleanupMessageBox = false;
             }
+            Properties.Settings.Default.Save();
 
         }
 
@@ -81,6 +92,8 @@ namespace Tasks
                 Properties.Settings.Default.Theme = "light";
                 Main.CheckTheme();
             }
+
+            Properties.Settings.Default.Save();
         }
 
         private void frmSettings_Load(object sender, EventArgs e)
@@ -173,7 +186,7 @@ namespace Tasks
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Tasks.UpdateCheck.CheckForUpdates();
+            UpdateCheck.CheckForUpdates();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -184,6 +197,19 @@ namespace Tasks
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks/issues/new", UseShellExecute = true });
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                Properties.Settings.Default.EnableCleanupLogs = true;
+            }
+            if (checkBox2.Checked == false)
+            {
+                Properties.Settings.Default.EnableCleanupLogs = false;
+            }
+            Properties.Settings.Default.Save();
         }
     }
 }

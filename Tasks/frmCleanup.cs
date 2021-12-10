@@ -150,27 +150,30 @@ namespace Tasks
 
         public void WriteCleanupSummary()
         {
-         // Broken Code, will fix when I get home.
-        
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
-            File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupLogsLBox.Items.Cast<string>().ToArray());
+           
+            if (Properties.Settings.Default.EnableCleanupLogs == true)
+            {
+                try
+                {
+                    File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupLogsLBox.Items.Cast<string>().ToArray());
+                }
+                catch
+                {
+                    MessageBox.Show("There was an error logging your cleanup session.");
+                }
+            }
 
             if (Properties.Settings.Default.CleanupMessageBox == true)
             {
                 MessageBox.Show("Cleanup has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
             }
-            
-            //if (Properties.Settings.Default.LogCleanups == true)
-            // {
-            //*Do Log Code.*
-            // }
-            // else
-            // {
-            // *Don't do log code.*
-            // }
-            
+            else
+            {
 
-        }
+            }
+
+            }
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -1049,41 +1052,43 @@ namespace Tasks
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            progressBar1.Value = 0;
-            if (Directory.Exists(Dirs.chromeDir)) // Would be used to imploment a Browser Cache for Quick Clean.
+            try
             {
-                long sizeC = DirSize(new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\"));
+                progressBar1.Value = 0;
 
+                label11.Visible = true;
+                button9.Visible = true;
+                label13.Visible = true;
+                label19.Visible = true;
+                long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp\\"));
+                progressBar1.PerformStep();
+                long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
+                progressBar1.PerformStep();
+                long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\")));
+                progressBar1.PerformStep();
+                long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
+                progressBar1.PerformStep();
+                long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
+
+                long allsize = size1 + size2 + size3 + size4 + size5;
+                long tempsize = size1 + size2;
+                long systemsize = size3 + size4 + size5;
+
+                // Conversion stuff
+                double allsizeMB = ConvertBytesToMegabytes(allsize);
+                progressBar1.PerformStep();
+                double tempsizeMB = ConvertBytesToMegabytes(tempsize);
+                progressBar1.PerformStep();
+                double systemsizeMB = ConvertBytesToMegabytes(systemsize);
+                progressBar1.PerformStep();
+                label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
+                label13.Text = tempsizeMB + "MB";
+                label19.Text = systemsizeMB + "MB";
             }
-
-            label11.Visible = true;
-            button9.Visible = true;
-            label13.Visible = true;
-            label19.Visible = true;
-            long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp\\"));
-            progressBar1.PerformStep();
-            long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
-            progressBar1.PerformStep();
-            long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\")));
-            progressBar1.PerformStep();
-            long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
-            progressBar1.PerformStep();
-            long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
-
-            long allsize = size1 + size2 + size3 + size4 + size5;
-            long tempsize = size1 + size2;
-            long systemsize = size3 + size4 + size5;
-
-            // Conversion stuff
-            double allsizeMB = ConvertBytesToMegabytes(allsize);
-            progressBar1.PerformStep();
-            double tempsizeMB = ConvertBytesToMegabytes(tempsize);
-            progressBar1.PerformStep();
-            double systemsizeMB = ConvertBytesToMegabytes(systemsize);
-            progressBar1.PerformStep();
-            label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
-            label13.Text = tempsizeMB + "MB";
-            label19.Text = systemsizeMB + "MB";
+         catch
+            {
+                label11.Text = "There was an error trying to Quick Clean your PC.";
+            }
         }
 
         public static long DirSize(DirectoryInfo d)
