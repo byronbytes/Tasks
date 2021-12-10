@@ -35,6 +35,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 - Settings:
   - Ability to change the theme of Tasks. (Dark / Light Mode)
   - View and delete Cleanup Summaries that Tasks created.
+  - Toggle the ability to turn on or off cleanup logs.
   - Change general settings about Tasks.
   - Checking for updates. (WIP)
   - Change the language of Tasks. (WIP)
