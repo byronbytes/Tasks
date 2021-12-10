@@ -150,16 +150,25 @@ namespace Tasks
 
         public void WriteCleanupSummary()
         {
+         // Broken Code, will fix when I get home.
+        
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
-            File.WriteAllLines(
-              Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt",
-              CleanupLogsLBox.Items.Cast<string>().ToArray()
-            );
+            File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupLogsLBox.Items.Cast<string>().ToArray());
 
             if (Properties.Settings.Default.CleanupMessageBox == true)
             {
                 MessageBox.Show("Cleanup has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
             }
+            
+            //if (Properties.Settings.Default.LogCleanups == true)
+            // {
+            //*Do Log Code.*
+            // }
+            // else
+            // {
+            // *Don't do log code.*
+            // }
+            
 
         }
 
