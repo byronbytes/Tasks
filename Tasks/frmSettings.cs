@@ -101,7 +101,7 @@ namespace Tasks
             CheckTheme();
             
             try
-                {
+            {
             FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary").GetFiles("*.txt");
             foreach (FileInfo file in files)
             {
@@ -110,7 +110,7 @@ namespace Tasks
                 }
            catch
             {
-            // no catch yet.
+                listBox2.Items.Add("Unable to add file.");
             }
 
         }
