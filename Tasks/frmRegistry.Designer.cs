@@ -30,12 +30,11 @@ namespace Tasks
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Placeholder #1", "RegistryWhite.png");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Placeholder #2", "RegistryWhite.png");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Placeholder #1", "RegistryWhite.png");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Placeholder #2", "RegistryWhite.png");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistry));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +42,6 @@ namespace Tasks
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +59,6 @@ namespace Tasks
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
@@ -69,18 +66,6 @@ namespace Tasks
             this.tabPage1.Size = new System.Drawing.Size(976, 626);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Registry Cleaner";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 14.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(6, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(364, 56);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "I don\'t really know what to put here, but it \r\nshould do with cleaning the regist" +
-    "ry.";
             // 
             // tabPage2
             // 
@@ -125,8 +110,8 @@ namespace Tasks
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem3,
+            listViewItem4});
             this.listView1.Location = new System.Drawing.Point(6, 172);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(325, 290);
@@ -153,7 +138,7 @@ namespace Tasks
             this.label1.Size = new System.Drawing.Size(518, 84);
             this.label1.TabIndex = 0;
             this.label1.Text = "You can back up your registry or create a new backup point. \r\nThis is highly reco" +
-    "mmended since your computer can fail to\r\n boot if the registry gets corrupted.";
+    "mmended since your computer can fail to\r\nboot if the registry gets corrupted.";
             // 
             // frmRegistry
             // 
@@ -165,8 +150,6 @@ namespace Tasks
             this.Name = "frmRegistry";
             this.Text = "Registry";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -183,6 +166,5 @@ namespace Tasks
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }

@@ -32,6 +32,8 @@ namespace Tasks
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSettings));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -66,8 +68,6 @@ namespace Tasks
             this.button2 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -115,6 +115,29 @@ namespace Tasks
             this.tabPage1.Size = new System.Drawing.Size(998, 648);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Settings";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Location = new System.Drawing.Point(20, 181);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(371, 15);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "This can enable or disable the ability to log cleanup sessions for Tasks.";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkBox2.Location = new System.Drawing.Point(20, 153);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(197, 25);
+            this.checkBox2.TabIndex = 15;
+            this.checkBox2.Text = "Enable Cleanup Logging";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label19
             // 
@@ -430,7 +453,7 @@ namespace Tasks
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(166, 93);
+            this.button1.Location = new System.Drawing.Point(172, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 35);
             this.button1.TabIndex = 34;
@@ -441,12 +464,13 @@ namespace Tasks
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label17.Location = new System.Drawing.Point(7, 96);
+            this.label17.Location = new System.Drawing.Point(7, 98);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(140, 21);
+            this.label17.Size = new System.Drawing.Size(159, 25);
             this.label17.TabIndex = 33;
-            this.label17.Text = "Your version: 3.0.1";
+            this.label17.Text = "Your version: 3.1.0";
             // 
             // label16
             // 
@@ -528,29 +552,6 @@ namespace Tasks
             this.label20.Size = new System.Drawing.Size(464, 30);
             this.label20.TabIndex = 33;
             this.label20.Text = "Cleanup logs and Tasks related files are put here.\r\n";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(20, 181);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(371, 15);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "This can enable or disable the ability to log cleanup sessions for Tasks.";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox2.Location = new System.Drawing.Point(20, 153);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(197, 25);
-            this.checkBox2.TabIndex = 15;
-            this.checkBox2.Text = "Enable Cleanup Logging";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // frmSettings
             // 

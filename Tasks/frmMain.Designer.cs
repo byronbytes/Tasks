@@ -68,7 +68,7 @@ namespace Tasks
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Tasks.Properties.Resources.RegistryWhite;
-            this.pictureBox5.Location = new System.Drawing.Point(55, 653);
+            this.pictureBox5.Location = new System.Drawing.Point(55, 493);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.TabIndex = 14;
@@ -80,7 +80,7 @@ namespace Tasks
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Tasks.Properties.Resources.SettingsWhite;
-            this.pictureBox4.Location = new System.Drawing.Point(55, 536);
+            this.pictureBox4.Location = new System.Drawing.Point(55, 625);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.TabIndex = 13;
