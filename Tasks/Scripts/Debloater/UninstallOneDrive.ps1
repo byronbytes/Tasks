@@ -13,7 +13,7 @@
 	Start-Sleep 2
     Write-Output "Stopping Explorer."
     Start-Sleep 1
-	.\taskkill.exe /f /im explorer.exe
+	Start-Process taskkill.exe /f /im explorer.exe
 	Start-Sleep 3
     Write-Output "Removing leftover files."
 	Remove-Item "$env:USERPROFILE\OneDrive" -Force -Recurse

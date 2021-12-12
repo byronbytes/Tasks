@@ -63,7 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
             this.cbIECache = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -109,9 +108,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -259,7 +258,7 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button9.Location = new System.Drawing.Point(478, 252);
+            this.button9.Location = new System.Drawing.Point(465, 252);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(223, 56);
             this.button9.TabIndex = 3;
@@ -283,7 +282,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(210, 252);
+            this.button8.Location = new System.Drawing.Point(219, 252);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(223, 56);
             this.button8.TabIndex = 1;
@@ -652,7 +651,6 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage7.Controls.Add(this.label12);
             this.tabPage7.Controls.Add(this.cbIECache);
             this.tabPage7.Controls.Add(this.pictureBox3);
             this.tabPage7.Controls.Add(this.label8);
@@ -687,17 +685,6 @@
             this.tabPage7.Size = new System.Drawing.Size(960, 542);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Applications";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(320, 315);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 20);
-            this.label12.TabIndex = 81;
-            this.label12.Text = "x86 / MS Store";
             // 
             // cbIECache
             // 
@@ -1188,10 +1175,10 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 273);
+            this.groupBox1.Size = new System.Drawing.Size(431, 284);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Uninstall and Remove Bloat";
+            this.groupBox1.Text = "Remove Bloat";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button7
@@ -1257,6 +1244,18 @@
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(12, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(557, 42);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "You can remove bloatware using our built in panel, which has much more variety\r\n " +
+    "and has more built in scripts.";
+            // 
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
@@ -1272,18 +1271,6 @@
             this.btnCleanup.Text = "Cleanup";
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(3, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(557, 42);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "You can remove bloatware using our built in panel, which has much more variety\r\n " +
-    "and has more built in scripts.";
             // 
             // frmCleanup
             // 
@@ -1417,7 +1404,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label5;
     }
 }
