@@ -29,7 +29,7 @@ namespace Tasks
             {
                 using (Process proc = new Process())
                 {
-                    proc.StartInfo.FileName = "reg.exe";
+                    proc.StartInfo.FileName = "regedit.exe";
                     proc.StartInfo.UseShellExecute = false;
                     proc.StartInfo.RedirectStandardOutput = true;
                     proc.StartInfo.RedirectStandardError = true;
