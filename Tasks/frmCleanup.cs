@@ -1133,8 +1133,8 @@ namespace Tasks
             var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
             try
             {
-                if (DeleteAllFiles(windowstemp)) TasksDebug.Null();
-                if (DeleteAllFiles(usertemp)) TasksDebug.Null();
+                if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
+                if (DeleteAllFiles(usertemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(directCache)) TasksDebug.Null();
                 if (DeleteAllFiles(windowsReport)) TasksDebug.Null();
             }
