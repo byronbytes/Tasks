@@ -1,5 +1,5 @@
 // (c) LiteTools 2021
-// All rights reserved under the MIT license.
+// All rights reserved under the Apache-2.0 license.
 
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,6 @@ namespace Tasks
     {
         public static void DeleteExtension(string path, bool isFile)
         {
-            // This class is meant for deleting extensions.
             
             if (isFile == true)
             {
