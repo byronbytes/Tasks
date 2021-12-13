@@ -1,4 +1,7 @@
-﻿using System;
+// (c) LiteTools 2021
+// All rights reserved under the Apache-2.0 license.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +16,6 @@ using System.Management;
 using System.Diagnostics;
 using System.Threading;
 using System.ServiceProcess;
-
-//Todo: Startup Services as well.
 
 namespace Tasks {
     public partial class frmStartupPrograms : Form {
@@ -146,11 +147,8 @@ namespace Tasks {
                 listViewItem.SubItems.Add(status);
 
                 listView1.Items.Add(listViewItem);
-
-                
             }
         }
-
 
         private void button3_Click(object sender, EventArgs e)
         {
