@@ -1,3 +1,6 @@
+// (c) LiteTools 2021
+// All rights reserved under the Apache-2.0 license.
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +14,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// TODO: Cleanup and change the code style
 namespace Tasks {
     public partial class frmTaskManager : Form
     {
@@ -59,16 +61,12 @@ namespace Tasks {
             }
         }
 
-
         string OldItemSelected = string.Empty;
-
 
         private void CPUMon_Check()
         {
             try
             {
-
-
                 foreach (ListViewItem LvItem in this.listView1.Items)
                 {
 
@@ -270,8 +268,5 @@ namespace Tasks {
             Task<List<ProcessInfoEx>> ProcessInfoList = Task.Run(async () => await GetProcessAsync());
             ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
         }
-
     }
-
-
     }
