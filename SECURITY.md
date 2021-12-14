@@ -22,9 +22,11 @@ These are the supported versions of Tasks. We will not fix vulnerabilities in ol
 
 | Version             | Supported          | Release Date         | Discontinuation Date | Version Type |
 | :------------------ | :----------------: | :--------------:     | :------------------: | :------------------: | 
+| **3.0.1**           | ✅                 | 10th December, 2021  | N/A                  | Release| 
+| **3.0.0**           | ✅                 | 8th December, 2021   | N/A                  | Release |
 | **2.2.0**           | ✅                 | 12th November, 2021  | N/A                  | Release| 
-| **2.1.1**           | ✅                 | 24th October, 2021   | N/A                  | Release |
-| **2.1.0**           | ✅                 | 22nd October, 2021   | N/A                  | Release |
+| **2.1.1**           | ✅                 | 24th October, 2021   | January 30th 2021                  | Release |
+| **2.1.0**           | :x:                | 22nd October, 2021   | January 1st 2021                 | Release |
 | **2.0.0**           | :x:                 | 20th September, 2021 | December 14th 2021   | Release |
 | **2.0.0 PRE**| :x:                | 7th August, 2021     | 31st November 2021   | Pre - Release |
 | **1.x.x**           | :x:                | 24th July, 2021      | 7th August 2021      | Legacy |
