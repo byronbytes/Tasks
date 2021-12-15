@@ -800,9 +800,7 @@ namespace Tasks
         private void GetExtensionList(DirectoryInfo directoryInfo)
         {
             foreach (var ext in directoryInfo.GetDirectories())
-
             {
-
                 FileInfo fi = new FileInfo(ext.ToString());
                 ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
 
@@ -820,11 +818,9 @@ namespace Tasks
             if (comboBox1.Text == "Google Chrome")
             {
                 ExtensionsBox.Items.Clear();
-
                 GetExtensionList(new DirectoryInfo(Dirs.chromeExtDir));
-
-
             }
+            
             else if (comboBox1.Text == "Mozilla Firefox")
             {
                 ExtensionsBox.Items.Clear();
@@ -858,7 +854,6 @@ namespace Tasks
             else if (comboBox1.Text == "Microsoft Edge")
             {
                 ExtensionsBox.Items.Clear();
-
                 GetExtensionList(new DirectoryInfo(Dirs.edgeExtDir));
             }
         }
@@ -868,12 +863,10 @@ namespace Tasks
 
             if (ExtensionsBox.SelectedItems.Count >= 0) //Check if the user selected extensions for deletion.
                 {
-
                 if (comboBox1.Text == "Google Chrome")
                 {
                     Remove.KillBrowser(1);
                     Thread.Sleep(75);
-
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try
@@ -894,7 +887,6 @@ namespace Tasks
                 {
                     Remove.KillBrowser(2);
                     Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons?
-
                     try
                     {
                         Remove.DeleteExtension(ExtensionsBox.SelectedItems[0].SubItems[2].Text, true);
@@ -1135,8 +1127,8 @@ namespace Tasks
             {
                 if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(usertemp)) Debug.Print("Null.");
-                if (DeleteAllFiles(directCache)) TasksDebug.Null();
-                if (DeleteAllFiles(windowsReport)) TasksDebug.Null();
+                if (DeleteAllFiles(directCache)) Debug.Print("Null.");
+                if (DeleteAllFiles(windowsReport)) Debug.Print("Null.");
             }
             catch
             {
