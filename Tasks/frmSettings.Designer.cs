@@ -496,9 +496,9 @@ namespace Tasks
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(16, 15);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(464, 30);
+            this.label20.Size = new System.Drawing.Size(437, 30);
             this.label20.TabIndex = 33;
-            this.label20.Text = "Cleanup logs and Tasks related files are put here.\r\n";
+            this.label20.Text = "Cleanup Summaries for Tasks are listed below.\r\n";
             // 
             // frmSettings
             // 

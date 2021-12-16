@@ -102,6 +102,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -110,7 +111,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1167,6 +1167,16 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox4.Location = new System.Drawing.Point(487, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(431, 272);
+            this.groupBox4.TabIndex = 10;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Placeholder";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button7);
@@ -1237,13 +1247,15 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(6, 457);
+            this.textBox1.Location = new System.Drawing.Point(6, 474);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(968, 125);
+            this.textBox1.Size = new System.Drawing.Size(968, 108);
             this.textBox1.TabIndex = 8;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.textBox1.Text = "Scripts Used:\r\nhttps://github.com/Sycnex/Windows10Debloater\r\nhttps://github.com/S" +
+    "hadowWhisperer/Remove-Edge-Chromium\r\n\r\nCredit respectively goes to the original " +
+    "creators.";
             // 
             // toolTip1
             // 
@@ -1260,16 +1272,6 @@
             this.btnCleanup.Text = "Cleanup";
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox4.Location = new System.Drawing.Point(487, 6);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(431, 272);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Placeholder";
             // 
             // frmCleanup
             // 
