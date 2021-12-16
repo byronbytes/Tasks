@@ -108,7 +108,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
@@ -764,7 +763,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(352, 229);
+            this.label7.Location = new System.Drawing.Point(353, 229);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 25);
             this.label7.TabIndex = 74;
@@ -1006,7 +1005,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(616, 233);
+            this.label6.Location = new System.Drawing.Point(619, 233);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(168, 25);
             this.label6.TabIndex = 59;
@@ -1018,7 +1017,7 @@
             this.cbDiscord.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDiscord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbDiscord.ForeColor = System.Drawing.Color.White;
-            this.cbDiscord.Location = new System.Drawing.Point(619, 272);
+            this.cbDiscord.Location = new System.Drawing.Point(624, 272);
             this.cbDiscord.Name = "cbDiscord";
             this.cbDiscord.Size = new System.Drawing.Size(72, 21);
             this.cbDiscord.TabIndex = 60;
@@ -1057,6 +1056,7 @@
             this.label17.TabIndex = 44;
             this.label17.Text = "Tasks will close any opened browsers before removing any extensions. \r\nSave your " +
     "work before using this!";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label14
             // 
@@ -1158,7 +1158,6 @@
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.tabPage4.Controls.Add(this.groupBox1);
             this.tabPage4.Controls.Add(this.textBox1);
-            this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -1173,9 +1172,9 @@
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 73);
+            this.groupBox1.Location = new System.Drawing.Point(12, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 284);
+            this.groupBox1.Size = new System.Drawing.Size(431, 272);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Remove Bloat";
@@ -1243,18 +1242,6 @@
             this.textBox1.Size = new System.Drawing.Size(968, 125);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = resources.GetString("textBox1.Text");
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(12, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(557, 42);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "You can remove bloatware using our built in panel, which has much more variety\r\n " +
-    "and has more built in scripts.";
             // 
             // toolTip1
             // 
@@ -1404,6 +1391,5 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label5;
     }
 }
