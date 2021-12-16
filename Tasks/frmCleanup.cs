@@ -1045,11 +1045,11 @@ namespace Tasks
             try
             {
                 progressBar1.Value = 0;
-
                 label11.Visible = true;
                 button9.Visible = true;
                 label13.Visible = true;
                 label19.Visible = true;
+                
                 long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp\\"));
                 progressBar1.PerformStep();
                 long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
@@ -1121,6 +1121,7 @@ namespace Tasks
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var directCache = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
             var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
+            
             try
             {
                 if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
