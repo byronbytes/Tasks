@@ -68,19 +68,21 @@ See the full list of [contributors](https://github.com/LiteTools/Tasks/contribut
 
 
 ## Gallery
-These images were last taken on v3.0.0 The design may vary for newer versions.
+These images were last taken on v3.0.1 The design may vary for newer versions.
 You are allowed to distribute these screenshots for showcase purposes, it is also highly recommended.
 
-(I will post screenshots of the latest version later)
 
-![image](https://user-images.githubusercontent.com/53088136/141648801-7305acfa-99f5-484a-a15c-123460dc999c.png)
-![image](https://user-images.githubusercontent.com/53088136/141648811-f355bed2-afb1-44da-b011-3e0368fdd123.png)
-![image](https://user-images.githubusercontent.com/53088136/141648826-e543f849-75b1-458e-9f9b-c41cdc3c489d.png)
-![image](https://user-images.githubusercontent.com/53088136/141648832-252bb905-1eef-4326-803e-d36da11c01bd.png)
-![image](https://user-images.githubusercontent.com/53088136/141648848-0e01b893-42ae-46f6-b172-55d32f1b6dd9.png)
-![image](https://user-images.githubusercontent.com/53088136/141648856-a7d20627-8cfd-4364-b383-6ac4a6173019.png)
-![image](https://user-images.githubusercontent.com/53088136/141648886-ee4fc9bc-21fc-4f95-9f97-b7efe9fab83f.png)
-![image](https://user-images.githubusercontent.com/53088136/141648894-77a937ed-b2ac-40b4-914a-7faa67c94125.png)
-![image](https://user-images.githubusercontent.com/53088136/141648915-445dc1aa-5380-48c5-97a2-263ef3d880da.png)
+![image](https://user-images.githubusercontent.com/53088136/146448769-f6b75abe-f8ee-428e-9089-31577f7c1003.png)
+![image](https://user-images.githubusercontent.com/53088136/146448787-41418c06-dd58-4eae-bdb4-a841fb8f725d.png)
+![image](https://user-images.githubusercontent.com/53088136/146448811-2ce7ee33-18d0-4000-9cbc-d9daf95a9a77.png)
+![image](https://user-images.githubusercontent.com/53088136/146448830-71ffb836-d1d2-4640-96d3-4a8abddd30a2.png)
+![image](https://user-images.githubusercontent.com/53088136/146448844-a1ff574b-3803-46a4-95fc-bb8b72a1cd71.png)
+![image](https://user-images.githubusercontent.com/53088136/146448860-43622db9-7ffb-4032-bb80-ddb53b1a1b59.png)
+![image](https://user-images.githubusercontent.com/53088136/146448892-edebf3b9-9f0f-4b41-abb1-51dbf64b6973.png)
+![image](https://user-images.githubusercontent.com/53088136/146448916-667db30d-3502-442c-86b7-9440676e1c91.png)
+![image](https://user-images.githubusercontent.com/53088136/146449001-c9905a0a-c542-4406-9427-1b079de4ac10.png)
+![image](https://user-images.githubusercontent.com/53088136/146449025-844b7e83-d10d-4d93-b514-230c9ab724e3.png)
+![image](https://user-images.githubusercontent.com/53088136/146449043-483295dc-a6d5-4198-b51c-016a43f87311.png)
+
 
 
