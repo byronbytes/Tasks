@@ -68,6 +68,7 @@ namespace Tasks
             this.button2 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -440,6 +441,7 @@ namespace Tasks
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.label16);
@@ -477,7 +479,7 @@ namespace Tasks
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(7, 3);
+            this.label16.Location = new System.Drawing.Point(6, 3);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(833, 60);
             this.label16.TabIndex = 32;
@@ -553,6 +555,17 @@ namespace Tasks
             this.label20.TabIndex = 33;
             this.label20.Text = "Cleanup logs and Tasks related files are put here.\r\n";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label15.Location = new System.Drawing.Point(7, 146);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(168, 25);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "Newer Version: ???";
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -618,5 +631,6 @@ namespace Tasks
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label15;
     }
 }

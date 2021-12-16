@@ -68,7 +68,7 @@ namespace Tasks
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Tasks.Properties.Resources.RegistryWhite;
-            this.pictureBox5.Location = new System.Drawing.Point(55, 478);
+            this.pictureBox5.Location = new System.Drawing.Point(55, 498);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.TabIndex = 14;
