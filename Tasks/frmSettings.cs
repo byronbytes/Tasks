@@ -111,7 +111,7 @@ namespace Tasks
                 }
            catch
             {
-                listBox2.Items.Add("Unable to add file.");
+                listBox2.Items.Add("There was an error trying to list the files.");
             }
 
         }
@@ -164,27 +164,37 @@ namespace Tasks
 
         private void button2_Click(object sender, EventArgs e)
         {
-            File.Delete(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary\\" + listBox2.SelectedItem.ToString());
+            try
+            {
+                File.Delete(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary\\" + listBox2.SelectedItem.ToString());
+            }
+            catch
+            {
+                MessageBox.Show("There was an error trying to delete.");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary\\").GetFiles("*.txt");
-
-            foreach (FileInfo file in files)
+            try
             {
-                File.Delete(file.ToString());
+                FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary\\").GetFiles("*.txt");
+
+                foreach (FileInfo file in files)
+                {
+                    File.Delete(file.ToString());
+                }
             }
+            catch
+            {
+                MessageBox.Show("There was an error trying to delete.");
+            }
+           
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Tasks\\Cleanup Summary\\");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            UpdateCheck.CheckForUpdates();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
