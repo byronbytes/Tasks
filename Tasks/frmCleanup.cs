@@ -88,7 +88,6 @@ namespace Tasks
                 label2.ForeColor = Color.Black;
                 label3.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
-                label5.ForeColor = Color.Black;
                 label6.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
                 label11.ForeColor = Color.Black;

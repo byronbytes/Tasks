@@ -22,7 +22,7 @@ namespace Tasks
             // This will validify that the update is not from a development build. This is a current draft.
             string CurrentVersion = "3.1.0";
             string NewVersion = "3.1.0";
-            if()
+
         }
         
         
