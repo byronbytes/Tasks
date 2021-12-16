@@ -85,7 +85,7 @@ namespace Tasks {
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            ShowForm(new frmRegistry());
+          //  ShowForm(new frmRegistry());
         }
     }
 }
