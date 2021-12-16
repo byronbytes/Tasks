@@ -899,7 +899,6 @@ namespace Tasks
                     catch
                     {
                         CleanupLogsLBox.Items.Add("Failed to remove extension.");
-
                     }
 
                 }
@@ -1078,7 +1077,7 @@ namespace Tasks
             }
          catch
             {
-                label11.Text = "There was an error trying to Quick Clean your PC.";
+                label11.Text = "There was an error trying to clean your PC. Please try again.";
             }
         }
 
