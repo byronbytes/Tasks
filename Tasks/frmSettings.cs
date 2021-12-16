@@ -129,7 +129,6 @@ namespace Tasks
                 this.BackColor = Color.FromArgb(250, 250, 250);
                 tabPage1.BackColor = Color.White;
                 tabPage2.BackColor = Color.White;
-                tabPage3.BackColor = Color.White;
                 tabPage4.BackColor = Color.White;
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
@@ -144,8 +143,6 @@ namespace Tasks
                 label11.ForeColor = Color.Black;
                 label12.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
-                label16.ForeColor = Color.Black;
-                label17.ForeColor = Color.Black;
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
                 label20.ForeColor = Color.Black;
