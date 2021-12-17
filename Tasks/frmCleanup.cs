@@ -984,7 +984,6 @@ namespace Tasks
                 cbEdgeCookies.Enabled = false;
                 cbEdgeSearchHistory.Enabled = false;
                 cbEdgeSessions.Enabled = false;
-
             }
 
             // Extention Finder & More
@@ -1088,7 +1087,7 @@ namespace Tasks
             }
             catch
             {
-            // Needs a more advanced catch method.
+               // Needs a more advanced catch method.
                 return size;
             }
         }
@@ -1097,7 +1096,6 @@ namespace Tasks
         {
             double ConvertedByte = Math.Round(bytes / 1024f / 1024f, 2);
             return (ConvertedByte);
-          
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -1106,27 +1104,25 @@ namespace Tasks
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var directCache = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
             var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
-            
+            var windowsLog = new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\");
+          
             try
             {
                 if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(usertemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(directCache)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsReport)) Debug.Print("Null.");
+                if (DeleteAllFiles(windowsLog)) Debug.Print("Null.");
             }
             catch
             {
-                // no catch yet.
+                // Needs advanced catch method.
+              Debug.Print("Quick Clean was unable to clean everything.");
             }
         
         }
 
         private void ExtensionsBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
         {
 
         }
