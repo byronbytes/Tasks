@@ -28,9 +28,9 @@ namespace Tasks
         static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
         enum RecycleFlag : int
         {
-            SHERB_NOCONFIRMATION = 0x00000001, // No confirmation, when emptying
-            SHERB_NOPROGRESSUI = 0x00000001, // No progress tracking window during the emptying of the recycle bin
-            SHERB_NOSOUND = 0x00000004 // No sound when the emptying of the recycle bin is complete
+            SHERB_NOCONFIRMATION = 0x00000001,
+            SHERB_NOPROGRESSUI = 0x00000001,
+            SHERB_NOSOUND = 0x00000004
         }
 
         public void CheckTheme()
@@ -39,7 +39,6 @@ namespace Tasks
             {
                 this.BackColor = Color.FromArgb(18, 18, 18);
                 label1.ForeColor = Color.White;
-                // Most of the stuff already goes back to default, no need to change everything again.
             }
 
             if (Properties.Settings.Default.Theme == "light")
@@ -110,7 +109,6 @@ namespace Tasks
                 ExtensionsBox.ForeColor = Color.Black;
                 textBox1.BackColor = Color.Gray;
                 textBox1.ForeColor = Color.Black;
-
             }
         }
 
@@ -412,8 +410,6 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Error trying to delete Firefox cache. " + ex);
                 }
 
-
-
             }
 
             if (cbFirefoxCookies.Checked)
@@ -468,9 +464,7 @@ namespace Tasks
                             }
                             catch (Exception ex)
                             {
-
                                 CleanupLogsLBox.Items.Add("Error while trying to delete Firefox History." + ex);
-
                             }
 
                         }
@@ -482,7 +476,6 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History. " + ex);
                 }
             }
-
             if (cbSystemDNSCache.Checked)
             {
                 try
@@ -499,9 +492,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-
                     CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache." + ex);
-
                 }
             }
             if (cbSystemARPCache.Checked)
@@ -521,10 +512,8 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-
                     CleanupLogsLBox.Items.Add("Error while trying to clear ARP cache. " + ex);
                     MessageBox.Show(ex.ToString());
-
                 }
             }
 
@@ -539,13 +528,10 @@ namespace Tasks
                 {
                     CleanupLogsLBox.Items.Add("Error while clearing Recent Files. " + ex);
                 }
-
             }
-
 
             if (cbEdgeSearchHistory.Checked)
             {
-
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History\\");
                 CleanupLogsLBox.Items.Add("Edge Search History Deleted.");
             }
@@ -615,14 +601,13 @@ namespace Tasks
                 {
                     var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\CrashDumps\\");
                     var directory2 = new DirectoryInfo("C:\\Windows\\MiniDump\\");
-                    File.Delete("C:\\Windows\\MEMORY.DMP");
-                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("System Memory Dumps Deleted.");
+                    var file1 = new DirectoryInfo("C:\\Windows\\MEMORY.DMP");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(file1)) CleanupLogsLBox.Items.Add("System Memory Dumps Deleted.");
                 }
                 catch
                 {
                     CleanupLogsLBox.Items.Add("Error Deleting System Memory Dumps.");
                 }
-             
             }
 
 
