@@ -15,22 +15,21 @@ namespace Tasks
     class Remove
     {
         public static void DeleteExtension(string path, bool isFile)
-        {   
+        {
             if (isFile == true)
             {
                 try
                     {
-                         File.Delete(path);
+                      File.Delete(path);
                     }
                     catch
                     {
-                        Debug.Print("Error deleting file.");
+                      Debug.Print("Error deleting file.");
                     }
              }
             
             if (isFile == false)
-            {
-                 
+            {                 
                     try 
                     {
                      Directory.Delete(path, true);
