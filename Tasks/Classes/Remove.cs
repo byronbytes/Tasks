@@ -15,8 +15,7 @@ namespace Tasks
     class Remove
     {
         public static void DeleteExtension(string path, bool isFile)
-        {
-            
+        {   
             if (isFile == true)
             {
                 try
@@ -42,13 +41,6 @@ namespace Tasks
                     }     
             }  
         }  
-        
-      public static void DeleteCleanupLogs()
-      {
-          //This class deletes the cleanup logs.
-          string cleanupDir = Dirs.tasksCleanup;
-          
-      }
       
         public static void KillBrowser(int browser)
         {
