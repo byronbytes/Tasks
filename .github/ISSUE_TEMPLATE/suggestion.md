@@ -7,22 +7,18 @@ assignees: byronbytes
 
 ---
 
-# List of Suggestions
-List your suggestions below.
+# Suggestion Summary
+Give a clear and simple sentence of the suggestion you want to add.
 
--
--
--
 
-## Reason for Improvement
-Please give us reasons why we should imploment these.
 
--
--
--
+## Reason for Addition
+Give a reason why we should add this suggestion to Tasks.
 
-## Are these related to an issue / PR?
-If it is related, please paste the issue or PR that is related.
+
+
+## Are these related to an issue?
+If it is related, please paste the issue that is related.
 
 Link to Issue (If applicable):
 
