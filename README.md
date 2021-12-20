@@ -25,19 +25,20 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - Remove malicious programs that run on start with one click.
   - View detailed information about services that run on start. (Name, Service, Stopped or Running)
   - Open the startup folder with one click.
+  - Clean and understandable interface to see all startup processes and services.
 
 - Task Manager:
   - Advanced task manager with more details. (Name, PID, CPU Usage, Directory)
   - Create new tasks easily with a familiar interface.
   - Quickly end tasks with one button.
   - Refresh Task Manager with one button.
+  - Clean and understandable interface to see all processes that are running.
   
 - Settings:
   - Ability to change the theme of Tasks. (Dark / Light Mode)
   - View and delete Cleanup Summaries that Tasks created.
   - Toggle the ability to turn on or off cleanup logs.
   - Change general settings about Tasks.
-  - Checking for updates. (WIP)
   - Change the language of Tasks. (WIP)
  
 
