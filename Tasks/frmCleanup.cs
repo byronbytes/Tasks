@@ -1035,24 +1035,19 @@ namespace Tasks
                 label19.Visible = true;
                 
                 long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp\\"));
-                progressBar1.PerformStep();
                 long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
-                progressBar1.PerformStep();
                 long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\")));
-                progressBar1.PerformStep();
                 long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
-                progressBar1.PerformStep();
                 long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
+                progessBar1.PerformStep();
 
                 long allsize = size1 + size2 + size3 + size4 + size5;
                 long tempsize = size1 + size2;
                 long systemsize = size3 + size4 + size5;
-
-                // Conversion stuff
+                progessBar1.PerformStep();
+                // Conversion
                 double allsizeMB = ConvertBytesToMegabytes(allsize);
-                progressBar1.PerformStep();
                 double tempsizeMB = ConvertBytesToMegabytes(tempsize);
-                progressBar1.PerformStep();
                 double systemsizeMB = ConvertBytesToMegabytes(systemsize);
                 progressBar1.PerformStep();
                 label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
