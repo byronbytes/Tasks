@@ -109,7 +109,6 @@ namespace Tasks {
             int ID = 0;
             foreach (ProcessInfoEx ProcessInfo in ProcessInfoList)
             {
-
                 try
                 {
                     Bitmap IconImg = Icon.ExtractAssociatedIcon(ProcessInfo.Path).ToBitmap();
