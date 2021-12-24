@@ -69,16 +69,11 @@ namespace Tasks {
             {
                 foreach (ListViewItem LvItem in this.listView1.Items)
                 {
-
                     try
                     {
-
                         int ProID = System.Convert.ToInt32(LvItem.SubItems[2].Text);
-
                         Process TargetProcess = Process.GetProcessById(ProID);
-
                         string CPUPercentUsage = GetProcessCPUPercentUsage(TargetProcess).ToString();
-
                         LvItem.SubItems[3].Text = CPUPercentUsage + "%";
 
                     }
@@ -86,10 +81,7 @@ namespace Tasks {
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -165,7 +157,6 @@ namespace Tasks {
 
             try
             {
-
                 var wmiQueryString = "SELECT ProcessId, ExecutablePath, CommandLine, Status FROM Win32_Process";
 
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher(wmiQueryString);

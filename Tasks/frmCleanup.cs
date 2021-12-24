@@ -28,9 +28,9 @@ namespace Tasks
         static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
         enum RecycleFlag : int
         {
-            SHERB_NOCONFIRMATION = 0x00000001, // No confirmation, when emptying
-            SHERB_NOPROGRESSUI = 0x00000001, // No progress tracking window during the emptying of the recycle bin
-            SHERB_NOSOUND = 0x00000004 // No sound when the emptying of the recycle bin is complete
+            SHERB_NOCONFIRMATION = 0x00000001,
+            SHERB_NOPROGRESSUI = 0x00000001,
+            SHERB_NOSOUND = 0x00000004
         }
 
         public void CheckTheme()
@@ -39,7 +39,6 @@ namespace Tasks
             {
                 this.BackColor = Color.FromArgb(18, 18, 18);
                 label1.ForeColor = Color.White;
-                // Most of the stuff already goes back to default, no need to change everything again.
             }
 
             if (Properties.Settings.Default.Theme == "light")
@@ -110,7 +109,6 @@ namespace Tasks
                 ExtensionsBox.ForeColor = Color.Black;
                 textBox1.BackColor = Color.Gray;
                 textBox1.ForeColor = Color.Black;
-
             }
         }
 
@@ -412,8 +410,6 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Error trying to delete Firefox cache. " + ex);
                 }
 
-
-
             }
 
             if (cbFirefoxCookies.Checked)
@@ -468,9 +464,7 @@ namespace Tasks
                             }
                             catch (Exception ex)
                             {
-
                                 CleanupLogsLBox.Items.Add("Error while trying to delete Firefox History." + ex);
-
                             }
 
                         }
@@ -482,7 +476,6 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History. " + ex);
                 }
             }
-
             if (cbSystemDNSCache.Checked)
             {
                 try
@@ -499,9 +492,7 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-
                     CleanupLogsLBox.Items.Add("Error while trying to clear DNS cache." + ex);
-
                 }
             }
             if (cbSystemARPCache.Checked)
@@ -521,10 +512,8 @@ namespace Tasks
                 }
                 catch (Exception ex)
                 {
-
                     CleanupLogsLBox.Items.Add("Error while trying to clear ARP cache. " + ex);
                     MessageBox.Show(ex.ToString());
-
                 }
             }
 
@@ -539,13 +528,10 @@ namespace Tasks
                 {
                     CleanupLogsLBox.Items.Add("Error while clearing Recent Files. " + ex);
                 }
-
             }
-
 
             if (cbEdgeSearchHistory.Checked)
             {
-
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History\\");
                 CleanupLogsLBox.Items.Add("Edge Search History Deleted.");
             }
@@ -615,14 +601,13 @@ namespace Tasks
                 {
                     var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\CrashDumps\\");
                     var directory2 = new DirectoryInfo("C:\\Windows\\MiniDump\\");
-                    File.Delete("C:\\Windows\\MEMORY.DMP");
-                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("System Memory Dumps Deleted.");
+                    var file1 = new DirectoryInfo("C:\\Windows\\MEMORY.DMP");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(file1)) CleanupLogsLBox.Items.Add("System Memory Dumps Deleted.");
                 }
                 catch
                 {
                     CleanupLogsLBox.Items.Add("Error Deleting System Memory Dumps.");
                 }
-             
             }
 
 
@@ -999,7 +984,6 @@ namespace Tasks
                 cbEdgeCookies.Enabled = false;
                 cbEdgeSearchHistory.Enabled = false;
                 cbEdgeSessions.Enabled = false;
-
             }
 
             // Extention Finder & More
@@ -1051,24 +1035,19 @@ namespace Tasks
                 label19.Visible = true;
                 
                 long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp\\"));
-                progressBar1.PerformStep();
                 long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
-                progressBar1.PerformStep();
                 long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\")));
-                progressBar1.PerformStep();
                 long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
-                progressBar1.PerformStep();
                 long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
+                progessBar1.PerformStep();
 
                 long allsize = size1 + size2 + size3 + size4 + size5;
                 long tempsize = size1 + size2;
                 long systemsize = size3 + size4 + size5;
-
-                // Conversion stuff
+                progessBar1.PerformStep();
+                // Conversion
                 double allsizeMB = ConvertBytesToMegabytes(allsize);
-                progressBar1.PerformStep();
                 double tempsizeMB = ConvertBytesToMegabytes(tempsize);
-                progressBar1.PerformStep();
                 double systemsizeMB = ConvertBytesToMegabytes(systemsize);
                 progressBar1.PerformStep();
                 label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
@@ -1103,7 +1082,7 @@ namespace Tasks
             }
             catch
             {
-            // Needs a more advanced catch method.
+               // Needs a more advanced catch method.
                 return size;
             }
         }
@@ -1112,7 +1091,6 @@ namespace Tasks
         {
             double ConvertedByte = Math.Round(bytes / 1024f / 1024f, 2);
             return (ConvertedByte);
-          
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -1121,27 +1099,25 @@ namespace Tasks
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var directCache = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
             var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
-            
+            var windowsLog = new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\");
+          
             try
             {
                 if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(usertemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(directCache)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsReport)) Debug.Print("Null.");
+                if (DeleteAllFiles(windowsLog)) Debug.Print("Null.");
             }
             catch
             {
-                // no catch yet.
+                // Needs advanced catch method.
+              Debug.Print("Quick Clean was unable to clean everything.");
             }
         
         }
 
         private void ExtensionsBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
         {
 
         }

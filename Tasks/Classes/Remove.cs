@@ -16,22 +16,20 @@ namespace Tasks
     {
         public static void DeleteExtension(string path, bool isFile)
         {
-            
             if (isFile == true)
             {
                 try
                     {
-                         File.Delete(path);
+                      File.Delete(path);
                     }
                     catch
                     {
-                        Debug.Print("Error deleting file.");
+                      Debug.Print("Error deleting file.");
                     }
              }
             
             if (isFile == false)
-            {
-                 
+            {                 
                     try 
                     {
                      Directory.Delete(path, true);
@@ -42,13 +40,6 @@ namespace Tasks
                     }     
             }  
         }  
-        
-      public static void DeleteCleanupLogs()
-      {
-          //This class deletes the cleanup logs.
-          string cleanupDir = Dirs.tasksCleanup;
-          
-      }
       
         public static void KillBrowser(int browser)
         {
