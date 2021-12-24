@@ -1039,12 +1039,10 @@ namespace Tasks
                 long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\")));
                 long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
                 long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
-                progessBar1.PerformStep();
 
                 long allsize = size1 + size2 + size3 + size4 + size5;
                 long tempsize = size1 + size2;
                 long systemsize = size3 + size4 + size5;
-                progessBar1.PerformStep();
                 // Conversion
                 double allsizeMB = ConvertBytesToMegabytes(allsize);
                 double tempsizeMB = ConvertBytesToMegabytes(tempsize);

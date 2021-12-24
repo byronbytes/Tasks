@@ -1057,7 +1057,6 @@
             this.label17.TabIndex = 44;
             this.label17.Text = "Tasks will close any opened browsers before removing any extensions. \r\nSave your " +
     "work before using this!";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label14
             // 
