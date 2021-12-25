@@ -1033,16 +1033,18 @@ namespace Tasks
                 button9.Visible = true;
                 label13.Visible = true;
                 label19.Visible = true;
-                
+                progressBar1.PerformStep();
                 long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp\\"));
                 long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
                 long size3 = DirSize(new DirectoryInfo((Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\")));
                 long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
                 long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
+                progressBar1.PerformStep();
 
                 long allsize = size1 + size2 + size3 + size4 + size5;
                 long tempsize = size1 + size2;
                 long systemsize = size3 + size4 + size5;
+                progressBar1.PerformStep();
                 // Conversion
                 double allsizeMB = ConvertBytesToMegabytes(allsize);
                 double tempsizeMB = ConvertBytesToMegabytes(tempsize);
