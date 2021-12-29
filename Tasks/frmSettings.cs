@@ -99,17 +99,17 @@ namespace Tasks
         private void frmSettings_Load(object sender, EventArgs e)
         {
             CheckTheme();
-            
+
             try
             {
-                 FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary").GetFiles("*.txt");
+                FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary").GetFiles("*.txt");
 
-            foreach (FileInfo file in files)
-            {
-                listBox2.Items.Add(file.Name);
-            }
+                foreach (FileInfo file in files)
+                {
+                    listBox2.Items.Add(file.Name);
                 }
-           catch
+            }
+            catch
             {
                 listBox2.Items.Add("There was an error trying to list the files.");
             }
@@ -153,7 +153,7 @@ namespace Tasks
                 comboBox1.BackColor = Color.Gray;
                 listBox1.BackColor = Color.FromArgb(240, 240, 240);
                 listBox1.ForeColor = Color.Black;
-                
+
             }
         }
 
@@ -189,7 +189,7 @@ namespace Tasks
             {
                 MessageBox.Show("There was an error trying to delete.");
             }
-           
+
         }
 
         private void button4_Click(object sender, EventArgs e)

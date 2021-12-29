@@ -14,8 +14,10 @@ using System.Windows.Forms;
 
 namespace Tasks
 {
-    public partial class frmCreateNewProcess : Form { public frmCreateNewProcess(){ InitializeComponent(); CheckTheme(); }
-                                                     
+    public partial class frmCreateNewProcess : Form
+    {
+        public frmCreateNewProcess() { InitializeComponent(); CheckTheme(); }
+
         private void button2_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" })
@@ -27,37 +29,37 @@ namespace Tasks
                         string task = ofd.FileName.ToString();
                         Process.Start(task);
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         MessageBox.Show("An error has occurred. " + ex.Message);
                     }
-                   
+
                 }
                 else { }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {     
-         try
-           {
-             Process.Start(textBox1.Text);
-           } 
-            catch(Exception ex)
+        {
+            try
             {
-              MessageBox.Show("An error has occurred. " + ex.Message);
+                Process.Start(textBox1.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has occurred. " + ex.Message);
             }
         }
-                                                     
-          public void CheckTheme()
-          {
-              if (Properties.Settings.Default.Theme == "light")
-             {
-              this.BackColor = Color.White;
-              panel1.BackColor = Color.Gray;
-              textBox1.BackColor = Color.Gray;
-              textBox1.ForeColor = Color.Black;
-             }
-          }
+
+        public void CheckTheme()
+        {
+            if (Properties.Settings.Default.Theme == "light")
+            {
+                this.BackColor = Color.White;
+                panel1.BackColor = Color.WhiteSmoke;
+                textBox1.BackColor = Color.WhiteSmoke;
+                textBox1.ForeColor = Color.Black;
+            }
+        }
     }
 }
