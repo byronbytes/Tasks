@@ -74,6 +74,7 @@ namespace Tasks
                 cbSpotifyCache.ForeColor = Color.Black;
                 cbSpotifyCookies.ForeColor = Color.Black;
                 cbIECache.ForeColor = Color.Black;
+                
 
                 tabPage1.BackColor = Color.White;
                 tabPage7.BackColor = Color.White;
@@ -100,6 +101,7 @@ namespace Tasks
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
+                label5.ForeColor = Color.Black;
                 groupBox1.ForeColor = Color.Black;
                 groupBox2.ForeColor = Color.Black;
                 groupBox3.ForeColor = Color.Black;
