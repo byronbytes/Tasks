@@ -103,7 +103,7 @@ namespace Tasks
                 groupBox1.ForeColor = Color.Black;
                 groupBox2.ForeColor = Color.Black;
                 groupBox3.ForeColor = Color.Black;
-                
+
                 comboBox1.BackColor = Color.Gray;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;
@@ -148,7 +148,7 @@ namespace Tasks
         public void WriteCleanupSummary()
         {
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
-           
+
             if (Properties.Settings.Default.EnableCleanupLogs == true)
             {
                 try
@@ -170,7 +170,7 @@ namespace Tasks
 
             }
 
-            }
+        }
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -363,7 +363,7 @@ namespace Tasks
                             }
                         }
                     }
-                    
+
                     try
                     {
 
@@ -701,20 +701,20 @@ namespace Tasks
                 }
 
             }
-            
+
             if (cbSpotifyCache.Checked)
-             {
-           
-           try
             {
-           
+
+                try
+                {
+
+                }
+                catch
+                {
+
+                }
+
             }
-           catch
-            {
-           
-            }
-           
-           }
 
 
 
@@ -804,7 +804,7 @@ namespace Tasks
                 ExtensionsBox.Items.Clear();
                 GetExtensionList(new DirectoryInfo(Dirs.chromeExtDir));
             }
-            
+
             else if (comboBox1.Text == "Mozilla Firefox")
             {
                 ExtensionsBox.Items.Clear();
@@ -846,7 +846,7 @@ namespace Tasks
         {
 
             if (ExtensionsBox.SelectedItems.Count >= 0) //Check if the user selected extensions for deletion.
-                {
+            {
                 if (comboBox1.Text == "Google Chrome")
                 {
                     Remove.KillBrowser(1);
@@ -889,11 +889,11 @@ namespace Tasks
 
                 if (comboBox1.Text == "Microsoft Edge")
                 {
-                   Remove.KillBrowser(3);
-                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                    Remove.KillBrowser(3);
+                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try
-                        {       
+                        {
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
                             Remove.DeleteExtension(subItem, false);
@@ -940,7 +940,7 @@ namespace Tasks
             try { RunFile.RunBat("Scripts/BatFiles/removeedge.bat", true); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
-        
+
         private void DirectoryExists()
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
@@ -1050,7 +1050,7 @@ namespace Tasks
                 label13.Text = tempsizeMB + "MB";
                 label19.Text = systemsizeMB + "MB";
             }
-         catch
+            catch
             {
                 label11.Text = "There was an error trying to clean your PC. Please try again.";
             }
@@ -1078,7 +1078,7 @@ namespace Tasks
             }
             catch
             {
-               // Needs a more advanced catch method.
+                // Needs a more advanced catch method.
                 return size;
             }
         }
@@ -1096,7 +1096,7 @@ namespace Tasks
             var directCache = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
             var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
             var windowsLog = new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\");
-          
+
             try
             {
                 if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
@@ -1108,9 +1108,9 @@ namespace Tasks
             catch
             {
                 // Needs advanced catch method.
-              Debug.Print("Quick Clean was unable to clean everything.");
+                Debug.Print("Quick Clean was unable to clean everything.");
             }
-        
+
         }
 
         private void ExtensionsBox_SelectedIndexChanged(object sender, EventArgs e)
