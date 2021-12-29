@@ -790,7 +790,7 @@ namespace Tasks
 
                 long dirSize = DirSize(new DirectoryInfo(ext.ToString()));
                 double dirsizeMB = ConvertBytesToMegabytes(dirSize);
-                extb.SubItems.Add("~ " + dirsizeMB + "MB");
+                extb.SubItems.Add(dirsizeMB + "MB");
                 extb.SubItems.Add(ext.ToString());
             }
         }
@@ -850,7 +850,6 @@ namespace Tasks
                 if (comboBox1.Text == "Google Chrome")
                 {
                     Remove.KillBrowser(1);
-                    Thread.Sleep(75);
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try
@@ -870,7 +869,6 @@ namespace Tasks
                 if (comboBox1.Text == "Mozilla Firefox")
                 {
                     Remove.KillBrowser(2);
-                    Thread.Sleep(75); //Short threadsleep or else the extension deleter would start before firefox is fully killed for some reasons?
                     try
                     {
                         Remove.DeleteExtension(ExtensionsBox.SelectedItems[0].SubItems[2].Text, true);
@@ -892,8 +890,6 @@ namespace Tasks
                 if (comboBox1.Text == "Microsoft Edge")
                 {
                    Remove.KillBrowser(3);
-                   Thread.Sleep(75);
-                   
                      foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try

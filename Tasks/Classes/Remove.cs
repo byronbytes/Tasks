@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Tasks
 {
@@ -19,28 +20,30 @@ namespace Tasks
             if (isFile == true)
             {
                 try
-                    {
-                      File.Delete(path);
-                    }
-                    catch
-                    {
-                      Debug.Print("Error deleting file.");
-                    }
-             }
-            
+                {
+                    Thread.Sleep(75);
+                    File.Delete(path);
+                }
+                catch
+                {
+                    Debug.Print("Error deleting file.");
+                }
+            }
+
             if (isFile == false)
-            {                 
-                    try 
-                    {
-                     Directory.Delete(path, true);
-                    }
-                    catch
-                    {
-                        Debug.Print("Error deleting directory.");
-                    }     
-            }  
-        }  
-      
+            {
+                try
+                {
+                    Thread.Sleep(75);
+                    Directory.Delete(path, true);
+                }
+                catch
+                {
+                    Debug.Print("Error deleting directory.");
+                }
+            }
+        }
+
         public static void KillBrowser(int browser)
         {
 

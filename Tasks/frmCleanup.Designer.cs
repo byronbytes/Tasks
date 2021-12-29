@@ -110,6 +110,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -186,6 +187,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage5.Controls.Add(this.label5);
             this.tabPage5.Controls.Add(this.progressBar1);
             this.tabPage5.Controls.Add(this.groupBox3);
             this.tabPage5.Controls.Add(this.groupBox2);
@@ -1173,7 +1175,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 272);
+            this.groupBox1.Size = new System.Drawing.Size(408, 272);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Remove Bloat";
@@ -1259,6 +1261,17 @@
             this.btnCleanup.Text = "Cleanup";
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(6, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(388, 42);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "If Quick Clean fails to clean, run Tasks as administrator\r\nand try again.";
             // 
             // frmCleanup
             // 
@@ -1392,5 +1405,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label5;
     }
 }
