@@ -28,6 +28,7 @@
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -110,7 +111,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -201,6 +201,17 @@
             this.tabPage5.Size = new System.Drawing.Size(980, 588);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Quick Clean";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(6, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(388, 42);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "If Quick Clean fails to clean, run Tasks as administrator\r\nand try again.";
             // 
             // progressBar1
             // 
@@ -1162,7 +1173,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(980, 588);
+            this.tabPage4.Size = new System.Drawing.Size(980, 684);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
@@ -1261,17 +1272,6 @@
             this.btnCleanup.Text = "Cleanup";
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(6, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(388, 42);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "If Quick Clean fails to clean, run Tasks as administrator\r\nand try again.";
             // 
             // frmCleanup
             // 

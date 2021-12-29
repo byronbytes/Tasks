@@ -143,8 +143,10 @@ namespace Tasks
                 label11.ForeColor = Color.Black;
                 label12.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
+                label14.ForeColor = Color.Black;
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
+                checkBox2.ForeColor = Color.Black;
                 label20.ForeColor = Color.Black;
                 tabControl1.BackColor = Color.White;
                 checkBox1.ForeColor = Color.Black;

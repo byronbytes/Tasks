@@ -147,7 +147,6 @@ namespace Tasks
         public void WriteCleanupSummary()
         {
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
-
             if (Properties.Settings.Default.EnableCleanupLogs == true)
             {
                 try
@@ -849,8 +848,8 @@ namespace Tasks
                 if (comboBox1.Text == "Google Chrome")
                 {
                     Remove.KillBrowser(1);
-                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
-                    {
+                         foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                          {
                         try
                         {
                             var item = ExtensionsBox.SelectedItems[0];
@@ -1117,11 +1116,33 @@ namespace Tasks
 
         }
 
+    
+
+        private void ExtensionList()
+        {
+            XylonV2.Core.Engine.WebBrowser.Chrome ChromeExtensionManager = new XylonV2.Core.Engine.WebBrowser.Chrome();
+            List<XylonV2.Core.Engine.WebBrowser.Chrome.ChromeExtension> GetExtensions = ChromeExtensionManager.Extensions;
+
+            foreach (XylonV2.Core.Engine.WebBrowser.Chrome.ChromeExtension ChromeExtension in GetExtensions)
+            {
+                if (ChromeExtension.LoadState == XylonV2.Core.Engine.WebBrowser.Chrome.StateLoaded.Loaded)
+                {
+                    // Dim ManifestData As String = ChromeExtension.ManifestJson.ToString
+                    // Extension Properties Data :
+                    // Dim ManifestPermissions As List(Of String) = ChromeExtension.ManifestJson.permissions
+                    string ExtensionPath = ChromeExtension.FullPath;
+                    string ExtensionName = ChromeExtension.ManifestJson.name;
+                    
+                    label1.Text += "Name: " + ExtensionName + Environment.NewLine + "Description: " + ChromeExtension.ManifestJson.description + Environment.NewLine + "Path: " + ExtensionPath + Environment.NewLine + Environment.NewLine;
+                }
+            }
+        }
+
 
 
     }
 
-    }
+}
 
 
 

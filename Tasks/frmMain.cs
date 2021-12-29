@@ -14,12 +14,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tasks {
-    public partial class frmMain : Form {
+namespace Tasks
+{
+    public partial class frmMain : Form
+    {
         public frmMain() { Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme(); }
 
         private Form _currentForm;
-        
+
         private void ShowForm(Form newForm)
         {
             if (_currentForm != null) _currentForm.Hide();
@@ -54,7 +56,7 @@ namespace Tasks {
                 pictureBox2.Image = Properties.Resources.Startup_Programs_Black;
                 pictureBox3.Image = Properties.Resources.Task_Manager;
                 pictureBox4.Image = Properties.Resources.Settings;
-               
+
                 label1.ForeColor = Color.Black;
             }
         }
@@ -85,7 +87,7 @@ namespace Tasks {
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-          //  ShowForm(new frmRegistry());
+            //  ShowForm(new frmRegistry());
         }
     }
 }
