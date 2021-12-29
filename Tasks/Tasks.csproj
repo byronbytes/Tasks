@@ -31,11 +31,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ByteSize" Version="2.1.0" />
-    <PackageReference Include="Ookii.Dialogs.WinForms" Version="3.0.0" />
+    <PackageReference Include="ByteSize" Version="2.1.1" />
+    <PackageReference Include="Ookii.Dialogs.WinForms" Version="4.0.0" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
-    <PackageReference Include="System.Management" Version="5.0.0" />
+    <PackageReference Include="System.Management" Version="6.0.0" />
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
+    <PackageReference Include="XylonV2" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
