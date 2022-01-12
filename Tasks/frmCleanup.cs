@@ -1118,30 +1118,6 @@ namespace Tasks
 
         }
 
-    
-
-        private void ExtensionList()
-        {
-            XylonV2.Core.Engine.WebBrowser.Chrome ChromeExtensionManager = new XylonV2.Core.Engine.WebBrowser.Chrome();
-            List<XylonV2.Core.Engine.WebBrowser.Chrome.ChromeExtension> GetExtensions = ChromeExtensionManager.Extensions;
-
-            foreach (XylonV2.Core.Engine.WebBrowser.Chrome.ChromeExtension ChromeExtension in GetExtensions)
-            {
-                if (ChromeExtension.LoadState == XylonV2.Core.Engine.WebBrowser.Chrome.StateLoaded.Loaded)
-                {
-                    // Dim ManifestData As String = ChromeExtension.ManifestJson.ToString
-                    // Extension Properties Data :
-                    // Dim ManifestPermissions As List(Of String) = ChromeExtension.ManifestJson.permissions
-                    string ExtensionPath = ChromeExtension.FullPath;
-                    string ExtensionName = ChromeExtension.ManifestJson.name;
-                    
-                    label1.Text += "Name: " + ExtensionName + Environment.NewLine + "Description: " + ChromeExtension.ManifestJson.description + Environment.NewLine + "Path: " + ExtensionPath + Environment.NewLine + Environment.NewLine;
-                }
-            }
-        }
-
-
-
     }
 
 }
