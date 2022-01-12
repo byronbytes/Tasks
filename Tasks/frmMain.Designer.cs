@@ -62,7 +62,7 @@ namespace Tasks
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-11, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(152, 781);
+            this.panel1.Size = new System.Drawing.Size(152, 713);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox4
@@ -122,9 +122,9 @@ namespace Tasks
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(138, 57);
+            this.panel2.Location = new System.Drawing.Point(138, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1085, 721);
+            this.panel2.Size = new System.Drawing.Size(1066, 713);
             this.panel2.TabIndex = 1;
             // 
             // timer1
@@ -139,17 +139,17 @@ namespace Tasks
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(138, 0);
+            this.panel3.Location = new System.Drawing.Point(-8, 710);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1082, 62);
-            this.panel3.TabIndex = 1;
+            this.panel3.Size = new System.Drawing.Size(1209, 71);
+            this.panel3.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(980, 9);
+            this.label2.Location = new System.Drawing.Point(1099, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 25);
             this.label2.TabIndex = 0;
@@ -160,7 +160,7 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(1216, 773);
+            this.ClientSize = new System.Drawing.Size(1196, 773);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
