@@ -148,7 +148,7 @@
             "Cleanup Logs:"});
             this.CleanupLogsLBox.Location = new System.Drawing.Point(8, 657);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(123, 19);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(40, 2);
             this.CleanupLogsLBox.TabIndex = 1;
             this.CleanupLogsLBox.Visible = false;
             // 
@@ -181,7 +181,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(988, 621);
+            this.tabControl1.Size = new System.Drawing.Size(1001, 605);
             this.tabControl1.TabIndex = 36;
             // 
             // tabPage5
@@ -198,7 +198,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(980, 588);
+            this.tabPage5.Size = new System.Drawing.Size(993, 572);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Quick Clean";
             // 
@@ -225,7 +225,7 @@
             // 
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(478, 482);
+            this.groupBox3.Location = new System.Drawing.Point(467, 456);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(278, 100);
             this.groupBox3.TabIndex = 6;
@@ -248,7 +248,7 @@
             // 
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(155, 482);
+            this.groupBox2.Location = new System.Drawing.Point(164, 456);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(278, 100);
             this.groupBox2.TabIndex = 5;
@@ -322,7 +322,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(980, 588);
+            this.tabPage1.Size = new System.Drawing.Size(993, 572);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cleanup";
             // 
@@ -334,7 +334,7 @@
             this.tabControl2.Location = new System.Drawing.Point(6, 6);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(968, 576);
+            this.tabControl2.Size = new System.Drawing.Size(968, 550);
             this.tabControl2.TabIndex = 37;
             // 
             // tabPage6
@@ -365,7 +365,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 30);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(960, 542);
+            this.tabPage6.Size = new System.Drawing.Size(960, 516);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "System";
             // 
@@ -694,7 +694,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 30);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(960, 542);
+            this.tabPage7.Size = new System.Drawing.Size(960, 516);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Applications";
             // 
@@ -1054,7 +1054,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(980, 588);
+            this.tabPage3.Size = new System.Drawing.Size(993, 572);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
             // 
@@ -1108,7 +1108,7 @@
             this.ExtensionsBox.HideSelection = false;
             this.ExtensionsBox.Location = new System.Drawing.Point(10, 211);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(943, 371);
+            this.ExtensionsBox.Size = new System.Drawing.Size(964, 348);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -1173,7 +1173,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(980, 684);
+            this.tabPage4.Size = new System.Drawing.Size(993, 572);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
@@ -1247,7 +1247,7 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(6, 474);
+            this.textBox1.Location = new System.Drawing.Point(6, 448);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -1263,11 +1263,11 @@
             // 
             // btnCleanup
             // 
-            this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCleanup.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCleanup.Location = new System.Drawing.Point(823, 632);
+            this.btnCleanup.Location = new System.Drawing.Point(850, 616);
             this.btnCleanup.Name = "btnCleanup";
-            this.btnCleanup.Size = new System.Drawing.Size(173, 44);
+            this.btnCleanup.Size = new System.Drawing.Size(159, 43);
             this.btnCleanup.TabIndex = 37;
             this.btnCleanup.Text = "Cleanup";
             this.btnCleanup.UseVisualStyleBackColor = true;
@@ -1278,7 +1278,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(1008, 683);
+            this.ClientSize = new System.Drawing.Size(1021, 662);
             this.Controls.Add(this.btnCleanup);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.CleanupLogsLBox);

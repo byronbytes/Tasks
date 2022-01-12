@@ -5,7 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Tasks 256x256 Logo.ico</ApplicationIcon>
-    <Version>3.0.1</Version>
+    <Version>4.0.0</Version>
     <Copyright>LiteTools 2021</Copyright>
     <Description>Tasks is an application that improves computer performance. Tasks's main features include an advanced cleanup tool, a startup manager, and a detailed Task Manager. These tools help improve computer performance, system boot times, and ensures a safer experience while using your computer.</Description>
     <Company>LiteTools</Company>
