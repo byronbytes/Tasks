@@ -39,6 +39,7 @@ namespace Tasks
             {
                 panel1.BackColor = Color.FromArgb(20, 20, 20);
                 panel2.BackColor = Color.FromArgb(20, 20, 20);
+                panel3.BackColor = Color.FromArgb(20, 20, 20);
 
                 label1.ForeColor = Color.White;
 
@@ -52,6 +53,7 @@ namespace Tasks
             {
                 panel1.BackColor = Color.FromArgb(250, 250, 250);
                 panel2.BackColor = Color.FromArgb(250, 250, 250);
+                panel3.BackColor = Color.FromArgb(250, 250, 250);
                 pictureBox1.Image = Properties.Resources.Cleanup;
                 pictureBox2.Image = Properties.Resources.Startup_Programs_Black;
                 pictureBox3.Image = Properties.Resources.Task_Manager;

@@ -99,7 +99,6 @@
             this.ExtName = new System.Windows.Forms.ColumnHeader();
             this.ExtSize = new System.Windows.Forms.ColumnHeader();
             this.ExtPath = new System.Windows.Forms.ColumnHeader();
-            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -111,6 +110,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -148,7 +148,7 @@
             "Cleanup Logs:"});
             this.CleanupLogsLBox.Location = new System.Drawing.Point(8, 657);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
-            this.CleanupLogsLBox.Size = new System.Drawing.Size(40, 2);
+            this.CleanupLogsLBox.Size = new System.Drawing.Size(88, 2);
             this.CleanupLogsLBox.TabIndex = 1;
             this.CleanupLogsLBox.Visible = false;
             // 
@@ -181,7 +181,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1001, 605);
+            this.tabControl1.Size = new System.Drawing.Size(1057, 614);
             this.tabControl1.TabIndex = 36;
             // 
             // tabPage5
@@ -198,7 +198,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(993, 572);
+            this.tabPage5.Size = new System.Drawing.Size(1049, 581);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Quick Clean";
             // 
@@ -322,7 +322,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(993, 572);
+            this.tabPage1.Size = new System.Drawing.Size(1049, 581);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cleanup";
             // 
@@ -334,7 +334,7 @@
             this.tabControl2.Location = new System.Drawing.Point(6, 6);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(968, 550);
+            this.tabControl2.Size = new System.Drawing.Size(1037, 569);
             this.tabControl2.TabIndex = 37;
             // 
             // tabPage6
@@ -365,7 +365,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 30);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(960, 516);
+            this.tabPage6.Size = new System.Drawing.Size(1029, 535);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "System";
             // 
@@ -694,7 +694,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 30);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(960, 516);
+            this.tabPage7.Size = new System.Drawing.Size(1029, 535);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Applications";
             // 
@@ -1054,7 +1054,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(993, 572);
+            this.tabPage3.Size = new System.Drawing.Size(1049, 581);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
             // 
@@ -1108,7 +1108,7 @@
             this.ExtensionsBox.HideSelection = false;
             this.ExtensionsBox.Location = new System.Drawing.Point(10, 211);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(964, 348);
+            this.ExtensionsBox.Size = new System.Drawing.Size(1033, 364);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -1128,19 +1128,6 @@
             // 
             this.ExtPath.Text = "Path";
             this.ExtPath.Width = 650;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(10, 92);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(943, 17);
-            this.label16.TabIndex = 41;
-            this.label16.Text = "_________________________________________________________________________________" +
-    "________________________________________________________________________________" +
-    "__________________________";
             // 
             // label15
             // 
@@ -1173,7 +1160,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(993, 572);
+            this.tabPage4.Size = new System.Drawing.Size(1049, 581);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
@@ -1251,7 +1238,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(968, 108);
+            this.textBox1.Size = new System.Drawing.Size(1037, 108);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Scripts Used:\r\nhttps://github.com/Sycnex/Windows10Debloater\r\nhttps://github.com/S" +
     "hadowWhisperer/Remove-Edge-Chromium\r\n\r\nCredit respectively goes to the original " +
@@ -1265,7 +1252,7 @@
             // 
             this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCleanup.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCleanup.Location = new System.Drawing.Point(850, 616);
+            this.btnCleanup.Location = new System.Drawing.Point(902, 625);
             this.btnCleanup.Name = "btnCleanup";
             this.btnCleanup.Size = new System.Drawing.Size(159, 43);
             this.btnCleanup.TabIndex = 37;
@@ -1273,12 +1260,25 @@
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label16.Location = new System.Drawing.Point(10, 92);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(1008, 17);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "_________________________________________________________________________________" +
+    "________________________________________________________________________________" +
+    "_______________________________________";
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(1021, 662);
+            this.ClientSize = new System.Drawing.Size(1069, 671);
             this.Controls.Add(this.btnCleanup);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.CleanupLogsLBox);
@@ -1341,7 +1341,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnCleanup;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label9;
@@ -1406,5 +1405,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label16;
     }
 }
