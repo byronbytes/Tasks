@@ -62,7 +62,7 @@ namespace Tasks
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-11, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(152, 713);
+            this.panel1.Size = new System.Drawing.Size(152, 722);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox4
@@ -124,7 +124,7 @@ namespace Tasks
             // 
             this.panel2.Location = new System.Drawing.Point(138, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1066, 713);
+            this.panel2.Size = new System.Drawing.Size(1066, 728);
             this.panel2.TabIndex = 1;
             // 
             // timer1
@@ -139,9 +139,9 @@ namespace Tasks
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(-8, 710);
+            this.panel3.Location = new System.Drawing.Point(-8, 719);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1209, 71);
+            this.panel3.Size = new System.Drawing.Size(1209, 62);
             this.panel3.TabIndex = 2;
             // 
             // label2

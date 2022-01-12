@@ -77,7 +77,7 @@ namespace Tasks
             this.StartupProcesses.HideSelection = false;
             this.StartupProcesses.Location = new System.Drawing.Point(6, 3);
             this.StartupProcesses.Name = "StartupProcesses";
-            this.StartupProcesses.Size = new System.Drawing.Size(1025, 565);
+            this.StartupProcesses.Size = new System.Drawing.Size(1015, 565);
             this.StartupProcesses.TabIndex = 0;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
@@ -128,7 +128,7 @@ namespace Tasks
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(768, 634);
+            this.button1.Location = new System.Drawing.Point(752, 634);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 37);
             this.button1.TabIndex = 1;
@@ -141,7 +141,7 @@ namespace Tasks
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button2.Location = new System.Drawing.Point(920, 634);
+            this.button2.Location = new System.Drawing.Point(910, 634);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 37);
             this.button2.TabIndex = 2;
@@ -210,7 +210,7 @@ namespace Tasks
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1045, 605);
+            this.tabControl1.Size = new System.Drawing.Size(1035, 605);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -220,7 +220,7 @@ namespace Tasks
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1037, 571);
+            this.tabPage1.Size = new System.Drawing.Size(1027, 571);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Startup Programs";
             // 
@@ -231,7 +231,7 @@ namespace Tasks
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1037, 571);
+            this.tabPage2.Size = new System.Drawing.Size(1027, 571);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Startup Services";
             // 
@@ -250,7 +250,7 @@ namespace Tasks
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(6, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1025, 565);
+            this.listView1.Size = new System.Drawing.Size(1015, 565);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -275,7 +275,7 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(1069, 671);
+            this.ClientSize = new System.Drawing.Size(1050, 674);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtTargetPath);
