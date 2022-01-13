@@ -11,16 +11,17 @@ namespace Tasks.Core
 {
     class Cleanup
     {
+       // Coming Soon.
         public static void WriteCleanupSummary()
         {
-            frmCleanup Cleanup = new frmCleanup();
+            frmCleanup CleanupForm = new frmCleanup();
 
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
             if (Properties.Settings.Default.EnableCleanupLogs == true)
             {
                 try
                 {
-                    File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", Cleanup.CleanupLogsLBox.Items.Cast<string>().ToArray());
+                    File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
                 }
                 catch
                 {
@@ -38,6 +39,38 @@ namespace Tasks.Core
             }
         }
 
+        public static bool DeleteAllFiles(DirectoryInfo directoryInfo)
+        {
+            frmCleanup CleanupForm = new frmCleanup();
+            foreach (var file in directoryInfo.GetFiles())
+            {
+                try
+                {
+                    file.Delete();
+                    CleanupForm.CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
+                }
+                catch (Exception ex)
+                {
+                    CleanupForm.CleanupLogsLBox.Items.Add("Exception: " + ex.Message);
+                }
+
+            }
+            foreach (var dir in directoryInfo.GetDirectories())
+            {
+                try
+                {
+                    dir.Delete(true);
+                    CleanupForm.CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
+                }
+                catch (Exception ex)
+                {
+                    CleanupForm.CleanupLogsLBox.Items.Add("Exception: " + ex.Message);
+                }
+
+            }
+
+            return true;
+        }
 
 
         [DllImport("Shell32.dll")]
