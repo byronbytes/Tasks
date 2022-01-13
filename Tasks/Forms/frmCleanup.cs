@@ -137,31 +137,6 @@ namespace Tasks
             return true;
         }
 
-        public void WriteCleanupSummary()
-        {
-            int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
-            if (Properties.Settings.Default.EnableCleanupLogs == true)
-            {
-                try
-                {
-                    File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupLogsLBox.Items.Cast<string>().ToArray());
-                }
-                catch
-                {
-                    MessageBox.Show("There was an error logging your cleanup session.");
-                }
-            }
-
-            if (Properties.Settings.Default.CleanupMessageBox == true)
-            {
-                MessageBox.Show("Cleanup has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
-            }
-            else
-            {
-
-            }
-
-        }
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -691,23 +666,7 @@ namespace Tasks
 
             }
 
-            if (cbSpotifyCache.Checked)
-            {
-
-                try
-                {
-
-                }
-                catch
-                {
-
-                }
-
-            }
-
-
-
-            WriteCleanupSummary();
+            Core.Cleanup.WriteCleanupSummary();
 
             // END OF CLEANUP.
 

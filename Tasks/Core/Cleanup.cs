@@ -11,11 +11,6 @@ namespace Tasks.Core
 {
     class Cleanup
     {
-        public static void Delete()
-        {
-
-        }
-
         public static void WriteCleanupSummary()
         {
             frmCleanup Cleanup = new frmCleanup();
@@ -41,8 +36,9 @@ namespace Tasks.Core
             {
 
             }
-
         }
+
+
 
         [DllImport("Shell32.dll")]
        public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
