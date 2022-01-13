@@ -1319,7 +1319,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListBox CleanupLogsLBox;
         private Ookii.Dialogs.WinForms.TaskDialog taskDialog1;
         private Ookii.Dialogs.WinForms.TaskDialogButton taskDialogButton1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1407,5 +1406,6 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label16;
+        internal System.Windows.Forms.ListBox CleanupLogsLBox;
     }
 }

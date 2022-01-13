@@ -24,15 +24,6 @@ namespace Tasks
     {
         public frmCleanup() { InitializeComponent(); CheckTheme(); }
 
-        [DllImport("Shell32.dll")]
-        static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
-        enum RecycleFlag : int
-        {
-            SHERB_NOCONFIRMATION = 0x00000001,
-            SHERB_NOPROGRESSUI = 0x00000001,
-            SHERB_NOSOUND = 0x00000004
-        }
-
         public void CheckTheme()
         {
             if (Properties.Settings.Default.Theme == "dark")
@@ -195,14 +186,12 @@ namespace Tasks
             if (cbSystemRecycleBin.Checked)
                 try
                 {
-                    // Silently deletes the recycle bin.
-                    SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlag.SHERB_NOSOUND | RecycleFlag.SHERB_NOCONFIRMATION);
+                    Core.Cleanup.SHEmptyRecycleBin(IntPtr.Zero, null, Core.Cleanup.RecycleFlag.SHERB_NOSOUND | Core.Cleanup.RecycleFlag.SHERB_NOCONFIRMATION);
                     CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
                 }
                 catch (Exception ex)
                 {
                     CleanupLogsLBox.Items.Add("Error deleting the Recycle Bin. " + ex);
-
                 }
 
 
@@ -521,7 +510,7 @@ namespace Tasks
             {
                 try
                 {
-                    Cleanup_Utils.CleanRecentFiles.ClearAll();
+                    Core.CleanRecentFiles.ClearAll();
                     CleanupLogsLBox.Items.Add("Recent Files Cleared.");
                 }
                 catch (Exception ex)
