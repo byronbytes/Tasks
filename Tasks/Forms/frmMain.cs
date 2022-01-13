@@ -18,7 +18,10 @@ namespace Tasks
 {
     public partial class frmMain : Form
     {
-        public frmMain() { Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme(); }
+        public frmMain() {
+            
+            Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme();
+        }
 
         private Form _currentForm;
 
@@ -63,9 +66,7 @@ namespace Tasks
             }
         }
 
-        private void frmMain_Load(object sender, EventArgs e) { CheckTheme(); this.EnableBlur(); panel2.BackColor = Color.Azure;
-            TransparencyKey = Color.Azure;
-        }
+        private void frmMain_Load(object sender, EventArgs e) { CheckTheme(); }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ShowForm(new frmCleanup());
@@ -88,12 +89,6 @@ namespace Tasks
         {
             CheckTheme();
         }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            //  ShowForm(new frmRegistry());
-        }
-
       
     }
 

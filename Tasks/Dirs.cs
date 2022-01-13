@@ -19,8 +19,8 @@ namespace Tasks
             // Directories that point to the extensions folder:
         public static string firefoxExtDir;
         public static string chromeExtDir;
-        public static string edgeExtDir;  
-            // Tasks Directories:
+        public static string edgeExtDir;
+        // Tasks Directories:
         public static string tasksDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Roaming\\Tasks\\";
         public static string tasksCleanup = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Roaming\\Tasks\\Cleanup Summary\\";
     }

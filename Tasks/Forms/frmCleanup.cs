@@ -521,7 +521,7 @@ namespace Tasks
             {
                 try
                 {
-                    CleanRecentFiles.CleanRecents.ClearAll();
+                    Cleanup_Utils.CleanRecentFiles.ClearAll();
                     CleanupLogsLBox.Items.Add("Recent Files Cleared.");
                 }
                 catch (Exception ex)
