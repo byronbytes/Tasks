@@ -873,8 +873,7 @@ namespace Tasks
 
         private void button7_Click(object sender, EventArgs e)
         {
-            try { Process.Start("powershell", "-ExecutionPolicy Bypass -File Scripts/Debloater/DisableCortana.ps1"); }
-            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
+            // Changing the cortana method soon.
         }
 
         private void button6_Click(object sender, EventArgs e)
