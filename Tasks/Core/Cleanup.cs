@@ -38,41 +38,7 @@ namespace Tasks.Core
 
             }
         }
-
-        public static bool DeleteAllFiles(DirectoryInfo directoryInfo)
-        {
-            frmCleanup CleanupForm = new frmCleanup();
-            foreach (var file in directoryInfo.GetFiles())
-            {
-                try
-                {
-                    file.Delete();
-                    CleanupForm.CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
-                }
-                catch (Exception ex)
-                {
-                    CleanupForm.CleanupLogsLBox.Items.Add("Exception: " + ex.Message);
-                }
-
-            }
-            foreach (var dir in directoryInfo.GetDirectories())
-            {
-                try
-                {
-                    dir.Delete(true);
-                    CleanupForm.CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
-                }
-                catch (Exception ex)
-                {
-                    CleanupForm.CleanupLogsLBox.Items.Add("Exception: " + ex.Message);
-                }
-
-            }
-
-            return true;
-        }
-
-
+        
         [DllImport("Shell32.dll")]
        public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
        public enum RecycleFlag : int
