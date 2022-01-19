@@ -8,6 +8,18 @@ namespace Tasks.Core
 {
     class SystemInfo
     {
+        public static string bit = "undefined";
+        // Gets the computer's bit (64 or 32)
+        public static void ComputerBit()
+        {
+            if(Environment.Is64BitOperatingSystem)
+            {
+                bit = "64-bit";
+            }else
+            {
+                bit = "32-bit";
+            }
+        }
 
 
     }
