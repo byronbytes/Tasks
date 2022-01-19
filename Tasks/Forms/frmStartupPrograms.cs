@@ -85,7 +85,7 @@ namespace Tasks {
 
         private void moreInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Currently being worked on.");
+         // feature being removed (possibly)
         }
 
         public void CheckTheme()
@@ -159,7 +159,7 @@ namespace Tasks {
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred. " + ex.Message);
+                MessageBox.Show("Unable to open the startup folder.");
             }
         }
     }

@@ -37,7 +37,7 @@ namespace Tasks
         public static string WindowsTemp = new DirectoryInfo("C:\\Windows\\Temp");
 
 
-        public static string TasksDirectory = "";
+        public static string TasksDirectory = ""; // Will be moving the directory to a more user-friendly place.
         public static string TasksLogsDirectory = "";
         public static string TasksLogSuccessful = "Tasks has created the directory successfully.";
 
@@ -46,18 +46,23 @@ namespace Tasks
         {
             if(Directory.Exists(tasksDir))
             {
-                Debug.Print("No need to create a new directory since it already exists.")
+                Debug.Print("No need to create a new directory since it already exists.");
             }
             else
             {
-             Directory.CreateDirectory(tasksDir)
+             Directory.CreateDirectory(tasksDir);
 
             }
-    
-
-
         }
 
+        public static void DeleteDirectories()
+        {
+            if(Directory.Exists(tasksDir))
+            {
+                Directory.Delete(tasksDir);
+                MessageBox.Show("Deleted Tasks directory.");
+            }
+        }
 
 
     }

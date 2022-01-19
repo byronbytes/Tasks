@@ -16,7 +16,7 @@ namespace Tasks.Core
             if(Environment.Is64BitOperatingSystem)
             {
                 bit = "64-bit";
-            }else
+            } else
             {
                 bit = "32-bit";
             }

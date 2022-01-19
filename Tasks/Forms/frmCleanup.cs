@@ -140,7 +140,7 @@ namespace Tasks
 
         private void button8_Click(object sender, EventArgs e)
         {
-            // List local directories.
+            // These are going to be updated to reflect the Directories class, will need moving.
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp\\");
@@ -438,7 +438,6 @@ namespace Tasks
                             {
                                 CleanupLogsLBox.Items.Add("Error while trying to delete Firefox History." + ex);
                             }
-
                         }
                     }
 
@@ -682,7 +681,7 @@ namespace Tasks
 
         private void Tabs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab.Text == "Browser Extensions") // i dont want it to show up in the extensions thing because i'll use a diff button to make the code less messy
+            if (tabControl1.SelectedTab.Text == "Browser Extensions")
             {
                 btnCleanup.Visible = false;
 
@@ -801,7 +800,7 @@ namespace Tasks
         private void button3_Click(object sender, EventArgs e)
         {
 
-            if (ExtensionsBox.SelectedItems.Count >= 0) //Check if the user selected extensions for deletion.
+            if (ExtensionsBox.SelectedItems.Count >= 0) 
             {
                 if (comboBox1.Text == "Google Chrome")
                 {
@@ -863,9 +862,7 @@ namespace Tasks
                         }
                     }
                 }
-
             }
-
             else
             {
                 MessageBox.Show("Please select an extension to remove.");
@@ -1033,7 +1030,6 @@ namespace Tasks
             }
             catch
             {
-                // Needs a more advanced catch method.
                 return size;
             }
         }
