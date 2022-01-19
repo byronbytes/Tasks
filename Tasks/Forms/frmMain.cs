@@ -20,7 +20,7 @@ namespace Tasks
     {
         public frmMain() {
             
-            Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme();
+            Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme() label2.Text = Core.bit;
         }
 
         private Form _currentForm;
