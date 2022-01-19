@@ -9,6 +9,7 @@ namespace Tasks.Core
     class SystemInfo
     {
         public static string bit = "undefined";
+        
         // Gets the computer's bit (64 or 32)
         public static void ComputerBit()
         {

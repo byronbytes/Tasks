@@ -92,6 +92,7 @@ namespace Tasks {
         {
             if (Properties.Settings.Default.Theme == "dark")
             {
+                
             }
 
             if (Properties.Settings.Default.Theme == "light")
