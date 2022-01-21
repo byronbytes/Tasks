@@ -395,7 +395,7 @@ namespace Tasks
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 20);
             this.label3.TabIndex = 34;
-            this.label3.Text = "(c) 2021 LiteTools";
+            this.label3.Text = "(c) 2022 LiteTools";
             // 
             // label2
             // 
@@ -406,7 +406,7 @@ namespace Tasks
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Version: 3.1.0";
+            this.label2.Text = "Version: 3.2.0";
             // 
             // pictureBox1
             // 
