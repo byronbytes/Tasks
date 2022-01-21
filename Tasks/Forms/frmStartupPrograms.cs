@@ -85,7 +85,7 @@ namespace Tasks {
 
         private void moreInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         // feature being removed (possibly)
+         // feature being removed
         }
 
         public void CheckTheme()

@@ -259,10 +259,18 @@ namespace Tasks
 
             if (cbChromeCookies.Checked)
             {
+                try 
+                {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
                 if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Chrome Cookies Deleted.");
+                }
+                catch 
+                {
+                CleanupLogsLBox.Items.Add("Unable to delete Chrome Cookies.");
+                }
+               
             }
 
 
