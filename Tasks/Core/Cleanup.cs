@@ -11,7 +11,6 @@ namespace Tasks.Core
 {
     class Cleanup
     {
-       // Coming Soon.
         public static void WriteCleanupSummary()
         {
             frmCleanup CleanupForm = new frmCleanup();
@@ -50,8 +49,6 @@ namespace Tasks.Core
 
 
     }
-
-  
 
     public class CleanRecentFiles
     {

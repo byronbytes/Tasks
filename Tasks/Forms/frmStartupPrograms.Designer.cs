@@ -36,9 +36,6 @@ namespace Tasks
             this.ProcessDescription = new System.Windows.Forms.ColumnHeader();
             this.ProcessPath = new System.Windows.Forms.ColumnHeader();
             this.ProcessUser = new System.Windows.Forms.ColumnHeader();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moreInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -55,7 +52,6 @@ namespace Tasks
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.contextMenuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -70,7 +66,6 @@ namespace Tasks
             this.ProcessDescription,
             this.ProcessPath,
             this.ProcessUser});
-            this.StartupProcesses.ContextMenuStrip = this.contextMenuStrip1;
             this.StartupProcesses.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.StartupProcesses.ForeColor = System.Drawing.Color.White;
             this.StartupProcesses.FullRowSelect = true;
@@ -102,27 +97,6 @@ namespace Tasks
             // 
             this.ProcessUser.Text = "User";
             this.ProcessUser.Width = 130;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.removeToolStripMenuItem,
-            this.moreInfoToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(127, 48);
-            // 
-            // removeToolStripMenuItem
-            // 
-            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.removeToolStripMenuItem.Text = "Remove";
-            // 
-            // moreInfoToolStripMenuItem
-            // 
-            this.moreInfoToolStripMenuItem.Name = "moreInfoToolStripMenuItem";
-            this.moreInfoToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.moreInfoToolStripMenuItem.Text = "More Info";
-            this.moreInfoToolStripMenuItem.Click += new System.EventHandler(this.moreInfoToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -243,7 +217,6 @@ namespace Tasks
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.FullRowSelect = true;
@@ -289,7 +262,6 @@ namespace Tasks
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Startup Programs";
             this.Load += new System.EventHandler(this.frmStartupPrograms_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -311,9 +283,6 @@ namespace Tasks
         private System.Windows.Forms.Label txtTargetPath;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem moreInfoToolStripMenuItem;
         private System.Windows.Forms.ListView StartupProcesses;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
