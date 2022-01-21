@@ -5,8 +5,8 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Tasks 256x256 Logo.ico</ApplicationIcon>
-    <Version>4.0.0</Version>
-    <Copyright>LiteTools 2021</Copyright>
+    <Version>3.2.0</Version>
+    <Copyright>LiteTools 2022</Copyright>
     <Description>Tasks is an application that improves computer performance. Tasks's main features include an advanced cleanup tool, a startup manager, and a detailed Task Manager. These tools help improve computer performance, system boot times, and ensures a safer experience while using your computer.</Description>
     <Company>LiteTools</Company>
     <Authors>Matty</Authors>
@@ -36,6 +36,7 @@
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
     <PackageReference Include="System.Management" Version="6.0.0" />
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
+    <PackageReference Include="XylonV2" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>

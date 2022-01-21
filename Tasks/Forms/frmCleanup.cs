@@ -78,6 +78,7 @@ namespace Tasks
                 label3.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
                 label6.ForeColor = Color.Black;
+                label7.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
                 label11.ForeColor = Color.Black;
                 label14.ForeColor = Color.DarkRed;
@@ -93,6 +94,7 @@ namespace Tasks
                 groupBox1.ForeColor = Color.Black;
                 groupBox2.ForeColor = Color.Black;
                 groupBox3.ForeColor = Color.Black;
+                groupBox4.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.WhiteSmoke;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;
@@ -891,7 +893,15 @@ namespace Tasks
 
         private void button7_Click(object sender, EventArgs e)
         {
-            // Changing the cortana method soon.
+            try
+            {
+                XylonV2.Engine.Windows.Functions.SetAllowCortana(XylonV2.Engine.Windows.CortanaState.Disabled);
+            }
+            catch
+            {
+                MessageBox.Show("An error has occurred. You will need to run Tasks as administrator for this to work.");
+            }
+          
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -1081,6 +1091,17 @@ namespace Tasks
 
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                XylonV2.Engine.Windows.Functions.SetAllowCortana(XylonV2.Engine.Windows.CortanaState.Enabled);
+            }
+            catch
+            {
+                MessageBox.Show("An error has occurred. You will need to run Tasks as administrator for this to work.");
+            }
+        }
     }
 
 }
