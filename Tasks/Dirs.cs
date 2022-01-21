@@ -39,8 +39,6 @@ namespace Tasks
 
         public static string TasksDirectory = ""; // Will be moving the directory to a more user-friendly place.
         public static string TasksLogsDirectory = "";
-        public static string TasksLogSuccessful = "Tasks has created the directory successfully.";
-
 
         public static void CreateDirectories()
         {

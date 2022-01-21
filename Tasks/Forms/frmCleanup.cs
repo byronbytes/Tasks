@@ -176,7 +176,6 @@ namespace Tasks
                 {
                     if (DeleteAllFiles(windowstemp)) CleanupLogsLBox.Items.Add("System Temp Folder Deleted.");
                     if (DeleteAllFiles(usertemp)) CleanupLogsLBox.Items.Add("User Temp Folder Deleted.");
-
                 }
                 catch (Exception ex)
                 {
@@ -554,10 +553,19 @@ namespace Tasks
 
             if (cbEdgeSessions.Checked)
             {
+                try 
+                 {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Sessions\\");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Session Storage\\");
                 var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extension State\\");
                 if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Edge Session Deleted.");
+                  }
+
+                catch 
+                {
+                CleanupLogsLBox.Items.Add("Unable to delete Edge Sessions.")
+                }
+             
             }
 
             if (cbSystemDirectXCache.Checked)
@@ -934,7 +942,6 @@ namespace Tasks
                 cbEdgeSessions.Enabled = false;
             }
 
-            // Extention Finder & More
             if (Directory.Exists(Dirs.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
@@ -1072,7 +1079,3 @@ namespace Tasks
     }
 
 }
-
-
-
-
