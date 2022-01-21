@@ -67,10 +67,6 @@
             this.cbIECache = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbSpotifyCookies = new System.Windows.Forms.CheckBox();
-            this.cbSpotifyCache = new System.Windows.Forms.CheckBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.cbChromeSavedPasswords = new System.Windows.Forms.CheckBox();
             this.cbEdgeSessions = new System.Windows.Forms.CheckBox();
             this.cbEdgeSearchHistory = new System.Windows.Forms.CheckBox();
@@ -123,7 +119,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -666,10 +661,6 @@
             this.tabPage7.Controls.Add(this.cbIECache);
             this.tabPage7.Controls.Add(this.pictureBox3);
             this.tabPage7.Controls.Add(this.label8);
-            this.tabPage7.Controls.Add(this.cbSpotifyCookies);
-            this.tabPage7.Controls.Add(this.cbSpotifyCache);
-            this.tabPage7.Controls.Add(this.pictureBox2);
-            this.tabPage7.Controls.Add(this.label7);
             this.tabPage7.Controls.Add(this.cbChromeSavedPasswords);
             this.tabPage7.Controls.Add(this.cbEdgeSessions);
             this.tabPage7.Controls.Add(this.cbEdgeSearchHistory);
@@ -732,55 +723,6 @@
             this.label8.Size = new System.Drawing.Size(154, 25);
             this.label8.TabIndex = 78;
             this.label8.Text = "Internet Explorer";
-            // 
-            // cbSpotifyCookies
-            // 
-            this.cbSpotifyCookies.AutoSize = true;
-            this.cbSpotifyCookies.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSpotifyCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbSpotifyCookies.ForeColor = System.Drawing.Color.White;
-            this.cbSpotifyCookies.Location = new System.Drawing.Point(320, 291);
-            this.cbSpotifyCookies.Name = "cbSpotifyCookies";
-            this.cbSpotifyCookies.Size = new System.Drawing.Size(73, 21);
-            this.cbSpotifyCookies.TabIndex = 77;
-            this.cbSpotifyCookies.Text = "Cookies";
-            this.cbSpotifyCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbSpotifyCookies.UseVisualStyleBackColor = true;
-            // 
-            // cbSpotifyCache
-            // 
-            this.cbSpotifyCache.AutoSize = true;
-            this.cbSpotifyCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSpotifyCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbSpotifyCache.ForeColor = System.Drawing.Color.White;
-            this.cbSpotifyCache.Location = new System.Drawing.Point(320, 264);
-            this.cbSpotifyCache.Name = "cbSpotifyCache";
-            this.cbSpotifyCache.Size = new System.Drawing.Size(62, 21);
-            this.cbSpotifyCache.TabIndex = 76;
-            this.cbSpotifyCache.Text = "Cache";
-            this.cbSpotifyCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbSpotifyCache.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Tasks.Properties.Resources.Spotify;
-            this.pictureBox2.Location = new System.Drawing.Point(314, 229);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 75;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(353, 229);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 25);
-            this.label7.TabIndex = 74;
-            this.label7.Text = "Spotify";
             // 
             // cbChromeSavedPasswords
             // 
@@ -1018,7 +960,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(619, 233);
+            this.label6.Location = new System.Drawing.Point(314, 233);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(168, 25);
             this.label6.TabIndex = 59;
@@ -1030,7 +972,7 @@
             this.cbDiscord.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDiscord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbDiscord.ForeColor = System.Drawing.Color.White;
-            this.cbDiscord.Location = new System.Drawing.Point(624, 272);
+            this.cbDiscord.Location = new System.Drawing.Point(319, 272);
             this.cbDiscord.Name = "cbDiscord";
             this.cbDiscord.Size = new System.Drawing.Size(72, 21);
             this.cbDiscord.TabIndex = 60;
@@ -1305,7 +1247,6 @@
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1375,10 +1316,6 @@
         private System.Windows.Forms.CheckBox cbIECache;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox cbSpotifyCookies;
-        private System.Windows.Forms.CheckBox cbSpotifyCache;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox cbChromeSavedPasswords;
         private System.Windows.Forms.CheckBox cbEdgeSessions;
         private System.Windows.Forms.CheckBox cbEdgeSearchHistory;

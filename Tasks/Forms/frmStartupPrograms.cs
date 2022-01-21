@@ -85,7 +85,7 @@ namespace Tasks {
 
         private void moreInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         // feature being removed
+            // feature being removed
         }
 
         public void CheckTheme()
@@ -157,7 +157,7 @@ namespace Tasks {
             {
                 Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Unable to open the startup folder.");
             }

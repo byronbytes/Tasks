@@ -128,7 +128,7 @@ namespace Tasks
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(753, 679);
+            this.button1.Location = new System.Drawing.Point(756, 679);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 37);
             this.button1.TabIndex = 1;
@@ -171,7 +171,7 @@ namespace Tasks
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(388, 691);
+            this.txtFileName.Location = new System.Drawing.Point(513, 706);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(119, 15);
             this.txtFileName.TabIndex = 4;
@@ -193,7 +193,7 @@ namespace Tasks
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(185, 679);
+            this.button4.Location = new System.Drawing.Point(193, 679);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(161, 37);
             this.button4.TabIndex = 6;

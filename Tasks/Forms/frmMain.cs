@@ -20,7 +20,7 @@ namespace Tasks
     {
         public frmMain() {
             
-            Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme();
+            Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme(); Core.SystemInfo.ComputerBit();
         }
 
         private Form _currentForm;
@@ -45,6 +45,7 @@ namespace Tasks
                 panel3.BackColor = Color.FromArgb(20, 20, 20);
 
                 label1.ForeColor = Color.White;
+                label2.ForeColor = Color.White;
 
                 pictureBox1.Image = Properties.Resources.CleanupWhite;
                 pictureBox2.Image = Properties.Resources.StartupProgramsWhite;
@@ -62,7 +63,9 @@ namespace Tasks
                 pictureBox3.Image = Properties.Resources.Task_Manager;
                 pictureBox4.Image = Properties.Resources.Settings;
 
+                
                 label1.ForeColor = Color.Black;
+                label2.ForeColor = Color.Black;
             }
         }
 

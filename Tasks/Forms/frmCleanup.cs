@@ -62,8 +62,6 @@ namespace Tasks
                 cbSystemRecycleBin.ForeColor = Color.Black;
                 cbSystemTempFolders.ForeColor = Color.Black;
                 cbWindowsLogFiles.ForeColor = Color.Black;
-                cbSpotifyCache.ForeColor = Color.Black;
-                cbSpotifyCookies.ForeColor = Color.Black;
                 cbIECache.ForeColor = Color.Black;
                 
 
@@ -88,7 +86,6 @@ namespace Tasks
                 label17.ForeColor = Color.DarkRed;
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
-                label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;

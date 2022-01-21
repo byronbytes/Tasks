@@ -58,6 +58,8 @@ namespace Tasks
                 panel1.BackColor = Color.WhiteSmoke;
                 textBox1.BackColor = Color.WhiteSmoke;
                 textBox1.ForeColor = Color.Black;
+                label1.ForeColor = Color.Black;
+                label2.ForeColor = Color.Black;
             }
         }
     }

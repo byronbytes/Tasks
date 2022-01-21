@@ -68,12 +68,12 @@ namespace Tasks
         {
             if (comboBox1.SelectedText == "English")
             {
-                // Do nothing right now.
+                //Switch back to English.
             }
 
             if (comboBox1.SelectedText == "Spanish")
             {
-                // Do nothing right now.
+                // Hey, we're looking for translators, wanna help? Create an issue with the tag [TRANSLATION] and we can discuss further.
             }
 
 
@@ -167,7 +167,7 @@ namespace Tasks
             }
             catch
             {
-                MessageBox.Show("There was an error trying to delete.");
+                MessageBox.Show("There was an error trying to delete the file.");
             }
         }
 
@@ -184,7 +184,7 @@ namespace Tasks
             }
             catch
             {
-                MessageBox.Show("There was an error trying to delete.");
+                MessageBox.Show("There was an error trying to delete the files.");
             }
 
         }

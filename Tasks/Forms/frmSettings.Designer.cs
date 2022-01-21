@@ -81,7 +81,7 @@ namespace Tasks
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1006, 682);
+            this.tabControl1.Size = new System.Drawing.Size(1053, 716);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -106,7 +106,7 @@ namespace Tasks
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(998, 648);
+            this.tabPage1.Size = new System.Drawing.Size(1045, 682);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Settings";
             // 
@@ -187,9 +187,9 @@ namespace Tasks
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label13.Location = new System.Drawing.Point(20, 285);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 21);
+            this.label13.Size = new System.Drawing.Size(305, 21);
             this.label13.TabIndex = 8;
-            this.label13.Text = "Language";
+            this.label13.Text = "Language (We are looking for Translators!)";
             // 
             // label12
             // 
@@ -301,7 +301,7 @@ namespace Tasks
             this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(998, 648);
+            this.tabPage2.Size = new System.Drawing.Size(1045, 682);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "About";
             // 
@@ -312,7 +312,7 @@ namespace Tasks
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel2.Location = new System.Drawing.Point(290, 116);
+            this.linkLabel2.Location = new System.Drawing.Point(339, 116);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(99, 21);
             this.linkLabel2.TabIndex = 41;
@@ -328,7 +328,7 @@ namespace Tasks
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel1.Location = new System.Drawing.Point(144, 116);
+            this.linkLabel1.Location = new System.Drawing.Point(152, 116);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(117, 21);
             this.linkLabel1.TabIndex = 39;
@@ -441,7 +441,7 @@ namespace Tasks
             this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(998, 648);
+            this.tabPage4.Size = new System.Drawing.Size(1045, 682);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tasks Files";
             // 
@@ -504,8 +504,9 @@ namespace Tasks
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(1008, 694);
+            this.ClientSize = new System.Drawing.Size(1066, 728);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSettings";
             this.Text = "Settings";
