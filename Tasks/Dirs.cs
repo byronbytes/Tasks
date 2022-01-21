@@ -3,9 +3,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Tasks
 {
@@ -33,10 +36,9 @@ namespace Tasks
         public static string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Local\\";
         public static string UserFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         public static string DownloadsFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\";
-        public static string UserTemp = new DirectoryInfo(Environment.GetFolderPath(Path.GetTempPath()));
-        public static string WindowsTemp = new DirectoryInfo("C:\\Windows\\Temp");
+        public static string WindowsTemp = "C:\\Windows\\Temp";
 
-
+        public static string tasksDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Roaming\\Tasks\\";
         public static string TasksDirectory = ""; // Will be moving the directory to a more user-friendly place.
         public static string TasksLogsDirectory = "";
 

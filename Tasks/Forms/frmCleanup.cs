@@ -244,14 +244,14 @@ namespace Tasks
             {
                 try
                 {
-                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserPro file) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
+                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
                 var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage");
                 var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State");
                 if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
                 }
                 catch
                 {
-                    CleanupLogsLBox.Items.Add("Unable to delete Chrome Sessions.")
+                    CleanupLogsLBox.Items.Add("Unable to delete Chrome Sessions.");
                 }
 
               
@@ -571,7 +571,7 @@ namespace Tasks
 
                 catch 
                 {
-                CleanupLogsLBox.Items.Add("Unable to delete Edge Sessions.")
+                    CleanupLogsLBox.Items.Add("Unable to delete Edge Sessions.");
                 }
              
             }

@@ -20,7 +20,7 @@ namespace Tasks
     {
         public frmMain() {
             
-            Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme() label2.Text = Core.bit;
+            Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme();
         }
 
         private Form _currentForm;
@@ -66,7 +66,7 @@ namespace Tasks
             }
         }
 
-        private void frmMain_Load(object sender, EventArgs e) { CheckTheme(); }
+        private void frmMain_Load(object sender, EventArgs e) { CheckTheme(); label2.Text = Core.SystemInfo.bit; }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ShowForm(new frmCleanup());
