@@ -491,11 +491,11 @@ namespace Tasks
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(16, 15);
+            this.label20.Location = new System.Drawing.Point(16, 14);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(437, 30);
+            this.label20.Size = new System.Drawing.Size(399, 25);
             this.label20.TabIndex = 33;
             this.label20.Text = "Cleanup Summaries for Tasks are listed below.\r\n";
             // 
