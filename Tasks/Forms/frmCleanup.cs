@@ -455,6 +455,7 @@ namespace Tasks
             }
             if (cbSystemDNSCache.Checked)
             {
+                StringBuilder sb = new StringBuilder();
                 try
                 {
                     Process process = new Process();
@@ -465,6 +466,14 @@ namespace Tasks
                     startInfo.RedirectStandardError = true;
                     process.StartInfo = startInfo;
                     process.Start();
+                    
+                     pSpawn.OutputDataReceived += (sender, args) => sb.AppendLine(args.Data);
+                     pSpawn.Start();
+                     pSpawn.BeginOutputReadLine();
+                     pSpawn.WaitForExit();
+                     Console.WriteLine(sb.ToString());
+    
+    
                     CleanupLogsLBox.Items.Add("DNS Cache Cleared.");
                 }
                 catch (Exception ex)
