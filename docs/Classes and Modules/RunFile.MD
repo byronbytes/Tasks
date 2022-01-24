@@ -5,9 +5,11 @@
 RunBat is a class that runs a .bat file from the base directory.
 
 ## Expressions
-The **string** is supposed to input the directory to the bat file. ```csharp RunFile("DirectoryHere"); ```
+The **string** is supposed to input the directory to the bat file. ```csharp 
+RunFile("DirectoryHere"); ```
 
-The **bool** is supposed to input if you want to wait for the file to exit or not. ```csharp RunFile("DirectoryHere", false);```
+The **bool** is supposed to input if you want to wait for the file to exit or not. ```csharp
+RunFile("DirectoryHere", false);```
 
 
 **Full Example:**
