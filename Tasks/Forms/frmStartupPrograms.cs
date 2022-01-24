@@ -71,7 +71,7 @@ namespace Tasks {
                 }
                 catch
                 {
-                    MessageBox.Show("An error has occurred.");
+                    MessageBox.Show("Unable to delete the selected startup process.");
                 }
             }
         }
@@ -126,7 +126,7 @@ namespace Tasks {
                     }
                     catch
                     {
-                        MessageBox.Show("There was an unexpected error.");
+                        MessageBox.Show("There was an error trying to add a new process.");
                     }
 
                 }
