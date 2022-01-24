@@ -13,7 +13,13 @@ The **bool** is supposed to input if you want to wait for the file to exit or no
 
 ```csharp
 if (waitexit == true)
-                {
-                    process.WaitForExit();
-                }
+ {
+   process.WaitForExit();
+ }
+```
+
+**Full Example:**
+
+```csharp
+RunFile("Scripts/BatFiles/byesolitaire.bat", false);
 ```
