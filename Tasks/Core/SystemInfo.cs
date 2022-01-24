@@ -20,6 +20,18 @@ namespace Tasks.Core
             {
                 bit = "32-bit";
             }
+
+        }
+
+
+        public static void WindowsUpdate()
+        {
+
+        }
+
+        public static void OSVersion()
+        {
+
         }
 
 
