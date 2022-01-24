@@ -453,6 +453,7 @@ namespace Tasks
                     CleanupLogsLBox.Items.Add("Error when trying to delete Firefox History. " + ex);
                 }
             }
+
             if (cbSystemDNSCache.Checked)
             {
                 StringBuilder sb = new StringBuilder();
@@ -465,14 +466,7 @@ namespace Tasks
                     startInfo.Arguments = "/c ipconfig /flushdns";
                     startInfo.RedirectStandardError = true;
                     process.StartInfo = startInfo;
-                    process.Start();
-                    
-                     pSpawn.OutputDataReceived += (sender, args) => sb.AppendLine(args.Data);
-                     pSpawn.Start();
-                     pSpawn.BeginOutputReadLine();
-                     pSpawn.WaitForExit();
-                     Console.WriteLine(sb.ToString());
-    
+                    process.OutputDataReceived += (sender, args) => sb.AppendLine(args.Data);
     
                     CleanupLogsLBox.Items.Add("DNS Cache Cleared.");
                 }
@@ -1110,6 +1104,11 @@ namespace Tasks
             {
                 MessageBox.Show("An error has occurred. You will need to run Tasks as administrator for this to work.");
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 
