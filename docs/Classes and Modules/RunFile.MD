@@ -11,7 +11,9 @@ The **bool** is supposed to input if you want to wait for the file to exit or no
 
 **Bool Example:**
 
-`  if (waitexit == true)
+```csharp
+if (waitexit == true)
                 {
                     process.WaitForExit();
-                }`
+                }
+```
