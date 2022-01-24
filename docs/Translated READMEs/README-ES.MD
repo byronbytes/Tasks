@@ -5,5 +5,9 @@
 
 **Tareas** es una aplicación que mejora el rendimiento del ordenador y limpia sus archivos. **Tareas** características principales incluyen una herramienta de limpieza avanzada, un administrador de inicio y un administrador de tareas avanzado. Estas herramientas ayudan a mejorar el rendimiento de la computadora, los tiempos de arranque del sistema y garantizan una experiencia más segura al usar su computadora.
 
-
 ## Intenciones
+Nuestro objetivo es crear una herramienta de limpieza liviana, gratuita, intuitiva y receptiva. Creemos que el rendimiento de la computadora es crucial para todos y no debe incluir ningún muro de pago oculto dentro de la aplicación. Nuestro objetivo es hacer una herramienta que cualquiera pueda usar desde cualquier lugar.
+
+## Lista De Características
+
+- Limpiar
