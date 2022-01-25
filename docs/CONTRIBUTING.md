@@ -1,15 +1,15 @@
 # Contributing Guidelines
 
-As a contributor, we would expect you to have:
+## Prerequisites
+To contribute, you will need the following:
+
 - A decent knowledge of C#
-- Visual Studio IDE
-- A way to debug / build the project.
+- Visual Studio IDE (2019 or 2022 recommended)
+ - .NET Desktop Development
+ - .NET Core
 
 
-## Helpful Notes
-Before creating a pull request, please think of the following.
+## Code Format
+Our code formatting is very specific, and it is recommended to follow these guidelines.
 
-- [x] Did I double check for errors?
-
-- [x] Did I do my best?
 
