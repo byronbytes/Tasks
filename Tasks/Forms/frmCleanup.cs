@@ -728,8 +728,7 @@ namespace Tasks
                 Process process = new Process();
                 process.StartInfo.FileName = "Scripts/BatFiles/displaydns.bat";
                 process.Start();
-                //Directory.SetCurrentDirectory(@"/");
-                //Directory.SetCurrentDirectory(@"Scripts/BatFiles");
+                //Directory.SetCurrentDirectory(@"/Scripts/BatFiles");
                 //Process.Start("displaydns.bat");
             }
             catch (Exception ex)
@@ -811,6 +810,7 @@ namespace Tasks
             else if (comboBox1.Text == "Microsoft Edge")
             {
                 ExtensionsBox.Items.Clear();
+            // will crash if it doesn't exist, will fix later
                 GetExtensionList(new DirectoryInfo(Dirs.edgeExtDir));
             }
         }
