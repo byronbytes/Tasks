@@ -58,3 +58,19 @@ public static void Example
 }
 ````
 
+
+#### Try/Catch Statements ####
+
+When using a try/catch statement, use the following code. If you are debugging it is recommended to put a `Debug.Print` in the statements while testing.
+
+
+```csharp
+try
+ {
+    DoSomething();
+ }
+ catch(Exception ex)
+ {
+    Error();
+ }
+```
