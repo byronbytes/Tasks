@@ -22,14 +22,39 @@ If statements should follow the following format.
 
 if(Equation)
 {
- Something();
- SomethingElse(true);
+   Something();
+   SomethingElse(true);
 }
 else
 {
- SomethingElse();
- Something(false);
+   SomethingElse();
+   Something(false);
 }
 ````
 
+
+#### Single Code Lines ####
+
+When coming across a single code statement, you should follow the following format.
+There are two different variations of this.
+
+#### Variation 1: One Lined Advanced
+*This is meant for more hard-coded features, that are not to be touched with generally.*
+
+```csharp
+
+public static void Example { CheckSomething(); }
+
+````
+
+#### Variation 2: One Lined Basic
+*This is meant for features that will be used and expanded more oftenly.*
+
+```csharp
+
+public static void Example
+{
+  CheckSomething();
+}
+````
 
