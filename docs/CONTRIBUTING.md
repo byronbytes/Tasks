@@ -9,7 +9,7 @@ To contribute, you will need the following:
   - .NET Core 5.0
 
 
-## Code Format
+# Code Format
 Our code formatting is very specific, and it is recommended to follow these guidelines.
 
 
