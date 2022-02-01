@@ -99,17 +99,21 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -127,8 +131,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
             // CleanupLogsLBox
@@ -1115,8 +1120,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage4.Controls.Add(this.groupBox4);
-            this.tabPage4.Controls.Add(this.groupBox1);
+            this.tabPage4.Controls.Add(this.tabControl3);
             this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
@@ -1125,50 +1129,72 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Remove Bloatware";
             // 
-            // groupBox4
+            // tabControl3
             // 
-            this.groupBox4.Controls.Add(this.button11);
-            this.groupBox4.Controls.Add(this.button10);
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox4.Location = new System.Drawing.Point(465, 6);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(379, 272);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Undo Changes";
+            this.tabControl3.Controls.Add(this.tabPage2);
+            this.tabControl3.Controls.Add(this.tabPage8);
+            this.tabControl3.Location = new System.Drawing.Point(12, 6);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(1010, 488);
+            this.tabControl3.TabIndex = 8;
             // 
-            // button10
+            // tabPage2
             // 
-            this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(6, 26);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(175, 37);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Enable Cortana";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage2.Controls.Add(this.button11);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.button7);
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1002, 455);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Remove Bloatware";
             // 
-            // groupBox1
+            // button11
             // 
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(408, 272);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Remove Bloat";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.button11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button11.ForeColor = System.Drawing.Color.Black;
+            this.button11.Location = new System.Drawing.Point(19, 415);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(216, 34);
+            this.button11.TabIndex = 11;
+            this.button11.Text = "Uninstall All UWP Applications";
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label20.Location = new System.Drawing.Point(313, 12);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(270, 30);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Disable Windows Features";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(19, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(275, 30);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Remove UWP Applications";
             // 
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(6, 26);
+            this.button7.Location = new System.Drawing.Point(313, 45);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(175, 37);
             this.button7.TabIndex = 4;
@@ -1180,7 +1206,7 @@
             // 
             this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(6, 80);
+            this.button5.Location = new System.Drawing.Point(19, 45);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(175, 37);
             this.button5.TabIndex = 7;
@@ -1188,24 +1214,11 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(6, 198);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 37);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Uninstall Edge";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(6, 140);
+            this.button6.Location = new System.Drawing.Point(19, 88);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(175, 37);
             this.button6.TabIndex = 5;
@@ -1214,12 +1227,60 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(313, 88);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(175, 37);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Uninstall Edge";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage8.Controls.Add(this.label12);
+            this.tabPage8.Controls.Add(this.button10);
+            this.tabPage8.Location = new System.Drawing.Point(4, 29);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1002, 455);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "Undo Changes";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Location = new System.Drawing.Point(22, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(264, 30);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Enable Windows Features";
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button10.ForeColor = System.Drawing.Color.Black;
+            this.button10.Location = new System.Drawing.Point(22, 48);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(175, 37);
+            this.button10.TabIndex = 4;
+            this.button10.Text = "Enable Cortana";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(12, 500);
+            this.textBox1.Location = new System.Drawing.Point(16, 500);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -1244,18 +1305,6 @@
             this.btnCleanup.Text = "Cleanup";
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(6, 80);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(175, 37);
-            this.button11.TabIndex = 8;
-            this.button11.Text = "Reinstall Solitaire";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // frmCleanup
             // 
@@ -1296,8 +1345,11 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1325,7 +1377,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnCleanup;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button8;
@@ -1387,8 +1438,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label16;
         internal System.Windows.Forms.ListBox CleanupLogsLBox;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Label label12;
     }
 }

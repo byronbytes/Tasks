@@ -89,10 +89,8 @@ namespace Tasks
                 label9.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
                 label5.ForeColor = Color.Black;
-                groupBox1.ForeColor = Color.Black;
                 groupBox2.ForeColor = Color.Black;
                 groupBox3.ForeColor = Color.Black;
-                groupBox4.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.WhiteSmoke;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;

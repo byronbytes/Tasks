@@ -187,16 +187,16 @@ namespace Tasks
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label13.Location = new System.Drawing.Point(20, 285);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(305, 21);
+            this.label13.Size = new System.Drawing.Size(257, 21);
             this.label13.TabIndex = 8;
-            this.label13.Text = "Language (We are looking for Translators!)";
+            this.label13.Text = "Language (Looking for Translators!)";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(20, 341);
+            this.label12.Location = new System.Drawing.Point(22, 306);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(204, 15);
             this.label12.TabIndex = 7;
@@ -212,7 +212,7 @@ namespace Tasks
             this.comboBox1.Items.AddRange(new object[] {
             "English",
             "Spanish"});
-            this.comboBox1.Location = new System.Drawing.Point(20, 309);
+            this.comboBox1.Location = new System.Drawing.Point(20, 324);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(225, 29);
             this.comboBox1.TabIndex = 6;
