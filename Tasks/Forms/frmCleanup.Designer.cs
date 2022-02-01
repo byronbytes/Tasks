@@ -100,7 +100,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
@@ -110,6 +109,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1127,24 +1127,15 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.button11);
             this.groupBox4.Controls.Add(this.button10);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox4.Location = new System.Drawing.Point(465, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(379, 117);
+            this.groupBox4.Size = new System.Drawing.Size(379, 272);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Undo Changes";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 88);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(202, 20);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "More changes coming soon.";
             // 
             // button10
             // 
@@ -1254,6 +1245,18 @@
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button11.ForeColor = System.Drawing.Color.Black;
+            this.button11.Location = new System.Drawing.Point(6, 80);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(175, 37);
+            this.button11.TabIndex = 8;
+            this.button11.Text = "Reinstall Solitaire";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1294,7 +1297,6 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1386,7 +1388,7 @@
         private System.Windows.Forms.Label label16;
         internal System.Windows.Forms.ListBox CleanupLogsLBox;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }
