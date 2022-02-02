@@ -753,7 +753,9 @@ namespace Tasks
         {
             foreach (var ext in directoryInfo.GetDirectories())
             {
-                try {
+                try 
+                {
+
                  FileInfo fi = new FileInfo(ext.ToString());
                 ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
 
@@ -1093,7 +1095,6 @@ namespace Tasks
 
         private void ExtensionsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -1110,12 +1111,10 @@ namespace Tasks
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-
         }
     }
 
