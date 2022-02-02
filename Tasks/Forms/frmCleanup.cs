@@ -753,13 +753,19 @@ namespace Tasks
         {
             foreach (var ext in directoryInfo.GetDirectories())
             {
-                FileInfo fi = new FileInfo(ext.ToString());
+                try {
+                 FileInfo fi = new FileInfo(ext.ToString());
                 ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
 
                 long dirSize = DirSize(new DirectoryInfo(ext.ToString()));
                 double dirsizeMB = ConvertBytesToMegabytes(dirSize);
                 extb.SubItems.Add(dirsizeMB + "MB");
                 extb.SubItems.Add(ext.ToString());
+                }
+                catch {
+                    MessageBox.Show("An error has occurred, there is a chance that Microsoft Edge does not exist.");
+                }
+               
             }
         }
 
@@ -806,7 +812,7 @@ namespace Tasks
             else if (comboBox1.Text == "Microsoft Edge")
             {
                 ExtensionsBox.Items.Clear();
-            // will crash if it doesn't exist, will fix later
+                // will crash if it doesn't exist, will fix later
                 GetExtensionList(new DirectoryInfo(Dirs.edgeExtDir));
             }
         }
