@@ -101,7 +101,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button11 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -1121,7 +1120,6 @@
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.tabPage4.Controls.Add(this.tabControl3);
-            this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -1136,14 +1134,14 @@
             this.tabControl3.Location = new System.Drawing.Point(12, 6);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1010, 488);
+            this.tabControl3.Size = new System.Drawing.Size(1010, 614);
             this.tabControl3.TabIndex = 8;
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage2.Controls.Add(this.button11);
             this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button5);
@@ -1152,21 +1150,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1002, 455);
+            this.tabPage2.Size = new System.Drawing.Size(1002, 581);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Remove Bloatware";
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(19, 415);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(216, 34);
-            this.button11.TabIndex = 11;
-            this.button11.Text = "Uninstall All UWP Applications";
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
@@ -1248,7 +1234,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 29);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1002, 455);
+            this.tabPage8.Size = new System.Drawing.Size(1002, 581);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "Undo Changes";
             // 
@@ -1280,11 +1266,11 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(16, 500);
+            this.textBox1.Location = new System.Drawing.Point(6, 467);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(1010, 108);
+            this.textBox1.Size = new System.Drawing.Size(990, 108);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Scripts Used:\r\nhttps://github.com/Sycnex/Windows10Debloater\r\nhttps://github.com/S" +
     "hadowWhisperer/Remove-Edge-Chromium\r\n\r\nCredit respectively goes to the original " +
@@ -1344,7 +1330,6 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.tabControl3.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -1441,7 +1426,6 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage8;

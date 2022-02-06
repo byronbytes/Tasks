@@ -125,7 +125,7 @@ namespace Tasks
             // 
             this.panel2.Location = new System.Drawing.Point(138, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1066, 728);
+            this.panel2.Size = new System.Drawing.Size(1066, 722);
             this.panel2.TabIndex = 1;
             // 
             // timer1

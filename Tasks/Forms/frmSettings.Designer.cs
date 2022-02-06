@@ -477,15 +477,15 @@ namespace Tasks
             // 
             // listBox2
             // 
-            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 25;
             this.listBox2.Location = new System.Drawing.Point(16, 68);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(464, 477);
+            this.listBox2.Size = new System.Drawing.Size(464, 475);
             this.listBox2.TabIndex = 34;
             // 
             // label20
