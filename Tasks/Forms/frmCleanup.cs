@@ -826,8 +826,9 @@ namespace Tasks
             {
                 if (comboBox1.Text == "Google Chrome")
                 {
-                    Remove.KillBrowser(1);
-                         foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
+                    Process.Start("taskkill", "/f /im chrome.exe");
+
+                    foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                           {
                         try
                         {
@@ -845,7 +846,8 @@ namespace Tasks
 
                 if (comboBox1.Text == "Mozilla Firefox")
                 {
-                    Remove.KillBrowser(2);
+                    Process.Start("taskkill", "/f /im firefox.exe");
+
                     try
                     {
                         Remove.DeleteExtension(ExtensionsBox.SelectedItems[0].SubItems[2].Text, true);
@@ -866,7 +868,8 @@ namespace Tasks
 
                 if (comboBox1.Text == "Microsoft Edge")
                 {
-                    Remove.KillBrowser(3);
+                    Process.Start("taskkill", "/f /im msedge.exe");
+
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try

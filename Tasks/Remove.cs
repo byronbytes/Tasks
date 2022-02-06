@@ -43,55 +43,5 @@ namespace Tasks
                 }
             }
         }
-
-        public static void KillBrowser(int browser)
-        {
-
-            // Case 1: Kills Chrome
-            // Case 2: Kills Firefox
-            // Case 3: Kills MS Edge
-
-            switch (browser)
-            {
-
-                case 1:
-                    try
-                    {
-                        Process.Start("taskkill", "/f /im chrome.exe");
-                    }
-
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Tasks was unable to taskkill Chrome.");
-                    }
-
-                    break;
-
-                case 2:
-                    try
-                    {
-                        Process.Start("taskkill", "/f /im firefox.exe");
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Tasks was unable to taskkill Firefox.");
-                    }
-
-                    break;
-
-                case 3:
-                    try
-                    {
-                        Process.Start("taskkill", "/f /im msedge.exe");
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Tasks was unable to taskkill Edge.");
-                    }
-                    break;
-
-
-            }
-        }
     }
 }
