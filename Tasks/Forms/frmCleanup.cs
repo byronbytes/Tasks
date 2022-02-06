@@ -66,25 +66,36 @@ namespace Tasks
                 
                 tabPage1.BackColor = Color.White;
                 tabPage7.BackColor = Color.White;
+                tabPage8.BackColor = Color.White;
+                tabPage2.BackColor = Color.White;
                 tabPage3.BackColor = Color.White;
                 tabPage4.BackColor = Color.White;
                 tabControl2.BackColor = Color.White;
                 tabControl1.BackColor = Color.White;
+                tabControl3.BackColor = Color.White;
                 tabPage5.BackColor = Color.White;
                 tabPage6.BackColor = Color.White;
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
                 label3.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
+                label5.ForeColor = Color.Black;
                 label6.ForeColor = Color.Black;
+                label7.ForeColor = Color.Black;
+                label8.ForeColor = Color.Black;
+                label9.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
                 label11.ForeColor = Color.Black;
+                label12.ForeColor = Color.Black;
+                label13.ForeColor = Color.Black;
                 label14.ForeColor = Color.DarkRed;
                 label15.ForeColor = Color.Black;
                 label16.ForeColor = Color.Black;
                 label17.ForeColor = Color.DarkRed;
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
+                label20.ForeColor = Color.Black;
+            
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;

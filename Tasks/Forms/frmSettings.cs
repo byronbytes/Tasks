@@ -146,6 +146,8 @@ namespace Tasks
                 label14.ForeColor = Color.Black;
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
+                listBox2.BackColor = Color.WhiteSmoke;
+                listBox2.ForeColor = Color.Black;
                 checkBox2.ForeColor = Color.Black;
                 label20.ForeColor = Color.Black;
                 tabControl1.BackColor = Color.White;
@@ -215,6 +217,11 @@ namespace Tasks
                 Properties.Settings.Default.EnableCleanupLogs = false;
             }
             Properties.Settings.Default.Save();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
