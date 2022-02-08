@@ -22,6 +22,7 @@ These are the supported versions of Tasks. We will not fix vulnerabilities in ol
 
 | Version             | Supported          | Release Date         | Discontinuation Date | Version Type |
 | :------------------ | :----------------: | :--------------:     | :------------------: | :------------------: | 
+| **3.3.0**           | ✅                 | 6th February, 2022  | N/A                  | Release| 
 | **3.2.0**           | ✅                 | 21st January, 2022  | N/A                  | Release| 
 | **3.1.0**           | ✅                 | 29th December, 2021  | N/A                  | Release| 
 | **3.0.1**           | ✅                 | 10th December, 2021  | N/A                  | Release| 
@@ -32,5 +33,6 @@ These are the supported versions of Tasks. We will not fix vulnerabilities in ol
 | **2.0.0**           | :x:                 | 20th September, 2021 |  14th December, 2021   | Release |
 | **2.0.0 PRE**       | :x:                 | 7th August, 2021     | 31st November 2021   | Pre - Release |
 | **1.x.x**           | :x:                | 24th July, 2021      | 7th August 2021      | Legacy |
+| **0.x.x**           | :x:                | Unknown Date         | 7th August 2021      | Legacy |
 
 *Legend: ✅ = Supported | :x: = Unsupported | ⚠️ = Unsupported Soon*
