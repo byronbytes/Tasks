@@ -1,5 +1,7 @@
-// (c) LiteTools 2022
-// All rights reserved under the GNU General Public License v3.0.
+/*
+    (c) LiteTools 2022 (https://github.com/LiteTools)
+    All rights reserved under the GNU General Public License v3.0.
+*/
 
 using System;
 using System.Collections.Generic;
@@ -735,7 +737,7 @@ namespace Tasks
                 Process process = new Process();
                 process.StartInfo.FileName = "Scripts/Prompt_DisplayDNS.bat";
                 process.Start();
-                //Directory.SetCurrentDirectory(@"/Scripts/BatFiles");
+                //Directory.SetCurrentDirectory(@"/Scripts/");
                 //Process.Start("displaydns.bat");
             }
             catch (Exception ex)
