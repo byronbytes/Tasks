@@ -933,7 +933,7 @@ namespace Tasks
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try { RunFile.RunBat("Scripts/Debloat_UninstallEdge.bat", true); }
+            try { RunFile.RunBat("Scripts/Debloat_RemoveEdge.bat", true); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
