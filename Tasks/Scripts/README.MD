@@ -11,7 +11,7 @@ If the script is for adding new features, make the prefix **Restore_(FileNameHer
 
 If the script is for an embedded Tasks feature, make the prefix **Tasks_(FileNameHere)**
 
-If the script is for showing any popups or new windows, make the prefix **Popup_(FileNameHere)**
+If the script is for showing any popups or new windows, make the prefix **Prompt_(FileNameHere)**
 
 If the script is for any other feature not listed, make the prefix **Other_(FileNameHere)**
 
