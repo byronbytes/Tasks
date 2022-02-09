@@ -733,7 +733,7 @@ namespace Tasks
             try
             {
                 Process process = new Process();
-                process.StartInfo.FileName = "Scripts/BatFiles/displaydns.bat";
+                process.StartInfo.FileName = "Scripts/Prompt_DisplayDNS.bat";
                 process.Start();
                 //Directory.SetCurrentDirectory(@"/Scripts/BatFiles");
                 //Process.Start("displaydns.bat");
@@ -744,12 +744,12 @@ namespace Tasks
             }
         }
 
-        private void button2_Click(object sender, EventArgs e) //DisplayARP
+        private void button2_Click(object sender, EventArgs e)
         {
             try
             {
                 Process process = new Process();
-                process.StartInfo.FileName = "Scripts/BatFiles/displayarp.bat";
+                process.StartInfo.FileName = "Scripts/Prompt_DisplayARP.bat";
                 process.Start();
             }
             catch (Exception ex)
@@ -908,7 +908,7 @@ namespace Tasks
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try { RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true); }
+            try { RunFile.RunBat("Scripts/Debloat_RemoveSolitaire.bat", true); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
@@ -927,13 +927,13 @@ namespace Tasks
 
         private void button6_Click(object sender, EventArgs e)
         {
-            try { Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloater/UninstallOneDrive.ps1"); }
+            try { Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloat_UninstallOneDrive.ps1"); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try { RunFile.RunBat("Scripts/BatFiles/removeedge.bat", true); }
+            try { RunFile.RunBat("Scripts/Debloat_UninstallEdge.bat", true); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
