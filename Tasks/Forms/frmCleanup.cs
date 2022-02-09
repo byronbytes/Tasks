@@ -1,5 +1,7 @@
-// (c) LiteTools 2022
-// All rights reserved under the GNU General Public License v3.0.
+/*
+    (c) LiteTools 2022 (https://github.com/LiteTools)
+    All rights reserved under the GNU General Public License v3.0.
+*/
 
 using System;
 using System.Collections.Generic;
@@ -733,9 +735,9 @@ namespace Tasks
             try
             {
                 Process process = new Process();
-                process.StartInfo.FileName = "Scripts/BatFiles/displaydns.bat";
+                process.StartInfo.FileName = "Scripts/Prompt_DisplayDNS.bat";
                 process.Start();
-                //Directory.SetCurrentDirectory(@"/Scripts/BatFiles");
+                //Directory.SetCurrentDirectory(@"/Scripts/");
                 //Process.Start("displaydns.bat");
             }
             catch (Exception ex)
@@ -744,12 +746,12 @@ namespace Tasks
             }
         }
 
-        private void button2_Click(object sender, EventArgs e) //DisplayARP
+        private void button2_Click(object sender, EventArgs e)
         {
             try
             {
                 Process process = new Process();
-                process.StartInfo.FileName = "Scripts/BatFiles/displayarp.bat";
+                process.StartInfo.FileName = "Scripts/Prompt_DisplayARP.bat";
                 process.Start();
             }
             catch (Exception ex)
@@ -908,7 +910,7 @@ namespace Tasks
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try { RunFile.RunBat("Scripts/BatFiles/byesolitaire.bat", true); }
+            try { RunFile.RunBat("Scripts/Debloat_RemoveSolitaire.bat", true); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
@@ -927,13 +929,13 @@ namespace Tasks
 
         private void button6_Click(object sender, EventArgs e)
         {
-            try { Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloater/UninstallOneDrive.ps1"); }
+            try { Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloat_UninstallOneDrive.ps1"); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try { RunFile.RunBat("Scripts/BatFiles/removeedge.bat", true); }
+            try { RunFile.RunBat("Scripts/Debloat_RemoveEdge.bat", true); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 

@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 
 :: Creator: ShadowWhisperer
 :: GitHub: https://github.com/ShadowWhisperer
@@ -17,9 +17,9 @@ else
  exit
 )
 
-:: Pre Warning message (Since this is the "Tasks" edit)
+:: Pre Warning message
 echo This script uninstalls Microsoft Edge. This means the "Microsoft Edge" option in "Cleanup" will no longer be available if you proceed.
-echo If you are sure about this, or do not use Edge, you may continue, if you do not want to do this you can close out of the script.
+echo If you are sure about this, you may continue, if you do not want to do this you can close out of the script.
 pause
 
 :: Set Exist Variable - Check if Edge is intalled  *Show Message, if not installed
