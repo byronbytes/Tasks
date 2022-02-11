@@ -4,6 +4,7 @@
 To contribute, you will need the following:
 
 - A decent knowledge of C#
+- A decent knowledge of WinForms designing.
 - Visual Studio IDE (2019 or 2022 recommended)
   - .NET Desktop Development
   - .NET Core 5.0
