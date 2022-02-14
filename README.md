@@ -53,9 +53,6 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 ## Contribution
 To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
 
-## Support
-You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too.
-
 ## Credits
 * **Byron (@byronbytes)** - *Initial work / creation and development.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
@@ -69,8 +66,8 @@ See the full list of [contributors](https://github.com/LiteTools/Tasks/contribut
 
 
 ## Gallery
-These images were last taken on v3.0.1 The design may vary for newer versions.
-You are allowed to distribute these screenshots for showcase purposes, it is also highly recommended.
+These images were taken on v3.0.1. Designs may vary for newer versions.
+You are allowed to distribute these screenshots for showcase.
 
 
 ![image](https://user-images.githubusercontent.com/53088136/146448769-f6b75abe-f8ee-428e-9089-31577f7c1003.png)
