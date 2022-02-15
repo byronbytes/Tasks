@@ -66,7 +66,7 @@ namespace Tasks
             this.listView1.LargeImageList = this.imageList1;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1042, 663);
+            this.listView1.Size = new System.Drawing.Size(1042, 662);
             this.listView1.SmallImageList = this.imageList1;
             this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView1.TabIndex = 0;
@@ -103,10 +103,10 @@ namespace Tasks
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Brown;
-            this.button1.Location = new System.Drawing.Point(720, 681);
+            this.button1.ForeColor = System.Drawing.Color.DarkRed;
+            this.button1.Location = new System.Drawing.Point(727, 680);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 35);
+            this.button1.Size = new System.Drawing.Size(148, 36);
             this.button1.TabIndex = 1;
             this.button1.Text = "End Task";
             this.button1.UseVisualStyleBackColor = true;
@@ -115,10 +115,10 @@ namespace Tasks
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button2.Location = new System.Drawing.Point(906, 681);
+            this.button2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button2.Location = new System.Drawing.Point(906, 680);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 35);
+            this.button2.Size = new System.Drawing.Size(148, 36);
             this.button2.TabIndex = 2;
             this.button2.Text = "New Task";
             this.button2.UseVisualStyleBackColor = true;
