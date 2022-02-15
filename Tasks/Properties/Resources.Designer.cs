@@ -133,16 +133,6 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RegistryWhite {
-            get {
-                object obj = ResourceManager.GetObject("RegistryWhite", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Settings {
             get {
                 object obj = ResourceManager.GetObject("Settings", resourceCulture);
@@ -156,16 +146,6 @@ namespace Tasks.Properties {
         internal static System.Drawing.Bitmap SettingsWhite {
             get {
                 object obj = ResourceManager.GetObject("SettingsWhite", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Spotify {
-            get {
-                object obj = ResourceManager.GetObject("Spotify", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

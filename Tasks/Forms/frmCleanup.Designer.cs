@@ -102,6 +102,7 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -110,7 +111,6 @@
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
@@ -1157,22 +1157,37 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label20.Location = new System.Drawing.Point(313, 12);
+            this.label20.Location = new System.Drawing.Point(313, 17);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(270, 30);
+            this.label20.Size = new System.Drawing.Size(236, 25);
             this.label20.TabIndex = 10;
             this.label20.Text = "Disable Windows Features";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(6, 467);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(990, 108);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = "Scripts Used:\r\nhttps://github.com/Sycnex/Windows10Debloater\r\nhttps://github.com/S" +
+    "hadowWhisperer/Remove-Edge-Chromium\r\n\r\nCredit respectively goes to the original " +
+    "creators.";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(19, 12);
+            this.label7.Location = new System.Drawing.Point(19, 17);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(275, 30);
+            this.label7.Size = new System.Drawing.Size(239, 25);
             this.label7.TabIndex = 8;
             this.label7.Text = "Remove UWP Applications";
             // 
@@ -1260,21 +1275,6 @@
             this.button10.Text = "Enable Cortana";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(6, 467);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(990, 108);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "Scripts Used:\r\nhttps://github.com/Sycnex/Windows10Debloater\r\nhttps://github.com/S" +
-    "hadowWhisperer/Remove-Edge-Chromium\r\n\r\nCredit respectively goes to the original " +
-    "creators.";
             // 
             // toolTip1
             // 
