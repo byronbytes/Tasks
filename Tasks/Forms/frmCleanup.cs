@@ -728,40 +728,6 @@ namespace Tasks
             DirectoryExists();
             CheckTheme();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                Process process = new Process();
-                process.StartInfo.FileName = "Scripts/Prompt_DisplayDNS.bat";
-                process.Start();
-                //Directory.SetCurrentDirectory(@"/Scripts/");
-                //Process.Start("displaydns.bat");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process process = new Process();
-                process.StartInfo.FileName = "Scripts/Prompt_DisplayARP.bat";
-                process.Start();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-
-            }
-
-        }
         private void GetExtensionList(DirectoryInfo directoryInfo)
         {
             foreach (var ext in directoryInfo.GetDirectories())
@@ -1125,12 +1091,34 @@ namespace Tasks
             }
         }
 
+        public static string debug = "";
         private void button1_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = "/Scripts/Prompt_DisplayDNS.bat";
+                process.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error while trying to clean DNS Cache.");
+      
+            }
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = "Scripts/Prompt_DisplayARP.bat";
+                process.Start();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error while trying to clean ARP Cache.");
+            }
         }
     }
 
