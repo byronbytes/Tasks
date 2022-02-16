@@ -20,6 +20,7 @@ namespace Tasks
                 Process process = new Process();
                 process.StartInfo.FileName = path + batfile;
                 process.Start();
+                Debug.Print(process.ToString());
                 if (waitexit == true)
                 {
                     process.WaitForExit();
