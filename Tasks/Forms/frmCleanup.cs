@@ -876,7 +876,8 @@ namespace Tasks
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try { RunFile.RunBat("Scripts/Debloat_RemoveSolitaire.bat", true); }
+            //Directory.SetCurrentDirectory(@"/Scripts/");
+            try { RunFile.RunBat(@"Scripts/Debloat_RemoveSolitaire.bat", true); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 

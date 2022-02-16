@@ -12,11 +12,13 @@ namespace Tasks
 {
     class RunFile
     {
+        public static string path2;
         public static int RunBat(string batfile, bool waitexit)
         {
             try
             {
                 string path = AppDomain.CurrentDomain.BaseDirectory;
+                path2 = path;
                 Process process = new Process();
                 process.StartInfo.FileName = path + batfile;
                 process.Start();
@@ -27,8 +29,10 @@ namespace Tasks
                 }
                 return 0;
             }
-            catch
+            catch(Exception ex)
             {
+                Debug.Print(ex.Message);
+                Debug.Print(path2);
                 return 1;
             }
         }
