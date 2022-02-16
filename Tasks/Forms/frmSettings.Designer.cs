@@ -247,7 +247,7 @@ namespace Tasks
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(7, 248);
+            this.label9.Location = new System.Drawing.Point(12, 248);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(299, 21);
             this.label9.TabIndex = 3;
@@ -352,11 +352,11 @@ namespace Tasks
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(15, 137);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 30);
+            this.label5.Size = new System.Drawing.Size(135, 30);
             this.label5.TabIndex = 37;
             this.label5.Text = "Contributors";
             // 
@@ -394,9 +394,9 @@ namespace Tasks
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(144, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 20);
+            this.label3.Size = new System.Drawing.Size(121, 20);
             this.label3.TabIndex = 34;
-            this.label3.Text = "(c) 2022 LiteTools";
+            this.label3.Text = "© 2022 LiteTools";
             // 
             // label2
             // 
@@ -407,7 +407,7 @@ namespace Tasks
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Version: 3.3.0";
+            this.label2.Text = "Version: 3.4.0";
             // 
             // pictureBox1
             // 
@@ -423,11 +423,11 @@ namespace Tasks
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(144, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 30);
+            this.label1.Size = new System.Drawing.Size(63, 30);
             this.label1.TabIndex = 31;
             this.label1.Text = "Tasks";
             // 

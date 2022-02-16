@@ -1,6 +1,7 @@
-// (c) LiteTools 2021
-// All rights reserved under the Apache-2.0 license.
-
+/*
+    (c) LiteTools 2022 (https://github.com/LiteTools)
+    All rights reserved under the GNU General Public License v3.0.
+*/
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,9 @@ namespace Tasks {
 
         private void RefreshList() {
             StartupProcesses.Items.Clear();
+            listView1.Items.Clear();
             RenderStartupsOnListWiew();
+            GetAllServices();
         }
 
         private void RenderStartupsOnListWiew() {
@@ -83,10 +86,6 @@ namespace Tasks {
         }
         private void button4_Click_1(object sender, EventArgs e) { RefreshList(); }
 
-        private void moreInfoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // feature being removed
-        }
 
         public void CheckTheme()
         {
@@ -126,7 +125,7 @@ namespace Tasks {
                     }
                     catch
                     {
-                        MessageBox.Show("There was an error trying to add a new process.");
+                        MessageBox.Show("There was an error trying to add a new startup process.");
                     }
 
                 }
@@ -160,6 +159,20 @@ namespace Tasks {
             catch (Exception)
             {
                 MessageBox.Show("Unable to open the startup folder.");
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedTab == tabPage2)
+            {
+                button1.Hide();
+                button2.Hide();
+            }
+            else
+            {
+                button1.Show();
+                button2.Show();
             }
         }
     }

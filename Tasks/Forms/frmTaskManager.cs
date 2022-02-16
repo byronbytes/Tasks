@@ -1,6 +1,7 @@
-// (c) LiteTools 2021
-// All rights reserved under the Apache-2.0 license.
-
+/*
+    (c) LiteTools 2022 (https://github.com/LiteTools)
+    All rights reserved under the GNU General Public License v3.0.
+*/
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Management;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,7 +25,6 @@ namespace Tasks {
 
             Task<List<ProcessInfoEx>> ProcessInfoList = Task.Run(async () => await GetProcessAsync());
             ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
-
             CheckTheme();
         }
 
@@ -110,6 +111,8 @@ namespace Tasks {
                     ListViewItem.ListViewSubItem lvsi = new ListViewItem.ListViewSubItem();
                     ListViewItem.ListViewSubItem lvsisi = new ListViewItem.ListViewSubItem();
                     ListViewItem.ListViewSubItem lvsisi2 = new ListViewItem.ListViewSubItem();
+                    ListViewItem.ListViewSubItem lvsisi3 = new ListViewItem.ListViewSubItem();
+                    ListViewItem.ListViewSubItem lvsisi4 = new ListViewItem.ListViewSubItem();
 
                     lvi.Text = ProcessInfo.TargetProcess.ProcessName;
                     lvi.Tag = ProcessInfo.ComandLine; // Commandline in Item Tag
@@ -124,6 +127,16 @@ namespace Tasks {
                     lvsisi.Text = ProcessInfo.TargetProcess.Id.ToString(); // Process PID
                     lvi.SubItems.Add(lvsisi);
 
+                    lvsisi3.Text = ProcessInfo.TargetProcess.Responding.ToString(); // Is Responding
+                    lvi.SubItems.Add(lvsisi3);
+
+                  //  lvsisi4.Text = ProcessInfo.ComandLine.ToString();
+                  //  lvi.SubItems.Add(lvsisi4);
+                        // interesting things to add
+                        // SessionId
+                        // MainWindowTitle
+                        // Base Priority
+                        // Threads
 
                     Task<double> ProcessCPUTask = Task.Run(async () => GetProcessCPUPercentUsage(ProcessInfo.TargetProcess));
 
@@ -144,6 +157,7 @@ namespace Tasks {
             }
 
         }
+
 
         public void SetProcessCPU(ListViewItem.ListViewSubItem SubItem, string CPUPercentUsage)
         {
@@ -185,7 +199,7 @@ namespace Tasks {
 
                         if (QueryObject["Status"] != null)
                         {
-                            InfoProc.ComandLine = QueryObject["Status"].ToString();
+                            InfoProc.Status = QueryObject["Status"].ToString();
                         }
 
                         TempList.Add(InfoProc);
@@ -239,7 +253,6 @@ namespace Tasks {
 
         public class ProcessInfoEx
         {
-
             public Process TargetProcess = null;
             public string Path = string.Empty;
             public string ComandLine = string.Empty;
@@ -251,10 +264,9 @@ namespace Tasks {
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e) { }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-
             Task<List<ProcessInfoEx>> ProcessInfoList = Task.Run(async () => await GetProcessAsync());
             ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
         }
