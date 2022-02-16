@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -69,7 +70,21 @@ namespace Tasks
             }
         }
 
-        private void frmMain_Load(object sender, EventArgs e) { CheckTheme(); label2.Text = Core.SystemInfo.bit; }
+        private void frmMain_Load(object sender, EventArgs e) { 
+            CheckTheme(); 
+            label2.Text = Core.SystemInfo.bit;
+
+            var identity = WindowsIdentity.GetCurrent();
+            var principal = new WindowsPrincipal(identity);
+
+            if (principal.IsInRole(WindowsBuiltInRole.Administrator))
+            {
+                label3.Visible = true;
+                pictureBox5.Visible = true;
+            }
+        }
+
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ShowForm(new frmCleanup());

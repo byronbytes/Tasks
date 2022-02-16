@@ -35,7 +35,6 @@ namespace Tasks
             this.ProcessName = new System.Windows.Forms.ColumnHeader();
             this.ProcessDescription = new System.Windows.Forms.ColumnHeader();
             this.ProcessPath = new System.Windows.Forms.ColumnHeader();
-            this.ProcessUser = new System.Windows.Forms.ColumnHeader();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@ namespace Tasks
             this.txtTargetPath = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -64,8 +64,7 @@ namespace Tasks
             this.StartupProcesses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ProcessName,
             this.ProcessDescription,
-            this.ProcessPath,
-            this.ProcessUser});
+            this.ProcessPath});
             this.StartupProcesses.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.StartupProcesses.ForeColor = System.Drawing.Color.White;
             this.StartupProcesses.FullRowSelect = true;
@@ -91,12 +90,7 @@ namespace Tasks
             // ProcessPath
             // 
             this.ProcessPath.Text = "Path";
-            this.ProcessPath.Width = 220;
-            // 
-            // ProcessUser
-            // 
-            this.ProcessUser.Text = "User";
-            this.ProcessUser.Width = 130;
+            this.ProcessPath.Width = 290;
             // 
             // button1
             // 
@@ -176,6 +170,19 @@ namespace Tasks
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button5.Location = new System.Drawing.Point(604, 679);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(137, 37);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "alt method";
+            this.toolTip1.SetToolTip(this.button5, "New Program");
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -250,6 +257,7 @@ namespace Tasks
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(1066, 728);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtTargetPath);
@@ -274,7 +282,6 @@ namespace Tasks
         #endregion
         private System.Windows.Forms.ColumnHeader ProcessName;
         private System.Windows.Forms.ColumnHeader ProcessPath;
-        private System.Windows.Forms.ColumnHeader ProcessUser;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -293,5 +300,6 @@ namespace Tasks
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader ProcessDescription;
+        private System.Windows.Forms.Button button5;
     }
 }

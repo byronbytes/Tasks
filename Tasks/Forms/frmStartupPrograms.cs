@@ -41,15 +41,43 @@ namespace Tasks {
 
                 string ProcessName = strt["Name"].ToString();
                 string ProcessDescription = strt["Description"].ToString();
+                string Command = strt["Command"].ToString();
                 string ProcessLocation = strt["Location"].ToString();
-                string ProcessUser = strt["User"].ToString();
 
                 var StartupProcessList = new ListViewItem(ProcessName + " ");
                 StartupProcessList.SubItems.Add(ProcessDescription + "");
                 StartupProcessList.SubItems.Add(ProcessLocation + "");
-                StartupProcessList.SubItems.Add(ProcessUser + "");
+                StartupProcessList.SubItems.Add(Command + "");
+
 
                 StartupProcesses.Items.Add(StartupProcessList);
+            }
+        }
+
+        private void SetStartup(string AppName, bool enable)
+        {
+            string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
+
+            RegistryKey startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+
+            if(enable)
+            {
+                if (startupKey.GetValue(AppName) == null)
+                {
+                    startupKey.Close();
+                    startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                    // Add startup reg key
+                    startupKey.CreateSubKey(AppName, true);
+                    startupKey.SetValue(AppName, Application.ExecutablePath.ToString());
+                    startupKey.Close();
+                }
+            }
+            else
+            {
+                // remove startup
+                startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                startupKey.DeleteValue(AppName, false);
+                startupKey.Close();
             }
         }
 
@@ -65,17 +93,15 @@ namespace Tasks {
         {
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
 
-            if (StartupProcesses.SelectedItems[0].SubItems[1].Text == "Startup")
-            {
                 try
                 {
-                    File.Delete(fileStartup);
+                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text.ToString(), false);
                     RefreshList();
                 }
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Unable to delete the selected startup process.");
-                }
+                    MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
+                MessageBox.Show(StartupProcesses.SelectedItems[0].SubItems[0].Text.ToString());
             }
         }
         
@@ -173,6 +199,25 @@ namespace Tasks {
             {
                 button1.Show();
                 button2.Show();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" })
+            {
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        SetStartup(ofd.SafeFileName.ToString(), true);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
         }
     }
