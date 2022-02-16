@@ -37,6 +37,8 @@ namespace Tasks
             this.ProcessPath = new System.Windows.Forms.ColumnHeader();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.useLegacyAddingMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button3 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -44,7 +46,6 @@ namespace Tasks
             this.txtTargetPath = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -52,6 +53,7 @@ namespace Tasks
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.contextMenuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -107,6 +109,7 @@ namespace Tasks
             // 
             // button2
             // 
+            this.button2.ContextMenuStrip = this.contextMenuStrip1;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.SeaGreen;
             this.button2.Location = new System.Drawing.Point(917, 679);
@@ -117,6 +120,20 @@ namespace Tasks
             this.toolTip1.SetToolTip(this.button2, "New Program");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.useLegacyAddingMethodToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(221, 26);
+            // 
+            // useLegacyAddingMethodToolStripMenuItem
+            // 
+            this.useLegacyAddingMethodToolStripMenuItem.Name = "useLegacyAddingMethodToolStripMenuItem";
+            this.useLegacyAddingMethodToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.useLegacyAddingMethodToolStripMenuItem.Text = "Use Legacy Adding Method";
+            this.useLegacyAddingMethodToolStripMenuItem.Click += new System.EventHandler(this.useLegacyAddingMethodToolStripMenuItem_Click);
             // 
             // button3
             // 
@@ -139,7 +156,7 @@ namespace Tasks
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(513, 706);
+            this.txtFileName.Location = new System.Drawing.Point(388, 691);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(119, 15);
             this.txtFileName.TabIndex = 4;
@@ -169,19 +186,6 @@ namespace Tasks
             this.toolTip1.SetToolTip(this.button4, "Refresh List");
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button5.Location = new System.Drawing.Point(604, 679);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(137, 37);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "alt method";
-            this.toolTip1.SetToolTip(this.button5, "New Program");
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // tabControl1
             // 
@@ -257,7 +261,6 @@ namespace Tasks
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(1066, 728);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtTargetPath);
@@ -271,6 +274,7 @@ namespace Tasks
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Startup Programs";
             this.Load += new System.EventHandler(this.frmStartupPrograms_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -300,6 +304,7 @@ namespace Tasks
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader ProcessDescription;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem useLegacyAddingMethodToolStripMenuItem;
     }
 }

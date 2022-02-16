@@ -75,8 +75,9 @@ namespace Tasks {
             else
             {
                 // remove startup
+                startupKey.Close();
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                startupKey.DeleteValue(AppName, false);
+                startupKey.DeleteSubKey(AppName, true);
                 startupKey.Close();
             }
         }
@@ -91,18 +92,28 @@ namespace Tasks {
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
+      //      string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
 
-                try
-                {
-                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text.ToString(), false);
-                    RefreshList();
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
-                MessageBox.Show(StartupProcesses.SelectedItems[0].SubItems[0].Text.ToString());
+            try
+            {
+                SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
+                RefreshList();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
+                MessageBox.Show(StartupProcesses.SelectedItems[0].SubItems[0].Text.ToString());
+                
+            }
+
+
+        //    if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup")
+        //    {
+          //      File.Delete(fileStartup);
+          //      RefreshList();
+          //  }
+
+             
         }
         
          class StartUpProgram {
@@ -141,22 +152,16 @@ namespace Tasks {
                 {
                     try
                     {
-                        string program = ofd.FileName.ToString();
-
-                        txtFileName.Text = ofd.FileName;
-                        FileInfo fileInfo = new FileInfo(txtFileName.Text);
-                        txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
-                        File.Copy(txtFileName.Text, txtTargetPath.Text, true);
+                        SetStartup(ofd.SafeFileName.ToString(), true);
                         RefreshList();
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("There was an error trying to add a new startup process.");
+                        MessageBox.Show("There was an error adding a new Startup Program. To use the old adding method, right click the 'Add New' button and click 'Use Legacy Adding Method'.");
                     }
-
                 }
-                else RefreshList();
             }
+           
         }
 
         private void GetAllServices()
@@ -202,7 +207,7 @@ namespace Tasks {
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void useLegacyAddingMethodToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" })
             {
@@ -211,13 +216,21 @@ namespace Tasks {
                 {
                     try
                     {
-                        SetStartup(ofd.SafeFileName.ToString(), true);
+                        string program = ofd.FileName.ToString();
+
+                        txtFileName.Text = ofd.FileName;
+                        FileInfo fileInfo = new FileInfo(txtFileName.Text);
+                        txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", fileInfo.Name);
+                        File.Copy(txtFileName.Text, txtTargetPath.Text, true);
+                        RefreshList();
                     }
-                    catch(Exception ex)
+                    catch
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("There was an error trying to add a new startup process.");
                     }
+
                 }
+                else RefreshList();
             }
         }
     }

@@ -1088,11 +1088,9 @@
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label16.Location = new System.Drawing.Point(10, 92);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(1008, 17);
+            this.label16.Size = new System.Drawing.Size(1023, 17);
             this.label16.TabIndex = 41;
-            this.label16.Text = "_________________________________________________________________________________" +
-    "________________________________________________________________________________" +
-    "_______________________________________";
+            this.label16.Text = resources.GetString("label16.Text");
             // 
             // label15
             // 
