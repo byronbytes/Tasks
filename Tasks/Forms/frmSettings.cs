@@ -154,7 +154,8 @@ namespace Tasks
                 checkBox1.ForeColor = Color.Black;
                 radioButton1.ForeColor = Color.Black;
                 radioButton2.ForeColor = Color.Black;
-                comboBox1.BackColor = Color.Gray;
+                comboBox1.BackColor = Color.GhostWhite;
+                comboBox1.ForeColor = Color.Black;
                 listBox1.BackColor = Color.FromArgb(240, 240, 240);
                 listBox1.ForeColor = Color.Black;
 

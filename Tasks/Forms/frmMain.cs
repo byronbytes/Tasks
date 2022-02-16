@@ -47,6 +47,8 @@ namespace Tasks
 
                 label1.ForeColor = Color.White;
                 label2.ForeColor = Color.White;
+                label3.ForeColor = Color.White;
+                label4.ForeColor = Color.White;
 
                 pictureBox1.Image = Properties.Resources.CleanupWhite;
                 pictureBox2.Image = Properties.Resources.StartupProgramsWhite;
@@ -67,12 +69,15 @@ namespace Tasks
                 
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
+                label3.ForeColor = Color.Black;
+                label4.ForeColor = Color.Black;
             }
         }
 
         private void frmMain_Load(object sender, EventArgs e) { 
             CheckTheme(); 
             label2.Text = Core.SystemInfo.bit;
+            label4.Text = Core.SystemInfo.getOSInfo();
 
             var identity = WindowsIdentity.GetCurrent();
             var principal = new WindowsPrincipal(identity);

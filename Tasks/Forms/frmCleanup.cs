@@ -105,8 +105,10 @@ namespace Tasks
                 groupBox2.ForeColor = Color.Black;
                 groupBox3.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.WhiteSmoke;
+                comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;
+
                 textBox1.BackColor = Color.WhiteSmoke;
                 textBox1.ForeColor = Color.Black;
             }

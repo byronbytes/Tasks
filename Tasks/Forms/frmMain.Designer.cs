@@ -41,9 +41,10 @@ namespace Tasks
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -142,6 +143,7 @@ namespace Tasks
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.label2);
@@ -150,27 +152,16 @@ namespace Tasks
             this.panel3.Size = new System.Drawing.Size(1209, 62);
             this.panel3.TabIndex = 2;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1106, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "64/32 bit";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Tasks.Properties.Resources.UAC;
-            this.pictureBox5.Location = new System.Drawing.Point(20, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(1090, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 23);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Windows 10";
             // 
             // label3
             // 
@@ -183,6 +174,28 @@ namespace Tasks
             this.label3.TabIndex = 1;
             this.label3.Text = "Tasks is running as administrator.";
             this.label3.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Tasks.Properties.Resources.UAC;
+            this.pictureBox5.Location = new System.Drawing.Point(20, 9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(1139, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "64 bit";
             // 
             // frmMain
             // 
@@ -226,6 +239,7 @@ namespace Tasks
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.Label label4;
     }
 }
 
