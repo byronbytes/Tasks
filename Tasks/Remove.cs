@@ -15,6 +15,7 @@ namespace Tasks
 {
     class Remove
     {
+        //TODO: Merge this within Cleanup, and remove the need for Remove.cs, it's unnessesary.
         public static void DeleteExtension(string path, bool isFile)
         {
             if (isFile == true)
