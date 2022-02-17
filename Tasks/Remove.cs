@@ -1,5 +1,4 @@
-// (c) LiteTools 2021
-// All rights reserved under the Apache-2.0 license.
+// planned removal.
 
 using System;
 using System.Collections.Generic;
@@ -15,7 +14,7 @@ namespace Tasks
 {
     class Remove
     {
-        //TODO: Merge this within Cleanup, and remove the need for Remove.cs, it's unnessesary.
+        //TODO: Merge this within the cleanup function, and remove this, it's unnessesary.
         public static void DeleteExtension(string path, bool isFile)
         {
             if (isFile == true)
