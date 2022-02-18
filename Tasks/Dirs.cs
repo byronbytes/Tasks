@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Tasks
 {
-    // Deprecated.
+    // Deprecated In this release.
     class Dirs
     {
             // Normal Directories:
@@ -45,6 +45,7 @@ namespace Tasks
         public static string TasksDirectory = ""; // Will be moving the directory to a more user-friendly place.
         public static string TasksLogsDirectory = "";
 
+
         public static string ChromeDirectory = ""; // Added later
         public static string ChromeDirectoryExtension = "";
         public static string FirefoxDirectory = "";
@@ -52,6 +53,7 @@ namespace Tasks
         public static string EdgeDirectory = "";
         public static string EdgeDirectoryExtension = "";
         public static string DiscordDirectory = "";
+    
 
 
         public static void CreateDirectories()
@@ -62,7 +64,8 @@ namespace Tasks
             }
             else
             {
-                Directory.CreateDirectory(tasksDir);
+             Directory.CreateDirectory(tasksDir);
+
             }
         }
 
@@ -71,7 +74,7 @@ namespace Tasks
             if(Directory.Exists(tasksDir))
             {
                 Directory.Delete(tasksDir);
-                MessageBox.Show("Deleted Tasks folder.");
+                MessageBox.Show("Deleted Tasks directory.");
             }
         }
 
