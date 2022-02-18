@@ -66,7 +66,7 @@ namespace Tasks {
                 {
                     startupKey.Close();
                     startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                    // Add startup reg key
+                    // Add New Startup Program (Registry)
                     startupKey.CreateSubKey(AppName, true);
                     startupKey.SetValue(AppName, Application.ExecutablePath.ToString());
                     startupKey.Close();
@@ -74,7 +74,7 @@ namespace Tasks {
             }
             else
             {
-                // remove startup
+                // Remove Startup Program (Registry)
                 startupKey.Close();
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
                 startupKey.DeleteSubKey(AppName, true);
@@ -93,7 +93,6 @@ namespace Tasks {
         private void button1_Click(object sender, EventArgs e)
         {
       //      string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
-
             try
             {
                 SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
@@ -107,7 +106,7 @@ namespace Tasks {
             }
 
 
-        //    if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup")
+        //    if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") (This errors, will try to fix)
         //    {
           //      File.Delete(fileStartup);
           //      RefreshList();
@@ -157,7 +156,7 @@ namespace Tasks {
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("There was an error adding a new Startup Program. To use the old adding method, right click the 'Add New' button and click 'Use Legacy Adding Method'.");
+                        MessageBox.Show("There was an error adding a new Startup Program. To use the old method, right click the 'Add New' button and click 'Use Legacy Adding Method'.");
                     }
                 }
             }
