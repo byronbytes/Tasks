@@ -77,6 +77,7 @@ namespace Tasks {
                 // Remove Startup Program (Registry)
                 startupKey.Close();
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                startupKey.GetSubKeyNames();
                 startupKey.DeleteSubKey(AppName, true);
                 startupKey.Close();
             }
@@ -102,7 +103,6 @@ namespace Tasks {
             {
                 MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
                 MessageBox.Show(StartupProcesses.SelectedItems[0].SubItems[0].Text.ToString());
-                
             }
 
 
