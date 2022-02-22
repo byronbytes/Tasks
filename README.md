@@ -20,7 +20,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - Diverse support for multiple applications and browsers and unneeded system cache. (Chrome, Discord, Temp, and more.)
 
 - Startup Manager:
-  - View detailed information about programs that run on start. (Name, Description, Directory, and User)
+  - View detailed information about programs that run on start. (Name, Description, Directory)
   - Create new programs that run on start.
   - Remove malicious programs that run on start with one click.
   - View detailed information about services that run on start. (Name, Service, Stopped or Running)
@@ -51,12 +51,12 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 *The dependencies must be kept in the same folder.*
 
 ## Contribution
-To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
+Contributions are always encouraged, but before creating a pull request it is suggested to read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
 
 ## Credits
-* **Byron (@byronbytes)** - *Initial work / creation and development.*
+* **Matty (@byronbytes)** - *Initial work / creation and development.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
-* **The very helpful people in the VB.NET server.** - *You all helped me fix bugs and taught me to do stuff myself.*
+* **The very helpful people in the VB.NET Discord.** - *You all helped me fix bugs and taught me to do stuff myself.*
 
 See the full list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
