@@ -17,7 +17,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - Quick Clean to help optimize folders that get filled fast.
   - Extension removal tool to remove malicious or unwanted extensions. (Supports Edge, Chrome, and Firefox)
   - Advanced cleaning tool that helps with computer performance.
-  - Diverse support for multiple applications and browsers. (Discord, Chrome, Firefox, Spotify, and more.)
+  - Diverse support for multiple applications and browsers and unneeded system cache. (Chrome, Discord, Temp, and more.)
 
 - Startup Manager:
   - View detailed information about programs that run on start. (Name, Description, Directory, and User)
@@ -32,7 +32,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - Create new tasks easily with a familiar interface.
   - Quickly end tasks with one button.
   - Refresh Task Manager with one button.
-  - Clean and understandable interface to see all processes that are running.
+  - Clean and understandable interface to see running processes.
   
 - Settings:
   - Ability to change the theme of Tasks. (Dark / Light Mode)
@@ -43,23 +43,20 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
  
 
 ## Installation
-1. You will need to install [.NET Core](https://dotnet.microsoft.com/download) if it is not installed already.
-2. Download Tasks from the **Releases** tab.
+1. First, you need to install [.NET Core](https://dotnet.microsoft.com/download) if it isn't installed already.
+2. Download the latest version of Tasks from the **Releases** tab.
 3. Extract the `.zip` and execute `Tasks.exe`.
 4. If you get the Windows SafeScreen message, click "Run Anyways".
 
-*The dependencies must be kept in the same folder. This will be fixed soon.*
+*The dependencies must be kept in the same folder.*
 
 ## Contribution
 To contribute to this project, please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
 
-## Support
-You can support our project in many ways, simply by downloading our application, leaving a star, forking, watching and reporting issues too.
-
 ## Credits
 * **Byron (@byronbytes)** - *Initial work / creation and development.*
 * **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
-* **The very helpful people in the VB.NET server.** - *You guys know who you are, thank you. You helped me fix bugs and taught me to do stuff myself.*
+* **The very helpful people in the VB.NET server.** - *You all helped me fix bugs and taught me to do stuff myself.*
 
 See the full list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
@@ -69,8 +66,8 @@ See the full list of [contributors](https://github.com/LiteTools/Tasks/contribut
 
 
 ## Gallery
-These images were last taken on v3.0.1 The design may vary for newer versions.
-You are allowed to distribute these screenshots for showcase purposes, it is also highly recommended.
+These images were taken on v3.0.1. Designs may vary for newer versions.
+You are allowed to distribute these screenshots for showcase.
 
 
 ![image](https://user-images.githubusercontent.com/53088136/146448769-f6b75abe-f8ee-428e-9089-31577f7c1003.png)
