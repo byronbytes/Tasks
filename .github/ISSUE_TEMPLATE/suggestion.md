@@ -2,7 +2,7 @@
 name: Suggestion
 about: Give us some suggestions on how to improve Tasks!
 title: 'Suggestion: '
-labels: 'suggestion'
+labels: suggestion
 assignees: byronbytes
 
 ---
@@ -21,5 +21,3 @@ Give a reason why we should add this suggestion to Tasks.
 If it is related, please paste the issue that is related.
 
 Link to Issue (If applicable):
-
-
