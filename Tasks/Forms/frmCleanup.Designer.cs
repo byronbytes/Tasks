@@ -115,6 +115,7 @@
             this.btnCleanup = new System.Windows.Forms.Button();
             this.cbOneDriveCache = new System.Windows.Forms.CheckBox();
             this.cbVLCCache = new System.Windows.Forms.CheckBox();
+            this.cbSpotifyCache = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -670,6 +671,7 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage7.Controls.Add(this.cbSpotifyCache);
             this.tabPage7.Controls.Add(this.cbVLCCache);
             this.tabPage7.Controls.Add(this.cbOneDriveCache);
             this.tabPage7.Controls.Add(this.cbIECache);
@@ -1325,6 +1327,21 @@
             this.toolTip1.SetToolTip(this.cbVLCCache, "Cleans Discord\'s cache and cookies.");
             this.cbVLCCache.UseVisualStyleBackColor = true;
             // 
+            // cbSpotifyCache
+            // 
+            this.cbSpotifyCache.AutoSize = true;
+            this.cbSpotifyCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbSpotifyCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbSpotifyCache.ForeColor = System.Drawing.Color.White;
+            this.cbSpotifyCache.Location = new System.Drawing.Point(319, 353);
+            this.cbSpotifyCache.Name = "cbSpotifyCache";
+            this.cbSpotifyCache.Size = new System.Drawing.Size(106, 21);
+            this.cbSpotifyCache.TabIndex = 83;
+            this.cbSpotifyCache.Text = "Spotify Cache";
+            this.cbSpotifyCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbSpotifyCache, "Cleans Discord\'s cache and cookies.");
+            this.cbSpotifyCache.UseVisualStyleBackColor = true;
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1465,5 +1482,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox cbOneDriveCache;
         private System.Windows.Forms.CheckBox cbVLCCache;
+        private System.Windows.Forms.CheckBox cbSpotifyCache;
     }
 }

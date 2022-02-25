@@ -717,6 +717,11 @@ namespace Tasks
                 if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("VLC Cache Deleted.");
             }
 
+            if(cbSpotifyCache.Checked)
+            {
+                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Local\\Packages\\SpotifyAB.SpotifyMusic_zpdnekdrzrea0\\LocalCache\\Spotify\\Data\\");
+                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Spotify Cache Deleted.");
+            }
 
             Core.Cleanup.WriteCleanupSummary();
 
