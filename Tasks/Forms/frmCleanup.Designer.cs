@@ -113,6 +113,8 @@
             this.button10 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
+            this.cbOneDriveCache = new System.Windows.Forms.CheckBox();
+            this.cbVLCCache = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -668,6 +670,8 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage7.Controls.Add(this.cbVLCCache);
+            this.tabPage7.Controls.Add(this.cbOneDriveCache);
             this.tabPage7.Controls.Add(this.cbIECache);
             this.tabPage7.Controls.Add(this.pictureBox3);
             this.tabPage7.Controls.Add(this.label8);
@@ -984,9 +988,9 @@
             this.cbDiscord.ForeColor = System.Drawing.Color.White;
             this.cbDiscord.Location = new System.Drawing.Point(319, 272);
             this.cbDiscord.Name = "cbDiscord";
-            this.cbDiscord.Size = new System.Drawing.Size(72, 21);
+            this.cbDiscord.Size = new System.Drawing.Size(111, 21);
             this.cbDiscord.TabIndex = 60;
-            this.cbDiscord.Text = "Discord";
+            this.cbDiscord.Text = "Discord Cache";
             this.cbDiscord.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.toolTip1.SetToolTip(this.cbDiscord, "Cleans Discord\'s cache and cookies.");
             this.cbDiscord.UseVisualStyleBackColor = true;
@@ -1291,6 +1295,36 @@
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
             // 
+            // cbOneDriveCache
+            // 
+            this.cbOneDriveCache.AutoSize = true;
+            this.cbOneDriveCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbOneDriveCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbOneDriveCache.ForeColor = System.Drawing.Color.White;
+            this.cbOneDriveCache.Location = new System.Drawing.Point(319, 299);
+            this.cbOneDriveCache.Name = "cbOneDriveCache";
+            this.cbOneDriveCache.Size = new System.Drawing.Size(120, 21);
+            this.cbOneDriveCache.TabIndex = 81;
+            this.cbOneDriveCache.Text = "OneDrive Cache";
+            this.cbOneDriveCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbOneDriveCache, "Cleans Discord\'s cache and cookies.");
+            this.cbOneDriveCache.UseVisualStyleBackColor = true;
+            // 
+            // cbVLCCache
+            // 
+            this.cbVLCCache.AutoSize = true;
+            this.cbVLCCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbVLCCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbVLCCache.ForeColor = System.Drawing.Color.White;
+            this.cbVLCCache.Location = new System.Drawing.Point(319, 326);
+            this.cbVLCCache.Name = "cbVLCCache";
+            this.cbVLCCache.Size = new System.Drawing.Size(88, 21);
+            this.cbVLCCache.TabIndex = 82;
+            this.cbVLCCache.Text = "VLC Cache";
+            this.cbVLCCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbVLCCache, "Cleans Discord\'s cache and cookies.");
+            this.cbVLCCache.UseVisualStyleBackColor = true;
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1429,5 +1463,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox cbOneDriveCache;
+        private System.Windows.Forms.CheckBox cbVLCCache;
     }
 }
