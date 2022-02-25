@@ -23,12 +23,6 @@ namespace Tasks.Core
 
         }
 
-
-        public static void WindowsUpdate()
-        {
-
-        }
-
         public static string getOSInfo()
         {
             //Get Operating system information.
@@ -64,10 +58,10 @@ namespace Tasks.Core
             {
                 switch (vs.Major)
                 {
-                    case 3:
+                    case 3: // Will Remove
                         operatingSystem = "NT 3.51";
                         break;
-                    case 4:
+                    case 4: // Will Remove
                         operatingSystem = "NT 4.0";
                         break;
                     case 5:
