@@ -105,14 +105,11 @@ namespace Tasks {
                 MessageBox.Show(StartupProcesses.SelectedItems[0].SubItems[0].Text.ToString());
             }
 
-
         //    if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") (This errors, will try to fix)
         //    {
           //      File.Delete(fileStartup);
           //      RefreshList();
           //  }
-
-             
         }
         
          class StartUpProgram {
@@ -160,7 +157,6 @@ namespace Tasks {
                     }
                 }
             }
-           
         }
 
         private void GetAllServices()
@@ -227,7 +223,6 @@ namespace Tasks {
                     {
                         MessageBox.Show("There was an error trying to add a new startup process.");
                     }
-
                 }
                 else RefreshList();
             }
