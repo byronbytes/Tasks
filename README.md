@@ -10,7 +10,7 @@
 ### Intentions
 We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial to everyone and should not include any hidden paywalls inside the application. Our goal is to make a tool that anyone can use from anywhere.
 
-## List of Features
+## Features
 
 - Cleanup:
   - Bloatware removal tool to remove unwanted Windows bloat.
@@ -43,6 +43,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
  
 
 ## Installation
+
 1. First, you need to install [.NET Core](https://dotnet.microsoft.com/download) if it isn't installed already.
 2. Download the latest version of Tasks from the **Releases** tab.
 3. Extract the `.zip` and execute `Tasks.exe`.
