@@ -24,7 +24,8 @@ namespace Tasks.Core
             if (Properties.Settings.Default.EnableCleanupLogs == true)
             {
                 try
-                {
+                { 
+                    // Writes everything to the file.
                     File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
                 }
                 catch
@@ -35,11 +36,16 @@ namespace Tasks.Core
 
             if (Properties.Settings.Default.CleanupMessageBox == true)
             {
-                MessageBox.Show("Cleanup has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
+                MessageBox.Show("Cleanup session has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
             }
             else
             {
-
+                
+            }
+            
+            if(Properties.Settings.Default.CleanupMessageBox == true && Properties.Settings.Default.EnableCleanupLogs == false)
+            {
+                MessageBox.Show("Cleanup successful.");
             }
         }
         
