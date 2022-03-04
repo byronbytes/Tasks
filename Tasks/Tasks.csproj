@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net5.0-windows10.0.22000.0</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Tasks 256x256 Logo.ico</ApplicationIcon>
     <Version>3.4.0</Version>
@@ -18,6 +18,8 @@
     <Win32Resource />
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <UseWPF>False</UseWPF>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
