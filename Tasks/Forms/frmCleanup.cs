@@ -65,6 +65,9 @@ namespace Tasks
                 cbSystemTempFolders.ForeColor = Color.Black;
                 cbWindowsLogFiles.ForeColor = Color.Black;
                 cbIECache.ForeColor = Color.Black;
+                cbOneDriveCache.ForeColor = Color.Black;
+                cbVLCCache.ForeColor = Color.Black;
+                cbSpotifyCache.ForeColor = Color.Black;
                 
                 tabPage1.BackColor = Color.White;
                 tabPage7.BackColor = Color.White;

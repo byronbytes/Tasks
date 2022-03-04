@@ -74,12 +74,15 @@ namespace Tasks {
             }
             else
             {
+                 if (startupKey.GetValue(AppName) == null)
+                {
                 // Remove Startup Program (Registry)
                 startupKey.Close();
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
                 startupKey.GetSubKeyNames();
                 startupKey.DeleteSubKey(AppName, true);
                 startupKey.Close();
+                 }
             }
         }
 
@@ -153,7 +156,7 @@ namespace Tasks {
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("There was an error adding a new Startup Program. To use the old method, right click the 'Add New' button and click 'Use Legacy Adding Method'.");
+                        MessageBox.Show("There was an error adding a new Startup Program. To use the old method, right click the 'Add New' button and click 'Use Legacy Creation Method'.");
                     }
                 }
             }
