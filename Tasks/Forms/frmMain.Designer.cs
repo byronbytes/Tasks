@@ -42,7 +42,6 @@ namespace Tasks
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -144,7 +143,6 @@ namespace Tasks
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(-8, 719);
@@ -162,18 +160,6 @@ namespace Tasks
             this.label4.Size = new System.Drawing.Size(102, 23);
             this.label4.TabIndex = 2;
             this.label4.Text = "Windows 10";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(62, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tasks is running as administrator.";
-            this.label3.Visible = false;
             // 
             // pictureBox5
             // 
@@ -237,7 +223,6 @@ namespace Tasks
         private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
         public System.Windows.Forms.Label label4;
     }
