@@ -709,21 +709,44 @@ namespace Tasks
 
             if(cbOneDriveCache.Checked)
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\OneDrive\\setup\\logs");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("OneDrive Cache Deleted.");
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\OneDrive\\setup\\logs");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("OneDrive Cache Deleted.");
+                }
+                catch
+                {
+                    CleanupLogsLBox.Items.Add("Error while deleting OneDrive cache.");
+                }
+             
             }
 
             if(cbVLCCache.Checked)
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\vlc\\art\\");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\vlc\\crashdump\\");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("VLC Cache Deleted.");
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\vlc\\art\\");
+                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\vlc\\crashdump\\");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("VLC Cache Deleted.");
+                }
+                catch
+                {
+                    CleanupLogsLBox.Items.Add("Error while deleting VLC cache.");
+                }
+              
             }
 
             if(cbSpotifyCache.Checked)
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Local\\Packages\\SpotifyAB.SpotifyMusic_zpdnekdrzrea0\\LocalCache\\Spotify\\Data\\");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Spotify Cache Deleted.");
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Packages\\SpotifyAB.SpotifyMusic_zpdnekdrzrea0\\LocalCache\\Spotify\\Data\\");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Spotify Cache Deleted.");
+                }
+                catch
+                {
+                    CleanupLogsLBox.Items.Add("Error while deleting Spotify Cache.");
+                }
             }
 
             Core.Cleanup.WriteCleanupSummary();

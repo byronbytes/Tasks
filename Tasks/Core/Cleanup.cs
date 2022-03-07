@@ -30,23 +30,19 @@ namespace Tasks.Core
                 }
                 catch
                 {
-                    MessageBox.Show("There was an error logging your cleanup session.");
+                    MessageBox.Show("There was an error creating the log files for your cleanup session.");
                 }
             }
 
-            if (Properties.Settings.Default.CleanupMessageBox == true)
-            {
-                MessageBox.Show("Cleanup session has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
-            }
-            else
-            {
-                
-            }
-            
-            if(Properties.Settings.Default.CleanupMessageBox == true && Properties.Settings.Default.EnableCleanupLogs == false)
+            if (Properties.Settings.Default.CleanupMessageBox == true && Properties.Settings.Default.EnableCleanupLogs == false)
             {
                 MessageBox.Show("Cleanup successful.");
             }
+            else if (Properties.Settings.Default.CleanupMessageBox == true && Properties.Settings.Default.EnableCleanupLogs == true)
+            {
+                MessageBox.Show("Cleanup session has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
+            }
+
         }
         
         
