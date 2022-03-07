@@ -47,7 +47,6 @@ namespace Tasks
 
                 label1.ForeColor = Color.White;
                 label2.ForeColor = Color.White;
-                label3.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
 
                 pictureBox1.Image = Properties.Resources.CleanupWhite;
@@ -69,7 +68,6 @@ namespace Tasks
                 
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
-                label3.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
             }
         }
@@ -84,7 +82,6 @@ namespace Tasks
 
             if (principal.IsInRole(WindowsBuiltInRole.Administrator))
             {
-                label3.Visible = true;
                 pictureBox5.Visible = true;
             }
         }
