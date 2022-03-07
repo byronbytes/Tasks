@@ -75,8 +75,7 @@ namespace Tasks {
                 // Remove Startup Program (Registry)
                 startupKey.Close();
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                startupKey.GetSubKeyNames();
-                startupKey.DeleteSubKey(AppName, true);
+                startupKey.DeleteValue(AppName, true);
                 startupKey.Close();
 
             }
@@ -105,14 +104,19 @@ namespace Tasks {
             }
 
 
-            if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
-            {
-                File.Delete(fileStartup);
-                RefreshList();
-                MessageBox.Show(fileStartup);
-            }
-
-        
+        //    if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
+         //   {
+          //      try
+             //   {
+           //         File.Delete(fileStartup);
+              //      RefreshList();
+             //   }
+             //   catch
+            //    {
+             //       MessageBox.Show("An error has occurred.");
+            //    }
+             
+          //  }
         }
 
         class StartUpProgram {

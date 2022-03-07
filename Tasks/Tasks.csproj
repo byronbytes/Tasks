@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows10.0.19041.0</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Tasks 256x256 Logo.ico</ApplicationIcon>
     <Version>3.4.0</Version>
@@ -19,7 +19,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AssemblyVersion>3.4.0.0</AssemblyVersion>
     <UseWPF>False</UseWPF>
-    <SupportedOSPlatformVersion>8.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
     <StartupObject>Tasks.Program</StartupObject>
   </PropertyGroup>
 
