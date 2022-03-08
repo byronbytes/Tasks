@@ -2,6 +2,9 @@
     (c) LiteTools 2022 (https://github.com/LiteTools)
     All rights reserved under the GNU General Public License v3.0.
 */
+// TODO: Instead of calling it 'Legacy Adding Method', create a drop selection to drop files into the Startup Folder.
+// TODO: Add a switch statement for Removing programs based on the Location (Startup / Registry)
+// Known Issue: It can only remove ones from HKLM 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,9 +89,7 @@ namespace Tasks {
             CheckTheme();
         }
 
-        private void StartupProcesses_SelectedIndexChanged(object sender, EventArgs e) {}
-
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
@@ -103,22 +104,22 @@ namespace Tasks {
                 MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
             }
 
-
-        //    if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
-         //   {
-          //      try
-             //   {
-           //         File.Delete(fileStartup);
-              //      RefreshList();
-             //   }
-             //   catch
-            //    {
-             //       MessageBox.Show("An error has occurred.");
-            //    }
+/*
+          if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
+           {
+              try
+                {
+                   File.Delete(fileStartup);
+                   RefreshList();
+               }
+               catch
+                {
+                    MessageBox.Show("An error has occurred.");
+             }
              
-          //  }
+          }
         }
-
+*/
         class StartUpProgram {
             public string Name { get; set; }
             public string Path { get; set; }            
