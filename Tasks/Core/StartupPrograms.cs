@@ -3,6 +3,7 @@
     All rights reserved under the GNU General Public License v3.0.
 */
 
+// No clue what to put here yet, probably just some starter details that will help for future updates.
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,17 +17,10 @@ namespace Tasks.Core
 {
     class StartupPrograms
     {
-        
-        public static void ListStartupPrograms()
-        {
-            
-        }
-        
-        public static void ListStartupServices()
-        {
-            
-        }
-        
+     
+        public static bool Disabled;
+        public static string StartupFolder =  Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
+        public static string HKLMStartup = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
         
     
     }
