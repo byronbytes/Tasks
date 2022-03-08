@@ -206,7 +206,6 @@ namespace Tasks
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
@@ -407,7 +406,7 @@ namespace Tasks
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Version: 3.4.0";
+            this.label2.Text = "Version: 3.5.0";
             // 
             // pictureBox1
             // 

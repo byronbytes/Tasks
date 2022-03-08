@@ -77,7 +77,6 @@ namespace Tasks
             this.StartupProcesses.TabIndex = 0;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
-            this.StartupProcesses.SelectedIndexChanged += new System.EventHandler(this.StartupProcesses_SelectedIndexChanged);
             // 
             // ProcessName
             // 
