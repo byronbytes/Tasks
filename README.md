@@ -56,8 +56,7 @@ Contributions are always encouraged, but before creating a pull request it is su
 
 ## Credits
 * **Matty (@byronbytes)** - *Initial work / creation and development.*
-* **Solirs** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
-* **The very helpful people in the VB.NET Discord.** - *You all helped me fix bugs and taught me to do stuff myself.*
+* **Solirs (@Solirs)** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 
 See the full list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
