@@ -16,6 +16,18 @@ namespace Tasks.Core
 {
     class StartupPrograms
     {
+        
+        public static void ListStartupPrograms()
+        {
+            
+        }
+        
+        public static void ListStartupServices()
+        {
+            
+        }
+        
+        
     
     }
 }
