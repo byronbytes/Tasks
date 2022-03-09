@@ -784,7 +784,7 @@ namespace Tasks
                 try 
                 {
 
-                 FileInfo fi = new FileInfo(ext.ToString());
+                FileInfo fi = new FileInfo(ext.ToString());
                 ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
 
                 long dirSize = DirSize(new DirectoryInfo(ext.ToString()));
@@ -792,7 +792,8 @@ namespace Tasks
                 extb.SubItems.Add(dirsizeMB + "MB");
                 extb.SubItems.Add(ext.ToString());
                 }
-                catch {
+                catch 
+                {
                     MessageBox.Show("An error has occurred, there is a chance that Microsoft Edge does not exist.");
                 }
                
