@@ -68,7 +68,7 @@ namespace Tasks
                 cbOneDriveCache.ForeColor = Color.Black;
                 cbVLCCache.ForeColor = Color.Black;
                 cbSpotifyCache.ForeColor = Color.Black;
-                
+
                 tabPage1.BackColor = Color.White;
                 tabPage7.BackColor = Color.White;
                 tabPage8.BackColor = Color.White;
@@ -100,7 +100,7 @@ namespace Tasks
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
                 label20.ForeColor = Color.Black;
-            
+
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
@@ -216,7 +216,7 @@ namespace Tasks
                 try
                 {
                     string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
-                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database"};
+                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database" };
                     List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
 
                     foreach (string subdir in userDataCacheDirs)
@@ -257,34 +257,34 @@ namespace Tasks
             {
                 try
                 {
-                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
+                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage");
+                    var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
                 }
                 catch
                 {
                     CleanupLogsLBox.Items.Add("Unable to delete Chrome Sessions.");
                 }
 
-              
+
             }
 
             if (cbChromeCookies.Checked)
             {
-                try 
+                try
                 {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\IndexedDB\\");
+                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies");
+                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies-journal");
                     var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Network\\");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Cookies Deleted.");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("Chrome Cookies Deleted.");
                 }
-                catch 
+                catch
                 {
-                CleanupLogsLBox.Items.Add("Unable to delete Chrome Cookies.");
+                    CleanupLogsLBox.Items.Add("Unable to delete Chrome Cookies.");
                 }
-               
+
             }
 
 
@@ -482,7 +482,7 @@ namespace Tasks
                     startInfo.RedirectStandardError = true;
                     process.StartInfo = startInfo;
                     process.OutputDataReceived += (sender, args) => sb.AppendLine(args.Data);
-    
+
                     CleanupLogsLBox.Items.Add("DNS Cache Cleared.");
                 }
                 catch (Exception ex)
@@ -512,6 +512,7 @@ namespace Tasks
                 }
             }
 
+
             if (cbExplorerRecents.Checked)
             {
                 try
@@ -525,18 +526,39 @@ namespace Tasks
                 }
             }
 
+
             if (cbEdgeSearchHistory.Checked)
             {
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History\\");
-                CleanupLogsLBox.Items.Add("Edge Search History Deleted.");
+                try 
+                {
+                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History\\");
+                    CleanupLogsLBox.Items.Add("Edge Search History Deleted.");
+                }
+                catch
+                {
+                    CleanupLogsLBox.Items.Add("Error while deleting Edge Search History.");
+                }
+
             }
+
+
             if (cbEdgeCookies.Checked)
             {
+                try
+                {
+                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies\\");
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\IndexedDB\\");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Cookies Deleted.");
+                }
+                catch
+                {
 
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cookies\\");
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\IndexedDB\\");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("Edge Cookies Deleted.");
+                    CleanupLogsLBox.Items.Add("Error while deleting Edge Cookies.");
+                }
+
             }
+
+
 
             if (cbEdgeCache.Checked)
             {
@@ -578,19 +600,19 @@ namespace Tasks
 
             if (cbEdgeSessions.Checked)
             {
-                try 
-                 {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Sessions\\");
-                var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Session Storage\\");
-                var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extension State\\");
-                if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Edge Session Deleted.");
-                  }
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Sessions\\");
+                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Session Storage\\");
+                    var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Extension State\\");
+                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Edge Session Deleted.");
+                }
 
-                catch 
+                catch
                 {
                     CleanupLogsLBox.Items.Add("Unable to delete Edge Sessions.");
                 }
-             
+
             }
 
             if (cbSystemDirectXCache.Checked)
@@ -707,7 +729,7 @@ namespace Tasks
             }
 
 
-            if(cbOneDriveCache.Checked)
+            if (cbOneDriveCache.Checked)
             {
                 try
                 {
@@ -718,10 +740,10 @@ namespace Tasks
                 {
                     CleanupLogsLBox.Items.Add("Error while deleting OneDrive cache.");
                 }
-             
+
             }
 
-            if(cbVLCCache.Checked)
+            if (cbVLCCache.Checked)
             {
                 try
                 {
@@ -733,10 +755,10 @@ namespace Tasks
                 {
                     CleanupLogsLBox.Items.Add("Error while deleting VLC cache.");
                 }
-              
+
             }
 
-            if(cbSpotifyCache.Checked)
+            if (cbSpotifyCache.Checked)
             {
                 try
                 {
@@ -781,22 +803,22 @@ namespace Tasks
         {
             foreach (var ext in directoryInfo.GetDirectories())
             {
-                try 
+                try
                 {
 
-                FileInfo fi = new FileInfo(ext.ToString());
-                ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
+                    FileInfo fi = new FileInfo(ext.ToString());
+                    ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
 
-                long dirSize = DirSize(new DirectoryInfo(ext.ToString()));
-                double dirsizeMB = ConvertBytesToMegabytes(dirSize);
-                extb.SubItems.Add(dirsizeMB + "MB");
-                extb.SubItems.Add(ext.ToString());
+                    long dirSize = DirSize(new DirectoryInfo(ext.ToString()));
+                    double dirsizeMB = ConvertBytesToMegabytes(dirSize);
+                    extb.SubItems.Add(dirsizeMB + "MB");
+                    extb.SubItems.Add(ext.ToString());
                 }
-                catch 
+                catch
                 {
                     MessageBox.Show("An error has occurred, there is a chance that Microsoft Edge does not exist.");
                 }
-               
+
             }
         }
 
@@ -851,14 +873,14 @@ namespace Tasks
         private void button3_Click(object sender, EventArgs e)
         {
 
-            if (ExtensionsBox.SelectedItems.Count >= 0) 
+            if (ExtensionsBox.SelectedItems.Count >= 0)
             {
                 if (comboBox1.Text == "Google Chrome")
                 {
                     Process.Start("taskkill", "/f /im chrome.exe");
 
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
-                          {
+                    {
                         try
                         {
                             var item = ExtensionsBox.SelectedItems[0];
@@ -941,7 +963,7 @@ namespace Tasks
             {
                 MessageBox.Show("An error has occurred. You will need to run Tasks as administrator for this to work.");
             }
-          
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -989,14 +1011,14 @@ namespace Tasks
                 cbDiscord.Enabled = false;
             }
 
-            if (!Directory.Exists(Dirs.edgeDir))
-            {
-                cbEdgeCache.Enabled = false;
-                cbEdgeCookies.Enabled = false;
-                cbEdgeSearchHistory.Enabled = false;
-                cbEdgeSessions.Enabled = false;
-            }
-
+            /*    if (!Directory.Exists(Dirs.edgeDir))
+                {
+                    cbEdgeCache.Enabled = false;
+                    cbEdgeCookies.Enabled = false;
+                    cbEdgeSearchHistory.Enabled = false;
+                    cbEdgeSessions.Enabled = false;
+                }
+            */
             if (Directory.Exists(Dirs.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
@@ -1154,7 +1176,7 @@ namespace Tasks
             catch (Exception)
             {
                 MessageBox.Show("Error while trying to clean DNS Cache.");
-      
+
             }
         }
 
