@@ -84,7 +84,6 @@ namespace Tasks
                 label2.ForeColor = Color.Black;
                 label3.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
-                label5.ForeColor = Color.Black;
                 label6.ForeColor = Color.Black;
                 label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
@@ -104,7 +103,6 @@ namespace Tasks
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
-                label5.ForeColor = Color.Black;
                 groupBox2.ForeColor = Color.Black;
                 groupBox3.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.WhiteSmoke;

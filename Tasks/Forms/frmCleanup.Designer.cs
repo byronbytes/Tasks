@@ -28,7 +28,6 @@
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -64,6 +63,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.cbSpotifyCache = new System.Windows.Forms.CheckBox();
+            this.cbVLCCache = new System.Windows.Forms.CheckBox();
+            this.cbOneDriveCache = new System.Windows.Forms.CheckBox();
             this.cbIECache = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -113,9 +115,6 @@
             this.button10 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
-            this.cbOneDriveCache = new System.Windows.Forms.CheckBox();
-            this.cbVLCCache = new System.Windows.Forms.CheckBox();
-            this.cbSpotifyCache = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -193,7 +192,6 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage5.Controls.Add(this.label5);
             this.tabPage5.Controls.Add(this.progressBar1);
             this.tabPage5.Controls.Add(this.groupBox3);
             this.tabPage5.Controls.Add(this.groupBox2);
@@ -207,17 +205,6 @@
             this.tabPage5.Size = new System.Drawing.Size(1038, 626);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Quick Clean";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(6, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(388, 42);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "If Quick Clean fails to clean, run Tasks as administrator\r\nand try again.";
             // 
             // progressBar1
             // 
@@ -317,7 +304,9 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(739, 84);
             this.label9.TabIndex = 0;
-            this.label9.Text = resources.GetString("label9.Text");
+            this.label9.Text = "Quick Clean cleans directories that clutter up with temp folders.\r\nThese folders " +
+    "are known to pile up quick and slow down computer performance, so it\'s \r\nbest to" +
+    " optimize them regularly.";
             // 
             // tabPage1
             // 
@@ -532,7 +521,6 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(598, 15);
             this.label4.Name = "label4";
@@ -580,7 +568,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(356, 15);
             this.label1.Name = "label1";
@@ -649,7 +636,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(20, 15);
             this.label2.Name = "label2";
@@ -704,6 +690,51 @@
             this.tabPage7.Size = new System.Drawing.Size(1018, 580);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Applications";
+            // 
+            // cbSpotifyCache
+            // 
+            this.cbSpotifyCache.AutoSize = true;
+            this.cbSpotifyCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbSpotifyCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbSpotifyCache.ForeColor = System.Drawing.Color.White;
+            this.cbSpotifyCache.Location = new System.Drawing.Point(319, 353);
+            this.cbSpotifyCache.Name = "cbSpotifyCache";
+            this.cbSpotifyCache.Size = new System.Drawing.Size(106, 21);
+            this.cbSpotifyCache.TabIndex = 83;
+            this.cbSpotifyCache.Text = "Spotify Cache";
+            this.cbSpotifyCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbSpotifyCache, "Cleans Discord\'s cache and cookies.");
+            this.cbSpotifyCache.UseVisualStyleBackColor = true;
+            // 
+            // cbVLCCache
+            // 
+            this.cbVLCCache.AutoSize = true;
+            this.cbVLCCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbVLCCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbVLCCache.ForeColor = System.Drawing.Color.White;
+            this.cbVLCCache.Location = new System.Drawing.Point(319, 326);
+            this.cbVLCCache.Name = "cbVLCCache";
+            this.cbVLCCache.Size = new System.Drawing.Size(88, 21);
+            this.cbVLCCache.TabIndex = 82;
+            this.cbVLCCache.Text = "VLC Cache";
+            this.cbVLCCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbVLCCache, "Cleans Discord\'s cache and cookies.");
+            this.cbVLCCache.UseVisualStyleBackColor = true;
+            // 
+            // cbOneDriveCache
+            // 
+            this.cbOneDriveCache.AutoSize = true;
+            this.cbOneDriveCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbOneDriveCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbOneDriveCache.ForeColor = System.Drawing.Color.White;
+            this.cbOneDriveCache.Location = new System.Drawing.Point(319, 299);
+            this.cbOneDriveCache.Name = "cbOneDriveCache";
+            this.cbOneDriveCache.Size = new System.Drawing.Size(120, 21);
+            this.cbOneDriveCache.TabIndex = 81;
+            this.cbOneDriveCache.Text = "OneDrive Cache";
+            this.cbOneDriveCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTip1.SetToolTip(this.cbOneDriveCache, "Cleans Discord\'s cache and cookies.");
+            this.cbOneDriveCache.UseVisualStyleBackColor = true;
             // 
             // cbIECache
             // 
@@ -1297,51 +1328,6 @@
             this.btnCleanup.UseVisualStyleBackColor = true;
             this.btnCleanup.Click += new System.EventHandler(this.button8_Click);
             // 
-            // cbOneDriveCache
-            // 
-            this.cbOneDriveCache.AutoSize = true;
-            this.cbOneDriveCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbOneDriveCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbOneDriveCache.ForeColor = System.Drawing.Color.White;
-            this.cbOneDriveCache.Location = new System.Drawing.Point(319, 299);
-            this.cbOneDriveCache.Name = "cbOneDriveCache";
-            this.cbOneDriveCache.Size = new System.Drawing.Size(120, 21);
-            this.cbOneDriveCache.TabIndex = 81;
-            this.cbOneDriveCache.Text = "OneDrive Cache";
-            this.cbOneDriveCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbOneDriveCache, "Cleans Discord\'s cache and cookies.");
-            this.cbOneDriveCache.UseVisualStyleBackColor = true;
-            // 
-            // cbVLCCache
-            // 
-            this.cbVLCCache.AutoSize = true;
-            this.cbVLCCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbVLCCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbVLCCache.ForeColor = System.Drawing.Color.White;
-            this.cbVLCCache.Location = new System.Drawing.Point(319, 326);
-            this.cbVLCCache.Name = "cbVLCCache";
-            this.cbVLCCache.Size = new System.Drawing.Size(88, 21);
-            this.cbVLCCache.TabIndex = 82;
-            this.cbVLCCache.Text = "VLC Cache";
-            this.cbVLCCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbVLCCache, "Cleans Discord\'s cache and cookies.");
-            this.cbVLCCache.UseVisualStyleBackColor = true;
-            // 
-            // cbSpotifyCache
-            // 
-            this.cbSpotifyCache.AutoSize = true;
-            this.cbSpotifyCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSpotifyCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbSpotifyCache.ForeColor = System.Drawing.Color.White;
-            this.cbSpotifyCache.Location = new System.Drawing.Point(319, 353);
-            this.cbSpotifyCache.Name = "cbSpotifyCache";
-            this.cbSpotifyCache.Size = new System.Drawing.Size(106, 21);
-            this.cbSpotifyCache.TabIndex = 83;
-            this.cbSpotifyCache.Text = "Spotify Cache";
-            this.cbSpotifyCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbSpotifyCache, "Cleans Discord\'s cache and cookies.");
-            this.cbSpotifyCache.UseVisualStyleBackColor = true;
-            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1470,7 +1456,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label16;
         internal System.Windows.Forms.ListBox CleanupLogsLBox;
         private System.Windows.Forms.Button button10;
