@@ -55,8 +55,6 @@ namespace Tasks
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -66,7 +64,7 @@ namespace Tasks
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(-11, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(152, 722);
+            this.panel1.Size = new System.Drawing.Size(151, 722);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox4
@@ -139,15 +137,14 @@ namespace Tasks
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(-8, 719);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 719);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1209, 62);
+            this.panel3.Size = new System.Drawing.Size(1196, 54);
             this.panel3.TabIndex = 2;
             // 
             // label4
