@@ -58,24 +58,16 @@ namespace Tasks
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(1, 0);
             this.tabControl1.Multiline = true;
@@ -304,6 +296,7 @@ namespace Tasks
             this.tabPage2.Size = new System.Drawing.Size(1045, 682);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "About";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // linkLabel2
             // 
@@ -430,75 +423,6 @@ namespace Tasks
             this.label1.TabIndex = 31;
             this.label1.Text = "Tasks";
             // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage4.Controls.Add(this.button4);
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.listBox2);
-            this.tabPage4.Controls.Add(this.label20);
-            this.tabPage4.Location = new System.Drawing.Point(4, 30);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1045, 682);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Tasks Files";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(16, 566);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 31);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "View Folder";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(189, 566);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 31);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Delete All";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(350, 566);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 31);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 25;
-            this.listBox2.Location = new System.Drawing.Point(16, 68);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(464, 475);
-            this.listBox2.TabIndex = 34;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(16, 14);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(399, 25);
-            this.label20.TabIndex = 33;
-            this.label20.Text = "Cleanup Summaries for Tasks are listed below.\r\n";
-            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -517,8 +441,6 @@ namespace Tasks
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -547,16 +469,10 @@ namespace Tasks
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox checkBox2;
     }

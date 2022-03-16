@@ -883,7 +883,8 @@ namespace Tasks
                         {
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
-                            Remove.DeleteExtension(subItem, false);
+                            Thread.Sleep(75);
+                            Directory.Delete(subItem, true);
                             ExtensionsBox.Items.Remove(eachItem);
                         }
                         catch (Exception ex)
@@ -899,7 +900,8 @@ namespace Tasks
 
                     try
                     {
-                        Remove.DeleteExtension(ExtensionsBox.SelectedItems[0].SubItems[2].Text, true);
+                        Thread.Sleep(75);
+                        File.Delete(ExtensionsBox.SelectedItems[0].SubItems[2].Text);
 
                         foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                         {
@@ -925,7 +927,8 @@ namespace Tasks
                         {
                             var item = ExtensionsBox.SelectedItems[0];
                             var subItem = item.SubItems[2].Text;
-                            Remove.DeleteExtension(subItem, false);
+                            Thread.Sleep(75);
+                            Directory.Delete(subItem, true);
                             ExtensionsBox.Items.Remove(eachItem);
                             CleanupLogsLBox.Items.Add("Extension Removed.");
 

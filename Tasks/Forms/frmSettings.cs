@@ -99,7 +99,7 @@ namespace Tasks
         private void frmSettings_Load(object sender, EventArgs e)
         {
             CheckTheme();
-
+            /*
             try
             {
                 FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary").GetFiles("*.txt");
@@ -113,7 +113,7 @@ namespace Tasks
             {
                 listBox2.Items.Add("There was an error trying to list the files.");
             }
-
+            */
         }
 
         public void CheckTheme()
@@ -129,7 +129,6 @@ namespace Tasks
                 this.BackColor = Color.FromArgb(250, 250, 250);
                 tabPage1.BackColor = Color.White;
                 tabPage2.BackColor = Color.White;
-                tabPage4.BackColor = Color.White;
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
                 label3.ForeColor = Color.Black;
@@ -146,10 +145,7 @@ namespace Tasks
                 label14.ForeColor = Color.Black;
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
-                listBox2.BackColor = Color.WhiteSmoke;
-                listBox2.ForeColor = Color.Black;
                 checkBox2.ForeColor = Color.Black;
-                label20.ForeColor = Color.Black;
                 tabControl1.BackColor = Color.White;
                 checkBox1.ForeColor = Color.Black;
                 radioButton1.ForeColor = Color.Black;
@@ -160,41 +156,6 @@ namespace Tasks
                 listBox1.ForeColor = Color.Black;
 
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                File.Delete(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary\\" + listBox2.SelectedItem.ToString());
-            }
-            catch
-            {
-                MessageBox.Show("There was an error trying to delete the file.");
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                FileInfo[] files = new DirectoryInfo(@Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary\\").GetFiles("*.txt");
-
-                foreach (FileInfo file in files)
-                {
-                    File.Delete(file.ToString());
-                }
-            }
-            catch
-            {
-                MessageBox.Show("There was an error trying to delete the files.");
-            }
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Tasks\\Cleanup Summary\\");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -221,6 +182,11 @@ namespace Tasks
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }
