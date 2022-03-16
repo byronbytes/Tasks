@@ -346,7 +346,7 @@ namespace Tasks
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(15, 137);
+            this.label5.Location = new System.Drawing.Point(10, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 30);
             this.label5.TabIndex = 37;
@@ -363,9 +363,9 @@ namespace Tasks
             this.listBox1.Items.AddRange(new object[] {
             "Matty (@byronbytes)",
             "Solirs (@Solirs)"});
-            this.listBox1.Location = new System.Drawing.Point(15, 173);
+            this.listBox1.Location = new System.Drawing.Point(10, 187);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(331, 460);
+            this.listBox1.Size = new System.Drawing.Size(331, 180);
             this.listBox1.TabIndex = 36;
             // 
             // label4
