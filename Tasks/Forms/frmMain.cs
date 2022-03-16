@@ -14,6 +14,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tasks.Forms;
 
 namespace Tasks
 {
@@ -102,7 +103,7 @@ namespace Tasks
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            ShowForm(new frmSettings());
+            ShowForm(new frmNewSettings());
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
