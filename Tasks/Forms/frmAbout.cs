@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tasks.Forms
 {
-    public partial class frmNewSettings : Form
+    public partial class frmAbout : Form
     {
-        public frmNewSettings()
+        public frmAbout()
         {
             InitializeComponent();
         }

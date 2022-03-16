@@ -122,20 +122,12 @@ namespace Tasks
             if (Properties.Settings.Default.Theme == "dark")
             {
                 this.BackColor = Color.FromArgb(18, 18, 18);
-                label1.ForeColor = Color.White;
             }
 
             if (Properties.Settings.Default.Theme == "light")
             {
                 this.BackColor = Color.FromArgb(250, 250, 250);
-                tabPage1.BackColor = Color.White;
-                tabPage2.BackColor = Color.White;
-                label1.ForeColor = Color.Black;
-                label2.ForeColor = Color.Black;
-                label3.ForeColor = Color.Black;
-                label4.ForeColor = Color.Black;
-                label5.ForeColor = Color.Black;
-                label6.ForeColor = Color.Black;
+              
                 label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
@@ -147,14 +139,11 @@ namespace Tasks
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
                 checkBox2.ForeColor = Color.Black;
-                tabControl1.BackColor = Color.White;
                 checkBox1.ForeColor = Color.Black;
                 radioButton1.ForeColor = Color.Black;
                 radioButton2.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.GhostWhite;
                 comboBox1.ForeColor = Color.Black;
-                listBox1.BackColor = Color.FromArgb(240, 240, 240);
-                listBox1.ForeColor = Color.Black;
 
             }
         }
@@ -194,7 +183,7 @@ namespace Tasks
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmNewSettings NetSettings = new frmNewSettings();
+            frmSettingsHolder NetSettings = new frmSettingsHolder();
             NetSettings.Show();
         }
     }

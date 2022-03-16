@@ -216,12 +216,12 @@ namespace Tasks
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox5;
         public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Panel panel2;
     }
 }
 

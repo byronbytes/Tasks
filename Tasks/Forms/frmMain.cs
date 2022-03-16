@@ -27,7 +27,7 @@ namespace Tasks
 
         private Form _currentForm;
 
-        private void ShowForm(Form newForm)
+        public void ShowForm(Form newForm)
         {
             if (_currentForm != null) _currentForm.Hide();
             newForm.TopLevel = false;
@@ -103,7 +103,7 @@ namespace Tasks
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            ShowForm(new frmNewSettings());
+            ShowForm(new frmSettingsHolder());
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
