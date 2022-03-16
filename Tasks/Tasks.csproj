@@ -17,7 +17,7 @@
     <NeutralLanguage>en</NeutralLanguage>
     <Win32Resource />
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <AssemblyVersion>3.4.0.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <UseWPF>False</UseWPF>
     <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
     <StartupObject>Tasks.Program</StartupObject>
@@ -27,7 +27,7 @@
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <Optimize>false</Optimize>
+    <Optimize>True</Optimize>
   </PropertyGroup>
 
   <ItemGroup>

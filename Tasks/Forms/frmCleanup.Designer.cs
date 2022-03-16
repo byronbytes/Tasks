@@ -713,7 +713,7 @@
             this.cbSpotifyCache.TabIndex = 83;
             this.cbSpotifyCache.Text = "Spotify Cache";
             this.cbSpotifyCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbSpotifyCache, "Cleans Discord\'s cache and cookies.");
+            this.toolTip1.SetToolTip(this.cbSpotifyCache, "Cleans Spotify\'s cache.");
             this.cbSpotifyCache.UseVisualStyleBackColor = true;
             // 
             // cbVLCCache
@@ -728,7 +728,7 @@
             this.cbVLCCache.TabIndex = 82;
             this.cbVLCCache.Text = "VLC Cache";
             this.cbVLCCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbVLCCache, "Cleans Discord\'s cache and cookies.");
+            this.toolTip1.SetToolTip(this.cbVLCCache, "Cleans VLC\'s cache");
             this.cbVLCCache.UseVisualStyleBackColor = true;
             // 
             // cbOneDriveCache
@@ -743,7 +743,7 @@
             this.cbOneDriveCache.TabIndex = 81;
             this.cbOneDriveCache.Text = "OneDrive Cache";
             this.cbOneDriveCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbOneDriveCache, "Cleans Discord\'s cache and cookies.");
+            this.toolTip1.SetToolTip(this.cbOneDriveCache, "Cleans OneDrive\'s cache");
             this.cbOneDriveCache.UseVisualStyleBackColor = true;
             // 
             // cbIECache
