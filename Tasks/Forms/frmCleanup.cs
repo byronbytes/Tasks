@@ -1009,14 +1009,14 @@ namespace Tasks
                 cbDiscord.Enabled = false;
             }
 
-            /*    if (!Directory.Exists(Dirs.edgeDir))
+                if (!Directory.Exists(Dirs.edgeDir))
                 {
                     cbEdgeCache.Enabled = false;
                     cbEdgeCookies.Enabled = false;
                     cbEdgeSearchHistory.Enabled = false;
                     cbEdgeSessions.Enabled = false;
                 }
-            */
+            
             if (Directory.Exists(Dirs.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");

@@ -75,6 +75,7 @@ namespace Tasks
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox4, "Settings");
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
@@ -85,7 +86,7 @@ namespace Tasks
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox3, "An advanced Task Manager with more process information.");
+            this.toolTip1.SetToolTip(this.pictureBox3, "Task Manager");
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
@@ -96,7 +97,7 @@ namespace Tasks
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Manage programs that start on boot.");
+            this.toolTip1.SetToolTip(this.pictureBox2, "Startup Programs");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
@@ -107,8 +108,7 @@ namespace Tasks
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Cleanup will clean all temp folders and cache files for \r\napplications and the sy" +
-        "stem.");
+            this.toolTip1.SetToolTip(this.pictureBox1, "Cleanup");
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
