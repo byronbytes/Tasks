@@ -27,7 +27,7 @@ namespace Tasks
     {
         public frmMain() {
             
-            Directory.CreateDirectory(Dirs.tasksDir); // Broken?
+            Directory.CreateDirectory(Dirs.tasksDir); // Program Files x86
             InitializeComponent(); 
             CheckTheme(); 
             Core.SystemInfo.ComputerBit();
