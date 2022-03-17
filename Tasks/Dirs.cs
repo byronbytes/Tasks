@@ -12,7 +12,6 @@ using System.Windows.Forms;
 
 namespace Tasks
 {
-    // Deprecated In this release.
     class Dirs
     {
             // Normal Directories:
@@ -24,8 +23,8 @@ namespace Tasks
         public static string firefoxExtDir;
         public static string chromeExtDir;
         public static string edgeExtDir;
-        // Tasks Directories:
-        public static string tasksDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Roaming\\Tasks\\";
+             // Tasks Directories:
+        public static string tasksDir = "C:\\Program Files x86\\Tasks\\";
         public static string tasksCleanup = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Roaming\\Tasks\\Cleanup Summary\\";
     }
 
@@ -43,41 +42,6 @@ namespace Tasks
 
         public static string tasksDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Roaming\\Tasks\\";
         public static string TasksDirectory = ""; // Will be moving the directory to a more user-friendly place.
-        public static string TasksLogsDirectory = "";
-
-
-        public static string ChromeDirectory = ""; // Added later
-        public static string ChromeDirectoryExtension = "";
-        public static string FirefoxDirectory = "";
-        public static string FirefoxDirectoryExtension = "";
-        public static string EdgeDirectory = "";
-        public static string EdgeDirectoryExtension = "";
-        public static string DiscordDirectory = "";
-    
-
-
-        public static void CreateDirectories()
-        {
-            if(Directory.Exists(tasksDir))
-            {
-                Debug.Print("No need to create a new directory since it already exists.");
-            }
-            else
-            {
-             Directory.CreateDirectory(tasksDir);
-
-            }
-        }
-
-        public static void DeleteDirectories()
-        {
-            if(Directory.Exists(tasksDir))
-            {
-                Directory.Delete(tasksDir);
-                MessageBox.Show("Deleted Tasks directory.");
-            }
-        }
-
-
+  
     }
 }
