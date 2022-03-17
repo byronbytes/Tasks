@@ -1,5 +1,8 @@
-// (c) LiteTools 2021
-// All rights reserved under the Apache-2.0 license.
+/*
+    (c) LiteTools 2022 (https://github.com/LiteTools)
+    All rights reserved under the GNU General Public License v3.0.
+*/
+
 
 using System;
 using System.Collections.Generic;
@@ -16,13 +19,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tasks.Forms;
 
+//TODO: Update form showing method, update theme checking method (slow), find the right icon for startup programs for light theme (its pixelated ik)
+
 namespace Tasks
 {
     public partial class frmMain : Form
     {
         public frmMain() {
             
-            Directory.CreateDirectory(Dirs.tasksDir); InitializeComponent(); CheckTheme(); Core.SystemInfo.ComputerBit();
+            Directory.CreateDirectory(Dirs.tasksDir); // Broken?
+            InitializeComponent(); 
+            CheckTheme(); 
+            Core.SystemInfo.ComputerBit();
         }
 
         private Form _currentForm;
@@ -107,7 +115,7 @@ namespace Tasks
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            CheckTheme();
+            CheckTheme(); // inefficient
         }
       
     }
