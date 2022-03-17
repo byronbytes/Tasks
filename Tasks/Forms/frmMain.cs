@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tasks.Forms;
 
-//TODO: Update form showing method, update theme checking method (slow), find the right icon for startup programs for light theme (its pixelated ik)
+//TODO: Update theme checking method (slow), find the right icon for startup programs for light theme (its pixelated ik)
 
 namespace Tasks
 {
@@ -33,17 +33,21 @@ namespace Tasks
             Core.SystemInfo.ComputerBit();
         }
 
-        private Form _currentForm;
-
-        public void ShowForm(Form newForm)
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
         {
-            if (_currentForm != null) _currentForm.Hide();
-            newForm.TopLevel = false;
-            newForm.AutoScroll = true;
-            newForm.FormBorderStyle = FormBorderStyle.None;
-            panel2.Controls.Add(newForm);
-            newForm.Show();
-            _currentForm = newForm;
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel2.Controls.Add(childForm);
+            panel2.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
         public void CheckTheme()
@@ -58,10 +62,11 @@ namespace Tasks
                 label2.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
 
-                pictureBox1.Image = Properties.Resources.CleanupWhite;
-                pictureBox2.Image = Properties.Resources.StartupProgramsWhite;
-                pictureBox3.Image = Properties.Resources.TaskManagerWhite;
-                pictureBox4.Image = Properties.Resources.SettingsWhite;
+                button1.Image = Properties.Resources.CleanupWhite;
+
+                button2.Image = Properties.Resources.StartupProgramsWhite;
+                button3.Image = Properties.Resources.TaskManagerWhite;
+                button4.Image = Properties.Resources.SettingsWhite;
             }
 
             if (Properties.Settings.Default.Theme == "light")
@@ -69,12 +74,15 @@ namespace Tasks
                 panel1.BackColor = Color.FromArgb(250, 250, 250);
                 panel2.BackColor = Color.FromArgb(250, 250, 250);
                 panel3.BackColor = Color.FromArgb(250, 250, 250);
-                pictureBox1.Image = Properties.Resources.Cleanup;
-                pictureBox2.Image = Properties.Resources.Startup_Programs_Black;
-                pictureBox3.Image = Properties.Resources.Task_Manager;
-                pictureBox4.Image = Properties.Resources.Settings;
+                button1.Image = Properties.Resources.Cleanup;
+                button2.Image = Properties.Resources.Startup_Programs_Black;
+                button3.Image = Properties.Resources.Task_Manager;
+                button4.Image = Properties.Resources.Settings;
+                button1.BackColor = Color.FromArgb(240, 240, 240);
+                button2.BackColor = Color.FromArgb(240, 240, 240);
+                button3.BackColor = Color.FromArgb(240, 240, 240);
+                button4.BackColor = Color.FromArgb(240, 240, 240);
 
-                
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
@@ -97,26 +105,40 @@ namespace Tasks
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ShowForm(new frmCleanup());
+            openChildForm(new frmCleanup());
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ShowForm(new frmStartupPrograms());
+            openChildForm(new frmStartupPrograms());
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            ShowForm(new frmTaskManager());
+            openChildForm(new frmTaskManager());
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            ShowForm(new frmSettingsHolder());
+            openChildForm(new frmSettingsHolder());
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
             CheckTheme(); // inefficient
         }
-      
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmCleanup());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmSettingsHolder());
+        }
     }
 }
