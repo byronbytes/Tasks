@@ -48,7 +48,6 @@ namespace Tasks
             {
                 radioButton2.Checked = true;
             }
-
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -62,7 +61,6 @@ namespace Tasks
                 Properties.Settings.Default.CleanupMessageBox = false;
             }
             Properties.Settings.Default.Save();
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,6 +77,7 @@ namespace Tasks
 
 
         }
+        
         frmMain Main = new frmMain();
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -169,8 +168,8 @@ namespace Tasks
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmSettingsHolder NetSettings = new frmSettingsHolder();
-            NetSettings.Show();
+            frmSettingsHolder NewSettings = new frmSettingsHolder();
+            NewSettings.Show();
         }
     }
 }
