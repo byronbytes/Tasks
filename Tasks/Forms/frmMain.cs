@@ -102,25 +102,6 @@ namespace Tasks
                 pictureBox5.Visible = true;
             }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmCleanup());
-        }
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmStartupPrograms());
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmTaskManager());
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmSettingsHolder());
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             CheckTheme(); // inefficient
@@ -139,6 +120,16 @@ namespace Tasks
         private void button4_Click(object sender, EventArgs e)
         {
             openChildForm(new frmSettingsHolder());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmStartupPrograms());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmTaskManager());
         }
     }
 }
