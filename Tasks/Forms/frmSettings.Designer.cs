@@ -61,10 +61,11 @@ namespace Tasks
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.checkBox2.Location = new System.Drawing.Point(25, 150);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(155, 19);
+            this.checkBox2.Size = new System.Drawing.Size(169, 21);
             this.checkBox2.TabIndex = 15;
             this.checkBox2.Text = "Enable Cleanup Logging";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -75,7 +76,7 @@ namespace Tasks
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(25, 411);
+            this.label19.Location = new System.Drawing.Point(25, 432);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(206, 15);
             this.label19.TabIndex = 14;
@@ -86,7 +87,7 @@ namespace Tasks
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(25, 390);
+            this.label18.Location = new System.Drawing.Point(25, 411);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(57, 21);
             this.label18.TabIndex = 13;
@@ -96,12 +97,12 @@ namespace Tasks
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton2.Location = new System.Drawing.Point(184, 440);
+            this.radioButton2.Location = new System.Drawing.Point(179, 461);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(91, 19);
+            this.radioButton2.Size = new System.Drawing.Size(52, 19);
             this.radioButton2.TabIndex = 12;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Light Theme";
+            this.radioButton2.Text = "Light";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -109,12 +110,12 @@ namespace Tasks
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton1.Location = new System.Drawing.Point(25, 440);
+            this.radioButton1.Location = new System.Drawing.Point(33, 461);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(88, 19);
+            this.radioButton1.Size = new System.Drawing.Size(49, 19);
             this.radioButton1.TabIndex = 11;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Dark Theme";
+            this.radioButton1.Text = "Dark";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -123,18 +124,18 @@ namespace Tasks
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(25, 282);
+            this.label13.Location = new System.Drawing.Point(25, 303);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(257, 21);
+            this.label13.Size = new System.Drawing.Size(78, 21);
             this.label13.TabIndex = 8;
-            this.label13.Text = "Language (Looking for Translators!)";
+            this.label13.Text = "Language";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(27, 303);
+            this.label12.Location = new System.Drawing.Point(27, 324);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(204, 15);
             this.label12.TabIndex = 7;
@@ -144,14 +145,15 @@ namespace Tasks
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "English",
             "Spanish"});
-            this.comboBox1.Location = new System.Drawing.Point(25, 321);
+            this.comboBox1.Location = new System.Drawing.Point(25, 342);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(225, 23);
+            this.comboBox1.Size = new System.Drawing.Size(225, 25);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -169,10 +171,11 @@ namespace Tasks
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.checkBox1.Location = new System.Drawing.Point(25, 82);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(225, 19);
+            this.checkBox1.Size = new System.Drawing.Size(245, 21);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "Show Cleanup Summary MessageBox";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -194,7 +197,7 @@ namespace Tasks
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(12, 213);
+            this.label10.Location = new System.Drawing.Point(17, 213);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(167, 32);
             this.label10.TabIndex = 2;
