@@ -91,9 +91,7 @@ namespace Tasks
                 label10.ForeColor = Color.Black;
                 label11.ForeColor = Color.Black;
                 label12.ForeColor = Color.Black;
-                label14.ForeColor = Color.DarkRed;
                 label15.ForeColor = Color.Black;
-                label16.ForeColor = Color.Black;
                 label17.ForeColor = Color.DarkRed;
                 label18.ForeColor = Color.Black;
                 label20.ForeColor = Color.Black;
@@ -104,9 +102,6 @@ namespace Tasks
                 comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;
-
-                textBox1.BackColor = Color.WhiteSmoke;
-                textBox1.ForeColor = Color.Black;
             }
         }
 

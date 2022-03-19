@@ -28,6 +28,7 @@
             this.taskDialogButton1 = new Ookii.Dialogs.WinForms.TaskDialogButton(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button9 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -87,20 +88,17 @@
             this.cbDiscord = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.ExtensionsBox = new System.Windows.Forms.ListView();
             this.ExtName = new System.Windows.Forms.ColumnHeader();
             this.ExtSize = new System.Windows.Forms.ColumnHeader();
             this.ExtPath = new System.Windows.Forms.ColumnHeader();
-            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -109,10 +107,12 @@
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -175,6 +175,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.HotTrack = true;
+            this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.Location = new System.Drawing.Point(8, 5);
             this.tabControl1.Multiline = true;
@@ -186,6 +187,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage5.Controls.Add(this.pictureBox2);
             this.tabPage5.Controls.Add(this.progressBar1);
             this.tabPage5.Controls.Add(this.button9);
             this.tabPage5.Controls.Add(this.label11);
@@ -198,9 +200,18 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Quick Clean";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Tasks.Properties.Resources.QuickClean_100x_White;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(105, 100);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(210, 346);
+            this.progressBar1.Location = new System.Drawing.Point(164, 346);
             this.progressBar1.Maximum = 40;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(478, 23);
@@ -213,7 +224,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(465, 252);
+            this.button9.Location = new System.Drawing.Point(419, 252);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(223, 56);
             this.button9.TabIndex = 3;
@@ -227,7 +238,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(219, 372);
+            this.label11.Location = new System.Drawing.Point(173, 372);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(469, 28);
             this.label11.TabIndex = 2;
@@ -241,7 +252,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(219, 252);
+            this.button8.Location = new System.Drawing.Point(173, 252);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(223, 56);
             this.button8.TabIndex = 1;
@@ -252,11 +263,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(6, 3);
+            this.label9.Location = new System.Drawing.Point(117, 17);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(739, 84);
+            this.label9.Size = new System.Drawing.Size(744, 75);
             this.label9.TabIndex = 0;
             this.label9.Text = "Quick Clean cleans directories that clutter up with temp folders.\r\nThese folders " +
     "are known to pile up quick and slow down computer performance, so it\'s \r\nbest to" +
@@ -281,6 +292,7 @@
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl2.Location = new System.Drawing.Point(6, 6);
+            this.tabControl2.Multiline = true;
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1026, 614);
@@ -988,10 +1000,8 @@
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.ExtensionsBox);
-            this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.ForeColor = System.Drawing.Color.White;
@@ -1008,23 +1018,12 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(10, 54);
+            this.label17.Location = new System.Drawing.Point(10, 47);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(451, 38);
             this.label17.TabIndex = 44;
             this.label17.Text = "Tasks will close any opened browsers before removing any extensions. \r\nSave your " +
     "work before using this!";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(10, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 37);
-            this.label14.TabIndex = 43;
-            this.label14.Text = "Caution";
             // 
             // button3
             // 
@@ -1051,9 +1050,9 @@
             this.ExtensionsBox.ForeColor = System.Drawing.Color.White;
             this.ExtensionsBox.FullRowSelect = true;
             this.ExtensionsBox.HideSelection = false;
-            this.ExtensionsBox.Location = new System.Drawing.Point(10, 211);
+            this.ExtensionsBox.Location = new System.Drawing.Point(10, 142);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(1022, 409);
+            this.ExtensionsBox.Size = new System.Drawing.Size(1022, 478);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -1074,22 +1073,11 @@
             this.ExtPath.Text = "Path";
             this.ExtPath.Width = 650;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(10, 92);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(1023, 17);
-            this.label16.TabIndex = 41;
-            this.label16.Text = resources.GetString("label16.Text");
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(10, 124);
+            this.label15.Location = new System.Drawing.Point(10, 15);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(417, 23);
             this.label15.TabIndex = 40;
@@ -1102,9 +1090,9 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(10, 160);
+            this.comboBox1.Location = new System.Drawing.Point(10, 108);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(350, 28);
+            this.comboBox1.Size = new System.Drawing.Size(358, 28);
             this.comboBox1.TabIndex = 39;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -1133,7 +1121,6 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button5);
@@ -1156,21 +1143,6 @@
             this.label20.Size = new System.Drawing.Size(236, 25);
             this.label20.TabIndex = 10;
             this.label20.Text = "Disable Windows Features";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(6, 467);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(990, 108);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "Scripts Used:\r\nhttps://github.com/Sycnex/Windows10Debloater\r\nhttps://github.com/S" +
-    "hadowWhisperer/Remove-Edge-Chromium\r\n\r\nCredit respectively goes to the original " +
-    "creators.";
             // 
             // label7
             // 
@@ -1283,6 +1255,14 @@
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "QuickClean 100x White.png");
+            this.imageList1.Images.SetKeyName(1, "Cleanup 50x50 White.png");
+            // 
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
@@ -1320,6 +1300,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
@@ -1359,13 +1340,11 @@
         private System.Windows.Forms.ColumnHeader ExtSize;
         private System.Windows.Forms.ColumnHeader ExtPath;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnCleanup;
         private System.Windows.Forms.TabPage tabPage5;
@@ -1422,7 +1401,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox cbDiscord;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label16;
         internal System.Windows.Forms.ListBox CleanupLogsLBox;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TabControl tabControl3;
@@ -1434,5 +1412,7 @@
         private System.Windows.Forms.CheckBox cbOneDriveCache;
         private System.Windows.Forms.CheckBox cbVLCCache;
         private System.Windows.Forms.CheckBox cbSpotifyCache;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
