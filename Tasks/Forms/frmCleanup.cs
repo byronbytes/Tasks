@@ -91,20 +91,15 @@ namespace Tasks
                 label10.ForeColor = Color.Black;
                 label11.ForeColor = Color.Black;
                 label12.ForeColor = Color.Black;
-                label13.ForeColor = Color.Black;
                 label14.ForeColor = Color.DarkRed;
                 label15.ForeColor = Color.Black;
                 label16.ForeColor = Color.Black;
                 label17.ForeColor = Color.DarkRed;
                 label18.ForeColor = Color.Black;
-                label19.ForeColor = Color.Black;
                 label20.ForeColor = Color.Black;
 
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
-                label13.ForeColor = Color.Black;
-                groupBox2.ForeColor = Color.Black;
-                groupBox3.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.WhiteSmoke;
                 comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
@@ -1063,8 +1058,6 @@ namespace Tasks
                 progressBar1.Value = 0;
                 label11.Visible = true;
                 button9.Visible = true;
-                label13.Visible = true;
-                label19.Visible = true;
                 progressBar1.PerformStep();
                 long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp\\"));
                 long size2 = DirSize(new DirectoryInfo(Path.GetTempPath()));
@@ -1072,21 +1065,13 @@ namespace Tasks
                 long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
                 long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
                 progressBar1.PerformStep();
-            
-
-
+       
                 long allsize = size1 + size2 + size3 + size4 + size5;
-                long tempsize = size1 + size2;
-                long systemsize = size3 + size4 + size5;
                 progressBar1.PerformStep();
                 // Conversion
                 double allsizeMB = ConvertBytesToMegabytes(allsize);
-                double tempsizeMB = ConvertBytesToMegabytes(tempsize);
-                double systemsizeMB = ConvertBytesToMegabytes(systemsize);
                 progressBar1.PerformStep();
                 label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
-                label13.Text = tempsizeMB + "MB";
-                label19.Text = systemsizeMB + "MB";
             }
             catch
             {

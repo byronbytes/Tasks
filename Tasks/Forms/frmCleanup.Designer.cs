@@ -29,10 +29,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -117,8 +113,6 @@
             this.btnCleanup = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -193,8 +187,6 @@
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.tabPage5.Controls.Add(this.progressBar1);
-            this.tabPage5.Controls.Add(this.groupBox3);
-            this.tabPage5.Controls.Add(this.groupBox2);
             this.tabPage5.Controls.Add(this.button9);
             this.tabPage5.Controls.Add(this.label11);
             this.tabPage5.Controls.Add(this.button8);
@@ -213,52 +205,6 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(478, 23);
             this.progressBar1.TabIndex = 8;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(467, 520);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(278, 100);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "System Caches";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(19, 32);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(210, 47);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "%num%MB";
-            this.label19.Visible = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(164, 520);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(278, 100);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Temp Folders";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(19, 32);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(210, 47);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "%num%MB";
-            this.label13.Visible = false;
             // 
             // button9
             // 
@@ -1374,10 +1320,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
@@ -1479,10 +1421,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox cbDiscord;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label16;
         internal System.Windows.Forms.ListBox CleanupLogsLBox;
