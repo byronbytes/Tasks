@@ -1053,14 +1053,13 @@ namespace Tasks
             catch { Console.WriteLine("An error has occurred."); }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-        }
-
+ 
+       
         private void button8_Click_1(object sender, EventArgs e)
         {
             try
             {
+              
                 progressBar1.Value = 0;
                 label11.Visible = true;
                 button9.Visible = true;
@@ -1073,6 +1072,8 @@ namespace Tasks
                 long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
                 long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
                 progressBar1.PerformStep();
+            
+
 
                 long allsize = size1 + size2 + size3 + size4 + size5;
                 long tempsize = size1 + size2;

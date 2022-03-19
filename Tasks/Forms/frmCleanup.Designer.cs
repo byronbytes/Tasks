@@ -218,7 +218,7 @@
             // 
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(467, 456);
+            this.groupBox3.Location = new System.Drawing.Point(467, 520);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(278, 100);
             this.groupBox3.TabIndex = 6;
@@ -241,7 +241,7 @@
             // 
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(164, 456);
+            this.groupBox2.Location = new System.Drawing.Point(164, 520);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(278, 100);
             this.groupBox2.TabIndex = 5;
