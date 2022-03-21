@@ -90,6 +90,11 @@ namespace Tasks
 
             }
         }
+        
+        public static void CreateStartup(int mode, bool create)
+        {
+        
+        }
 
         private void frmStartupPrograms_Load(object sender, EventArgs e)
         {
