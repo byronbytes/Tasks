@@ -93,7 +93,35 @@ namespace Tasks
         
         public static void CreateStartup(int mode, bool create)
         {
-        
+            // int 1 - 4 = different creation modes.
+            if (create = true)
+            {
+              switch(mode)
+              {
+                  case 1:
+                  //code
+                  break;
+
+                  case 2:
+                  // code
+                  break;
+              }
+            }
+
+            // int 5 - 8 = different deletion modes
+            if(create = false) 
+            {
+             switch(mode)
+             {
+                 case 5:
+                 //code
+                 break;
+
+                 case 6:
+                 //code
+                 break;
+             }
+            }
         }
 
         private void frmStartupPrograms_Load(object sender, EventArgs e)
