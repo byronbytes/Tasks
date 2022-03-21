@@ -175,7 +175,6 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.HotTrack = true;
-            this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.Location = new System.Drawing.Point(8, 5);
             this.tabControl1.Multiline = true;
@@ -211,7 +210,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(164, 346);
+            this.progressBar1.Location = new System.Drawing.Point(133, 346);
             this.progressBar1.Maximum = 40;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(478, 23);
@@ -224,7 +223,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(419, 252);
+            this.button9.Location = new System.Drawing.Point(388, 252);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(223, 56);
             this.button9.TabIndex = 3;
@@ -238,7 +237,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(173, 372);
+            this.label11.Location = new System.Drawing.Point(142, 372);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(469, 28);
             this.label11.TabIndex = 2;
@@ -252,7 +251,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(173, 252);
+            this.button8.Location = new System.Drawing.Point(142, 252);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(223, 56);
             this.button8.TabIndex = 1;
@@ -710,7 +709,7 @@
             this.cbIECache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbIECache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbIECache.ForeColor = System.Drawing.Color.White;
-            this.cbIECache.Location = new System.Drawing.Point(13, 272);
+            this.cbIECache.Location = new System.Drawing.Point(13, 276);
             this.cbIECache.Name = "cbIECache";
             this.cbIECache.Size = new System.Drawing.Size(62, 21);
             this.cbIECache.TabIndex = 80;
@@ -733,7 +732,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(48, 229);
+            this.label8.Location = new System.Drawing.Point(48, 233);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(154, 25);
             this.label8.TabIndex = 78;
