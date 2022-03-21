@@ -4,9 +4,9 @@
 */
 
 
-// TODO: Instead of calling it 'Legacy Adding Method', create a drop selection to drop files into the Startup Folder.
-// TODO: Add a switch statement for Removing programs based on the Location (Startup / Registry)
-// Known Issue: It can only remove ones from HKLM 
+// TODO: Instead of calling it 'Legacy Adding Method', create a drop selection to drop files into the Startup Folder.(What is this?)
+// TODO: Add a switch statement for Removing programs based on the Location (Startup / Registry) (WORKING ON!)
+// Known Issue: It can only remove programs from HKLM
 
 using System;
 using System.Collections.Generic;
@@ -140,8 +140,11 @@ namespace Tasks
             {
              switch(mode)
              {
-                 case 5:
-                 //code
+                 case 5: // Delete via HKLM
+                startupKey.Close();
+                startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                startupKey.DeleteValue(AppName, true);
+                startupKey.Close();
                  break;
 
                  case 6:
