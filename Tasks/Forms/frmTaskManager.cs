@@ -16,7 +16,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tasks {
+namespace Tasks
+{
     public partial class frmTaskManager : Form
     {
         public frmTaskManager()
@@ -37,7 +38,7 @@ namespace Tasks {
         {
             if (Properties.Settings.Default.Theme == "dark")
             {
-                
+
             }
 
             if (Properties.Settings.Default.Theme == "light")
@@ -130,13 +131,13 @@ namespace Tasks {
                     lvsisi3.Text = ProcessInfo.TargetProcess.Responding.ToString(); // Is Responding
                     lvi.SubItems.Add(lvsisi3);
 
-                  //  lvsisi4.Text = ProcessInfo.ComandLine.ToString();
-                  //  lvi.SubItems.Add(lvsisi4);
-                        // interesting things to add
-                        // SessionId
-                        // MainWindowTitle
-                        // Base Priority
-                        // Threads
+                    //  lvsisi4.Text = ProcessInfo.ComandLine.ToString();
+                    //  lvi.SubItems.Add(lvsisi4);
+                    // interesting things to add
+                    // SessionId
+                    // MainWindowTitle
+                    // Base Priority
+                    // Threads
 
                     Task<double> ProcessCPUTask = Task.Run(async () => GetProcessCPUPercentUsage(ProcessInfo.TargetProcess));
 
@@ -271,4 +272,4 @@ namespace Tasks {
             ProcessInfoList.GetAwaiter().OnCompleted(() => ListProcess(ProcessInfoList.Result));
         }
     }
-    }
+}

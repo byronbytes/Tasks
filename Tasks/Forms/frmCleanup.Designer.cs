@@ -107,7 +107,6 @@
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCleanup = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
@@ -1055,7 +1054,6 @@
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
-            this.ExtensionsBox.SelectedIndexChanged += new System.EventHandler(this.ExtensionsBox_SelectedIndexChanged);
             // 
             // ExtName
             // 
@@ -1254,14 +1252,6 @@
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "QuickClean 100x White.png");
-            this.imageList1.Images.SetKeyName(1, "Cleanup 50x50 White.png");
-            // 
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
@@ -1412,6 +1402,5 @@
         private System.Windows.Forms.CheckBox cbVLCCache;
         private System.Windows.Forms.CheckBox cbSpotifyCache;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ImageList imageList1;
     }
 }

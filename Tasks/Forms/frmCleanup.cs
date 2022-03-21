@@ -1130,10 +1130,6 @@ namespace Tasks
 
         }
 
-        private void ExtensionsBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void button10_Click(object sender, EventArgs e)
         {
             try

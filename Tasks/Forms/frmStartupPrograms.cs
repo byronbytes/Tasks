@@ -2,9 +2,12 @@
     (c) LiteTools 2022 (https://github.com/LiteTools)
     All rights reserved under the GNU General Public License v3.0.
 */
+
+
 // TODO: Instead of calling it 'Legacy Adding Method', create a drop selection to drop files into the Startup Folder.
 // TODO: Add a switch statement for Removing programs based on the Location (Startup / Registry)
 // Known Issue: It can only remove ones from HKLM 
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,9 +24,11 @@ using System.Diagnostics;
 using System.Threading;
 using System.ServiceProcess;
 
-namespace Tasks {
-    public partial class frmStartupPrograms : Form {
-        public frmStartupPrograms() 
+namespace Tasks
+{
+    public partial class frmStartupPrograms : Form
+    {
+        public frmStartupPrograms()
         {
             InitializeComponent();
             RenderStartupsOnListWiew();
@@ -31,16 +36,18 @@ namespace Tasks {
             GetAllServices();
         }
 
-        private void RefreshList() {
+        private void RefreshList()
+        {
             StartupProcesses.Items.Clear();
             listView1.Items.Clear();
             RenderStartupsOnListWiew();
             GetAllServices();
         }
 
-        private void RenderStartupsOnListWiew() {
-            foreach (ManagementObject strt in (new ManagementClass("Win32_StartupCommand").GetInstances())) 
-            { 
+        private void RenderStartupsOnListWiew()
+        {
+            foreach (ManagementObject strt in (new ManagementClass("Win32_StartupCommand").GetInstances()))
+            {
 
                 string ProcessName = strt["Name"].ToString();
                 string ProcessDescription = strt["Description"].ToString();
@@ -65,13 +72,13 @@ namespace Tasks {
 
             if (enable == true)
             {
-                    startupKey.Close();
-                    startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                    // Add New Startup Program (Registry)
-                    startupKey.CreateSubKey(AppName, true);
-                    startupKey.SetValue(AppName, Application.ExecutablePath.ToString());
-                    startupKey.Close();
-    
+                startupKey.Close();
+                startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                // Add New Startup Program (Registry)
+                startupKey.CreateSubKey(AppName, true);
+                startupKey.SetValue(AppName, Application.ExecutablePath.ToString());
+                startupKey.Close();
+
             }
             else
             {
@@ -84,12 +91,13 @@ namespace Tasks {
             }
         }
 
-        private void frmStartupPrograms_Load(object sender, EventArgs e) {
+        private void frmStartupPrograms_Load(object sender, EventArgs e)
+        {
             txtTargetPath.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
             CheckTheme();
         }
 
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
@@ -104,26 +112,27 @@ namespace Tasks {
                 MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
             }
 
-/*
-          if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
-           {
-              try
-                {
-                   File.Delete(fileStartup);
-                   RefreshList();
-               }
-               catch
-                {
-                    MessageBox.Show("An error has occurred.");
-             }
-             
-          }
-          */
+            /*
+                      if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
+                       {
+                          try
+                            {
+                               File.Delete(fileStartup);
+                               RefreshList();
+                           }
+                           catch
+                            {
+                                MessageBox.Show("An error has occurred.");
+                         }
+
+                      }
+                      */
         }
 
-        class StartUpProgram {
+        class StartUpProgram
+        {
             public string Name { get; set; }
-            public string Path { get; set; }            
+            public string Path { get; set; }
             public override string ToString() { return Name; }
         }
         private void button4_Click_1(object sender, EventArgs e) { RefreshList(); }
@@ -133,7 +142,7 @@ namespace Tasks {
         {
             if (Properties.Settings.Default.Theme == "dark")
             {
-                
+
             }
 
             if (Properties.Settings.Default.Theme == "light")
@@ -155,9 +164,9 @@ namespace Tasks {
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                        SetStartup(ofd.FileName.ToString(), true);
-                        RefreshList();
-                    
+                    SetStartup(ofd.FileName.ToString(), true);
+                    RefreshList();
+
                 }
             }
         }
@@ -193,7 +202,7 @@ namespace Tasks {
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(tabControl1.SelectedTab == tabPage2)
+            if (tabControl1.SelectedTab == tabPage2)
             {
                 button1.Hide();
                 button2.Hide();
