@@ -90,19 +90,46 @@ namespace Tasks
 
             }
         }
+
+
+
         
         public static void CreateStartup(int mode, bool create)
         {
+            string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
+            RegistryKey startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+            string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
             // int 1 - 4 = different creation modes.
+
             if (create = true)
             {
               switch(mode)
               {
-                  case 1:
-                  //code
+                  case 1: // Create via HKLM.
+                 startupKey.Close();
+                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                 startupKey.CreateSubKey(AppName, true);
+                 startupKey.SetValue(AppName, Application.ExecutablePath.ToString());
+                 startupKey.Close();
                   break;
 
-                  case 2:
+                  case 2: // Create via Startup Folder
+                    if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
+                       {
+                          try
+                            {
+                               File.Delete(fileStartup);
+                               RefreshList();
+                           }
+                           catch
+                            {
+                                MessageBox.Show("An error has occurred.");
+                         }
+
+                      }
+                  break;
+
+                  case 3: // Create via HK(??)
                   // code
                   break;
               }
@@ -144,22 +171,6 @@ namespace Tasks
             {
                 MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
             }
-
-            /*
-                      if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
-                       {
-                          try
-                            {
-                               File.Delete(fileStartup);
-                               RefreshList();
-                           }
-                           catch
-                            {
-                                MessageBox.Show("An error has occurred.");
-                         }
-
-                      }
-                      */
         }
 
         class StartUpProgram
