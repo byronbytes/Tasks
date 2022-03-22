@@ -114,22 +114,28 @@ namespace Tasks
                   break;
 
                   case 2: // Create via Startup Folder
-                    if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
-                       {
+                  using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" })
+                  {
+                     if (ofd.ShowDialog() == DialogResult.OK)
+                        {
                           try
                             {
-                               File.Delete(fileStartup);
-                               RefreshList();
-                           }
-                           catch
-                            {
-                                MessageBox.Show("An error has occurred.");
-                         }
-
-                      }
+                              string program = ofd.FileName.ToString();
+                             txtFileName.Text = ofd.FileName;
+                             FileInfo fileInfo = new FileInfo(txtFileName.Text);
+                             txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\", fileInfo.Name);
+                             File.Copy(txtFileName.Text, txtTargetPath.Text, true);
+                             RefreshList();
+                            }
+                             catch
+                                   {
+                                     MessageBox.Show("There was an error trying to add a new startup process.");
+                                   }
+                }
+            }
                   break;
 
-                  case 3: // Create via HK(??)
+                  case 3: // Create via 
                   // code
                   break;
               }
@@ -147,8 +153,20 @@ namespace Tasks
                 startupKey.Close();
                  break;
 
-                 case 6:
-                 //code
+                 case 6: // Delete via Startup Folder
+                   if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
+                       {
+                          try
+                            {
+                               File.Delete(fileStartup);
+                               RefreshList();
+                           }
+                           catch
+                            {
+                                MessageBox.Show("An error has occurred.");
+                         }
+
+                      }
                  break;
              }
             }
@@ -208,17 +226,15 @@ namespace Tasks
         {
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" })
             {
-
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     SetStartup(ofd.FileName.ToString(), true);
                     RefreshList();
-
                 }
             }
         }
 
-        private void GetAllServices()
+        public static void GetAllServices()
         {
             foreach (ServiceController service in ServiceController.GetServices())
             {
@@ -263,28 +279,6 @@ namespace Tasks
 
         private void useLegacyAddingMethodToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" })
-            {
-
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
-                        string program = ofd.FileName.ToString();
-
-                        txtFileName.Text = ofd.FileName;
-                        FileInfo fileInfo = new FileInfo(txtFileName.Text);
-                        txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\", fileInfo.Name);
-                        File.Copy(txtFileName.Text, txtTargetPath.Text, true);
-                        RefreshList();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("There was an error trying to add a new startup process.");
-                    }
-                }
-                else RefreshList();
-            }
         }
     }
 }
