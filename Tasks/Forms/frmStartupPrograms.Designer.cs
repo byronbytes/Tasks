@@ -67,13 +67,14 @@ namespace Tasks
             this.ProcessName,
             this.ProcessDescription,
             this.ProcessPath});
+            this.StartupProcesses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StartupProcesses.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.StartupProcesses.ForeColor = System.Drawing.Color.White;
             this.StartupProcesses.FullRowSelect = true;
             this.StartupProcesses.HideSelection = false;
-            this.StartupProcesses.Location = new System.Drawing.Point(6, 3);
+            this.StartupProcesses.Location = new System.Drawing.Point(3, 3);
             this.StartupProcesses.Name = "StartupProcesses";
-            this.StartupProcesses.Size = new System.Drawing.Size(1015, 601);
+            this.StartupProcesses.Size = new System.Drawing.Size(1021, 604);
             this.StartupProcesses.TabIndex = 0;
             this.StartupProcesses.UseCompatibleStateImageBehavior = false;
             this.StartupProcesses.View = System.Windows.Forms.View.Details;
@@ -240,13 +241,14 @@ namespace Tasks
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 3);
+            this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1015, 601);
+            this.listView1.Size = new System.Drawing.Size(1021, 604);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
