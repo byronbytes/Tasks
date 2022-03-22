@@ -145,7 +145,6 @@ namespace Tasks
             this.useLegacyAddingMethodToolStripMenuItem.Name = "useLegacyAddingMethodToolStripMenuItem";
             this.useLegacyAddingMethodToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.useLegacyAddingMethodToolStripMenuItem.Text = "Use Legacy Adding Method";
-            this.useLegacyAddingMethodToolStripMenuItem.Click += new System.EventHandler(this.useLegacyAddingMethodToolStripMenuItem_Click);
             // 
             // button3
             // 
@@ -333,7 +332,6 @@ namespace Tasks
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -341,5 +339,6 @@ namespace Tasks
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem useLegacyAddingMethodToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.ListView listView1;
     }
 }
