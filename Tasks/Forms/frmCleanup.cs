@@ -71,13 +71,10 @@ namespace Tasks
 
                 tabPage1.BackColor = Color.White;
                 tabPage7.BackColor = Color.White;
-                tabPage8.BackColor = Color.White;
-                tabPage2.BackColor = Color.White;
                 tabPage3.BackColor = Color.White;
                 tabPage4.BackColor = Color.White;
                 tabControl2.BackColor = Color.White;
                 tabControl1.BackColor = Color.White;
-                tabControl3.BackColor = Color.White;
                 tabPage5.BackColor = Color.White;
                 tabPage6.BackColor = Color.White;
                 label1.ForeColor = Color.Black;
@@ -90,7 +87,6 @@ namespace Tasks
                 label9.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
                 label11.ForeColor = Color.Black;
-                label12.ForeColor = Color.Black;
                 label15.ForeColor = Color.Black;
                 label17.ForeColor = Color.DarkRed;
                 label18.ForeColor = Color.Black;
@@ -1170,6 +1166,11 @@ namespace Tasks
             {
                 MessageBox.Show("Error while trying to clean ARP Cache.");
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

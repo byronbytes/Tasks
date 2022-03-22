@@ -89,6 +89,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Update="Scripts\Debloat_RemoveEdge.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="..\..\..\Software Development\Tasks\Tasks Icons\Tasks New Logo Revision #3\Tasks 256x256 Logo.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
