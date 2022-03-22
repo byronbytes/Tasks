@@ -82,7 +82,6 @@ namespace Tasks
                 label3.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
                 label6.ForeColor = Color.Black;
-                label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
@@ -90,7 +89,6 @@ namespace Tasks
                 label15.ForeColor = Color.Black;
                 label17.ForeColor = Color.DarkRed;
                 label18.ForeColor = Color.Black;
-                label20.ForeColor = Color.Black;
 
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
@@ -998,13 +996,13 @@ namespace Tasks
                 cbDiscord.Enabled = false;
             }
 
-                if (!Directory.Exists(Dirs.edgeDir))
-                {
+            if (!Directory.Exists(Dirs.edgeDir))
+            {
                     cbEdgeCache.Enabled = false;
                     cbEdgeCookies.Enabled = false;
                     cbEdgeSearchHistory.Enabled = false;
                     cbEdgeSessions.Enabled = false;
-                }
+            }
             
             if (Directory.Exists(Dirs.chromeExtDir))
             {
@@ -1022,30 +1020,10 @@ namespace Tasks
             }
         }
 
-        private void cbEdgeCookies_CheckStateChanged(object sender, EventArgs e)
-        {
-            try { taskDialog1.Show(); }
-            catch { Console.WriteLine("An error has occurred."); }
-        }
-        private void cbFirefoxCookies_CheckStateChanged(object sender, EventArgs e)
-        {
-            try { taskDialog1.Show(); }
-            catch { Console.WriteLine("An error has occurred."); }
-        }
-
-        private void cbChromeCookies_CheckStateChanged(object sender, EventArgs e)
-        {
-            try { taskDialog1.Show(); }
-            catch { Console.WriteLine("An error has occurred."); }
-        }
-
- 
-       
         private void button8_Click_1(object sender, EventArgs e)
         {
             try
             {
-              
                 progressBar1.Value = 0;
                 label11.Visible = true;
                 button9.Visible = true;
@@ -1138,7 +1116,6 @@ namespace Tasks
             }
         }
 
-        public static string debug = "";
         private void button1_Click_1(object sender, EventArgs e)
         {
             try
