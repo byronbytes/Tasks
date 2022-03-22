@@ -4,7 +4,7 @@
 */
 
 
-// TODO: Instead of calling it 'Legacy Adding Method', create a drop selection to drop files into the Startup Folder.(What is this?)
+// TODO: I remember this, not a good idea.
 // TODO: Add a switch statement for Removing programs based on the Location (Startup / Registry) (WORKING ON!)
 // Known Issue: It can only remove programs from HKLM
 
@@ -78,7 +78,6 @@ namespace Tasks
                 startupKey.CreateSubKey(AppName, true);
                 startupKey.SetValue(AppName, Application.ExecutablePath.ToString());
                 startupKey.Close();
-
             }
             else
             {
@@ -87,7 +86,6 @@ namespace Tasks
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
                 startupKey.DeleteValue(AppName, true);
                 startupKey.Close();
-
             }
         }
 
@@ -128,14 +126,14 @@ namespace Tasks
                              RefreshList();
                             }
                              catch
-                                   {
-                                     MessageBox.Show("There was an error trying to add a new startup process.");
-                                   }
+                            {
+                            MessageBox.Show("There was an error trying to add a new startup process.");
+                            }
                 }
             }
                   break;
 
-                  case 3: // Create via 
+                  case 3: // Create via HKU?
                   // code
                   break;
               }
@@ -146,14 +144,15 @@ namespace Tasks
             {
              switch(mode)
              {
-                 case 5: // Delete via HKLM
+                case 5: // Delete via HKLM
                 startupKey.Close();
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
                 startupKey.DeleteValue(AppName, true);
                 startupKey.Close();
-                 break;
+                break;
 
-                 case 6: // Delete via Startup Folder
+
+                case 6: // Delete via Startup Folder
                    if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup") 
                        {
                           try
@@ -167,7 +166,7 @@ namespace Tasks
                          }
 
                       }
-                 break;
+                break;
              }
             }
         }
@@ -275,10 +274,6 @@ namespace Tasks
                 button1.Show();
                 button2.Show();
             }
-        }
-
-        private void useLegacyAddingMethodToolStripMenuItem_Click(object sender, EventArgs e)
-        {
         }
     }
 }
