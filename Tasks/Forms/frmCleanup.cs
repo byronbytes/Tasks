@@ -1167,6 +1167,11 @@ namespace Tasks
                 MessageBox.Show("Error while trying to clean ARP Cache.");
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }
