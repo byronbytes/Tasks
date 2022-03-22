@@ -57,10 +57,11 @@ namespace Tasks
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(-11, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(151, 722);
+            this.panel1.Size = new System.Drawing.Size(142, 773);
             this.panel1.TabIndex = 0;
             // 
             // button4
@@ -71,7 +72,7 @@ namespace Tasks
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.Image = global::Tasks.Properties.Resources.SettingsWhite;
-            this.button4.Location = new System.Drawing.Point(11, 574);
+            this.button4.Location = new System.Drawing.Point(0, 575);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 60);
             this.button4.TabIndex = 17;
@@ -88,7 +89,7 @@ namespace Tasks
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Image = global::Tasks.Properties.Resources.TaskManagerWhite;
-            this.button3.Location = new System.Drawing.Point(11, 409);
+            this.button3.Location = new System.Drawing.Point(0, 410);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 60);
             this.button3.TabIndex = 16;
@@ -105,7 +106,7 @@ namespace Tasks
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::Tasks.Properties.Resources.StartupProgramsWhite;
-            this.button2.Location = new System.Drawing.Point(11, 239);
+            this.button2.Location = new System.Drawing.Point(0, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 60);
             this.button2.TabIndex = 15;
@@ -122,7 +123,7 @@ namespace Tasks
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = global::Tasks.Properties.Resources.CleanupWhite;
-            this.button1.Location = new System.Drawing.Point(11, 110);
+            this.button1.Location = new System.Drawing.Point(0, 109);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 60);
             this.button1.TabIndex = 14;
@@ -144,6 +145,9 @@ namespace Tasks
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Location = new System.Drawing.Point(138, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1066, 722);
@@ -158,11 +162,13 @@ namespace Tasks
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel3.Location = new System.Drawing.Point(0, 719);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1196, 54);
@@ -170,6 +176,7 @@ namespace Tasks
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -192,6 +199,7 @@ namespace Tasks
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
