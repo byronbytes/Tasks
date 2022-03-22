@@ -4,7 +4,6 @@
 */
 
 
-// TODO: I remember this, not a good idea.
 // TODO: Add a switch statement for Removing programs based on the Location (Startup / Registry) (WORKING ON!)
 // Known Issue: It can only remove programs from HKLM
 
@@ -97,7 +96,6 @@ namespace Tasks
             string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
             RegistryKey startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
-            // int 1 - 4 = different creation modes.
 
             if (create == true)
             {
@@ -131,14 +129,9 @@ namespace Tasks
                             }
                         }
                         break;
-
-                    case 3: // Create via HKU?
-                            // code
-                        break;
                 }
             }
 
-            // int 5 - 8 = different deletion modes
             if (create == false)
             {
                 switch (mode)
