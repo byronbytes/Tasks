@@ -933,9 +933,15 @@ namespace Tasks
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //Directory.SetCurrentDirectory(@"/Scripts/");
-            try { RunFile.RunBat(@"Scripts/Debloat_RemoveSolitaire.bat", true); }
-            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
+          try
+             {
+              // Written by Solirs (https://github.com/LiteTools/Tasks)
+              Process.Start("powershell", "Get-AppxPackage *solitairecollection* | Remove-AppxPackage");
+              }
+            catch (Exception ex) 
+            { 
+            MessageBox.Show("An error occurred." + ex); 
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
