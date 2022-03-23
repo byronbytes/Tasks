@@ -73,6 +73,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Report an issue";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DarkCyan;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label6
             // 

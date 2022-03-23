@@ -511,7 +511,7 @@ namespace Tasks
 
             if (cbEdgeSearchHistory.Checked)
             {
-                try 
+                try
                 {
                     File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History\\");
                     CleanupLogsLBox.Items.Add("Edge Search History Deleted.");
@@ -933,14 +933,14 @@ namespace Tasks
 
         private void button5_Click(object sender, EventArgs e)
         {
-          try
-             {
-              // Written by Solirs (https://github.com/LiteTools/Tasks)
-              Process.Start("powershell", "Get-AppxPackage *solitairecollection* | Remove-AppxPackage");
-              }
-            catch (Exception ex) 
-            { 
-            MessageBox.Show("An error occurred." + ex); 
+            try
+            {
+                // Written by Solirs (https://github.com/LiteTools/Tasks)
+                Process.Start("powershell", "Get-AppxPackage *solitairecollection* | Remove-AppxPackage");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred." + ex);
             }
         }
 
@@ -952,7 +952,7 @@ namespace Tasks
             }
             catch
             {
-                MessageBox.Show("An error has occurred. You will need to run Tasks as administrator for this to work.");
+                MessageBox.Show("There was an issue while disabling Cortana.");
             }
 
         }
@@ -1004,12 +1004,12 @@ namespace Tasks
 
             if (!Directory.Exists(Dirs.edgeDir))
             {
-                    cbEdgeCache.Enabled = false;
-                    cbEdgeCookies.Enabled = false;
-                    cbEdgeSearchHistory.Enabled = false;
-                    cbEdgeSessions.Enabled = false;
+                cbEdgeCache.Enabled = false;
+                cbEdgeCookies.Enabled = false;
+                cbEdgeSearchHistory.Enabled = false;
+                cbEdgeSessions.Enabled = false;
             }
-            
+
             if (Directory.Exists(Dirs.chromeExtDir))
             {
                 comboBox1.Items.Add("Google Chrome");
@@ -1040,7 +1040,7 @@ namespace Tasks
                 long size4 = DirSize(new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\")));
                 long size5 = DirSize(new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\"));
                 progressBar1.PerformStep();
-       
+
                 long allsize = size1 + size2 + size3 + size4 + size5;
                 progressBar1.PerformStep();
                 // Conversion
@@ -1117,22 +1117,22 @@ namespace Tasks
                 XylonV2.Engine.Windows.Functions.SetAllowCortana(XylonV2.Engine.Windows.CortanaState.Enabled);
             }
             catch
-            {
+            {//!
                 MessageBox.Show("An error has occurred. You will need to run Tasks as administrator for this to work.");
             }
         }
 
+        // Note: Make it wait for exit.
         private void button1_Click_1(object sender, EventArgs e)
         {
             try
             {
-                Process process = new Process();
-                process.StartInfo.FileName = "/Scripts/Prompt_DisplayDNS.bat";
-                process.Start();
+                // Originally written in .bat format by Solirs.
+                Process.Start("ipconfig", "/displaydns");
             }
             catch (Exception)
             {
-                MessageBox.Show("Error while trying to clean DNS Cache.");
+                MessageBox.Show("Error while trying to show DNS Cache.");
 
             }
         }
@@ -1141,13 +1141,12 @@ namespace Tasks
         {
             try
             {
-                Process process = new Process();
-                process.StartInfo.FileName = "Scripts/Prompt_DisplayARP.bat";
-                process.Start();
+                // Originally written in .bat format by Solirs.
+                Process.Start("arp", "-a");
             }
             catch (Exception)
             {
-                MessageBox.Show("Error while trying to clean ARP Cache.");
+                MessageBox.Show("Error while trying to show ARP Cache.");
             }
         }
 
