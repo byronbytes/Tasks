@@ -13,6 +13,8 @@ namespace Tasks
 {
     class RunFile
     {
+        // Developer Note: This feature will be deprecated in the future, I'm not on my main computer but once I fix most of the bugs
+        // with just running it, i'll remove this feature.
         public static int RunBat(string batfile, bool waitexit)
         {
             try
