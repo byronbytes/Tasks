@@ -28,12 +28,6 @@ namespace Tasks
 
         public void CheckTheme()
         {
-            if (Properties.Settings.Default.Theme == "dark")
-            {
-                this.BackColor = Color.FromArgb(18, 18, 18);
-                label1.ForeColor = Color.White;
-            }
-
             if (Properties.Settings.Default.Theme == "light")
             {
                 this.BackColor = Color.FromArgb(250, 250, 250);

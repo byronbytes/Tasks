@@ -67,7 +67,7 @@ namespace Tasks
         {
             if (comboBox1.SelectedText == "English")
             {
-                //Switch back to English.
+                // Switch back to English.
             }
 
             if (comboBox1.SelectedText == "Spanish")
@@ -104,11 +104,6 @@ namespace Tasks
 
         public void CheckTheme()
         {
-            if (Properties.Settings.Default.Theme == "dark")
-            {
-                this.BackColor = Color.FromArgb(18, 18, 18);
-            }
-
             if (Properties.Settings.Default.Theme == "light")
             {
                 this.BackColor = Color.FromArgb(250, 250, 250);
