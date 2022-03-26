@@ -16,6 +16,7 @@ namespace Tasks.Forms
         {
             InitializeComponent();
             openChildForm(new frmSettings());
+            CheckTheme();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,6 +47,19 @@ namespace Tasks.Forms
             openChildForm(new frmSettings());
         }
 
+        public void CheckTheme()
+        {
+            if (Properties.Settings.Default.Theme == "light")
+            {
+                panel1.BackColor = Color.FromArgb(250, 250, 250);
+                panel2.BackColor = Color.FromArgb(250, 250, 250);
+                button1.BackColor = Color.FromArgb(200, 200, 200);
+                button2.BackColor = Color.FromArgb(200, 200, 200);
+                button1.ForeColor = Color.Black;
+                button2.ForeColor = Color.Black;
+            }
+        
+        }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
