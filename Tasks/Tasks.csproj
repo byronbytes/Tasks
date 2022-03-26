@@ -98,12 +98,6 @@
     <None Update="Scripts\Debloat_UninstallOneDrive.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Scripts\Prompt_DisplayARP.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\Prompt_DisplayDNS.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="..\..\..\Software Development\Tasks\Tasks Icons\Tasks New Logo Revision #3\Tasks 256x256 Logo.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>

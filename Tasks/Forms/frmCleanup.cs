@@ -965,7 +965,7 @@ namespace Tasks
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try { RunFile.RunBat("/Scripts/Debloat_RemoveEdge.bat", true); }
+            try { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "/Scripts/Debloat_RemoveEdge.bat"); }
             catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
@@ -1090,7 +1090,6 @@ namespace Tasks
         {
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp\\");
             var usertemp = new DirectoryInfo(Path.GetTempPath());
-            var directCache = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
             var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
             var windowsLog = new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\");
 
@@ -1098,7 +1097,6 @@ namespace Tasks
             {
                 if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(usertemp)) Debug.Print("Null.");
-                if (DeleteAllFiles(directCache)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsReport)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsLog)) Debug.Print("Null.");
             }
@@ -1110,25 +1108,20 @@ namespace Tasks
 
         }
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                XylonV2.Engine.Windows.Functions.SetAllowCortana(XylonV2.Engine.Windows.CortanaState.Enabled);
-            }
-            catch
-            {//!
-                MessageBox.Show("An error has occurred. You will need to run Tasks as administrator for this to work.");
-            }
-        }
-
-        // Note: Make it wait for exit.
         private void button1_Click_1(object sender, EventArgs e)
         {
             try
             {
                 // Originally written in .bat format by Solirs.
-                Process.Start("ipconfig", "/displaydns");
+                Process process = new Process();
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.WindowStyle = ProcessWindowStyle.Normal;
+                startInfo.FileName = "ipconfig";
+                startInfo.Arguments = "/displaydns";
+                startInfo.RedirectStandardError = true;
+                process.StartInfo = startInfo;
+                process.Start();
+                process.WaitForExit();
             }
             catch (Exception)
             {
@@ -1142,7 +1135,15 @@ namespace Tasks
             try
             {
                 // Originally written in .bat format by Solirs.
-                Process.Start("arp", "-a");
+                Process process = new Process();
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.WindowStyle = ProcessWindowStyle.Normal;
+                startInfo.FileName = "arp";
+                startInfo.Arguments = "-a";
+                startInfo.RedirectStandardError = true;
+                process.StartInfo = startInfo;
+                process.Start();
+
             }
             catch (Exception)
             {

@@ -58,15 +58,24 @@ namespace Tasks
                 panel2.BackColor = Color.FromArgb(20, 20, 20);
                 panel3.BackColor = Color.FromArgb(20, 20, 20);
 
+                button1.Image = Properties.Resources.CleanupWhite;
+                button2.Image = Properties.Resources.StartupProgramsWhite;
+                button3.Image = Properties.Resources.TaskManagerWhite;
+                button4.Image = Properties.Resources.SettingsWhite;
+                button1.BackColor = Color.FromArgb(25, 25, 25);
+                button2.BackColor = Color.FromArgb(25, 25, 25);
+                button3.BackColor = Color.FromArgb(25, 25, 25);
+                button4.BackColor = Color.FromArgb(25, 25, 25);
+                button1.ForeColor = Color.White;
+                button2.ForeColor = Color.White;
+                button3.ForeColor = Color.White;
+                button4.ForeColor = Color.White;
+
                 label1.ForeColor = Color.White;
                 label2.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
 
-                button1.Image = Properties.Resources.CleanupWhite;
-
-                button2.Image = Properties.Resources.StartupProgramsWhite;
-                button3.Image = Properties.Resources.TaskManagerWhite;
-                button4.Image = Properties.Resources.SettingsWhite;
+                
             }
 
             if (Properties.Settings.Default.Theme == "light")
@@ -82,6 +91,10 @@ namespace Tasks
                 button2.BackColor = Color.FromArgb(240, 240, 240);
                 button3.BackColor = Color.FromArgb(240, 240, 240);
                 button4.BackColor = Color.FromArgb(240, 240, 240);
+                button1.ForeColor = Color.Black;
+                button2.ForeColor = Color.Black;
+                button3.ForeColor = Color.Black;
+                button4.ForeColor = Color.Black;
 
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
@@ -130,6 +143,11 @@ namespace Tasks
         private void button3_Click(object sender, EventArgs e)
         {
             openChildForm(new frmTaskManager());
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
