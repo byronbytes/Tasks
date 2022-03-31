@@ -31,6 +31,7 @@ namespace Tasks
             InitializeComponent(); 
             CheckTheme(); 
             Core.SystemInfo.ComputerBit();
+            CreateDirectories("");
         }
 
         private Form activeForm = null;
@@ -99,6 +100,23 @@ namespace Tasks
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
+            }
+        }
+
+
+        public static void CreateDirectories(string test)
+        {
+            Directory.CreateDirectory(Dirs.tasksDir);
+            string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+
+            using (StreamWriter writer = new StreamWriter(deskDir + "\\" + test + ".url"))
+            {
+                string app = System.Reflection.Assembly.GetCallingAssembly().Location;
+                writer.WriteLine("[InternetShortcut]");
+                writer.WriteLine("URL=file:///" + app);
+                writer.WriteLine("IconIndex=0");
+                string icon = app.Replace('\\', '/');
+                writer.WriteLine("IconFile=" + icon);
             }
         }
 
