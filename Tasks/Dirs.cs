@@ -39,9 +39,7 @@ namespace Tasks
         public static string ProgramFiles = "C:\\Program Files";
         public static string ProgramFiles86 = "C:\\Program Files (x86)\\";
         public static string StartupFolder = ""; //Environment exists will add soon
-
         public static string tasksDir = "C:\\Program Files (x86)\\Tasks\\";
-        public static string TasksDirectory = ""; // Will be moving the directory to a more user-friendly place.
   
     }
 }
