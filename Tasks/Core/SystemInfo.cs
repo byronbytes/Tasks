@@ -38,18 +38,6 @@ namespace Tasks.Core
                 //This is a pre-NT version of Windows
                 switch (vs.Minor)
                 {
-                    case 0:
-                        operatingSystem = "95";
-                        break;
-                    case 10:
-                        if (vs.Revision.ToString() == "2222A")
-                            operatingSystem = "98SE";
-                        else
-                            operatingSystem = "98";
-                        break;
-                    case 90:
-                        operatingSystem = "Me";
-                        break;
                     default:
                         break;
                 }
@@ -58,12 +46,6 @@ namespace Tasks.Core
             {
                 switch (vs.Major)
                 {
-                    case 3: // Will Remove
-                        operatingSystem = "NT 3.51";
-                        break;
-                    case 4: // Will Remove
-                        operatingSystem = "NT 4.0";
-                        break;
                     case 5:
                         if (vs.Minor == 0)
                             operatingSystem = "2000";
