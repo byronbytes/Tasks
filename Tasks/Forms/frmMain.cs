@@ -30,8 +30,8 @@ namespace Tasks
             Directory.CreateDirectory(Dirs.tasksDir); // Program Files x86
             InitializeComponent(); 
             CheckTheme(); 
-            Core.SystemInfo.ComputerBit();
-            CreateDirectories("");
+            Core.System.ComputerBit();
+            Core.System.CreateFiles();
         }
 
         private Form activeForm = null;
@@ -104,26 +104,10 @@ namespace Tasks
         }
 
 
-        public static void CreateDirectories(string test)
-        {
-            Directory.CreateDirectory(Dirs.tasksDir);
-            string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-
-            using (StreamWriter writer = new StreamWriter(deskDir + "\\" + test + ".url"))
-            {
-                string app = System.Reflection.Assembly.GetCallingAssembly().Location;
-                writer.WriteLine("[InternetShortcut]");
-                writer.WriteLine("URL=file:///" + app);
-                writer.WriteLine("IconIndex=0");
-                string icon = app.Replace('\\', '/');
-                writer.WriteLine("IconFile=" + icon);
-            }
-        }
-
         private void frmMain_Load(object sender, EventArgs e) { 
             CheckTheme(); 
-            label2.Text = Core.SystemInfo.bit;
-            label4.Text = Core.SystemInfo.getOSInfo();
+            label2.Text = Core.System.bit;
+            label4.Text = Core.System.getOSInfo();
 
             var identity = WindowsIdentity.GetCurrent();
             var principal = new WindowsPrincipal(identity);

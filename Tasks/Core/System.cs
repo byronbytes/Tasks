@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Tasks.Core
 {
-    class SystemInfo
+    class System
     {
-        public static string bit = "undefined";
+        public static string bit = "?";
         
         // Gets the computer's bit (64 or 32)
         public static void ComputerBit()
@@ -16,7 +17,8 @@ namespace Tasks.Core
             if(Environment.Is64BitOperatingSystem)
             {
                 bit = "64-bit";
-            } else
+            } 
+            else
             {
                 bit = "32-bit";
             }
@@ -33,16 +35,7 @@ namespace Tasks.Core
             //Variable to hold our return value
             string operatingSystem = "";
 
-            if (os.Platform == PlatformID.Win32Windows)
-            {
-                //This is a pre-NT version of Windows
-                switch (vs.Minor)
-                {
-                    default:
-                        break;
-                }
-            }
-            else if (os.Platform == PlatformID.Win32NT)
+        if (os.Platform == PlatformID.Win32NT)
             {
                 switch (vs.Major)
                 {
@@ -90,6 +83,23 @@ namespace Tasks.Core
         }
 
 
+        public static void CreateFiles()
+        {
+            Directory.CreateDirectory(Dirs.tasksDir);
+            string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
 
+            using (StreamWriter writer = new StreamWriter(deskDir + "\\" + ".url"))
+            {
+                string app = "";
+                writer.WriteLine("[InternetShortcut]");
+                writer.WriteLine("URL=file:///" + app);
+                writer.WriteLine("IconIndex=0");
+                string icon = app.Replace('\\', '/');
+                writer.WriteLine("IconFile=" + icon);
+            }
+        }
     }
+
+
+
 }
