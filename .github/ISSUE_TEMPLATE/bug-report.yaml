@@ -10,20 +10,20 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: input
-    id: contact
+    id: what-happened
     attributes:
       label: What happened? 
-      description: Tell us what happened to get the error.
-      placeholder: I did this, and then that.
+      description: Tell us what happened to get the error and the steps to replicate it.
+      placeholder: 
     validations:
       required: true
   - type: textarea
     id: what-happened
     attributes:
-      label: Expected Behavior?
+      label: Expected Behavior
       description: What was supposed to happen?
       placeholder: Stuff
-      value: "Something that wasn't supposed to happen!"
+      value: ""
     validations:
       required: true
   - type: dropdown
