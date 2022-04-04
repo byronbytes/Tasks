@@ -12,17 +12,17 @@ body:
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: What happened? 
+      description: Tell us what happened to get the error.
+      placeholder: I did this, and then that.
     validations:
-      required: false
+      required: true
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
+      label: Expected Behavior?
+      description: What was supposed to happen?
+      placeholder: Stuff
       value: "Something that wasn't supposed to happen!"
     validations:
       required: true
@@ -44,13 +44,15 @@ body:
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: What Operating System are you using?
+      multiple: false
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - Windows 11
+        - Windows 10
+        - Windows 8.1
+        - Windows 8
+        - Windows 7
+        - Windows Vista
   - type: textarea
     id: logs
     attributes:
