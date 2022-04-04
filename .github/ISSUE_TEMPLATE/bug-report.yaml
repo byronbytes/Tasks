@@ -1,14 +1,14 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug", ""]
+labels: ["Issue-Bug", "Status-Investigating"]
 assignees:
   - byronbytes
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to fill out this bug report! This will help us develop Tasks and make it better.
   - type: input
     id: what-happened
     attributes:
@@ -22,8 +22,8 @@ body:
     attributes:
       label: Expected Behavior
       description: What was supposed to happen?
-      placeholder: Stuff
-      value: "t"
+      placeholder: When I click on ..., .... was supposed to happen.
+      value: ""
     validations:
       required: true
   - type: dropdown
