@@ -22,7 +22,6 @@ namespace Tasks.Core
             {
                 bit = "32-bit";
             }
-
         }
 
         public static string getOSInfo()

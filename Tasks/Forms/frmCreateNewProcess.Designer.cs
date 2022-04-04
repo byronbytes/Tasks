@@ -59,7 +59,7 @@ namespace Tasks
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(488, 15);
+            this.button1.Location = new System.Drawing.Point(500, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 30);
             this.button1.TabIndex = 1;
@@ -74,7 +74,7 @@ namespace Tasks
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(341, 15);
+            this.button2.Location = new System.Drawing.Point(336, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 30);
             this.button2.TabIndex = 2;
