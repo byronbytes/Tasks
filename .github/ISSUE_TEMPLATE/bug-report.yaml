@@ -14,7 +14,7 @@ body:
     attributes:
       label: What happened? 
       description: Tell us what happened to get the error and the steps to replicate it.
-      placeholder: t
+      placeholder: When I opened ..., ... happened.
     validations:
       required: true
   - type: textarea
@@ -42,9 +42,10 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: os
     attributes:
-      label: What Operating System are you using?
+      label: Operating System
+      description: What OS are you using?
       multiple: false
       options:
         - Windows 11
