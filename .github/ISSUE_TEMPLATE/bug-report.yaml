@@ -14,16 +14,16 @@ body:
     attributes:
       label: What happened? 
       description: Tell us what happened to get the error and the steps to replicate it.
-      placeholder: 
+      placeholder: t
     validations:
       required: true
   - type: textarea
-    id: what-happened
+    id: expected-behavior
     attributes:
       label: Expected Behavior
       description: What was supposed to happen?
       placeholder: Stuff
-      value: ""
+      value: "t"
     validations:
       required: true
   - type: dropdown
