@@ -23,7 +23,7 @@ body:
       label: Expected Behavior
       description: What was supposed to happen?
       placeholder: When I click on ..., .... was supposed to happen.
-      value: ""
+      value: "Text Here."
     validations:
       required: true
   - type: dropdown
