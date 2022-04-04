@@ -1,0 +1,73 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["Issue-Bug", "Status-Investigating"]
+assignees:
+  - byronbytes
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! This will help us develop Tasks and make it better.
+  - type: input
+    id: what-happened
+    attributes:
+      label: What happened? 
+      description: Tell us what happened to get the error and the steps to replicate it.
+      placeholder: When I opened ..., ... happened.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What was supposed to happen?
+      placeholder: When I click on ..., .... was supposed to happen.
+      value: "Text Here."
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of Tasks are you running?
+      options:
+        - 3.5.0 (Most Recent)
+        - 3.4.0
+        - 3.3.0
+        - 3.2.0
+        - 3.1.0
+        - 3.0.1
+        - 3.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What OS are you using?
+      multiple: false
+      options:
+        - Windows 11
+        - Windows 10
+        - Windows 8.1
+        - Windows 8
+        - Windows 7
+        - Windows Vista
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Log Output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
