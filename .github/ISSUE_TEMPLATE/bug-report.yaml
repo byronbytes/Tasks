@@ -54,11 +54,14 @@ body:
         - Windows 8
         - Windows 7
         - Windows Vista
+        - Other
+        validations:
+        required: true
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: Relevant Log Output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code.
       render: shell
   - type: checkboxes
     id: terms
