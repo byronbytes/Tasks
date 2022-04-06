@@ -19,6 +19,10 @@ using System.Threading;
 using System.Windows.Forms;
 using ByteSizeLib;
 
+// TODO: Log updates (instead of saying error I can make it a general error and then the label name)
+// TODO: More cleaning (CCleaner is starting to get ahead with the cleans)
+// TODO: Improve Quick Clean.
+
 namespace Tasks
 {
 
@@ -125,6 +129,9 @@ namespace Tasks
 
             return true;
         }
+        
+        public static string LogError = "Error while trying to delete ";
+        public static string LogSuccess = "Deleted ";
 
 
         private void button8_Click(object sender, EventArgs e)
@@ -199,7 +206,6 @@ namespace Tasks
                     {
                         // Make a new DirectoryInfo with the info of that subdirectory and then add it into the directoryInfos array
                         directoryInfos.Add(new DirectoryInfo(mainSubdirectory + subdir + "\\"));
-
                     }
 
                     bool isDeleted = true;
@@ -214,12 +220,10 @@ namespace Tasks
                         {
                             CleanupLogsLBox.Items.Add("Error deleting Chrome Cache. " + ex);
                         }
-
                         // If DeleteAllFiles returns false, set the isDeleted value to false
                         if (!DeleteAllFiles(d))
                             isDeleted = false;
                     }
-
                     if (isDeleted)
                         CleanupLogsLBox.Items.Add("Chrome Cache Deleted.");
                 }
@@ -233,17 +237,15 @@ namespace Tasks
             {
                 try
                 {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions");
-                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage");
-                    var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State");
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions\\");
+                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage\\");
+                    var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State\\");
                     if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
                 }
                 catch
                 {
                     CleanupLogsLBox.Items.Add("Unable to delete Chrome Sessions.");
                 }
-
-
             }
 
             if (cbChromeCookies.Checked)
@@ -528,7 +530,6 @@ namespace Tasks
                 }
                 catch
                 {
-
                     CleanupLogsLBox.Items.Add("Error while deleting Edge Cookies.");
                 }
 
