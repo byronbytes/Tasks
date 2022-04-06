@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tasks.Forms;
 
-//TODO: Update theme checking method (slow), find the right icon for startup programs for light theme (its pixelated ik)
+//TODO: Update theme checking method (slow)
 
 namespace Tasks
 {
@@ -51,7 +51,7 @@ namespace Tasks
             childForm.Show();
         }
 
-        public void CheckTheme()
+        public void CheckTheme() // Required to be lengthy because buttons n stuff.
         {
             if (Properties.Settings.Default.Theme == "dark")
             {
@@ -119,7 +119,7 @@ namespace Tasks
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            CheckTheme(); // inefficient
+            CheckTheme();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
