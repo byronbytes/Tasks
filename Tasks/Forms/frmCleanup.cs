@@ -953,8 +953,6 @@ namespace Tasks
 
         private void button6_Click(object sender, EventArgs e)
         {
-            try { Process.Start("powershell", "-ExecutionPolicy Bypass  -File Scripts/Debloat_UninstallOneDrive.ps1"); }
-            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
         }
 
         private void button4_Click(object sender, EventArgs e)
