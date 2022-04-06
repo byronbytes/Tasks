@@ -85,7 +85,7 @@ namespace Tasks
                 panel2.BackColor = Color.FromArgb(250, 250, 250);
                 panel3.BackColor = Color.FromArgb(250, 250, 250);
                 button1.Image = Properties.Resources.Cleanup;
-                button2.Image = Properties.Resources.Startup_Programs_Black;
+                button2.Image = Properties.Resources.StartupProgramsBlack;
                 button3.Image = Properties.Resources.Task_Manager;
                 button4.Image = Properties.Resources.Settings;
                 button1.BackColor = Color.FromArgb(240, 240, 240);
