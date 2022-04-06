@@ -16,6 +16,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// TODO: Serious code cleaning, my god its bloated.
 namespace Tasks
 {
     public partial class frmTaskManager : Form
@@ -36,11 +37,6 @@ namespace Tasks
 
         public void CheckTheme()
         {
-            if (Properties.Settings.Default.Theme == "dark")
-            {
-
-            }
-
             if (Properties.Settings.Default.Theme == "light")
             {
                 listView1.BackColor = Color.White;
