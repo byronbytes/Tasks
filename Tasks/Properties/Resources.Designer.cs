@@ -73,9 +73,9 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cleanup {
+        internal static System.Drawing.Bitmap Cleanup_Black {
             get {
-                object obj = ResourceManager.GetObject("Cleanup", resourceCulture);
+                object obj = ResourceManager.GetObject("Cleanup Black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CleanupWhite {
+        internal static System.Drawing.Bitmap Cleanup_White {
             get {
-                object obj = ResourceManager.GetObject("CleanupWhite", resourceCulture);
+                object obj = ResourceManager.GetObject("Cleanup White", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,16 +96,6 @@ namespace Tasks.Properties {
         internal static System.Drawing.Bitmap Explorer {
             get {
                 object obj = ResourceManager.GetObject("Explorer", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FirefoxPng {
-            get {
-                object obj = ResourceManager.GetObject("FirefoxPng", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,16 +123,6 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap QuickClean_100x_White {
-            get {
-                object obj = ResourceManager.GetObject("QuickClean 100x White", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap QuickClean_Black {
             get {
                 object obj = ResourceManager.GetObject("QuickClean Black", resourceCulture);
@@ -153,9 +133,19 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Settings {
+        internal static System.Drawing.Bitmap QuickClean_White {
             get {
-                object obj = ResourceManager.GetObject("Settings", resourceCulture);
+                object obj = ResourceManager.GetObject("QuickClean White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingsBlack {
+            get {
+                object obj = ResourceManager.GetObject("SettingsBlack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +163,9 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap StartupProgramsBlack {
+        internal static System.Drawing.Bitmap StartupPrograms_Black {
             get {
-                object obj = ResourceManager.GetObject("StartupProgramsBlack", resourceCulture);
+                object obj = ResourceManager.GetObject("StartupPrograms Black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +173,9 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap StartupProgramsWhite {
+        internal static System.Drawing.Bitmap StartupPrograms_White {
             get {
-                object obj = ResourceManager.GetObject("StartupProgramsWhite", resourceCulture);
+                object obj = ResourceManager.GetObject("StartupPrograms White", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +183,9 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Task_Manager {
+        internal static System.Drawing.Bitmap TaskManager_Black {
             get {
-                object obj = ResourceManager.GetObject("Task Manager", resourceCulture);
+                object obj = ResourceManager.GetObject("TaskManager Black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,19 +203,9 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tasks_256x256_Logo {
+        internal static System.Drawing.Bitmap Tasks_Logo_Small {
             get {
-                object obj = ResourceManager.GetObject("Tasks 256x256 Logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tasks_256x256_v2 {
-            get {
-                object obj = ResourceManager.GetObject("Tasks 256x256 v2", resourceCulture);
+                object obj = ResourceManager.GetObject("Tasks Logo Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +233,9 @@ namespace Tasks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap windows_10 {
+        internal static System.Drawing.Bitmap Windows {
             get {
-                object obj = ResourceManager.GetObject("windows 10", resourceCulture);
+                object obj = ResourceManager.GetObject("Windows", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -108,7 +108,7 @@ namespace Tasks
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Image = global::Tasks.Properties.Resources.StartupProgramsWhite;
+            this.button2.Image = global::Tasks.Properties.Resources.StartupPrograms_White;
             this.button2.Location = new System.Drawing.Point(0, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 60);
@@ -125,7 +125,7 @@ namespace Tasks
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = global::Tasks.Properties.Resources.CleanupWhite;
+            this.button1.Image = global::Tasks.Properties.Resources.Cleanup_White;
             this.button1.Location = new System.Drawing.Point(0, 109);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 60);
