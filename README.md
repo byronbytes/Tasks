@@ -36,7 +36,6 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   
 - Settings:
   - Ability to change the theme of Tasks. (Dark / Light Mode)
-  - View and delete Cleanup Summaries that Tasks created.
   - Toggle the ability to turn on or off cleanup logs.
   - Change general settings about Tasks.
   - Change the language of Tasks. (WIP)
@@ -44,7 +43,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 
 ## Installation
 
-1. First, you need to install [.NET Core](https://dotnet.microsoft.com/download) if it isn't installed already.
+1. Install [.NET Core](https://dotnet.microsoft.com/download) if you don't have it installed.
 2. Download the latest version of Tasks from the **Releases** tab.
 3. Extract the `.zip` and execute `Tasks.exe`.
 4. If you get the Windows SafeScreen message, click "Run Anyways".
@@ -52,7 +51,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 *The dependencies must be kept in the same folder.*
 
 ## Contribution
-Contributions are always encouraged, but before creating a pull request it is suggested to read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
+Contributions are always encouraged, but before creating a pull request please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
 
 ## Credits
 * **Matty (@byronbytes)** - *Initial work / creation and development.*
