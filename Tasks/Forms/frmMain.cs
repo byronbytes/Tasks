@@ -3,7 +3,6 @@
     All rights reserved under the GNU General Public License v3.0.
 */
 
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -121,12 +120,7 @@ namespace Tasks
         {
             CheckTheme();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             openChildForm(new frmCleanup());
@@ -145,11 +139,6 @@ namespace Tasks
         private void button3_Click(object sender, EventArgs e)
         {
             openChildForm(new frmTaskManager());
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
