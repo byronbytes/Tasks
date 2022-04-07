@@ -33,5 +33,28 @@ namespace Tasks.Forms
         {
             Process.Start(new ProcessStartInfo { FileName = "https://litetools.net", UseShellExecute = true });
         }
+
+        private void frmAbout_Load(object sender, EventArgs e)
+        {
+            CheckTheme();
+        }
+
+        public void CheckTheme()
+        {
+            if (Properties.Settings.Default.Theme == "light")
+            {
+                this.BackColor = Color.FromArgb(250, 250, 250);
+                listBox1.ForeColor = Color.Black;
+                listBox1.BackColor = Color.White;
+                label1.ForeColor = Color.Black;
+                label2.ForeColor = Color.Black;
+                label3.ForeColor = Color.Black;
+                label4.ForeColor = Color.Black;
+                label5.ForeColor = Color.Black;
+                label6.ForeColor = Color.Black;
+                linkLabel1.ForeColor = Color.Blue;
+                linkLabel2.ForeColor = Color.Blue;
+            }
+        }
     }
 }

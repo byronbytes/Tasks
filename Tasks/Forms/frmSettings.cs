@@ -72,7 +72,7 @@ namespace Tasks
 
             if (comboBox1.SelectedText == "Spanish")
             {
-                // Hey, we're looking for translators, wanna help? Create an issue with the tag [TRANSLATION] and we can discuss further.
+                // Hey, we're looking for translators!!!
             }
 
 
@@ -85,12 +85,14 @@ namespace Tasks
             {
                 Properties.Settings.Default.Theme = "dark";
                 Main.CheckTheme();
+                CheckTheme();
             }
 
             if (radioButton2.Checked)
             {
                 Properties.Settings.Default.Theme = "light";
                 Main.CheckTheme();
+                CheckTheme();
             }
 
             Properties.Settings.Default.Save();
@@ -99,7 +101,6 @@ namespace Tasks
         private void frmSettings_Load(object sender, EventArgs e)
         {
             CheckTheme();
-         
         }
 
         public void CheckTheme()
@@ -124,7 +125,6 @@ namespace Tasks
                 radioButton2.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.GhostWhite;
                 comboBox1.ForeColor = Color.Black;
-
             }
         }
 

@@ -51,6 +51,7 @@ namespace Tasks
         {
             if (Properties.Settings.Default.Theme == "light")
             {
+                pictureBox2.Image = Tasks.Properties.Resources.QuickClean_Black;
                 this.BackColor = Color.FromArgb(250, 250, 250);
                 cbChromeCache.ForeColor = Color.Black;
                 cbChromeCookies.ForeColor = Color.Black;
@@ -87,7 +88,6 @@ namespace Tasks
                 tabPage1.BackColor = Color.White;
                 tabPage7.BackColor = Color.White;
                 tabPage3.BackColor = Color.White;
-                tabPage4.BackColor = Color.White;
                 tabControl2.BackColor = Color.White;
                 tabControl1.BackColor = Color.White;
                 tabPage5.BackColor = Color.White;
@@ -122,11 +122,11 @@ namespace Tasks
                 try
                 {
                     file.Delete();
-                    CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
+                    CleanupLogsLBox.Items.Add(LogSuccess + file.FullName);
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Exception: " + ex.Message);
+                    CleanupLogsLBox.Items.Add(LogError + ex.Message);
                 }
 
             }
@@ -135,11 +135,11 @@ namespace Tasks
                 try
                 {
                     dir.Delete(true);
-                    CleanupLogsLBox.Items.Add("Deleted Folder " + dir.FullName);
+                    CleanupLogsLBox.Items.Add(LogSuccess + dir.FullName);
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add("Exception: " + ex.Message);
+                    CleanupLogsLBox.Items.Add(LogError + ex.Message);
                 }
 
             }
@@ -955,29 +955,6 @@ namespace Tasks
                 MessageBox.Show("An error occurred." + ex);
             }
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                XylonV2.Engine.Windows.Functions.SetAllowCortana(XylonV2.Engine.Windows.CortanaState.Disabled);
-            }
-            catch
-            {
-                MessageBox.Show("There was an issue while disabling Cortana.");
-            }
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-         
-        }
-
         private void DirectoryExists()
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");

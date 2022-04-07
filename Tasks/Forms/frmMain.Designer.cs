@@ -155,7 +155,6 @@ namespace Tasks
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1053, 722);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // timer1
             // 
@@ -176,7 +175,6 @@ namespace Tasks
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1194, 54);
             this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label4
             // 
