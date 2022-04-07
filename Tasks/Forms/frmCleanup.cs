@@ -23,6 +23,23 @@ using ByteSizeLib;
 // TODO: More cleaning (CCleaner is starting to get ahead with the cleans)
 // TODO: Improve Quick Clean.
 
+/*
+Okay, huge changes in the next update.
+I'm planning on removing Remove Bloatware for another feature called Windows Features
+Basically this can help you enable and disable certain unwanted features and junk.
+I will most likely make a seperate app that removes bloatware for you and a few extra tweaks,
+but this app is strictly for PC **Cleaning**, not debloating, even though it's practically the same,
+very different aspect.
+
+Again, more details will be revealed when the time is neccesary, for now, we're looking to make 
+Tasks a lightweight, easy to use, and simple applicaton. I've changed my perspective on what
+I want to make, and I have a clear vision.
+
+I will make another application that does all the debloating stuff like remove telemetry,
+uninstall unwanted apps, remove registry keys, etc.
+
+*/
+
 namespace Tasks
 {
 
@@ -958,8 +975,7 @@ namespace Tasks
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "/Scripts/Debloat_RemoveEdge.bat"); }
-            catch (Exception ex) { MessageBox.Show("An error occurred." + ex); }
+         
         }
 
         private void DirectoryExists()
