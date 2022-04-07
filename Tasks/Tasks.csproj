@@ -5,7 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Tasks 256x256 Logo.ico</ApplicationIcon>
-    <Version>3.5.0</Version>
+    <Version>4.0.0</Version>
     <Copyright>LiteTools 2022</Copyright>
     <Description>Tasks is an application that improves computer performance. Tasks's main features include an advanced cleanup tool, a startup manager, and a detailed Task Manager. These tools help improve computer performance, system boot times, and ensures a safer experience while using your computer.</Description>
     <Company>LiteTools</Company>
@@ -17,7 +17,7 @@
     <NeutralLanguage>en</NeutralLanguage>
     <Win32Resource />
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <AssemblyVersion>3.5.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <UseWPF>False</UseWPF>
     <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
     <StartupObject>Tasks.Program</StartupObject>
@@ -36,11 +36,9 @@
 
   <ItemGroup>
     <PackageReference Include="ByteSize" Version="2.1.1" />
-    <PackageReference Include="Ookii.Dialogs.WinForms" Version="4.0.0" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
     <PackageReference Include="System.Management" Version="6.0.0" />
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
-    <PackageReference Include="XylonV2" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,40 +62,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Scripts\BatFiles\byesolitaire.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\BatFiles\killedge.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\BatFiles\displayarp.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\BatFiles\displaydns.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\BatFiles\removeedge.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\Debloater\DisableCortana.ps1">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\Debloater\UninstallOneDrive.ps1">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Update="Scripts\Debloat_RemoveEdge.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\Debloat_RemoveSolitaire.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Scripts\Debloat_UninstallOneDrive.ps1">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="..\..\..\Software Development\Tasks\Tasks Icons\Tasks New Logo Revision #3\Tasks 256x256 Logo.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
