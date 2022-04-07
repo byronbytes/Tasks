@@ -1,4 +1,10 @@
-﻿using System;
+/*
+    (c) LiteTools 2022 (https://github.com/LiteTools)
+    All rights reserved under the GNU General Public License v3.0.
+*/
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,8 +29,7 @@ namespace Tasks.Forms
         {
             openChildForm(new frmAbout());
         }
-
-
+        
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -57,12 +62,7 @@ namespace Tasks.Forms
                 button2.BackColor = Color.FromArgb(200, 200, 200);
                 button1.ForeColor = Color.Black;
                 button2.ForeColor = Color.Black;
-            }
-        
-        }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            }  
         }
     }
 }
