@@ -42,7 +42,6 @@ namespace Tasks.Core
             {
                 MessageBox.Show("Cleanup session has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
             }
-
         }
         
         
