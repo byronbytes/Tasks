@@ -5,21 +5,13 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Security;
 using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
-using ByteSizeLib;
 
-// TODO: Log updates (instead of saying error I can make it a general error and then the label name)
 // TODO: More cleaning (CCleaner is starting to get ahead with the cleans)
 // TODO: Improve Quick Clean.
 
@@ -36,13 +28,12 @@ Tasks a lightweight, easy to use, and simple applicaton. I've changed my perspec
 I want to make, and I have a clear vision.
 
 I will make another application that does all the debloating stuff like remove telemetry,
-uninstall unwanted apps, remove registry keys, etc.
+uninstall unwanted apps, remove bloat keys, etc.
 
 */
 
 namespace Tasks
 {
-
     public partial class frmCleanup : Form
     {
         public frmCleanup() { InitializeComponent(); CheckTheme(); }
@@ -149,8 +140,6 @@ namespace Tasks
         
         public static string LogError = "Error while trying to delete ";
         public static string LogSuccess = "Deleted ";
-
-
         private void button8_Click(object sender, EventArgs e)
         {
             // These are going to be updated to reflect the Directories class, will need moving.
@@ -859,8 +848,16 @@ namespace Tasks
             else if (comboBox1.Text == "Microsoft Edge")
             {
                 ExtensionsBox.Items.Clear();
+                try
+                {
+                    GetExtensionList(new DirectoryInfo(Dirs.edgeExtDir));
+                }
+                catch
+                {
+                    MessageBox.Show("Unable to get extensions from Edge.");
+                }
                 // will crash if it doesn't exist, will fix later
-                GetExtensionList(new DirectoryInfo(Dirs.edgeExtDir));
+                
             }
         }
 
@@ -943,18 +940,6 @@ namespace Tasks
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Written by Solirs (https://github.com/LiteTools/Tasks)
-                Process.Start("powershell", "Get-AppxPackage *solitairecollection* | Remove-AppxPackage");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred." + ex);
-            }
-        }
         private void DirectoryExists()
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
@@ -1088,7 +1073,6 @@ namespace Tasks
                 // Needs advanced catch method.
                 Debug.Print("Quick Clean was unable to clean everything.");
             }
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -1109,7 +1093,6 @@ namespace Tasks
             catch (Exception)
             {
                 MessageBox.Show("Error while trying to show DNS Cache.");
-
             }
         }
 
@@ -1133,11 +1116,5 @@ namespace Tasks
                 MessageBox.Show("Error while trying to show ARP Cache.");
             }
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
-
 }
