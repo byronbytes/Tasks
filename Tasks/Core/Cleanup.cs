@@ -25,7 +25,6 @@ namespace Tasks.Core
             {
                 try
                 { 
-                    // Writes everything to the file.
                     File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
                 }
                 catch
