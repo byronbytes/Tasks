@@ -65,21 +65,26 @@ Up until version 4.0.0, we've used the following scripts for **Remove Bloatware*
 
 
 ## Gallery
-These images were taken on v3.0.1. Designs may vary for newer versions.
+These images were taken on v4.0.0. Designs may vary for newer versions.
 You are allowed to distribute these screenshots for showcase.
 
 
-![image](https://user-images.githubusercontent.com/53088136/146448769-f6b75abe-f8ee-428e-9089-31577f7c1003.png)
-![image](https://user-images.githubusercontent.com/53088136/146448787-41418c06-dd58-4eae-bdb4-a841fb8f725d.png)
-![image](https://user-images.githubusercontent.com/53088136/146448811-2ce7ee33-18d0-4000-9cbc-d9daf95a9a77.png)
-![image](https://user-images.githubusercontent.com/53088136/146448830-71ffb836-d1d2-4640-96d3-4a8abddd30a2.png)
-![image](https://user-images.githubusercontent.com/53088136/146448844-a1ff574b-3803-46a4-95fc-bb8b72a1cd71.png)
-![image](https://user-images.githubusercontent.com/53088136/146448860-43622db9-7ffb-4032-bb80-ddb53b1a1b59.png)
-![image](https://user-images.githubusercontent.com/53088136/146448892-edebf3b9-9f0f-4b41-abb1-51dbf64b6973.png)
-![image](https://user-images.githubusercontent.com/53088136/146448916-667db30d-3502-442c-86b7-9440676e1c91.png)
-![image](https://user-images.githubusercontent.com/53088136/146449001-c9905a0a-c542-4406-9427-1b079de4ac10.png)
-![image](https://user-images.githubusercontent.com/53088136/146449025-844b7e83-d10d-4d93-b514-230c9ab724e3.png)
-![image](https://user-images.githubusercontent.com/53088136/146449043-483295dc-a6d5-4198-b51c-016a43f87311.png)
+![image](https://user-images.githubusercontent.com/53088136/164793997-bf03d87e-a1dd-483d-a84d-6c3eb3823643.png)
+![image](https://user-images.githubusercontent.com/53088136/164794022-384ca46b-ddb4-46dc-86af-841f7fb1dac4.png)
+![image](https://user-images.githubusercontent.com/53088136/164794530-ebb74a9c-e01c-4c6c-a822-886d8823de12.png)
+![image](https://user-images.githubusercontent.com/53088136/164794601-2ae76f08-42a5-42f9-aa3b-5082a2295625.png)
+![image](https://user-images.githubusercontent.com/53088136/164794724-a79f1088-76d4-4af3-b557-08ffab8ffa8d.png)
+![image](https://user-images.githubusercontent.com/53088136/164794777-520c5c47-2f12-458d-b655-4e39ee6d3f42.png)
+![image](https://user-images.githubusercontent.com/53088136/164794903-d4cabe26-c532-452c-9ec1-e549177467de.png)
+![image](https://user-images.githubusercontent.com/53088136/164794968-d98dcc99-95f6-443c-ae6e-f75955a3d90f.png)
+![image](https://user-images.githubusercontent.com/53088136/164795048-03ae8698-1fdf-4875-bbfb-26122593ecd7.png)
+
+
+
+
+
+
+
 
 
 
