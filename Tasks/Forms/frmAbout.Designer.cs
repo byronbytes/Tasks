@@ -140,9 +140,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(153, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 20);
+            this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 44;
-            this.label2.Text = "Version: 4.0.0 Preview Build 1";
+            this.label2.Text = "Version: 4.0.0";
             // 
             // pictureBox1
             // 
