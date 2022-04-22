@@ -91,78 +91,7 @@ namespace Tasks
 
 
 
-        public void CreateStartup(string StartupPath, int mode, bool create)
-        {
-            string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
-            RegistryKey startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-            string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
-
-            if (create == true)
-            {
-                switch (mode)
-                {
-                    case 1: // Create via HKLM.
-                        startupKey.Close();
-                        startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                        startupKey.CreateSubKey(StartupPath, true);
-                        startupKey.SetValue(StartupPath, Application.ExecutablePath.ToString());
-                        startupKey.Close();
-                        break;
-
-                    case 2: // Create via Startup Folder
-                        using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Executables|*.exe" })
-                        {
-                            if (ofd.ShowDialog() == DialogResult.OK)
-                            {
-                                try
-                                {
-                                    string program = ofd.FileName.ToString();
-                                    txtFileName.Text = ofd.FileName;
-                                    FileInfo fileInfo = new FileInfo(txtFileName.Text);
-                                    txtTargetPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\", fileInfo.Name);
-                                    File.Copy(txtFileName.Text, txtTargetPath.Text, true);
-                                }
-                                catch
-                                {
-                                    MessageBox.Show("There was an error trying to add a new startup process.");
-                                }
-                            }
-                        }
-                        break;
-                }
-            }
-
-            if (create == false)
-            {
-                switch (mode)
-                {
-                    case 5: // Delete via HKLM
-                        startupKey.Close();
-                        startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                        startupKey.DeleteValue(StartupPath, true);
-                        startupKey.Close();
-                        break;
-
-
-                    case 6: // Delete via Startup Folder
-                        if (StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup")
-                        {
-                            try
-                            {
-                                File.Delete(fileStartup);
-                                RefreshList();
-                            }
-                            catch
-                            {
-                                MessageBox.Show("An error has occurred.");
-                            }
-
-                        }
-                        break;
-                }
-            }
-        }
-
+     
         private void frmStartupPrograms_Load(object sender, EventArgs e)
         {
             txtTargetPath.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
@@ -174,15 +103,16 @@ namespace Tasks
         {
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
 
-            try
-            {
-                SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
-                RefreshList();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
-            }
+         
+                try
+                {
+                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
+                    RefreshList();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
+                }
         }
 
         class StartUpProgram
@@ -219,7 +149,7 @@ namespace Tasks
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    CreateStartup(ofd.FileName.ToString(), 1, true);
+                    SetStartup(ofd.FileName.ToString(), true);
                     RefreshList();
                 }
             }

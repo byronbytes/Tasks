@@ -30,7 +30,6 @@ namespace Tasks
             InitializeComponent(); 
             CheckTheme(); 
             Core.System.ComputerBit();
-            Core.System.CreateFiles();
         }
 
         private Form activeForm = null;
@@ -139,6 +138,11 @@ namespace Tasks
         private void button3_Click(object sender, EventArgs e)
         {
             openChildForm(new frmTaskManager());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
