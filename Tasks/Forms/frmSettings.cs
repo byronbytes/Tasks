@@ -147,11 +147,5 @@ namespace Tasks
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmSettingsHolder NewSettings = new frmSettingsHolder();
-            NewSettings.Show();
-        }
     }
 }
