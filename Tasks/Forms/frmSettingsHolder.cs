@@ -56,6 +56,7 @@ namespace Tasks.Forms
         {
             if (Properties.Settings.Default.Theme == "light")
             {
+
                 panel1.BackColor = Color.FromArgb(250, 250, 250);
                 panel2.BackColor = Color.FromArgb(250, 250, 250);
                 button1.BackColor = Color.FromArgb(200, 200, 200);
@@ -63,6 +64,16 @@ namespace Tasks.Forms
                 button1.ForeColor = Color.Black;
                 button2.ForeColor = Color.Black;
             }  
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

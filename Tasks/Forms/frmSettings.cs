@@ -85,6 +85,7 @@ namespace Tasks
             {
                 Properties.Settings.Default.Theme = "dark";
                 Main.CheckTheme();
+
                 CheckTheme();
             }
 
@@ -92,6 +93,7 @@ namespace Tasks
             {
                 Properties.Settings.Default.Theme = "light";
                 Main.CheckTheme();
+
                 CheckTheme();
             }
 

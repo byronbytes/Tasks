@@ -856,7 +856,6 @@ namespace Tasks
                 {
                     MessageBox.Show("Unable to get extensions from Edge.");
                 }
-                // will crash if it doesn't exist, will fix later
                 
             }
         }
