@@ -37,7 +37,6 @@ namespace Tasks
             this.ProcessPath = new System.Windows.Forms.ColumnHeader();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.txtFileName = new System.Windows.Forms.Label();
@@ -60,15 +59,13 @@ namespace Tasks
             // 
             // StartupProcesses
             // 
-            this.StartupProcesses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.StartupProcesses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.StartupProcesses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.StartupProcesses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ProcessName,
             this.ProcessDescription,
             this.ProcessPath});
+            this.StartupProcesses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StartupProcesses.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.StartupProcesses.ForeColor = System.Drawing.Color.White;
             this.StartupProcesses.FullRowSelect = true;
@@ -129,22 +126,6 @@ namespace Tasks
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(7, 34);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 37);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Open Startup Folder";
-            this.toolTip1.SetToolTip(this.button3, "View Startup Folder");
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -153,7 +134,7 @@ namespace Tasks
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(493, 34);
+            this.txtFileName.Location = new System.Drawing.Point(175, 34);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(119, 15);
             this.txtFileName.TabIndex = 4;
@@ -164,7 +145,7 @@ namespace Tasks
             // 
             this.txtTargetPath.AutoSize = true;
             this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTargetPath.Location = new System.Drawing.Point(487, 49);
+            this.txtTargetPath.Location = new System.Drawing.Point(175, 49);
             this.txtTargetPath.Name = "txtTargetPath";
             this.txtTargetPath.Size = new System.Drawing.Size(125, 15);
             this.txtTargetPath.TabIndex = 5;
@@ -178,7 +159,7 @@ namespace Tasks
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(207, 34);
+            this.button4.Location = new System.Drawing.Point(3, 34);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(161, 37);
             this.button4.TabIndex = 6;
@@ -226,15 +207,13 @@ namespace Tasks
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.FullRowSelect = true;
@@ -266,7 +245,6 @@ namespace Tasks
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.txtFileName);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.txtTargetPath);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -303,7 +281,6 @@ namespace Tasks
         private System.Windows.Forms.ColumnHeader ProcessPath;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label txtFileName;

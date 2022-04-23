@@ -172,18 +172,6 @@ namespace Tasks
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Unable to open the startup folder.");
-            }
-        }
-
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab == tabPage2)
