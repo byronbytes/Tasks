@@ -3,9 +3,9 @@
     All rights reserved under the GNU General Public License v3.0.
 */
 
-
-// TODO: Add a switch statement for Removing programs based on the Location (Startup / Registry) (WORKING ON!)
 // Known Issue: It can only remove programs from HKLM
+
+// This is supposed to be simple, which means there will only be one way to create, but multiple ways to delete.
 
 using System;
 using System.Collections.Generic;
@@ -58,38 +58,35 @@ namespace Tasks
                 StartupProcessList.SubItems.Add(ProcessLocation + "");
                 StartupProcessList.SubItems.Add(Command + "");
 
-
                 StartupProcesses.Items.Add(StartupProcessList);
             }
         }
 
-        private void SetStartup(string AppName, bool enable)
+        private void SetStartup(string AppName, bool enabled)
         {
             string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
 
             RegistryKey startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
 
-            if (enable == true)
+            if (enabled == true)
             {
                 startupKey.Close();
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                // Add New Startup Program (Registry)
                 startupKey.CreateSubKey(AppName, true);
                 startupKey.SetValue(AppName, Application.ExecutablePath.ToString());
                 startupKey.Close();
             }
             else
             {
-                // Remove Startup Program (Registry)
+                // Remove
                 startupKey.Close();
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
                 startupKey.DeleteValue(AppName, true);
                 startupKey.Close();
             }
+            
+            
         }
-
-
-
 
      
         private void frmStartupPrograms_Load(object sender, EventArgs e)
@@ -99,11 +96,9 @@ namespace Tasks
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // delete
         {
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
-
-         
                 try
                 {
                     SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
@@ -111,7 +106,7 @@ namespace Tasks
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Unable to delete the selected startup process." + ex.Message);
+                    MessageBox.Show("Unable to delete the selected startup program.");
                 }
         }
 
@@ -126,11 +121,6 @@ namespace Tasks
 
         public void CheckTheme()
         {
-            if (Properties.Settings.Default.Theme == "dark")
-            {
-
-            }
-
             if (Properties.Settings.Default.Theme == "light")
             {
                 StartupProcesses.BackColor = Color.White;
