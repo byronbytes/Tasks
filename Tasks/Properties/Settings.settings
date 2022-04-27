@@ -11,5 +11,8 @@
     <Setting Name="EnableCleanupLogs" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="SidebarColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dark</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

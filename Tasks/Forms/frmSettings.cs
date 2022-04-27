@@ -41,12 +41,22 @@ namespace Tasks
 
             if (Properties.Settings.Default.Theme == "dark")
             {
-                radioButton1.Checked = true;
+                comboBox2.SelectedItem = "Dark";
             }
 
             if (Properties.Settings.Default.Theme == "light")
             {
-                radioButton2.Checked = true;
+                comboBox2.SelectedItem = "Light";
+            }
+
+            if (Properties.Settings.Default.SidebarColor == "dark")
+            {
+                comboBox3.SelectedItem = "Dark";
+            }
+
+            if (Properties.Settings.Default.SidebarColor == "light")
+            {
+                comboBox3.SelectedItem = "Light";
             }
         }
 
@@ -79,26 +89,7 @@ namespace Tasks
         }
         
         frmMain Main = new frmMain();
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked)
-            {
-                Properties.Settings.Default.Theme = "dark";
-                Main.CheckTheme();
-
-                CheckTheme();
-            }
-
-            if (radioButton2.Checked)
-            {
-                Properties.Settings.Default.Theme = "light";
-                Main.CheckTheme();
-
-                CheckTheme();
-            }
-
-            Properties.Settings.Default.Save();
-        }
+ 
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
@@ -121,12 +112,17 @@ namespace Tasks
                 label14.ForeColor = Color.Black;
                 label18.ForeColor = Color.Black;
                 label19.ForeColor = Color.Black;
+                label1.ForeColor = Color.Black;
+                label2.ForeColor = Color.Black;
                 checkBox2.ForeColor = Color.Black;
                 checkBox1.ForeColor = Color.Black;
-                radioButton1.ForeColor = Color.Black;
-                radioButton2.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.GhostWhite;
                 comboBox1.ForeColor = Color.Black;
+                comboBox2.BackColor = Color.GhostWhite;
+                comboBox2.ForeColor = Color.Black;
+                comboBox3.BackColor = Color.GhostWhite;
+                comboBox3.ForeColor = Color.Black;
+
             }
         }
 
@@ -143,9 +139,41 @@ namespace Tasks
             Properties.Settings.Default.Save();
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox2.SelectedItem == "Dark")
+            {
+                Properties.Settings.Default.Theme = "dark";
+                Main.CheckTheme();
+                CheckTheme();
+                Properties.Settings.Default.Save();
+            }
 
+                if (comboBox2.SelectedItem == "Light")
+            {
+                Properties.Settings.Default.Theme = "light";
+                Main.CheckTheme();
+                CheckTheme();
+                Properties.Settings.Default.Save();
+            }
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox3.SelectedItem == "Dark")
+            {
+                Properties.Settings.Default.SidebarColor = "dark";
+                Main.CheckTheme();
+                Properties.Settings.Default.Save();
+            }
+
+            if (comboBox3.SelectedItem == "Light")
+            {
+                Properties.Settings.Default.SidebarColor = "light";
+                Main.CheckTheme();
+                Properties.Settings.Default.Save();
+            }
         }
     }
 }
