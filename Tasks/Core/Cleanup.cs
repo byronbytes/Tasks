@@ -16,6 +16,7 @@ namespace Tasks.Core
 {
     class Cleanup
     {
+
         public static void WriteCleanupSummary()
         {
             frmCleanup CleanupForm = new frmCleanup();

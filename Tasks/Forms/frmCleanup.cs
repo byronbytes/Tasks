@@ -36,7 +36,8 @@ namespace Tasks
 {
     public partial class frmCleanup : Form
     {
-        public frmCleanup() { InitializeComponent(); CheckTheme(); }
+        public bool isCleanup;
+        public frmCleanup() { InitializeComponent(); CheckTheme(); isCleanup = false; }
 
         public void CheckTheme()
         {
@@ -88,7 +89,6 @@ namespace Tasks
                 label3.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
                 label6.ForeColor = Color.Black;
-                label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
                 label11.ForeColor = Color.Black;
@@ -96,7 +96,6 @@ namespace Tasks
                 label17.ForeColor = Color.DarkRed;
                 label18.ForeColor = Color.Black;
 
-                label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.WhiteSmoke;
                 comboBox1.ForeColor = Color.Black;
@@ -762,20 +761,42 @@ namespace Tasks
 
         private void Tabs_SelectedIndexChanged(object sender, EventArgs e)
         {
+            isCleanup = false;
+            // i hate C#, i gotta do this dumb s**t just to make it hide on both forms.
+
             if (tabControl1.SelectedTab.Text == "Browser Extensions")
             {
-                btnCleanup.Visible = false;
+                isCleanup = false;
+            }
 
+            if (tabControl1.SelectedTab.Text == "Quick Clean")
+            {
+                isCleanup = false;
+            }
+
+            if (tabControl1.SelectedTab.Text == "Cleanup")
+            {
+                isCleanup = true;
+            }
+
+
+
+            if (isCleanup == false)
+            {
+                btnCleanup.Visible = false;
             }
             else
             {
                 if (!btnCleanup.Visible)
                 {
                     btnCleanup.Visible = true;
-
                 }
             }
+
+         
         }
+
+
         private void frmCleanup_Load(object sender, EventArgs e)
         {
             tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged);
@@ -1114,6 +1135,11 @@ namespace Tasks
             {
                 MessageBox.Show("Error while trying to show ARP Cache.");
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
