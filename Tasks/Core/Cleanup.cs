@@ -4,12 +4,9 @@
 */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tasks.Core
@@ -25,7 +22,7 @@ namespace Tasks.Core
             if (Properties.Settings.Default.EnableCleanupLogs == true)
             {
                 try
-                { 
+                {
                     File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
                 }
                 catch
@@ -43,28 +40,24 @@ namespace Tasks.Core
                 MessageBox.Show("Cleanup session has been logged to: " + Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "Tasks") + "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", "Tasks");
             }
         }
-        
-        
+
+
+
         [DllImport("Shell32.dll")]
-       public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
-       public enum RecycleFlag : int
+        public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
+        public enum RecycleFlag : int
         {
             SHERB_NOCONFIRMATION = 0x00000001,
             SHERB_NOPROGRESSUI = 0x00000001,
             SHERB_NOSOUND = 0x00000004
         }
-    }
-    
-    
-
-    public class CleanRecentFiles
-    {
         public enum ShellAddToRecentDocsFlags
         {
             Pidl = 0x001,
             Path = 0x002,
             PathW = 0x003
         }
+
 
         [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
         private static extern void SHAddToRecentDocs(ShellAddToRecentDocsFlags flag, string path);
@@ -74,4 +67,7 @@ namespace Tasks.Core
             SHAddToRecentDocs(ShellAddToRecentDocsFlags.Pidl, null);
         }
     }
+
+
 }
+

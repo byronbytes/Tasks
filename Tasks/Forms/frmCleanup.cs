@@ -500,7 +500,7 @@ namespace Tasks
             {
                 try
                 {
-                    Core.CleanRecentFiles.ClearAll();
+                    Core.Cleanup.ClearAll();
                     CleanupLogsLBox.Items.Add("Recent Files Cleared.");
                 }
                 catch (Exception ex)
