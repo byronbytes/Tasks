@@ -65,7 +65,7 @@ namespace Tasks
         private void SetStartup(string AppName, bool enabled, bool isStartupFolder)
         {
             string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
-             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
+             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".lnk";
             RegistryKey startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
 
             if (enabled == true)
@@ -113,13 +113,18 @@ namespace Tasks
                     if(StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup")
                     {
                     SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false, true);
-                    }
+                    RefreshList();
+                }
+                    else
+                {
                     SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false, false);
                     RefreshList();
                 }
+                  
+                }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Unable to delete the selected startup program.");
+                    MessageBox.Show("Unable to delete the selected startup program. " + ex.Message);
                 }
         }
 
@@ -152,7 +157,7 @@ namespace Tasks
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    SetStartup(ofd.FileName.ToString(), true);
+                    SetStartup(ofd.FileName.ToString(), true, false);
                     RefreshList();
                 }
             }
