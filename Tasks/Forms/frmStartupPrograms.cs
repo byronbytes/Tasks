@@ -62,10 +62,10 @@ namespace Tasks
             }
         }
 
-        private void SetStartup(string AppName, bool enabled)
+        private void SetStartup(string AppName, bool enabled, bool isStartupFolder)
         {
             string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
-
+             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
             RegistryKey startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
 
             if (enabled == true)
@@ -78,11 +78,20 @@ namespace Tasks
             }
             else
             {
-                // Remove
+                if(isStartupFolder == true)
+                {
+                 // Remove Startup
+                  File.Delete(fileStartup);
+                }
+                else 
+                {
+                    // Remove
                 startupKey.Close();
                 startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
                 startupKey.DeleteValue(AppName, true);
                 startupKey.Close();
+                }
+                
             }
             
             
@@ -101,7 +110,11 @@ namespace Tasks
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
                 try
                 {
-                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
+                    if(StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup")
+                    {
+                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false, true);
+                    }
+                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false, false);
                     RefreshList();
                 }
                 catch(Exception ex)
