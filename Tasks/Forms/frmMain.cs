@@ -148,8 +148,24 @@ namespace Tasks
                 label1.ForeColor = Color.White;
                 label2.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
-               
+
             }
+
+            // inefficient as hell, but i don't care right now.
+
+            if (Properties.Settings.Default.Language == "Spanish")
+            {
+                button1.Text = "Limpiar";
+                button2.Text = "Programas de Inicio";
+            }
+
+            if (Properties.Settings.Default.Language == "English")
+            {
+                button1.Text = "Cleanup";
+                button2.Text = "Startup Programs";
+            }
+
+
 
         }
 

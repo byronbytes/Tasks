@@ -625,6 +625,7 @@
             this.tabPage7.Size = new System.Drawing.Size(1044, 586);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Applications";
+            this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
             // 
             // cbSpotifyCache
             // 

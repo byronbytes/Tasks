@@ -979,6 +979,7 @@ namespace Tasks
                 cbChromeSearchHistory.Enabled = false;
                 cbChromeSessions.Enabled = false;
                 cbChromeSavedPasswords.Enabled = false;
+                label3.Text = "Google Chrome (Not Found)";
             }
 
             if (!Directory.Exists(Dirs.firefoxDir))
@@ -986,11 +987,13 @@ namespace Tasks
                 cbFirefoxCache.Enabled = false;
                 cbFirefoxCookies.Enabled = false;
                 cbFirefoxSearchHistory.Enabled = false;
+                label10.Text = "Mozilla Firefox (Not Found)";
             }
 
             if (!Directory.Exists(Dirs.discordDir))
             {
                 cbDiscord.Enabled = false;
+                cbDiscord.Text = "Discord (Not Found)";
             }
 
             if (!Directory.Exists(Dirs.edgeDir))
@@ -999,6 +1002,7 @@ namespace Tasks
                 cbEdgeCookies.Enabled = false;
                 cbEdgeSearchHistory.Enabled = false;
                 cbEdgeSessions.Enabled = false;
+                label18.Text = "Microsoft Edge (Not Found)";
             }
 
             if (Directory.Exists(Dirs.chromeExtDir))
@@ -1138,6 +1142,11 @@ namespace Tasks
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabPage7_Click(object sender, EventArgs e)
         {
 
         }

@@ -14,5 +14,8 @@
     <Setting Name="SidebarColor" Type="System.String" Scope="User">
       <Value Profile="(Default)">dark</Value>
     </Setting>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">english</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

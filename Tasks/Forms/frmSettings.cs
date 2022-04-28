@@ -58,6 +58,16 @@ namespace Tasks
             {
                 comboBox3.SelectedItem = "Light";
             }
+
+            if (Properties.Settings.Default.Language == "English")
+            {
+                comboBox1.SelectedItem = "English";
+            }
+
+            if (Properties.Settings.Default.Language == "Spanish")
+            {
+                comboBox1.SelectedItem = "Spanish";
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -75,14 +85,16 @@ namespace Tasks
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedText == "English")
+            if (comboBox1.SelectedItem == "English")
             {
-                // Switch back to English.
+                Properties.Settings.Default.Language = "English";
+                Properties.Settings.Default.Save();
             }
 
-            if (comboBox1.SelectedText == "Spanish")
+            if (comboBox1.SelectedItem == "Spanish")
             {
-                // Hey, we're looking for translators!!!
+                Properties.Settings.Default.Language = "Spanish";
+                Properties.Settings.Default.Save();
             }
 
 
