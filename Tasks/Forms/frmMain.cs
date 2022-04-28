@@ -106,6 +106,7 @@ namespace Tasks
             {
                 panel1.BackColor = Color.FromArgb(250, 250, 250);
                 panel2.BackColor = Color.FromArgb(250, 250, 250);
+                panel3.BackColor = Color.FromArgb(250, 250, 250);
                 button1.Image = Properties.Resources.Cleanup_Black;
                 button2.Image = Properties.Resources.StartupPrograms_Black;
                 button3.Image = Properties.Resources.TaskManager_Black;
@@ -120,7 +121,36 @@ namespace Tasks
                 button4.ForeColor = Color.Black;
 
                 label1.ForeColor= Color.Black;
+
+                label2.ForeColor = Color.Black;
+                label4.ForeColor = Color.Black;
             }
+
+            if (Properties.Settings.Default.SidebarColor == "dark")
+            {
+                panel1.BackColor = Color.FromArgb(20, 20, 20);
+                panel2.BackColor = Color.FromArgb(20, 20, 20);
+                panel3.BackColor = Color.FromArgb(20, 20, 20);
+
+                button1.Image = Properties.Resources.Cleanup_White;
+                button2.Image = Properties.Resources.StartupPrograms_White;
+                button3.Image = Properties.Resources.TaskManagerWhite;
+                button4.Image = Properties.Resources.SettingsWhite;
+                button1.BackColor = Color.FromArgb(25, 25, 25);
+                button2.BackColor = Color.FromArgb(25, 25, 25);
+                button3.BackColor = Color.FromArgb(25, 25, 25);
+                button4.BackColor = Color.FromArgb(25, 25, 25);
+                button1.ForeColor = Color.White;
+                button2.ForeColor = Color.White;
+                button3.ForeColor = Color.White;
+                button4.ForeColor = Color.White;
+
+                label1.ForeColor = Color.White;
+                label2.ForeColor = Color.White;
+                label4.ForeColor = Color.White;
+               
+            }
+
         }
 
 
