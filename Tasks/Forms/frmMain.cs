@@ -151,27 +151,23 @@ namespace Tasks
 
             }
 
-            if (Properties.Settings.Default.Language == "Spanish")
-            {
-            foreach (Control c in this.Controls)
-                 {
-                ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMain));
-                resources.ApplyResources(c, c.Name, new CultureInfo("es-ES"));
-                }
-             
-            }
-
-            if (Properties.Settings.Default.Language == "English")
+             if (Properties.Settings.Default.Language == "English")
             {
               foreach (Control c in this.Controls)
-                 {
-                ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMain));
-                resources.ApplyResources(c, c.Name, new CultureInfo("en"));
+                {
+                    ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMain));
+                    resources.ApplyResources(c, c.Name, new CultureInfo("en"));
                 }
             }
 
-
-
+            if (Properties.Settings.Default.Language == "Spanish")
+            {
+             foreach (Control c in this.Controls)
+                {
+                    ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMain));
+                    resources.ApplyResources(c, c.Name, new CultureInfo("es-ES"));
+                }
+            }
         }
 
 
