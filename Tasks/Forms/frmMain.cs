@@ -151,18 +151,23 @@ namespace Tasks
 
             }
 
-            // inefficient as hell, but i don't care right now.
-
             if (Properties.Settings.Default.Language == "Spanish")
             {
-                button1.Text = "Limpiar";
-                button2.Text = "Programas de Inicio";
+            foreach (Control c in this.Controls)
+                 {
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMain));
+                resources.ApplyResources(c, c.Name, new CultureInfo("es-ES"));
+                }
+             
             }
 
             if (Properties.Settings.Default.Language == "English")
             {
-                button1.Text = "Cleanup";
-                button2.Text = "Startup Programs";
+              foreach (Control c in this.Controls)
+                 {
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMain));
+                resources.ApplyResources(c, c.Name, new CultureInfo("en"));
+                }
             }
 
 
