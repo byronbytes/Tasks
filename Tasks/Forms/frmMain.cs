@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -149,24 +150,6 @@ namespace Tasks
                 label2.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
 
-            }
-
-             if (Properties.Settings.Default.Language == "English")
-            {
-              foreach (Control c in this.Controls)
-                {
-                    ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMain));
-                    resources.ApplyResources(c, c.Name, new CultureInfo("en"));
-                }
-            }
-
-            if (Properties.Settings.Default.Language == "Spanish")
-            {
-             foreach (Control c in this.Controls)
-                {
-                    ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMain));
-                    resources.ApplyResources(c, c.Name, new CultureInfo("es-ES"));
-                }
             }
         }
 
