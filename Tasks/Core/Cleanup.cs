@@ -65,12 +65,6 @@ namespace Tasks.Core
             PathW = 0x003
         }
         
-        public static void ClearAll()
-        {
-            SHAddToRecentDocs(ShellAddToRecentDocsFlags.Pidl, null);
-        }
-        
-        
     }
 
 

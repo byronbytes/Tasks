@@ -507,7 +507,7 @@ namespace Tasks
             {
                 try
                 {
-                    Core.Cleanup.ClearAll();
+                    Core.Cleanup.SHAddToRecentDocs(Core.Cleanup.ShellAddToRecentDocsFlags.Pidl, null);
                     CleanupLogsLBox.Items.Add("Recent Files Cleared.");
                 }
                 catch (Exception ex)
