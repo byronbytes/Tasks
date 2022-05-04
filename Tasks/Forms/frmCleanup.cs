@@ -12,8 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-// TODO: More cleaning (CCleaner is starting to get ahead with the cleans)
-// TODO: Improve Quick Clean.
+// TODO: More Cleaning Support!!!
 
 /*
 Okay, huge changes in the next update.
@@ -39,6 +38,9 @@ namespace Tasks
         public bool isCleanup;
         public frmCleanup() { InitializeComponent(); CheckTheme(); isCleanup = false; }
 
+        /* 
+         CheckTheme checks what theme is currently set.
+        */
         public void CheckTheme()
         {
             if (Properties.Settings.Default.Theme == "light")
@@ -104,6 +106,9 @@ namespace Tasks
             }
         }
 
+         /* 
+         DeleteAllFiles runs a loop in the cleanup scripts to remove bloat files.
+        */
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
 
@@ -111,6 +116,7 @@ namespace Tasks
             {
                 try
                 {
+                // Deletes all files in directory.
                     file.Delete();
                     CleanupLogsLBox.Items.Add(LogSuccess + file.FullName);
                 }
@@ -124,6 +130,7 @@ namespace Tasks
             {
                 try
                 {
+                // Deletes all directories in a directory.
                     dir.Delete(true);
                     CleanupLogsLBox.Items.Add(LogSuccess + dir.FullName);
                 }
@@ -141,7 +148,6 @@ namespace Tasks
         public static string LogSuccess = "Deleted ";
         private void button8_Click(object sender, EventArgs e)
         {
-            // These are going to be updated to reflect the Directories class, will need moving.
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
             var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var windowstemp = new DirectoryInfo("C:\\Windows\\Temp\\");
@@ -452,6 +458,7 @@ namespace Tasks
                 }
             }
 
+           
             if (cbSystemDNSCache.Checked)
             {
                 StringBuilder sb = new StringBuilder();
