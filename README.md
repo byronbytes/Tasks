@@ -34,10 +34,10 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - Clean and understandable interface to see running processes.
   
 - Settings:
-  - Ability to change the theme of Tasks. (Dark / Light Mode)
+  - Ability to change the theme of Tasks.
+  - Ability to change the sidebar color of Tasks.
   - Toggle the ability to turn on or off cleanup logs.
-  - Change general settings about Tasks.
-  - Change the language of Tasks. (WIP)
+  - Change the language of Tasks.
  
 
 ## Installation
@@ -67,7 +67,6 @@ Up until version 4.0.0, we've used the following scripts for **Remove Bloatware*
 ## Gallery
 These images were taken on v4.0.0. Designs may vary for newer versions.
 You are allowed to distribute these screenshots for showcase.
-
 
 ![image](https://user-images.githubusercontent.com/53088136/164793997-bf03d87e-a1dd-483d-a84d-6c3eb3823643.png)
 ![image](https://user-images.githubusercontent.com/53088136/164794022-384ca46b-ddb4-46dc-86af-841f7fb1dac4.png)
