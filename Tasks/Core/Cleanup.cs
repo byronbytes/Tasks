@@ -45,27 +45,26 @@ namespace Tasks.Core
 
         [DllImport("Shell32.dll")]
         public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
+        
         public enum RecycleFlag : int
         {
             SHERB_NOCONFIRMATION = 0x00000001,
             SHERB_NOPROGRESSUI = 0x00000001,
             SHERB_NOSOUND = 0x00000004
         }
+
+
+
+        [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
+        private static extern void SHAddToRecentDocs(ShellAddToRecentDocsFlags flag, string path);
+        
         public enum ShellAddToRecentDocsFlags
         {
             Pidl = 0x001,
             Path = 0x002,
             PathW = 0x003
         }
-
-
-        [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
-        private static extern void SHAddToRecentDocs(ShellAddToRecentDocsFlags flag, string path);
-
-        public static void ClearAll()
-        {
-            SHAddToRecentDocs(ShellAddToRecentDocsFlags.Pidl, null);
-        }
+        
     }
 
 
