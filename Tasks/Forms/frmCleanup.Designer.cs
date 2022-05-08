@@ -247,7 +247,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1058, 626);
+            this.tabPage1.Size = new System.Drawing.Size(1046, 626);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cleanup";
             // 
@@ -261,7 +261,7 @@
             this.tabControl2.Multiline = true;
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1052, 620);
+            this.tabControl2.Size = new System.Drawing.Size(1040, 620);
             this.tabControl2.TabIndex = 37;
             // 
             // tabPage6
@@ -295,7 +295,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 30);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1044, 586);
+            this.tabPage6.Size = new System.Drawing.Size(1032, 586);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "System";
             // 
@@ -956,7 +956,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage3.Size = new System.Drawing.Size(1058, 626);
+            this.tabPage3.Size = new System.Drawing.Size(1046, 626);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
             // 
@@ -979,7 +979,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(872, 579);
+            this.button3.Location = new System.Drawing.Point(860, 579);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(178, 41);
             this.button3.TabIndex = 38;
@@ -1004,7 +1004,7 @@
             this.ExtensionsBox.HideSelection = false;
             this.ExtensionsBox.Location = new System.Drawing.Point(6, 111);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(1052, 462);
+            this.ExtensionsBox.Size = new System.Drawing.Size(1040, 462);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
