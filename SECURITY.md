@@ -4,16 +4,13 @@
 </h1>
 
 # Security Policy
-This is the current Security Policy for Tasks. Last updated on January 25th, 2022.
-
-## About
-This is the guideline for reporting security vulnerabilities. If you have found one it is very important you report it as soon as possible before any malicious intents get to any other people.
+This is the current Security Policy for Tasks. Last updated on May 10th, 2022.
 
 ## Reporting a Vulnerability
 To report a new vulnerability, please create a new issue using the **Security Vulnerability** template. Click [here](https://github.com/LiteTools/Tasks/issues) to go to the Issues Tab.
 
 ### Notice
-Even though Tasks is more of a "local" application and does not have a public API or database yet, there can still be vulnerabilites within our code (Example: A feature that can exploit Windows features for malicious intents.)
+Even though Tasks is more of a "local" application and does not have any type of public API, there can still be vulnerabilites within our code (Example: A feature that can exploit Windows features.)
 
 
 
@@ -22,11 +19,15 @@ These are the supported versions of Tasks. We will not fix vulnerabilities in ol
 
 | Version             | Supported          | Release Date         | Discontinuation Date | Version Type |
 | :------------------ | :----------------: | :--------------:     | :------------------: | :------------------: | 
+| **4.0.1**           | ✅                 | 2nd May, 2022         | N/A                 | Release |
+| **4.0.0**           | ✅                 | 22nd April, 2022      | N/A                 | Release |
+| **3.5.0**           | ✅                 | 16th March, 2022      | N/A                 | Release |
+| **3.4.0**           | ✅                 | 7th March, 2022      | N/A                  | Release|
 | **3.3.0**           | ✅                 | 6th February, 2022  | N/A                  | Release| 
 | **3.2.0**           | ✅                 | 21st January, 2022  | N/A                  | Release| 
-| **3.1.0**           | ✅                 | 29th December, 2021  | N/A                  | Release| 
-| **3.0.1**           | ✅                 | 10th December, 2021  | N/A                  | Release| 
-| **3.0.0**           | ✅                 | 8th December, 2021   | N/A                  | Release |
+| **3.1.0**           | ⚠️                 | 29th December, 2021  | N/A                  | Release| 
+| **3.0.1**           | ✅                 | 10th December, 2021  | Extended Support                  | Release| 
+| **3.0.0**           | ⚠️                 | 8th December, 2021   | N/A                  | Release |
 | **2.2.0**           | :x:                 | 12th November, 2021  | 30th January, 2022  | Release| 
 | **2.1.1**           | :x:                 | 24th October, 2021   | 30th January, 2022  | Release |
 | **2.1.0**           | :x:                | 22nd October, 2021    | 1st January, 2022   | Release |
