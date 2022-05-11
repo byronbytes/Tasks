@@ -50,7 +50,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 *The dependencies must be kept in the same folder.*
 
 ## Contribution
-Contributions are always encouraged, but before creating a pull request please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/docs/CONTRIBUTING.md) first.
+Contributions are always encouraged, but before creating a pull request please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/CONTRIBUTING.md) first.
 
 ## Credits
 * **Matty (@byronbytes)** - *Initial work / creation and development.*
