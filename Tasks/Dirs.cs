@@ -26,7 +26,7 @@ namespace Tasks
         public static string chromeExtDir;
         public static string edgeExtDir;
              // Tasks Directories:
-        public static string tasksDir = "C:\\Program Files (x86)\\Tasks\\";
+        public static string tasksDir = "C:\\Program Files\\Tasks\\";
         public static string tasksCleanup = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Roaming\\Tasks\\Cleanup Summary\\";
     }
 
@@ -38,11 +38,11 @@ namespace Tasks
         public static string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Local\\";
         public static string UserFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         public static string DownloadsFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\";
-        public static string WindowsTemp = "C:\\Windows\\Temp";
+        public static string WindowsFolderTemp = "C:\\Windows\\Temp";
         public static string ProgramFiles = "C:\\Program Files";
         public static string ProgramFiles86 = "C:\\Program Files (x86)\\";
         public static string StartupFolder = ""; //Environment exists will add soon
-        public static string tasksDir = "C:\\Program Files (x86)\\Tasks\\";
+        public static string tasksDir = "C:\\Program Files\\Tasks\\";
         // Directories for applications
         public static string ChromeDir = "";
         public static string FirefoxDir = "";
