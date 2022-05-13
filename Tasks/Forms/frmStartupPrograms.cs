@@ -3,10 +3,6 @@
     All rights reserved under the GNU General Public License v3.0.
 */
 
-// Known Issue: It can only remove programs from HKLM
-
-// This is supposed to be simple, which means there will only be one way to create, but multiple ways to delete.
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +18,9 @@ using System.Management;
 using System.Diagnostics;
 using System.Threading;
 using System.ServiceProcess;
+
+
+// TODO: DISABLE, NOT DELETE.
 
 namespace Tasks
 {
@@ -62,10 +61,10 @@ namespace Tasks
             }
         }
 
-        private void SetStartup(string AppName, bool enabled, bool isStartupFolder)
+        private void SetStartup(string AppName, bool enabled)
         {
             string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
-             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".lnk";
+           //  string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".lnk";
             RegistryKey startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
 
             if (enabled == true)
@@ -78,23 +77,12 @@ namespace Tasks
             }
             else
             {
-                if(isStartupFolder == true)
-                {
-                 // Remove Startup
-                  File.Delete(fileStartup);
-                }
-                else 
-                {
-                    // Remove
-                startupKey.Close();
-                startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                startupKey.DeleteValue(AppName, true);
-                startupKey.Close();
-                }
-                
+                // Remove
+               // startupKey.Close();
+               // startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+               // startupKey.DeleteValue(AppName, true);
+               // startupKey.Close();
             }
-            
-            
         }
 
      
@@ -104,7 +92,6 @@ namespace Tasks
             CheckTheme();
         }
 
-
         private void button1_Click(object sender, EventArgs e) // delete
         {
             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
@@ -112,15 +99,14 @@ namespace Tasks
                 {
                     if(StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup")
                     {
-                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false, true);
+                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
                     RefreshList();
                 }
                     else
                 {
-                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false, false);
+                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
                     RefreshList();
-                }
-                  
+                }    
                 }
                 catch(Exception ex)
                 {
@@ -134,6 +120,7 @@ namespace Tasks
             public string Path { get; set; }
             public override string ToString() { return Name; }
         }
+
         private void button4_Click_1(object sender, EventArgs e) { RefreshList(); }
 
 

@@ -14,23 +14,6 @@ using System.Windows.Forms;
 
 // TODO: More Cleaning Support!!!
 
-/*
-Okay, huge changes in the next update.
-I'm planning on removing Remove Bloatware for another feature called Windows Features
-Basically this can help you enable and disable certain unwanted features and junk.
-I will most likely make a seperate app that removes bloatware for you and a few extra tweaks,
-but this app is strictly for PC **Cleaning**, not debloating, even though it's practically the same,
-very different aspect.
-
-Again, more details will be revealed when the time is neccesary, for now, we're looking to make 
-Tasks a lightweight, easy to use, and simple applicaton. I've changed my perspective on what
-I want to make, and I have a clear vision.
-
-I will make another application that does all the debloating stuff like remove telemetry,
-uninstall unwanted apps, remove bloat keys, etc.
-
-*/
-
 namespace Tasks
 {
     public partial class frmCleanup : Form
@@ -210,7 +193,7 @@ namespace Tasks
                 try
                 {
                     string mainSubdirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\";
-                    string[] userDataCacheDirs = { "Default\\Cache", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database" };
+                    string[] userDataCacheDirs = { "Default\\Cache\\", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache\\", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database\\" };
                     List<DirectoryInfo> directoryInfos = new List<DirectoryInfo>();
 
                     foreach (string subdir in userDataCacheDirs)
@@ -770,8 +753,8 @@ namespace Tasks
         {
             isCleanup = false;
             // i hate C#, i gotta do this dumb s**t just to make it hide on both forms.
-
-            if (tabControl1.SelectedTab.Text == "Browser Extensions")
+            // java makes this easier
+            if (tabControl1.SelectedTab.Text == "Browser Extensions" )
             {
                 isCleanup = false;
             }
@@ -794,7 +777,7 @@ namespace Tasks
             }
             else
             {
-                if (!btnCleanup.Visible)
+            if (!btnCleanup.Visible)
                 {
                     btnCleanup.Visible = true;
                 }
@@ -806,17 +789,17 @@ namespace Tasks
 
         private void frmCleanup_Load(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged);
+            tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged); // what is this?
             DirectoryExists();
             CheckTheme();
         }
+
         private void GetExtensionList(DirectoryInfo directoryInfo)
         {
             foreach (var ext in directoryInfo.GetDirectories())
             {
                 try
                 {
-
                     FileInfo fi = new FileInfo(ext.ToString());
                     ListViewItem extb = ExtensionsBox.Items.Add(fi.Name, 0);
 
@@ -827,7 +810,7 @@ namespace Tasks
                 }
                 catch
                 {
-                    MessageBox.Show("An error has occurred, there is a chance that Microsoft Edge does not exist.");
+                    MessageBox.Show("An error has occurred.");
                 }
 
             }
@@ -836,10 +819,9 @@ namespace Tasks
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var g = new Dirs();
-
+            ExtensionsBox.Items.Clear();
             if (comboBox1.Text == "Google Chrome")
             {
-                ExtensionsBox.Items.Clear();
                 GetExtensionList(new DirectoryInfo(Dirs.chromeExtDir));
             }
 
@@ -896,7 +878,6 @@ namespace Tasks
                 if (comboBox1.Text == "Google Chrome")
                 {
                     Process.Start("taskkill", "/f /im chrome.exe");
-
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try
@@ -917,7 +898,6 @@ namespace Tasks
                 if (comboBox1.Text == "Mozilla Firefox")
                 {
                     Process.Start("taskkill", "/f /im firefox.exe");
-
                     try
                     {
                         Thread.Sleep(75);
@@ -940,7 +920,6 @@ namespace Tasks
                 if (comboBox1.Text == "Microsoft Edge")
                 {
                     Process.Start("taskkill", "/f /im msedge.exe");
-
                     foreach (ListViewItem eachItem in ExtensionsBox.SelectedItems)
                     {
                         try
