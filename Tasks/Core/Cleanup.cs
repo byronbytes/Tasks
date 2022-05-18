@@ -56,7 +56,7 @@ namespace Tasks.Core
 
 
         [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
-        private static extern void SHAddToRecentDocs(ShellAddToRecentDocsFlags flag, string path);
+        public static extern void SHAddToRecentDocs(ShellAddToRecentDocsFlags flag, string path);
         
         public enum ShellAddToRecentDocsFlags
         {

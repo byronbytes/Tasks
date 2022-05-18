@@ -144,7 +144,7 @@ namespace Tasks
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    SetStartup(ofd.FileName.ToString(), true, false);
+                    SetStartup(ofd.FileName.ToString(), true);
                     RefreshList();
                 }
             }

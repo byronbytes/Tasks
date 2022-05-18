@@ -51,15 +51,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbChromeSavedPasswords = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbChromeCache = new System.Windows.Forms.CheckBox();
+            this.cbChromeSessions = new System.Windows.Forms.CheckBox();
+            this.cbChromeCookies = new System.Windows.Forms.CheckBox();
+            this.cbChromeSearchHistory = new System.Windows.Forms.CheckBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
@@ -69,10 +79,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(6, 11);
+            this.tabControl1.Location = new System.Drawing.Point(6, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(306, 633);
+            this.tabControl1.Size = new System.Drawing.Size(306, 638);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -101,7 +111,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(298, 600);
+            this.tabPage1.Size = new System.Drawing.Size(298, 605);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
@@ -370,12 +380,111 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.tabPage2.Controls.Add(this.cbChromeSavedPasswords);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.cbChromeCache);
+            this.tabPage2.Controls.Add(this.cbChromeSessions);
+            this.tabPage2.Controls.Add(this.cbChromeCookies);
+            this.tabPage2.Controls.Add(this.cbChromeSearchHistory);
+            this.tabPage2.Controls.Add(this.pictureBox4);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(298, 600);
+            this.tabPage2.Size = new System.Drawing.Size(298, 605);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Software";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // cbChromeSavedPasswords
+            // 
+            this.cbChromeSavedPasswords.AutoSize = true;
+            this.cbChromeSavedPasswords.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbChromeSavedPasswords.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbChromeSavedPasswords.ForeColor = System.Drawing.Color.White;
+            this.cbChromeSavedPasswords.Location = new System.Drawing.Point(6, 161);
+            this.cbChromeSavedPasswords.Name = "cbChromeSavedPasswords";
+            this.cbChromeSavedPasswords.Size = new System.Drawing.Size(128, 21);
+            this.cbChromeSavedPasswords.TabIndex = 80;
+            this.cbChromeSavedPasswords.Text = "Saved Passwords";
+            this.cbChromeSavedPasswords.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbChromeSavedPasswords.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(44, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "Chrome";
+            // 
+            // cbChromeCache
+            // 
+            this.cbChromeCache.AutoSize = true;
+            this.cbChromeCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbChromeCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbChromeCache.ForeColor = System.Drawing.Color.White;
+            this.cbChromeCache.Location = new System.Drawing.Point(6, 41);
+            this.cbChromeCache.Name = "cbChromeCache";
+            this.cbChromeCache.Size = new System.Drawing.Size(62, 21);
+            this.cbChromeCache.TabIndex = 75;
+            this.cbChromeCache.Text = "Cache";
+            this.cbChromeCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbChromeCache.UseVisualStyleBackColor = true;
+            // 
+            // cbChromeSessions
+            // 
+            this.cbChromeSessions.AutoSize = true;
+            this.cbChromeSessions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbChromeSessions.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbChromeSessions.ForeColor = System.Drawing.Color.White;
+            this.cbChromeSessions.Location = new System.Drawing.Point(6, 131);
+            this.cbChromeSessions.Name = "cbChromeSessions";
+            this.cbChromeSessions.Size = new System.Drawing.Size(77, 21);
+            this.cbChromeSessions.TabIndex = 76;
+            this.cbChromeSessions.Text = "Sessions";
+            this.cbChromeSessions.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbChromeSessions.UseVisualStyleBackColor = true;
+            // 
+            // cbChromeCookies
+            // 
+            this.cbChromeCookies.AutoSize = true;
+            this.cbChromeCookies.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbChromeCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbChromeCookies.ForeColor = System.Drawing.Color.White;
+            this.cbChromeCookies.Location = new System.Drawing.Point(6, 71);
+            this.cbChromeCookies.Name = "cbChromeCookies";
+            this.cbChromeCookies.Size = new System.Drawing.Size(73, 21);
+            this.cbChromeCookies.TabIndex = 77;
+            this.cbChromeCookies.Text = "Cookies";
+            this.cbChromeCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbChromeCookies.UseVisualStyleBackColor = true;
+            // 
+            // cbChromeSearchHistory
+            // 
+            this.cbChromeSearchHistory.AutoSize = true;
+            this.cbChromeSearchHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbChromeSearchHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbChromeSearchHistory.ForeColor = System.Drawing.Color.White;
+            this.cbChromeSearchHistory.Location = new System.Drawing.Point(6, 101);
+            this.cbChromeSearchHistory.Name = "cbChromeSearchHistory";
+            this.cbChromeSearchHistory.Size = new System.Drawing.Size(111, 21);
+            this.cbChromeSearchHistory.TabIndex = 78;
+            this.cbChromeSearchHistory.Text = "Search History";
+            this.cbChromeSearchHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbChromeSearchHistory.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Tasks.Properties.Resources.Chrome;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 79;
+            this.pictureBox4.TabStop = false;
             // 
             // tabControl2
             // 
@@ -391,6 +500,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.tabControl1);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
@@ -398,7 +508,17 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1025, 655);
             this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Cleanup";
+            this.tabPage3.Text = "Advanced Cleanup";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(868, 607);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 42);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Cleanup";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage4
             // 
@@ -407,18 +527,17 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1025, 655);
             this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Quick Clean";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button2
             // 
-            this.button1.Location = new System.Drawing.Point(890, 612);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cleanup";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Location = new System.Drawing.Point(711, 607);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(151, 42);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Analyze";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmCleanup
             // 
@@ -437,6 +556,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -471,5 +593,13 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.CheckBox cbChromeSavedPasswords;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox cbChromeCache;
+        private System.Windows.Forms.CheckBox cbChromeSessions;
+        private System.Windows.Forms.CheckBox cbChromeCookies;
+        private System.Windows.Forms.CheckBox cbChromeSearchHistory;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button button2;
     }
 }
