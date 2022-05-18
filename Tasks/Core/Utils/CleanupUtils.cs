@@ -9,7 +9,7 @@ namespace Tasks.Core.Utils
     public class CleanupUtils
     {
         // Deletes all files in a directory.
-         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
+         public static bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
 
             foreach (var file in directoryInfo.GetFiles())
@@ -18,11 +18,11 @@ namespace Tasks.Core.Utils
                 {
                 // Deletes all files in directory.
                     file.Delete();
-                    CleanupLogsLBox.Items.Add(LogSuccess + file.FullName);
+                 //   Debug.Log(LogSuccess + file.FullName);
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add(LogError + ex.Message);
+                 //   Debug.Log(LogError + ex.Message);
                 }
 
             }
@@ -32,24 +32,18 @@ namespace Tasks.Core.Utils
                 {
                 // Deletes all directories in a directory.
                     dir.Delete(true);
-                    Debug.Log(LogSuccess + dir.FullName);
+                //    Debug.Log(LogSuccess + dir.FullName);
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add(LogError + ex.Message);
+               //   Debug.Log(LogError + ex.Message);
                 }
 
             }
 
-            return true;
+            return true; // why does it return true, could this be expanded on?
         }
 
-        public static void WriteOutput()
-        {
-
-        }
-
-        public static 
 
 
     }
