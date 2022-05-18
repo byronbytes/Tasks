@@ -15,6 +15,10 @@ namespace Tasks.Core.Utils
         }
 
 
+        public static void WriteOutput()
+        {
+
+        }
 
 
     }

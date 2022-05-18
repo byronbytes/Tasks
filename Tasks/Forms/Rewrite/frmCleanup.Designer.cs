@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbSystemARPCache = new System.Windows.Forms.CheckBox();
+            this.cbSystemDNSCache = new System.Windows.Forms.CheckBox();
+            this.cbExplorerIconCache = new System.Windows.Forms.CheckBox();
+            this.cbExplorerThumbCache = new System.Windows.Forms.CheckBox();
+            this.cbExplorerRecents = new System.Windows.Forms.CheckBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbExplorerDownloads = new System.Windows.Forms.CheckBox();
             this.cbWindowsLogFiles = new System.Windows.Forms.CheckBox();
             this.cbSystemErrorReporting = new System.Windows.Forms.CheckBox();
             this.cbSystemMemDumps = new System.Windows.Forms.CheckBox();
@@ -42,43 +48,31 @@
             this.cbSystemTempFolders = new System.Windows.Forms.CheckBox();
             this.cbSystemPrefetch = new System.Windows.Forms.CheckBox();
             this.cbSystemRecycleBin = new System.Windows.Forms.CheckBox();
-            this.cbExplorerIconCache = new System.Windows.Forms.CheckBox();
-            this.cbExplorerThumbCache = new System.Windows.Forms.CheckBox();
-            this.cbExplorerRecents = new System.Windows.Forms.CheckBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbExplorerDownloads = new System.Windows.Forms.CheckBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbSystemARPCache = new System.Windows.Forms.CheckBox();
-            this.cbSystemDNSCache = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 45);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "&Cleanup";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(12, 57);
+            this.tabControl1.Location = new System.Drawing.Point(6, 11);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(306, 620);
+            this.tabControl1.Size = new System.Drawing.Size(306, 633);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -107,41 +101,137 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(298, 587);
+            this.tabPage1.Size = new System.Drawing.Size(298, 600);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System";
             // 
-            // tabPage2
+            // pictureBox7
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(298, 587);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Software";
+            this.pictureBox7.Image = global::Tasks.Properties.Resources.Terminal;
+            this.pictureBox7.Location = new System.Drawing.Point(6, 446);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 76;
+            this.pictureBox7.TabStop = false;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(44, 6);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(89, 25);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Windows";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(44, 446);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.TabIndex = 75;
+            this.label4.Text = "System";
             // 
-            // pictureBox1
+            // cbSystemARPCache
             // 
-            this.pictureBox1.Image = global::Tasks.Properties.Resources.Windows;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
+            this.cbSystemARPCache.AutoSize = true;
+            this.cbSystemARPCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbSystemARPCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbSystemARPCache.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbSystemARPCache.Location = new System.Drawing.Point(6, 519);
+            this.cbSystemARPCache.Name = "cbSystemARPCache";
+            this.cbSystemARPCache.Size = new System.Drawing.Size(89, 21);
+            this.cbSystemARPCache.TabIndex = 74;
+            this.cbSystemARPCache.Text = "ARP Cache";
+            this.cbSystemARPCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbSystemARPCache.UseVisualStyleBackColor = true;
+            // 
+            // cbSystemDNSCache
+            // 
+            this.cbSystemDNSCache.AutoSize = true;
+            this.cbSystemDNSCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbSystemDNSCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbSystemDNSCache.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbSystemDNSCache.Location = new System.Drawing.Point(6, 489);
+            this.cbSystemDNSCache.Name = "cbSystemDNSCache";
+            this.cbSystemDNSCache.Size = new System.Drawing.Size(92, 21);
+            this.cbSystemDNSCache.TabIndex = 73;
+            this.cbSystemDNSCache.Text = "DNS Cache";
+            this.cbSystemDNSCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbSystemDNSCache.UseVisualStyleBackColor = true;
+            // 
+            // cbExplorerIconCache
+            // 
+            this.cbExplorerIconCache.AutoSize = true;
+            this.cbExplorerIconCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbExplorerIconCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbExplorerIconCache.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbExplorerIconCache.Location = new System.Drawing.Point(6, 410);
+            this.cbExplorerIconCache.Name = "cbExplorerIconCache";
+            this.cbExplorerIconCache.Size = new System.Drawing.Size(90, 21);
+            this.cbExplorerIconCache.TabIndex = 72;
+            this.cbExplorerIconCache.Text = "Icon Cache";
+            this.cbExplorerIconCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbExplorerIconCache.UseVisualStyleBackColor = true;
+            // 
+            // cbExplorerThumbCache
+            // 
+            this.cbExplorerThumbCache.AutoSize = true;
+            this.cbExplorerThumbCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbExplorerThumbCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbExplorerThumbCache.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbExplorerThumbCache.Location = new System.Drawing.Point(6, 380);
+            this.cbExplorerThumbCache.Name = "cbExplorerThumbCache";
+            this.cbExplorerThumbCache.Size = new System.Drawing.Size(126, 21);
+            this.cbExplorerThumbCache.TabIndex = 71;
+            this.cbExplorerThumbCache.Text = "Thumbnail Cache";
+            this.cbExplorerThumbCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbExplorerThumbCache.UseVisualStyleBackColor = true;
+            // 
+            // cbExplorerRecents
+            // 
+            this.cbExplorerRecents.AutoSize = true;
+            this.cbExplorerRecents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbExplorerRecents.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbExplorerRecents.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbExplorerRecents.Location = new System.Drawing.Point(6, 320);
+            this.cbExplorerRecents.Name = "cbExplorerRecents";
+            this.cbExplorerRecents.Size = new System.Drawing.Size(95, 21);
+            this.cbExplorerRecents.TabIndex = 70;
+            this.cbExplorerRecents.Text = "Recent Files";
+            this.cbExplorerRecents.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbExplorerRecents.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Tasks.Properties.Resources.Explorer;
+            this.pictureBox6.Location = new System.Drawing.Point(6, 281);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 69;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(44, 285);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(81, 25);
+            this.label3.TabIndex = 68;
+            this.label3.Text = "Explorer";
+            // 
+            // cbExplorerDownloads
+            // 
+            this.cbExplorerDownloads.AutoSize = true;
+            this.cbExplorerDownloads.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbExplorerDownloads.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbExplorerDownloads.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cbExplorerDownloads.Location = new System.Drawing.Point(6, 350);
+            this.cbExplorerDownloads.Name = "cbExplorerDownloads";
+            this.cbExplorerDownloads.Size = new System.Drawing.Size(133, 21);
+            this.cbExplorerDownloads.TabIndex = 67;
+            this.cbExplorerDownloads.Text = "Downloads Folder";
+            this.cbExplorerDownloads.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbExplorerDownloads.UseVisualStyleBackColor = true;
             // 
             // cbWindowsLogFiles
             // 
@@ -255,133 +345,80 @@
             this.cbSystemRecycleBin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.cbSystemRecycleBin.UseVisualStyleBackColor = true;
             // 
-            // cbExplorerIconCache
+            // label2
             // 
-            this.cbExplorerIconCache.AutoSize = true;
-            this.cbExplorerIconCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbExplorerIconCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbExplorerIconCache.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbExplorerIconCache.Location = new System.Drawing.Point(6, 410);
-            this.cbExplorerIconCache.Name = "cbExplorerIconCache";
-            this.cbExplorerIconCache.Size = new System.Drawing.Size(90, 21);
-            this.cbExplorerIconCache.TabIndex = 72;
-            this.cbExplorerIconCache.Text = "Icon Cache";
-            this.cbExplorerIconCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbExplorerIconCache.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(44, 6);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Windows";
             // 
-            // cbExplorerThumbCache
+            // pictureBox1
             // 
-            this.cbExplorerThumbCache.AutoSize = true;
-            this.cbExplorerThumbCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbExplorerThumbCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbExplorerThumbCache.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbExplorerThumbCache.Location = new System.Drawing.Point(6, 380);
-            this.cbExplorerThumbCache.Name = "cbExplorerThumbCache";
-            this.cbExplorerThumbCache.Size = new System.Drawing.Size(126, 21);
-            this.cbExplorerThumbCache.TabIndex = 71;
-            this.cbExplorerThumbCache.Text = "Thumbnail Cache";
-            this.cbExplorerThumbCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbExplorerThumbCache.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::Tasks.Properties.Resources.Windows;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
             // 
-            // cbExplorerRecents
+            // tabPage2
             // 
-            this.cbExplorerRecents.AutoSize = true;
-            this.cbExplorerRecents.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbExplorerRecents.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbExplorerRecents.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbExplorerRecents.Location = new System.Drawing.Point(6, 320);
-            this.cbExplorerRecents.Name = "cbExplorerRecents";
-            this.cbExplorerRecents.Size = new System.Drawing.Size(95, 21);
-            this.cbExplorerRecents.TabIndex = 70;
-            this.cbExplorerRecents.Text = "Recent Files";
-            this.cbExplorerRecents.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbExplorerRecents.UseVisualStyleBackColor = true;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(298, 600);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Software";
             // 
-            // pictureBox6
+            // tabControl2
             // 
-            this.pictureBox6.Image = global::Tasks.Properties.Resources.Explorer;
-            this.pictureBox6.Location = new System.Drawing.Point(6, 281);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 29);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 69;
-            this.pictureBox6.TabStop = false;
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl2.Location = new System.Drawing.Point(5, 1);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1033, 688);
+            this.tabControl2.TabIndex = 0;
             // 
-            // label3
+            // tabPage3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(44, 285);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(81, 25);
-            this.label3.TabIndex = 68;
-            this.label3.Text = "Explorer";
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Controls.Add(this.tabControl1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1025, 655);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Cleanup";
             // 
-            // cbExplorerDownloads
+            // tabPage4
             // 
-            this.cbExplorerDownloads.AutoSize = true;
-            this.cbExplorerDownloads.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbExplorerDownloads.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbExplorerDownloads.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbExplorerDownloads.Location = new System.Drawing.Point(6, 350);
-            this.cbExplorerDownloads.Name = "cbExplorerDownloads";
-            this.cbExplorerDownloads.Size = new System.Drawing.Size(133, 21);
-            this.cbExplorerDownloads.TabIndex = 67;
-            this.cbExplorerDownloads.Text = "Downloads Folder";
-            this.cbExplorerDownloads.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbExplorerDownloads.UseVisualStyleBackColor = true;
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1025, 655);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
+            // button1
             // 
-            this.pictureBox7.Image = global::Tasks.Properties.Resources.Terminal;
-            this.pictureBox7.Location = new System.Drawing.Point(6, 446);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 29);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 76;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(44, 446);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(72, 25);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "System";
-            // 
-            // cbSystemARPCache
-            // 
-            this.cbSystemARPCache.AutoSize = true;
-            this.cbSystemARPCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSystemARPCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbSystemARPCache.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbSystemARPCache.Location = new System.Drawing.Point(6, 519);
-            this.cbSystemARPCache.Name = "cbSystemARPCache";
-            this.cbSystemARPCache.Size = new System.Drawing.Size(89, 21);
-            this.cbSystemARPCache.TabIndex = 74;
-            this.cbSystemARPCache.Text = "ARP Cache";
-            this.cbSystemARPCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbSystemARPCache.UseVisualStyleBackColor = true;
-            // 
-            // cbSystemDNSCache
-            // 
-            this.cbSystemDNSCache.AutoSize = true;
-            this.cbSystemDNSCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSystemDNSCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbSystemDNSCache.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbSystemDNSCache.Location = new System.Drawing.Point(6, 489);
-            this.cbSystemDNSCache.Name = "cbSystemDNSCache";
-            this.cbSystemDNSCache.Size = new System.Drawing.Size(92, 21);
-            this.cbSystemDNSCache.TabIndex = 73;
-            this.cbSystemDNSCache.Text = "DNS Cache";
-            this.cbSystemDNSCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbSystemDNSCache.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(890, 612);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 37);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Cleanup";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmCleanup
             // 
@@ -389,8 +426,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(1050, 689);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tabControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCleanup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -398,17 +434,16 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -432,5 +467,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox cbSystemARPCache;
         private System.Windows.Forms.CheckBox cbSystemDNSCache;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }

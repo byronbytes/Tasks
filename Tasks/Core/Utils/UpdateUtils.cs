@@ -18,7 +18,8 @@ namespace Tasks.Core.Utils
 
         public static void Update()
         {
-            
+            bool Updated;
+            // Calls the update function
         }
 
 
