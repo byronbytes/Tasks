@@ -45,14 +45,27 @@ namespace Tasks.Core.Utils
         }
 
         // Really only used for modifying certain things that may need a restart.
-        // Might concider making a library for classes like this so it's easier to use these.
+        // Might consider making a library for classes like this so it's easier to use these.
         public static void RestartExplorer()
         {
             Process.Start("taskkill", "/f /im explorer.exe"); // Since Tasks runs as admin it's auto elevated.
             Process.Start("explorer.exe");
         }
      
-
+        // Then again, this still might not be found handy, but it's good to keep utils like this somewhere.
+        // Might also add an int to adjust the timer, but why would I need that?
+        public static void RebootComputer(bool instant)
+        {
+            if(instant == true)
+            {
+               Process.Start("shutdown.exe", "-r"); 
+            }
+            else
+            {
+               Process.Start("shutdown.exe", "-r -t 15");
+            }
+        }
+        
         
         public static bool CanLogCleanup() // didnt work maybe it'll work this time
         {
@@ -63,7 +76,7 @@ namespace Tasks.Core.Utils
                 return false;
         }
         
-
+        
         public static void SaveCleanupLog()
         {
             CanLogCleanup();
@@ -74,6 +87,12 @@ namespace Tasks.Core.Utils
                 // bad code, will fix later.
                 File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
             }
+        }
+        
+        // Probably going to make it a re-create method, but I'm not on my PC to get the code needed.
+        public static void DeleteTasksFolder()
+        {
+            Directory.Delete(Dirs.tasksDir); // probably wrong
         }
 
 
