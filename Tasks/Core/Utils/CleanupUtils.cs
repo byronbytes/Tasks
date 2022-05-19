@@ -63,9 +63,20 @@ namespace Tasks.Core.Utils
             {
                 CanLogCleanup = false;
             }
+            
         }
+        
+        public static bool CanLogCleanup2() // didnt work maybe it'll work this time
+        {
+            if (Directory.Exists(Dirs.tasksDir))
+            {
+               return true;
+            }
+                return false;
+        }
+        
 
-        public static void LogCleanup()
+        public static void SaveCleanupLog()
         {
             CheckLog();
             frmCleanup CleanupForm = new frmCleanup();
