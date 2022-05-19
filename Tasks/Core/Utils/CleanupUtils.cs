@@ -74,10 +74,10 @@ namespace Tasks.Core.Utils
             }
         }
         
-        // Probably going to make it a re-create method, but I'm not on my PC to get the code needed.
         public static void DeleteTasksFolder()
         {
             Directory.Delete(Dirs.tasksDir); // probably wrong
+            Directory.CreateDirectory(Dirs.tasksDir);
         }
     }
 }
