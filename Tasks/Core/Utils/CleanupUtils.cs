@@ -51,32 +51,17 @@ namespace Tasks.Core.Utils
             Process.Start("taskkill", "/f /im explorer.exe"); // Since Tasks runs as admin it's auto elevated.
             Process.Start("explorer.exe");
         }
-     
-        // Then again, this still might not be found handy, but it's good to keep utils like this somewhere.
-        // Might also add an int to adjust the timer, but why would I need that?
-        public static void RebootComputer(bool instant)
-        {
-            if(instant == true)
-            {
-               Process.Start("shutdown.exe", "-r"); 
-            }
-            else
-            {
-               Process.Start("shutdown.exe", "-r -t 15");
-            }
-        }
-        
+       
         
         public static bool CanLogCleanup() // didnt work maybe it'll work this time
         {
             if (Directory.Exists(Dirs.tasksDir))
             {
-               return true; 
+               return true; // This means the setting will show up as available.
             }
                 return false;
         }
-        
-        
+           
         public static void SaveCleanupLog()
         {
             CanLogCleanup();
@@ -94,7 +79,5 @@ namespace Tasks.Core.Utils
         {
             Directory.Delete(Dirs.tasksDir); // probably wrong
         }
-
-
     }
 }
