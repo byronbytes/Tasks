@@ -51,26 +51,14 @@ namespace Tasks.Core.Utils
             Process.Start("taskkill", "/f /im explorer.exe"); // Since Tasks runs as admin it's auto elevated.
             Process.Start("explorer.exe");
         }
+     
 
-        public static bool CanLogCleanup; // why do i need to do this
-        public static void CheckLog()
-        {
-            if (Directory.Exists(Dirs.tasksDir))
-            {
-                CanLogCleanup = true; // Can be used for Settings cleans
-            }
-            else
-            {
-                CanLogCleanup = false;
-            }
-            
-        }
         
-        public static bool CanLogCleanup2() // didnt work maybe it'll work this time
+        public static bool CanLogCleanup() // didnt work maybe it'll work this time
         {
             if (Directory.Exists(Dirs.tasksDir))
             {
-               return true;
+               return true; 
             }
                 return false;
         }
@@ -78,7 +66,7 @@ namespace Tasks.Core.Utils
 
         public static void SaveCleanupLog()
         {
-            CheckLog();
+            CanLogCleanup();
             frmCleanup CleanupForm = new frmCleanup();
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
             if (CanLogCleanup == true)
