@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Tasks.Core.Utils
 {
-    public class OtherUtils
+    public class SystemUtils
     {
+        public static void GetWindowsName()
+		{
+		
+		}
      
     
 
