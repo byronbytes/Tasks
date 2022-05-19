@@ -8,7 +8,6 @@ namespace Tasks.Core.Utils
 {
     public class UpdateUtils
     {
-
         public static string CurrentVer = "4.1.0";
 
         public static bool CheckForUpdates()
@@ -16,6 +15,7 @@ namespace Tasks.Core.Utils
             // Calls the update check
             
             // Here's a basic check for updating, if it even gets added soon.
+            // Will improve.
             if(CurrentVer == "4.2.0")
             {
                 return true;
@@ -32,6 +32,7 @@ namespace Tasks.Core.Utils
             // Calls the update function
             
         }
+        
 
 
 
