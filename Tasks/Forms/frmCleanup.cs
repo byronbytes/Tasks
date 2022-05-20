@@ -13,7 +13,8 @@ using System.Threading;
 using System.Windows.Forms;
 
 // TODO: More Cleaning Support!!!
-
+// TODO: Output message shows file not generic error 
+// TODO: Even out all messages in app
 namespace Tasks
 {
     public partial class frmCleanup : Form
@@ -589,8 +590,15 @@ namespace Tasks
 
             if (cbSystemDirectXCache.Checked)
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
-                if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("DirectX Shader Cache Deleted.");
+				try
+				{
+                	var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
+                	if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("DirectX Shader Cache Deleted.");
+				}
+				catch
+				{
+					CleanupLogsLBox.Items.Add("Unable to delete DirectX Shader Cache.");
+				}
             }
 
             if (cbSystemMemDumps.Checked)
@@ -604,7 +612,7 @@ namespace Tasks
                 }
                 catch
                 {
-                    CleanupLogsLBox.Items.Add("Error Deleting System Memory Dumps.");
+                    CleanupLogsLBox.Items.Add("Error while deleting System Memory Dumps.");
                 }
             }
 
