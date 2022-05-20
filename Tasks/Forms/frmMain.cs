@@ -62,6 +62,7 @@ namespace Tasks
                 button2.Image = Properties.Resources.StartupPrograms_White;
                 button3.Image = Properties.Resources.TaskManagerWhite;
                 button4.Image = Properties.Resources.SettingsWhite;
+                
                 button1.BackColor = Color.FromArgb(25, 25, 25);
                 button2.BackColor = Color.FromArgb(25, 25, 25);
                 button3.BackColor = Color.FromArgb(25, 25, 25);
@@ -74,8 +75,6 @@ namespace Tasks
                 label1.ForeColor = Color.White;
                 label2.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
-
-                
             }
 
 
@@ -85,10 +84,12 @@ namespace Tasks
                 panel1.BackColor = Color.FromArgb(250, 250, 250);
                 panel2.BackColor = Color.FromArgb(250, 250, 250);
                 panel3.BackColor = Color.FromArgb(250, 250, 250);
+                
                 button1.Image = Properties.Resources.Cleanup_Black;
                 button2.Image = Properties.Resources.StartupPrograms_Black;
                 button3.Image = Properties.Resources.TaskManager_Black;
                 button4.Image = Properties.Resources.SettingsBlack;
+                
                 button1.BackColor = Color.FromArgb(240, 240, 240);
                 button2.BackColor = Color.FromArgb(240, 240, 240);
                 button3.BackColor = Color.FromArgb(240, 240, 240);
@@ -108,10 +109,12 @@ namespace Tasks
                 panel1.BackColor = Color.FromArgb(250, 250, 250);
                 panel2.BackColor = Color.FromArgb(250, 250, 250);
                 panel3.BackColor = Color.FromArgb(250, 250, 250);
+                
                 button1.Image = Properties.Resources.Cleanup_Black;
                 button2.Image = Properties.Resources.StartupPrograms_Black;
                 button3.Image = Properties.Resources.TaskManager_Black;
                 button4.Image = Properties.Resources.SettingsBlack;
+                
                 button1.BackColor = Color.FromArgb(240, 240, 240);
                 button2.BackColor = Color.FromArgb(240, 240, 240);
                 button3.BackColor = Color.FromArgb(240, 240, 240);
@@ -158,7 +161,9 @@ namespace Tasks
             CheckTheme(); 
             label2.Text = Core.System.bit;
             label4.Text = Core.System.getOSInfo();
-
+            pictureBox5.Visible = true;
+            
+            /* removed since it's automatically running as admin
             var identity = WindowsIdentity.GetCurrent();
             var principal = new WindowsPrincipal(identity);
 
@@ -166,10 +171,11 @@ namespace Tasks
             {
                 pictureBox5.Visible = true;
             }
+            */
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            CheckTheme();
+            CheckTheme(); // laggy.
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -190,11 +196,6 @@ namespace Tasks
         private void button3_Click(object sender, EventArgs e)
         {
             openChildForm(new frmTaskManager());
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
