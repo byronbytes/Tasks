@@ -1,4 +1,4 @@
-/*
+﻿/*
     (c) LiteTools 2022 (https://github.com/LiteTools)
     All rights reserved under the GNU General Public License v3.0.
 */
@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Tasks
 {
@@ -45,7 +46,12 @@ namespace Tasks
         {
             try
             {
-                Process.Start(textBox1.Text);
+                string name = textBox1.Text;
+                if (!Regex.IsMatch(name, @"^[a-zA-Z0-9]+$"))
+                {
+                    throw new Exception("Special characters are not allowed for input.");
+                }
+                Process.Start(name);
             }
             catch (Exception ex)
             {
