@@ -10,20 +10,10 @@ namespace Tasks.Core.Utils
     {
         public static string CurrentVer = "4.1.0";
 
-        public static bool CheckForUpdates()
+        public static void CheckForUpdates()
         {
             // Calls the update check
             
-            // Here's a basic check for updating, if it even gets added soon.
-            // Will improve.
-            if(CurrentVer == "4.2.0")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
 
         public static void Update()
@@ -33,7 +23,10 @@ namespace Tasks.Core.Utils
             
         }
         
-
+        public static bool isUpToDate()
+        {
+           
+        }
 
 
     }
