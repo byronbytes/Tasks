@@ -6,10 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// everything is over-noted, don't mind it.
 namespace Tasks.Core.Utils
 {
     public class CleanupUtils
     {
+        
+        public static int filesDeleted;
+        
         // Deletes all files in a directory.
         // Will also add a string list for all of the file names, that's pretty easy.
         public static bool DeleteAllFiles(DirectoryInfo directoryInfo)
@@ -19,6 +23,7 @@ namespace Tasks.Core.Utils
                 try
                 {
                     file.Delete();
+                    filedeleted++;
                     //   Debug.Log(LogSuccess + file.FullName);
                 }
                 catch (Exception ex)
@@ -32,6 +37,7 @@ namespace Tasks.Core.Utils
                 try
                 {
                     dir.Delete(true);
+                    filedeleted++;
                     // Debug.Log(LogSuccess + dir.FullName);
                 }
                 catch (Exception ex)
@@ -48,7 +54,7 @@ namespace Tasks.Core.Utils
         // Might consider making a library for classes like this so it's easier to use these.
         public static void RestartExplorer()
         {
-            Process.Start("taskkill", "/f /im explorer.exe"); // Since Tasks runs as admin it's auto elevated.
+            Process.Start("taskkill", "/f /im explorer.exe");
             Process.Start("explorer.exe");
         }
        
@@ -57,7 +63,7 @@ namespace Tasks.Core.Utils
         {
             if (Directory.Exists(Dirs.tasksDir))
             {
-               return true; // This means the setting will show up as available.
+               return true;
             }
                 return false;
         }
@@ -73,11 +79,14 @@ namespace Tasks.Core.Utils
                 File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
             }
         }
-        
+       
+       // Deletes directory and recreates it (Usually meant for debugging / settings) 
         public static void DeleteTasksFolder()
         {
-            Directory.Delete(Dirs.tasksDir); // probably wrong
+            Directory.Delete(Dirs.tasksDir);
             Directory.CreateDirectory(Dirs.tasksDir);
         }
+        
+        
     }
 }
