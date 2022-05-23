@@ -23,12 +23,12 @@ namespace Tasks.Core.Utils
                 try
                 {
                     file.Delete();
-                    filedeleted++;
-                    //   Debug.Log(LogSuccess + file.FullName);
+                    filesDeleted++;
+                    //   Debug.Log(file.FullName);
                 }
                 catch (Exception ex)
                 {
-                    //   Debug.Log(LogError + ex.Message);
+                    //   Debug.Log(ex.Message);
                 }
 
             }
@@ -37,17 +37,17 @@ namespace Tasks.Core.Utils
                 try
                 {
                     dir.Delete(true);
-                    filedeleted++;
-                    // Debug.Log(LogSuccess + dir.FullName);
+                    filesDeleted++;
+                    // Debug.Log(dir.FullName);
                 }
                 catch (Exception ex)
                 {
-                    //   Debug.Log(LogError + ex.Message);
+                    //   Debug.Log(ex.Message);
                 }
 
             }
 
-            return true; // why does it return true, could this be expanded on? 
+            return true;
         }
 
         // Really only used for modifying certain things that may need a restart.
