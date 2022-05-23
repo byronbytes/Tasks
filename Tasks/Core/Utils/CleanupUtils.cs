@@ -67,7 +67,7 @@ namespace Tasks.Core.Utils
             CanLogCleanup();
             frmCleanup CleanupForm = new frmCleanup();
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
-            if (CanLogCleanup == true)
+            if (CanLogCleanup() == true)
             {
                 // bad code, will fix later.
                 File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());

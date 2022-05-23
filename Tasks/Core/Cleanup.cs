@@ -45,7 +45,8 @@ namespace Tasks.Core
 
         [DllImport("Shell32.dll")]
         public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
-        
+
+        [Flags]
         public enum RecycleFlag : int
         {
             SHERB_NOCONFIRMATION = 0x00000001,
