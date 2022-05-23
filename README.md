@@ -13,7 +13,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 ## Features
 
 - Cleanup:
-  - Quick Clean to help optimize folders that get filled fast.
+  - Quick Clean to help clean temp folders that get filled fast.
   - Extension removal tool to remove malicious or unwanted extensions. (Supports Edge, Chrome, and Firefox)
   - Advanced cleaning tool that helps with computer performance and speed.
   - Diverse support for multiple applications and browsers and unneeded system cache. (Chrome, Discord, Temp, and more.)
@@ -58,12 +58,6 @@ Contributions are always encouraged, but before creating a pull request please r
 * **@GermanAizek** - *Bug fixes and Russian / Chinese README translations.*
 
 See the full list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
-
-## Acknowledgments
-Up until version 4.0.0, we've used the following scripts for **Remove Bloatware**:
-* Windows 10 Debloater made by [Sycnex](https://github.com/Sycnex/Windows10Debloater).
-* Remove Microsoft Edge script made by [ShadowWhisperer](https://github.com/ShadowWhisperer/Remove-Edge-Chromium).
-
 
 ## Gallery
 These images were taken on v4.0.0. Designs may vary for newer versions.
