@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/53088136/136106972-30a9cca8-7a32-479a-9368-74ffe2d60a43.png" alt="Tasks" height="128" /><br>
   <img alt="GitHub license" src="https://img.shields.io/github/license/litetools/tasks?style=flat-square"> <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
   
-  🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD) [🇵🇱](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-PL.md)
+  🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD) [🇵🇱](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-PL.md) [🇷🇺](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-RU.md) [🇨🇳](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-CN.md)
 </h1>
 
 **Tasks** is an application that improves computer performance. **Tasks**'s main features include an advanced cleanup tool, a startup manager, and a detailed Task Manager. These tools help improve computer performance, system boot times, and ensures a safer experience while using your computer.
@@ -55,6 +55,7 @@ Contributions are always encouraged, but before creating a pull request please r
 ## Credits
 * **Matty (@byronbytes)** - *Initial work / creation and development.*
 * **Solirs (@Solirs)** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
+* **@GermanAizek** - *Bug fixes and Russian / Chinese README translations.*
 
 See the full list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
