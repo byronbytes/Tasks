@@ -13,6 +13,14 @@ namespace Tasks.Core.Utils
         public static void CheckForUpdates()
         {
             // Calls the update check
+             if(isUpToDate == true)
+            {
+                Update();
+            }
+            else
+            {
+                MessageBox.Show("You are currently up to date.")
+            }
             
         }
 
@@ -21,11 +29,26 @@ namespace Tasks.Core.Utils
             bool Updated;
             // Calls the update function
             
+            if(isUpToDate == true)
+            {
+                // download, then update
+            }
+            
         }
         
         public static bool isUpToDate()
         {
-           
+            // Basic code, will update later.
+           if(CurrentVer == "v4.2.0")
+           {
+               return false;
+               
+           }
+           else
+           {
+               return true;
+           }
+            
         }
 
 
