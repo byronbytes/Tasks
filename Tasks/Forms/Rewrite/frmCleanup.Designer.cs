@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCleanup));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -60,9 +61,14 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cbFirefoxSearchHistory = new System.Windows.Forms.CheckBox();
+            this.cbFirefoxCookies = new System.Windows.Forms.CheckBox();
+            this.cbFirefoxCache = new System.Windows.Forms.CheckBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -72,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -380,6 +387,11 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.tabPage2.Controls.Add(this.cbFirefoxSearchHistory);
+            this.tabPage2.Controls.Add(this.cbFirefoxCookies);
+            this.tabPage2.Controls.Add(this.cbFirefoxCache);
+            this.tabPage2.Controls.Add(this.pictureBox5);
+            this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.cbChromeSavedPasswords);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.cbChromeCache);
@@ -510,6 +522,15 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Advanced Cleanup";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(711, 607);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(151, 42);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Analyze";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(868, 607);
@@ -530,14 +551,68 @@
             this.tabPage4.Text = "Quick Clean";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // cbFirefoxSearchHistory
             // 
-            this.button2.Location = new System.Drawing.Point(711, 607);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 42);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Analyze";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cbFirefoxSearchHistory.AutoSize = true;
+            this.cbFirefoxSearchHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbFirefoxSearchHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbFirefoxSearchHistory.ForeColor = System.Drawing.Color.White;
+            this.cbFirefoxSearchHistory.Location = new System.Drawing.Point(5, 298);
+            this.cbFirefoxSearchHistory.Name = "cbFirefoxSearchHistory";
+            this.cbFirefoxSearchHistory.Size = new System.Drawing.Size(111, 21);
+            this.cbFirefoxSearchHistory.TabIndex = 85;
+            this.cbFirefoxSearchHistory.Text = "Search History";
+            this.cbFirefoxSearchHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbFirefoxSearchHistory.UseVisualStyleBackColor = true;
+            // 
+            // cbFirefoxCookies
+            // 
+            this.cbFirefoxCookies.AutoSize = true;
+            this.cbFirefoxCookies.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbFirefoxCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbFirefoxCookies.ForeColor = System.Drawing.Color.White;
+            this.cbFirefoxCookies.Location = new System.Drawing.Point(5, 268);
+            this.cbFirefoxCookies.Name = "cbFirefoxCookies";
+            this.cbFirefoxCookies.Size = new System.Drawing.Size(73, 21);
+            this.cbFirefoxCookies.TabIndex = 84;
+            this.cbFirefoxCookies.Text = "Cookies";
+            this.cbFirefoxCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbFirefoxCookies.UseVisualStyleBackColor = true;
+            // 
+            // cbFirefoxCache
+            // 
+            this.cbFirefoxCache.AutoSize = true;
+            this.cbFirefoxCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbFirefoxCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbFirefoxCache.ForeColor = System.Drawing.Color.White;
+            this.cbFirefoxCache.Location = new System.Drawing.Point(6, 238);
+            this.cbFirefoxCache.Name = "cbFirefoxCache";
+            this.cbFirefoxCache.Size = new System.Drawing.Size(62, 21);
+            this.cbFirefoxCache.TabIndex = 83;
+            this.cbFirefoxCache.Text = "Cache";
+            this.cbFirefoxCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbFirefoxCache.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(6, 199);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 82;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(44, 199);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(134, 25);
+            this.label10.TabIndex = 81;
+            this.label10.Text = "Mozilla Firefox";
             // 
             // frmCleanup
             // 
@@ -561,6 +636,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -601,5 +677,10 @@
         private System.Windows.Forms.CheckBox cbChromeSearchHistory;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox cbFirefoxSearchHistory;
+        private System.Windows.Forms.CheckBox cbFirefoxCookies;
+        private System.Windows.Forms.CheckBox cbFirefoxCache;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label10;
     }
 }

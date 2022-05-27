@@ -13,13 +13,13 @@ namespace Tasks.Core.Utils
         public static void CheckForUpdates()
         {
             // Calls the update check
-             if(isUpToDate == true)
+             if(isUpToDate() == true)
             {
                 Update();
             }
             else
             {
-                MessageBox.Show("You are currently up to date.")
+              //  MessageBox.Show("You are currently up to date.");
             }
             
         }
@@ -29,7 +29,7 @@ namespace Tasks.Core.Utils
             bool Updated;
             // Calls the update function
             
-            if(isUpToDate == true)
+            if(isUpToDate() == true)
             {
                 // download, then update
             }
@@ -48,6 +48,8 @@ namespace Tasks.Core.Utils
            {
                return true;
            }
+            return false;
+
             
         }
 
