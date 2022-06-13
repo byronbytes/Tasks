@@ -50,6 +50,21 @@ namespace Tasks.Core.Utils
             return true;
         }
 
+        public static void AnalyzeAllFiles(DirectoryInfo directoryInfo)
+        {
+            foreach (var file in directoryInfo.GetFiles()) // could optimize?
+            {
+                try
+                {
+                    Debug.Print("File: " + file.Name);
+                }
+                catch (Exception ex)
+                {
+                    //   Debug.Log(ex.Message);
+                }
+            }
+        }
+
         // Really only used for modifying certain things that may need a restart.
         // Might consider making a library for classes like this so it's easier to use these.
         public static void RestartExplorer()
@@ -89,4 +104,12 @@ namespace Tasks.Core.Utils
         
         
     }
+    public static class CleanupDirectories
+    {
+
+        public static string[] ChromeDirectories = {"a", "ab" };
+
+    }
 }
+
+

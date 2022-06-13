@@ -121,6 +121,9 @@
   <data name="TaskManager Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TaskManager Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="QuickClean White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuickClean White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SettingsWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SettingsWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,14 +145,14 @@
   <data name="MicrosoftEdge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MicrosoftEdge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="QuickClean Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuickClean Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Terminal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Terminal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UAC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UAC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="QuickClean White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QuickClean White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TaskManagerWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TaskManagerWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +169,7 @@
   <data name="Windows" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Windows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="QuickClean Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QuickClean Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TasksLogoLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TasksLogoLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

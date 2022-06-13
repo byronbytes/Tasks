@@ -32,6 +32,15 @@ namespace Tasks.Core.Utils
             if(isUpToDate() == true)
             {
                 // download, then update
+                try
+                {
+                    //TODO: Try statement.
+                    Updated = true;
+                }
+                catch(Exception ex)
+                {
+                    Updated = false;
+                }
             }
             
         }
@@ -47,9 +56,7 @@ namespace Tasks.Core.Utils
            else
            {
                return true;
-           }
-            return false;
-
+           } 
             
         }
 

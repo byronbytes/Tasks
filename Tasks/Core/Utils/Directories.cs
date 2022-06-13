@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tasks.Core.Utils
 {
-    internal class Directories
+    public static class Directories
     {
 
 

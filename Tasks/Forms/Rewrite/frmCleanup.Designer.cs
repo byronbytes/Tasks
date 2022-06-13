@@ -52,6 +52,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbEdgeSessions = new System.Windows.Forms.CheckBox();
+            this.cbEdgeSearchHistory = new System.Windows.Forms.CheckBox();
+            this.cbEdgeCookies = new System.Windows.Forms.CheckBox();
+            this.cbEdgeCache = new System.Windows.Forms.CheckBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cbFirefoxSearchHistory = new System.Windows.Forms.CheckBox();
+            this.cbFirefoxCookies = new System.Windows.Forms.CheckBox();
+            this.cbFirefoxCache = new System.Windows.Forms.CheckBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.cbChromeSavedPasswords = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbChromeCache = new System.Windows.Forms.CheckBox();
@@ -64,21 +75,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.cbFirefoxSearchHistory = new System.Windows.Forms.CheckBox();
-            this.cbFirefoxCookies = new System.Windows.Forms.CheckBox();
-            this.cbFirefoxCache = new System.Windows.Forms.CheckBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -387,6 +395,12 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.tabPage2.Controls.Add(this.cbEdgeSessions);
+            this.tabPage2.Controls.Add(this.cbEdgeSearchHistory);
+            this.tabPage2.Controls.Add(this.cbEdgeCookies);
+            this.tabPage2.Controls.Add(this.cbEdgeCache);
+            this.tabPage2.Controls.Add(this.pictureBox8);
+            this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.cbFirefoxSearchHistory);
             this.tabPage2.Controls.Add(this.cbFirefoxCookies);
             this.tabPage2.Controls.Add(this.cbFirefoxCache);
@@ -406,6 +420,146 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Software";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // cbEdgeSessions
+            // 
+            this.cbEdgeSessions.AutoSize = true;
+            this.cbEdgeSessions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbEdgeSessions.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbEdgeSessions.ForeColor = System.Drawing.Color.White;
+            this.cbEdgeSessions.Location = new System.Drawing.Point(6, 472);
+            this.cbEdgeSessions.Name = "cbEdgeSessions";
+            this.cbEdgeSessions.Size = new System.Drawing.Size(77, 21);
+            this.cbEdgeSessions.TabIndex = 91;
+            this.cbEdgeSessions.Text = "Sessions";
+            this.cbEdgeSessions.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbEdgeSessions.UseVisualStyleBackColor = true;
+            // 
+            // cbEdgeSearchHistory
+            // 
+            this.cbEdgeSearchHistory.AutoSize = true;
+            this.cbEdgeSearchHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbEdgeSearchHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbEdgeSearchHistory.ForeColor = System.Drawing.Color.White;
+            this.cbEdgeSearchHistory.Location = new System.Drawing.Point(6, 442);
+            this.cbEdgeSearchHistory.Name = "cbEdgeSearchHistory";
+            this.cbEdgeSearchHistory.Size = new System.Drawing.Size(111, 21);
+            this.cbEdgeSearchHistory.TabIndex = 90;
+            this.cbEdgeSearchHistory.Text = "Search History";
+            this.cbEdgeSearchHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbEdgeSearchHistory.UseVisualStyleBackColor = true;
+            // 
+            // cbEdgeCookies
+            // 
+            this.cbEdgeCookies.AutoSize = true;
+            this.cbEdgeCookies.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbEdgeCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbEdgeCookies.ForeColor = System.Drawing.Color.White;
+            this.cbEdgeCookies.Location = new System.Drawing.Point(6, 412);
+            this.cbEdgeCookies.Name = "cbEdgeCookies";
+            this.cbEdgeCookies.Size = new System.Drawing.Size(73, 21);
+            this.cbEdgeCookies.TabIndex = 89;
+            this.cbEdgeCookies.Text = "Cookies";
+            this.cbEdgeCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbEdgeCookies.UseVisualStyleBackColor = true;
+            // 
+            // cbEdgeCache
+            // 
+            this.cbEdgeCache.AutoSize = true;
+            this.cbEdgeCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbEdgeCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbEdgeCache.ForeColor = System.Drawing.Color.White;
+            this.cbEdgeCache.Location = new System.Drawing.Point(6, 382);
+            this.cbEdgeCache.Name = "cbEdgeCache";
+            this.cbEdgeCache.Size = new System.Drawing.Size(62, 21);
+            this.cbEdgeCache.TabIndex = 88;
+            this.cbEdgeCache.Text = "Cache";
+            this.cbEdgeCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbEdgeCache.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Tasks.Properties.Resources.MicrosoftEdge;
+            this.pictureBox8.Location = new System.Drawing.Point(6, 338);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 87;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(44, 342);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(138, 25);
+            this.label18.TabIndex = 86;
+            this.label18.Text = "Microsoft Edge";
+            // 
+            // cbFirefoxSearchHistory
+            // 
+            this.cbFirefoxSearchHistory.AutoSize = true;
+            this.cbFirefoxSearchHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbFirefoxSearchHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbFirefoxSearchHistory.ForeColor = System.Drawing.Color.White;
+            this.cbFirefoxSearchHistory.Location = new System.Drawing.Point(5, 298);
+            this.cbFirefoxSearchHistory.Name = "cbFirefoxSearchHistory";
+            this.cbFirefoxSearchHistory.Size = new System.Drawing.Size(111, 21);
+            this.cbFirefoxSearchHistory.TabIndex = 85;
+            this.cbFirefoxSearchHistory.Text = "Search History";
+            this.cbFirefoxSearchHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbFirefoxSearchHistory.UseVisualStyleBackColor = true;
+            // 
+            // cbFirefoxCookies
+            // 
+            this.cbFirefoxCookies.AutoSize = true;
+            this.cbFirefoxCookies.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbFirefoxCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbFirefoxCookies.ForeColor = System.Drawing.Color.White;
+            this.cbFirefoxCookies.Location = new System.Drawing.Point(5, 268);
+            this.cbFirefoxCookies.Name = "cbFirefoxCookies";
+            this.cbFirefoxCookies.Size = new System.Drawing.Size(73, 21);
+            this.cbFirefoxCookies.TabIndex = 84;
+            this.cbFirefoxCookies.Text = "Cookies";
+            this.cbFirefoxCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbFirefoxCookies.UseVisualStyleBackColor = true;
+            // 
+            // cbFirefoxCache
+            // 
+            this.cbFirefoxCache.AutoSize = true;
+            this.cbFirefoxCache.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbFirefoxCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbFirefoxCache.ForeColor = System.Drawing.Color.White;
+            this.cbFirefoxCache.Location = new System.Drawing.Point(6, 238);
+            this.cbFirefoxCache.Name = "cbFirefoxCache";
+            this.cbFirefoxCache.Size = new System.Drawing.Size(62, 21);
+            this.cbFirefoxCache.TabIndex = 83;
+            this.cbFirefoxCache.Text = "Cache";
+            this.cbFirefoxCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.cbFirefoxCache.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(6, 199);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 82;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(44, 199);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(134, 25);
+            this.label10.TabIndex = 81;
+            this.label10.Text = "Mozilla Firefox";
             // 
             // cbChromeSavedPasswords
             // 
@@ -512,6 +666,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.tabPage3.Controls.Add(this.listBox1);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.tabControl1);
@@ -530,6 +685,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Analyze";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -543,76 +699,22 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1025, 655);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Quick Clean";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // cbFirefoxSearchHistory
+            // listBox1
             // 
-            this.cbFirefoxSearchHistory.AutoSize = true;
-            this.cbFirefoxSearchHistory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbFirefoxSearchHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbFirefoxSearchHistory.ForeColor = System.Drawing.Color.White;
-            this.cbFirefoxSearchHistory.Location = new System.Drawing.Point(5, 298);
-            this.cbFirefoxSearchHistory.Name = "cbFirefoxSearchHistory";
-            this.cbFirefoxSearchHistory.Size = new System.Drawing.Size(111, 21);
-            this.cbFirefoxSearchHistory.TabIndex = 85;
-            this.cbFirefoxSearchHistory.Text = "Search History";
-            this.cbFirefoxSearchHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbFirefoxSearchHistory.UseVisualStyleBackColor = true;
-            // 
-            // cbFirefoxCookies
-            // 
-            this.cbFirefoxCookies.AutoSize = true;
-            this.cbFirefoxCookies.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbFirefoxCookies.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbFirefoxCookies.ForeColor = System.Drawing.Color.White;
-            this.cbFirefoxCookies.Location = new System.Drawing.Point(5, 268);
-            this.cbFirefoxCookies.Name = "cbFirefoxCookies";
-            this.cbFirefoxCookies.Size = new System.Drawing.Size(73, 21);
-            this.cbFirefoxCookies.TabIndex = 84;
-            this.cbFirefoxCookies.Text = "Cookies";
-            this.cbFirefoxCookies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbFirefoxCookies.UseVisualStyleBackColor = true;
-            // 
-            // cbFirefoxCache
-            // 
-            this.cbFirefoxCache.AutoSize = true;
-            this.cbFirefoxCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbFirefoxCache.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbFirefoxCache.ForeColor = System.Drawing.Color.White;
-            this.cbFirefoxCache.Location = new System.Drawing.Point(6, 238);
-            this.cbFirefoxCache.Name = "cbFirefoxCache";
-            this.cbFirefoxCache.Size = new System.Drawing.Size(62, 21);
-            this.cbFirefoxCache.TabIndex = 83;
-            this.cbFirefoxCache.Text = "Cache";
-            this.cbFirefoxCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.cbFirefoxCache.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(6, 199);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 29);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 82;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(44, 199);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 25);
-            this.label10.TabIndex = 81;
-            this.label10.Text = "Mozilla Firefox";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(318, 35);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(701, 564);
+            this.listBox1.TabIndex = 4;
             // 
             // frmCleanup
             // 
@@ -633,10 +735,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -682,5 +785,12 @@
         private System.Windows.Forms.CheckBox cbFirefoxCache;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox cbEdgeSessions;
+        private System.Windows.Forms.CheckBox cbEdgeSearchHistory;
+        private System.Windows.Forms.CheckBox cbEdgeCookies;
+        private System.Windows.Forms.CheckBox cbEdgeCache;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
