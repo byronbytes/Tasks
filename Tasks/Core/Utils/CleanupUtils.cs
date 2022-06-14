@@ -38,11 +38,10 @@ namespace Tasks.Core.Utils
                 {
                     dir.Delete(true);
                     filesDeleted++;
-                    // Debug.Log(dir.FullName);
                 }
                 catch (Exception ex)
                 {
-                    //   Debug.Log(ex.Message);
+                    
                 }
 
             }
@@ -52,7 +51,7 @@ namespace Tasks.Core.Utils
 
         public static void AnalyzeAllFiles(DirectoryInfo directoryInfo)
         {
-            foreach (var file in directoryInfo.GetFiles()) // could optimize?
+            foreach (var file in directoryInfo.GetFiles())
             {
                 try
                 {
@@ -60,13 +59,12 @@ namespace Tasks.Core.Utils
                 }
                 catch (Exception ex)
                 {
-                    //   Debug.Log(ex.Message);
+                    
                 }
             }
         }
 
-        // Really only used for modifying certain things that may need a restart.
-        // Might consider making a library for classes like this so it's easier to use these.
+        // Only used for modifying certain things that may need a restart.
         public static void RestartExplorer()
         {
             Process.Start("taskkill", "/f /im explorer.exe");
@@ -74,7 +72,7 @@ namespace Tasks.Core.Utils
         }
        
         
-        public static bool CanLogCleanup() // didnt work maybe it'll work this time
+        public static bool CanLogCleanup()
         {
             if (Directory.Exists(Dirs.tasksDir))
             {
@@ -104,11 +102,10 @@ namespace Tasks.Core.Utils
         
         
     }
+    
     public static class CleanupDirectories
     {
-
         public static string[] ChromeDirectories = {"a", "ab" };
-
     }
 }
 
