@@ -6,18 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Tasks.Core
+
 {
-    class System
+    public static class SystemUtils
     {
         public static string bit = "?";
-        
+
         // Gets the computer's bit (64 or 32)
         public static void ComputerBit()
         {
-            if(Environment.Is64BitOperatingSystem)
+            if (Environment.Is64BitOperatingSystem)
             {
                 bit = "64-bit";
-            } 
+            }
             else
             {
                 bit = "32-bit";
@@ -34,7 +35,7 @@ namespace Tasks.Core
             //Variable to hold our return value
             string operatingSystem = "";
 
-        if (os.Platform == PlatformID.Win32NT)
+            if (os.Platform == PlatformID.Win32NT)
             {
                 switch (vs.Major)
                 {
@@ -82,6 +83,7 @@ namespace Tasks.Core
         }
 
 
+        // This doesn't work, for whatever reason.
         public static void CreateFiles()
         {
             Directory.CreateDirectory(Dirs.tasksDir);
@@ -102,3 +104,4 @@ namespace Tasks.Core
 
 
 }
+

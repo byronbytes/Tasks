@@ -12,43 +12,14 @@ namespace Tasks.Core.Utils
 
         public static void CheckForUpdates()
         {
-            // Calls the update check
-             if(isUpToDate() == true)
-            {
-                Update();
-            }
-            else
-            {
-              //  MessageBox.Show("You are currently up to date.");
-            }
-            
-        }
-
-        public static void Update()
-        {
-            bool Updated;
-            // Calls the update function
-            
-            if(isUpToDate() == true)
-            {
-                // download, then update
-                try
-                {
-                    //TODO: Try statement.
-                    Updated = true;
-                }
-                catch(Exception ex)
-                {
-                    Updated = false;
-                }
-            }
-            
+                // https://pastebin.com/02qyhKX7 Note this
+                //Update();
         }
         
         public static bool isUpToDate()
         {
             // Basic code, will update later.
-           if(CurrentVer == "v4.2.0")
+           if(CurrentVer == "v5.0.0-pre1")
            {
                return false;
                

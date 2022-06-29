@@ -30,7 +30,7 @@ namespace Tasks
             Directory.CreateDirectory(Dirs.tasksDir);
             InitializeComponent(); 
             CheckTheme(); 
-            Core.System.ComputerBit();
+            Core.SystemUtils.ComputerBit();
         }
 
         private Form activeForm = null;
@@ -159,8 +159,8 @@ namespace Tasks
 
         private void frmMain_Load(object sender, EventArgs e) { 
             CheckTheme(); 
-            label2.Text = Core.System.bit;
-            label4.Text = Core.System.getOSInfo();
+            label2.Text = Core.SystemUtils.bit;
+            label4.Text = Core.SystemUtils.getOSInfo();
             pictureBox5.Visible = true;
             
             /* removed since it's automatically running as admin

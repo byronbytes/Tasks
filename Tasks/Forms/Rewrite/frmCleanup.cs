@@ -32,7 +32,7 @@ namespace Tasks.Forms.Rewrite
        
         private void button2_Click(object sender, EventArgs e)
         {
-            var windowstemp = new DirectoryInfo("C:\\temp\\"); // placeholder
+            var windowstemp = new DirectoryInfo("C:\\temp\\"); // placeholder for now
             
             button2.Hide();
             button1.Hide();
@@ -41,9 +41,10 @@ namespace Tasks.Forms.Rewrite
             // Currently analyzing:
             foreach (var file in windowstemp.GetFiles())
             {
-                listBox1.Items.Add(file.Name);
+                AnalyzeClean.Items.Add(file.Name);
             }
 
         }
+
     }
 }
