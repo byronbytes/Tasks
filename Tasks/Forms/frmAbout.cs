@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tasks.Forms.Rewrite
+namespace Tasks.Forms
 {
     public partial class frmAbout : Form
     {

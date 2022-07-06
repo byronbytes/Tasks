@@ -81,12 +81,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.ExtensionsBox = new System.Windows.Forms.ListView();
+            this.ExtName = new System.Windows.Forms.ColumnHeader();
+            this.ExtSize = new System.Windows.Forms.ColumnHeader();
+            this.ExtPath = new System.Windows.Forms.ColumnHeader();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -100,6 +105,7 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -445,7 +451,7 @@
             this.cbSpotifyCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSpotifyCache.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbSpotifyCache.ForeColor = System.Drawing.Color.White;
-            this.cbSpotifyCache.Location = new System.Drawing.Point(6, 531);
+            this.cbSpotifyCache.Location = new System.Drawing.Point(7, 531);
             this.cbSpotifyCache.Name = "cbSpotifyCache";
             this.cbSpotifyCache.Size = new System.Drawing.Size(63, 19);
             this.cbSpotifyCache.TabIndex = 97;
@@ -473,7 +479,7 @@
             this.cbIECache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbIECache.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbIECache.ForeColor = System.Drawing.Color.White;
-            this.cbIECache.Location = new System.Drawing.Point(8, 581);
+            this.cbIECache.Location = new System.Drawing.Point(7, 581);
             this.cbIECache.Name = "cbIECache";
             this.cbIECache.Size = new System.Drawing.Size(113, 19);
             this.cbIECache.TabIndex = 94;
@@ -486,7 +492,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(6, 478);
+            this.label6.Location = new System.Drawing.Point(5, 474);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(168, 25);
             this.label6.TabIndex = 92;
@@ -498,7 +504,7 @@
             this.cbDiscord.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDiscord.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbDiscord.ForeColor = System.Drawing.Color.White;
-            this.cbDiscord.Location = new System.Drawing.Point(6, 556);
+            this.cbDiscord.Location = new System.Drawing.Point(7, 556);
             this.cbDiscord.Name = "cbDiscord";
             this.cbDiscord.Size = new System.Drawing.Size(66, 19);
             this.cbDiscord.TabIndex = 93;
@@ -741,6 +747,7 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl2.Location = new System.Drawing.Point(5, 1);
             this.tabControl2.Name = "tabControl2";
@@ -769,9 +776,9 @@
             this.AnalyzeClean.ForeColor = System.Drawing.Color.White;
             this.AnalyzeClean.FormattingEnabled = true;
             this.AnalyzeClean.ItemHeight = 20;
-            this.AnalyzeClean.Location = new System.Drawing.Point(318, 35);
+            this.AnalyzeClean.Location = new System.Drawing.Point(330, 35);
             this.AnalyzeClean.Name = "AnalyzeClean";
-            this.AnalyzeClean.Size = new System.Drawing.Size(701, 560);
+            this.AnalyzeClean.Size = new System.Drawing.Size(689, 560);
             this.AnalyzeClean.TabIndex = 4;
             // 
             // button2
@@ -810,6 +817,18 @@
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Quick Clean";
             // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(730, 127);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(289, 520);
+            this.listBox1.TabIndex = 16;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Tasks.Properties.Resources.QuickClean_White;
@@ -821,7 +840,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(179, 261);
+            this.progressBar1.Location = new System.Drawing.Point(187, 301);
             this.progressBar1.Maximum = 20;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(469, 23);
@@ -834,7 +853,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(425, 167);
+            this.button9.Location = new System.Drawing.Point(433, 207);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(223, 56);
             this.button9.TabIndex = 13;
@@ -849,7 +868,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(179, 167);
+            this.button8.Location = new System.Drawing.Point(187, 207);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(223, 56);
             this.button8.TabIndex = 11;
@@ -868,17 +887,53 @@
             this.label9.Text = "Quickly clean and optimize your computer with Quick Clean. \r\nNo need to use any c" +
     "omplicated or advanced methods.";
             // 
-            // listBox1
+            // tabPage5
             // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(730, 127);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(289, 520);
-            this.listBox1.TabIndex = 16;
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.tabPage5.Controls.Add(this.ExtensionsBox);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1025, 655);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Clean Extensions";
+            // 
+            // ExtensionsBox
+            // 
+            this.ExtensionsBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExtensionsBox.AutoArrange = false;
+            this.ExtensionsBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.ExtensionsBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ExtensionsBox.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ExtName,
+            this.ExtSize,
+            this.ExtPath});
+            this.ExtensionsBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExtensionsBox.ForeColor = System.Drawing.Color.White;
+            this.ExtensionsBox.FullRowSelect = true;
+            this.ExtensionsBox.HideSelection = false;
+            this.ExtensionsBox.Location = new System.Drawing.Point(6, 185);
+            this.ExtensionsBox.Name = "ExtensionsBox";
+            this.ExtensionsBox.Size = new System.Drawing.Size(1013, 462);
+            this.ExtensionsBox.TabIndex = 43;
+            this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
+            this.ExtensionsBox.View = System.Windows.Forms.View.Details;
+            // 
+            // ExtName
+            // 
+            this.ExtName.Text = "Name";
+            this.ExtName.Width = 240;
+            // 
+            // ExtSize
+            // 
+            this.ExtSize.Text = "Size";
+            this.ExtSize.Width = 120;
+            // 
+            // ExtPath
+            // 
+            this.ExtPath.Text = "Path";
+            this.ExtPath.Width = 650;
             // 
             // frmCleanup
             // 
@@ -907,6 +962,7 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -970,5 +1026,10 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.ListView ExtensionsBox;
+        private System.Windows.Forms.ColumnHeader ExtName;
+        private System.Windows.Forms.ColumnHeader ExtSize;
+        private System.Windows.Forms.ColumnHeader ExtPath;
     }
 }

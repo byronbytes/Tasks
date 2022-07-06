@@ -1,4 +1,4 @@
-﻿namespace Tasks.Forms.Rewrite
+﻿namespace Tasks.Forms
 {
     partial class frmAbout
     {
@@ -36,7 +36,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -106,7 +105,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(12, 285);
+            this.label6.Location = new System.Drawing.Point(12, 265);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 20);
             this.label6.TabIndex = 62;
@@ -117,26 +116,15 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(12, 265);
+            this.label7.Location = new System.Drawing.Point(12, 245);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 63;
             this.label7.Text = "Branch: master";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(12, 245);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 20);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "String: v5.0.0-pre1";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 308);
+            this.button1.Location = new System.Drawing.Point(12, 288);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 31);
             this.button1.TabIndex = 65;
@@ -169,7 +157,7 @@
             "@GermanAizek"});
             this.listBox1.Location = new System.Drawing.Point(264, 228);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(188, 120);
+            this.listBox1.Size = new System.Drawing.Size(188, 80);
             this.listBox1.TabIndex = 72;
             // 
             // linkLabel2
@@ -194,6 +182,7 @@
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.linkLabel3.LinkColor = System.Drawing.SystemColors.ActiveCaption;
             this.linkLabel3.Location = new System.Drawing.Point(431, 39);
             this.linkLabel3.Name = "linkLabel3";
@@ -220,12 +209,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(502, 370);
+            this.ClientSize = new System.Drawing.Size(502, 329);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -255,7 +243,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListBox listBox1;

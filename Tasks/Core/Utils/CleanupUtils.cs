@@ -27,7 +27,7 @@ namespace Tasks.Core.Utils
                     filesDeleted++;
                     //   Debug.Log(file.FullName);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //   Debug.Log(ex.Message);
                 }
@@ -40,7 +40,7 @@ namespace Tasks.Core.Utils
                     dir.Delete(true);
                     filesDeleted++;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     
                 }
@@ -58,7 +58,7 @@ namespace Tasks.Core.Utils
                 {
                     Debug.Print("File: " + file.Name);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     
                 }
@@ -124,12 +124,19 @@ namespace Tasks.Core.Utils
             PathW = 0x003
         }
 
-
     }
 
     public static class CleanupDirectories
     {
-        public static string[] ChromeDirectories = {"a", "ab" };
+       // Everything here is mostly placeholder until I fill in the directories.
+        public static string[] ChromeDirectories = {"Default\\Cache\\", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache\\", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database\\" };
+        public static string ChromeExtensionDirectory = "";
+
+        public static string[] FirefoxDirectories = { "a", "ab", "abc", "abcd" };
+        public static string FirefoxExtensionDirectory = "";
+
+        public static string[] EdgeDirectories = { "a", "ab", "abc", "abcd" };
+        public static string EdgeExtensionDirectory = "";
     }
 }
 

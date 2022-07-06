@@ -27,7 +27,7 @@ namespace Tasks.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-           Rewrite.frmAbout About = new Rewrite.frmAbout();
+           frmAbout About = new frmAbout();
            About.Show();
         }
         
