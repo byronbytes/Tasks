@@ -237,6 +237,8 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAbout";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tasks";
             this.Load += new System.EventHandler(this.frmAbout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
