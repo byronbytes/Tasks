@@ -27,7 +27,8 @@ namespace Tasks.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new Rewrite.frmAbout());
+           Rewrite.frmAbout About = new Rewrite.frmAbout();
+           About.Show();
         }
         
         private Form activeForm = null;

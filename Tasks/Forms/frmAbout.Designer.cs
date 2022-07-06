@@ -179,13 +179,14 @@
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel2.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel2.Location = new System.Drawing.Point(425, 39);
+            this.linkLabel2.Location = new System.Drawing.Point(425, 9);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(65, 21);
             this.linkLabel2.TabIndex = 59;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Website";
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.DarkCyan;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -194,13 +195,14 @@
             this.linkLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel3.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel3.Location = new System.Drawing.Point(391, 9);
+            this.linkLabel3.Location = new System.Drawing.Point(431, 39);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(99, 21);
+            this.linkLabel3.Size = new System.Drawing.Size(59, 21);
             this.linkLabel3.TabIndex = 73;
             this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "GitHub Repo";
+            this.linkLabel3.Text = "GitHub";
             this.linkLabel3.VisitedLinkColor = System.Drawing.Color.DarkCyan;
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // label1
             // 

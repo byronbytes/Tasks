@@ -86,6 +86,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -796,6 +797,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.tabPage4.Controls.Add(this.listBox1);
             this.tabPage4.Controls.Add(this.pictureBox2);
             this.tabPage4.Controls.Add(this.progressBar1);
             this.tabPage4.Controls.Add(this.button9);
@@ -819,7 +821,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(271, 382);
+            this.progressBar1.Location = new System.Drawing.Point(179, 261);
             this.progressBar1.Maximum = 20;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(469, 23);
@@ -832,7 +834,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button9.Location = new System.Drawing.Point(517, 288);
+            this.button9.Location = new System.Drawing.Point(425, 167);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(223, 56);
             this.button9.TabIndex = 13;
@@ -847,7 +849,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(271, 288);
+            this.button8.Location = new System.Drawing.Point(179, 167);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(223, 56);
             this.button8.TabIndex = 11;
@@ -865,6 +867,18 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Quickly clean and optimize your computer with Quick Clean. \r\nNo need to use any c" +
     "omplicated or advanced methods.";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(730, 127);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(289, 520);
+            this.listBox1.TabIndex = 16;
             // 
             // frmCleanup
             // 
@@ -955,5 +969,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
