@@ -29,6 +29,17 @@ namespace Tasks
                 checkBox1.Checked = false;
             }
 
+
+            if (Properties.Settings.Default.AutoCheckUpdates == true)
+            {
+                checkBox3.Checked = true;
+            }
+
+            if (Properties.Settings.Default.AutoCheckUpdates == false)
+            {
+                checkBox3.Checked = false;
+            }
+
             if (Properties.Settings.Default.EnableCleanupLogs == true)
             {
                 checkBox2.Checked = true;
@@ -184,6 +195,20 @@ namespace Tasks
             {
                 Properties.Settings.Default.SidebarColor = "light";
                 Main.CheckTheme();
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox3.Checked == true)
+            {
+                Properties.Settings.Default.AutoCheckUpdates = true;
+                Properties.Settings.Default.Save();
+            }
+            if(checkBox3.Checked == false)
+            {
+                Properties.Settings.Default.AutoCheckUpdates = false;
                 Properties.Settings.Default.Save();
             }
         }

@@ -76,9 +76,9 @@ namespace Tasks
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.Image = global::Tasks.Properties.Resources.SettingsWhite;
-            this.button4.Location = new System.Drawing.Point(0, 575);
+            this.button4.Location = new System.Drawing.Point(12, 575);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 60);
+            this.button4.Size = new System.Drawing.Size(128, 60);
             this.button4.TabIndex = 17;
             this.button4.Text = "Settings";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -104,9 +104,9 @@ namespace Tasks
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Image = global::Tasks.Properties.Resources.TaskManagerWhite;
-            this.button3.Location = new System.Drawing.Point(0, 410);
+            this.button3.Location = new System.Drawing.Point(12, 410);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 60);
+            this.button3.Size = new System.Drawing.Size(128, 60);
             this.button3.TabIndex = 16;
             this.button3.Text = "Task Manager";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -121,9 +121,9 @@ namespace Tasks
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::Tasks.Properties.Resources.StartupPrograms_White;
-            this.button2.Location = new System.Drawing.Point(0, 239);
+            this.button2.Location = new System.Drawing.Point(12, 239);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 60);
+            this.button2.Size = new System.Drawing.Size(128, 60);
             this.button2.TabIndex = 15;
             this.button2.Text = "Startup Programs";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -138,9 +138,9 @@ namespace Tasks
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = global::Tasks.Properties.Resources.Cleanup_White;
-            this.button1.Location = new System.Drawing.Point(0, 109);
+            this.button1.Location = new System.Drawing.Point(12, 109);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 60);
+            this.button1.Size = new System.Drawing.Size(128, 60);
             this.button1.TabIndex = 14;
             this.button1.Text = "Cleanup";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
