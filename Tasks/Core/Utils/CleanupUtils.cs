@@ -64,14 +64,6 @@ namespace Tasks.Core.Utils
                 }
             }
         }
-
-        // Only used for modifying certain things that may need a restart.
-        public static void RestartExplorer()
-        {
-            Process.Start("taskkill", "/f /im explorer.exe");
-            Process.Start("explorer.exe");
-        }
-       
         
         public static bool CanLogCleanup()
         {
@@ -126,13 +118,20 @@ namespace Tasks.Core.Utils
 
     }
 
+
     public static class CleanupDirectories
     {
-       // Everything here is mostly placeholder until I fill in the directories.
-        public static string[] ChromeDirectories = {"Default\\Cache\\", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache\\", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database\\" };
-        public static string ChromeExtensionDirectory = "";
+        // Everything here is mostly placeholder until I fill in the directories.
+        public static string localappdata = Environment.GetEnvironmentVariable("LocalAppData");
+        public static string roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        public static string windowstemp = "C:\\Windows\\Temp\\";
+        public static string usertemp = Path.GetTempPath();
+        public static string downloads = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\";
 
-        public static string[] FirefoxDirectories = { "a", "ab", "abc", "abcd" };
+        public static string[] ChromeDirectories = {"Default\\Cache\\", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache\\", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database\\" };
+        public static string ChromeExtensionDirectory;
+
+        public static string[] FirefoxDirectories = { localappdata + "\\Mozilla\\Firefox\\Profiles\\", "ab", "abc", "abcd" };
         public static string FirefoxExtensionDirectory = "";
 
         public static string[] EdgeDirectories = { "a", "ab", "abc", "abcd" };

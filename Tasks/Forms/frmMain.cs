@@ -162,8 +162,7 @@ namespace Tasks
             label2.Text = Core.SystemUtils.bit;
             label4.Text = Core.SystemUtils.getOSInfo();
             pictureBox5.Visible = true;
-            
-            /* removed since it's automatically running as admin
+            /*
             var identity = WindowsIdentity.GetCurrent();
             var principal = new WindowsPrincipal(identity);
 

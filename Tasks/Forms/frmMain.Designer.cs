@@ -140,7 +140,7 @@ namespace Tasks
             this.button1.Image = global::Tasks.Properties.Resources.Cleanup_White;
             this.button1.Location = new System.Drawing.Point(12, 109);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 60);
+            this.button1.Size = new System.Drawing.Size(120, 60);
             this.button1.TabIndex = 14;
             this.button1.Text = "Cleanup";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

@@ -1039,11 +1039,11 @@ namespace Tasks
                 }
                 long allsize = size1 + size2 + size4 + size5;
                 double allsizeMB = ConvertBytesToMegabytes(allsize);
-                label11.Text = "Quick Clean can delete " + allsizeMB + "MB of temp files.";
+                label11.Text = allsizeMB + "MB can be cleaned.";
             }
             catch
             {
-                label11.Text = "There was an error trying to clean your PC. Please try again.";
+                label11.Text = "There was an error. Please try again.";
             }
         }
 
@@ -1142,11 +1142,6 @@ namespace Tasks
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void tabPage7_Click(object sender, EventArgs e)
         {
 
@@ -1157,9 +1152,9 @@ namespace Tasks
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
-
+            // Analyze
         }
     }
 }
