@@ -31,6 +31,8 @@ namespace Tasks
             InitializeComponent(); 
             CheckTheme(); 
             Core.SystemUtils.ComputerBit();
+
+            
         }
 
         private Form activeForm = null;
@@ -162,6 +164,10 @@ namespace Tasks
             label2.Text = Core.SystemUtils.bit;
             label4.Text = Core.SystemUtils.getOSInfo();
             pictureBox5.Visible = true;
+            if (Properties.Settings.Default.AutoCheckUpdates == true)
+            {
+                Core.Utils.UpdateUtils.CheckForUpdates();
+            }
             /*
             var identity = WindowsIdentity.GetCurrent();
             var principal = new WindowsPrincipal(identity);

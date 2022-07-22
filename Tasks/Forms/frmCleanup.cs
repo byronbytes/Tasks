@@ -13,8 +13,6 @@ using System.Threading;
 using System.Windows.Forms;
 
 // TODO: More Cleaning Support!!!
-// TODO: Output message shows file not generic error 
-// TODO: Even out all messages in app
 namespace Tasks
 {
     public partial class frmCleanup : Form
@@ -100,8 +98,8 @@ namespace Tasks
             {
                 try
                 {
-                // Deletes all files in directory.
                     file.Delete();
+                    filesDeleted++;
                     CleanupLogsLBox.Items.Add(LogSuccess + file.FullName);
                 }
                 catch (Exception ex)
@@ -114,8 +112,8 @@ namespace Tasks
             {
                 try
                 {
-                // Deletes all directories in a directory.
                     dir.Delete(true);
+                    filesDeleted++;
                     CleanupLogsLBox.Items.Add(LogSuccess + dir.FullName);
                 }
                 catch (Exception ex)
@@ -127,9 +125,40 @@ namespace Tasks
 
             return true;
         }
-        
+
+        private bool AnalyzeAllFiles(DirectoryInfo directoryInfo)
+        {
+
+            foreach (var file in directoryInfo.GetFiles())
+            {
+                try
+                {
+                   listBox1.Items.Add(file.Name);
+                }
+                catch (Exception ex)
+                {
+                }
+
+            }
+            foreach (var dir in directoryInfo.GetDirectories())
+            {
+                try
+                {
+                    listBox1.Items.Add(dir.Name);
+                }
+                catch (Exception ex)
+                {
+
+                }
+
+            }
+
+            return true;
+        }
+
         public static string LogError = "Error while trying to delete ";
         public static string LogSuccess = "Deleted ";
+        public static float filesDeleted;
         private void button8_Click(object sender, EventArgs e)
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
@@ -753,45 +782,13 @@ namespace Tasks
 
             // END OF CLEANUP.
             Core.Utils.CleanupUtils.SaveCleanupLog();
-            label8.Text = "" + Core.Utils.CleanupUtils.filesDeleted;
+            label8.Visible = true;
+            label8.Text = Core.Utils.CleanupUtils.filesDeleted + " files deleted.";
 
         }
 
         private void Tabs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            isCleanup = false;
-            // i hate C#, i gotta do this dumb s**t just to make it hide on both forms.
-            // java makes this easier
-            if (tabControl1.SelectedTab.Text == "Browser Extensions" )
-            {
-                isCleanup = false;
-            }
-
-            if (tabControl1.SelectedTab.Text == "Quick Clean")
-            {
-                isCleanup = false;
-            }
-
-            if (tabControl1.SelectedTab.Text == "Cleanup")
-            {
-                isCleanup = true;
-            }
-
-
-
-            if (isCleanup == false)
-            {
-                btnCleanup.Visible = false;
-            }
-            else
-            {
-            if (!btnCleanup.Visible)
-                {
-                    btnCleanup.Visible = true;
-                }
-            }
-
-         
         }
 
 
@@ -973,7 +970,7 @@ namespace Tasks
                 cbChromeSearchHistory.Enabled = false;
                 cbChromeSessions.Enabled = false;
                 cbChromeSavedPasswords.Enabled = false;
-                label3.Text = "Google Chrome (Not Found)";
+                label3.Text = "Google Chrome (N/A)";
             }
 
             if (!Directory.Exists(Dirs.firefoxDir))
@@ -981,13 +978,13 @@ namespace Tasks
                 cbFirefoxCache.Enabled = false;
                 cbFirefoxCookies.Enabled = false;
                 cbFirefoxSearchHistory.Enabled = false;
-                label10.Text = "Mozilla Firefox (Not Found)";
+                label10.Text = "Mozilla Firefox (N/A)";
             }
 
             if (!Directory.Exists(Dirs.discordDir))
             {
                 cbDiscord.Enabled = false;
-                cbDiscord.Text = "Discord (Not Found)";
+                cbDiscord.Text = "Discord (N/A)";
             }
 
             if (!Directory.Exists(Dirs.edgeDir))
@@ -996,7 +993,7 @@ namespace Tasks
                 cbEdgeCookies.Enabled = false;
                 cbEdgeSearchHistory.Enabled = false;
                 cbEdgeSessions.Enabled = false;
-                label18.Text = "Microsoft Edge (Not Found)";
+                label18.Text = "Microsoft Edge (N/A)";
             }
 
             if (Directory.Exists(Dirs.chromeExtDir))
@@ -1019,6 +1016,7 @@ namespace Tasks
         {
             try
             {
+                listBox1.Items.Clear();
                 label11.Visible = true;
                 button9.Visible = true;
                 long size1 = DirSize(new DirectoryInfo("C:\\Windows\\Temp\\"));
@@ -1154,7 +1152,9 @@ namespace Tasks
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            // Analyze
+
         }
+
+
     }
 }

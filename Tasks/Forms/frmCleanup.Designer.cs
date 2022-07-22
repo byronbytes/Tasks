@@ -34,6 +34,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -97,7 +98,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -279,6 +279,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cleanup";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(944, 29);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 15);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Deleted ? files";
+            this.label8.Visible = false;
+            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -318,6 +330,7 @@
             this.listBox2.Location = new System.Drawing.Point(320, 47);
             this.listBox2.Name = "listBox2";
             this.listBox2.ScrollAlwaysVisible = true;
+            this.listBox2.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBox2.Size = new System.Drawing.Size(730, 585);
             this.listBox2.TabIndex = 39;
             // 
@@ -1088,9 +1101,9 @@
             this.ExtensionsBox.ForeColor = System.Drawing.Color.White;
             this.ExtensionsBox.FullRowSelect = true;
             this.ExtensionsBox.HideSelection = false;
-            this.ExtensionsBox.Location = new System.Drawing.Point(6, 163);
+            this.ExtensionsBox.Location = new System.Drawing.Point(6, 153);
             this.ExtensionsBox.Name = "ExtensionsBox";
-            this.ExtensionsBox.Size = new System.Drawing.Size(1040, 467);
+            this.ExtensionsBox.Size = new System.Drawing.Size(1040, 477);
             this.ExtensionsBox.TabIndex = 42;
             this.ExtensionsBox.UseCompatibleStateImageBehavior = false;
             this.ExtensionsBox.View = System.Windows.Forms.View.Details;
@@ -1137,18 +1150,6 @@
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(944, 29);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 15);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Deleted ? files";
-            this.label8.Visible = false;
             // 
             // frmCleanup
             // 
