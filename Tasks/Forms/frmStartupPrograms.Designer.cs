@@ -99,7 +99,7 @@ namespace Tasks
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(779, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 37);
@@ -116,7 +116,7 @@ namespace Tasks
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(922, 34);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 37);
@@ -134,7 +134,7 @@ namespace Tasks
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(175, 34);
+            this.txtFileName.Location = new System.Drawing.Point(205, 0);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(119, 15);
             this.txtFileName.TabIndex = 4;
@@ -145,7 +145,7 @@ namespace Tasks
             // 
             this.txtTargetPath.AutoSize = true;
             this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTargetPath.Location = new System.Drawing.Point(175, 49);
+            this.txtTargetPath.Location = new System.Drawing.Point(205, 15);
             this.txtTargetPath.Name = "txtTargetPath";
             this.txtTargetPath.Size = new System.Drawing.Size(125, 15);
             this.txtTargetPath.TabIndex = 5;
@@ -159,7 +159,7 @@ namespace Tasks
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(3, 34);
+            this.button4.Location = new System.Drawing.Point(4, 34);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(161, 37);
             this.button4.TabIndex = 6;

@@ -133,7 +133,7 @@ namespace Tasks
             {
                 try
                 {
-                   listBox1.Items.Add(file.Name);
+                   listBox2.Items.Add(file.Name);
                 }
                 catch (Exception ex)
                 {
@@ -144,7 +144,7 @@ namespace Tasks
             {
                 try
                 {
-                    listBox1.Items.Add(dir.Name);
+                    listBox2.Items.Add(dir.Name);
                 }
                 catch (Exception ex)
                 {
@@ -783,7 +783,7 @@ namespace Tasks
             // END OF CLEANUP.
             Core.Utils.CleanupUtils.SaveCleanupLog();
             label8.Visible = true;
-            label8.Text = Core.Utils.CleanupUtils.filesDeleted + " files deleted.";
+            label8.Text = filesDeleted + " files deleted.";
 
         }
 
@@ -1152,7 +1152,7 @@ namespace Tasks
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-
+            // analyze
         }
 
 

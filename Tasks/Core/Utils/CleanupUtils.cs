@@ -140,6 +140,7 @@ namespace Tasks.Core.Utils
         public static string downloads = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\";
 
         public static string[] ChromeDirectories = {"Default\\Cache\\", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache\\", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database\\" };
+        public static string[] ChromeSessions = { "", "" };
         public static string ChromeExtensionDirectory;
 
         public static string[] FirefoxDirectories = { localappdata + "\\Mozilla\\Firefox\\Profiles\\", "ab", "abc", "abcd" };
