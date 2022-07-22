@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+    (c) LiteTools 2022 (https://github.com/LiteTools)
+    All rights reserved under the GNU General Public License v3.0.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -6,8 +11,10 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-// everything is over-noted, don't mind it.
+// everything is over-noted, don't mind it. 
+// i also kept a ton of notes to myself, but don't worry about it. its only the code searchers that see this.
 namespace Tasks.Core.Utils
 {
     public class CleanupUtils
@@ -67,7 +74,7 @@ namespace Tasks.Core.Utils
         
         public static bool CanLogCleanup()
         {
-            if (Directory.Exists(Dirs.tasksDir))
+            if (Directory.Exists(Dirs.tasksDir) && Properties.Settings.Default.EnableCleanupLogs == true)
             {
                return true;
             }
@@ -76,17 +83,21 @@ namespace Tasks.Core.Utils
            
         public static void SaveCleanupLog()
         {
-            CanLogCleanup();
             frmCleanup CleanupForm = new frmCleanup();
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
-            if (CanLogCleanup() == true)
+
+            if (CanLogCleanup())
             {
-                // bad code, will fix later.
                 File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
+                MessageBox.Show("Your cleanup was saved and logged.");
+            }
+            else
+            {
+                // thinking about adding a message here, unsure right now.
             }
         }
-       
-       // Deletes directory and recreates it (Usually meant for debugging / settings) 
+
+        // Deletes directory and recreates it (Usually meant for debugging / settings) 
         public static void DeleteTasksFolder()
         {
             Directory.Delete(Dirs.tasksDir);

@@ -1,35 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Tasks.Core.Utils
 {
     public class UpdateUtils
     {
-        public static string CurrentVer = "4.1.0";
+
+        public static string UpdateString(string address)
+        {
+            WebClient client = new WebClient();
+            string reply = client.DownloadString(address);
+
+            return reply;
+        }
 
         public static void CheckForUpdates()
         {
-                // https://pastebin.com/02qyhKX7 Note this
-                //Update();
+            isUpToDate();
+
+            if(isUpToDate() == false)
+            {
+                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString("https://pastebin.com/raw/02qyhKX7"));
+            }
+            else
+            {
+                MessageBox.Show("There are no updates available.");
+            }
         }
-        
+
+
         public static bool isUpToDate()
         {
-            // Basic code, will update later.
-           if(CurrentVer == "v5.0.0-pre1")
-           {
-               return false;
-               
-           }
-           else
-           {
-               return true;
-           } 
-            
+            if (UpdateString("https://pastebin.com/raw/02qyhKX7") == "v5.0.0-pre1")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
+
 
 
     }

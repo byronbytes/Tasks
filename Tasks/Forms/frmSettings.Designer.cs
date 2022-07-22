@@ -37,8 +37,6 @@ namespace Tasks
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,7 +54,7 @@ namespace Tasks
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(25, 174);
+            this.label14.Location = new System.Drawing.Point(24, 99);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(403, 30);
             this.label14.TabIndex = 16;
@@ -68,7 +66,7 @@ namespace Tasks
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox2.Location = new System.Drawing.Point(25, 150);
+            this.checkBox2.Location = new System.Drawing.Point(24, 75);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(210, 21);
             this.checkBox2.TabIndex = 15;
@@ -81,7 +79,7 @@ namespace Tasks
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(25, 513);
+            this.label19.Location = new System.Drawing.Point(25, 424);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(191, 15);
             this.label19.TabIndex = 14;
@@ -92,7 +90,7 @@ namespace Tasks
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(25, 492);
+            this.label18.Location = new System.Drawing.Point(25, 403);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(57, 21);
             this.label18.TabIndex = 13;
@@ -103,7 +101,7 @@ namespace Tasks
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(25, 384);
+            this.label13.Location = new System.Drawing.Point(25, 295);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(78, 21);
             this.label13.TabIndex = 8;
@@ -114,7 +112,7 @@ namespace Tasks
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(27, 405);
+            this.label12.Location = new System.Drawing.Point(27, 316);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(207, 15);
             this.label12.TabIndex = 7;
@@ -130,42 +128,18 @@ namespace Tasks
             this.comboBox1.Items.AddRange(new object[] {
             "English",
             "Spanish"});
-            this.comboBox1.Location = new System.Drawing.Point(25, 423);
+            this.comboBox1.Location = new System.Drawing.Point(25, 334);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(225, 25);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(25, 110);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(302, 15);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Gives a notification when the cleanup session completes.";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox1.Location = new System.Drawing.Point(25, 82);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(209, 21);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Show Cleanup Summary Notice";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(12, 345);
+            this.label9.Location = new System.Drawing.Point(12, 256);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(299, 21);
             this.label9.TabIndex = 3;
@@ -176,7 +150,7 @@ namespace Tasks
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(12, 313);
+            this.label10.Location = new System.Drawing.Point(12, 224);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(167, 32);
             this.label10.TabIndex = 2;
@@ -214,7 +188,7 @@ namespace Tasks
             this.comboBox2.Items.AddRange(new object[] {
             "Dark",
             "Light"});
-            this.comboBox2.Location = new System.Drawing.Point(25, 531);
+            this.comboBox2.Location = new System.Drawing.Point(25, 442);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(225, 25);
             this.comboBox2.TabIndex = 17;
@@ -230,7 +204,7 @@ namespace Tasks
             this.comboBox3.Items.AddRange(new object[] {
             "Dark",
             "Light"});
-            this.comboBox3.Location = new System.Drawing.Point(25, 630);
+            this.comboBox3.Location = new System.Drawing.Point(25, 541);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(225, 25);
             this.comboBox3.TabIndex = 20;
@@ -241,7 +215,7 @@ namespace Tasks
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(25, 612);
+            this.label1.Location = new System.Drawing.Point(25, 523);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 15);
             this.label1.TabIndex = 19;
@@ -252,7 +226,7 @@ namespace Tasks
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(25, 591);
+            this.label2.Location = new System.Drawing.Point(25, 502);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 21);
             this.label2.TabIndex = 18;
@@ -263,7 +237,7 @@ namespace Tasks
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(25, 247);
+            this.label3.Location = new System.Drawing.Point(24, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(358, 15);
             this.label3.TabIndex = 22;
@@ -274,7 +248,7 @@ namespace Tasks
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox3.Location = new System.Drawing.Point(25, 223);
+            this.checkBox3.Location = new System.Drawing.Point(24, 148);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(218, 21);
             this.checkBox3.TabIndex = 21;
@@ -302,8 +276,6 @@ namespace Tasks
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label12);
@@ -322,8 +294,6 @@ namespace Tasks
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox1;

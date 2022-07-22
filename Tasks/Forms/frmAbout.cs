@@ -20,7 +20,6 @@ namespace Tasks.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This is an early feature of Update Checking. A new method will be added soon.", "Tasks");
             Core.Utils.UpdateUtils.CheckForUpdates();
         }
 

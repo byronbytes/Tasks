@@ -152,7 +152,7 @@ namespace Tasks
             if (cbSystemRecycleBin.Checked)
                 try
                 {
-                    Core.Cleanup.SHEmptyRecycleBin(IntPtr.Zero, null, Core.Cleanup.RecycleFlag.SHERB_NOSOUND | Core.Cleanup.RecycleFlag.SHERB_NOCONFIRMATION);
+                    Core.Utils.CleanupUtils.SHEmptyRecycleBin(IntPtr.Zero, null, Core.Utils.CleanupUtils.RecycleFlag.SHERB_NOSOUND | Core.Utils.CleanupUtils.RecycleFlag.SHERB_NOCONFIRMATION);
                     CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
                 }
                 catch (Exception ex)
@@ -491,7 +491,7 @@ namespace Tasks
             {
                 try
                 {
-                    Core.Cleanup.SHAddToRecentDocs(Core.Cleanup.ShellAddToRecentDocsFlags.Pidl, null);
+                    Core.Utils.CleanupUtils.SHAddToRecentDocs(Core.Utils.CleanupUtils.ShellAddToRecentDocsFlags.Pidl, null);
                     CleanupLogsLBox.Items.Add("Recent Files Cleared.");
                 }
                 catch (Exception ex)
@@ -751,9 +751,9 @@ namespace Tasks
                 }
             }
 
-            Core.Cleanup.WriteCleanupSummary();
-
             // END OF CLEANUP.
+            Core.Utils.CleanupUtils.SaveCleanupLog();
+            label8.Text = "" + Core.Utils.CleanupUtils.filesDeleted;
 
         }
 

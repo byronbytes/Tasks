@@ -19,15 +19,6 @@ namespace Tasks
         {
             InitializeComponent();
 
-            if (Properties.Settings.Default.CleanupMessageBox == true)
-            {
-                checkBox1.Checked = true;
-            }
-
-            if (Properties.Settings.Default.CleanupMessageBox == false)
-            {
-                checkBox1.Checked = false;
-            }
 
 
             if (Properties.Settings.Default.AutoCheckUpdates == true)
@@ -81,19 +72,6 @@ namespace Tasks
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true)
-            {
-                Properties.Settings.Default.CleanupMessageBox = true;
-            }
-            if (checkBox1.Checked == false)
-            {
-                Properties.Settings.Default.CleanupMessageBox = false;
-            }
-            Properties.Settings.Default.Save();
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedItem == "English")
@@ -129,7 +107,6 @@ namespace Tasks
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
-                label11.ForeColor = Color.Black;
                 label12.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
                 label14.ForeColor = Color.Black;
@@ -138,7 +115,6 @@ namespace Tasks
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
                 checkBox2.ForeColor = Color.Black;
-                checkBox1.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.GhostWhite;
                 comboBox1.ForeColor = Color.Black;
                 comboBox2.BackColor = Color.GhostWhite;

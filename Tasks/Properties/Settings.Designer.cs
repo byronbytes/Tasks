@@ -25,18 +25,6 @@ namespace Tasks.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool CleanupMessageBox {
-            get {
-                return ((bool)(this["CleanupMessageBox"]));
-            }
-            set {
-                this["CleanupMessageBox"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("dark")]
         public string Theme {
             get {

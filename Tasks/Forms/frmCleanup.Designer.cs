@@ -97,6 +97,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -262,6 +263,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.CleanupLogsLBox);
             this.tabPage1.Controls.Add(this.label7);
@@ -303,7 +305,6 @@
             this.label7.Size = new System.Drawing.Size(134, 28);
             this.label7.TabIndex = 40;
             this.label7.Text = "Analyzed Files:";
-            this.label7.Visible = false;
             // 
             // listBox2
             // 
@@ -1137,6 +1138,18 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(944, 29);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 15);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Deleted ? files";
+            this.label8.Visible = false;
+            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1248,5 +1261,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label8;
     }
 }
