@@ -133,7 +133,7 @@ namespace Tasks
             {
                 try
                 {
-                   listBox2.Items.Add(file.Name);
+                   listView1.Items.Add(file.Name);
                 }
                 catch (Exception ex)
                 {
@@ -144,7 +144,7 @@ namespace Tasks
             {
                 try
                 {
-                    listBox2.Items.Add(dir.Name);
+                    listView1.Items.Add(dir.Name);
                 }
                 catch (Exception ex)
                 {
@@ -1153,6 +1153,19 @@ namespace Tasks
         private void button4_Click_1(object sender, EventArgs e)
         {
             // analyze
+            var usertemp = new DirectoryInfo(Path.GetTempPath());
+            if (cbSystemTempFolders.Checked)
+            {
+                try
+                {
+                    AnalyzeAllFiles(usertemp);
+                }
+                catch (Exception ex)
+                {
+
+                }
+
+            }
         }
 
 

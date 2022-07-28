@@ -139,8 +139,10 @@ namespace Tasks.Core.Utils
         public static string usertemp = Path.GetTempPath();
         public static string downloads = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\";
 
-        public static string[] ChromeDirectories = {"Default\\Cache\\", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache\\", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database\\" };
-        public static string[] ChromeSessions = { "", "" };
+        public static string[] ChromeDirectories = { "Default\\Cache\\", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache\\", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database\\" };
+        public static string[] ChromeSessions = {Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions\\", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage\\", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State\\" };
+        public static string[] ChromeCookies;
+        public static string[] ChromeSearchHistory;
         public static string ChromeExtensionDirectory;
 
         public static string[] FirefoxDirectories = { localappdata + "\\Mozilla\\Firefox\\Profiles\\", "ab", "abc", "abcd" };

@@ -34,10 +34,10 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.cbWindowsLogFiles = new System.Windows.Forms.CheckBox();
@@ -224,11 +224,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(694, 661);
+            this.label11.Location = new System.Drawing.Point(694, 654);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(207, 28);
+            this.label11.Size = new System.Drawing.Size(202, 25);
             this.label11.TabIndex = 2;
             this.label11.Text = "%MB% can be cleaned.";
             this.label11.Visible = false;
@@ -263,14 +263,14 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.CleanupLogsLBox);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.listBox2);
             this.tabPage1.Controls.Add(this.tabControl2);
             this.tabPage1.Controls.Add(this.btnCleanup);
-            this.tabPage1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabPage1.ForeColor = System.Drawing.Color.White;
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
@@ -278,6 +278,21 @@
             this.tabPage1.Size = new System.Drawing.Size(1058, 692);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cleanup";
+            // 
+            // listView1
+            // 
+            this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.CheckBoxes = true;
+            this.listView1.ForeColor = System.Drawing.Color.White;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(320, 47);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(730, 589);
+            this.listView1.TabIndex = 43;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
             // 
             // label8
             // 
@@ -317,22 +332,6 @@
             this.label7.Size = new System.Drawing.Size(134, 28);
             this.label7.TabIndex = 40;
             this.label7.Text = "Analyzed Files:";
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listBox2.ForeColor = System.Drawing.Color.White;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.HorizontalScrollbar = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(320, 47);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.ScrollAlwaysVisible = true;
-            this.listBox2.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listBox2.Size = new System.Drawing.Size(730, 585);
-            this.listBox2.TabIndex = 39;
             // 
             // tabControl2
             // 
@@ -1260,8 +1259,8 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListView listView1;
     }
 }

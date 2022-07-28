@@ -134,7 +134,7 @@ namespace Tasks
             // 
             this.txtFileName.AutoSize = true;
             this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(205, 0);
+            this.txtFileName.Location = new System.Drawing.Point(171, 34);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(119, 15);
             this.txtFileName.TabIndex = 4;
@@ -145,7 +145,7 @@ namespace Tasks
             // 
             this.txtTargetPath.AutoSize = true;
             this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTargetPath.Location = new System.Drawing.Point(205, 15);
+            this.txtTargetPath.Location = new System.Drawing.Point(171, 49);
             this.txtTargetPath.Name = "txtTargetPath";
             this.txtTargetPath.Size = new System.Drawing.Size(125, 15);
             this.txtTargetPath.TabIndex = 5;

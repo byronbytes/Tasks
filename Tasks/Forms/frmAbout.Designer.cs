@@ -108,9 +108,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(12, 265);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 20);
+            this.label6.Size = new System.Drawing.Size(132, 20);
             this.label6.TabIndex = 62;
-            this.label6.Text = "Commit: (000000)";
+            this.label6.Text = "Commit: (a8fd31c)";
             // 
             // label7
             // 
