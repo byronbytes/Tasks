@@ -289,7 +289,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(320, 47);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(730, 589);
+            this.listView1.Size = new System.Drawing.Size(730, 577);
             this.listView1.TabIndex = 43;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
@@ -314,11 +314,11 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(455, 642);
+            this.button4.Location = new System.Drawing.Point(456, 642);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(273, 47);
             this.button4.TabIndex = 41;
-            this.button4.Text = "Analyze";
+            this.button4.Text = "Analyze [WIP]";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
@@ -379,7 +379,6 @@
             this.tabPage6.Size = new System.Drawing.Size(273, 648);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "System";
-            this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
             // cbWindowsLogFiles
             // 
@@ -707,7 +706,6 @@
             this.tabPage7.Size = new System.Drawing.Size(273, 648);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Applications";
-            this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
             // 
             // cbSpotifyCache
             // 

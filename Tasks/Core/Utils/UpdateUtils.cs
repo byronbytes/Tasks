@@ -29,7 +29,7 @@ namespace Tasks.Core.Utils
             }
             else
             {
-                MessageBox.Show("There are no updates available.");
+                MessageBox.Show("There are no updates available.", "Tasks");
             }
         }
 

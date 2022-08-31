@@ -12,7 +12,6 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-// TODO: More Cleaning Support!!!
 namespace Tasks
 {
     public partial class frmCleanup : Form
@@ -1090,6 +1089,7 @@ namespace Tasks
                 if (DeleteAllFiles(usertemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsReport)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsLog)) Debug.Print("Null.");
+                listBox1.Items.Clear();
             }
             catch
             {
@@ -1140,19 +1140,10 @@ namespace Tasks
             }
         }
 
-        private void tabPage7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click_1(object sender, EventArgs e)
         {
             // analyze
+            listView1.Items.Clear();
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             if (cbSystemTempFolders.Checked)
             {

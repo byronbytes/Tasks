@@ -26,13 +26,10 @@ namespace Tasks
     public partial class frmMain : Form
     {
         public frmMain() {
-            
             Directory.CreateDirectory(Dirs.tasksDir);
             InitializeComponent(); 
             CheckTheme(); 
             Core.SystemUtils.ComputerBit();
-
-            
         }
 
         private Form activeForm = null;
