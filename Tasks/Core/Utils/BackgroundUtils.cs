@@ -21,8 +21,17 @@ namespace Tasks.Core.Utils
 
         public static void UpdateAlert()
         {
+            frmMain Main = new frmMain();
+            Main.notifyIcon1.BalloonTipTitle = "Tasks";
+            Main.notifyIcon1.BalloonTipText = "Tasks has an update!";
+        }
+
+        public static void StorageAlert()
+        {
 
         }
+
+
 
     }
 }

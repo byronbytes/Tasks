@@ -19,6 +19,7 @@ namespace Tasks.Core.Utils
             return reply;
         }
 
+        // note for later: it's now possible to make a beta branch.
         public static void CheckForUpdates()
         {
             isUpToDate();
@@ -32,6 +33,8 @@ namespace Tasks.Core.Utils
                 MessageBox.Show("There are no updates available.", "Tasks");
             }
         }
+
+
 
 
         public static bool isUpToDate()
