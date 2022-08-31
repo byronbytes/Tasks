@@ -102,7 +102,7 @@ namespace Tasks
             if (Properties.Settings.Default.Theme == "light")
             {
                 this.BackColor = Color.FromArgb(250, 250, 250);
-              
+                label3.ForeColor = Color.Black;
                 label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
                 label9.ForeColor = Color.Black;
@@ -115,6 +115,7 @@ namespace Tasks
                 label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
                 checkBox2.ForeColor = Color.Black;
+                checkBox3.ForeColor = Color.Black;
                 comboBox1.BackColor = Color.GhostWhite;
                 comboBox1.ForeColor = Color.Black;
                 comboBox2.BackColor = Color.GhostWhite;

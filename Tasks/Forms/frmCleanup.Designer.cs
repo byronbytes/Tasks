@@ -278,6 +278,7 @@
             this.tabPage1.Size = new System.Drawing.Size(1058, 692);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cleanup";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // listView1
             // 

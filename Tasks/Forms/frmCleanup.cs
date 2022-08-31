@@ -59,7 +59,8 @@ namespace Tasks
                 cbOneDriveCache.ForeColor = Color.Black;
                 cbVLCCache.ForeColor = Color.Black;
                 cbSpotifyCache.ForeColor = Color.Black;
-
+                label8.ForeColor = Color.Black;
+                label7.ForeColor = Color.Black;
                 tabPage1.BackColor = Color.White;
                 tabPage7.BackColor = Color.White;
                 tabPage3.BackColor = Color.White;
@@ -1159,6 +1160,9 @@ namespace Tasks
             }
         }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
