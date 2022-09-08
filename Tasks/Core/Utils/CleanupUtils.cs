@@ -88,8 +88,8 @@ namespace Tasks.Core.Utils
 
             if (CanLogCleanup())
             {
-                File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-summary-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
-                MessageBox.Show("Your cleanup was saved and logged.");
+                File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
+                MessageBox.Show("Your cleanup was saved and logged.", "Tasks");
             }
             else
             {
