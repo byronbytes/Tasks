@@ -11,6 +11,7 @@ namespace Tasks.Core.Utils
     public class UpdateUtils
     {
 
+        // second note: you need to manually put the pastebin link everywhere this is referenced. again, will find a better way later.
         public static string UpdateString(string address)
         {
             WebClient client = new WebClient();
@@ -20,6 +21,7 @@ namespace Tasks.Core.Utils
         }
 
         // note for later: it's now possible to make a beta branch.
+        // should also add an option for remind me later.
         public static void CheckForUpdates()
         {
             isUpToDate();
@@ -36,7 +38,7 @@ namespace Tasks.Core.Utils
 
 
 
-
+        // I have to hard-code this, although I really don't want to, I'll eventually find a way to put it as a Setting string or something.
         public static bool isUpToDate()
         {
             if (UpdateString("https://pastebin.com/raw/02qyhKX7") == "v5.0.0-pre1")
