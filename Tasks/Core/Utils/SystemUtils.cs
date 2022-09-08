@@ -40,9 +40,7 @@ namespace Tasks.Core
                 switch (vs.Major)
                 {
                     case 5:
-                        if (vs.Minor == 0)
-                            operatingSystem = "2000";
-                        else
+                        if (vs.Minor != 0)
                             operatingSystem = "XP";
                         break;
                     case 6:
@@ -84,6 +82,7 @@ namespace Tasks.Core
 
 
         // This doesn't work, for whatever reason.
+        /*
         public static void CreateFiles()
         {
             Directory.CreateDirectory(Dirs.tasksDir);
@@ -99,6 +98,7 @@ namespace Tasks.Core
                 writer.WriteLine("IconFile=" + icon);
             }
         }
+        */
     }
 
 
