@@ -17,7 +17,7 @@ namespace Tasks.Core.Utils
         - Ability to hide Tasks to tray
         - 
         */
-
+       
 
         public static void UpdateAlert()
         {
@@ -26,10 +26,14 @@ namespace Tasks.Core.Utils
             Main.notifyIcon1.BalloonTipText = "Tasks has an update!";
         }
 
+        // should have a variable that automatically quick clean in the background after TBD time.
         public static void StorageAlert()
         {
-
+              frmMain Main = new frmMain();
+            // will add multiple notifyicons
         }
+        
+        public static void 
 
 
 
