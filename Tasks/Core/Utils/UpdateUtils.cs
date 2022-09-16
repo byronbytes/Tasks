@@ -1,21 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
 using System.Windows.Forms;
 
 namespace Tasks.Core.Utils
 {
     public class UpdateUtils
     {
-        /* 
-              !!!
-        THIS FLAGS ANTIVIRUSES!
-        NEEDS TO BE FIXED A S A P
-             !!!    
-        */
         
         public static string UpdateString(string address)
         {
@@ -32,7 +21,7 @@ namespace Tasks.Core.Utils
            {
             if(isUpToDate() == false)
             {
-                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString("https://pastebin.com/raw/02qyhKX7"));
+                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(Properties.Settings.Default.VersionString));
             }
             else
             {
@@ -43,16 +32,11 @@ namespace Tasks.Core.Utils
            {
                 MessageBox.Show("Unable to check for updates.", "Tasks");
            }
-
-          
         }
 
-
-
-        // I have to hard-code this, although I really don't want to, I'll eventually find a way to put it as a Setting string or something.
         public static bool isUpToDate()
         {
-            if (UpdateString("https://pastebin.com/raw/02qyhKX7") == "v5.0.0-pre1")
+            if (UpdateString(Properties.Settings.Default.VersionString) == "v5.0.0-pre1-r1")
             {
                 return true;
             }
@@ -62,8 +46,5 @@ namespace Tasks.Core.Utils
             }
 
         }
-
-
-
     }
 }

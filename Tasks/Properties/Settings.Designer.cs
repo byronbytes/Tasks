@@ -82,5 +82,17 @@ namespace Tasks.Properties {
                 this["AutoCheckUpdates"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://pastebin.com/raw/02qyhKX7")]
+        public string VersionString {
+            get {
+                return ((string)(this["VersionString"]));
+            }
+            set {
+                this["VersionString"] = value;
+            }
+        }
     }
 }

@@ -32,10 +32,7 @@ namespace Tasks.Core.Utils
               frmMain Main = new frmMain();
             // will add multiple notifyicons
         }
-        
-        public static void 
-
-
+       
 
     }
 }
