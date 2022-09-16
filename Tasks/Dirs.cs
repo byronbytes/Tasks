@@ -30,8 +30,6 @@ namespace Tasks
         public static string tasksCleanup = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Roaming\\Tasks\\Cleanup Summary\\";
     }
 
-    
-    // Going to be merging most of the stuff into a new directory method.
     class Directories
     {
         public static string RoamingAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Roaming\\";
@@ -43,16 +41,6 @@ namespace Tasks
         public static string ProgramFiles86 = "C:\\Program Files (x86)\\";
         public static string StartupFolder = ""; //Environment exists will add soon
         public static string tasksDir = "C:\\Program Files\\Tasks\\";
-        // Directories for applications
-        public static string ChromeDir = "";
-        public static string FirefoxDir = "";
-        public static string EdgeDir = "";
-        public static string DiscordDir = "";
-        public static string VLCDir = "";
-        public static string SpotifyDir1 = "";
-        public static string ChromeExtDir = "";
-        public static string FirefoxExtDir = "";
-        public static string EdgeExtDir = "";
   
     }
 }
