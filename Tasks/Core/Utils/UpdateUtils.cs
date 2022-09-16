@@ -10,8 +10,13 @@ namespace Tasks.Core.Utils
 {
     public class UpdateUtils
     {
-
-        // second note: you need to manually put the pastebin link everywhere this is referenced. again, will find a better way later.
+        /* 
+              !!!
+        THIS FLAGS ANTIVIRUSES!
+        NEEDS TO BE FIXED A S A P
+             !!!    
+        */
+        
         public static string UpdateString(string address)
         {
             WebClient client = new WebClient();
