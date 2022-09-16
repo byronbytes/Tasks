@@ -129,10 +129,10 @@ namespace Tasks.Core.Utils
 
     }
 
-
+/*
+    Temporarily disabling this class.
     public static class CleanupDirectories
     {
-        // Everything here is mostly placeholder until I fill in the directories.
         public static string localappdata = Environment.GetEnvironmentVariable("LocalAppData");
         public static string roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         public static string windowstemp = "C:\\Windows\\Temp\\";
@@ -145,12 +145,13 @@ namespace Tasks.Core.Utils
         public static string[] ChromeSearchHistory;
         public static string ChromeExtensionDirectory;
 
-        public static string[] FirefoxDirectories = { localappdata + "\\Mozilla\\Firefox\\Profiles\\", "ab", "abc", "abcd" };
+        public static string[] FirefoxDirectories = { localappdata + "\\Mozilla\\Firefox\\Profiles\\"};
         public static string FirefoxExtensionDirectory = "";
 
-        public static string[] EdgeDirectories = { "a", "ab", "abc", "abcd" };
+        public static string[] EdgeDirectories = { "a", "ab"};
         public static string EdgeExtensionDirectory = "";
     }
+    */
 }
 
 
