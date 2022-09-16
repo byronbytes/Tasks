@@ -25,12 +25,11 @@ namespace Tasks.Core.Utils
             return reply;
         }
 
-        // note for later: it's now possible to make a beta branch.
         // should also add an option for remind me later.
         public static void CheckForUpdates()
         {
-            isUpToDate();
-
+           try
+           {
             if(isUpToDate() == false)
             {
                 MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString("https://pastebin.com/raw/02qyhKX7"));
@@ -39,6 +38,13 @@ namespace Tasks.Core.Utils
             {
                 MessageBox.Show("There are no updates available.", "Tasks");
             }
+           }
+           catch
+           {
+                MessageBox.Show("Unable to check for updates.", "Tasks");
+           }
+
+          
         }
 
 
