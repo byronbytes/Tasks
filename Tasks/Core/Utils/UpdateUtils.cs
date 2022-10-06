@@ -21,7 +21,7 @@ namespace Tasks.Core.Utils
            {
             if(isUpToDate() == false)
             {
-                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(Properties.Settings.Default.VersionString));
+                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(Properties.Settings.Default.VersionString), "Tasks");
             }
             else
             {
