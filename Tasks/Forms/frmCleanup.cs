@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -26,41 +27,33 @@ namespace Tasks
         {
             if (Properties.Settings.Default.Theme == "light")
             {
-                pictureBox2.Image = Tasks.Properties.Resources.QuickClean_Black;
-                this.BackColor = Color.FromArgb(250, 250, 250);
-                cbChromeCache.ForeColor = Color.Black;
-                cbChromeCookies.ForeColor = Color.Black;
-                cbChromeSavedPasswords.ForeColor = Color.Black;
-                cbChromeSearchHistory.ForeColor = Color.Black;
-                cbChromeSessions.ForeColor = Color.Black;
-                cbDiscord.ForeColor = Color.Black;
-                cbEdgeCache.ForeColor = Color.Black;
-                cbEdgeCookies.ForeColor = Color.Black;
-                cbEdgeSearchHistory.ForeColor = Color.Black;
-                cbEdgeSessions.ForeColor = Color.Black;
-                cbExplorerDownloads.ForeColor = Color.Black;
-                cbExplorerIconCache.ForeColor = Color.Black;
-                cbExplorerRecents.ForeColor = Color.Black;
-                cbExplorerThumbCache.ForeColor = Color.Black;
-                cbFirefoxCache.ForeColor = Color.Black;
-                cbFirefoxCookies.ForeColor = Color.Black;
-                cbFirefoxSearchHistory.ForeColor = Color.Black;
-                cbSystemARPCache.ForeColor = Color.Black;
-                cbSystemDirectXCache.ForeColor = Color.Black;
-                cbSystemDNSCache.ForeColor = Color.Black;
-                cbSystemErrorReporting.ForeColor = Color.Black;
-                cbSystemEventLogs.ForeColor = Color.Black;
-                cbSystemMemDumps.ForeColor = Color.Black;
-                cbSystemPrefetch.ForeColor = Color.Black;
-                cbSystemRecycleBin.ForeColor = Color.Black;
-                cbSystemTempFolders.ForeColor = Color.Black;
-                cbWindowsLogFiles.ForeColor = Color.Black;
-                cbIECache.ForeColor = Color.Black;
-                cbOneDriveCache.ForeColor = Color.Black;
-                cbVLCCache.ForeColor = Color.Black;
-                cbSpotifyCache.ForeColor = Color.Black;
-                label8.ForeColor = Color.Black;
-                label7.ForeColor = Color.Black;
+
+                // Labels
+                foreach (Label lbl in tabPage1.Controls.OfType<Label>())
+                { lbl.ForeColor = Color.Black; }
+         
+                foreach (Label lbl in tabPage3.Controls.OfType<Label>())
+                { lbl.ForeColor = Color.Black; }
+
+                foreach (Label lbl in tabPage5.Controls.OfType<Label>())
+                { lbl.ForeColor = Color.Black; }
+
+                foreach (Label lbl in tabPage6.Controls.OfType<Label>())
+                { lbl.ForeColor = Color.Black; }
+
+                foreach (Label lbl in tabPage7.Controls.OfType<Label>())
+                { lbl.ForeColor = Color.Black; }
+
+                // Checkboxes
+
+
+                foreach (CheckBox cb in tabPage6.Controls.OfType<CheckBox>())
+                { cb.ForeColor = Color.Black; }
+
+                foreach (CheckBox cb in tabPage7.Controls.OfType<CheckBox>())
+                { cb.ForeColor = Color.Black; }
+
+                // TabPages + TabControls
                 tabPage1.BackColor = Color.White;
                 tabPage7.BackColor = Color.White;
                 tabPage3.BackColor = Color.White;
@@ -68,23 +61,20 @@ namespace Tasks
                 tabControl1.BackColor = Color.White;
                 tabPage5.BackColor = Color.White;
                 tabPage6.BackColor = Color.White;
-                label1.ForeColor = Color.Black;
-                label2.ForeColor = Color.Black;
-                label3.ForeColor = Color.Black;
-                label4.ForeColor = Color.Black;
-                label6.ForeColor = Color.Black;
-                label9.ForeColor = Color.Black;
-                label10.ForeColor = Color.Black;
-                label11.ForeColor = Color.Black;
-                label15.ForeColor = Color.Black;
-                label17.ForeColor = Color.DarkRed;
-                label18.ForeColor = Color.Black;
-
-                label9.ForeColor = Color.Black;
+                tabPage1.BackColor = Color.White;
+                tabPage7.BackColor = Color.White;
+                tabPage3.BackColor = Color.White;
+                tabControl2.BackColor = Color.White;
+                tabControl1.BackColor = Color.White;
+                tabPage5.BackColor = Color.White;
+                tabPage6.BackColor = Color.White;
                 comboBox1.BackColor = Color.WhiteSmoke;
                 comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;
+
+                pictureBox2.Image = Tasks.Properties.Resources.QuickClean_Black;
+                this.BackColor = Color.FromArgb(250, 250, 250);
             }
         }
 
