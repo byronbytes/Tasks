@@ -162,16 +162,6 @@ namespace Tasks
             label2.Text = Core.SystemUtils.bit;
             label4.Text = Core.SystemUtils.getOSInfo();
             pictureBox5.Visible = true;
-
-            /*
-            var identity = WindowsIdentity.GetCurrent();
-            var principal = new WindowsPrincipal(identity);
-
-            if (principal.IsInRole(WindowsBuiltInRole.Administrator))
-            {
-                pictureBox5.Visible = true;
-            }
-            */
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
