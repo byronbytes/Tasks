@@ -17,8 +17,5 @@
     <Setting Name="AutoCheckUpdates" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="VersionString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://pastebin.com/raw/02qyhKX7</Value>
-    </Setting>
   </Settings>
 </SettingsFile>

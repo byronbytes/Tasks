@@ -21,7 +21,7 @@ namespace Tasks.Core.Utils
            {
             if(isUpToDate() == false)
             {
-                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(Properties.Settings.Default.VersionString), "Tasks");
+                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString("https://rentry.co/TasksUpdateCheck/raw"), "Tasks");
             }
             else
             {
@@ -36,7 +36,7 @@ namespace Tasks.Core.Utils
 
         public static bool isUpToDate()
         {
-            if (UpdateString(Properties.Settings.Default.VersionString) == "v5.0.0-pre1-r1")
+            if (UpdateString("https://rentry.co/TasksUpdateCheck/raw") == "v5.0.0-pre1-r1")
             {
                 return true;
             }
