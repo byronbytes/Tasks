@@ -1,17 +1,21 @@
-﻿using System.Net;
+﻿using System;
+using System.IO;
+using System.Net;
 using System.Windows.Forms;
 
 namespace Tasks.Core.Utils
 {
     public class UpdateUtils
     {
-        
-        public static string UpdateString(string address)
+          static readonly string VERSION = "v5.0.0-pre1-r1";
+        public static string UpdateString()
         {
             WebClient client = new WebClient();
-            string reply = client.DownloadString(address);
+            Stream stream = client.OpenRead("https://pastebin.com/raw/02qyhKX7");
+            StreamReader reader = new StreamReader(stream);
+            String content = reader.ReadToEnd();
 
-            return reply;
+            return content;
         }
 
         // should also add an option for remind me later.
@@ -21,7 +25,7 @@ namespace Tasks.Core.Utils
            {
             if(isUpToDate() == false)
             {
-                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString("https://rentry.co/TasksUpdateCheck/raw"), "Tasks");
+                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(), "Tasks");
             }
             else
             {
@@ -36,7 +40,7 @@ namespace Tasks.Core.Utils
 
         public static bool isUpToDate()
         {
-            if (UpdateString("https://rentry.co/TasksUpdateCheck/raw") == "v5.0.0-pre1-r1")
+            if (UpdateString() == "v5.0.0-pre1-r1")
             {
                 return true;
             }
