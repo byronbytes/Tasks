@@ -72,6 +72,8 @@ namespace Tasks
                 comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;
+                listView1.ForeColor = Color.Black;
+                listView1.BackColor = Color.GhostWhite;
 
                 pictureBox2.Image = Tasks.Properties.Resources.QuickClean_Black;
                 this.BackColor = Color.FromArgb(250, 250, 250);
