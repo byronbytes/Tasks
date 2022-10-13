@@ -7,7 +7,8 @@ namespace Tasks.Core.Utils
 {
     public class UpdateUtils
     {
-          static readonly string VERSION = "v5.0.0-pre1-r1";
+        static readonly string VERSION = "v5.0.0-pre2"; // WIP.
+        
         public static string UpdateString()
         {
             WebClient client = new WebClient();
@@ -40,7 +41,7 @@ namespace Tasks.Core.Utils
 
         public static bool isUpToDate()
         {
-            if (UpdateString() == "v5.0.0-pre1-r1")
+            if (UpdateString() == "v5.0.0-pre2")
             {
                 return true;
             }
