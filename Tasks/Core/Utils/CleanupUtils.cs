@@ -103,6 +103,12 @@ namespace Tasks.Core.Utils
             Directory.Delete(Dirs.tasksDir);
             Directory.CreateDirectory(Dirs.tasksDir);
         }
+        
+        // calculates storage space
+        public static void CalculateStorage()
+        {
+            
+        }
 
 
 
