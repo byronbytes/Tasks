@@ -55,6 +55,7 @@ namespace Tasks.Forms
 
         public void CheckTheme()
         {
+            /*
             if (Properties.Settings.Default.Theme == "light")
             {
 
@@ -65,6 +66,7 @@ namespace Tasks.Forms
                 button1.ForeColor = Color.Black;
                 button2.ForeColor = Color.Black;
             }  
+            */
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

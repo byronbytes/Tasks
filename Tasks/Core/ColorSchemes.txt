@@ -1,0 +1,5 @@
+﻿Sidebar Color: 18, 26, 45
+Button Color (BackColor): 14, 18, 26
+Text Color (Subtitles): 224, 228, 255
+Text Color (Titles): #A1B7FF / 161, 183, 255
+Form BackColors: 13, 12, 14

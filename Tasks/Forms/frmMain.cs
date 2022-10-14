@@ -25,10 +25,11 @@ namespace Tasks
 {
     public partial class frmMain : Form
     {
-        public frmMain() {
+        public frmMain()
+        {
             Directory.CreateDirectory(Dirs.tasksDir);
-            InitializeComponent(); 
-            CheckTheme(); 
+            InitializeComponent();
+            CheckTheme();
             Core.SystemUtils.ComputerBit();
         }
 
@@ -49,11 +50,12 @@ namespace Tasks
             childForm.Show();
         }
 
-        public void CheckTheme() // Required to be lengthy because buttons n stuff.
+        public void CheckTheme()
         {
+            /*
             if (Properties.Settings.Default.Theme == "dark")
             {
-
+                
                 panel1.BackColor = Color.FromArgb(20, 20, 20);
                 panel2.BackColor = Color.FromArgb(20, 20, 20);
                 panel3.BackColor = Color.FromArgb(20, 20, 20);
@@ -72,7 +74,6 @@ namespace Tasks
                 button3.ForeColor = Color.White;
                 button4.ForeColor = Color.White;
 
-                label1.ForeColor = Color.White;
                 label2.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
             }
@@ -99,7 +100,6 @@ namespace Tasks
                 button3.ForeColor = Color.Black;
                 button4.ForeColor = Color.Black;
 
-                label1.ForeColor = Color.Black;
                 label2.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
             }
@@ -124,7 +124,6 @@ namespace Tasks
                 button3.ForeColor = Color.Black;
                 button4.ForeColor = Color.Black;
 
-                label1.ForeColor= Color.Black;
 
                 label2.ForeColor = Color.Black;
                 label4.ForeColor = Color.Black;
@@ -149,11 +148,10 @@ namespace Tasks
                 button3.ForeColor = Color.White;
                 button4.ForeColor = Color.White;
 
-                label1.ForeColor = Color.White;
                 label2.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
-
-            }
+            */
+        
         }
 
 
