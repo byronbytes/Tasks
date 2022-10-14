@@ -117,11 +117,11 @@ namespace Tasks
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
             this.button3.Image = global::Tasks.Properties.Resources.TaskManagerWhite;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.Location = new System.Drawing.Point(-6, 520);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 63);
+            this.button3.Size = new System.Drawing.Size(146, 75);
             this.button3.TabIndex = 16;
+            this.button3.Text = "TaskManager";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.button3, "Task Manager");
             this.button3.UseVisualStyleBackColor = false;
@@ -137,8 +137,9 @@ namespace Tasks
             this.button2.Image = global::Tasks.Properties.Resources.StartupPrograms_White;
             this.button2.Location = new System.Drawing.Point(-6, 320);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 60);
+            this.button2.Size = new System.Drawing.Size(146, 75);
             this.button2.TabIndex = 15;
+            this.button2.Text = "Startup";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.button2, "Startup Programs");
             this.button2.UseVisualStyleBackColor = false;
@@ -154,8 +155,9 @@ namespace Tasks
             this.button1.Image = global::Tasks.Properties.Resources.Cleanup_White;
             this.button1.Location = new System.Drawing.Point(-6, 120);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 60);
+            this.button1.Size = new System.Drawing.Size(146, 75);
             this.button1.TabIndex = 14;
+            this.button1.Text = "Cleanup";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.button1, "Cleanup");
             this.button1.UseVisualStyleBackColor = false;
