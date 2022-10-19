@@ -14,13 +14,13 @@ namespace Tasks.ByronNotifCore
      class Notification
     {
      
-       public string notifTitle;
-       public string notifDescription;
-       public int notifButtons;
-       public int notifIcon;
-       
+       private string notifTitle;
+       private string notifDescription;
+       private int notifButtons;
+       private int notifIcon;
           
-       public static void SetNotificationInfo(string title, string description, int buttons, int icon)
+          
+       public Notification(string title, string description, int buttons, int icon)
        {
         notifTitle = title;
         notifDescription = description;
@@ -28,7 +28,7 @@ namespace Tasks.ByronNotifCore
         notifIcon = icon;
        }
 
-       public static void SetNotificationInfo(string title, string description)
+       public Notification(string title, string description)
        {
         notifTitle = title;
         notifDescription = description;
