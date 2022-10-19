@@ -99,6 +99,7 @@ namespace Tasks
 
         public void CheckTheme()
         {
+            /*
             if (Properties.Settings.Default.Theme == "light")
             {
                 this.BackColor = Color.FromArgb(250, 250, 250);
@@ -124,6 +125,7 @@ namespace Tasks
                 comboBox3.ForeColor = Color.Black;
 
             }
+            */
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)

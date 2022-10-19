@@ -25,7 +25,7 @@ namespace Tasks.Forms
 
         private void frmAbout_Load(object sender, EventArgs e)
         {
-
+            label5.Text = "Name: " + Core.Utils.UpdateUtils.UpdateString();
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
