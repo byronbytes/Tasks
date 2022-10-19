@@ -7,8 +7,7 @@ namespace Tasks.Core.Utils
 {
     public class UpdateUtils
     {
-        static readonly string VERSION = "v5.0.0-pre2"; // WIP.
-        
+
         public static string UpdateString()
         {
             WebClient client = new WebClient();
@@ -26,11 +25,11 @@ namespace Tasks.Core.Utils
            {
             if(isUpToDate() == false)
             {
-                MessageBox.Show("There is a new update for Tasks! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(), "Tasks");
+                MessageBox.Show("There is a new update available! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(), "Tasks");
             }
             else
             {
-                MessageBox.Show("There are no updates available.", "Tasks");
+                MessageBox.Show("There are no new updates.", "Tasks");
             }
            }
            catch
