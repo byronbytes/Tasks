@@ -1,6 +1,6 @@
 /*
-ByronNotifCore v0.1
-An easier way to prompt custom notifications with WinForms.
+ByronNotifCore v0.1 - @byronbytes 2022
+An easier way to prompt custom notifications with WinForms. Currently supports default messageboxes, balloontips, and custom messageboxes.
 */
 
 using System;
@@ -18,19 +18,7 @@ namespace Tasks.ByronNotifCore
        public string notifDescription;
        public int notifButtons;
        public int notifIcon;
-          
-       // WIP - Will improve soon, just a rough draft.
-       public string notifType(int type)
-       {
-            if(type == 1)
-            {
-                 return "MESSAGEBOX";
-            }
-            if(type == 2)
-            {
-                 return  "BALLOONTIP";
-            }
-       }
+       
           
        public static void SetNotificationInfo(string title, string description, int buttons, int icon)
        {
@@ -46,13 +34,21 @@ namespace Tasks.ByronNotifCore
         notifDescription = description;
        }
         
-          // debug when i get home
+       // Needs debugging.
        public static void DisplayNotification()
        {
-            MessageBox.Show(notifTitle);
+            MessageBox.Show(notifTitle, notifDescription);
+       }
+          
+       public static string GetNotificationTitle()
+       {
+            return notifTitle;
+       }
+          
+       public static string GetNotificationDescription()
+       {
+            return notifDescription;
        }
          
-          
-       
     }
 }
