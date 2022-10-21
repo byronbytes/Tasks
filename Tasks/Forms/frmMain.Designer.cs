@@ -121,7 +121,7 @@ namespace Tasks
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 75);
             this.button3.TabIndex = 16;
-            this.button3.Text = "TaskManager";
+            this.button3.Text = "Task Manager";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.button3, "Task Manager");
             this.button3.UseVisualStyleBackColor = false;
