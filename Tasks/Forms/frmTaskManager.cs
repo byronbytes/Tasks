@@ -1,18 +1,13 @@
 /*
-    (c) LiteTools 2022 (https://github.com/LiteTools)
+   Tasks was developed by @byronbytes
     All rights reserved under the GNU General Public License v3.0.
 */
+
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Dynamic;
-using System.Linq;
 using System.Management;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -258,8 +253,6 @@ namespace Tasks
 
 
         private void button2_Click(object sender, EventArgs e) { new frmCreateNewProcess().Show(); }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e) { }
 
         private void button3_Click_1(object sender, EventArgs e)
         {

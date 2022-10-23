@@ -1,22 +1,13 @@
 /*
-    (c) LiteTools 2022 (https://github.com/LiteTools)
+   Tasks was developed by @byronbytes
     All rights reserved under the GNU General Public License v3.0.
 */
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using System.IO;
 using System.Management;
-using System.Diagnostics;
-using System.Threading;
 using System.ServiceProcess;
 
 

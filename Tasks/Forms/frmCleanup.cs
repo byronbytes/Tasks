@@ -1,5 +1,5 @@
 /*
-    (c) LiteTools 2022 (https://github.com/LiteTools)
+   Tasks was developed by @byronbytes
     All rights reserved under the GNU General Public License v3.0.
 */
 
@@ -1150,11 +1150,6 @@ namespace Tasks
                 }
 
             }
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

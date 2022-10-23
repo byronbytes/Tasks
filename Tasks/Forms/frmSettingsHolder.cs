@@ -1,17 +1,9 @@
 /*
-    (c) LiteTools 2022 (https://github.com/LiteTools)
+   Tasks was developed by @byronbytes
     All rights reserved under the GNU General Public License v3.0.
 */
-﻿
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tasks.Forms
@@ -67,16 +59,6 @@ namespace Tasks.Forms
                 button2.ForeColor = Color.Black;
             }  
             */
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

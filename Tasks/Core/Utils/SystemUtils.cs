@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+   Tasks was developed by @byronbytes
+    All rights reserved under the GNU General Public License v3.0.
+*/
+
+using System;
 
 namespace Tasks.Core
 
@@ -27,12 +27,9 @@ namespace Tasks.Core
 
         public static string getOSInfo()
         {
-            //Get Operating system information.
             OperatingSystem os = Environment.OSVersion;
-            //Get version information about the os.
             Version vs = os.Version;
 
-            //Variable to hold our return value
             string operatingSystem = "";
 
             if (os.Platform == PlatformID.Win32NT)

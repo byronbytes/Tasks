@@ -1,16 +1,13 @@
 ﻿/*
-    (c) LiteTools 2022 (https://github.com/LiteTools)
+   Tasks was developed by @byronbytes
     All rights reserved under the GNU General Public License v3.0.
 */
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 // everything is over-noted, don't mind it. 
@@ -104,7 +101,7 @@ namespace Tasks.Core.Utils
             Directory.CreateDirectory(Dirs.tasksDir);
         }
         
-        // calculates storage space
+        // TODO: calculates storage space
         public static void CalculateStorage()
         {
             
@@ -134,30 +131,6 @@ namespace Tasks.Core.Utils
         }
 
     }
-
-/*
-    Temporarily disabling this class.
-    public static class CleanupDirectories
-    {
-        public static string localappdata = Environment.GetEnvironmentVariable("LocalAppData");
-        public static string roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        public static string windowstemp = "C:\\Windows\\Temp\\";
-        public static string usertemp = Path.GetTempPath();
-        public static string downloads = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\";
-
-        public static string[] ChromeDirectories = { "Default\\Cache\\", "Default\\Code Cache\\", "Default\\GPUCache\\", "ShaderCache\\", "Default\\Service Worker\\CacheStorage\\", "Default\\Service Worker\\ScriptCache\\", "GrShaderCache\\GPUCache\\", "Default\\File System\\", "Default\\JumpListIconsMostVisited\\", "Default\\JumpListIconsRecentClosed\\", "Default\\Service Worker\\Database\\" };
-        public static string[] ChromeSessions = {Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions\\", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage\\", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State\\" };
-        public static string[] ChromeCookies;
-        public static string[] ChromeSearchHistory;
-        public static string ChromeExtensionDirectory;
-
-        public static string[] FirefoxDirectories = { localappdata + "\\Mozilla\\Firefox\\Profiles\\"};
-        public static string FirefoxExtensionDirectory = "";
-
-        public static string[] EdgeDirectories = { "a", "ab"};
-        public static string EdgeExtensionDirectory = "";
-    }
-    */
 }
 
 

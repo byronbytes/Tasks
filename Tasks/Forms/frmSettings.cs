@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+   Tasks was developed by @byronbytes
+    All rights reserved under the GNU General Public License v3.0.
+*/
+
+using System;
 using System.Windows.Forms;
-using Tasks.Forms;
 
 namespace Tasks
 {
@@ -49,16 +44,6 @@ namespace Tasks
             if (Properties.Settings.Default.Theme == "light")
             {
                 comboBox2.SelectedItem = "Light";
-            }
-
-            if (Properties.Settings.Default.SidebarColor == "dark")
-            {
-                comboBox3.SelectedItem = "Dark";
-            }
-
-            if (Properties.Settings.Default.SidebarColor == "light")
-            {
-                comboBox3.SelectedItem = "Light";
             }
 
             if (Properties.Settings.Default.Language == "English")
@@ -159,23 +144,6 @@ namespace Tasks
                 Properties.Settings.Default.Save();
             }
 
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox3.SelectedItem == "Dark")
-            {
-                Properties.Settings.Default.SidebarColor = "dark";
-                Main.CheckTheme();
-                Properties.Settings.Default.Save();
-            }
-
-            if (comboBox3.SelectedItem == "Light")
-            {
-                Properties.Settings.Default.SidebarColor = "light";
-                Main.CheckTheme();
-                Properties.Settings.Default.Save();
-            }
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
