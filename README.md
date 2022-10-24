@@ -5,7 +5,7 @@
   🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD) [🇵🇱](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-PL.md) [🇷🇺](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-RU.md) [🇨🇳](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-CN.md)
 </h1>
 
-**Tasks** is an application that improves computer performance. **Tasks**'s main features include an advanced cleanup tool, a startup manager, and a detailed Task Manager. These tools help improve computer performance, system boot times, and ensures a safer experience while using your computer.
+**Tasks** is an application that improves computer performance. **Tasks**'s main features include an advanced cleanup tool, a startup manager, and a detailed Task Manager. These tools help improve computer performance, system boot times, and ensures a faster experience while using your computer.
 
 ### Intentions
 We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial to everyone and should not include any hidden paywalls inside the application. Our goal is to make a tool that anyone can use from anywhere.
@@ -35,7 +35,6 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   
 - Settings:
   - Ability to change the theme of Tasks.
-  - Ability to change the sidebar color of Tasks.
   - Toggle the ability to turn on or off cleanup logs.
   - Change the language of Tasks.
  
