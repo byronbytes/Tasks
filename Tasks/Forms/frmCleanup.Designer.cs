@@ -1073,6 +1073,7 @@
             this.tabPage3.Size = new System.Drawing.Size(1058, 692);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Browser Extensions";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // label17
             // 
