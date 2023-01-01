@@ -33,6 +33,9 @@ namespace Tasks
             GetAllServices();
         }
 
+        public string AddedProgram;
+        public string AddedProgramTitle;
+
         private void RenderStartupsOnListWiew()
         {
             foreach (ManagementObject strt in (new ManagementClass("Win32_StartupCommand").GetInstances()))
@@ -52,31 +55,13 @@ namespace Tasks
             }
         }
 
-        private void SetStartup(string AppName, bool enabled)
+        private void SetStartup()
         {
-            string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
-           //  string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".lnk";
-            RegistryKey startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-
-            if (enabled == true)
-            {
-                startupKey.Close();
-                startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                startupKey.CreateSubKey(AppName, true);
-                startupKey.SetValue(AppName, Application.ExecutablePath.ToString());
-                startupKey.Close();
-            }
-            else
-            {
-                // Remove
-               // startupKey.Close();
-               // startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-               // startupKey.DeleteValue(AppName, true);
-               // startupKey.Close();
-            }
+            RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            rk.SetValue("Test", AddedProgram);
         }
 
-     
+
         private void frmStartupPrograms_Load(object sender, EventArgs e)
         {
             txtTargetPath.Text = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
@@ -85,24 +70,25 @@ namespace Tasks
 
         private void button1_Click(object sender, EventArgs e) // delete
         {
-            string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
-                try
-                {
-                    if(StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup")
-                    {
-                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
-                    RefreshList();
-                }
-                    else
-                {
-                    SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
-                    RefreshList();
-                }    
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Unable to delete the selected startup program. " + ex.Message);
-                }
+            /*   string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
+                   try
+                   {
+                       if(StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup")
+                       {
+                       SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
+                       RefreshList();
+                   }
+                       else
+                   {
+                       SetStartup(StartupProcesses.SelectedItems[0].SubItems[0].Text, false);
+                       RefreshList();
+                   }    
+                   }
+                   catch(Exception ex)
+                   {
+                       MessageBox.Show("Unable to delete the selected startup program. " + ex.Message);
+            }
+                 */
         }
 
         class StartUpProgram
@@ -135,7 +121,9 @@ namespace Tasks
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    SetStartup(ofd.FileName.ToString(), true);
+                    AddedProgram = ofd.FileName.ToString();
+                    AddedProgramTitle = ofd.FileName;
+                    SetStartup();
                     RefreshList();
                 }
             }
