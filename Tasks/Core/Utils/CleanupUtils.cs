@@ -16,9 +16,9 @@ namespace Tasks.Core.Utils
 {
     public class CleanupUtils
     {
-        
+
         public static int filesDeleted;
-        
+
         // Deletes all files in a directory.
         // Will also add a string list for all of the file names, that's pretty easy.
         public static bool DeleteAllFiles(DirectoryInfo directoryInfo)
@@ -46,7 +46,7 @@ namespace Tasks.Core.Utils
                 }
                 catch (Exception)
                 {
-                    
+
                 }
 
             }
@@ -64,20 +64,20 @@ namespace Tasks.Core.Utils
                 }
                 catch (Exception)
                 {
-                    
+
                 }
             }
         }
-        
+
         public static bool CanLogCleanup()
         {
             if (Directory.Exists(Dirs.tasksDir) && Properties.Settings.Default.EnableCleanupLogs == true)
             {
-               return true;
+                return true;
             }
-                return false;
+            return false;
         }
-           
+
         public static void SaveCleanupLog()
         {
             frmCleanup CleanupForm = new frmCleanup();
@@ -100,11 +100,11 @@ namespace Tasks.Core.Utils
             Directory.Delete(Dirs.tasksDir);
             Directory.CreateDirectory(Dirs.tasksDir);
         }
-        
+
         // TODO: calculates storage space
         public static void CalculateStorage()
         {
-            
+
         }
 
 
