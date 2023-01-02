@@ -34,9 +34,10 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAnalyze = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -128,7 +129,7 @@
             this.CleanupLogsLBox.ItemHeight = 17;
             this.CleanupLogsLBox.Items.AddRange(new object[] {
             "Cleanup Logs:"});
-            this.CleanupLogsLBox.Location = new System.Drawing.Point(290, 670);
+            this.CleanupLogsLBox.Location = new System.Drawing.Point(211, 8);
             this.CleanupLogsLBox.Name = "CleanupLogsLBox";
             this.CleanupLogsLBox.Size = new System.Drawing.Size(103, 19);
             this.CleanupLogsLBox.TabIndex = 1;
@@ -263,9 +264,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(12)))), ((int)(((byte)(14)))));
+            this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.btnAnalyze);
             this.tabPage1.Controls.Add(this.CleanupLogsLBox);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.tabControl2);
@@ -278,6 +280,23 @@
             this.tabPage1.Size = new System.Drawing.Size(1058, 692);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cleanup";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.button5.Location = new System.Drawing.Point(290, 653);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(178, 36);
+            this.button5.TabIndex = 44;
+            this.button5.Text = "Select All";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // listView1
             // 
@@ -289,10 +308,12 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(320, 47);
             this.listView1.Name = "listView1";
+            this.listView1.ShowGroups = false;
+            this.listView1.ShowItemToolTips = true;
             this.listView1.Size = new System.Drawing.Size(730, 577);
             this.listView1.TabIndex = 43;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // label8
             // 
@@ -306,21 +327,21 @@
             this.label8.Text = "Deleted ? files";
             this.label8.Visible = false;
             // 
-            // button4
+            // btnAnalyze
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.button4.Location = new System.Drawing.Point(456, 642);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(273, 47);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "Analyze";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.btnAnalyze.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnalyze.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.btnAnalyze.FlatAppearance.BorderSize = 0;
+            this.btnAnalyze.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnalyze.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAnalyze.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnAnalyze.Location = new System.Drawing.Point(498, 638);
+            this.btnAnalyze.Name = "btnAnalyze";
+            this.btnAnalyze.Size = new System.Drawing.Size(273, 47);
+            this.btnAnalyze.TabIndex = 41;
+            this.btnAnalyze.Text = "Analyze";
+            this.btnAnalyze.UseVisualStyleBackColor = false;
+            this.btnAnalyze.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // label7
             // 
@@ -1049,7 +1070,7 @@
             this.btnCleanup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCleanup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnCleanup.Location = new System.Drawing.Point(777, 642);
+            this.btnCleanup.Location = new System.Drawing.Point(777, 638);
             this.btnCleanup.Name = "btnCleanup";
             this.btnCleanup.Size = new System.Drawing.Size(273, 47);
             this.btnCleanup.TabIndex = 37;
@@ -1277,8 +1298,9 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAnalyze;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button5;
     }
 }

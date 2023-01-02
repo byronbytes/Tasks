@@ -1076,6 +1076,7 @@ namespace Tasks
             var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
             var windowsLog = new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\");
 
+
             try
             {
                 if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
@@ -1103,8 +1104,9 @@ namespace Tasks
                 startInfo.Arguments = "/displaydns";
                 startInfo.RedirectStandardError = true;
                 process.StartInfo = startInfo;
-                process.Start();
                 process.WaitForExit();
+                process.Start();
+               
             }
             catch (Exception)
             {
@@ -1135,24 +1137,89 @@ namespace Tasks
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            // i love it when you can't make public vars yes yes smart C#
+            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
+            var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp\\");
+            var usertemp = new DirectoryInfo(Path.GetTempPath());
+            var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\");
+
             // analyze
             listView1.Items.Clear();
-            var usertemp = new DirectoryInfo(Path.GetTempPath());
-            if (cbSystemTempFolders.Checked)
-            {
                 try
                 {
-                    AnalyzeAllFiles(usertemp);
+
+                    if (cbExplorerDownloads.Checked)
+                        try
+                        {
+                            AnalyzeAllFiles(downloads);
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+
+                    if (cbSystemRecycleBin.Checked)
+                        try
+                        {
+                            AnalyzeAllFiles(new DirectoryInfo("C:\\$Recycle.Bin"));
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+
+
+                    if (cbSystemTempFolders.Checked)
+                    {
+                        try
+                        {
+                            AnalyzeAllFiles(windowstemp);
+                            AnalyzeAllFiles(usertemp);
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+
+                    }
+
+                    if (cbSystemPrefetch.Checked)
+                    {
+                        try
+                        {
+                            var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
+                            AnalyzeAllFiles(directory);
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+                    }
+              
                 }
                 catch (Exception ex)
                 {
 
                 }
 
-            }
+            
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            foreach(ListViewItem lvi in listView1.Items)
+            {
+                lvi.Checked = true;
+            }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
