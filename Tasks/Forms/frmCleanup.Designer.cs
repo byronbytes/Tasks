@@ -34,7 +34,6 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAnalyze = new System.Windows.Forms.Button();
@@ -175,7 +174,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(694, 6);
+            this.label5.Location = new System.Drawing.Point(667, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 28);
             this.label5.TabIndex = 11;
@@ -191,10 +190,10 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(694, 36);
+            this.listBox1.Location = new System.Drawing.Point(667, 31);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(358, 615);
+            this.listBox1.Size = new System.Drawing.Size(383, 630);
             this.listBox1.TabIndex = 10;
             // 
             // pictureBox2
@@ -227,7 +226,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.label11.Location = new System.Drawing.Point(694, 654);
+            this.label11.Location = new System.Drawing.Point(667, 664);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(202, 25);
             this.label11.TabIndex = 2;
@@ -264,7 +263,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(12)))), ((int)(((byte)(14)))));
-            this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.btnAnalyze);
@@ -282,28 +280,11 @@
             this.tabPage1.Text = "Cleanup";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.button5.Location = new System.Drawing.Point(290, 653);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(178, 36);
-            this.button5.TabIndex = 44;
-            this.button5.Text = "Select All";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // listView1
             // 
             this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.Left;
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(35)))));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.CheckBoxes = true;
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(320, 47);
@@ -1301,6 +1282,5 @@
         private System.Windows.Forms.Button btnAnalyze;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button5;
     }
 }

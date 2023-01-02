@@ -1100,10 +1100,10 @@ namespace Tasks
                 Process process = new Process();
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.WindowStyle = ProcessWindowStyle.Normal;
-                startInfo.FileName = "ipconfig";
-                startInfo.Arguments = "/displaydns";
+                startInfo.FileName = "cmd";
+                startInfo.Arguments = "ipconfig /displaydns";
                 startInfo.RedirectStandardError = true;
-                process.StartInfo = startInfo;
+               process.StartInfo = startInfo;
                 process.WaitForExit();
                 process.Start();
                
@@ -1209,14 +1209,6 @@ namespace Tasks
         private void tabPage3_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            foreach(ListViewItem lvi in listView1.Items)
-            {
-                lvi.Checked = true;
-            }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
