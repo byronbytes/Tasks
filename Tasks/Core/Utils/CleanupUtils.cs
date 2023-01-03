@@ -78,28 +78,7 @@ namespace Tasks.Core.Utils
             return false;
         }
 
-        public static void SaveCleanupLog()
-        {
-            frmCleanup CleanupForm = new frmCleanup();
-            int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
-
-            if (CanLogCleanup())
-            {
-                File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-" + t + ".txt", CleanupForm.CleanupLogsLBox.Items.Cast<string>().ToArray());
-                MessageBox.Show("Your cleanup was saved and logged.", "Tasks");
-            }
-            else
-            {
-                // thinking about adding a message here, unsure right now.
-            }
-        }
-
-        // Deletes directory and recreates it (Usually meant for debugging / settings) 
-        public static void DeleteTasksFolder()
-        {
-            Directory.Delete(Dirs.tasksDir);
-            Directory.CreateDirectory(Dirs.tasksDir);
-        }
+ 
 
         // TODO: calculates storage space
         public static void CalculateStorage()

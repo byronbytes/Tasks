@@ -15,7 +15,9 @@ namespace Tasks
     {
         public frmMain()
         {
-            Directory.CreateDirectory(Dirs.tasksDir);
+            Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks");
+         //   Directory.CreateDirectory(Dirs.tasksDir);
+           Directory.CreateDirectory(Dirs.tasksCleanup);
             InitializeComponent();
             CheckTheme();
             Core.SystemUtils.ComputerBit();

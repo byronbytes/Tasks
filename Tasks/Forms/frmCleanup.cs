@@ -18,8 +18,8 @@ namespace Tasks
     public partial class frmCleanup : Form
     {
         public bool isCleanup;
-      //  private ListViewGroup TempGroup = new ListViewGroup("Temp Files", HorizontalAlignment.Left);
-     //   private ListViewGroup DownloadGroup = new ListViewGroup("Downloads", HorizontalAlignment.Left);
+        public static float filesDeleted;
+        public static long spaceSaved;
         public frmCleanup() { InitializeComponent(); CheckTheme(); isCleanup = false; }
 
         /* 
@@ -33,7 +33,7 @@ namespace Tasks
                 // Labels
                 foreach (Label lbl in tabPage1.Controls.OfType<Label>())
                 { lbl.ForeColor = Color.Black; }
-         
+
                 foreach (Label lbl in tabPage3.Controls.OfType<Label>())
                 { lbl.ForeColor = Color.Black; }
 
@@ -74,17 +74,17 @@ namespace Tasks
                 comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;
-             //   listView1.ForeColor = Color.Black;
-             //   listView1.BackColor = Color.GhostWhite;
+                //   listView1.ForeColor = Color.Black;
+                //   listView1.BackColor = Color.GhostWhite;
 
                 pictureBox2.Image = Tasks.Properties.Resources.QuickClean_Black;
                 this.BackColor = Color.FromArgb(250, 250, 250);
             }
         }
 
-         /* 
-         DeleteAllFiles runs a loop in the cleanup scripts to remove bloat files.
-        */
+        /* 
+        DeleteAllFiles runs a loop in the cleanup scripts to remove bloat files.
+       */
         private bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
 
@@ -94,11 +94,12 @@ namespace Tasks
                 {
                     file.Delete();
                     filesDeleted++;
-                    CleanupLogsLBox.Items.Add(LogSuccess + file.FullName);
+                    CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
+                    
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add(LogError + ex.Message);
+                    CleanupLogsLBox.Items.Add(ex.Message);
                 }
 
             }
@@ -106,13 +107,15 @@ namespace Tasks
             {
                 try
                 {
+                    spaceSaved += DirSize(dir);
                     dir.Delete(true);
                     filesDeleted++;
-                    CleanupLogsLBox.Items.Add(LogSuccess + dir.FullName);
+                    CleanupLogsLBox.Items.Add("Deleted " + dir.FullName);
+
                 }
                 catch (Exception ex)
                 {
-                    CleanupLogsLBox.Items.Add(LogError + ex.Message);
+                    CleanupLogsLBox.Items.Add(ex.Message);
                 }
 
             }
@@ -121,44 +124,6 @@ namespace Tasks
         }
 
 
-        /* 
-        Same thing as DeleteAllFiles, except it adds them to the listview.
-       */
-        private bool AnalyzeAllFiles(DirectoryInfo directoryInfo)
-        {
-    
-
-            foreach (var file in directoryInfo.GetFiles())
-            {
-                try
-                {
-                    
-                   //listView1.Items.Add(file.Name);
-                }
-                catch (Exception ex)
-                {
-                }
-
-            }
-            foreach (var dir in directoryInfo.GetDirectories())
-            {
-                try
-                {
-                  //  listView1.Items.Add(dir.Name);
-                }
-                catch (Exception ex)
-                {
-
-                }
-
-            }
-
-            return true;
-        }
-
-        public static string LogError = "Error while trying to delete ";
-        public static string LogSuccess = "Deleted ";
-        public static float filesDeleted;
         private void button8_Click(object sender, EventArgs e)
         {
             var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
@@ -181,6 +146,7 @@ namespace Tasks
             if (cbSystemRecycleBin.Checked)
                 try
                 {
+
                     Core.Utils.CleanupUtils.SHEmptyRecycleBin(IntPtr.Zero, null, Core.Utils.CleanupUtils.RecycleFlag.SHERB_NOSOUND | Core.Utils.CleanupUtils.RecycleFlag.SHERB_NOCONFIRMATION);
                     CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
                 }
@@ -264,6 +230,7 @@ namespace Tasks
                     var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions\\");
                     var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage\\");
                     var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State\\");
+               
                     if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
                 }
                 catch
@@ -471,7 +438,7 @@ namespace Tasks
                 }
             }
 
-           
+
             if (cbSystemDNSCache.Checked)
             {
                 StringBuilder sb = new StringBuilder();
@@ -619,15 +586,15 @@ namespace Tasks
 
             if (cbSystemDirectXCache.Checked)
             {
-				try
-				{
-                	var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
-                	if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("DirectX Shader Cache Deleted.");
-				}
-				catch
-				{
-					CleanupLogsLBox.Items.Add("Unable to delete DirectX Shader Cache.");
-				}
+                try
+                {
+                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\D3DSCache\\");
+                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("DirectX Shader Cache Deleted.");
+                }
+                catch
+                {
+                    CleanupLogsLBox.Items.Add("Unable to delete DirectX Shader Cache.");
+                }
             }
 
             if (cbSystemMemDumps.Checked)
@@ -781,7 +748,16 @@ namespace Tasks
             }
 
             // END OF CLEANUP.
-            Core.Utils.CleanupUtils.SaveCleanupLog();
+            CleanupLogsLBox.Items.Add("Cleanup log end.");
+            int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
+
+            if (Core.Utils.CleanupUtils.CanLogCleanup())
+            {
+
+                File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-" + t + ".txt", CleanupLogsLBox.Items.Cast<string>().ToArray());
+                MessageBox.Show("Your cleanup was saved and logged.", "Tasks");
+            }
+
             label8.Visible = true;
             label8.Text = filesDeleted + " files deleted.";
 
@@ -794,12 +770,12 @@ namespace Tasks
 
         private void frmCleanup_Load(object sender, EventArgs e)
         {
-          
 
-            tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged); 
+
+            tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged);
             DirectoryExists();
             CheckTheme();
-           
+
         }
 
         private void GetExtensionList(DirectoryInfo directoryInfo)
@@ -874,7 +850,7 @@ namespace Tasks
                 {
                     MessageBox.Show("Unable to get extensions from Edge.");
                 }
-                
+
             }
         }
 
@@ -1093,7 +1069,7 @@ namespace Tasks
                 if (DeleteAllFiles(usertemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsReport)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsLog)) Debug.Print("Null.");
-                
+
             }
             catch
             {
@@ -1114,10 +1090,10 @@ namespace Tasks
                 startInfo.FileName = "cmd";
                 startInfo.Arguments = "ipconfig /displaydns";
                 startInfo.RedirectStandardError = true;
-               process.StartInfo = startInfo;
+                process.StartInfo = startInfo;
                 process.WaitForExit();
                 process.Start();
-               
+
             }
             catch (Exception)
             {
@@ -1146,76 +1122,6 @@ namespace Tasks
             }
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            // i love it when you can't make public vars yes yes smart C#
-            var localappdata = Environment.GetEnvironmentVariable("LocalAppData");
-            var roamingappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var windowstemp = new DirectoryInfo("C:\\Windows\\Temp\\");
-            var usertemp = new DirectoryInfo(Path.GetTempPath());
-            var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\");
-
-            // analyze
-                // listView1.Items.Clear();
-
-
-            try
-                {
-
-                    if (cbExplorerDownloads.Checked)
-                        try
-                        {
-                            AnalyzeAllFiles(downloads);
-
-                        }
-                        catch (Exception)
-                        {
-
-                        }
-
-                    if (cbSystemRecycleBin.Checked)
-                        try
-                        {
-                            AnalyzeAllFiles(new DirectoryInfo("C:\\$Recycle.Bin"));
-                        }
-                        catch (Exception)
-                        {
-
-                        }
-
-
-                    if (cbSystemTempFolders.Checked)
-                    {
-                        try
-                        {
-                            AnalyzeAllFiles(windowstemp);
-                            AnalyzeAllFiles(usertemp);
-                        }
-                        catch (Exception)
-                        {
-
-                        }
-
-                    }
-
-                    if (cbSystemPrefetch.Checked)
-                    {
-                        try
-                        {
-                            var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
-                            AnalyzeAllFiles(directory);
-                        }
-                        catch (Exception)
-                        {
-
-                        }
-                    }
-              
-                }
-            catch { }
-
-            
-        }
 
         private void tabPage3_Click(object sender, EventArgs e)
         {
@@ -1227,17 +1133,7 @@ namespace Tasks
 
         }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
