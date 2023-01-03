@@ -30,10 +30,5 @@ namespace Tasks.Forms
         {
             Process.Start(new ProcessStartInfo { FileName = "https://github.com/LiteTools/Tasks", UseShellExecute = true });
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo { FileName = "https://patreon.com/byronbytes", UseShellExecute = true });
-        }
     }
 }

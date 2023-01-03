@@ -39,7 +39,6 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,9 +49,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(157, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 20);
+            this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 54;
-            this.label2.Text = "Version: 5.0.0 Pre 2";
+            this.label2.Text = "Version: 5.0.0";
             // 
             // pictureBox1
             // 
@@ -144,7 +143,7 @@
             this.linkLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.linkLabel3.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel3.Location = new System.Drawing.Point(431, 39);
+            this.linkLabel3.Location = new System.Drawing.Point(431, 9);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(59, 21);
             this.linkLabel3.TabIndex = 73;
@@ -164,30 +163,12 @@
             this.label1.TabIndex = 52;
             this.label1.Text = "Tasks";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.linkLabel1.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel1.Location = new System.Drawing.Point(427, 12);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(63, 21);
-            this.linkLabel1.TabIndex = 74;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Patreon";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DarkCyan;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(12)))), ((int)(((byte)(14)))));
             this.ClientSize = new System.Drawing.Size(502, 329);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label13);
@@ -221,6 +202,5 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

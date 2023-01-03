@@ -45,7 +45,7 @@ namespace Tasks.Core.Utils
 
         public static bool isUpToDate()
         {
-            if (UpdateString() == "v5.0.0-pre2")
+            if (UpdateString() == "v5.0.0")
             {
                 return true;
             }
