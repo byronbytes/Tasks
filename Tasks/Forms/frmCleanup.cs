@@ -18,6 +18,8 @@ namespace Tasks
     public partial class frmCleanup : Form
     {
         public bool isCleanup;
+      //  private ListViewGroup TempGroup = new ListViewGroup("Temp Files", HorizontalAlignment.Left);
+     //   private ListViewGroup DownloadGroup = new ListViewGroup("Downloads", HorizontalAlignment.Left);
         public frmCleanup() { InitializeComponent(); CheckTheme(); isCleanup = false; }
 
         /* 
@@ -72,8 +74,8 @@ namespace Tasks
                 comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
                 ExtensionsBox.ForeColor = Color.Black;
-                listView1.ForeColor = Color.Black;
-                listView1.BackColor = Color.GhostWhite;
+             //   listView1.ForeColor = Color.Black;
+             //   listView1.BackColor = Color.GhostWhite;
 
                 pictureBox2.Image = Tasks.Properties.Resources.QuickClean_Black;
                 this.BackColor = Color.FromArgb(250, 250, 250);
@@ -118,14 +120,20 @@ namespace Tasks
             return true;
         }
 
+
+        /* 
+        Same thing as DeleteAllFiles, except it adds them to the listview.
+       */
         private bool AnalyzeAllFiles(DirectoryInfo directoryInfo)
         {
+    
 
             foreach (var file in directoryInfo.GetFiles())
             {
                 try
                 {
-                   listView1.Items.Add(file.Name);
+                    
+                   //listView1.Items.Add(file.Name);
                 }
                 catch (Exception ex)
                 {
@@ -136,7 +144,7 @@ namespace Tasks
             {
                 try
                 {
-                    listView1.Items.Add(dir.Name);
+                  //  listView1.Items.Add(dir.Name);
                 }
                 catch (Exception ex)
                 {
@@ -786,9 +794,12 @@ namespace Tasks
 
         private void frmCleanup_Load(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged); // what is this?
+          
+
+            tabControl1.SelectedIndexChanged += new EventHandler(Tabs_SelectedIndexChanged); 
             DirectoryExists();
             CheckTheme();
+           
         }
 
         private void GetExtensionList(DirectoryInfo directoryInfo)
@@ -1076,20 +1087,20 @@ namespace Tasks
             var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
             var windowsLog = new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\");
 
-
             try
             {
                 if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(usertemp)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsReport)) Debug.Print("Null.");
                 if (DeleteAllFiles(windowsLog)) Debug.Print("Null.");
-                listBox1.Items.Clear();
+                
             }
             catch
             {
                 // Needs advanced catch method.
-                Debug.Print("Quick Clean was unable to clean everything.");
+                Debug.Print("Quick Clean was unable to delete the files.");
             }
+            listBox1.Items.Clear();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -1145,16 +1156,19 @@ namespace Tasks
             var downloads = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\");
 
             // analyze
-            listView1.Items.Clear();
-                try
+                // listView1.Items.Clear();
+
+
+            try
                 {
 
                     if (cbExplorerDownloads.Checked)
                         try
                         {
                             AnalyzeAllFiles(downloads);
+
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
 
                         }
@@ -1164,7 +1178,7 @@ namespace Tasks
                         {
                             AnalyzeAllFiles(new DirectoryInfo("C:\\$Recycle.Bin"));
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
 
                         }
@@ -1177,7 +1191,7 @@ namespace Tasks
                             AnalyzeAllFiles(windowstemp);
                             AnalyzeAllFiles(usertemp);
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
 
                         }
@@ -1191,17 +1205,14 @@ namespace Tasks
                             var directory = new DirectoryInfo("C:\\Windows\\Prefetch");
                             AnalyzeAllFiles(directory);
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
 
                         }
                     }
               
                 }
-                catch (Exception ex)
-                {
-
-                }
+            catch { }
 
             
         }
@@ -1212,6 +1223,21 @@ namespace Tasks
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
