@@ -82,9 +82,6 @@ namespace Tasks.Core
         /*
         public static void CreateFiles()
         {
-            Directory.CreateDirectory(Dirs.tasksDir);
-            string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-
             using (StreamWriter writer = new StreamWriter(deskDir + "\\" + ".url"))
             {
                 string app = "";

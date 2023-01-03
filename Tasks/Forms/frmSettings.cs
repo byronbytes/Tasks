@@ -4,6 +4,7 @@
 */
 
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Tasks
@@ -158,6 +159,11 @@ namespace Tasks
                 Properties.Settings.Default.AutoCheckUpdates = false;
                 Properties.Settings.Default.Save();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks");
         }
     }
 }

@@ -1008,6 +1008,7 @@ namespace Tasks
 
                 foreach (var file in temp1.GetFiles())
                 {
+
                     listBox1.Items.Add(file.Name);
                 }
                 foreach (var file in temp2.GetFiles())
@@ -1062,7 +1063,6 @@ namespace Tasks
             var usertemp = new DirectoryInfo(Path.GetTempPath());
             var windowsReport = new DirectoryInfo(("C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\"));
             var windowsLog = new DirectoryInfo("C:\\WINDOWS\\Logs\\MeasuredBoot\\");
-
             try
             {
                 if (DeleteAllFiles(windowstemp)) Debug.Print("Null.");
@@ -1076,6 +1076,8 @@ namespace Tasks
                 // Needs advanced catch method.
                 Debug.Print("Quick Clean was unable to delete the files.");
             }
+            label7.Visible = true;
+            label7.Text = "A total of " + filesDeleted + " files were deleted.";
             listBox1.Items.Clear();
         }
 

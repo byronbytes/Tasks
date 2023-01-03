@@ -26,21 +26,21 @@ namespace Tasks.Core.Utils
         // should also add an option for remind me later.
         public static void CheckForUpdates()
         {
-           try
-           {
-            if(isUpToDate() == false)
+            try
             {
-                MessageBox.Show("There is a new update available! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(), "Tasks");
+                if (isUpToDate() == false)
+                {
+                    MessageBox.Show("There is a new update available! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(), "Tasks");
+                }
+                else
+                {
+                    MessageBox.Show("There are no new updates.", "Tasks");
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("There are no new updates.", "Tasks");
-            }
-           }
-           catch
-           {
                 MessageBox.Show("Unable to check for updates.", "Tasks");
-           }
+            }
         }
 
         public static bool isUpToDate()
