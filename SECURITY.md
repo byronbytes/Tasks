@@ -12,7 +12,7 @@ These are the supported versions of Tasks. We will not fix vulnerabilities or bu
 
 | Version             | Supported          | Release Date         | Version Notes |
 | :------------------ | :----------------: | :--------------:     | :------------------: |
-| **5.0.0 PRE 1 Rev 1| ⚠️                  | 9th, October, 2022  | Pre Release
+| **5.0.0 PRE 1 Rev 1**| ⚠️                  | 9th, October, 2022  | Pre Release
 | **5.0.0 PRE 1**     | :x:                 | 31st August, 2022    | Pre Release         |
 | **4.0.1**           | ✅                 | 2nd May, 2022         | 
 | **4.0.0**           | ✅                 | 22nd April, 2022      | 
