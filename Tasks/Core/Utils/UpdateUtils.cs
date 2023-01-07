@@ -5,6 +5,7 @@
 
 using System;
 using System.IO;
+using System.IO.Compression;
 using System.Net;
 using System.Windows.Forms;
 
@@ -29,13 +30,9 @@ namespace Tasks.Core.Utils
             try
             {
                 if (isUpToDate() == false)
-                {
                     MessageBox.Show("There is a new update available! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(), "Tasks");
-                }
                 else
-                {
                     MessageBox.Show("There are no new updates.", "Tasks");
-                }
             }
             catch
             {
@@ -46,14 +43,20 @@ namespace Tasks.Core.Utils
         public static bool isUpToDate()
         {
             if (UpdateString() == "v5.0.0")
-            {
                 return true;
-            }
             else
-            {
                 return false;
-            }
 
+        }
+
+        public static void InstallUpdate()
+        {
+            using (var client = new WebClient())
+            {
+                client.DownloadFile("https://github.com/LiteTools/Tasks/releases/latest/Tasks.zip", "Tasks.zip");
+                ZipFile.ExtractToDirectory("Tasks.zip", "../", true);
+                File.Delete("Tasks.zip");
+            }
         }
     }
 }

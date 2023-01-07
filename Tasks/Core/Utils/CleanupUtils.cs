@@ -6,12 +6,8 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 
-// everything is over-noted, don't mind it. 
-// i also kept a ton of notes to myself, but don't worry about it. its only the code searchers that see this.
 namespace Tasks.Core.Utils
 {
     public class CleanupUtils

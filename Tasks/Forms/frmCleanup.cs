@@ -961,10 +961,8 @@ namespace Tasks
             }
 
             if (!Directory.Exists(Dirs.discordDir))
-            {
                 cbDiscord.Enabled = false;
                 cbDiscord.Text = "Discord (N/A)";
-            }
 
             if (!Directory.Exists(Dirs.edgeDir))
             {
@@ -976,19 +974,13 @@ namespace Tasks
             }
 
             if (Directory.Exists(Dirs.chromeExtDir))
-            {
                 comboBox1.Items.Add("Google Chrome");
-            }
 
             if (Directory.Exists(Dirs.firefoxDir))
-            {
                 comboBox1.Items.Add("Mozilla Firefox");
-            }
 
             if (Directory.Exists(Dirs.edgeDir))
-            {
                 comboBox1.Items.Add("Microsoft Edge");
-            }
         }
 
         private void button8_Click_1(object sender, EventArgs e)
@@ -1007,14 +999,11 @@ namespace Tasks
                 var temp2 = new DirectoryInfo(Path.GetTempPath());
 
                 foreach (var file in temp1.GetFiles())
-                {
+                    listBox1.Items.Add(file.Name);
 
-                    listBox1.Items.Add(file.Name);
-                }
                 foreach (var file in temp2.GetFiles())
-                {
                     listBox1.Items.Add(file.Name);
-                }
+
                 long allsize = size1 + size2 + size4 + size5;
                 double allsizeMB = ConvertBytesToMegabytes(allsize);
                 label11.Text = allsizeMB + "MB can be cleaned.";
