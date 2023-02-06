@@ -20,32 +20,19 @@ namespace Tasks.Core.Utils
         public static bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
             foreach (var file in directoryInfo.GetFiles()) // could optimize?
-            {
-                try
+            try
                 {
                     file.Delete();
                     filesDeleted++;
-                    //   Debug.Log(file.FullName);
                 }
-                catch (Exception)
-                {
-                    //   Debug.Log(ex.Message);
-                }
-
-            }
+                catch (Exception) { }
             foreach (var dir in directoryInfo.GetDirectories())
-            {
-                try
+            try
                 {
                     dir.Delete(true);
                     filesDeleted++;
                 }
-                catch (Exception)
-                {
-
-                }
-
-            }
+                catch (Exception) { }
 
             return true;
         }
@@ -53,24 +40,18 @@ namespace Tasks.Core.Utils
         public static void AnalyzeAllFiles(DirectoryInfo directoryInfo)
         {
             foreach (var file in directoryInfo.GetFiles())
-            {
-                try
+            try
                 {
                     Debug.Print("File: " + file.Name);
                 }
-                catch (Exception)
-                {
-
-                }
-            }
+                catch (Exception) { }
         }
 
         public static bool CanLogCleanup()
         {
             if (Directory.Exists(Dirs.tasksDir) && Properties.Settings.Default.EnableCleanupLogs == true)
-            {
-                return true;
-            }
+            return true;
+
             return false;
         }
 
