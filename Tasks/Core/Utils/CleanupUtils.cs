@@ -12,7 +12,6 @@ namespace Tasks.Core.Utils
 {
     public class CleanupUtils
     {
-
         public static int filesDeleted;
 
         // Deletes all files in a directory.
@@ -20,19 +19,25 @@ namespace Tasks.Core.Utils
         public static bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
             foreach (var file in directoryInfo.GetFiles()) // could optimize?
-            try
+                try
                 {
                     file.Delete();
                     filesDeleted++;
                 }
-                catch (Exception) { }
+                catch (Exception) 
+                {
+
+                }
             foreach (var dir in directoryInfo.GetDirectories())
-            try
+                try
                 {
                     dir.Delete(true);
                     filesDeleted++;
                 }
-                catch (Exception) { }
+                catch (Exception) 
+                {
+
+                }
 
             return true;
         }
@@ -40,30 +45,31 @@ namespace Tasks.Core.Utils
         public static void AnalyzeAllFiles(DirectoryInfo directoryInfo)
         {
             foreach (var file in directoryInfo.GetFiles())
-            try
+                try
                 {
                     Debug.Print("File: " + file.Name);
                 }
-                catch (Exception) { }
+                catch (Exception) 
+                { 
+
+                }
         }
 
         public static bool CanLogCleanup()
         {
             if (Directory.Exists(Dirs.tasksDir) && Properties.Settings.Default.EnableCleanupLogs == true)
-            return true;
-
+            {
+                return true;
+            }
+           
             return false;
         }
-
- 
 
         // TODO: calculates storage space
         public static void CalculateStorage()
         {
 
         }
-
-
 
         [DllImport("Shell32.dll")]
         public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
@@ -88,5 +94,3 @@ namespace Tasks.Core.Utils
 
     }
 }
-
-
