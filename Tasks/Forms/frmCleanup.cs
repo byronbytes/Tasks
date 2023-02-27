@@ -457,7 +457,7 @@ namespace Tasks
                     ProcessStartInfo startInfo = new ProcessStartInfo();
                     startInfo.WindowStyle = ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/c ipconfig /flushdns";
+                    startInfo.Arguments = "ipconfig /flushdns";
                     startInfo.RedirectStandardError = true;
                     process.StartInfo = startInfo;
                     process.OutputDataReceived += (sender, args) => sb.AppendLine(args.Data);
@@ -1105,11 +1105,6 @@ namespace Tasks
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbOneDriveCache_CheckedChanged(object sender, EventArgs e)
         {
 
         }
