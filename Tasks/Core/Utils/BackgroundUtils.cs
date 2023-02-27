@@ -15,22 +15,6 @@ namespace Tasks.Core.Utils
     {
 
 
-        /*
-         Plans
-        - If more than a set amount of storage takes up temp, send a notification.
-        - Alert when there's a new update
-        - Ability to hide Tasks to tray
-        - 
-        */
-       
-
-        public static void UpdateAlert()
-        {
-            frmMain Main = new frmMain();
-            Main.notifyIcon1.BalloonTipTitle = "Tasks";
-            Main.notifyIcon1.BalloonTipText = "Tasks has an update!";
-        }
-
         // should have a variable that automatically quick clean in the background after TBD time.
         public static void StorageAlert()
         {

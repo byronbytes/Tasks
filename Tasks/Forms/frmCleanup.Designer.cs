@@ -26,6 +26,9 @@
             this.CleanupLogsLBox = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -62,8 +65,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.cbSpotifyCache = new System.Windows.Forms.CheckBox();
-            this.cbVLCCache = new System.Windows.Forms.CheckBox();
-            this.cbOneDriveCache = new System.Windows.Forms.CheckBox();
             this.cbIECache = new System.Windows.Forms.CheckBox();
             this.cbChromeSavedPasswords = new System.Windows.Forms.CheckBox();
             this.cbEdgeSessions = new System.Windows.Forms.CheckBox();
@@ -96,11 +97,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -114,7 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // CleanupLogsLBox
@@ -172,6 +170,43 @@
             this.tabPage5.Size = new System.Drawing.Size(1058, 692);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Quick Cleanup";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
+            this.groupBox2.Location = new System.Drawing.Point(8, 238);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(641, 423);
+            this.groupBox2.TabIndex = 44;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Cleanup Statistics";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
+            this.label12.Location = new System.Drawing.Point(6, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(320, 25);
+            this.label12.TabIndex = 43;
+            this.label12.Text = "0 MB was deleted from your storage.";
+            this.label12.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
+            this.label7.Location = new System.Drawing.Point(6, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(261, 25);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "A total of 0 files were deleted.";
+            this.label7.Visible = false;
             // 
             // label5
             // 
@@ -668,8 +703,6 @@
             // 
             this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(35)))));
             this.tabPage7.Controls.Add(this.cbSpotifyCache);
-            this.tabPage7.Controls.Add(this.cbVLCCache);
-            this.tabPage7.Controls.Add(this.cbOneDriveCache);
             this.tabPage7.Controls.Add(this.cbIECache);
             this.tabPage7.Controls.Add(this.cbChromeSavedPasswords);
             this.tabPage7.Controls.Add(this.cbEdgeSessions);
@@ -705,7 +738,7 @@
             this.cbSpotifyCache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSpotifyCache.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbSpotifyCache.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.cbSpotifyCache.Location = new System.Drawing.Point(16, 593);
+            this.cbSpotifyCache.Location = new System.Drawing.Point(16, 537);
             this.cbSpotifyCache.Name = "cbSpotifyCache";
             this.cbSpotifyCache.Size = new System.Drawing.Size(63, 19);
             this.cbSpotifyCache.TabIndex = 83;
@@ -714,43 +747,13 @@
             this.toolTip1.SetToolTip(this.cbSpotifyCache, "Cleans Spotify\'s cache.");
             this.cbSpotifyCache.UseVisualStyleBackColor = true;
             // 
-            // cbVLCCache
-            // 
-            this.cbVLCCache.AutoSize = true;
-            this.cbVLCCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbVLCCache.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbVLCCache.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.cbVLCCache.Location = new System.Drawing.Point(16, 566);
-            this.cbVLCCache.Name = "cbVLCCache";
-            this.cbVLCCache.Size = new System.Drawing.Size(50, 19);
-            this.cbVLCCache.TabIndex = 82;
-            this.cbVLCCache.Text = "VLC ";
-            this.cbVLCCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbVLCCache, "Cleans VLC\'s cache");
-            this.cbVLCCache.UseVisualStyleBackColor = true;
-            // 
-            // cbOneDriveCache
-            // 
-            this.cbOneDriveCache.AutoSize = true;
-            this.cbOneDriveCache.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbOneDriveCache.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbOneDriveCache.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.cbOneDriveCache.Location = new System.Drawing.Point(16, 539);
-            this.cbOneDriveCache.Name = "cbOneDriveCache";
-            this.cbOneDriveCache.Size = new System.Drawing.Size(75, 19);
-            this.cbOneDriveCache.TabIndex = 81;
-            this.cbOneDriveCache.Text = "OneDrive";
-            this.cbOneDriveCache.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTip1.SetToolTip(this.cbOneDriveCache, "Cleans OneDrive\'s cache");
-            this.cbOneDriveCache.UseVisualStyleBackColor = true;
-            // 
             // cbIECache
             // 
             this.cbIECache.AutoSize = true;
             this.cbIECache.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbIECache.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbIECache.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.cbIECache.Location = new System.Drawing.Point(16, 620);
+            this.cbIECache.Location = new System.Drawing.Point(15, 562);
             this.cbIECache.Name = "cbIECache";
             this.cbIECache.Size = new System.Drawing.Size(113, 19);
             this.cbIECache.TabIndex = 80;
@@ -1142,43 +1145,6 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.groupBox2.Location = new System.Drawing.Point(8, 238);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(641, 423);
-            this.groupBox2.TabIndex = 44;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cleanup Statistics";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(6, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(261, 25);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "A total of 0 files were deleted.";
-            this.label7.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.label12.Location = new System.Drawing.Point(6, 74);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(320, 25);
-            this.label12.TabIndex = 43;
-            this.label12.Text = "0 MB was deleted from your storage.";
-            this.label12.Visible = false;
-            // 
             // frmCleanup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1195,6 +1161,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1212,8 +1180,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1283,8 +1249,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox cbDiscord;
-        private System.Windows.Forms.CheckBox cbOneDriveCache;
-        private System.Windows.Forms.CheckBox cbVLCCache;
         private System.Windows.Forms.CheckBox cbSpotifyCache;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListBox listBox1;

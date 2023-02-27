@@ -127,7 +127,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
-            "Matty (@byronbytes)",
+            "Byron (@byronbytes)",
             "Solirs (@Solirs)",
             "@GermanAizek"});
             this.listBox1.Location = new System.Drawing.Point(264, 228);

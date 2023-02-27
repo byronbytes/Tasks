@@ -29,6 +29,13 @@ namespace Tasks
         {
             if (Properties.Settings.Default.Theme == "light")
             {
+                // tabPages
+
+                foreach (TabPage tp in tabControl1.Controls.OfType<TabPage>())
+                { tp.BackColor = Color.WhiteSmoke; }
+
+                foreach (TabPage tp in tabControl2.Controls.OfType<TabPage>())
+                { tp.BackColor = Color.WhiteSmoke; }
 
                 // Labels
                 foreach (Label lbl in tabPage1.Controls.OfType<Label>())
@@ -55,21 +62,23 @@ namespace Tasks
                 foreach (CheckBox cb in tabPage7.Controls.OfType<CheckBox>())
                 { cb.ForeColor = Color.Black; }
 
+             
+
                 // TabPages + TabControls
-                tabPage1.BackColor = Color.White;
-                tabPage7.BackColor = Color.White;
-                tabPage3.BackColor = Color.White;
+                //       tabPage1.BackColor = Color.White;
+                //       tabPage7.BackColor = Color.White;
+                //       tabPage3.BackColor = Color.White;
                 tabControl2.BackColor = Color.White;
                 tabControl1.BackColor = Color.White;
-                tabPage5.BackColor = Color.White;
-                tabPage6.BackColor = Color.White;
-                tabPage1.BackColor = Color.White;
-                tabPage7.BackColor = Color.White;
-                tabPage3.BackColor = Color.White;
+         //       tabPage5.BackColor = Color.White;
+         //       tabPage6.BackColor = Color.White;
+        //        tabPage1.BackColor = Color.White;
+        //        tabPage7.BackColor = Color.White;
+        //        tabPage3.BackColor = Color.White;
                 tabControl2.BackColor = Color.White;
                 tabControl1.BackColor = Color.White;
-                tabPage5.BackColor = Color.White;
-                tabPage6.BackColor = Color.White;
+       //         tabPage5.BackColor = Color.White;
+       //         tabPage6.BackColor = Color.White;
                 comboBox1.BackColor = Color.WhiteSmoke;
                 comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
@@ -704,36 +713,6 @@ namespace Tasks
 
             }
 
-
-            if (cbOneDriveCache.Checked)
-            {
-                try
-                {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\OneDrive\\setup\\logs");
-                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("OneDrive Cache Deleted.");
-                }
-                catch
-                {
-                    CleanupLogsLBox.Items.Add("Error while deleting OneDrive cache.");
-                }
-
-            }
-
-            if (cbVLCCache.Checked)
-            {
-                try
-                {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\vlc\\art\\");
-                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\vlc\\crashdump\\");
-                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("VLC Cache Deleted.");
-                }
-                catch
-                {
-                    CleanupLogsLBox.Items.Add("Error while deleting VLC cache.");
-                }
-
-            }
-
             if (cbSpotifyCache.Checked)
             {
                 try
@@ -748,6 +727,7 @@ namespace Tasks
             }
 
             // END OF CLEANUP.
+
             CleanupLogsLBox.Items.Add("Cleanup log end.");
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
 
@@ -1125,6 +1105,11 @@ namespace Tasks
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbOneDriveCache_CheckedChanged(object sender, EventArgs e)
         {
 
         }
