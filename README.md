@@ -1,6 +1,6 @@
 <h1 align="center">
   <img src="https://user-images.githubusercontent.com/53088136/136106972-30a9cca8-7a32-479a-9368-74ffe2d60a43.png" alt="Tasks" height="128" /><br>
-  <img alt="GitHub license" src="https://img.shields.io/github/license/litetools/tasks?style=flat-square"> <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
+ <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LiteTools/Tasks/total?style=flat-square"> <img alt="GitHub Release (latest)" src="https://img.shields.io/github/v/release/LiteTools/Tasks?style=flat-square"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/LiteTools/Tasks?style=flat-square">
   
   🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD) [🇵🇱](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-PL.md)
 </h1>
@@ -13,18 +13,16 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 ## Features
 
 - Cleanup:
-  - Quick Clean to help optimize folders that get filled fast.
+  - Quick Clean to help optimize folders that get bloated fast.
   - Extension removal tool to remove malicious or unwanted extensions. (Supports Edge, Chrome, and Firefox)
   - Advanced cleaning tool that helps with computer performance and speed.
-  - Diverse support for multiple applications and browsers and unneeded system cache. (Chrome, Discord, Temp, and more.)
+  - Diverse support for multiple applications, browsers and unneeded system cache. (Chrome, Discord, Temp, and more.)
 
 - Startup Manager:
   - View detailed information about programs that run on start. (Name, Description, Directory)
   - Create new programs that run on start.
   - Remove malicious programs that run on start with one click.
   - View detailed information about services that run on start. (Name, Service, Stopped or Running)
-  - Open the startup folder with one click.
-  - Clean and understandable interface to see all startup processes and services.
 
 - Task Manager:
   - Advanced task manager with more details. (Name, PID, CPU Usage, Directory)
@@ -56,6 +54,7 @@ You are allowed to distribute these screenshots for showcase.
 
 <details>
 <summary>Pictures</summary>
+
 ![image](https://user-images.githubusercontent.com/53088136/164793997-bf03d87e-a1dd-483d-a84d-6c3eb3823643.png)
 ![image](https://user-images.githubusercontent.com/53088136/164794022-384ca46b-ddb4-46dc-86af-841f7fb1dac4.png)
 ![image](https://user-images.githubusercontent.com/53088136/164794530-ebb74a9c-e01c-4c6c-a822-886d8823de12.png)
@@ -65,4 +64,5 @@ You are allowed to distribute these screenshots for showcase.
 ![image](https://user-images.githubusercontent.com/53088136/164794903-d4cabe26-c532-452c-9ec1-e549177467de.png)
 ![image](https://user-images.githubusercontent.com/53088136/164794968-d98dcc99-95f6-443c-ae6e-f75955a3d90f.png)
 ![image](https://user-images.githubusercontent.com/53088136/164795048-03ae8698-1fdf-4875-bbfb-26122593ecd7.png)
+
 </details>
