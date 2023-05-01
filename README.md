@@ -32,13 +32,6 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - Quickly end tasks with one button.
   - Refresh Task Manager with one button.
   - Clean and understandable interface to see running processes.
-  
-- Settings:
-  - Ability to change the theme of Tasks. (Dark / Light Mode)
-  - Toggle the ability to turn on or off cleanup logs.
-  - Change general settings about Tasks.
-  - Change the language of Tasks. (WIP)
- 
 
 ## Installation
 
@@ -58,17 +51,11 @@ Contributions are always encouraged, but before creating a pull request please r
 
 See the full list of [contributors](https://github.com/LiteTools/Tasks/contributors) who participated in this project.
 
-## Acknowledgments
-Up until version 4.0.0, we've used the following scripts for **Remove Bloatware**:
-* Windows 10 Debloater made by [Sycnex](https://github.com/Sycnex/Windows10Debloater).
-* Remove Microsoft Edge script made by [ShadowWhisperer](https://github.com/ShadowWhisperer/Remove-Edge-Chromium).
-
-
-## Gallery
-These images were taken on v4.0.0. Designs may vary for newer versions.
+## Screenshots
 You are allowed to distribute these screenshots for showcase.
 
-
+<details>
+<summary>Pictures</summary>
 ![image](https://user-images.githubusercontent.com/53088136/164793997-bf03d87e-a1dd-483d-a84d-6c3eb3823643.png)
 ![image](https://user-images.githubusercontent.com/53088136/164794022-384ca46b-ddb4-46dc-86af-841f7fb1dac4.png)
 ![image](https://user-images.githubusercontent.com/53088136/164794530-ebb74a9c-e01c-4c6c-a822-886d8823de12.png)
@@ -78,13 +65,4 @@ You are allowed to distribute these screenshots for showcase.
 ![image](https://user-images.githubusercontent.com/53088136/164794903-d4cabe26-c532-452c-9ec1-e549177467de.png)
 ![image](https://user-images.githubusercontent.com/53088136/164794968-d98dcc99-95f6-443c-ae6e-f75955a3d90f.png)
 ![image](https://user-images.githubusercontent.com/53088136/164795048-03ae8698-1fdf-4875-bbfb-26122593ecd7.png)
-
-
-
-
-
-
-
-
-
-
+</details>
