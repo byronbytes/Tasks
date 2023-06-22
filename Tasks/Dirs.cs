@@ -4,30 +4,22 @@
 */
 
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Tasks
 {
     class Dirs
     {
-            // Normal Directories:
         public static string firefoxDir;
         public static string chromeDir;
         public static string edgeDir;
         public static string discordDir;
-            // Directories that point to the extensions folder:
+        // ExtDir = Directories that lead to the extensions folder.
         public static string firefoxExtDir;
         public static string chromeExtDir;
         public static string edgeExtDir;
-             // Tasks Directories:
-        public static string tasksDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\";
-        public static string tasksCleanup = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks\\Cleanup Summary\\";
+        // Etc folders, meant for development on Tasks.
+        public static string tasksDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Tasks\\";
+        public static string tasksCleanup = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Tasks\\Cleanup Summary\\";
         public static string deskDir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
     }
 }

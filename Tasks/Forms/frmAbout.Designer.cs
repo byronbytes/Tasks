@@ -33,7 +33,6 @@
             pictureBox1 = new System.Windows.Forms.PictureBox();
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
-            label7 = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
             label13 = new System.Windows.Forms.Label();
             listBox1 = new System.Windows.Forms.ListBox();
@@ -86,23 +85,12 @@
             label5.TabIndex = 61;
             label5.Text = "Name: ";
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label7.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
-            label7.Location = new System.Drawing.Point(12, 245);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(106, 20);
-            label7.TabIndex = 63;
-            label7.Text = "Branch: master";
-            // 
             // button1
             // 
             button1.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button1.ForeColor = System.Drawing.Color.White;
-            button1.Location = new System.Drawing.Point(12, 268);
+            button1.Location = new System.Drawing.Point(12, 248);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(122, 31);
             button1.TabIndex = 65;
@@ -173,7 +161,6 @@
             Controls.Add(listBox1);
             Controls.Add(label13);
             Controls.Add(button1);
-            Controls.Add(label7);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label2);
@@ -195,7 +182,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListBox listBox1;

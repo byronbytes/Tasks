@@ -97,11 +97,6 @@ namespace Tasks
             openChildForm(new frmStartupPrograms());
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmMain_Shown(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.AutoCheckUpdates == true)

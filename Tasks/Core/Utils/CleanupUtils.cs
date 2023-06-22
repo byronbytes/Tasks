@@ -69,12 +69,6 @@ namespace Tasks.Core.Utils
             return false;
         }
 
-        // TODO: calculates storage space
-        public static void CalculateStorage()
-        {
-
-        }
-
         [DllImport("Shell32.dll")]
         public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
 

@@ -132,7 +132,7 @@
             CleanupLogsLBox.Items.AddRange(new object[] { "Cleanup Logs:" });
             CleanupLogsLBox.Location = new System.Drawing.Point(946, 6);
             CleanupLogsLBox.Name = "CleanupLogsLBox";
-            CleanupLogsLBox.Size = new System.Drawing.Size(115, 36);
+            CleanupLogsLBox.Size = new System.Drawing.Size(115, 53);
             CleanupLogsLBox.TabIndex = 1;
             CleanupLogsLBox.Visible = false;
             // 
@@ -309,7 +309,7 @@
             tabPage1.Location = new System.Drawing.Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            tabPage1.Size = new System.Drawing.Size(1058, 689);
+            tabPage1.Size = new System.Drawing.Size(1058, 692);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Advanced Cleanup";
             tabPage1.Click += tabPage1_Click;
@@ -1021,7 +1021,7 @@
             btnCleanup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnCleanup.ForeColor = System.Drawing.Color.FromArgb(161, 183, 255);
-            btnCleanup.Location = new System.Drawing.Point(789, 671);
+            btnCleanup.Location = new System.Drawing.Point(789, 674);
             btnCleanup.Name = "btnCleanup";
             btnCleanup.Size = new System.Drawing.Size(273, 47);
             btnCleanup.TabIndex = 37;
@@ -1042,7 +1042,7 @@
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new System.Windows.Forms.Padding(3);
             tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            tabPage3.Size = new System.Drawing.Size(1058, 689);
+            tabPage3.Size = new System.Drawing.Size(1058, 692);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Browser Extensions";
             tabPage3.Click += tabPage3_Click;
@@ -1066,7 +1066,7 @@
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button3.ForeColor = System.Drawing.Color.FromArgb(161, 183, 255);
-            button3.Location = new System.Drawing.Point(860, 633);
+            button3.Location = new System.Drawing.Point(860, 636);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(178, 41);
             button3.TabIndex = 38;
@@ -1085,7 +1085,7 @@
             ExtensionsBox.ForeColor = System.Drawing.Color.White;
             ExtensionsBox.FullRowSelect = true;
             ExtensionsBox.HideSelection = false;
-            ExtensionsBox.Location = new System.Drawing.Point(6, 150);
+            ExtensionsBox.Location = new System.Drawing.Point(6, 153);
             ExtensionsBox.Name = "ExtensionsBox";
             ExtensionsBox.Size = new System.Drawing.Size(1040, 477);
             ExtensionsBox.TabIndex = 42;
