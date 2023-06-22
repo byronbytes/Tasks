@@ -67,12 +67,13 @@ namespace Tasks
             }
 
          */
-        
+
         }
 
 
-        private void frmMain_Load(object sender, EventArgs e) { 
-            CheckTheme(); 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            CheckTheme();
             label2.Text = Core.SystemUtils.bit;
             label4.Text = Core.SystemUtils.getOSInfo();
             pictureBox5.Visible = true;
@@ -81,7 +82,7 @@ namespace Tasks
         {
             CheckTheme(); // laggy.
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             openChildForm(new frmCleanup());
@@ -99,7 +100,7 @@ namespace Tasks
 
         private void button3_Click(object sender, EventArgs e)
         {
-      
+
         }
 
         private void frmMain_Shown(object sender, EventArgs e)
