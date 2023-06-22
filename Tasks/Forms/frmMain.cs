@@ -76,7 +76,6 @@ namespace Tasks
             CheckTheme();
             label2.Text = Core.SystemUtils.bit;
             label4.Text = Core.SystemUtils.getOSInfo();
-            pictureBox5.Visible = true;
         }
         private void timer1_Tick(object sender, EventArgs e)
         {

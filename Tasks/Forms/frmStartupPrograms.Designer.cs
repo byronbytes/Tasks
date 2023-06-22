@@ -29,252 +29,243 @@ namespace Tasks
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStartupPrograms));
-            this.StartupProcesses = new System.Windows.Forms.ListView();
-            this.ProcessName = new System.Windows.Forms.ColumnHeader();
-            this.ProcessDescription = new System.Windows.Forms.ColumnHeader();
-            this.ProcessPath = new System.Windows.Forms.ColumnHeader();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.txtFileName = new System.Windows.Forms.Label();
-            this.txtTargetPath = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            StartupProcesses = new System.Windows.Forms.ListView();
+            ProcessName = new System.Windows.Forms.ColumnHeader();
+            ProcessDescription = new System.Windows.Forms.ColumnHeader();
+            ProcessPath = new System.Windows.Forms.ColumnHeader();
+            button1 = new System.Windows.Forms.Button();
+            button2 = new System.Windows.Forms.Button();
+            openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            txtFileName = new System.Windows.Forms.Label();
+            txtTargetPath = new System.Windows.Forms.Label();
+            button4 = new System.Windows.Forms.Button();
+            toolTip1 = new System.Windows.Forms.ToolTip(components);
+            tabControl1 = new System.Windows.Forms.TabControl();
+            tabPage1 = new System.Windows.Forms.TabPage();
+            tabPage2 = new System.Windows.Forms.TabPage();
+            listView1 = new System.Windows.Forms.ListView();
+            columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            panel1 = new System.Windows.Forms.Panel();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // StartupProcesses
             // 
-            this.StartupProcesses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(35)))));
-            this.StartupProcesses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StartupProcesses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ProcessName,
-            this.ProcessDescription,
-            this.ProcessPath});
-            this.StartupProcesses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StartupProcesses.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.StartupProcesses.ForeColor = System.Drawing.Color.White;
-            this.StartupProcesses.FullRowSelect = true;
-            this.StartupProcesses.HideSelection = false;
-            this.StartupProcesses.Location = new System.Drawing.Point(3, 3);
-            this.StartupProcesses.Name = "StartupProcesses";
-            this.StartupProcesses.Size = new System.Drawing.Size(1052, 604);
-            this.StartupProcesses.TabIndex = 0;
-            this.StartupProcesses.UseCompatibleStateImageBehavior = false;
-            this.StartupProcesses.View = System.Windows.Forms.View.Details;
+            StartupProcesses.BackColor = System.Drawing.Color.FromArgb(18, 26, 35);
+            StartupProcesses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            StartupProcesses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { ProcessName, ProcessDescription, ProcessPath });
+            StartupProcesses.Dock = System.Windows.Forms.DockStyle.Fill;
+            StartupProcesses.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            StartupProcesses.ForeColor = System.Drawing.Color.White;
+            StartupProcesses.FullRowSelect = true;
+            StartupProcesses.HideSelection = false;
+            StartupProcesses.Location = new System.Drawing.Point(3, 3);
+            StartupProcesses.Name = "StartupProcesses";
+            StartupProcesses.Size = new System.Drawing.Size(1042, 649);
+            StartupProcesses.TabIndex = 0;
+            StartupProcesses.UseCompatibleStateImageBehavior = false;
+            StartupProcesses.View = System.Windows.Forms.View.Details;
             // 
             // ProcessName
             // 
-            this.ProcessName.Text = "Name";
-            this.ProcessName.Width = 250;
+            ProcessName.Text = "Name";
+            ProcessName.Width = 250;
             // 
             // ProcessDescription
             // 
-            this.ProcessDescription.Text = "Description";
-            this.ProcessDescription.Width = 240;
+            ProcessDescription.Text = "Description";
+            ProcessDescription.Width = 240;
             // 
             // ProcessPath
             // 
-            this.ProcessPath.Text = "Path";
-            this.ProcessPath.Width = 290;
+            ProcessPath.Text = "Path";
+            ProcessPath.Width = 290;
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(691, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 44);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Disable";
-            this.toolTip1.SetToolTip(this.button1, "Disable Program");
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button1.BackColor = System.Drawing.Color.FromArgb(14, 18, 26);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button1.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            button1.Location = new System.Drawing.Point(681, 27);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(181, 44);
+            button1.TabIndex = 1;
+            button1.Text = "Disable";
+            toolTip1.SetToolTip(button1, "Disable Program");
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.button2.Location = new System.Drawing.Point(878, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(181, 44);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Add New";
-            this.toolTip1.SetToolTip(this.button2, "New Program");
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button2.BackColor = System.Drawing.Color.FromArgb(14, 18, 26);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button2.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            button2.Location = new System.Drawing.Point(868, 27);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(181, 44);
+            button2.TabIndex = 2;
+            button2.Text = "Add New";
+            toolTip1.SetToolTip(button2, "New Program");
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // txtFileName
             // 
-            this.txtFileName.AutoSize = true;
-            this.txtFileName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtFileName.Location = new System.Drawing.Point(171, 34);
-            this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(119, 15);
-            this.txtFileName.TabIndex = 4;
-            this.txtFileName.Text = "PlaceholderFileName";
-            this.txtFileName.Visible = false;
+            txtFileName.AutoSize = true;
+            txtFileName.ForeColor = System.Drawing.Color.Transparent;
+            txtFileName.Location = new System.Drawing.Point(171, 34);
+            txtFileName.Name = "txtFileName";
+            txtFileName.Size = new System.Drawing.Size(119, 15);
+            txtFileName.TabIndex = 4;
+            txtFileName.Text = "PlaceholderFileName";
+            txtFileName.Visible = false;
             // 
             // txtTargetPath
             // 
-            this.txtTargetPath.AutoSize = true;
-            this.txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtTargetPath.Location = new System.Drawing.Point(171, 49);
-            this.txtTargetPath.Name = "txtTargetPath";
-            this.txtTargetPath.Size = new System.Drawing.Size(125, 15);
-            this.txtTargetPath.TabIndex = 5;
-            this.txtTargetPath.Text = "PlaceholderTargetPath";
-            this.txtTargetPath.Visible = false;
+            txtTargetPath.AutoSize = true;
+            txtTargetPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            txtTargetPath.Location = new System.Drawing.Point(171, 49);
+            txtTargetPath.Name = "txtTargetPath";
+            txtTargetPath.Size = new System.Drawing.Size(125, 15);
+            txtTargetPath.TabIndex = 5;
+            txtTargetPath.Text = "PlaceholderTargetPath";
+            txtTargetPath.Visible = false;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.button4.Location = new System.Drawing.Point(4, 34);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 37);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Refresh List";
-            this.toolTip1.SetToolTip(this.button4, "Refresh List");
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            button4.BackColor = System.Drawing.Color.FromArgb(14, 18, 26);
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button4.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            button4.Location = new System.Drawing.Point(4, 34);
+            button4.Name = "button4";
+            button4.Size = new System.Drawing.Size(161, 37);
+            button4.TabIndex = 6;
+            button4.Text = "Refresh List";
+            toolTip1.SetToolTip(button4, "Refresh List");
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click_1;
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1066, 644);
-            this.tabControl1.TabIndex = 7;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            tabControl1.Location = new System.Drawing.Point(0, 0);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new System.Drawing.Size(1056, 689);
+            tabControl1.TabIndex = 7;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage1.Controls.Add(this.StartupProcesses);
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1058, 610);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Startup Programs";
+            tabPage1.BackColor = System.Drawing.Color.FromArgb(22, 22, 22);
+            tabPage1.Controls.Add(StartupProcesses);
+            tabPage1.Location = new System.Drawing.Point(4, 30);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            tabPage1.Size = new System.Drawing.Size(1048, 655);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Startup Programs";
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage2.Controls.Add(this.listView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1058, 610);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Startup Services";
+            tabPage2.BackColor = System.Drawing.Color.FromArgb(22, 22, 22);
+            tabPage2.Controls.Add(listView1);
+            tabPage2.Location = new System.Drawing.Point(4, 30);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            tabPage2.Size = new System.Drawing.Size(1058, 610);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Startup Services";
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(35)))));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listView1.ForeColor = System.Drawing.Color.White;
-            this.listView1.FullRowSelect = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1052, 604);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            listView1.BackColor = System.Drawing.Color.FromArgb(18, 26, 35);
+            listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
+            listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            listView1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            listView1.ForeColor = System.Drawing.Color.White;
+            listView1.FullRowSelect = true;
+            listView1.HideSelection = false;
+            listView1.Location = new System.Drawing.Point(3, 3);
+            listView1.Name = "listView1";
+            listView1.Size = new System.Drawing.Size(1052, 604);
+            listView1.TabIndex = 1;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 300;
+            columnHeader1.Text = "Name";
+            columnHeader1.Width = 300;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Service Type";
-            this.columnHeader2.Width = 300;
+            columnHeader2.Text = "Service Type";
+            columnHeader2.Width = 300;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Status";
-            this.columnHeader3.Width = 120;
+            columnHeader3.Text = "Status";
+            columnHeader3.Width = 120;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(45)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.txtFileName);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.txtTargetPath);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 652);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1066, 76);
-            this.panel1.TabIndex = 8;
+            panel1.BackColor = System.Drawing.Color.FromArgb(18, 26, 45);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(txtFileName);
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(txtTargetPath);
+            panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            panel1.Location = new System.Drawing.Point(0, 697);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(1056, 76);
+            panel1.TabIndex = 8;
             // 
             // frmStartupPrograms
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(1066, 728);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmStartupPrograms";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Startup Programs";
-            this.Load += new System.EventHandler(this.frmStartupPrograms_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(18, 18, 18);
+            ClientSize = new System.Drawing.Size(1056, 773);
+            Controls.Add(panel1);
+            Controls.Add(tabControl1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Name = "frmStartupPrograms";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            Text = "Startup Programs";
+            Load += frmStartupPrograms_Load;
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

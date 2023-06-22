@@ -5,14 +5,17 @@
 
 using System;
 
-namespace Tasks.Core
 
+namespace Tasks.Core
 {
+
     public static class SystemUtils
     {
-        public static string bit = "?";
+        public static string bit = "?"; // current bit is undefined, so it's set to a ?
 
-        // Gets the computer's bit (64 or 32)
+        /// <summary>
+        /// Gets the current computer bit. (64 or 32)
+        /// </summary>
         public static void ComputerBit()
         {
             if (Environment.Is64BitOperatingSystem)
@@ -25,6 +28,10 @@ namespace Tasks.Core
             }
         }
 
+        /// <summary>
+        /// Gets the operating system it's being run on. Supports XP to 10.
+        /// </summary>
+        /// <returns></returns>
         public static string getOSInfo()
         {
             OperatingSystem os = Environment.OSVersion;
@@ -57,23 +64,10 @@ namespace Tasks.Core
                         break;
                 }
             }
-            //Make sure we actually got something in our OS check
-            //We don't want to just return " Service Pack 2" or " 32-bit"
-            //That information is useless without the OS version.
             if (operatingSystem != "")
             {
-                //Got something.  Let's prepend "Windows" and get more info.
                 operatingSystem = "Windows " + operatingSystem;
-                //See if there's a service pack installed.
-                if (os.ServicePack != "")
-                {
-                    //Append it to the OS name.  i.e. "Windows XP Service Pack 3"
-                    operatingSystem += " " + os.ServicePack;
-                }
-                //Append the OS architecture.  i.e. "Windows XP Service Pack 3 32-bit"
-                //operatingSystem += " " + getOSArchitecture().ToString() + "-bit";
             }
-            //Return the information we've gathered.
             return operatingSystem;
         }
 

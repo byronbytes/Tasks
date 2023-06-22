@@ -19,10 +19,10 @@ namespace Tasks.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-           frmAbout About = new frmAbout();
-           About.Show();
+            frmAbout About = new frmAbout();
+            About.Show();
         }
-        
+
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {

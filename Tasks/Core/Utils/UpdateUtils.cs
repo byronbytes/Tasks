@@ -1,9 +1,8 @@
 ﻿/*
-   Tasks was developed by @byronbytes
+    Tasks was developed by @byronbytes
     All rights reserved under the GNU General Public License v3.0.
 */
 
-using System;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
@@ -14,17 +13,24 @@ namespace Tasks.Core.Utils
     public class UpdateUtils
     {
 
+        /// <summary>
+        /// Gets the latest version string from a server.
+        /// </summary>
+        /// <returns></returns>
         public static string UpdateString()
         {
             WebClient client = new WebClient();
-            Stream stream = client.OpenRead("https://pastebin.com/raw/02qyhKX7");
+            Stream stream = client.OpenRead("https://pastebin.com/raw/02qyhKX7"); // retrieves the text from the server
             StreamReader reader = new StreamReader(stream);
-            String content = reader.ReadToEnd();
+            string content = reader.ReadToEnd();
 
-            return content;
+            return content; // returns it here.
         }
 
-        // should also add an option for remind me later.
+
+        /// <summary>
+        /// Send a messagebox if the version is up to date.
+        /// </summary>
         public static void CheckForUpdates()
         {
             try
@@ -40,15 +46,22 @@ namespace Tasks.Core.Utils
             }
         }
 
+        /// <summary>
+        /// Checks if the string recieved is greater / less than the one hard-coded
+        /// </summary>
+        /// <returns></returns>
         public static bool isUpToDate()
         {
-            if (UpdateString() == "v5.0.0")
+            if (UpdateString() == "v5.0.0") // lazy coding, will fix.
                 return true;
             else
                 return false;
 
         }
 
+        /// <summary>
+        /// Experimental: Downloads the latest version from GitHub releases.
+        /// </summary>
         public static void InstallUpdate()
         {
             using (var client = new WebClient())

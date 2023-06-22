@@ -62,7 +62,7 @@ namespace Tasks
                 foreach (CheckBox cb in tabPage7.Controls.OfType<CheckBox>())
                 { cb.ForeColor = Color.Black; }
 
-             
+
 
                 // TabPages + TabControls
                 //       tabPage1.BackColor = Color.White;
@@ -70,15 +70,15 @@ namespace Tasks
                 //       tabPage3.BackColor = Color.White;
                 tabControl2.BackColor = Color.White;
                 tabControl1.BackColor = Color.White;
-         //       tabPage5.BackColor = Color.White;
-         //       tabPage6.BackColor = Color.White;
-        //        tabPage1.BackColor = Color.White;
-        //        tabPage7.BackColor = Color.White;
-        //        tabPage3.BackColor = Color.White;
+                //       tabPage5.BackColor = Color.White;
+                //       tabPage6.BackColor = Color.White;
+                //        tabPage1.BackColor = Color.White;
+                //        tabPage7.BackColor = Color.White;
+                //        tabPage3.BackColor = Color.White;
                 tabControl2.BackColor = Color.White;
                 tabControl1.BackColor = Color.White;
-       //         tabPage5.BackColor = Color.White;
-       //         tabPage6.BackColor = Color.White;
+                //         tabPage5.BackColor = Color.White;
+                //         tabPage6.BackColor = Color.White;
                 comboBox1.BackColor = Color.WhiteSmoke;
                 comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
@@ -104,7 +104,7 @@ namespace Tasks
                     file.Delete();
                     filesDeleted++;
                     CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -239,7 +239,7 @@ namespace Tasks
                     var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions\\");
                     var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage\\");
                     var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State\\");
-               
+
                     if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
                 }
                 catch
@@ -942,7 +942,7 @@ namespace Tasks
 
             if (!Directory.Exists(Dirs.discordDir))
                 cbDiscord.Enabled = false;
-                cbDiscord.Text = "Discord (N/A)";
+            cbDiscord.Text = "Discord (N/A)";
 
             if (!Directory.Exists(Dirs.edgeDir))
             {

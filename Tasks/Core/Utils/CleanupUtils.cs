@@ -14,8 +14,12 @@ namespace Tasks.Core.Utils
     {
         public static int filesDeleted;
 
-        // Deletes all files in a directory.
         // Will also add a string list for all of the file names, that's pretty easy.
+        /// <summary>
+        /// Deletes all files in a directory.
+        /// </summary>
+        /// <param name="directoryInfo"></param>
+        /// <returns></returns>
         public static bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
             foreach (var file in directoryInfo.GetFiles()) // could optimize?

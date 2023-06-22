@@ -32,12 +32,12 @@ namespace Tasks
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             toolTip1 = new System.Windows.Forms.ToolTip(components);
-            panel2 = new System.Windows.Forms.Panel();
-            timer1 = new System.Windows.Forms.Timer(components);
-            notifyIcon1 = new System.Windows.Forms.NotifyIcon(components);
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             button4 = new System.Windows.Forms.Button();
+            panel2 = new System.Windows.Forms.Panel();
+            timer1 = new System.Windows.Forms.Timer(components);
+            notifyIcon1 = new System.Windows.Forms.NotifyIcon(components);
             label2 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             label4 = new System.Windows.Forms.Label();
@@ -45,26 +45,6 @@ namespace Tasks
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel2
-            // 
-            panel2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            panel2.BackColor = System.Drawing.Color.FromArgb(13, 12, 14);
-            panel2.Location = new System.Drawing.Point(138, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(1056, 773);
-            panel2.TabIndex = 1;
-            // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
-            // 
-            // notifyIcon1
-            // 
-            notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            notifyIcon1.Text = "Tasks";
             // 
             // button1
             // 
@@ -120,6 +100,26 @@ namespace Tasks
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
+            // panel2
+            // 
+            panel2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            panel2.BackColor = System.Drawing.Color.FromArgb(13, 12, 14);
+            panel2.Location = new System.Drawing.Point(138, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(1056, 773);
+            panel2.TabIndex = 1;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
+            // notifyIcon1
+            // 
+            notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            notifyIcon1.Text = "Tasks";
+            // 
             // label2
             // 
             label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
@@ -148,7 +148,7 @@ namespace Tasks
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             label4.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
-            label4.Location = new System.Drawing.Point(0, 753);
+            label4.Location = new System.Drawing.Point(3, 753);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(88, 20);
             label4.TabIndex = 2;
@@ -169,7 +169,7 @@ namespace Tasks
             panel1.ForeColor = System.Drawing.Color.Black;
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(174, 779);
+            panel1.Size = new System.Drawing.Size(143, 779);
             panel1.TabIndex = 0;
             // 
             // frmMain

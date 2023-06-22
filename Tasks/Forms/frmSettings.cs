@@ -74,9 +74,9 @@ namespace Tasks
 
 
         }
-        
+
         frmMain Main = new frmMain();
- 
+
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
@@ -137,7 +137,7 @@ namespace Tasks
                 Properties.Settings.Default.Save();
             }
 
-                if (comboBox2.SelectedItem == "Light")
+            if (comboBox2.SelectedItem == "Light")
             {
                 Properties.Settings.Default.Theme = "light";
                 Main.CheckTheme();
@@ -149,12 +149,12 @@ namespace Tasks
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox3.Checked == true)
+            if (checkBox3.Checked == true)
             {
                 Properties.Settings.Default.AutoCheckUpdates = true;
                 Properties.Settings.Default.Save();
             }
-            if(checkBox3.Checked == false)
+            if (checkBox3.Checked == false)
             {
                 Properties.Settings.Default.AutoCheckUpdates = false;
                 Properties.Settings.Default.Save();
