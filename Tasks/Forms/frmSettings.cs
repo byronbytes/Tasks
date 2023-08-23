@@ -15,8 +15,6 @@ namespace Tasks
         {
             InitializeComponent();
 
-
-
             if (Properties.Settings.Default.AutoCheckUpdates == true)
             {
                 checkBox3.Checked = true;
@@ -60,16 +58,17 @@ namespace Tasks
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == "English")
+            if (comboBox1.SelectedItem.ToString() == "English")
             {
                 Properties.Settings.Default.Language = "English";
                 Properties.Settings.Default.Save();
             }
 
-            if (comboBox1.SelectedItem == "Spanish")
+            if (comboBox1.SelectedItem.ToString() == "Spanish")
             {
                 Properties.Settings.Default.Language = "Spanish";
                 Properties.Settings.Default.Save();
+                MessageBox.Show("Language changing is still a work in progress.");
             }
 
 
@@ -164,6 +163,11 @@ namespace Tasks
         private void button1_Click(object sender, EventArgs e)
         {
             Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks");
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

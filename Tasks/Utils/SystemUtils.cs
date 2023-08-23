@@ -6,7 +6,7 @@
 using System;
 
 
-namespace Tasks.Core
+namespace Tasks.Utils
 {
 
     public static class SystemUtils

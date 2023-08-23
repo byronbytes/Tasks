@@ -6,6 +6,7 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using Tasks.Utils;
 
 namespace Tasks.Forms
 {
@@ -18,12 +19,12 @@ namespace Tasks.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Core.Utils.UpdateUtils.CheckForUpdates();
+            UpdateUtils.CheckForUpdates();
         }
 
         private void frmAbout_Load(object sender, EventArgs e)
         {
-            label5.Text = "Name: " + Core.Utils.UpdateUtils.UpdateString();
+            label5.Text = "Name: " + UpdateUtils.UpdateString();
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

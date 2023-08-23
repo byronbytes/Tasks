@@ -8,7 +8,7 @@ using System.IO.Compression;
 using System.Net;
 using System.Windows.Forms;
 
-namespace Tasks.Core.Utils
+namespace Tasks.Utils
 {
     public class UpdateUtils
     {
@@ -26,7 +26,12 @@ namespace Tasks.Core.Utils
 
             return content; // returns it here.
         }
+        
 
+        public static string UpdateString2()
+        {
+            return "test";
+        }
 
         /// <summary>
         /// Send a messagebox if the version is up to date.

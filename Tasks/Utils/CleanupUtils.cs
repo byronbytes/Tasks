@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace Tasks.Core.Utils
+namespace Tasks.Utils
 {
     public class CleanupUtils
     {
@@ -28,7 +28,7 @@ namespace Tasks.Core.Utils
                     file.Delete();
                     filesDeleted++;
                 }
-                catch (Exception) 
+                catch (Exception)
                 {
 
                 }
@@ -38,7 +38,7 @@ namespace Tasks.Core.Utils
                     dir.Delete(true);
                     filesDeleted++;
                 }
-                catch (Exception) 
+                catch (Exception)
                 {
 
                 }
@@ -53,8 +53,8 @@ namespace Tasks.Core.Utils
                 {
                     Debug.Print("File: " + file.Name);
                 }
-                catch (Exception) 
-                { 
+                catch (Exception)
+                {
 
                 }
         }
@@ -65,7 +65,7 @@ namespace Tasks.Core.Utils
             {
                 return true;
             }
-           
+
             return false;
         }
 

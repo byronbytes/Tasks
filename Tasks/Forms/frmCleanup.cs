@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using Tasks.Utils;
 
 namespace Tasks
 {
@@ -156,7 +157,7 @@ namespace Tasks
                 try
                 {
 
-                    Core.Utils.CleanupUtils.SHEmptyRecycleBin(IntPtr.Zero, null, Core.Utils.CleanupUtils.RecycleFlag.SHERB_NOSOUND | Core.Utils.CleanupUtils.RecycleFlag.SHERB_NOCONFIRMATION);
+                    CleanupUtils.SHEmptyRecycleBin(IntPtr.Zero, null, CleanupUtils.RecycleFlag.SHERB_NOSOUND | CleanupUtils.RecycleFlag.SHERB_NOCONFIRMATION);
                     CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
                 }
                 catch (Exception ex)
@@ -496,7 +497,7 @@ namespace Tasks
             {
                 try
                 {
-                    Core.Utils.CleanupUtils.SHAddToRecentDocs(Core.Utils.CleanupUtils.ShellAddToRecentDocsFlags.Pidl, null);
+                    CleanupUtils.SHAddToRecentDocs(CleanupUtils.ShellAddToRecentDocsFlags.Pidl, null);
                     CleanupLogsLBox.Items.Add("Recent Files Cleared.");
                 }
                 catch (Exception ex)
@@ -731,7 +732,7 @@ namespace Tasks
             CleanupLogsLBox.Items.Add("Cleanup log end.");
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
 
-            if (Core.Utils.CleanupUtils.CanLogCleanup())
+            if (CleanupUtils.CanLogCleanup())
             {
 
                 File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-" + t + ".txt", CleanupLogsLBox.Items.Cast<string>().ToArray());

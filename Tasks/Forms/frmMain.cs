@@ -7,7 +7,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 using Tasks.Forms;
-
+using Tasks.Utils;
 
 namespace Tasks
 {
@@ -19,7 +19,7 @@ namespace Tasks
             Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks");
             Directory.CreateDirectory(Dirs.tasksCleanup);
             CheckTheme();
-            Core.SystemUtils.ComputerBit();
+            SystemUtils.ComputerBit();
         }
 
         private Form activeForm = null;
@@ -74,8 +74,8 @@ namespace Tasks
         private void frmMain_Load(object sender, EventArgs e)
         {
             CheckTheme();
-            label2.Text = Core.SystemUtils.bit;
-            label4.Text = Core.SystemUtils.getOSInfo();
+            label2.Text = SystemUtils.bit;
+            label4.Text = SystemUtils.getOSInfo();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -101,7 +101,7 @@ namespace Tasks
         {
             if (Properties.Settings.Default.AutoCheckUpdates == true)
             {
-                Core.Utils.UpdateUtils.CheckForUpdates();
+                UpdateUtils.CheckForUpdates();
             }
         }
     }

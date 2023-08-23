@@ -137,8 +137,8 @@ namespace Tasks
             pictureBox1.Image = Properties.Resources.Tasks_Logo_Small;
             pictureBox1.Location = new System.Drawing.Point(12, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(120, 107);
-            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox1.Size = new System.Drawing.Size(120, 95);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
