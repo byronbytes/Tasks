@@ -90,9 +90,9 @@ namespace Tasks
             button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button4.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
             button4.Image = Properties.Resources.SettingsWhite;
-            button4.Location = new System.Drawing.Point(0, 697);
+            button4.Location = new System.Drawing.Point(0, 685);
             button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(140, 53);
+            button4.Size = new System.Drawing.Size(140, 65);
             button4.TabIndex = 17;
             button4.Text = "Settings";
             button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
