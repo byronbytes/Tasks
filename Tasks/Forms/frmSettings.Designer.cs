@@ -84,9 +84,9 @@ namespace Tasks
             label19.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
             label19.Location = new System.Drawing.Point(12, 339);
             label19.Name = "label19";
-            label19.Size = new System.Drawing.Size(196, 15);
+            label19.Size = new System.Drawing.Size(295, 15);
             label19.TabIndex = 14;
-            label19.Text = "Changes the theme that Tasks uses.";
+            label19.Text = "Changes the theme that Tasks uses. (Currently Broken)";
             // 
             // label18
             // 

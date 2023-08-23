@@ -187,19 +187,19 @@ namespace Tasks
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox3.SelectedItem == "stable")
+            if (comboBox3.SelectedItem == "Stable")
             {
                 Properties.Settings.Default.UpdateBranch = "stable";
                 Properties.Settings.Default.Save();
             }
 
-            if (comboBox3.SelectedItem == "beta")
+            if (comboBox3.SelectedItem == "Beta")
             {
                 Properties.Settings.Default.UpdateBranch = "beta";
                 Properties.Settings.Default.Save();
             }
 
-            if (comboBox3.SelectedItem == "nightly")
+            if (comboBox3.SelectedItem == "Nightly")
             {
                 Properties.Settings.Default.UpdateBranch = "nightly";
                 Properties.Settings.Default.Save();

@@ -7,7 +7,6 @@ using Newtonsoft.Json;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
-using System.Runtime.ConstrainedExecution;
 using System.Windows.Forms;
 
 namespace Tasks.Utils
@@ -82,7 +81,7 @@ namespace Tasks.Utils
         /// <returns></returns>
         public static bool isUpToDate()
         {
-            if (stableVer == UpdateString() || nightlyVer == UpdateString())
+            if (betaVer == UpdateString() || nightlyVer == UpdateString() || stableVer == "4.0.2")
                 return true;
             else
                 return false;

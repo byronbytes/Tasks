@@ -130,9 +130,9 @@
             CleanupLogsLBox.HorizontalScrollbar = true;
             CleanupLogsLBox.ItemHeight = 17;
             CleanupLogsLBox.Items.AddRange(new object[] { "Cleanup Logs:" });
-            CleanupLogsLBox.Location = new System.Drawing.Point(946, 6);
+            CleanupLogsLBox.Location = new System.Drawing.Point(952, 6);
             CleanupLogsLBox.Name = "CleanupLogsLBox";
-            CleanupLogsLBox.Size = new System.Drawing.Size(115, 53);
+            CleanupLogsLBox.Size = new System.Drawing.Size(97, 36);
             CleanupLogsLBox.TabIndex = 1;
             CleanupLogsLBox.Visible = false;
             // 
@@ -1113,9 +1113,9 @@
             label15.ForeColor = System.Drawing.Color.FromArgb(161, 183, 255);
             label15.Location = new System.Drawing.Point(10, 12);
             label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(465, 25);
+            label15.Size = new System.Drawing.Size(385, 25);
             label15.TabIndex = 40;
-            label15.Text = "Select a supported browser detected on your system.";
+            label15.Text = "Select a supported browser on your system.";
             // 
             // comboBox1
             // 
