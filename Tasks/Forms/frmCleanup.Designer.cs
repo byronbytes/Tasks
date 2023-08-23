@@ -1021,7 +1021,7 @@
             btnCleanup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnCleanup.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnCleanup.ForeColor = System.Drawing.Color.FromArgb(161, 183, 255);
-            btnCleanup.Location = new System.Drawing.Point(789, 674);
+            btnCleanup.Location = new System.Drawing.Point(776, 638);
             btnCleanup.Name = "btnCleanup";
             btnCleanup.Size = new System.Drawing.Size(273, 47);
             btnCleanup.TabIndex = 37;
@@ -1084,7 +1084,6 @@
             ExtensionsBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             ExtensionsBox.ForeColor = System.Drawing.Color.White;
             ExtensionsBox.FullRowSelect = true;
-            ExtensionsBox.HideSelection = false;
             ExtensionsBox.Location = new System.Drawing.Point(6, 153);
             ExtensionsBox.Name = "ExtensionsBox";
             ExtensionsBox.Size = new System.Drawing.Size(1040, 477);
