@@ -17,5 +17,8 @@
     <Setting Name="AutoCheckUpdates" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="UpdateBranch" Type="System.String" Scope="User">
+      <Value Profile="(Default)">stable</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

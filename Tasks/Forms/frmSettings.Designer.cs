@@ -47,6 +47,10 @@ namespace Tasks
             label2 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            comboBox3 = new System.Windows.Forms.ComboBox();
+            label8 = new System.Windows.Forms.Label();
+            checkBox1 = new System.Windows.Forms.CheckBox();
             SuspendLayout();
             // 
             // label14
@@ -78,7 +82,7 @@ namespace Tasks
             label19.AutoSize = true;
             label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             label19.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
-            label19.Location = new System.Drawing.Point(12, 362);
+            label19.Location = new System.Drawing.Point(12, 339);
             label19.Name = "label19";
             label19.Size = new System.Drawing.Size(196, 15);
             label19.TabIndex = 14;
@@ -89,7 +93,7 @@ namespace Tasks
             label18.AutoSize = true;
             label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label18.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
-            label18.Location = new System.Drawing.Point(12, 341);
+            label18.Location = new System.Drawing.Point(12, 318);
             label18.Name = "label18";
             label18.Size = new System.Drawing.Size(60, 21);
             label18.TabIndex = 13;
@@ -162,7 +166,7 @@ namespace Tasks
             comboBox2.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Dark", "Light" });
-            comboBox2.Location = new System.Drawing.Point(12, 380);
+            comboBox2.Location = new System.Drawing.Point(12, 357);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new System.Drawing.Size(225, 25);
             comboBox2.TabIndex = 17;
@@ -173,7 +177,7 @@ namespace Tasks
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             label3.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
-            label3.Location = new System.Drawing.Point(27, 580);
+            label3.Location = new System.Drawing.Point(12, 511);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(360, 15);
             label3.TabIndex = 22;
@@ -184,7 +188,7 @@ namespace Tasks
             checkBox3.AutoSize = true;
             checkBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             checkBox3.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
-            checkBox3.Location = new System.Drawing.Point(27, 556);
+            checkBox3.Location = new System.Drawing.Point(12, 487);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new System.Drawing.Size(228, 21);
             checkBox3.TabIndex = 21;
@@ -210,7 +214,7 @@ namespace Tasks
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label1.ForeColor = System.Drawing.Color.FromArgb(161, 183, 255);
-            label1.Location = new System.Drawing.Point(25, 497);
+            label1.Location = new System.Drawing.Point(12, 422);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(106, 37);
             label1.TabIndex = 24;
@@ -243,11 +247,59 @@ namespace Tasks
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             label5.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
-            label5.Location = new System.Drawing.Point(25, 534);
+            label5.Location = new System.Drawing.Point(12, 459);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(297, 15);
             label5.TabIndex = 27;
             label5.Text = "__________________________________________________________";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label6.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            label6.Location = new System.Drawing.Point(12, 594);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(60, 21);
+            label6.TabIndex = 30;
+            label6.Text = "Branch";
+            // 
+            // comboBox3
+            // 
+            comboBox3.BackColor = System.Drawing.Color.FromArgb(14, 18, 26);
+            comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            comboBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            comboBox3.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "Stable", "Beta", "Nightly" });
+            comboBox3.Location = new System.Drawing.Point(14, 618);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new System.Drawing.Size(225, 25);
+            comboBox3.TabIndex = 28;
+            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            label8.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            label8.Location = new System.Drawing.Point(12, 569);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(388, 15);
+            label8.TabIndex = 32;
+            label8.Text = "Whenever there is an update, Tasks will try to download it automatically.";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            checkBox1.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            checkBox1.Location = new System.Drawing.Point(12, 545);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new System.Drawing.Size(287, 21);
+            checkBox1.TabIndex = 31;
+            checkBox1.Text = "[Experimental] Download Builds on Update";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // frmSettings
             // 
@@ -255,6 +307,10 @@ namespace Tasks
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(18, 18, 18);
             ClientSize = new System.Drawing.Size(849, 689);
+            Controls.Add(label8);
+            Controls.Add(checkBox1);
+            Controls.Add(label6);
+            Controls.Add(comboBox3);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label2);
@@ -299,5 +355,9 @@ namespace Tasks
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

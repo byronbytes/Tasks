@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Tasks 256x256 Logo.ico</ApplicationIcon>
     <Version>5.0.0.3</Version>
@@ -19,7 +19,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AssemblyVersion>5.0.0.3</AssemblyVersion>
     <UseWPF>False</UseWPF>
-    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
     <StartupObject>Tasks.Program</StartupObject>
     <SignAssembly>false</SignAssembly>
     <AnalysisLevel>6.0</AnalysisLevel>
@@ -41,7 +40,7 @@
     <PackageReference Include="ByteSize" Version="2.1.1" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
     <PackageReference Include="System.Management" Version="7.0.2" />
-    <PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="7.0.1" />
   </ItemGroup>
 
   <ItemGroup>

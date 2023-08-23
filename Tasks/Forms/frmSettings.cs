@@ -54,6 +54,21 @@ namespace Tasks
             {
                 comboBox1.SelectedItem = "Spanish";
             }
+
+            if (Properties.Settings.Default.UpdateBranch == "stable")
+            {
+                comboBox3.SelectedItem = "Stable";
+            }
+
+            if (Properties.Settings.Default.UpdateBranch == "beta")
+            {
+                comboBox3.SelectedItem = "Beta";
+            }
+
+            if (Properties.Settings.Default.UpdateBranch == "nightly")
+            {
+                comboBox3.SelectedItem = "Nightly";
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -168,6 +183,27 @@ namespace Tasks
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox3.SelectedItem == "stable")
+            {
+                Properties.Settings.Default.UpdateBranch = "stable";
+                Properties.Settings.Default.Save();
+            }
+
+            if (comboBox3.SelectedItem == "beta")
+            {
+                Properties.Settings.Default.UpdateBranch = "beta";
+                Properties.Settings.Default.Save();
+            }
+
+            if (comboBox3.SelectedItem == "nightly")
+            {
+                Properties.Settings.Default.UpdateBranch = "nightly";
+                Properties.Settings.Default.Save();
+            }
         }
     }
 }

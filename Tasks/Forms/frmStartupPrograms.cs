@@ -38,20 +38,27 @@ namespace Tasks
 
         private void RenderStartupsOnListWiew()
         {
-            foreach (ManagementObject strt in (new ManagementClass("Win32_StartupCommand").GetInstances()))
+            try
             {
+                foreach (ManagementObject strt in (new ManagementClass("Win32_StartupCommand").GetInstances()))
+                {
 
-                string ProcessName = strt["Name"].ToString();
-                string ProcessDescription = strt["Description"].ToString();
-                string Command = strt["Command"].ToString();
-                string ProcessLocation = strt["Location"].ToString();
+                    string ProcessName = strt["Name"].ToString();
+                    string ProcessDescription = strt["Description"].ToString();
+                    string Command = strt["Command"].ToString();
+                    string ProcessLocation = strt["Location"].ToString();
 
-                var StartupProcessList = new ListViewItem(ProcessName + "");
-                StartupProcessList.SubItems.Add(ProcessDescription + "");
-                StartupProcessList.SubItems.Add(ProcessLocation + "");
-                StartupProcessList.SubItems.Add(Command + "");
+                    var StartupProcessList = new ListViewItem(ProcessName + "");
+                    StartupProcessList.SubItems.Add(ProcessDescription + "");
+                    StartupProcessList.SubItems.Add(ProcessLocation + "");
+                    StartupProcessList.SubItems.Add(Command + "");
 
-                StartupProcesses.Items.Add(StartupProcessList);
+                    StartupProcesses.Items.Add(StartupProcessList);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("There was an error loading Startup Programs. Please try again later.", "Tasks");
             }
         }
 

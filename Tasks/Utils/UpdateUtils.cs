@@ -3,9 +3,11 @@
     All rights reserved under the GNU General Public License v3.0.
 */
 
+using Newtonsoft.Json;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
+using System.Runtime.ConstrainedExecution;
 using System.Windows.Forms;
 
 namespace Tasks.Utils
@@ -26,11 +28,31 @@ namespace Tasks.Utils
 
             return content; // returns it here.
         }
-        
 
-        public static string UpdateString2()
+
+        public static string stableVer;
+        public static string betaVer;
+        public static string nightlyVer;
+        public static void GetVersionString()
         {
-            return "test";
+            var json = UpdateStringBranch();
+            dynamic jsonItems = JsonConvert.DeserializeObject(json);
+            string stable = jsonItems.stable;
+            string beta = jsonItems.beta;
+            string nightly = jsonItems.nightly;
+            stableVer = stable;
+            betaVer = beta;
+            nightlyVer = nightly;
+        }
+
+        public static string UpdateStringBranch()
+        {
+            WebClient client = new WebClient();
+            Stream stream = client.OpenRead("https://pastebin.com/SUXU9Wha"); // retrieves the text from the server
+            StreamReader reader = new StreamReader(stream);
+            string content = reader.ReadToEnd();
+
+            return content; // returns it here.
         }
 
         /// <summary>
@@ -41,7 +63,10 @@ namespace Tasks.Utils
             try
             {
                 if (isUpToDate() == false)
+                {
                     MessageBox.Show("There is a new update available! You can download it at: https://github.com/LiteTools/tag/" + UpdateString(), "Tasks");
+                }
+                  
                 else
                     MessageBox.Show("There are no new updates.", "Tasks");
             }
@@ -57,7 +82,7 @@ namespace Tasks.Utils
         /// <returns></returns>
         public static bool isUpToDate()
         {
-            if (UpdateString() == "v5.0.0") // lazy coding, will fix.
+            if (stableVer == UpdateString() || nightlyVer == UpdateString())
                 return true;
             else
                 return false;
