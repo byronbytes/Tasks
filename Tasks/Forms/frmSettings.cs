@@ -205,5 +205,10 @@ namespace Tasks
                 Properties.Settings.Default.Save();
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature is a work in progress and may not function properly.");
+        }
     }
 }

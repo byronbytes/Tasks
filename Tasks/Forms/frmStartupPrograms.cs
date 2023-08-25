@@ -77,8 +77,9 @@ namespace Tasks
 
         private void button1_Click(object sender, EventArgs e) // delete
         {
-            /*   string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
-                   try
+             string fileStartup = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" + StartupProcesses.SelectedItems[0].SubItems[0].Text + ".exe";
+              /*
+            try
                    {
                        if(StartupProcesses.SelectedItems[0].SubItems[2].Text == "Startup")
                        {
@@ -95,7 +96,8 @@ namespace Tasks
                    {
                        MessageBox.Show("Unable to delete the selected startup program. " + ex.Message);
             }
-                 */
+              */
+              
         }
 
         class StartUpProgram

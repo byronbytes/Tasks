@@ -300,6 +300,7 @@ namespace Tasks
             checkBox1.TabIndex = 31;
             checkBox1.Text = "[Experimental] Download Builds on Update";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // frmSettings
             // 

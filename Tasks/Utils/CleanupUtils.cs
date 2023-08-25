@@ -14,6 +14,7 @@ namespace Tasks.Utils
     {
         public static int filesDeleted;
 
+
         // Will also add a string list for all of the file names, that's pretty easy.
         /// <summary>
         /// Deletes all files in a directory.
