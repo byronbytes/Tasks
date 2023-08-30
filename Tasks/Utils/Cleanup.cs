@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 
 namespace Tasks.Utils
 {
-    public class CleanupUtils
+    public class Cleanup
     {
         public static int filesDeleted;
 

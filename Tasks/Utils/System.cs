@@ -9,7 +9,7 @@ using System;
 namespace Tasks.Utils
 {
 
-    public static class SystemUtils
+    public static class System
     {
         public static string bit = "?"; // current bit is undefined, so it's set to a ?
 

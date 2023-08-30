@@ -20,7 +20,7 @@ namespace Tasks
             Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks");
             Directory.CreateDirectory(Dirs.tasksCleanup);
             CheckTheme();
-            SystemUtils.ComputerBit();
+            Utils.System.ComputerBit();
         }
 
         private Form activeForm = null;
@@ -91,8 +91,8 @@ namespace Tasks
         private void frmMain_Load(object sender, EventArgs e)
         {
             CheckTheme();
-            label2.Text = SystemUtils.bit;
-            label4.Text = SystemUtils.getOSInfo();
+            label2.Text = Utils.System.bit;
+            label4.Text = Utils.System.getOSInfo();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -118,7 +118,7 @@ namespace Tasks
         {
             if (Properties.Settings.Default.AutoCheckUpdates == true)
             {
-                UpdateUtils.CheckForUpdates();
+                Utils.Update.CheckForUpdates();
             }
         }
 

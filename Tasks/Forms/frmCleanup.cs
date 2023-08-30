@@ -157,7 +157,7 @@ namespace Tasks
                 try
                 {
 
-                    CleanupUtils.SHEmptyRecycleBin(IntPtr.Zero, null, CleanupUtils.RecycleFlag.SHERB_NOSOUND | CleanupUtils.RecycleFlag.SHERB_NOCONFIRMATION);
+                    Cleanup.SHEmptyRecycleBin(IntPtr.Zero, null, Cleanup.RecycleFlag.SHERB_NOSOUND | Cleanup.RecycleFlag.SHERB_NOCONFIRMATION);
                     CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
                 }
                 catch (Exception ex)
@@ -497,7 +497,7 @@ namespace Tasks
             {
                 try
                 {
-                    CleanupUtils.SHAddToRecentDocs(CleanupUtils.ShellAddToRecentDocsFlags.Pidl, null);
+                    Cleanup.SHAddToRecentDocs(Cleanup.ShellAddToRecentDocsFlags.Pidl, null);
                     CleanupLogsLBox.Items.Add("Recent Files Cleared.");
                 }
                 catch (Exception ex)
@@ -732,7 +732,7 @@ namespace Tasks
             CleanupLogsLBox.Items.Add("Cleanup log end.");
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
 
-            if (CleanupUtils.CanLogCleanup())
+            if (Cleanup.CanLogCleanup())
             {
 
                 File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-" + t + ".txt", CleanupLogsLBox.Items.Cast<string>().ToArray());

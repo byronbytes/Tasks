@@ -5,6 +5,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Tasks
@@ -64,11 +65,6 @@ namespace Tasks
             {
                 comboBox3.SelectedItem = "Beta";
             }
-
-            if (Properties.Settings.Default.UpdateBranch == "nightly")
-            {
-                comboBox3.SelectedItem = "Nightly";
-            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,14 +95,13 @@ namespace Tasks
 
         public void CheckTheme()
         {
-            /*
+         
             if (Properties.Settings.Default.Theme == "light")
             {
                 this.BackColor = Color.FromArgb(250, 250, 250);
                 label3.ForeColor = Color.Black;
                 label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
-                label9.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
                 label12.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
@@ -125,7 +120,6 @@ namespace Tasks
                 comboBox3.ForeColor = Color.Black;
 
             }
-            */
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -196,12 +190,6 @@ namespace Tasks
             if (comboBox3.SelectedItem == "Beta")
             {
                 Properties.Settings.Default.UpdateBranch = "beta";
-                Properties.Settings.Default.Save();
-            }
-
-            if (comboBox3.SelectedItem == "Nightly")
-            {
-                Properties.Settings.Default.UpdateBranch = "nightly";
                 Properties.Settings.Default.Save();
             }
         }

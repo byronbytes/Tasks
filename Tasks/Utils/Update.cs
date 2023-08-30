@@ -12,11 +12,10 @@ using System.Windows.Forms;
 
 namespace Tasks.Utils
 {
-    public class UpdateUtils
+    public class Update
     {
         public static string stableVer; // Version number for stable.
         public static string betaVer; // Version number for beta.
-        public static string nightlyVer; // Version number for nightly. (Might go as a different versioning method, idk)
 
         /// <summary>
         /// Gets the latest version string from a server.
@@ -41,10 +40,8 @@ namespace Tasks.Utils
             dynamic jsonItems = JsonConvert.DeserializeObject(json);
             string stable = jsonItems.stable;
             string beta = jsonItems.beta;
-            string nightly = jsonItems.nightly;
             stableVer = stable;
             betaVer = beta;
-            nightlyVer = nightly;
         }
 
         /// <summary>
@@ -90,7 +87,7 @@ namespace Tasks.Utils
         /// <returns></returns>
         public static bool isUpToDate()
         {
-            if (betaVer == UpdateString() || UpdateString() == nightlyVer || stableVer == "4.0.2")
+            if (betaVer == UpdateString() || stableVer == "4.0.2")
                 return true;
             else
                 return false;

@@ -48,9 +48,9 @@
             label2.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
             label2.Location = new System.Drawing.Point(157, 39);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(105, 20);
+            label2.Size = new System.Drawing.Size(94, 20);
             label2.TabIndex = 54;
-            label2.Text = "Version: 5.0.0.4";
+            label2.Text = "Version: 5.0.0";
             // 
             // pictureBox1
             // 

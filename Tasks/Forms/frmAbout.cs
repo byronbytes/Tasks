@@ -19,12 +19,12 @@ namespace Tasks.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UpdateUtils.CheckForUpdates();
+            Utils.Update.CheckForUpdates();
         }
 
         private void frmAbout_Load(object sender, EventArgs e)
         {
-            label5.Text = "Name: " + UpdateUtils.UpdateString();
+            label5.Text = "Name: " + Utils.Update.UpdateString();
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
