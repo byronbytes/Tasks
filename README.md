@@ -5,10 +5,10 @@
   🇺🇸 [🇪🇸](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-ES.MD) [🇵🇱](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-PL.md) [🇷🇺](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-RU.md) [🇨🇳](https://github.com/LiteTools/Tasks/blob/master/docs/Translated%20READMEs/README-CN.md)
 </h1>
 
-**Tasks** is an application that improves computer performance. **Tasks**'s main features include an advanced cleanup tool, a startup manager, and a detailed Task Manager. These tools help improve computer performance, system boot times, and ensures a faster experience while using your computer.
+**Tasks** is an application that can improve computer performance. **Tasks**'s main features include an advanced cleanup tool, a startup manager, and many more tools for optimization. These tools help improve computer performance, system boot times, and ensures a faster experience while using your computer.
 
 ### Intentions
-We aim to make a lightweight, free, intuitive and responsive cleaning tool. We believe that computer performance is crucial to everyone and should not include any hidden paywalls inside the application. Our goal is to make a tool that anyone can use from anywhere.
+We aim to make a lightweight, free, intuitive and responsive cleaning tool. Computer performance is crucial to everyone and should not include any hidden paywalls inside the application. Tasks is made to be a tool that anyone can use anywhere.
 
 ## Features
 
@@ -23,16 +23,9 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
   - Create new programs that run on start.
   - Remove malicious programs that run on start with one click.
   - View detailed information about services that run on start. (Name, Service, Stopped or Running)
-  - Open the startup folder with one click.
+  - Open the startup folder.
   - Clean and understandable interface to see all startup processes and services.
 
-- Task Manager:
-  - Advanced task manager with more details. (Name, PID, CPU Usage, Directory)
-  - Create new tasks easily with a familiar interface.
-  - Quickly end tasks with one button.
-  - Refresh Task Manager with one button.
-  - Clean and understandable interface to see running processes.
-  
 - Settings:
   - Ability to change the theme of Tasks.
   - Toggle the ability to turn on or off cleanup logs.
@@ -51,7 +44,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. We b
 ## Want to Contribute?
 Contributions are always encouraged but before creating a pull request please read [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/CONTRIBUTING.md) first.
 
-### Contributors
+### Top Contributors
 * **Byron (@byronbytes)** - *Initial work / creation and development.*
 * **Solirs (@Solirs)** - *Cleanup Development (Firefox cleanup, browser extension cleaning, ARP and DNS cache cleaning, removing Solitare)*
 * **@GermanAizek** - *Bug fixes and Russian / Chinese README translations.*
