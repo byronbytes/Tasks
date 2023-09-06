@@ -5,6 +5,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Tasks
@@ -14,8 +15,6 @@ namespace Tasks
         public frmSettings()
         {
             InitializeComponent();
-
-
 
             if (Properties.Settings.Default.AutoCheckUpdates == true)
             {
@@ -56,27 +55,38 @@ namespace Tasks
             {
                 comboBox1.SelectedItem = "Spanish";
             }
+
+            if (Properties.Settings.Default.UpdateBranch == "stable")
+            {
+                comboBox3.SelectedItem = "Stable";
+            }
+
+            if (Properties.Settings.Default.UpdateBranch == "beta")
+            {
+                comboBox3.SelectedItem = "Beta";
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == "English")
+            if (comboBox1.SelectedItem.ToString() == "English")
             {
                 Properties.Settings.Default.Language = "English";
                 Properties.Settings.Default.Save();
             }
 
-            if (comboBox1.SelectedItem == "Spanish")
+            if (comboBox1.SelectedItem.ToString() == "Spanish")
             {
                 Properties.Settings.Default.Language = "Spanish";
                 Properties.Settings.Default.Save();
+                MessageBox.Show("Language changing is still a work in progress.");
             }
 
 
         }
-        
+
         frmMain Main = new frmMain();
- 
+
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
@@ -85,14 +95,13 @@ namespace Tasks
 
         public void CheckTheme()
         {
-            /*
+         
             if (Properties.Settings.Default.Theme == "light")
             {
                 this.BackColor = Color.FromArgb(250, 250, 250);
                 label3.ForeColor = Color.Black;
                 label7.ForeColor = Color.Black;
                 label8.ForeColor = Color.Black;
-                label9.ForeColor = Color.Black;
                 label10.ForeColor = Color.Black;
                 label12.ForeColor = Color.Black;
                 label13.ForeColor = Color.Black;
@@ -111,7 +120,6 @@ namespace Tasks
                 comboBox3.ForeColor = Color.Black;
 
             }
-            */
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -137,7 +145,7 @@ namespace Tasks
                 Properties.Settings.Default.Save();
             }
 
-                if (comboBox2.SelectedItem == "Light")
+            if (comboBox2.SelectedItem == "Light")
             {
                 Properties.Settings.Default.Theme = "light";
                 Main.CheckTheme();
@@ -149,12 +157,12 @@ namespace Tasks
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox3.Checked == true)
+            if (checkBox3.Checked == true)
             {
                 Properties.Settings.Default.AutoCheckUpdates = true;
                 Properties.Settings.Default.Save();
             }
-            if(checkBox3.Checked == false)
+            if (checkBox3.Checked == false)
             {
                 Properties.Settings.Default.AutoCheckUpdates = false;
                 Properties.Settings.Default.Save();
@@ -164,6 +172,31 @@ namespace Tasks
         private void button1_Click(object sender, EventArgs e)
         {
             Process.Start("explorer.exe", @Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Tasks");
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox3.SelectedItem == "Stable")
+            {
+                Properties.Settings.Default.UpdateBranch = "stable";
+                Properties.Settings.Default.Save();
+            }
+
+            if (comboBox3.SelectedItem == "Beta")
+            {
+                Properties.Settings.Default.UpdateBranch = "beta";
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature is a work in progress and may not function properly.");
         }
     }
 }

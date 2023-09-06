@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using Tasks.Utils;
 
 namespace Tasks
 {
@@ -29,6 +30,13 @@ namespace Tasks
         {
             if (Properties.Settings.Default.Theme == "light")
             {
+                // tabPages
+
+                foreach (TabPage tp in tabControl1.Controls.OfType<TabPage>())
+                { tp.BackColor = Color.WhiteSmoke; }
+
+                foreach (TabPage tp in tabControl2.Controls.OfType<TabPage>())
+                { tp.BackColor = Color.WhiteSmoke; }
 
                 // Labels
                 foreach (Label lbl in tabPage1.Controls.OfType<Label>())
@@ -55,21 +63,23 @@ namespace Tasks
                 foreach (CheckBox cb in tabPage7.Controls.OfType<CheckBox>())
                 { cb.ForeColor = Color.Black; }
 
+
+
                 // TabPages + TabControls
-                tabPage1.BackColor = Color.White;
-                tabPage7.BackColor = Color.White;
-                tabPage3.BackColor = Color.White;
+                //       tabPage1.BackColor = Color.White;
+                //       tabPage7.BackColor = Color.White;
+                //       tabPage3.BackColor = Color.White;
                 tabControl2.BackColor = Color.White;
                 tabControl1.BackColor = Color.White;
-                tabPage5.BackColor = Color.White;
-                tabPage6.BackColor = Color.White;
-                tabPage1.BackColor = Color.White;
-                tabPage7.BackColor = Color.White;
-                tabPage3.BackColor = Color.White;
+                //       tabPage5.BackColor = Color.White;
+                //       tabPage6.BackColor = Color.White;
+                //        tabPage1.BackColor = Color.White;
+                //        tabPage7.BackColor = Color.White;
+                //        tabPage3.BackColor = Color.White;
                 tabControl2.BackColor = Color.White;
                 tabControl1.BackColor = Color.White;
-                tabPage5.BackColor = Color.White;
-                tabPage6.BackColor = Color.White;
+                //         tabPage5.BackColor = Color.White;
+                //         tabPage6.BackColor = Color.White;
                 comboBox1.BackColor = Color.WhiteSmoke;
                 comboBox1.ForeColor = Color.Black;
                 ExtensionsBox.BackColor = Color.White;
@@ -95,7 +105,7 @@ namespace Tasks
                     file.Delete();
                     filesDeleted++;
                     CleanupLogsLBox.Items.Add("Deleted " + file.FullName);
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -147,7 +157,7 @@ namespace Tasks
                 try
                 {
 
-                    Core.Utils.CleanupUtils.SHEmptyRecycleBin(IntPtr.Zero, null, Core.Utils.CleanupUtils.RecycleFlag.SHERB_NOSOUND | Core.Utils.CleanupUtils.RecycleFlag.SHERB_NOCONFIRMATION);
+                    Cleanup.SHEmptyRecycleBin(IntPtr.Zero, null, Cleanup.RecycleFlag.SHERB_NOSOUND | Cleanup.RecycleFlag.SHERB_NOCONFIRMATION);
                     CleanupLogsLBox.Items.Add("Recycle Bin Cleared.");
                 }
                 catch (Exception ex)
@@ -230,7 +240,7 @@ namespace Tasks
                     var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Sessions\\");
                     var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Session Storage\\");
                     var directory3 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extension State\\");
-               
+
                     if (DeleteAllFiles(directory) & DeleteAllFiles(directory2) & DeleteAllFiles(directory3)) CleanupLogsLBox.Items.Add("Chrome Sessions Deleted.");
                 }
                 catch
@@ -448,7 +458,7 @@ namespace Tasks
                     ProcessStartInfo startInfo = new ProcessStartInfo();
                     startInfo.WindowStyle = ProcessWindowStyle.Hidden;
                     startInfo.FileName = "cmd.exe";
-                    startInfo.Arguments = "/c ipconfig /flushdns";
+                    startInfo.Arguments = "ipconfig /flushdns";
                     startInfo.RedirectStandardError = true;
                     process.StartInfo = startInfo;
                     process.OutputDataReceived += (sender, args) => sb.AppendLine(args.Data);
@@ -487,7 +497,7 @@ namespace Tasks
             {
                 try
                 {
-                    Core.Utils.CleanupUtils.SHAddToRecentDocs(Core.Utils.CleanupUtils.ShellAddToRecentDocsFlags.Pidl, null);
+                    Cleanup.SHAddToRecentDocs(Cleanup.ShellAddToRecentDocsFlags.Pidl, null);
                     CleanupLogsLBox.Items.Add("Recent Files Cleared.");
                 }
                 catch (Exception ex)
@@ -704,36 +714,6 @@ namespace Tasks
 
             }
 
-
-            if (cbOneDriveCache.Checked)
-            {
-                try
-                {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Local\\Microsoft\\OneDrive\\setup\\logs");
-                    if (DeleteAllFiles(directory)) CleanupLogsLBox.Items.Add("OneDrive Cache Deleted.");
-                }
-                catch
-                {
-                    CleanupLogsLBox.Items.Add("Error while deleting OneDrive cache.");
-                }
-
-            }
-
-            if (cbVLCCache.Checked)
-            {
-                try
-                {
-                    var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\vlc\\art\\");
-                    var directory2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\AppData\\Roaming\\vlc\\crashdump\\");
-                    if (DeleteAllFiles(directory) & DeleteAllFiles(directory2)) CleanupLogsLBox.Items.Add("VLC Cache Deleted.");
-                }
-                catch
-                {
-                    CleanupLogsLBox.Items.Add("Error while deleting VLC cache.");
-                }
-
-            }
-
             if (cbSpotifyCache.Checked)
             {
                 try
@@ -748,10 +728,11 @@ namespace Tasks
             }
 
             // END OF CLEANUP.
+
             CleanupLogsLBox.Items.Add("Cleanup log end.");
             int t = (int)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
 
-            if (Core.Utils.CleanupUtils.CanLogCleanup())
+            if (Cleanup.CanLogCleanup())
             {
 
                 File.WriteAllLines(Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Tasks"), "Cleanup Summary") + "\\tasks-cleanup-" + t + ".txt", CleanupLogsLBox.Items.Cast<string>().ToArray());
@@ -961,10 +942,8 @@ namespace Tasks
             }
 
             if (!Directory.Exists(Dirs.discordDir))
-            {
                 cbDiscord.Enabled = false;
-                cbDiscord.Text = "Discord (N/A)";
-            }
+            cbDiscord.Text = "Discord (N/A)";
 
             if (!Directory.Exists(Dirs.edgeDir))
             {
@@ -976,19 +955,13 @@ namespace Tasks
             }
 
             if (Directory.Exists(Dirs.chromeExtDir))
-            {
                 comboBox1.Items.Add("Google Chrome");
-            }
 
             if (Directory.Exists(Dirs.firefoxDir))
-            {
                 comboBox1.Items.Add("Mozilla Firefox");
-            }
 
             if (Directory.Exists(Dirs.edgeDir))
-            {
                 comboBox1.Items.Add("Microsoft Edge");
-            }
         }
 
         private void button8_Click_1(object sender, EventArgs e)
@@ -1007,14 +980,11 @@ namespace Tasks
                 var temp2 = new DirectoryInfo(Path.GetTempPath());
 
                 foreach (var file in temp1.GetFiles())
-                {
+                    listBox1.Items.Add(file.Name);
 
-                    listBox1.Items.Add(file.Name);
-                }
                 foreach (var file in temp2.GetFiles())
-                {
                     listBox1.Items.Add(file.Name);
-                }
+
                 long allsize = size1 + size2 + size4 + size5;
                 double allsizeMB = ConvertBytesToMegabytes(allsize);
                 label11.Text = allsizeMB + "MB can be cleaned.";

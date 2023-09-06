@@ -4,6 +4,7 @@
 */
 
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Tasks.Forms
@@ -19,10 +20,10 @@ namespace Tasks.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-           frmAbout About = new frmAbout();
-           About.Show();
+            frmAbout About = new frmAbout();
+            About.Show();
         }
-        
+
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -47,7 +48,7 @@ namespace Tasks.Forms
 
         public void CheckTheme()
         {
-            /*
+         
             if (Properties.Settings.Default.Theme == "light")
             {
 
@@ -58,7 +59,19 @@ namespace Tasks.Forms
                 button1.ForeColor = Color.Black;
                 button2.ForeColor = Color.Black;
             }  
-            */
+            else
+            {
+
+
+                button1.BackColor = Color.FromArgb(14, 18, 26);
+                button2.BackColor = Color.FromArgb(14, 18, 26);
+            }
+         
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

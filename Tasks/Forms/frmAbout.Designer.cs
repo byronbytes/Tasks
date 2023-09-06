@@ -29,166 +29,152 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            label2 = new System.Windows.Forms.Label();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            label4 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            button1 = new System.Windows.Forms.Button();
+            label13 = new System.Windows.Forms.Label();
+            listBox1 = new System.Windows.Forms.ListBox();
+            linkLabel3 = new System.Windows.Forms.LinkLabel();
+            label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(157, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 20);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "Version: 5.0.0";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            label2.Location = new System.Drawing.Point(157, 39);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(94, 20);
+            label2.TabIndex = 54;
+            label2.Text = "Version: 5.0.0";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Tasks.Properties.Resources.Tasks_Logo_Small;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            pictureBox1.Image = Properties.Resources.Tasks_Logo_Small;
+            pictureBox1.Location = new System.Drawing.Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(135, 128);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 53;
+            pictureBox1.TabStop = false;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(12, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 30);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "Version Info";
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label4.ForeColor = System.Drawing.Color.FromArgb(161, 183, 255);
+            label4.Location = new System.Drawing.Point(12, 195);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(127, 30);
+            label4.TabIndex = 60;
+            label4.Text = "Version Info";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(12, 225);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 20);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "Name: ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(12, 245);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 20);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "Branch: master";
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label5.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            label5.Location = new System.Drawing.Point(12, 225);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(37, 20);
+            label5.TabIndex = 61;
+            label5.Text = "Ver: ";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 268);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 31);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "Check for Updates";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = System.Drawing.Color.FromArgb(20, 20, 20);
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button1.ForeColor = System.Drawing.Color.White;
+            button1.Location = new System.Drawing.Point(12, 257);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(122, 31);
+            button1.TabIndex = 65;
+            button1.Text = "Check for Updates";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.label13.Location = new System.Drawing.Point(264, 195);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(135, 30);
-            this.label13.TabIndex = 66;
-            this.label13.Text = "Contributors";
+            label13.AutoSize = true;
+            label13.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label13.ForeColor = System.Drawing.Color.FromArgb(161, 183, 255);
+            label13.Location = new System.Drawing.Point(298, 195);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(135, 30);
+            label13.TabIndex = 66;
+            label13.Text = "Contributors";
             // 
             // listBox1
             // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Items.AddRange(new object[] {
-            "Matty (@byronbytes)",
-            "Solirs (@Solirs)",
-            "@GermanAizek"});
-            this.listBox1.Location = new System.Drawing.Point(264, 228);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(188, 80);
-            this.listBox1.TabIndex = 72;
+            listBox1.BackColor = System.Drawing.Color.FromArgb(32, 32, 32);
+            listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            listBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            listBox1.ForeColor = System.Drawing.Color.FromArgb(224, 228, 255);
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 20;
+            listBox1.Items.AddRange(new object[] { "Byron (@byronbytes)", "Solirs (@Solirs)", "@GermanAizek" });
+            listBox1.Location = new System.Drawing.Point(298, 228);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new System.Drawing.Size(188, 60);
+            listBox1.TabIndex = 72;
             // 
             // linkLabel3
             // 
-            this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.linkLabel3.LinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkLabel3.Location = new System.Drawing.Point(431, 9);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(59, 21);
-            this.linkLabel3.TabIndex = 73;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "GitHub";
-            this.linkLabel3.VisitedLinkColor = System.Drawing.Color.DarkCyan;
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            linkLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            linkLabel3.AutoSize = true;
+            linkLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            linkLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            linkLabel3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            linkLabel3.LinkColor = System.Drawing.SystemColors.ActiveCaption;
+            linkLabel3.Location = new System.Drawing.Point(153, 119);
+            linkLabel3.Name = "linkLabel3";
+            linkLabel3.Size = new System.Drawing.Size(59, 21);
+            linkLabel3.TabIndex = 73;
+            linkLabel3.TabStop = true;
+            linkLabel3.Text = "GitHub";
+            linkLabel3.VisitedLinkColor = System.Drawing.Color.DarkCyan;
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(153, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 30);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Tasks";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.FromArgb(161, 183, 255);
+            label1.Location = new System.Drawing.Point(153, 9);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(63, 30);
+            label1.TabIndex = 52;
+            label1.Text = "Tasks";
             // 
             // frmAbout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(12)))), ((int)(((byte)(14)))));
-            this.ClientSize = new System.Drawing.Size(502, 329);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmAbout";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tasks";
-            this.Load += new System.EventHandler(this.frmAbout_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(13, 12, 14);
+            ClientSize = new System.Drawing.Size(502, 297);
+            Controls.Add(linkLabel3);
+            Controls.Add(listBox1);
+            Controls.Add(label13);
+            Controls.Add(button1);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label2);
+            Controls.Add(pictureBox1);
+            Controls.Add(label1);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Name = "frmAbout";
+            ShowIcon = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Tasks";
+            Load += frmAbout_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -196,7 +182,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListBox listBox1;

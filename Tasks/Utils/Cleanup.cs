@@ -6,39 +6,34 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 
-// everything is over-noted, don't mind it. 
-// i also kept a ton of notes to myself, but don't worry about it. its only the code searchers that see this.
-namespace Tasks.Core.Utils
+namespace Tasks.Utils
 {
-    public class CleanupUtils
+    public class Cleanup
     {
-
         public static int filesDeleted;
 
-        // Deletes all files in a directory.
+
         // Will also add a string list for all of the file names, that's pretty easy.
+        /// <summary>
+        /// Deletes all files in a directory.
+        /// </summary>
+        /// <param name="directoryInfo"></param>
+        /// <returns></returns>
         public static bool DeleteAllFiles(DirectoryInfo directoryInfo)
         {
             foreach (var file in directoryInfo.GetFiles()) // could optimize?
-            {
                 try
                 {
                     file.Delete();
                     filesDeleted++;
-                    //   Debug.Log(file.FullName);
                 }
                 catch (Exception)
                 {
-                    //   Debug.Log(ex.Message);
-                }
 
-            }
+                }
             foreach (var dir in directoryInfo.GetDirectories())
-            {
                 try
                 {
                     dir.Delete(true);
@@ -49,15 +44,12 @@ namespace Tasks.Core.Utils
 
                 }
 
-            }
-
             return true;
         }
 
         public static void AnalyzeAllFiles(DirectoryInfo directoryInfo)
         {
             foreach (var file in directoryInfo.GetFiles())
-            {
                 try
                 {
                     Debug.Print("File: " + file.Name);
@@ -66,7 +58,6 @@ namespace Tasks.Core.Utils
                 {
 
                 }
-            }
         }
 
         public static bool CanLogCleanup()
@@ -75,18 +66,9 @@ namespace Tasks.Core.Utils
             {
                 return true;
             }
+
             return false;
         }
-
- 
-
-        // TODO: calculates storage space
-        public static void CalculateStorage()
-        {
-
-        }
-
-
 
         [DllImport("Shell32.dll")]
         public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlag dwFlags);
@@ -111,5 +93,3 @@ namespace Tasks.Core.Utils
 
     }
 }
-
-
