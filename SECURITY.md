@@ -12,20 +12,18 @@ These are the supported versions of Tasks. We will not fix vulnerabilities or bu
 
 | Version             | Supported          | Release Date         | Version Notes |
 | :------------------ | :----------------: | :--------------:     | :------------------: |
-| **5.0.0 PRE 1 Rev 1**| ⚠️                  | 9th, October, 2022  | Pre Release
-| **5.0.0 PRE 1**     | :x:                 | 31st August, 2022    | Pre Release         |
+| **5.0.0 PRE x**     | :x:                 | 31st August, 2022    | Pre Release         |
 | **4.0.1**           | ✅                 | 2nd May, 2022         | 
 | **4.0.0**           | ✅                 | 22nd April, 2022      | 
-| **3.5.0**           | ✅                 | 16th March, 2022      | 
-| **3.4.0**           | ✅                 | 7th March, 2022      |
-| **3.3.0**           | ⚠️                 | 6th February, 2022  | 
-| **3.2.0**           | ⚠️                 | 21st January, 2022  | 
-| **3.1.0**           | ⚠️                 | 29th December, 2021  | Extended Support |
-| **3.0.1**           | ✅                 | 10th December, 2021  | Extended Support     |
+| **3.5.0**           | :x:                 | 16th March, 2022      | 
+| **3.4.0**           | :x:                 | 7th March, 2022      |
+| **3.3.0**           | :x:                 | 6th February, 2022  | 
+| **3.2.0**           | :x:                 | 21st January, 2022  | 
+| **3.1.0**           | :x:                 | 29th December, 2021  | 
+| **3.0.1**           | :x:                 | 10th December, 2021  |
 | **3.0.0**           | :x:                 | 8th December, 2021   | 
-| **2.x.x**           | :x:                 | 20th September, 2021 - 12th November 2021| 
+| **2.x.x**           | :x:                 | 20th September, 2021| 
 | **2.0.0 PRE**       | :x:                 | 7th August, 2021     | Pre Release |
 | **1.x.x**           | :x:                | 24th July, 2021      | 
-| **0.x.x**           | :x:                | Unknown Date         | 
 
 *Legend: ✅ = Supported | :x: = Unsupported | ⚠️ = Unsupported Soon*
