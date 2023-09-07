@@ -8,11 +8,11 @@ To report a new vulnerability, please create a new issue using the **Security Vu
 
 
 ### Supported Versions
-These are the supported versions of Tasks. We will not fix vulnerabilities or bugs in older versions that are marked with the :x: sign.
+These are the supported versions of Tasks. We will not fix vulnerabilities or bugs in older versions that are marked with the :x: sign, and if you are on one of those versions it is recommended to update immediately.
 
 | Version             | Supported          | Release Date         | Version Notes |
 | :------------------ | :----------------: | :--------------:     | :------------------: |
-| **5.0.0 PRE x**     | :x:                 | 31st August, 2022    | Pre Release         |
+| **5.0.0 PRE x**     | ✅                  | 31st August, 2022    | Pre Release         |
 | **4.0.1**           | ✅                 | 2nd May, 2022         | 
 | **4.0.0**           | ✅                 | 22nd April, 2022      | 
 | **3.5.0**           | :x:                 | 16th March, 2022      | 
