@@ -14,13 +14,13 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. Comp
 
 ## Features
 
-- Cleanup:
+- **Cleanup**
   - Quick Clean to help clean temp folders that get filled fast.
   - Extension removal tool to remove malicious or unwanted extensions. (Supports Edge, Chrome, and Firefox)
   - Advanced cleaning tool that helps with computer performance and speed.
   - Diverse support for multiple applications and browsers and unneeded system cache. (Chrome, Discord, Temp, and more.)
 
-- Startup Manager:
+- **Startup Manager**
   - View detailed information about programs that run on start. (Name, Description, Directory)
   - Create new programs that run on start.
   - Remove malicious programs that run on start with one click.
@@ -28,7 +28,7 @@ We aim to make a lightweight, free, intuitive and responsive cleaning tool. Comp
   - Open the startup folder.
   - Clean and understandable interface to see all startup processes and services.
 
-- Settings:
+- **Settings**
   - Theme customization (Normal / Light)
   - Automatically check for updates on Start.
   - Toggle cleanup logging and change the log directory.
