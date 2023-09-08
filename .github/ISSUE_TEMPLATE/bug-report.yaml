@@ -41,7 +41,7 @@ body:
     id: os
     attributes:
       label: Operating System
-      description: What OS are you using?
+      description: What OS were you using when the error happened?
       multiple: false
       options:
         - Windows 11
@@ -50,14 +50,14 @@ body:
         - Windows 8
         - Windows 7
         - Windows Vista
-        - Other
+        - Other (Please Specify in Log Output)
     validations:
       required: true
   - type: textarea
     id: logs
     attributes:
       label: Relevant Log Output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code.
+      description: Please copy and paste any relevant logs. You can find them by going to Settings and opening "Open Log Folder" and pasting the contents.
       render: shell
   - type: checkboxes
     id: terms

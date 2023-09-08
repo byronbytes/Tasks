@@ -25,19 +25,6 @@
   - 查看启动时启动的服务的详细信息。（名称、服务、停止或启动）
   - 一键打开启动文件夹。
   - 干净直观的界面，用于查看所有启动过程和服务。
-
-- 任务管理器:
-  - 高级任务管理器与更多细节。 （名称，PID，CPU使用率，目录）
-  - 使用熟悉的界面轻松创建新任务。
-  - 一键快速完成任务。
-  - 一键更新任务管理器。
-  - 用于查看正在运行的进程的干净直观的界面。
-  
-- 设置:
-  - 改变任务主题的能力。
-  - 改变任务栏侧边栏的颜色的能力。
-  - 启用和禁用清理日志。
-  - 更改任务语言。
  
 
 ## 安装
@@ -53,7 +40,7 @@
 总是鼓励贡献，但在创建提取请求之前，请先阅读 [**CONTRIBUTING**](https://github.com/LiteTools/Tasks/blob/master/CONTRIBUTING.md).
 
 ## 作者
-* **Matty (@byronbytes)** - *初步工作/创作和发展。*
+* **Byron (@byronbytes)** - *初步工作/创作和发展。*
 * **Solirs (@Solirs)** - *开发清理 （清理Firefox，清理浏览器扩展，清理ARP和DNS缓存，删除Solitaire）*
 
 查看完整列表 [contributors](https://github.com/LiteTools/Tasks/contributors) 谁参加了这个项目。
